@@ -1,0 +1,24 @@
+language: node_js
+sudo: required
+env:
+  global:
+  - AWS_BUCKET=$(if [ "$TRAVIS_BRANCH" == "master" ]; then echo "gen3.org"; else echo
+    "alpha.gen3.org"; fi)
+before_script:
+- wget https://github.com/gohugoio/hugo/releases/download/v0.42.2/hugo_0.42.2_Linux-64bit.deb
+- sudo dpkg -i hugo*.deb
+- echo $AWS_BUCKET
+script:
+- hugo
+deploy:
+  provider: s3
+  access_key_id: AKIAIRT4GQFHUEYQQG2Q
+  secret_access_key:
+    secure: BlerVD0IsbjU4ix1FrkGp0oZXW9486MKGxtCsgveSyDD33YPHiFl/6JaNQkNFeMy3Vw6BElF7jCakuhs8mOFsBtlYuRuTNasjmD0jzX80dra3EhSAyn/s1PBv5CphZBqi8hsOTR1dgMulaYtdS4UVKO1ECF+ZAEqjwTNH+oMJt+42iTGzWkQITM6cOK4ooOO6EHP0CDLNfc5634zCxftVjc1imUsuF7sN94eHCdyqoIAylo0XzZ7sxvQg5rimRGhyhgLET4P0igQQXF4kH7XjCR08E5Pgn20TBW6S3u1AdorP+JKYSQ7MCjLrkr3nhOgWslXHZNcZGaXLqas4dPPkEIHwyB7BRVM8lgG2IDsta9QHtoIvkxn4HBzHFm6QQM7DjaSOVtgkJoC8S2GWkJy3Ok9mCfuUR+crtkOWwccUQwatA++/dOVAyFyEy7M/w9PWt9sTj/oePum5LgJEl5y+9pmcEGvEylEM6/Gyw1WxOq75PsTIDqlAbjPLSWaPZd87hjlOLDFSTGKpJucw10jbGsuLP+A1Bfc/vzQNOSBNlBDZ858RxeP8IpM7sFd5YrOV3Xs1Q94MHolV201b88jndAsVqYZbGXrjupc+tBhBnup10jpS1aeP0CwYYwsSqYe8NuSBdNVWYH1zWIbGtPny0sg925a1w8J+2EsGYR7jWw=
+  bucket: "$AWS_BUCKET"
+  local_dir: public
+  skip_cleanup: true
+  acl: public_read
+  on:
+    repo: uc-cdis/gen3.org
+    all_branches: true
