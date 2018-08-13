@@ -15,7 +15,7 @@ Data that are harmonized, indexd in various databases, discoverable and queryabl
 ## Data management
 
 The following diagram describes all the user interactions in data management aspect.
-![data management interations](gen3-diagrams/data-interactions.png)
+![data management interations](introduction/data-interactions.png)
 
 1. fence microservice provides authentication and authorization framework for all Gen3 services & resources.
 2. download/upload data. Gen3 doesn't have services sitting between user and cloud storage services so that user can fully leverage the cloud provider's power, but it provides tools and services to enable users to access protected data security with temporary credentials.
@@ -34,13 +34,13 @@ In order for a Gen3 Commons to preserve these rich data, we first need to come u
 The currently supported database backend is postgres, which is not necessarily the optimal choice for complicated graph traversals. But we went with it because of its robustness as a traditional relational database. The data dictionary described in jsonschema is translated to very typical relational datamodel in postgres. Basically every node type is a table and every edge type is a table as the many-to-many proxy between two node tables. The non-conventional schema design is that, all the properties are stored as jsonb in postgres instead of separate columns. This was a compromise to support very frequent data modeling changes required by domain experts with a sacrifise of query performance because of lack of statistics on jsonb.
 
 Sheepdog uses the dictionary-driven ORM to do metadta validation and submission as described in following diagram:
-![rich-data-submission](gen3-diagrams/rich-data-submission.png).
+![rich-data-submission](introduction/rich-data-submission.png).
 
 Peregrine exposes a query interface for the normalized rich data via GraphQL interface:
-![rich-data-query](gen3-diagrams/rich-data-query.png).
+![rich-data-query](introduction/rich-data-query.png).
 
 Separately, users use [cdis-data-client](https://github.com/uc-cdis/cdis-data-client) to request temporary urls to do raw data download/upload:
-![data-download-upload](gen3-diagrams/data-download-upload.png).
+![data-download-upload](introduction/data-download-upload.png).
 
 ### Data Exploration System
 _This is an alpha feature_
@@ -52,3 +52,26 @@ Tube is driven by configuration files which describe the flat document structure
 - case-centric document that denormalize biospecimen and clinical attributes for each case. This targets clinicians who wants to see distributions based on clinical attributes among cases( AKA patient most of the times ).
 
 [living document for data exploration architecture](https://github.com/uc-cdis/cdis-wiki/tree/master/dev/gen3/data_explorer)
+
+## Workspace Systems
+
+Workspaces are the compute component of a data commons. Workspaces allow users to execute analysis tasks on data without moving the data to another remote environment. Workspaces come in many forms, currently Gen3 integrates what it calls lightweight workspaces. Lightweight workspaces are designed to allow for quick analysis of data, and the creation of workflow jobs in the workflow system.
+
+### Lightweight Workspaces
+
+The following diagram shows the authorization flow for the JupyterHub instances. We utilize the Revproxy and Fence acting as an API gateway for these workspaces. JupyterHub is configured with the [remote user auth plugin](https://github.com/occ-data/jhub_remote_user_authenticator) so that users are authed based on the `REMOTE_USER` header.
+
+![JupyterHub Authentication Flow](introduction/lightweight-workspaces.png)
+
+JupyterHub is deployed into the default namespace for the commons, but user pods are deployed into the specific `jupyter-pods` namespace to provide an added layer of isolation. This is accomplished using the [Kubespawner](https://github.com/jupyterhub/kubespawner) plugin for JupyterHub. Eventually, users will be deployed into their own Kubernetes namespace so that they can utilize the K8s API to spin up clusters for Spark or Dask. We are tracking issues related to the creation and monitoring of multiple namespaces in Kubespawner [1](https://github.com/jupyterhub/kubespawner/pull/218) [2](https://github.com/jupyterhub/kubespawner/issues/76). We use a [customized JupyterHub](https://github.com/occ-data/containers/tree/master/jupyterhub) which contains additional code to cull idle notebooks after several hours of inactivity. This automatically scales down the cluster again when the notebooks are no longer in use by users.
+
+Notebook servers are configured with persistent storage mounted into `/home/jovyan/pd` for users to store scripts and configurations which they wish to persist past notebook shutdown. In the future we would like to change this to have the storage for the user in the notebook backed by the cloud object storage (S3 or GCS) to improve scalability and the ability to load data into the containers for users.
+
+Currently, we support user selectable notebook containers and resource allocations from a prepopulated list. [Earth science](https://github.com/occ-data/containers/tree/master/jupyter-geo) and [Bioinformatics](https://github.com/occ-data/containers/tree/master/jupyter) notebooks are available with popular libraries preconfigured. 
+
+We also configure a [prepuller daemonset](https://github.com/uc-cdis/cloud-automation/blob/master/kube/services/jupyterhub/jupyterhub-prepuller.yaml) on K8s to pull the docker images for common user notebooks to each node in the cluster. This significantly speeds up launch time as these images can be many GB in size. 
+
+
+### Full Workspaces
+
+Full workspaces, i.e. workflow systems that run analysis pipelines at scale over data, are still to be implemented into Gen3. 
