@@ -8,10 +8,11 @@
 # Python Style Guide
 [Python Style Guide]: #python-style-guide
 
-For python code we use [black][black], an automatic code formatter. In general this
-should handle all the details of code formatting. For developing python code,
-install black and either run it on your code before committing or set up a
-plugin in your editor to run it automatically (explained in the `black` README).
+For python code we use [black][black], an automatic code formatter. In general
+this should handle all the trivial points of code formatting. For developing
+python code, install black and either run it on your code before committing or
+set up a plugin in your editor to run it automatically (explained in the `black`
+README).
 
 ## Best Practices
 
@@ -221,20 +222,27 @@ test('Test asyncSetInterval', (done) => {
 
 Try to follow these rules of thumb when possible.
 
-Put generic (of general use), dumb (properties driven) components under src/components with a jest test case - ex:
-* components/Spinner.jsx
-* components/Spinner.test.jsx
+Put generic (of general use), dumb (properties driven) components under
+`src/components` with a jest test case - ex:
 
-Create a directory for higher level components (like a page) that assemble multiple customized child components or involve user interactions and backend orchestration - ex:
-* QueryPage/ReduxFilters.jsx
-* QueryPage/RelayResultTable.jsx
-* QueryPage/ReduxResultsPager.jsx
-* QueryPage/QueryPage.jsx
+* `components/Spinner.jsx`
+* `components/Spinner.test.jsx`
+
+Create a directory for higher level components (like a page) that assemble
+multiple customized child components or involve user interactions and backend
+orchestration - ex:
+
+* `QueryPage/ReduxFilters.jsx`
+* `QueryPage/RelayResultTable.jsx`
+* `QueryPage/ReduxResultsPager.jsx`
+* `QueryPage/QueryPage.jsx`
 
 # Go Style Guide
 [Go Style Guide]: #go-style-guide
 
-Go provides extensive style information when talking about how to review Go code. Additionally Go has a `gofmt` tool which should be used to auto format the code for mechanical style.
+Go provides extensive style information when talking about how to review Go
+code. Additionally Go has a `gofmt` tool which should be used to auto format the
+code for mechanical style.
 
 * [Go Code Review][gocodereview]
 * [Effective Go][effectivego]
@@ -242,9 +250,9 @@ Go provides extensive style information when talking about how to review Go code
 ## Highlights
 
 * Use `PascalCase` for any exported definitions and `camelCase` for non-exported
-  definitions
-* Don't use `panic()` for error handling; return `error` instead
-* Organize imports into logical groups with the standard libraries first
+  definitions.
+* Don't use `panic()` for error handling; return `error` instead.
+* Organize imports into logical groups with the standard libraries first.
 
 ## Code Organization
 

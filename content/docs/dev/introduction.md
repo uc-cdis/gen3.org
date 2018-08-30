@@ -19,6 +19,18 @@ Branches are named as `type/scope`, and commit messages are written as
 type = "chore" | "docs" | "feat" | "fix" | "refactor" | "style" | "test"
 ```
 
+Some example branch names:
+
+* `refactor/db-calls`
+* `test/user`
+* `docs/deployment`
+
+Some example commit messages:
+
+* `fix(scope): remove admin scope from client`
+* `feat(project_members): list all members given project`
+* `docs(generation): fix generation script and update docs`
+
 ### Pull Requests (PRs)
 
 **Before submitting a PR for review, try to make sure you've accomplished these things:**
@@ -92,6 +104,10 @@ See the information at [this page][k8s-dev] for more details.
 
 ## Python
 
+For getting set up for general Python development, install [virtualenv][] and
+[virtualenvwrapper][]. Set up a separate virtual environment for every package
+you work on to avoid dependency conflicts.
+
 ### Repository Setup
 
 Use [this guide][sample-repository] as a reference for creating new
@@ -145,6 +161,30 @@ temporarily necessary while developing a feature in two related repositories):
 If any dependencies are necessary only for tests or development, they are added
 to a `dev-requirements.txt` file, and not the `requirements.txt` file.
 
+### Performance Testing
+
+Python includes the profiling tool [`cProfile`](https://docs.python.org/2/library/profile.html#module-cProfile).
+
+A useful tool for visualizing profiling results is
+[`snakeviz`](https://jiffyclub.github.io/snakeviz/) (install with `pip install
+snakeviz`). Given the results from `cProfile`, for instance, in a file called
+`profile`, running the command
+```
+snakeviz profile
+```
+will open the profiling results in an interactive viewer in a browser.
+
+For a Flask app, there is a specific way to generate profiling results.
+```python
+from werkzeug.contrib.profiler import ProfilerMiddleware
+app.wsgi_app = ProfilerMiddleware(app.wsgi_app, f, profile_dir='profile')
+```
+This will output profiling results in files such as
+`profile/POST.path.001095ms.1505431939.prof` whenever the application handles a
+request. Specifically with this example, this file would contain just the
+results for sending a `POST` to the endpoint `path`, which took 1.095 seconds
+(1095 ms) to handle.
+
 ## Go
 
 ### Style
@@ -175,6 +215,21 @@ ENTRYPOINT ["/arborist"]
 
 Using `ENTRYPOINT`, command-line arguments can be passed from the docker command
 to the executable.
+
+### Dependencies
+
+Currently there aren't any *ideal* solutions to handle dependencies for go
+repositories. A good approach is to "vendor" the dependencies, checking out
+copies of their repositories (at exactly the necessary version) in a `vendor/`
+directory at the root of the repository. Go knows to use these for imports in
+the package; for example `import "github.com/uc-cdis/go-authutils/authutils"`
+will load the code from `vendor/github.com/uc-cdis/go-authutils` to use for this
+import.
+
+A good tool to use for managing dependencies and vendored code is [dep][go-dep],
+which allows you to add dependencies to the `vendor/` directory and keep a
+lockfile (`Gopkg.lock`) and a file with version constraints (`Gopkg.toml`); see
+the [`dep` documentation][go-dep-docs] for more information.
 
 ## JavaScript
 
@@ -214,8 +269,12 @@ SO, *with or without attribution*.
 [arborist]: https://github.com/uc-cdis/arborist
 [black]: https://github.com/ambv/black
 [fair-use]: https://www.copyright.gov/fair-use/more-info.html
+[go-dep]: https://github.com/golang/dep
+[go-dep-docs]: https://golang.github.io/dep/docs/introduction.html
 [go-style-guide]: ../style-guide#go-style-guide
 [js-style-guide]: ../style-guide#javascript-style-guide
 [k8s-dev]: https://github.com/uc-cdis/cdis-wiki/blob/master/dev/K8s-dev.md
 [python-style-guide]: ../style-guide#python-style-guide
 [sample-repository]: https://www.kennethreitz.org/essays/repository-structure-and-python
+[virtualenv]: https://virtualenv.pypa.io/en/stable/
+[virtualenvwrapper]: https://virtualenvwrapper.readthedocs.io/en/latest/
