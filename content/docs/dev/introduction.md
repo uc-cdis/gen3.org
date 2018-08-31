@@ -1,5 +1,15 @@
 # Intro to Development on Gen3
 
+## General Development Guidelines
+
+* Name things clearly (not longer than necessary, but long enough to be clear
+  and readable)
+* Modularize separate functionality and aim to write reusable code
+* Unit test
+* Follow the applicable style guide
+* Make code simple to extend and refactor
+* Use the most efficient algorithms and datastructures in implementation
+
 ## GitHub Usage
 
 It's helpful to add a global `.gitignore` file with typical entries, such as
@@ -32,6 +42,9 @@ Some example commit messages:
 * `docs(generation): fix generation script and update docs`
 
 ### Pull Requests (PRs)
+
+To link a PR on GitHub to Jira, add its identifier `PXD-{NUMBER}` in the PR
+title.
 
 **Before submitting a PR for review, try to make sure you've accomplished these things:**
 
@@ -96,6 +109,10 @@ kubectl get pods
 # Output information about the `gen3` command
 gen3 help
 ```
+
+You'll want to learn a lot more about basic Kubernetes commands in order to
+interact with the services running in your namespace. The Kubernetes
+documentation includes a number of [useful tutorials][k8s-tutorials].
 
 Once the kubernetes cluster in your dev namespace is running, you should have a
 functioning data portal at https://YOUR_USERNAME.planx-pla.net.
@@ -274,6 +291,7 @@ SO, *with or without attribution*.
 [go-style-guide]: ../style-guide#go-style-guide
 [js-style-guide]: ../style-guide#javascript-style-guide
 [k8s-dev]: https://github.com/uc-cdis/cdis-wiki/blob/master/dev/K8s-dev.md
+[k8s-tutorials]: https://kubernetes.io/docs/tutorials/
 [python-style-guide]: ../style-guide#python-style-guide
 [sample-repository]: https://www.kennethreitz.org/essays/repository-structure-and-python
 [virtualenv]: https://virtualenv.pypa.io/en/stable/
