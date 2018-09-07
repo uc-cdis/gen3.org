@@ -1,0 +1,93 @@
+{{- $logoURL := .Site.Params.logo.src -}}
+{{- $mobileLogoURL := .Site.Params.mobileLogo.src -}}
+{{- $iconCrossURL := .Site.Params.icons.cross.src -}}
+{{- $iconToggleURL := .Site.Params.icons.toggleDown.src -}}
+{{ $currentNode := . }}
+
+<header class="g3-header">
+  <div class="g3-header__wrapper">
+    <div class="g3-header__logo-wrapper">
+      <img class="g3-header__logo" src="{{ $logoURL }}">
+    </div>
+    <nav class="g3-header__navbar">
+      {{ range .Site.Menus.mainmenu.ByWeight }}
+        {{ $isPage := eq .Identifier $currentNode.LinkTitle }}
+        {{ $hasPage := ($currentNode.HasMenuCurrent "mainmenu" .)}}
+        {{ $isItemActive := or $isPage $hasPage }}
+          <div class="g3-header__nav-item {{if $isItemActive }}g3-header__nav-item--active{{end}}">
+              <a href="{{ .URL }}" class="g3-header__nav-link">{{ .Name }}</a>
+              {{ if .HasChildren }}
+                <span class="g3-header__nav-link-arrow"></span>
+                <div class="g3-header__dropdown">
+                    <span class="g3-header__dropdown-arrow"></span>
+                    {{ range .Children }}
+                        <div class="g3-header__nav-subitem {{if $currentNode.HasMenuCurrent "mainmenu" . }}g3-header__nav-subitem--active{{ end }}">
+                            <a class="g3-header__nav-subitem-link" href="{{ .URL }}">{{ .Name }}</a>
+                        </div>
+                    {{ end }}
+                </div>
+              {{ end }}
+          </div>
+      {{ end }}
+    </nav>
+  </div>
+  <div class="g3-header__subnav">
+    <div class="g3-header__subnav-wrapper">
+    {{ range .Site.Params.submenu }}
+      {{ if eq $currentNode.Section .parent }}
+        {{ $active := eq (.identifier) ($currentNode.LinkTitle) }}
+        <a href="{{ .url }}" class="g3-header__subnav-link{{ if $active }} g3-header__subnav-link--active{{end}}">{{ .name }}</a>
+      {{ end }}
+    {{ end }}
+    </div>
+  </div>
+</header>
+
+<aside class="g3-mb-menu">
+  <div class="g3-mb-menu__top">
+    <img class="g3-mb-menu__close" src="{{ $iconCrossURL }}" />
+    <div class="g3-mb-menu__logo-wrapper">
+      <img class="g3-mb-menu__logo" src="{{ $mobileLogoURL }}" />
+    </div>
+  </div>
+  <ul class="g3-mb-menu__content">
+    {{ range .Site.Menus.mainmenu.ByWeight }}
+      {{ $isPage := eq .Identifier $currentNode.LinkTitle }}
+      {{ $hasPage := ($currentNode.HasMenuCurrent "mainmenu" .)}}
+      {{ $toggled := or $isPage $hasPage }}
+      <li class="g3-mb-menu__item{{if $isPage }} g3-mb-menu__item--active{{end}}">
+          <a href="{{ .URL }}" class="g3-mb-menu__link{{if $isPage }} g3-mb-menu__link--active{{end}}">{{ .Name }}</a>
+          {{ if .HasChildren }}
+            <img class="g3-mb-menu__toggle-arrow{{if $toggled}}{{else}} g3-mb-menu__toggle-arrow--toggled{{end}}" src="{{$iconToggleURL}}"></img>
+            <ul class="g3-mb-menu__sub-content{{if $toggled}}{{else}} g3-mb-menu__sub-content--toggled{{end}}">
+                {{ range .Children }}
+                  {{ $isSubPage := eq .Identifier $currentNode.LinkTitle }}
+                  <li class="g3-mb-menu__subitem{{if $isSubPage }} g3-mb-menu__subitem--active{{ end }}">
+                      <a class="g3-mb-menu__subitem-link{{if $isSubPage }} g3-mb-menu__subitem-link--active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+                  </li>
+                {{ end }}
+            </ul>
+          {{ end }}
+      </li>
+    {{ end }}
+  </ul>
+</aside>
+
+
+<script>
+  document.querySelectorAll('.g3-mb-menu__toggle-arrow').forEach(item => {
+    item.addEventListener('click', e => {
+      var clickElem = e.target;
+      clickElem.classList.toggle('g3-mb-menu__toggle-arrow--toggled');
+      clickElem.nextElementSibling.classList.toggle('g3-mb-menu__sub-content--toggled');
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
