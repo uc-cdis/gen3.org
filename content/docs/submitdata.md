@@ -40,6 +40,8 @@ Once you have access to the Windmill data submission portal, we recommend review
 
 If you have an submission element that you believe isn't currently described in the model, you will need to work with the commons to extend the data model. We suggest providing them with a description of the data elements that you'd like to add, and they will make sure the sponsor or data modeling working group reviews your request and finds an appropriate home for your data elements.
 
+If you are developing your own data dictionary, such as for use with Docker Compose, please note that due to the graph nature of the data model, some nodes are dependent on others. In addition, the windmill service specifies nodes that are required for it run properly through preset parameters. For example, if windmill is set to use the default data dictionary, it will require the Case, Experiment, and Aliquot nodes. 
+
 
 ## 2. Prepare metadata TSVs for each node in your project
 * * *
