@@ -1,5 +1,6 @@
 {{- $logoURL := .Site.Params.logo.src -}}
 {{- $mobileLogoURL := .Site.Params.mobileLogo.src -}}
+{{- $iconMenuURL := .Site.Params.icons.menu.src -}}
 {{- $iconCrossURL := .Site.Params.icons.cross.src -}}
 {{- $iconToggleURL := .Site.Params.icons.toggleDown.src -}}
 {{ $currentNode := . }}
@@ -43,7 +44,19 @@
   </div>
 </header>
 
-<aside class="g3-mb-menu">
+<header class="g3-mb-header">
+  <div class="g3-md-header__menu-head">
+    <img class="g3-md-header__menu-icon" src="{{ $iconMenuURL }}" />
+    <img class="g3-md-header__logo" src="{{ $logoURL }}" />
+  </div>
+  <div class="g3-md-header__title_bar">
+    <p class="g3-md-header__title">{{ .Page.Title }}</p>
+  </div>
+</header>
+
+<aside class="g3-mb-menu g3-mb-menu--toggled">
+  <div class="g3-mb-menu__mask">
+  </div>
   <div class="g3-mb-menu__top">
     <img class="g3-mb-menu__close" src="{{ $iconCrossURL }}" />
     <div class="g3-mb-menu__logo-wrapper">
@@ -73,8 +86,19 @@
   </ul>
 </aside>
 
-
 <script>
+  function toggleMobileMenu() {
+    document.querySelector('.g3-mb-menu').classList.toggle('g3-mb-menu--toggled');
+
+    document.querySelector('body').classList.toggle('g3-mb-scroll-fix');
+  }
+
+  // toggle mobile menu
+  document.querySelector('.g3-md-header__menu-icon').addEventListener('click', toggleMobileMenu);
+  document.querySelector('.g3-mb-menu__close').addEventListener('click', toggleMobileMenu);
+  document.querySelector('.g3-mb-menu__mask').addEventListener('click', toggleMobileMenu);
+
+  // toggle mobile menu sub items
   document.querySelectorAll('.g3-mb-menu__toggle-arrow').forEach(item => {
     item.addEventListener('click', e => {
       var clickElem = e.target;
@@ -82,6 +106,7 @@
       clickElem.nextElementSibling.classList.toggle('g3-mb-menu__sub-content--toggled');
     });
   });
+
 </script>
 
 
