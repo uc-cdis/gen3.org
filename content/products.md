@@ -3,7 +3,6 @@ identifier: products
 title: Products
 linktitle: products
 date: 2018-09-04T22:16:21-05:00
-draft: true
 g3Teaser:
   fig: /img/fig/productkv.svg
   title: Gen3 Features

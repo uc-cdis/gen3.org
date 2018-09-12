@@ -3,7 +3,6 @@ identifier: about
 title: Welcome to Gen3
 linktitle: about
 date: 2018-09-04T22:16:21-05:00
-draft: true
 g3Teaser:
   fig: img/fig/about/kv.svg
   title: Help Biomedical researchers get scientific-discovery on clouds easily and quickly.
