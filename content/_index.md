@@ -9,10 +9,10 @@ g3Teaser:
   detail: Gen3 helps bioinformaticians accelerate scientific discovery with fast, secure, and collaborative genomic and clinical data-analytics.
   button1:
     caption: Experience Demo
-    link: http://localhost
+    link: https://nci-crdc-demo.datacommons.io/
   button2: 
     caption: Get Started
-    link: http://localhost
+    link: /get-started
 g3Feature:
   f1:
     title: Host, Manage, and Share your Data.
@@ -34,21 +34,21 @@ g3Roles:
     detail: Hormanized data allowes you to focus on create unique piplines for your projects.
     button:
       caption: Pipeline Library
-      link: http://localhost
+      link: /resources/user
   r2:
     name: Researchers
     fig: img/fig/about/icon-research.svg
     detail: Use our smart dashboard to explore and find data you are interested in from multiple sources to meet the needs of your research.
     button:
       caption: Gen3 User Guide
-      link: http://localhost
+      link: /resources/user
   r3:
     name: Developers
     fig: img/fig/about/icon-devs.svg
     detail: Integrate API into your services with open- sources softwares and supported UI library so you can focus on important coding.
     button:
       caption: Gen3 Developer
-      link: http://localhost
+      link: /resources/developer
 g3User:
   quote: “This is great. I spend only 1 day to setup Gen3, and I save a lot of time with my research-partner world wide!”
   by: bioinformaticians, University of Alabama
@@ -56,24 +56,28 @@ g3User:
   detail: You create and collect lots of data that is valuable to researchers, developers and health organizations. With Gen3, you can better monetize the access and usage of your genomics data by hosting it in a storage bucket.
   button: 
     caption: Experience Sandbox
-    link: http://localhost
+    link: https://nci-crdc-demo.datacommons.io/
   fig: img/fig/about/app-mockup.png
 g3Commons:
   c1:
     fig: img/fig/about/commons/kid-first.svg
+    link: https://kidsfirstdrc.org/
   c2:
     fig: img/fig/about/commons/blood-pac.png
+    link: https://www.bloodpac.org/
   c3:
     fig: img/fig/about/commons/pdc.png
+    link: /
   c4:
     fig: img/fig/about/commons/braincommons.png
+    link: https://www.braincommons.org/
 g3Intro:
   title: Introduction to Gen3
   detail: Gen3 is an open source software with an Apache 2.0 license for colocating compute and storage in a data commons. Gen3 is agnostic to the data type and the storage location, needing, minimally, a data model, data, a secure landing page for the portal, and, a research goal in mind.
   fig: img/fig/productkv.svg
   button:
     caption: Technical Overview
-    link: http://localhost
+    link: resources/user
 g3DataFeature:
   f1: 
     title: Easy Data Submission
@@ -96,19 +100,20 @@ g3DataFeature:
 g3Contributor:
   title: Contributor
   fig: img/fig/about/cdis-logo.svg
+  link: https://cdis.uchicago.edu/
 g3Entrance:
   e1:
     title: Join the Discussion
     detail: Ask biomedical questions, report issues, discuss Gen3, or reach our for helps.
     button:
       caption: Community
-      link: http://localhost
+      link: https://forums.gen3.org/
   e2:
     title: Get Started Easily
     detail: Follow the documentation to setup Gen3 easily to benefit your research.
     button:
       caption: Easy Start
-      link: http://localhost
+      link: /get-started
 
 ---
 
@@ -252,16 +257,24 @@ g3Entrance:
 <section class="g3-bg__solight">
   <div class="g3-inner-wrapper g3-flex-content g3-space__padding-sm-top g3-space__padding-sm-bottom">
     <div class="g3-col__25">
-      <img class="g3-img__center" style="max-height: 52px; max-width: 100%;" src="{{< param "g3Commons.c1.fig" >}}" />
+      <a href="{{< param "g3Commons.c1.link" >}}">
+        <img class="g3-img__center" style="max-height: 52px; max-width: 100%;" src="{{< param "g3Commons.c1.fig" >}}" />
+      </a>
     </div>
     <div class="g3-col__25">
-      <img class="g3-img__center" style="max-height: 52px; max-width: 100%;" src="{{< param "g3Commons.c2.fig" >}}" />
+      <a href="{{< param "g3Commons.c2.link" >}}">
+        <img class="g3-img__center" style="max-height: 52px; max-width: 100%;" src="{{< param "g3Commons.c2.fig" >}}" />
+      </a>
     </div>
     <div class="g3-col__25">
-      <img class="g3-img__center" style="max-height: 52px; max-width: 100%;" src="{{< param "g3Commons.c3.fig" >}}" />
+      <a href="{{< param "g3Commons.c3.link" >}}">
+        <img class="g3-img__center" style="max-height: 52px; max-width: 100%;" src="{{< param "g3Commons.c3.fig" >}}" />
+      </a>
     </div>
     <div class="g3-col__25">
-      <img class="g3-img__center" style="max-height: 52px; max-width: 100%;" src="{{< param "g3Commons.c4.fig" >}}" />
+      <a href="{{< param "g3Commons.c4.link" >}}">
+        <img class="g3-img__center" style="max-height: 52px; max-width: 100%;" src="{{< param "g3Commons.c4.fig" >}}" />
+      </a>
     </div>
   </div>
 </section>
@@ -329,7 +342,9 @@ g3Entrance:
 <section class="g3-space__margin-lg-bottom g3-text__center">
   <h2>{{< param "g3Contributor.title" >}}</h2>
   <div class="g3-mini-wrapper g3-space__margin-sm-top">
-    <img src="{{< param "g3Contributor.fig" >}}" class="g3-img__full-width" />
+    <a href="{{< param "g3Contributor.link" >}}">
+      <img src="{{< param "g3Contributor.fig" >}}" class="g3-img__full-width" />
+    </a>
   </div>
 </section>
 

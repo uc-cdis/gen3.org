@@ -32,13 +32,13 @@ g3Entrance:
     detail: Ask biomedical questions, report issues, discuss Gen3, or reach our for helps.
     button:
       caption: Learn
-      link: http://localhost
+      link: https://forums.gen3.org/
   e2:
     title: Get Started Easily
     detail: Follow the documentation to setup Gen3 easily to benefit your research.
     button:
       caption: Easy Start
-      link: http://localhost
+      link: /get-started
 ---
 
 <section class="g3-bg__mint">
