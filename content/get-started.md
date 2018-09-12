@@ -36,12 +36,12 @@ g3Starts:
 ---
 
 <section class="g3-bg__solight">
-  <h1 class="g3-text__center g3-space__padding-md-top-bottom">{{< param "g3Starts.title" >}}</h1>
+  <h1 class="g3-text__center g3-space__padding-md-top-bottom g3-mb-hide">{{< param "g3Starts.title" >}}</h1>
 </section>
   
 <section>
   <div class="g3-inner-wrapper g3-space__padding-md-top g3-space__padding-lg-bottom g3-mb-space__padding-lg-top g3-mb-space__padding-lg-bottom">
-    <div class="g3-table g3-space__margin-lg-bottom">
+    <div class="g3-table g3-space__margin-lg-bottom g3-mb-space__margin-lg-bottom">
       <div class="g3-col__50 g3-text__center g3-space__margin-sm-left-right">
         <img class="g3-space__margin-sm-bottom" src="{{< param "g3Starts.s1.fig" >}}"/>
         <h3 class="g3-space__margin-sm-bottom">
@@ -67,7 +67,7 @@ g3Starts:
         </a>
       </div>
     </div>
-    <div class="g3-table g3-space__margin-lg-bottom">
+    <div class="g3-table g3-space__margin-lg-bottom g3-mb-space__margin-lg-bottom">
       <div class="g3-col__50 g3-text__center g3-space__margin-sm-left-right">
         <img class="g3-space__margin-sm-bottom" src="{{< param "g3Starts.s3.fig" >}}"/>
         <h3 class="g3-space__margin-sm-bottom">
