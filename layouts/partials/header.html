@@ -3,6 +3,7 @@
 {{- $iconMenuURL := .Site.Params.icons.menu.src -}}
 {{- $iconCrossURL := .Site.Params.icons.cross.src -}}
 {{- $iconToggleURL := .Site.Params.icons.toggleDown.src -}}
+{{- $iconLinkURL := .Site.Params.icons.externalLink.src -}}
 {{ $currentNode := . }}
 
 <header class="g3-header">
@@ -23,7 +24,12 @@
                     <span class="g3-header__dropdown-arrow"></span>
                     {{ range .Children }}
                         <div class="g3-header__nav-subitem {{if $currentNode.HasMenuCurrent "mainmenu" . }}g3-header__nav-subitem--active{{ end }}">
-                            <a class="g3-header__nav-subitem-link" href="{{ .URL }}">{{ .Name }}</a>
+                            <a class="g3-header__nav-subitem-link" href="{{ .URL }}">
+                              {{ .Name }}
+                              {{ if hasPrefix .URL "http" }}
+                                <img class="g3-header__link-icon" src="{{ $iconLinkURL }}" />
+                              {{ end }}
+                            </a>
                         </div>
                     {{ end }}
                 </div>
@@ -76,7 +82,12 @@
                 {{ range .Children }}
                   {{ $isSubPage := eq .Identifier $currentNode.LinkTitle }}
                   <li class="g3-mb-menu__subitem{{if $isSubPage }} g3-mb-menu__subitem--active{{ end }}">
-                      <a class="g3-mb-menu__subitem-link{{if $isSubPage }} g3-mb-menu__subitem-link--active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+                      <a class="g3-mb-menu__subitem-link{{if $isSubPage }} g3-mb-menu__subitem-link--active{{ end }}" href="{{ .URL }}">
+                        {{ .Name }}
+                        {{ if hasPrefix .URL "http" }}
+                          <img class="g3-header__link-icon" src="{{ $iconLinkURL }}" />
+                        {{ end }}
+                      </a>
                   </li>
                 {{ end }}
             </ul>
