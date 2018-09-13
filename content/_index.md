@@ -30,21 +30,21 @@ g3Roles:
   title: Gen3 helps you as...
   r1:
     name: Bioinformaticians
-    fig: figs/icon-bio.svg
+    fig: /figs/icon-bio.svg
     detail: Hormanized data allowes you to focus on create unique piplines for your projects.
     button:
       caption: Pipeline Library
       link: /resources/user
   r2:
     name: Researchers
-    fig: figs/icon-research.svg
+    fig: /figs/icon-research.svg
     detail: Use our smart dashboard to explore and find data you are interested in from multiple sources to meet the needs of your research.
     button:
       caption: Gen3 User Guide
       link: /resources/user
   r3:
     name: Developers
-    fig: figs/icon-devs.svg
+    fig: /figs/icon-devs.svg
     detail: Integrate API into your services with open- sources softwares and supported UI library so you can focus on important coding.
     button:
       caption: Gen3 Developer

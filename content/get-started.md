@@ -7,32 +7,32 @@ g3Starts:
   title: Get Started
   s1:
     name: Setup Gen3
-    fig: /img/fig/about/icon-bio.svg
+    fig: /figs/features/set-up.svg
     detail: Gen3 features a friendly GraphQL API for searching and discovering data. The GraphQL API enables faceted and precise searching through the flexible data model. Search capabilities enable quick and easy creation of virtual cohorts that can be exported to a manifest for data download.
     button:
       caption: Setup Gen3
-      link: http://localhost
+      link: /resources/user
   s2:
     name: Submit Metadata&Data
-    fig: /img/fig/about/icon-research.svg
+    fig: /figs/features/submit-data.svg
     detail: Gen3 utilizes OpenID Connect for providing AuthN services with AuthZ specified on a per commons basis. Currently supported identity providers include Google and Shibboleth, supporting providers such as NIH iTrust, InCommon Federation, and eduGAIN.
     button:
       caption: Setup Gen3
-      link: http://localhost
+      link: /resources/user/submit-data
   s3:
     name: Access Metadata&Data
-    fig: /img/fig/about/icon-bio.svg
+    fig: /figs/features/search.svg
     detail: Gen3 includes a data portal as a default application over a commons. The portal is an interactive website that allows users to explore, submit, and download data. The data portal utilizes the public APIs offered by the data commons as a demonstration to the power of Gen3.
     button:
       caption: Setup Gen3
-      link: http://localhost
+      link: /resources/user/access-data
   s4:
     name: Build Apps on Gen3
-    fig: /img/fig/about/icon-research.svg
+    fig: /figs/features/build-apps.svg
     detail: All of the Gen3 services support powerful APIs which allow them to interact with each other and external users. These APIs enable extensible application development for future services and users.
     button:
       caption: Setup Gen3
-      link: http://localhost
+      link: /resources/developer/build-app
 ---
 
 <section class="g3-bg__solight">
