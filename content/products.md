@@ -1,30 +1,36 @@
 ---
 identifier: products
-title: Products
+title: Gen3 - Products
 linktitle: products
 date: 2018-09-04T22:16:21-05:00
 g3Teaser:
-  fig: /img/fig/productkv.svg
+  fig: /figs/productkv.svg
   title: Gen3 Features
   detail: Gen3 is an open source software with an Apache 2.0 license for colocating compute and storage in a data commons. Gen3 is agnostic to the data type and the storage location, needing, minimally, a data model, data, a secure landing page for the portal, and, a research goal in mind.
 g3DataFeature:
   f1: 
     title: Data Submission
+    fig: /figs/features/submit-data.svg
     detail: Gen3 supports data submission including clinical attributes, phenotypic information, and data files. The submissions are validated against the data dictionary to ensure all required fields are present and have appropriate data values.
   f2:
     title: Object Index
+    fig: /figs/features/index.svg
     detail: Gen3 provides permanent data GUIDs (globally unique IDs) for data objects. The service tracks the physical locations and hash of every asset (file) in the data commons object store. The Gen3 platform includes landing pages which support FAIR descriptions of the data objects.
   f3: 
     title: Data Search
+    fig: /figs/features/search.svg
     detail: Gen3 features a friendly GraphQL API for searching and discovering data. The GraphQL API enables faceted and precise searching through the flexible data model. Search capabilities enable quick and easy creation of virtual cohorts that can be exported to a manifest for data download.
   f4:
     title: AuthN/AuthZ
+    fig: /figs/features/auth.svg
     detail: Gen3 utilizes OpenID Connect for providing AuthN services with AuthZ specified on a per commons basis. Currently supported identity providers include Google and Shibboleth, supporting providers such as NIH iTrust, InCommon Federation, and eduGAIN.
   f5: 
     title: Data Portal
+    fig: /figs/features/portal.svg
     detail: Gen3 includes a data portal as a default application over a commons. The portal is an interactive website that allows users to explore, submit, and download data. The data portal utilizes the public APIs offered by the data commons as a demonstration to the power of Gen3.
   f6:
     title: API
+    fig: /figs/features/api.svg
     detail: All of the Gen3 services support powerful APIs which allow them to interact with each other and external users. These APIs enable extensible application development for future services and users.
 g3Entrance:
   e1:
@@ -63,15 +69,15 @@ g3Entrance:
   <div class="g3-space__margin-lg-bottom g3-inner-wrapper">
     <div class="g3-flex-content g3-space__margin-md-top-bottom">
       <div class="g3-space__margin-sm-left-right g3-col__50">
-        <h3 class="g3-text__center">{{< param "g3DataFeature.f1.title" >}}</h3>
-        <img src="{{< param "g3DataFeature.f1.fig" >}}" />
+        <img class="g3-img__center" src="{{< param "g3DataFeature.f1.fig" >}}" />
+        <h3 class="g3-text__center g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f1.title" >}}</h3>
         <p>
           {{< param "g3DataFeature.f1.detail" >}}
         </p>
       </div>
       <div class="g3-space__margin-sm-left-right g3-col__50">
-        <h3 class="g3-text__center">{{< param "g3DataFeature.f2.title" >}}</h3>
-        <img src="{{< param "g3DataFeature.f2.fig" >}}" />
+        <img class="g3-img__center" src="{{< param "g3DataFeature.f2.fig" >}}" />
+        <h3 class="g3-text__center g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f2.title" >}}</h3>
         <p>
           {{< param "g3DataFeature.f2.detail" >}}
         </p>
@@ -79,15 +85,15 @@ g3Entrance:
     </div>
     <div class="g3-flex-content g3-space__margin-md-top-bottom">
       <div class="g3-space__margin-sm-left-right g3-col__50">
-        <h3 class="g3-text__center">{{< param "g3DataFeature.f3.title" >}}</h3>
-        <img src="{{< param "g3DataFeature.f3.fig" >}}" />
+        <img class="g3-img__center" src="{{< param "g3DataFeature.f3.fig" >}}" />
+        <h3 class="g3-text__center g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f3.title" >}}</h3>
         <p>
           {{< param "g3DataFeature.f3.detail" >}}
         </p>
       </div>
       <div class="g3-space__margin-sm-left-right g3-col__50">
-        <h3 class="g3-text__center">{{< param "g3DataFeature.f4.title" >}}</h3>
-        <img src="{{< param "g3DataFeature.f4.fig" >}}" />
+        <img class="g3-img__center" src="{{< param "g3DataFeature.f4.fig" >}}" />
+        <h3 class="g3-text__center g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f4.title" >}}</h3>
         <p>
           {{< param "g3DataFeature.f4.detail" >}}
         </p>
@@ -95,15 +101,15 @@ g3Entrance:
     </div>
     <div class="g3-flex-content g3-space__margin-md-top-bottom">
       <div class="g3-space__margin-sm-left-right g3-col__50">
-        <h3 class="g3-text__center">{{< param "g3DataFeature.f5.title" >}}</h3>
-        <img src="{{< param "g3DataFeature.f5.fig" >}}" />
+        <img class="g3-img__center" src="{{< param "g3DataFeature.f5.fig" >}}" />
+        <h3 class="g3-text__center g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f5.title" >}}</h3>
         <p>
           {{< param "g3DataFeature.f5.detail" >}}
         </p>
       </div>
       <div class="g3-space__margin-sm-left-right g3-col__50">
-        <h3 class="g3-text__center">{{< param "g3DataFeature.f6.title" >}}</h3>
-        <img src="{{< param "g3DataFeature.f6.fig" >}}" />
+        <img class="g3-img__center" src="{{< param "g3DataFeature.f6.fig" >}}" />
+        <h3 class="g3-text__center g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f6.title" >}}</h3>
         <p>
           {{< param "g3DataFeature.f6.detail" >}}
         </p>

@@ -1,6 +1,6 @@
 ---
 identifier: developer
-title: Developer
+title: Gen3 - Developer
 linktitle: /resources/developer
 date: 2018-09-04T22:16:21-05:00
 ---

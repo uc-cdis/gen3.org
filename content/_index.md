@@ -4,7 +4,7 @@ title: Welcome to Gen3
 linktitle: about
 date: 2018-09-04T22:16:21-05:00
 g3Teaser:
-  fig: img/fig/about/kv.svg
+  fig: figs/kv.svg
   title: Help Biomedical researchers get scientific-discovery on clouds easily and quickly.
   detail: Gen3 helps bioinformaticians accelerate scientific discovery with fast, secure, and collaborative genomic and clinical data-analytics.
   button1:
@@ -30,21 +30,21 @@ g3Roles:
   title: Gen3 helps you as...
   r1:
     name: Bioinformaticians
-    fig: img/fig/about/icon-bio.svg
+    fig: figs/icon-bio.svg
     detail: Hormanized data allowes you to focus on create unique piplines for your projects.
     button:
       caption: Pipeline Library
       link: /resources/user
   r2:
     name: Researchers
-    fig: img/fig/about/icon-research.svg
+    fig: figs/icon-research.svg
     detail: Use our smart dashboard to explore and find data you are interested in from multiple sources to meet the needs of your research.
     button:
       caption: Gen3 User Guide
       link: /resources/user
   r3:
     name: Developers
-    fig: img/fig/about/icon-devs.svg
+    fig: figs/icon-devs.svg
     detail: Integrate API into your services with open- sources softwares and supported UI library so you can focus on important coding.
     button:
       caption: Gen3 Developer
@@ -57,24 +57,24 @@ g3User:
   button: 
     caption: Experience Sandbox
     link: https://nci-crdc-demo.datacommons.io/
-  fig: img/fig/about/app-mockup.png
+  fig: figs/app-mockup.png
 g3Commons:
   c1:
-    fig: img/fig/about/commons/kid-first.svg
+    fig: figs/commons/kid-first.svg
     link: https://kidsfirstdrc.org/
   c2:
-    fig: img/fig/about/commons/blood-pac.png
+    fig: figs/commons/blood-pac.png
     link: https://www.bloodpac.org/
   c3:
-    fig: img/fig/about/commons/pdc.png
+    fig: figs/commons/pdc.png
     link: /
   c4:
-    fig: img/fig/about/commons/braincommons.png
+    fig: figs/commons/braincommons.png
     link: https://www.braincommons.org/
 g3Intro:
   title: Introduction to Gen3
   detail: Gen3 is an open source software with an Apache 2.0 license for colocating compute and storage in a data commons. Gen3 is agnostic to the data type and the storage location, needing, minimally, a data model, data, a secure landing page for the portal, and, a research goal in mind.
-  fig: img/fig/productkv.svg
+  fig: figs/productkv.svg
   button:
     caption: Technical Overview
     link: resources/user
@@ -99,7 +99,7 @@ g3DataFeature:
     detail: Covered by our HIPAA Business Associates Agreement. Available via FedRAMP ATO for the National Cancer Institute Cancer Cloud Pilots.
 g3Contributor:
   title: Contributor
-  fig: img/fig/about/cdis-logo.svg
+  fig: figs/cdis-logo.svg
   link: https://cdis.uchicago.edu/
 g3Entrance:
   e1:
@@ -120,14 +120,14 @@ g3Entrance:
 <section class="g3-bg__solight">
   <div class="g3-outer-wrapper g3-flex-content g3-flex-content__reverse">
     <div class="g3-col__55 g3-flex-content g3-mb-space__padding-lg-top">
-      <img class="g3-img" src="{{< param "g3Teaser.fig" >}}"/>
+      <img class="g3-img__max-full-width" src="{{< param "g3Teaser.fig" >}}"/>
     </div>
     <div class="g3-space__padding-lg-top g3-space__padding-lg-bottom g3-col__45">
       <div class="g3-space__wrapper-gap-left">
         <h1 class="g3-space__margin-sm-bottom">
           {{< param "g3Teaser.title" >}}
         </h1>
-        <p class="g3-space__margin-sm-bottom introduction">
+        <p class="introduction">
           {{< param "g3Teaser.detail" >}}
         </p>
         <div class="g3-button-groups g3-mb-space__padding-lg-bottom">
@@ -293,47 +293,49 @@ g3Entrance:
 </section>
 
 <section>
-  <div class="g3-space__margin-lg-bottom g3-border__top-bottom g3-inner-wrapper">
-    <div class="g3-flex-content g3-space__margin-md-top-bottom">
-      <div class="g3-space__margin-sm-left-right g3-col__50">
-        <h3>{{< param "g3DataFeature.f1.title" >}}</h3>
-        <p>
-          {{< param "g3DataFeature.f1.detail" >}}
-        </p>
+  <div class="g3-space__margin-lg-bottom g3-border__top-bottom">
+    <div class="g3-inner-wrapper">
+      <div class="g3-flex-content g3-space__margin-md-top-bottom">
+        <div class="g3-space__margin-sm-left-right g3-col__50">
+          <h3>{{< param "g3DataFeature.f1.title" >}}</h3>
+          <p>
+            {{< param "g3DataFeature.f1.detail" >}}
+          </p>
+        </div>
+        <div class="g3-space__margin-sm-left-right g3-col__50">
+          <h3>{{< param "g3DataFeature.f2.title" >}}</h3>
+          <p>
+            {{< param "g3DataFeature.f2.detail" >}}
+          </p>
+        </div>
       </div>
-      <div class="g3-space__margin-sm-left-right g3-col__50">
-        <h3>{{< param "g3DataFeature.f2.title" >}}</h3>
-        <p>
-          {{< param "g3DataFeature.f2.detail" >}}
-        </p>
+      <div class="g3-flex-content g3-space__margin-md-top-bottom">
+        <div class="g3-space__margin-sm-left-right g3-col__50">
+          <h3>{{< param "g3DataFeature.f3.title" >}}</h3>
+          <p>
+            {{< param "g3DataFeature.f3.detail" >}}
+          </p>
+        </div>
+        <div class="g3-space__margin-sm-left-right g3-col__50">
+          <h3>{{< param "g3DataFeature.f4.title" >}}</h3>
+          <p>
+            {{< param "g3DataFeature.f4.detail" >}}
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="g3-flex-content g3-space__margin-md-top-bottom">
-      <div class="g3-space__margin-sm-left-right g3-col__50">
-        <h3>{{< param "g3DataFeature.f3.title" >}}</h3>
-        <p>
-          {{< param "g3DataFeature.f3.detail" >}}
-        </p>
-      </div>
-      <div class="g3-space__margin-sm-left-right g3-col__50">
-        <h3>{{< param "g3DataFeature.f4.title" >}}</h3>
-        <p>
-          {{< param "g3DataFeature.f4.detail" >}}
-        </p>
-      </div>
-    </div>
-    <div class="g3-flex-content g3-space__margin-md-top-bottom">
-      <div class="g3-space__margin-sm-left-right g3-col__50">
-        <h3>{{< param "g3DataFeature.f5.title" >}}</h3>
-        <p>
-          {{< param "g3DataFeature.f5.detail" >}}
-        </p>
-      </div>
-      <div class="g3-space__margin-sm-left-right g3-col__50">
-        <h3>{{< param "g3DataFeature.f6.title" >}}</h3>
-        <p>
-          {{< param "g3DataFeature.f6.detail" >}}
-        </p>
+      <div class="g3-flex-content g3-space__margin-md-top-bottom">
+        <div class="g3-space__margin-sm-left-right g3-col__50">
+          <h3>{{< param "g3DataFeature.f5.title" >}}</h3>
+          <p>
+            {{< param "g3DataFeature.f5.detail" >}}
+          </p>
+        </div>
+        <div class="g3-space__margin-sm-left-right g3-col__50">
+          <h3>{{< param "g3DataFeature.f6.title" >}}</h3>
+          <p>
+            {{< param "g3DataFeature.f6.detail" >}}
+          </p>
+        </div>
       </div>
     </div>
   </div>

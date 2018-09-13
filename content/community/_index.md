@@ -1,9 +1,9 @@
 ---
 identifier: community
-title: Community
+title: Gen3 - Community
 linktitle: community
 date: 2018-09-04T22:16:21-05:00
 draft: true
 ---
 
-Community!
+This is community page! 
