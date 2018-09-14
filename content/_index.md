@@ -10,9 +10,11 @@ g3Teaser:
   button1:
     caption: Experience Demo
     link: https://nci-crdc-demo.datacommons.io/
+    target: _blank
   button2: 
     caption: Get Started
     link: /get-started
+    target: _self
 g3Feature:
   f1:
     title: Host, Manage, and Share your Data.
@@ -34,13 +36,15 @@ g3Roles:
     detail: Hormanized data allowes you to focus on create unique piplines for your projects.
     button:
       caption: Pipeline Library
-      link: /resources/user
+      target: _blank
+      link: https://github.com/uc-cdis/ndh-demo
   r2:
     name: Researchers
     fig: /figs/roles/icon-research.svg
     detail: Use our smart dashboard to explore and find data you are interested in from multiple sources to meet the needs of your research.
     button:
       caption: Gen3 User Guide
+      target: _self
       link: /resources/user
   r3:
     name: Developers
@@ -48,6 +52,7 @@ g3Roles:
     detail: Integrate API into your services with open- sources softwares and supported UI library so you can focus on important coding.
     button:
       caption: Gen3 Developer
+      target: _self
       link: /resources/developer
 g3User:
   quote: “This is great. I spend only 1 day to setup Gen3, and I save a lot of time with my research-partner world wide!”
@@ -57,6 +62,7 @@ g3User:
   button: 
     caption: Experience Sandbox
     link: https://nci-crdc-demo.datacommons.io/
+    target: _blank
   fig: figs/app-mockup.png
 g3Commons:
   c1:
@@ -100,6 +106,7 @@ g3DataFeature:
 g3Contributor:
   title: Contributor
   fig: figs/cdis-logo.svg
+  target: _blank
   link: https://cdis.uchicago.edu/
 g3Entrance:
   e1:
@@ -131,8 +138,8 @@ g3Entrance:
           {{< param "g3Teaser.detail" >}}
         </p>
         <div class="g3-button-groups g3-mb-space__padding-lg-bottom">
-          <a class="g3-button g3-button--primary" href="{{< param "g3Teaser.button1.link" >}}">{{< param "g3Teaser.button1.caption" >}}</a>
-          <a class="g3-button g3-button--secondary" href="{{< param "g3Teaser.button2.link" >}}">{{< param "g3Teaser.button2.caption" >}}</a>
+          <a class="g3-button g3-button--primary" target="{{< param "g3Teaser.button1.target" >}}" href="{{< param "g3Teaser.button1.link" >}}">{{< param "g3Teaser.button1.caption" >}}</a>
+          <a class="g3-button g3-button--secondary" target="{{< param "g3Teaser.button2.target" >}}" href="{{< param "g3Teaser.button2.link" >}}">{{< param "g3Teaser.button2.caption" >}}</a>
         </div>
       </div>
     </div>
@@ -192,7 +199,7 @@ g3Entrance:
         <p class="g3-space__margin-sm-bottom">
           {{< param "g3Roles.r1.detail" >}}
         </p>
-        <a class="g3-button g3-button--secondary g3-align__bottom" href="{{< param "g3Roles.r1.button.link" >}}">
+        <a class="g3-button g3-button--secondary g3-align__bottom" href="{{< param "g3Roles.r1.button.link" >}}" target="{{< param "g3Roles.r1.button.target" >}}">
           {{< param "g3Roles.r1.button.caption" >}}
         </a>
       </div>
@@ -204,7 +211,7 @@ g3Entrance:
         <p class="g3-space__margin-sm-bottom">
           {{< param "g3Roles.r2.detail" >}}
         </p>
-        <a class="g3-button g3-button--secondary g3-align__bottom" href="{{< param "g3Roles.r2.button.link" >}}">
+        <a class="g3-button g3-button--secondary g3-align__bottom" href="{{< param "g3Roles.r2.button.link" >}}" target="{{< param "g3Roles.r2.button.target" >}}">
           {{< param "g3Roles.r2.button.caption" >}}
         </a>
       </div>
@@ -216,7 +223,7 @@ g3Entrance:
         <p class="g3-space__margin-sm-bottom">
           {{< param "g3Roles.r3.detail" >}}
         </p>
-        <a class="g3-button g3-button--secondary g3-align__bottom" href="{{< param "g3Roles.r3.button.link" >}}">
+        <a class="g3-button g3-button--secondary g3-align__bottom" href="{{< param "g3Roles.r3.button.link" >}}" target="{{< param "g3Roles.r3.button.target" >}}">
           {{< param "g3Roles.r3.button.caption" >}}
         </a>
       </div>
@@ -242,7 +249,7 @@ g3Entrance:
           {{< param "g3User.detail" >}}
         </p>
         <div class="g3-mb-text__center">
-          <a class="g3-button g3-button--primary" href="{{< param "g3User.button.link" >}}">
+          <a class="g3-button g3-button--primary" href="{{< param "g3User.button.link" >}}" target="{{< param "g3User.button.target" >}}">
             {{< param "g3User.button.caption" >}}
           </a>
         </div>
@@ -344,7 +351,7 @@ g3Entrance:
 <section class="g3-space__margin-lg-bottom g3-text__center">
   <h2>{{< param "g3Contributor.title" >}}</h2>
   <div class="g3-mini-wrapper g3-space__margin-sm-top">
-    <a href="{{< param "g3Contributor.link" >}}">
+    <a href="{{< param "g3Contributor.link" >}}" target="{{< param "g3Contributor.target" >}}">
       <img src="{{< param "g3Contributor.fig" >}}" class="g3-img__full-width" />
     </a>
   </div>

@@ -7,7 +7,7 @@ g3Resources:
   title: Gen3 Resources
   r1:
     name: Gen3 User Guide
-    fig: /figs/icon-bio.svg
+    fig: /figs/roles/icon-bio.svg
     detail: Ask biomedical questions, report issues, discuss Gen3, or reach our for helps.
     button:
       caption: Documentation
@@ -37,7 +37,7 @@ g3Resources:
             link: .
   r2:
     name: Gen3 Operator
-    fig: /figs/icon-research.svg
+    fig: /figs/roles/icon-research.svg
     detail: Ask biomedical questions, report issues, discuss Gen3, or reach our for helps.
     button:
       caption: Documentation
@@ -51,7 +51,7 @@ g3Resources:
             link: .
   r3:
     name: Developer
-    fig: /figs/icon-devs.svg
+    fig: /figs/roles/icon-devs.svg
     detail: Follow the documentation to setup Gen3 easily to benefit your research.
     button:
       caption: Gen3 Developer
