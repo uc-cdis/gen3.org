@@ -2,7 +2,6 @@
 title: "Build App"
 date: 2018-09-12T23:17:36-05:00
 linktitle: /resources/developer
-draft: true
 ---
 {{% markdownwrapper %}}
 # Building Apps for Gen3 Data Commons

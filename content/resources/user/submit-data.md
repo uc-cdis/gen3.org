@@ -2,7 +2,6 @@
 title: "Submit Data"
 date: 2018-09-12T20:53:20-05:00
 linktitle: /resources/user
-draft: true
 ---
 
 {{% markdownwrapper %}}
