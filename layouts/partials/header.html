@@ -52,7 +52,7 @@
   </div>
 </header>
 
-<header class="g3-mb-header">
+<header class="g3-mb-header g3-mb-header--scrolling-up">
   <div class="g3-md-header__menu-head">
     <img class="g3-md-header__menu-icon" src="{{ $iconMenuURL }}" />
     <img class="g3-md-header__logo" src="{{ $logoURL }}" />
@@ -61,6 +61,8 @@
     <p class="g3-md-header__title">{{ .Page.Title }}</p>
   </div>
 </header>
+<div class="g3-mb__space-holder">
+</div>
 
 <aside class="g3-mb-menu g3-mb-menu--toggled">
   <div class="g3-mb-menu__mask">
@@ -100,6 +102,17 @@
 </aside>
 
 <script>
+  function closeMobileMenu() {
+    document.querySelector('.g3-mb-menu').classList.add('g3-mb-menu--toggled');
+    document.querySelector('body').classList.remove('g3-mb-scroll-fix');
+  }
+
+  function openMobileMenu() {
+    document.querySelector('.g3-mb-menu').classList.remove('g3-mb-menu--toggled');
+
+    document.querySelector('body').classList.add('g3-mb-scroll-fix');
+  }
+
   function toggleMobileMenu() {
     document.querySelector('.g3-mb-menu').classList.toggle('g3-mb-menu--toggled');
 
@@ -107,9 +120,9 @@
   }
 
   // toggle mobile menu
-  document.querySelector('.g3-md-header__menu-icon').addEventListener('click', toggleMobileMenu);
-  document.querySelector('.g3-mb-menu__close').addEventListener('click', toggleMobileMenu);
-  document.querySelector('.g3-mb-menu__mask').addEventListener('click', toggleMobileMenu);
+  document.querySelector('.g3-md-header__menu-icon').addEventListener('click', openMobileMenu);
+  document.querySelector('.g3-mb-menu__close').addEventListener('click', closeMobileMenu);
+  document.querySelector('.g3-mb-menu__mask').addEventListener('click', closeMobileMenu);
 
   // toggle mobile menu sub items
   document.querySelectorAll('.g3-mb-menu__toggle-arrow').forEach(item => {
@@ -123,11 +136,16 @@
   // sticky effects for mobile headers
   let scrollPos = 0;
   window.addEventListener('scroll', function(){
-    if ((document.body.getBoundingClientRect()).top > scrollPos)
+    if (window.pageYOffset < scrollPos) {
       document.querySelector('.g3-mb-header').classList.add('g3-mb-header--scrolling-up');
-    else
-      document.querySelector('.g3-mb-header').classList.remove('g3-mb-header--scrolling-up');
-    scrollPos = (document.body.getBoundingClientRect()).top;
+    }
+    else {
+      document.querySelector('.g3-mb-header').classList.remove('g3-mb-header--scrolling-up'); 
+    }
+    scrollPos = window.pageYOffset;
+    if (scrollPos < 10) {
+      document.querySelector('.g3-mb-header').classList.add('g3-mb-header--scrolling-up');
+    }
   });
 
 </script>
