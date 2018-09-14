@@ -1,14 +1,54 @@
 # Intro to Development on Gen3
 
-## General Development Guidelines
+## General Development Philosophy
+
+We summarize best development practices with three central tenets (in no
+particular order!).
+
+* Make your fellow developers happy.
+* Make your fellow devops happy.
+* Make your users happy.
+
+There are many aspects that go into each of these. Some fall under multiple or
+all categories:
+
+* Unit test (untested code is broken code).
+* Use the most efficient algorithms and datastructures in implementation.
+
+### Making Devs Happy
 
 * Name things clearly (not longer than necessary, but long enough to be clear
-  and readable)
-* Modularize separate functionality and aim to write reusable code
-* Unit test
-* Follow the applicable style guide
-* Make code simple to extend and refactor
-* Use the most efficient algorithms and datastructures in implementation
+  and readable).
+* Document things that might not be clear to someone else (or to you, 3 months
+  from now).
+    * For documentation aim to explain not *what* (things like what a function
+      is supposed to output—which should hopefully be obvious from your code)
+      but *why* and *how*: how is this function used elsewhere, why are any
+      idiosyncracies necessary, how does it interface with the rest of the code?
+* Modularize separate functionalities and aim to write reusable code.
+* Follow the applicable style guide.
+* Make code simple to extend and refactor.
+
+### Making DevOps Happy
+
+* Test deploying your code in your dev namespace, and make sure it's functional
+  end-to-end before asking for review.
+* Avoid making breaking changes unless absolutely necessary (to avoid headaches
+  with configuring new deployments).
+
+### Making Users Happy
+
+Perhaps the most complicated of the three tenets, but ultimately the most
+important. Users vary in intent and level of technical competence: some will
+only ever use the simplest portal features, some will be versed in using GraphQL
+for querying data, some will never touch the portal and work directly with API
+calls.
+
+* Strive to make user interfaces intuitive, whether in frontend design or API
+  endpoints and general API design.
+* For APIs in particular, if a user will use it, include documentation somewhere
+  that explains how to use it. More generally: if *anyone* will use it—explain
+  how to use it.
 
 ## GitHub Usage
 
