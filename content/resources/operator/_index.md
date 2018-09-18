@@ -3,9 +3,10 @@ identifier: operator
 title: Gen3 - Set up Gen3
 linktitle: /resources/operator
 date: 2018-09-04T22:16:21-05:00
+layout: withtoc
+menuname: operatorMenu
 ---
 
-{{% markdownwrapper %}}
 # Running a Gen3 Data Commons
 
 ## 1. Docker-Compose
@@ -27,5 +28,3 @@ Cloud automation utilizes Terraform for repeatable infrastructure deployments on
 Gen3 deployed using cloud automation relies on a number of supporting features to be in place currently. It is a work in progress to continue to ease the Gen3 deployment process for groups without existing supporting infrastructure. We welcome all comments, feature requests, and pull requests using GitHub issues or the [Gen3 community](https://forums.gen3.org).
 
 [Gen3 Cloud Automation](https://github.com/uc-cdis/cloud-automation)
-
-{{% /markdownwrapper %}}

@@ -1,6 +1,7 @@
 ---
 title: "Micro Service"
 date: 2018-09-14T16:58:29-05:00
+linktitle: /resources/developer
 draft: true
 layout: withtoc
 menuname: developerMenu
