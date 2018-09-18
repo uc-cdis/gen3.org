@@ -1,0 +1,32 @@
+{{ $currentPageLink := .Page.URL }}
+{{ with .Page.Params.menuname }}
+  {{ range $.Site.Param . }}
+
+    {{ $currentContent := .content }}
+    {{ $totalLen := len .content }}
+    {{ $maxIndex := sub $totalLen 1 }}
+    {{ range $i, $v := .content }}
+      {{ $isPage := eq $v.link $currentPageLink }}
+      {{ if $isPage }}
+
+        {{ if gt $i 0}}
+          {{ $prevIndex := sub $i 1 }}
+          {{ $prevEntry := index $currentContent $prevIndex }}
+          <a class="g3-withtoc-wrapper__prev-button g3-button g3-button--secondary" href="{{$prevEntry.link}}">
+            Back to {{$prevEntry.name}}
+          </a>
+        {{ end }}
+
+        {{ if lt $i $maxIndex }}
+          {{ $nextIndex := add $i 1 }}
+          {{ $nextEntry := index $currentContent $nextIndex }}
+          <a class="g3-withtoc-wrapper__next-button g3-button g3-button--secondary" href="{{$nextEntry.link}}">
+            Next to {{$nextEntry.name}}
+          </a>
+        {{ end }}
+
+      {{ end }} <!-- if $isPage -->
+    {{ end }} <!-- range .content -->
+
+  {{ end }} <!-- range $.Site.Param . -->
+{{end}}

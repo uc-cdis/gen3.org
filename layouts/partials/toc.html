@@ -1,0 +1,26 @@
+{{ $currentPageLink := .Page.URL }}
+{{ with .Page.Params.menuname }}
+    {{ range $.Site.Param . }}
+      <div class="g3-side-menu__category">
+        <p class="g3-side-menu__caption">{{ .category }}</p>
+          {{ $currentContent := .content }}
+          {{ range $i, $v := .content }}
+            {{ $isPage := eq $v.link $currentPageLink }}
+
+
+            <a class="g3-side-menu__item{{if $isPage}} g3-side-menu__item--active{{end}}" href="{{$v.link}}">
+              {{ $v.name }}
+            </a>
+            {{ if $isPage }}
+              {{ if $v.submenu }}
+                {{ range $v.submenu }}
+                  <a class="g3-side-menu__sub-item"href="{{.link}}">{{ .name }}</a>
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+      </div>
+    {{ end }}
+{{ end }}
+
+

@@ -3,8 +3,10 @@ identifier: developer
 title: Gen3 - Developer
 linktitle: /resources/developer
 date: 2018-09-04T22:16:21-05:00
+layout: withtoc
+menuname: developerMenu
 ---
-{{% markdownwrapper %}}
+
 # Gen3 Technical Documentation
 This documentation is intended for developers who want to understand the design and architecture of Gen3.
 
@@ -86,5 +88,3 @@ We also configure a [prepuller daemonset](https://github.com/uc-cdis/cloud-autom
 ### Full Workspaces
 
 Full workspaces, i.e. workflow systems that run analysis pipelines at scale over data, are still to be implemented into Gen3. 
-
-{{% /markdownwrapper %}}
