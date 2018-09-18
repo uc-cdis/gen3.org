@@ -2,7 +2,6 @@
 title: "Micro Service"
 date: 2018-09-14T16:58:29-05:00
 linktitle: /resources/developer
-draft: true
 layout: withtoc
 menuname: developerMenu
 ---
@@ -27,4 +26,4 @@ The Indexd service provides permanent digital IDs for data objects. These IDs ca
 ### WINDMILL
 The Windmill service is an interactive website that allows users to explore, submit, and download data. The Windmill service utilizes the APIs offered by the data commons just as any other externally built app could.
 
-
+![Gen3's Micro Services](/figs/architecture.png).
