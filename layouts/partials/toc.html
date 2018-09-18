@@ -1,13 +1,16 @@
 {{ $currentPageLink := .Page.URL }}
 {{ with .Page.Params.menuname }}
-    {{ range $.Site.Param . }}
-      <div class="g3-side-menu__category">
+  {{ $menu := $.Site.Param . }}
+  <div class="g3-side-menu__mb-title g3-side-menu__mb-title--toggled">
+    <span class="g3-side-menu__mb-icon"></span>
+    <span class="g3-side-menu__mb-text">{{ $menu.title }}</span>
+  </div>
+    {{ range $menu.content }}
+      <div class="g3-side-menu__category g3-side-menu__category--toggled">
         <p class="g3-side-menu__caption">{{ .category }}</p>
           {{ $currentContent := .content }}
           {{ range $i, $v := .content }}
             {{ $isPage := eq $v.link $currentPageLink }}
-
-
             <a class="g3-side-menu__item{{if $isPage}} g3-side-menu__item--active{{end}}" href="{{$v.link}}">
               {{ $v.name }}
             </a>
@@ -23,4 +26,32 @@
     {{ end }}
 {{ end }}
 
+
+<script>
+  // sticky effects for mobile headers
+  let scrollPosForMenu = 0;
+  window.addEventListener('scroll', function(){
+    if (window.pageYOffset < scrollPosForMenu) {
+      document.querySelector('.g3-withtoc-wrapper__menu').classList.remove('g3-withtoc-wrapper__menu--scrolling-down');
+    }
+    else {
+      document.querySelector('.g3-withtoc-wrapper__menu').classList.add('g3-withtoc-wrapper__menu--scrolling-down');
+    }
+    scrollPosForMenu = window.pageYOffset;
+    if (scrollPosForMenu < 10) {
+      document.querySelector('.g3-withtoc-wrapper__menu').classList.remove('g3-withtoc-wrapper__menu--scrolling-down');
+    }
+  });
+
+  // toggle header menu bar 
+  function toggleMenu () {
+    document.querySelectorAll('.g3-side-menu__category').forEach(e => {
+      e.classList.toggle('g3-side-menu__category--toggled');
+    });
+    document.querySelector('.g3-side-menu__mb-title').classList.toggle('g3-side-menu__mb-title--toggled');
+    
+  }
+  document.querySelector('.g3-side-menu__mb-title').addEventListener('click', toggleMenu);
+  
+</script>
 
