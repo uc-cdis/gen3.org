@@ -1,5 +1,5 @@
 ---
-title: "Build App"
+title: "Gen3 - Build App"
 date: 2018-09-12T23:17:36-05:00
 linktitle: /resources/developer
 layout: withtoc

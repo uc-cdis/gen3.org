@@ -1,6 +1,6 @@
 ---
 identifier: developer
-title: Gen3 - Developer
+title: Gen3 - Technique Intro
 linktitle: /resources/developer
 date: 2018-09-04T22:16:21-05:00
 layout: withtoc

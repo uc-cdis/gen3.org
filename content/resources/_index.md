@@ -20,21 +20,21 @@ g3Resources:
           - name: How to access data in a Gen3 Data Commons
             link: /resources/user/access-data
           - name: How to analyze data in the Jupyter Workspace
-            link: .
+            link: /resources/user/analyze-data
       - title: Appendices
         ul:
           - name: Using the CDIS data client
-            link: .
+            link: /resources/user/cdis-client
           - name: Working with the API
-            link: .
+            link: /resources/user/using-api
           - name: Working with the Proxy and Whitelist
-            link: .
+            link: /resources/user/proxy-whitelist
           - name: Data Dictionary Viewer
-            link: .
+            link: /resources/user/dictionary
           - name: Template Metadata TSVs
-            link: .
+            link: /resources/user/template-tsvs
           - name: Managing Submission Timepoints
-            link: .
+            link: /resources/user/manage-submission
   r2:
     name: Gen3 Operator
     fig: /figs/roles/icon-research.svg
@@ -46,9 +46,7 @@ g3Resources:
       - title: Techniques Intro
         ul: 
           - name: How to Setup Gen3
-            link: .
-          - name: Meduim
-            link: .
+            link: /resources/operator
   r3:
     name: Developer
     fig: /figs/roles/icon-devs.svg
@@ -60,11 +58,9 @@ g3Resources:
       - title: Techniques Intro
         ul: 
           - name: Introduction of Gen3’s micro services
-            link: /resources/developer/
+            link: /resources/developer/micro-service
           - name: Introduction of technology
             link: /resources/developer/
-          - name: UI Library
-            link: .
       - title: Build Apps on Gen3
         ul: 
           - name: Authentication
@@ -73,10 +69,6 @@ g3Resources:
             link: /resources/developer/build-app#2-graphql-queries
           - name: Retrieve the Dictionary JSON Schema
             link: /resources/developer/build-app#4-retrieve-the-dictionary-json-schema
-          - name: Using SDK
-            link: /resources/developer/
-          - name: Style Guide
-            link: /resources/developer/style-guide
 ---
 
 <section >

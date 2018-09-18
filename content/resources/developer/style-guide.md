@@ -3,6 +3,7 @@ title: "Style Guide"
 date: 2018-09-12T23:39:28-05:00
 layout: withtoc
 menuname: developerMenu
+draft: true
 ---
 {{% markdownwrapper %}}
 # Summary

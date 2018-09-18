@@ -1,12 +1,12 @@
 ---
-title: "Micro Service"
+title: "Gen3 - Micro Service"
 date: 2018-09-14T16:58:29-05:00
 linktitle: /resources/developer
 layout: withtoc
 menuname: developerMenu
 ---
 
-## Gen3’s Mocro Services
+## Gen3’s Micro Services
 Building off the 1st and 2nd generation, we have reimagined what a Data Commons can be by utilizing cloud native thinking. Each microservice now lives in its own container providing isolation from the environment around it. Container orchestration is conducted dynamically to scale to the commons workload. Clouds are approached agnostically so that Gen3 can operate on any cloud, public or private.
 
 ### SHEEPDOG
