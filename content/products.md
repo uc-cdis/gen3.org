@@ -34,11 +34,11 @@ g3DataFeature:
     detail: All of the Gen3 services support powerful APIs which allow them to interact with each other and external users. These APIs enable extensible application development for future services and users.
 g3Entrance:
   e1:
-    title: Learn Gen3's Micro Services
-    detail: Ask questions, report issues, discuss Gen3, or reach out for advice.
+    title: Learn about Gen3's microservices
+    detail: Look at the code repositories from GitHub
     button:
       caption: Learn
-      link: https://forums.gen3.org/
+      link: https://github.com/uc-cdis
   e2:
     title: Get Started Easily
     detail: Follow the documentation to setup Gen3 from docker images.
@@ -124,7 +124,7 @@ g3Entrance:
       <h2 class="g3-space__margin-sm-bottom">
         {{< param "g3Entrance.e1.title" >}}
       </h2>
-      <p class="g3-space__margin-sm-bottom g3-minimunimum-wrapper">
+      <p class="g3-space__margin-sm-bottom">
         {{< param "g3Entrance.e1.detail" >}}
       </p>
       <a class="g3-button--secondary g3-button" href="{{< param "g3Entrance.e1.button.link" >}}">
@@ -135,7 +135,7 @@ g3Entrance:
       <h2 class="g3-space__margin-sm-bottom">
         {{< param "g3Entrance.e2.title" >}}
       </h2>
-      <p class="g3-space__margin-sm-bottom g3-minimunimum-wrapper">
+      <p class="g3-space__margin-sm-bottom">
         {{< param "g3Entrance.e2.detail" >}}
       </p>
       <a class="g3-button--secondary g3-button" href="{{< param "g3Entrance.e2.button.link" >}}">
