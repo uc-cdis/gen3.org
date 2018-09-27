@@ -5,7 +5,7 @@ linktitle: about
 date: 2018-09-04T22:16:21-05:00
 g3Teaser:
   fig: figs/kv.svg
-  title: Help Biomedical researchers get scientific-discovery on clouds easily and quickly.
+  title: Help researchers on big data get scientific discovery on clouds easily and quickly.
   detail: Gen3 helps bioinformaticians accelerate scientific discovery with fast, secure, and collaborative genomic and clinical data-analytics.
   button1:
     caption: Experience Demo
@@ -17,23 +17,23 @@ g3Teaser:
     target: _self
 g3Feature:
   f1:
-    title: Host, Manage, and Share your Data.
-    detail: You create and collect lots of data that is valuable to researchers, developers and health organizations. With GCP, you can better monetize the access and usage of your genomics data by hosting it in a storage bucket where operations, network and 20prextrieval costs are easily billed to your clients.
+    title: Host, Manage, and Share your Data
+    detail: You create and collect lots of data that is valuable to researchers, developers and health organizations. With Gen3, you can receive data, generate globally unique IDs, share datasets with authorized individuals or any authenticated individual, and computer over data.
   f2:
-    title: Optimize Remote Cooperaton with tech.
-    detail: Share your tools and data with your group, collaborators, or the broader community on clouds
+    title: Customize Your Gen3 Experience
+    detail: Multiple Gen3 data commons can create an interoperable ecosystem. Plus, the power of APIs over a “thin middle” of framework services allows you and your community to develop and share your tools and data with your group, collaborators, or the broader Gen3 community.
   f3: 
-    title: Get Results Sooner.
-    detail: You create and collect lots of data that is valuable to researchers, developers and health organizations. With GCP, you can better monetize the access and usage of your genomics data by hosting it in a storage bucket where operations, network and 20prextrieval costs are easily billed to your clients.
+    title: Facilitate Translational Data Science
+    detail: Use Gen3’s data explorer to find your synthetic cohort and visualize your data in notebooks within a cloud environment to hasten your hypotheses and discoveries.
   f4:
-    title: Scale your large dataset with any File Types
-    detail: Share your tools and data with your group, collaborators, or the broader community on clouds
+    title: Scale Your Large Dataset with Any File Types
+    detail: Gen3 can work from Redcap to Immport platforms and from clinical to genomic data. Since Gen3 is a growing community, you could repurpose another person’s tools with your data, data commons, or data ecosystem.
 g3Roles:
   title: Gen3 helps you as...
   r1:
     name: Bioinformaticians
     fig: /figs/roles/icon-bio.svg
-    detail: Hormanized data allowes you to focus on create unique piplines for your projects.
+    detail: Organized data allows you to focus on creating unique piplines for your projects.
     button:
       caption: Pipeline Library
       target: _blank
@@ -41,7 +41,7 @@ g3Roles:
   r2:
     name: Researchers
     fig: /figs/roles/icon-research.svg
-    detail: Use our smart dashboard to explore and find data you are interested in from multiple sources to meet the needs of your research.
+    detail: Use our smart dashboard to explore and find data you from multiple sources to meet the needs of your research.
     button:
       caption: Gen3 User Guide
       target: _self
@@ -49,7 +49,7 @@ g3Roles:
   r3:
     name: Developers
     fig: /figs/roles/icon-devs.svg
-    detail: Integrate API into your services with open- sources softwares and supported UI library so you can focus on important coding.
+    detail: Integrate Gen3 APIs into your services with open-source software and the supported UI library so you can focus on your tools.
     button:
       caption: Gen3 Developer
       target: _self
@@ -58,7 +58,7 @@ g3User:
   quote: “This is great. I spend only 1 day to setup Gen3, and I save a lot of time with my research-partner world wide!”
   by: bioinformaticians, University of Alabama
   title: Who's using Gen3?
-  detail: You create and collect lots of data that is valuable to researchers, developers and health organizations. With Gen3, you can better monetize the access and usage of your genomics data by hosting it in a storage bucket.
+  detail: Federal agencies, not-for-profits, and consortiums with members spanning the globe use Gen3 and its framework services to support their research community, access and index their data, and facilitate scientific discoveries to impact the world.
   button: 
     caption: Experience Sandbox
     link: https://nci-crdc-demo.datacommons.io/
@@ -79,7 +79,7 @@ g3Commons:
     link: https://www.braincommons.org/
 g3Intro:
   title: Introduction to Gen3
-  detail: Gen3 is an open source software with an Apache 2.0 license for colocating compute and storage in a data commons. Gen3 is agnostic to the data type and the storage location, needing, minimally, a data model, data, a secure landing page for the portal, and, a research goal in mind.
+  detail: Gen3 is an open source software with Apache 2.0 or similar licenses, colocating compute and storage in a data commons. It is agnostic to the data type and the storage location, needing, minimally, a data model, data, a secure landing page for the portal, and research goals.
   fig: figs/productkv.svg
   button:
     caption: Technical Overview
@@ -87,22 +87,22 @@ g3Intro:
 g3DataFeature:
   f1: 
     title: Easy Data Submission
-    detail: Whether you are working with one genome or one million, Google Genomics provides access to the power and flexibility you need to advance your work.
+    detail: Use one of the microservices or community tools to submit data objects and metadata to a Gen3 Commons. Or develop your own tools specific to your user community.
   f2:
-    title: Data Storage with High Scalability
-    detail: Google's infrastructure provides reliable information security that can meet or exceed the requirements of HIPAA and protected health information.
+    title: Easily Find Your Data in an Ecosystem
+    detail: Gen3 will automatically index your data and provide globally unique identifiers (GUIDs). GUIDs can also be resolved at dataguids.org to find out where a data object lives within your data ecosytem.
   f3: 
     title: Open-Source Community
-    detail: Whether you are working with one genome or one million, Google Genomics provides access to the power and flexibility you need to advance your work.
+    detail: Engage Gen3’s broad user community. Ask a question, answer a question, request a new feature, or see if anyone else has approached a technical or scientific problem like yours in their Gen3 data commons.
   f4:
-    title: Smart Dashboard for Data Search
-    detail: Google's infrastructure provides reliable information security that can meet or exceed the requirements of HIPAA and protected health information.
+    title: Customizable Options for Data Queries
+    detail: Gen3’s UI includes a data exploration tool you can customize for your data. You can choose the queries or faceted searches your user community wants; decide whether the data is able to leave the cloud or not; or develop your own UI over Gen3 APIs.
   f5: 
     title: Security & Compliance
-    detail: Whether you are working with one genome or one million, Google Genomics provides access to the power and flexibility you need to advance your work.
+    detail: Gen3 can deployed with various levels of security and compliance. Deploy your data commons or ecosystem with the controls needed for your data and your user community.
   f6:
-    title: Security & Compliance
-    detail: Covered by our HIPAA Business Associates Agreement. Available via FedRAMP ATO for the National Cancer Institute Cancer Cloud Pilots.
+    title: Control Data Access—Or Not
+    detail: You can leave your data open to the Internet or control access at deeper levels within your own data use ontology, from the metadata to the data objects.
 g3Contributor:
   title: Contributor
   fig: figs/cdis-logo.svg
@@ -111,7 +111,7 @@ g3Contributor:
 g3Entrance:
   e1:
     title: Join the Discussion
-    detail: Ask biomedical questions, report issues, discuss Gen3, or reach our for helps.
+    detail: Ask questions, report issues, discuss Gen3, or reach out for advice.
     button:
       caption: Community
       link: https://forums.gen3.org/

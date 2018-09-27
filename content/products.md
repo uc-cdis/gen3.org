@@ -6,7 +6,7 @@ date: 2018-09-04T22:16:21-05:00
 g3Teaser:
   fig: /figs/productkv.svg
   title: Gen3 Features
-  detail: Gen3 is an open source software with an Apache 2.0 license for colocating compute and storage in a data commons. Gen3 is agnostic to the data type and the storage location, needing, minimally, a data model, data, a secure landing page for the portal, and, a research goal in mind.
+  detail: Gen3 is an open source software with Apache 2.0 or similar licenses, colocating compute and storage in a data commons. It is agnostic to the data type and the storage location, needing, minimally, a data model, data, a secure landing page for the portal, and research goals.
 g3DataFeature:
   f1: 
     title: Data Submission
@@ -23,7 +23,7 @@ g3DataFeature:
   f4:
     title: AuthN/AuthZ
     fig: /figs/features/auth.svg
-    detail: Gen3 utilizes OpenID Connect for providing AuthN services with AuthZ specified on a per commons basis. Currently supported identity providers include Google and Shibboleth, supporting providers such as NIH iTrust, InCommon Federation, and eduGAIN.
+    detail: Gen3 utilizes OpenID Connect for providing authentication services with authorization specified on a per commons basis. Currently supported identity providers include Google and Shibboleth via NIH iTrust, InCommon Federation, and eduGAIN.
   f5: 
     title: Data Portal
     fig: /figs/features/portal.svg
@@ -35,13 +35,13 @@ g3DataFeature:
 g3Entrance:
   e1:
     title: Learn Gen3's Micro Services
-    detail: Ask biomedical questions, report issues, discuss Gen3, or reach our for helps.
+    detail: Ask questions, report issues, discuss Gen3, or reach out for advice.
     button:
       caption: Learn
       link: https://forums.gen3.org/
   e2:
     title: Get Started Easily
-    detail: Follow the documentation to setup Gen3 easily to benefit your research.
+    detail: Follow the documentation to setup Gen3 from docker images.
     button:
       caption: Easy Start
       link: /get-started
@@ -124,7 +124,7 @@ g3Entrance:
       <h2 class="g3-space__margin-sm-bottom">
         {{< param "g3Entrance.e1.title" >}}
       </h2>
-      <p class="g3-space__margin-sm-bottom">
+      <p class="g3-space__margin-sm-bottom g3-minimunimum-wrapper">
         {{< param "g3Entrance.e1.detail" >}}
       </p>
       <a class="g3-button--secondary g3-button" href="{{< param "g3Entrance.e1.button.link" >}}">
@@ -135,7 +135,7 @@ g3Entrance:
       <h2 class="g3-space__margin-sm-bottom">
         {{< param "g3Entrance.e2.title" >}}
       </h2>
-      <p class="g3-space__margin-sm-bottom">
+      <p class="g3-space__margin-sm-bottom g3-minimunimum-wrapper">
         {{< param "g3Entrance.e2.detail" >}}
       </p>
       <a class="g3-button--secondary g3-button" href="{{< param "g3Entrance.e2.button.link" >}}">

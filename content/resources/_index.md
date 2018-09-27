@@ -8,12 +8,12 @@ g3Resources:
   r1:
     name: Gen3 User Guide
     fig: /figs/roles/icon-bio.svg
-    detail: Ask biomedical questions, report issues, discuss Gen3, or reach our for helps.
+    detail: You’re using a Gen3 data commons for research or cohort discovery.
     button:
       caption: Documentation
       link: /resources/user
     lists:
-      - title: User Intro
+      - title: User Introduction
         ul: 
           - name: How to contribute a data project to a Gen3 Data Commons
             link: /resources/user/submit-data
@@ -38,24 +38,24 @@ g3Resources:
   r2:
     name: Gen3 Operator
     fig: /figs/roles/icon-research.svg
-    detail: Ask biomedical questions, report issues, discuss Gen3, or reach our for helps.
+    detail: You’re setting up or maintaining your own Gen3 data commons or ecosystem.
     button:
       caption: Documentation
       link: /resources/operator
     lists:
-      - title: Techniques Intro
+      - title: Technical Introduction
         ul: 
           - name: How to Setup Gen3
             link: /resources/operator
   r3:
     name: Developer
     fig: /figs/roles/icon-devs.svg
-    detail: Follow the documentation to setup Gen3 easily to benefit your research.
+    detail: You’re interested in contributing to Gen3’s open source code or developing an app.
     button:
-      caption: Gen3 Developer
+      caption: Documentation
       link: /resources/developer
     lists:
-      - title: Techniques Intro
+      - title: Technical Introduction
         ul: 
           - name: Introduction of Gen3’s micro services
             link: /resources/developer/micro-service

@@ -15,14 +15,14 @@ g3Starts:
   s2:
     name: Submit Metadata&Data
     fig: /figs/features/submit-data.svg
-    detail: Gen3 utilizes OpenID Connect for providing AuthN services with AuthZ specified on a per commons basis. Currently supported identity providers include Google and Shibboleth, supporting providers such as NIH iTrust, InCommon Federation, and eduGAIN.
+    detail: Create your whitelist yaml, use Gen3’s Sheepdog microservice to begin submitting metadata, and download the cdis-data-client to begin submitting data to your commons. Or look into how to build your own submission apps.
     button:
       caption: Setup Gen3
       link: /resources/user/submit-data
   s3:
-    name: Access Metadata&Data
+    name: Access Metadata & Data
     fig: /figs/features/search.svg
-    detail: Gen3 includes a data portal as a default application over a commons. The portal is an interactive website that allows users to explore, submit, and download data. The data portal utilizes the public APIs offered by the data commons as a demonstration to the power of Gen3.
+    detail: Gen3 includes a data portal as a default application over a commons. The portal is an interactive website that allows users to explore, submit, and download data. The data portal utilizes the public APIs offered by the data commons as a demonstration to the power of Gen3. Or look into how to build your own submission apps.
     button:
       caption: Setup Gen3
       link: /resources/user/access-data
@@ -42,24 +42,24 @@ g3Starts:
 <section>
   <div class="g3-inner-wrapper g3-space__padding-md-top g3-space__padding-lg-bottom g3-mb-space__padding-lg-top g3-mb-space__padding-lg-bottom">
     <div class="g3-table g3-space__margin-lg-bottom g3-mb-space__margin-lg-bottom">
-      <div class="g3-col__50 g3-text__center g3-space__margin-sm-left-right">
+      <div class="g3-col__50 g3-text__center g3-space__padding-sm-left-right">
         <img class="g3-space__margin-sm-bottom" src="{{< param "g3Starts.s1.fig" >}}"/>
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Starts.s1.name" >}}
         </h3>
-        <p class="g3-space__margin-sm-bottom">
+        <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
           {{< param "g3Starts.s1.detail" >}}
         </p>
         <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s1.button.link" >}}">
           {{< param "g3Starts.s1.button.caption" >}}
         </a>
       </div>
-      <div class="g3-col__50 g3-text__center g3-space__margin-sm-left-right">
+      <div class="g3-col__50 g3-text__center g3-space__padding-sm-left-right">
         <img class="g3-space__margin-sm-bottom" src="{{< param "g3Starts.s2.fig" >}}"/>
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Starts.s2.name" >}}
         </h3>
-        <p class="g3-space__margin-sm-bottom">
+        <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
           {{< param "g3Starts.s2.detail" >}}
         </p>
         <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s2.button.link" >}}">
@@ -68,24 +68,24 @@ g3Starts:
       </div>
     </div>
     <div class="g3-table g3-space__margin-lg-bottom g3-mb-space__margin-lg-bottom">
-      <div class="g3-col__50 g3-text__center g3-space__margin-sm-left-right">
+      <div class="g3-col__50 g3-text__center g3-space__padding-sm-left-right">
         <img class="g3-space__margin-sm-bottom" src="{{< param "g3Starts.s3.fig" >}}"/>
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Starts.s3.name" >}}
         </h3>
-        <p class="g3-space__margin-sm-bottom">
+        <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
           {{< param "g3Starts.s3.detail" >}}
         </p>
         <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s3.button.link" >}}">
           {{< param "g3Starts.s3.button.caption" >}}
         </a>
       </div>
-      <div class="g3-col__50 g3-text__center g3-space__margin-sm-left-right">
+      <div class="g3-col__50 g3-text__center g3-space__padding-sm-left-right">
         <img class="g3-space__margin-sm-bottom" src="{{< param "g3Starts.s4.fig" >}}"/>
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Starts.s4.name" >}}
         </h3>
-        <p class="g3-space__margin-sm-bottom">
+        <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
           {{< param "g3Starts.s4.detail" >}}
         </p>
         <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s4.button.link" >}}">
