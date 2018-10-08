@@ -55,8 +55,8 @@ g3Roles:
       target: _self
       link: /resources/developer
 g3User:
-  quote: “This is great. I spend only 1 day to setup Gen3, and I save a lot of time with my research-partner world wide!”
-  by: bioinformaticians, University of Alabama
+  quote: “From the perspective of setting up a basic Gen3 eco system with all the services running, it was a breeze and the Github docs are pretty awesome.”
+  by: Cloud Solutions Architect with Leidos
   title: Who's using Gen3?
   detail: Federal agencies, not-for-profits, and consortiums with members spanning the globe use Gen3 and its framework services to support their research community, access and index their data, and facilitate scientific discoveries to impact the world.
   button: 
