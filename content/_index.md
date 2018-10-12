@@ -5,8 +5,8 @@ linktitle: about
 date: 2018-09-04T22:16:21-05:00
 g3Teaser:
   fig: figs/kv.svg
-  title: Help researchers on big data get scientific discovery on clouds easily and quickly.
-  detail: Gen3 helps bioinformaticians accelerate scientific discovery with fast, secure, and collaborative genomic and clinical data-analytics.
+  title: Gen3 is how data commons are made.
+  detail: A data commons is a cloud-based software platform for managing, analyzing, harmonizing and sharing large datasets. Gen3 is an open source platform for developing data commons. Data commons accelerate and democratize the process of scientific discovery, especially over large or complex datasets.
   button1:
     caption: Experience Demo
     link: https://nci-crdc-demo.datacommons.io/
@@ -18,22 +18,22 @@ g3Teaser:
 g3Feature:
   f1:
     title: Host, Manage, and Share your Data
-    detail: You create and collect lots of data that is valuable to researchers, developers and health organizations. With Gen3, you can receive data, generate globally unique IDs, share datasets with authorized individuals or any authenticated individual, and computer over data.
+    detail: Gen3 enables you to receive, manage, and share data which is valuable to researchers, developers and health organizations. With Gen3, you can receive data, quality control data, generate globally unique IDs, share datasets with authorized individuals or any authenticated individual, and compute over that data.
   f2:
     title: Customize Your Gen3 Experience
-    detail: Multiple Gen3 data commons can create an interoperable ecosystem. Plus, the power of APIs over a “thin middle” of framework services allows you and your community to develop and share your tools and data with your group, collaborators, or the broader Gen3 community.
+    detail: Multiple Gen3 data commons can work together to create an interoperable ecosystem. Gen3 can be used to power APIs for a “thin middle” of framework services. These framework services provide the foundation on which you and your community can develop new tools for sharing and analyzing data with your group, collaborators, or the broader Gen3 community.
   f3: 
     title: Facilitate Translational Data Science
-    detail: Use Gen3’s data explorer to find your synthetic cohort and visualize your data in notebooks within a cloud environment to hasten your hypotheses and discoveries.
+    detail: Use Gen3’s built in tools to find your virtual cohort, and analyze the cohort in notebooks within a cloud environment to hasten your hypotheses testing and discoveries.
   f4:
     title: Scale Your Large Dataset with Any File Types
-    detail: Gen3 can work from Redcap to Immport platforms and from clinical to genomic data. Since Gen3 is a growing community, you could repurpose another person’s tools with your data, data commons, or data ecosystem.
+    detail: Gen3 APIs enable support for importing data from a variaty of platforms including from common clinical to genomic data platforms. Since Gen3 is a growing community, you could repurpose another person’s tools with your data, data commons, or data ecosystem.
 g3Roles:
   title: Gen3 helps you as...
   r1:
     name: Bioinformaticians
     fig: /figs/roles/icon-bio.svg
-    detail: Organized data allows you to focus on creating unique piplines for your projects.
+    detail: Organized data allows you to focus on creating unique pipelines and analysis for your projects.
     button:
       caption: Pipeline Library
       target: _blank
@@ -41,7 +41,7 @@ g3Roles:
   r2:
     name: Researchers
     fig: /figs/roles/icon-research.svg
-    detail: Use our smart dashboard to explore and find data you from multiple sources to meet the needs of your research.
+    detail: Use our smart dashboard to explore and find data from multiple sources to meet the needs of your research.
     button:
       caption: Gen3 User Guide
       target: _self
@@ -49,7 +49,7 @@ g3Roles:
   r3:
     name: Developers
     fig: /figs/roles/icon-devs.svg
-    detail: Integrate Gen3 APIs into your services with open-source software and the supported UI library so you can focus on your tools.
+    detail: Integrate Gen3 APIs into your services and the utilize our open-source software libraries so you can focus on your tools.
     button:
       caption: Gen3 Developer
       target: _self
@@ -58,7 +58,7 @@ g3User:
   quote: “From the perspective of setting up a basic Gen3 ecosystem with all the services running, it was a breeze and the Github docs are pretty awesome.”
   by: Amit, Cloud Solutions Architect with Leidos
   title: Who's using Gen3?
-  detail: Federal agencies, not-for-profits, and consortiums with members spanning the globe use Gen3 and its framework services to support their research community, access and index their data, and facilitate scientific discoveries to impact the world.
+  detail: Federal agencies, not-for-profits, and consortiums with members spanning the globe use Gen3 and its framework services to support their research communities, access and index their data, and facilitate scientific discoveries that impact the world.
   button: 
     caption: Experience Sandbox
     link: https://nci-crdc-demo.datacommons.io/
@@ -79,7 +79,7 @@ g3Commons:
     link: https://www.braincommons.org/
 g3Intro:
   title: Introduction to Gen3
-  detail: Gen3 is an open source software with Apache 2.0 or similar licenses, colocating compute and storage in a data commons. It is agnostic to the data type and the storage location, needing, minimally, a data model, data, a secure landing page for the portal, and research goals.
+  detail: Gen3 is an open source software with Apache 2.0 or similar licenses, colocating compute and storage in a data commons. It is agnostic to the data type and the storage location, requiring  minimally, a data model, data, a secure landing page for the portal, and research goals.
   fig: figs/productkv.svg
   button:
     caption: Technical Overview
@@ -96,13 +96,13 @@ g3DataFeature:
     detail: Engage Gen3’s broad user community. Ask a question, answer a question, request a new feature, or see if anyone else has approached a technical or scientific problem like yours in their Gen3 data commons.
   f4:
     title: Customizable Options for Data Queries
-    detail: Gen3’s UI includes a data exploration tool you can customize for your data. You can choose the queries or faceted searches your user community wants; decide whether the data is able to leave the cloud or not; or develop your own UI over Gen3 APIs.
+    detail: Gen3’s UI includes a data exploration tool you can customize for your data. You can choose the queries or faceted searches your user community wants; decide whether the data is able to leave the cloud or not; or develop your own apps over Gen3 APIs.
   f5: 
     title: Security & Compliance
-    detail: Gen3 can deployed with various levels of security and compliance. Deploy your data commons or ecosystem with the controls needed for your data and your user community.
+    detail: Gen3 can be deployed with various levels of security and compliance. Deploy your data commons or ecosystem with the controls needed for your data and your user community.
   f6:
     title: Control Data Access—Or Not
-    detail: You can leave your data open to the Internet or control access at deeper levels within your own data use ontology, from the metadata to the data objects.
+    detail: You can leave your data open to the Internet or control access at deeper levels within your own data use ontology, from the core data to the data objects.
 g3Contributor:
   title: Contributor
   fig: figs/cdis-logo.svg
