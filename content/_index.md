@@ -300,7 +300,7 @@ g3Entrance:
 </section>
 
 <section>
-  <div class="g3-space__margin-lg-bottom g3-bg__solight">
+  <div class="g3-space__padding-lg-top g3-space__padding-lg-bottom g3-space__margin-lg-bottom g3-bg__solight">
     <div class="g3-inner-wrapper">
       <div class="g3-flex-content g3-space__margin-md-top-bottom">
         <div class="g3-space__margin-sm-left-right g3-col__50">
