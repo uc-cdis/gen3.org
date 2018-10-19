@@ -21,7 +21,7 @@ __You need to provide a redirect (callback) url to the data commons you wish to 
 ## 2. GraphQL Queries
 * * *
 
-We use [http://graphql.org](GraphQL) as the langauge for querying Gen3 data commons. In addition, we also have a few convenience endpoints which make specific queries easier. For example, the GraphQL introspection query which returns the schema for the GraphQL queries is easily obtained through the GET endpoint available at `/api/v0/submission/getschema`
+We use [http://graphql.org](GraphQL) as the language for querying Gen3 data commons. In addition, we also have a few convenience endpoints which make specific queries easier. For example, the GraphQL introspection query which returns the schema for the GraphQL queries is easily obtained through the GET endpoint available at `/api/v0/submission/getschema`
 
 The standard GraphQL endpoint for a Gen3 commons is available via POST at `/api/v0/submission/graphql`
 

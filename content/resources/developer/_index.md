@@ -1,6 +1,6 @@
 ---
 identifier: developer
-title: Gen3 - Technique Intro
+title: Gen3 - Technical Intro
 linktitle: /resources/developer
 date: 2018-09-04T22:16:21-05:00
 layout: withtoc
@@ -33,29 +33,29 @@ The following diagram describes all the user interactions in data management asp
 7. Gen3-arranger exposes GraphQL query interface for a flattened/materialized view of rich data that's ETLed from graph rich data to Elasticsearch.
 
 ### Data Submission System
-People generate a lot of data during experiments and studies. They would like to organize the data and annotate the data to describe how they are generated and all the context for the data. All the 'context' is preserved in our 'rich data' database. The rich data store is presented in a graph-like relational model to depict the normalized relationships of all the concepts. Take [bloodpac](https://www.bloodpac.org/data-group/) data model as an example, it describes how you start from having a particular study that's done on a bunch of `cases`( aka patients ), the doctors gathered some clinical informtion about each patient which is kept in various clinical nodes like `diagnosis`, `family history`, etc. The hositpical also gathered some samples from the patient and sent them to sequencing center which finally produced some sequencing files stored in `submitted unaligned reads`.
+A lot of data are generated during experiments and studies, and ideally are organized and annotated in a way that describes its context. All the 'context' is preserved in our 'rich data' database. The rich data store is presented in a graph-like relational model to depict the normalized relationships of all the concepts. Take the [BloodPAC](https://www.bloodpac.org/data-group/) data model as an example. It describes a study conducted on many `cases` (aka patients), how doctors gathered clinical information about each patient stored in nodes such as `diagnosis` and `family history`, and how the hospital gathered samples from the patient and sent them to sequencing centers which produced sequencing files store in `submitted unaligned reads`.
 
-In order for a Gen3 Commons to preserve these rich data, we first need to come up with a consistent datamodel with standard terminologies to describe all these information. We decided to do the data modeling using jsonschema and store them as yaml files in [github](https://github.com/occ-data/bpadictionary) so it's easy for domain experts to make changes there and track all the data modeling activities. The schema is then translated to database ORM([psqlgraph](https://github.com/NCI-GDC/psqlgraph)) and used by Gen3 microservices to do data validation and database interactions.
+In order for a Gen3 Commons to preserve this rich data, a consistent data model with standard terminologies needs to be constructed. Our data model uses jsonschema, and stores the models as yaml fields in [GitHub](https://github.com/occ-data/bpadictionary) to make it easier for domain experts to make changes and track activity. The schema is then translated to database ORM([psqlgraph](https://github.com/NCI-GDC/psqlgraph)) and used by Gen3 microservices to do data validation and database interactions.
 
-The currently supported database backend is postgres, which is not necessarily the optimal choice for complicated graph traversals. But we went with it because of its robustness as a traditional relational database. The data dictionary described in jsonschema is translated to very typical relational datamodel in postgres. Basically every node type is a table and every edge type is a table as the many-to-many proxy between two node tables. The non-conventional schema design is that, all the properties are stored as jsonb in postgres instead of separate columns. This was a compromise to support very frequent data modeling changes required by domain experts with a sacrifise of query performance because of lack of statistics on jsonb.
+Our backend currently uses Postgres. This is not necessarily the optimal choice for complicated graph traversals, but we e chose this database due to its robustness as a traditional relational database. The data model that is described in jsonschema is translated to a relational data model in Postgres, where every node and edge is a table. All properties are stored as jsonb in Postgres as opposed to separate columns. While this sacrifices some query performance, it supports frequent data modeling changes that are required by domain experts.
 
-Sheepdog uses the dictionary-driven ORM to do metadta validation and submission as described in following diagram:
+Sheepdog uses the dictionary-driven ORM to do metadata validation and submission as described in the following diagram:
 ![rich-data-submission](img/rich-data-submission.png).
 
 Peregrine exposes a query interface for the normalized rich data via GraphQL interface:
 ![rich-data-query](img/rich-data-query.png).
 
-Separately, users use [cdis-data-client](https://github.com/uc-cdis/cdis-data-client) to request temporary urls to do raw data download/upload:
+Separately, users use [gen3-client](https://github.com/uc-cdis/cdis-data-client) to request temporary urls to do raw data download/upload:
 ![data-download-upload](img/data-download-upload.png).
 
-### Data Exploration System
+### Data Denormalization System
 _This is an alpha feature_
 
-After we collect valuable data from various submitters, we would like to expose them in a web UI in a user friendly way. Understanding the datamodel and knowing how to traverse the graph is intimidating for a general Gen3 user, so we created an ETL application - [tube](https://github.com/uc-cdis/tube) to denormalize the graph to several types of flat documents to cater several major use cases.
+After we collect valuable data from various submitters, we would like to expose it in a user-friendly web interface. Understanding the datamodel and knowing how to traverse the graph is intimidating for a general Gen3 user, so we created an ETL application - [tube](https://github.com/uc-cdis/tube) to denormalize the graph to several types of flat documents to cater to several major use cases.
 
-Tube is driven by configuration files which describe the flat document structure and the mapping logic from the graph model, so that it's generic and can support various datamodels in different commons. For most of the biomedical commons, there are two type of flat documents that satisfies majority of users:
-- file-centric document that denormalize biospecimen and clinical attributes for each file. This targets bioinformaticians who wants to filter by specific clinical/biospecimen attributes, and select a bunch of files to run analysis.
-- case-centric document that denormalize biospecimen and clinical attributes for each case. This targets clinicians who wants to see distributions based on clinical attributes among cases( AKA patient most of the times ).
+Tube is driven by configuration files which describe the flat document structure and the mapping logic from the graph model, so that it's generic and can support various datamodels in different commons. For most of the biomedical commons, there are two types of flat documents that satisfies majority of users:
+- A file-centric document that denormalizes biospecimen and clinical attributes for each file. This targets bioinformaticians who want to filter by specific clinical/biospecimen attires and select files on which to run analysis.
+- A case-centric document that denormalizes biospecimen and clinical attributes for each case. This targets clinicians who want to see distributions based on clinical attributes among cases. Most of the time, these cases represent patients.
 
 [living document for data exploration architecture](https://github.com/uc-cdis/cdis-wiki/tree/master/dev/gen3/data_explorer)
 
@@ -65,13 +65,13 @@ Workspaces are the compute component of a data commons. Workspaces allow users t
 
 ### Lightweight Workspaces
 
-JuypterHub is a service which allows for multiple Jupyter notebooks to be run by multiple users on a central server. The isolation of the user notebooks depends on the spawner used, and in this case relys on the isolated provided between Kubernetes pods. The Gen3 JuypterHub service is based on [Zero to JuypterHub](https://github.com/jupyterhub/zero-to-jupyterhub-k8s) and [Kubeflow](https://github.com/kubeflow).
+JuypterHub is a service which allows for multiple Jupyter notebooks to be run by multiple users on a central server. The isolation of the user notebooks depends on the spawner used, and in this case relies on the isolated provided between Kubernetes pods. The Gen3 JuypterHub service is based on [Zero to JuypterHub](https://github.com/jupyterhub/zero-to-jupyterhub-k8s) and [Kubeflow](https://github.com/kubeflow).
 
 The following diagram shows the authorization flow for the JupyterHub instances. We utilize the Revproxy and Fence acting as an API gateway for these workspaces. JupyterHub is configured with the [remote user auth plugin](https://github.com/occ-data/jhub_remote_user_authenticator) so that users are authed based on the `REMOTE_USER` header.
 
 ![JupyterHub Authentication Flow](img/lightweight-workspaces.png)
 
-JupyterHub runs in a container with an HTTP proxy. The proxy has dynamic routing that routes either to the hub or to the users spawned jupyter notebook container.
+JupyterHub runs in a container with an HTTP proxy. The proxy has dynamic routing that routes either to the hub or to the user's spawned jupyter notebook container.
 
 JupyterHub is deployed into the default namespace for the commons, but user pods are deployed into the specific `jupyter-pods` namespace to provide an added layer of isolation. This is accomplished using the [Kubespawner](https://github.com/jupyterhub/kubespawner) plugin for JupyterHub. Eventually, users will be deployed into their own Kubernetes namespace so that they can utilize the K8s API to spin up clusters for Spark or Dask. We are tracking issues related to the creation and monitoring of multiple namespaces in Kubespawner [1](https://github.com/jupyterhub/kubespawner/pull/218) [2](https://github.com/jupyterhub/kubespawner/issues/76). We use a [customized JupyterHub](https://github.com/occ-data/containers/tree/master/jupyterhub) which contains additional code to cull idle notebooks after several hours of inactivity. This automatically scales down the cluster again when the notebooks are no longer in use by users.
 
