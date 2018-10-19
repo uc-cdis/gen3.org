@@ -83,7 +83,7 @@ If you receive an error like "You don't have access... ", then you will most lik
 * * *
 You can run queries directly in the submission portal by clicking the "Query" magnifying glass or directly at: <https://data.gen3.org/graphql>. Queries are essential as you begin analyses. The query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, and generally make it easier for Gen3 members to find what they need.
 
-![GraphQL Query](/img/gQL-query.gif)
+![GraphQL Query](gQL-query.gif)
 
 ### Pagination and Offsets:   Default = first 10 entries
 Queries by defult return the first 10 entries. If you want more than that, you can specify it in the query call: ```(first:1000)```
@@ -117,7 +117,7 @@ Updating the example template [`details from experiment`](/assets/details_from_e
 The metadata submission portal [https://data.gen3.org/](https://data.gen3.org/) can be used to browse an individual submission by node.   Just select a project and then click the "browse nodes" button to the right.    From there, you'll get a screen like below where you can query by node in the dropdown at the left.
 
 <h4> Example:  Browse by node </h4>
-![Browse by node](/img/browse-by-node.png)
+![Browse by node](browse-by-node.png)
 
 You can also use this feature to download the tsv associated with the node, or if you have "write" access to the this project, delete existing nodes.   
 
@@ -127,5 +127,5 @@ You can also use this feature to download the tsv associated with the node, or i
 You can also review a graph of an individual project, toggling between views of the completed nodes and the full graph.  
 
 <h5> Example:  Graphing a project </h5>
-![Graphing a project](/img/graph-a-project.gif)
+![Graphing a project](graph-a-project.gif)
 

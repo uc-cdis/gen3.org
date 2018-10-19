@@ -17,19 +17,19 @@ menuname: userMenu
 
 * Gen3 members can use it through the 'dictionary' icon at data.Gen3.org or directly at: <https://data.Gen3.org/dd/>
 
-![Dictionary Button](/img/dd-button.png)
+![Dictionary Button](dd-button.png)
 
 * * *
 
 ### Viewing data dictionary as a graph:
-![Dictionary Graph Details](/img/dd-graph-details.png)
+![Dictionary Graph Details](dd-graph-details.png)
 
 ### Toggling the graph view:
-![Dictionary Graph](/img/dd-graph.png)
+![Dictionary Graph](dd-graph.png)
 
 ### Viewing data dictionary as tables:
-![Dictionary Table](/img/dd-table.png)
+![Dictionary Table](dd-table.png)
 
 ### Toggling between different views
-![Data Dictionary Viewer](/img/dd-viewer.gif)
+![Data Dictionary Viewer](dd-viewer.gif)
 * * *

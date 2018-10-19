@@ -5,7 +5,7 @@ linktitle: /resources/user
 layout: withtoc
 menuname: userMenu
 ---
-
+{{% markdownwrapper %}}
 # Submitting metadata and data
 * * *
 

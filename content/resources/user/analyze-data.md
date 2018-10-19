@@ -5,7 +5,7 @@ linktitle: /resources/user
 layout: withtoc
 menuname: userMenu
 ---
-
+{{% markdownwrapper %}}
 <h2> Data Analysis in the Gen3 Commons </h2>
 
 How data is accessed in a Gen3 Data Commons must be agreed upon by the sponsor(s), data contributor(s), and the operator(s). Some data commons have rules that data cannot be downloaded outside of a Virtual Private Cloud. In these cases, data analysts may need to access and configure a virtual machine (VM) in the VPC where all analyses will be done. Other data commons may be able to grant users permissions to download data files directly to their local computers.
@@ -14,30 +14,30 @@ How data is accessed in a Gen3 Data Commons must be agreed upon by the sponsor(s
 ## JupyterHub: Using Windmill's Workspace
 * * *
 The Windmill data portal may provide a Workspace where users can access a personalized Jupyter server for data exploration and analysis. To access the workspace, click "Workspace" in the top navigation bar of the data portal.
-![Data portal Workspace button](/img/workspace_button.png)
+![Data portal Workspace button](workspace_button.png)
 
 Click "Start My Server" to start the Jupyter server in your Workspace:
-![Start Server](/img/start_server.png)
+![Start Server](start_server.png)
 
 Or if a server is already running, click on "My Server" to access your files.
-![Workspace home](/img/my_server.png)
+![Workspace home](my_server.png)
 
 The Jupyter Workspace supports interactive programming sessions in the Python and R languages. Code blocks are entered in cells, which can be executed individually in any order or all at once. Code documentation and comments can also be entered in cells, and the cell type can be set to support, e.g., Markdown. Results, including plots, tables, and graphics, can be generated in the workspace and downloaded as files.
 
 After editing a Jupyter notebook, it can be saved in the Workspace to revisit later by clicking the "save" icon or "File" and then "Save and checkpoint". Notebooks and files can also be downloaded from the server to your local computer by clicking "File" then "Download as". Similarly, notebooks and files can be uploaded to the Jupyter server from a local computer by clicking on the "upload" button from the server's home page.
-![Upload Save Download Notebook](/img/upload_save_download.gif)
+![Upload Save Download Notebook](upload_save_download.gif)
 
 The following clip illustrates downloading the credentials.json from the "Identity" page in the data portal, then uploading that file to the Jupyter Workspace and reading it in a Python notebook named "Gen3_authentication.ipynb":
-![Python Notebook](/img/authentication.gif)
+![Python Notebook](authentication.gif)
 
 This clip demonstrates creating a new Jupyter notebook in the R language:
-![Python Notebook](/img/R_jupyter_notebook_workspace.gif)
+![Python Notebook](R_jupyter_notebook_workspace.gif)
 
 Terminal sessions can also be started in the Workspace and used to download other tools.
-![Terminal Session](/img/terminal_session.gif)
+![Terminal Session](terminal_session.gif)
 
 You can manage active Notebook and terminal processes by clicking on "Running". Clicking "shutdown" will terminate the terminal session or close the Jupyter notebook. Be sure to save your notebooks before terminating them.
-![Manage Running Sessions](/img/running.gif)
+![Manage Running Sessions](running.gif)
 
 * * *
 ## Running a Jupyter server on a virtual machine (VM)
@@ -105,7 +105,7 @@ ssh -N -L localhost:8888:localhost:8889 analysis
 In your preferred browser and enter http://localhost:8888/;   Then from the VM terminal session, copy and paste the token from the notebook server into the requested spot in your browser.
 
 <h5> Example:   Run Server, port forward, access notebook in browser</h5>
-![Jupyter notebook example](/img/jupyter.gif)
+![Jupyter notebook example](jupyter.gif)
 
 ## Review and follow the notebook
 

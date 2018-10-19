@@ -47,7 +47,7 @@ User access to the Gen3 data commons runs through a VPC or Virtual Private Cloud
 Other secure and compliant Gen3 member systems (including cloud based systems) can access Gen3 data through the API.
 
 <h3> Diagram of the System Architecture </h3>
-![Gen3 Architecture](/img/framework.png)
+![Gen3 Architecture](index/framework.png)
 
 * * *
 ## Contact CDIS Staff
