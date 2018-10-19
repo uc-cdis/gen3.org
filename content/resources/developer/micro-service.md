@@ -7,7 +7,7 @@ menuname: developerMenu
 ---
 
 ## Gen3’s Micro Services
-Building off the 1st and 2nd generation, we have reimagined what a Data Commons can be by utilizing cloud native thinking. Each microservice now lives in its own container providing isolation from the environment around it. Container orchestration is conducted dynamically to scale to the commons workload. Clouds are approached agnostically so that Gen3 can operate on any cloud, public or private.
+Building off the 1st and 2nd generation commons, we have reimagined what a Data Commons can be by utilizing cloud native thinking. Each microservice now lives in its own container providing isolation from the environment around it. Container orchestration is conducted dynamically to scale to the commons workload. Clouds are approached agnostically so that Gen3 can operate on any cloud, public or private.
 
 ### SHEEPDOG
 The Sheepdog service is responsible for herding user submissions of metadata into the graph database. The submissions are quality controlled against the data dictionary to ensure all required fields are present and have appropriate data values. The Sheepdog service is also responsible for supporting bulk export of the metadata into TSV or JSON formats.
@@ -16,8 +16,7 @@ The Sheepdog service is responsible for herding user submissions of metadata int
 Peregrine is the high speed metadata seeking service which responds to GraphQL search queries. The GraphQL service allows Commons operators and users to precisely query only the information they are most interested in from the metadata collections. The service translates the GraphQL search into the appropriate statements which are run against the PostgreSQL backend before being returned as friendly JSON.
 
 ### FENCE
-The Fence service controls access to the metadata, submission, indexing, and data itself. Fence is an authentication (AuthN) and authorization (AuthZ) service which utilizes OpenID Connect flow (an extension of OAuth2) to generate tokens for clients. It can also provide tokens directly
-to a user. Clients and users may then use those tokens (JWT) with other Gen3 Data Commons services to access protected endpoints that require specific permissions. Fence can be configured to support different Identity Providers (IDPs) for AuthN. At the moment, supported IDPs include Google, and Shibboleth supporting providers such as NIH iTrust.
+The Fence service controls access to the metadata, submission, indexing, and data itself. Fence is an authentication (AuthN) and authorization (AuthZ) service which utilizes OpenID Connect flow (an extension of OAuth2) to generate tokens for clients. It can also provide tokens directly to a user. Clients and users may then use those tokens (JWT) with other Gen3 Data Commons services to access protected endpoints that require specific permissions. Fence can be configured to support different Identity Providers (IDPs) for AuthN. At the moment, supported IDPs include Google, and Shibboleth supporting providers such as NIH iTrust.
 
 
 ### INDEXD

@@ -10,30 +10,27 @@ menuname: developerMenu
 # Gen3 Technical Documentation
 This documentation is intended for developers who want to understand the design and architecture of Gen3.
 
-To understand the initiatives of Gen3, go to https://gen3.org
-
-Gen3 software is a set of services that enables users to use the data and compute resources from various cloud providers easily. And on top of those resources, provide a user-friendly environment to organize, query the data and run computational analysis.
+The Gen3 platform is a set of services that enables users to use data and compute resources easily from various cloud providers. It also provides a user-friendly environment to organize and query data, and run computational analysis.
 
 ## Terminology
 ### Data Object
-Raw data that's not indexed into any database. They are petabyte scale and sit in cloud object storage.
+Files on disk that are typically analyzed as a whole or in chunks. They are typically petabyte scale in data commons and sit in object storage.
 
 ### Rich Data
-Data that are harmonized, indexd in various databases, discoverable and queryable.
+Data that are harmonized, indexed in various databases, discoverable and queryable.
 
 ## Data management
 
 The following diagram describes all the user interactions in data management aspect.
 ![data management interations](img/data-interactions.png)
 
-1. fence microservice provides authentication and authorization framework for all Gen3 services & resources.
-2. download/upload data. Gen3 doesn't have services sitting between user and cloud storage services so that user can fully leverage the cloud provider's power, but it provides tools and services to enable users to access protected data security with temporary credentials.
-
-3. windmill serves static html, javascript and image files to create a view for users to interact with Gen3 microservices.
-4. sheepdog microservice allows user to do rich data submission.
-5. peregrine microservice allows user to do GraphQL query on live rich data.
-6. indexd microservice allows user to find physical location for data object.
-7. gen3-arranger exposes GraphQL query interface for a flattened/materialized view of rich data that's ETLed from graph rich data to Elasticsearch.
+1. Fence microservice provides authentication and authorization framework for all Gen3 services & resources.
+2. Download/upload data. While Gen3 doesn't have services sitting between the user and cloud storage services so the user can fully leverage the cloud provider's power, it does provide tools and services to enable users to access protected data with temporary credentials.
+3. Windmill serves static html, javascript and image files to create a view for users to interact with Gen3 microservices.
+4. Sheepdog microservice allows user to do rich data submission.
+5. Peregrine microservice allows user to do GraphQL queries on live rich data.
+6. Indexd microservice allows user to find physical location for data object.
+7. Gen3-arranger exposes GraphQL query interface for a flattened/materialized view of rich data that's ETLed from graph rich data to Elasticsearch.
 
 ### Data Submission System
 People generate a lot of data during experiments and studies. They would like to organize the data and annotate the data to describe how they are generated and all the context for the data. All the 'context' is preserved in our 'rich data' database. The rich data store is presented in a graph-like relational model to depict the normalized relationships of all the concepts. Take [bloodpac](https://www.bloodpac.org/data-group/) data model as an example, it describes how you start from having a particular study that's done on a bunch of `cases`( aka patients ), the doctors gathered some clinical informtion about each patient which is kept in various clinical nodes like `diagnosis`, `family history`, etc. The hositpical also gathered some samples from the patient and sent them to sequencing center which finally produced some sequencing files stored in `submitted unaligned reads`.
