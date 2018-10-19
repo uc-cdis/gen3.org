@@ -2,6 +2,8 @@
 title: "Gen3 - Data Dictionary"
 date: 2018-09-18T15:12:05-05:00
 linktitle: /resources/user
+layout: withtoc
+menuname: userMenu
 ---
 
 

@@ -2,6 +2,8 @@
 title: "Gen3 - Data Analysis"
 date: 2018-09-18T15:09:06-05:00
 linktitle: /resources/user
+layout: withtoc
+menuname: userMenu
 ---
 
 <h2> Data Analysis in the Gen3 Commons </h2>

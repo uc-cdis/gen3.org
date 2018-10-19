@@ -2,6 +2,8 @@
 title: "Gen3 - Working with the Proxy and Whitelist"
 date: 2018-09-18T15:11:58-05:00
 linktitle: /resources/user
+layout: withtoc
+menuname: userMenu
 ---
 
 ## Working with the proxy and whitelists

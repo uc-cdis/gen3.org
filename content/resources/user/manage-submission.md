@@ -2,6 +2,8 @@
 title: "Gen3 - Managing Timepoints"
 date: 2018-09-18T15:12:17-05:00
 linktitle: /resources/user
+layout: withtoc
+menuname: userMenu
 ---
 
 ## Managing timepoints in a submission

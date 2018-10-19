@@ -2,6 +2,8 @@
 title: "Gen3 - Data Contribution"
 date: 2018-09-12T20:53:20-05:00
 linktitle: /resources/user
+layout: withtoc
+menuname: userMenu
 ---
 
 # Submitting metadata and data

@@ -1,18 +1,20 @@
 ---
-title: "Gen3 - CDIS Data Client"
+title: "Gen3 - Gen3 Client"
 date: 2018-09-18T15:09:45-05:00
 linktitle: /resources/user
+layout: withtoc
+menuname: userMenu
 ---
 
 * * *
-# Download and Upload Files using the CDIS Data Client
+# Download and Upload Files using the CDIS Gen3 Client
 * * *
-The CDIS data client provides an easy-to-use, command-line interface for uploading and downloading data files from a Gen3 data commons.
+The Gen3 client provides an easy-to-use, command-line interface for uploading and downloading data files from a Gen3 data commons.
 
 * * *
 ## 1) Installation Instructions
 * * *
-The CDIS data client can be downloaded as a [compiled binary file](https://github.com/uc-cdis/cdis-data-client/releases) for Windows, Linux or Mac OS, or it can be installed from source using Google's [GO language](https://golang.org/dl/).
+The Gen3 client can be downloaded as a [compiled binary file](https://github.com/uc-cdis/cdis-data-client/releases) for Windows, Linux or Mac OS, or it can be installed from source using Google's [GO language](https://golang.org/dl/).
 * * *
 1) To install the binary (recommended), simply download the binary file to the location of your choice and add that location to your path. The program is executed from the command-line by running the command
 ```

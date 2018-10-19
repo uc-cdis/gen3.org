@@ -3,6 +3,8 @@ identifier: user
 title: Gen3 - User Guide
 linktitle: /resources/user
 date: 2018-09-04T22:16:21-05:00
+layout: withtoc
+menuname: userMenu
 ---
 
 * * *

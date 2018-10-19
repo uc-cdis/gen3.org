@@ -2,6 +2,8 @@
 title: "Gen3 - Working with the API"
 date: 2018-09-18T15:10:30-05:00
 linktitle: /resources/user
+layout: withtoc
+menuname: userMenu
 ---
 
 # Working with the API
