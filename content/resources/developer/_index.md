@@ -37,7 +37,7 @@ A lot of data are generated during experiments and studies, and ideally are orga
 
 In order for a Gen3 Commons to preserve this rich data, a consistent data model with standard terminologies needs to be constructed. Our data model uses jsonschema, and stores the models as yaml fields in [GitHub](https://github.com/occ-data/bpadictionary) to make it easier for domain experts to make changes and track activity. The schema is then translated to database ORM([psqlgraph](https://github.com/NCI-GDC/psqlgraph)) and used by Gen3 microservices to do data validation and database interactions.
 
-Our backend currently uses Postgres. This is not necessarily the optimal choice for complicated graph traversals, but we e chose this database due to its robustness as a traditional relational database. The data model that is described in jsonschema is translated to a relational data model in Postgres, where every node and edge is a table. All properties are stored as jsonb in Postgres as opposed to separate columns. While this sacrifices some query performance, it supports frequent data modeling changes that are required by domain experts.
+Our backend currently uses Postgres. This is not necessarily the optimal choice for complicated graph traversals, but we chose this database due to its robustness as a traditional relational database. The data model that is described in jsonschema is translated to a relational data model in Postgres, where every node and edge is a table. All properties are stored as jsonb in Postgres as opposed to separate columns. While this sacrifices some query performance, it supports frequent data modeling changes that are required by domain experts.
 
 Sheepdog uses the dictionary-driven ORM to do metadata validation and submission as described in the following diagram:
 ![rich-data-submission](img/rich-data-submission.png).
@@ -53,8 +53,8 @@ _This is an alpha feature_
 
 After we collect valuable data from various submitters, we would like to expose it in a user-friendly web interface. Understanding the datamodel and knowing how to traverse the graph is intimidating for a general Gen3 user, so we created an ETL application - [tube](https://github.com/uc-cdis/tube) to denormalize the graph to several types of flat documents to cater to several major use cases.
 
-Tube is driven by configuration files which describe the flat document structure and the mapping logic from the graph model, so that it's generic and can support various datamodels in different commons. For most of the biomedical commons, there are two types of flat documents that satisfies majority of users:
-- A file-centric document that denormalizes biospecimen and clinical attributes for each file. This targets bioinformaticians who want to filter by specific clinical/biospecimen attires and select files on which to run analysis.
+Tube is driven by configuration files which describe the flat document structure and the mapping logic from the graph model, so that it's generic and can support various datamodels in different commons. For most of the biomedical commons, there are two types of flat documents that satisfy the majority of users:
+- A file-centric document that denormalizes biospecimen and clinical attributes for each file. This targets bioinformaticians who want to filter by specific clinical/biospecimen attributes and select files on which to run analysis.
 - A case-centric document that denormalizes biospecimen and clinical attributes for each case. This targets clinicians who want to see distributions based on clinical attributes among cases. Most of the time, these cases represent patients.
 
 [living document for data exploration architecture](https://github.com/uc-cdis/cdis-wiki/tree/master/dev/gen3/data_explorer)
@@ -65,7 +65,7 @@ Workspaces are the compute component of a data commons. Workspaces allow users t
 
 ### Lightweight Workspaces
 
-JuypterHub is a service which allows for multiple Jupyter notebooks to be run by multiple users on a central server. The isolation of the user notebooks depends on the spawner used, and in this case relies on the isolated provided between Kubernetes pods. The Gen3 JuypterHub service is based on [Zero to JuypterHub](https://github.com/jupyterhub/zero-to-jupyterhub-k8s) and [Kubeflow](https://github.com/kubeflow).
+JuypterHub is a service which allows for multiple Jupyter notebooks to be run by multiple users on a central server. The isolation of the user notebooks depends on the spawner used, and in this case relies on the isolation provided between Kubernetes pods. The Gen3 JuypterHub service is based on [Zero to JuypterHub](https://github.com/jupyterhub/zero-to-jupyterhub-k8s) and [Kubeflow](https://github.com/kubeflow).
 
 The following diagram shows the authorization flow for the JupyterHub instances. We utilize the Revproxy and Fence acting as an API gateway for these workspaces. JupyterHub is configured with the [remote user auth plugin](https://github.com/occ-data/jhub_remote_user_authenticator) so that users are authed based on the `REMOTE_USER` header.
 
