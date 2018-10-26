@@ -159,6 +159,33 @@ functioning data portal at https://YOUR_USERNAME.planx-pla.net.
 
 See the information at [this page][k8s-dev] for more details.
 
+## Logging
+
+### Log level
+
+The purpose of logging in code is mainly for security compliance, incident management, and debugging. Depend on the purpose of the logs, we can choose which log level to use and decide how to structure our logs so it’s useful for that purpose. I only have 4 log level listed, because I think that’s enough for all cases, and adding more levels will just confuse developers.
+
+ERROR
+Something is really wrong and it breaks the system, need to be addressed by an administrator now. eg: fail to talk to the database. 
+If it’s an expected and handled failure, we should NOT log as ERROR because it will just create noise and wrong signal for diagnosing any problem.
+log.exception in python has the same log level(ERROR) as log.error. We use log.exception when traceback is valuable to diagnose the problem. But if log.error with a message is enough to understand what’s going on, then don’t use log.exception because it’s overly verbose. An example to use log.exception is in flask api error handler, after it handles all expected errors, it also handle general Exception which catches all unhandled errors, in this case we need to use log.exception to have traceback to know what’s going on.
+
+
+WARN
+Something might be wrong, need to be addressed soon. This one is rarely used.
+
+INFO
+Any action that need to be logged as important state changes or for security compliance. Eg: created/deleted a user, started/finished database migration. Should avoid verbose logging here because it creates noises for prod and might also have performance impact.
+
+DEBUG
+Actions that are useful for debugging purpose. eg: attempt to connect to an external API. The debug statements should try best effort to reach a status that if a devops turns on DEBUG mode and do a user action to reproduce a bug, a developer should be able to know what’s going on by just looking at the log. This is sometimes hard to achieve because the value of each debug statement may change overtime when the software evolve. So we need to routinely review our current logging to remove noise and add more useful traces.
+
+
+### Log message structure
+
+The log message should be English sentence that’s understandable by a developer who didn’t write this line of code. It should provide context to the message instead of just a ‘fail to do XX’, where when a devops looks at it, this doesn’t mean anything. The log message should try to provide information about why it tried to do XX at which point, what caused the failure, and what’s the consequence of this.
+
+
 ## Python
 
 For getting set up for general Python development, install [virtualenv][] and
