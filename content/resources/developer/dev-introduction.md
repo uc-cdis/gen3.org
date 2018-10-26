@@ -1,3 +1,12 @@
+---
+title: "Gen3 - Dev Intro"
+date: 2018-10-26T14:10:25-05:00
+linktitle: /resources/developer
+layout: withtoc
+menuname: developerMenu
+---
+
+{{% markdownwrapper %}}
 # Intro to Development on Gen3
 
 ## General Development Philosophy
@@ -363,3 +372,5 @@ SO, *with or without attribution*.
 [sample-repository]: https://www.kennethreitz.org/essays/repository-structure-and-python
 [virtualenv]: https://virtualenv.pypa.io/en/stable/
 [virtualenvwrapper]: https://virtualenvwrapper.readthedocs.io/en/latest/
+
+{{% /markdownwrapper %}}
