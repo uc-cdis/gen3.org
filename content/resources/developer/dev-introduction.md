@@ -138,7 +138,13 @@ git push
 * If necessary, create a new release version (click the `Releases` tab in the
   main GitHub page).
 
-## Working With Kubernetes Dev Namespaces
+## Kubernetes
+
+We use Kubernetes (sometimes abbreviated as k8s) to orchestrate our deployments.
+Individual services build into Docker images which run in the Kubernetes
+cluster.
+
+### Working With Kubernetes Dev Namespaces
 
 For convenience, add the following to the `~/.ssh/config` file (substituting
 your actual username for `YOUR_USERNAME` in the template):
