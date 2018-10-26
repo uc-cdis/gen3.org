@@ -9,6 +9,10 @@ menuname: developerMenu
 {{% markdownwrapper %}}
 # Intro to Development on Gen3
 
+This document outlines best practices and requirements to follow for developers
+working on the Gen3 stack, including topics from general development guidelines,
+to our standard git workflows, to repository structure, and more.
+
 ## General Development Philosophy
 
 We summarize best development practices with three central tenets (in no
@@ -170,30 +174,79 @@ See the information at [this page][k8s-dev] for more details.
 
 ## Logging
 
-### Log level
+### Log Level
 
-The purpose of logging in code is mainly for security compliance, incident management, and debugging. Depend on the purpose of the logs, we can choose which log level to use and decide how to structure our logs so it’s useful for that purpose. I only have 4 log level listed, because I think that’s enough for all cases, and adding more levels will just confuse developers.
+Logging serves three main purposes: security compliance, incident management,
+and debugging. Depending on the purpose of the logs, choose which log level to
+use and decide how to structure logs to make them useful for that purpose.
 
-ERROR
-Something is really wrong and it breaks the system, need to be addressed by an administrator now. eg: fail to talk to the database. 
-If it’s an expected and handled failure, we should NOT log as ERROR because it will just create noise and wrong signal for diagnosing any problem.
-log.exception in python has the same log level(ERROR) as log.error. We use log.exception when traceback is valuable to diagnose the problem. But if log.error with a message is enough to understand what’s going on, then don’t use log.exception because it’s overly verbose. An example to use log.exception is in flask api error handler, after it handles all expected errors, it also handle general Exception which catches all unhandled errors, in this case we need to use log.exception to have traceback to know what’s going on.
+#### ERROR
 
+> *Something is  wrong and it breaks the system; this needs to be addressed by an administrator now.*
 
-WARN
-Something might be wrong, need to be addressed soon. This one is rarely used.
+Examples:
 
-INFO
-Any action that need to be logged as important state changes or for security compliance. Eg: created/deleted a user, started/finished database migration. Should avoid verbose logging here because it creates noises for prod and might also have performance impact.
+* Failure to communicate with database.
+* Failure to communicate with another service.
 
-DEBUG
-Actions that are useful for debugging purpose. eg: attempt to connect to an external API. The debug statements should try best effort to reach a status that if a devops turns on DEBUG mode and do a user action to reproduce a bug, a developer should be able to know what’s going on by just looking at the log. This is sometimes hard to achieve because the value of each debug statement may change overtime when the software evolve. So we need to routinely review our current logging to remove noise and add more useful traces.
+Expected and handled failures should NOT log as `ERROR` to avoid creating noise.
+As much as possible reserve `ERROR`-level logs to assist in diagnosing major
+problems.
 
+Note that in Python, `log.exception` has this same log level as `log.error`. Use
+`log.exception` when the traceback is valuable to diagnose the problem.
 
-### Log message structure
+An example of correct usage of `log.exception` would be in a Flask API error
+handler: after it handles all expected errors, it should also handle any general
+`Exception`; in this case we need to use `log.exception` to have the traceback
+available to see what’s going on.
 
-The log message should be English sentence that’s understandable by a developer who didn’t write this line of code. It should provide context to the message instead of just a ‘fail to do XX’, where when a devops looks at it, this doesn’t mean anything. The log message should try to provide information about why it tried to do XX at which point, what caused the failure, and what’s the consequence of this.
+#### WARN
 
+> *Something might be wrong and likely needs to be addressed soon.*
+
+Alternatively:
+
+> *Execution encountered an exceptional case which can be handled but leads to
+> undesirable behavior.*
+
+#### INFO
+
+> *Some action needs to be logged as an important state change or for security compliance.*
+
+Examples:
+
+* Created/deleted a user.
+* Started/finished database migration.
+
+Avoid overly verbose logging at the `INFO` level, to avoid creating unnecessary
+noise in prod logs.
+
+#### DEBUG
+
+> *Statement useful for debugging purposes only.*
+
+Examples:
+
+* Attempting to connect to an external API.
+
+`DEBUG` level logs should be sufficiently informative for a developer to have a
+clear picture of what's going on when reproducing a bug, just looking at the
+logs.
+
+The value of debug statements may change over time as the software evolves; we
+need to routinely review our current logging to remove noise and add more useful
+traces.
+
+### Log Message Structure
+
+The log message should form an entire sentence understandable by a developer
+who didn't write the relevant code, and provide additional context to the
+message beyond (for example) "failed to do X".
+
+In detail, using a generic error as an example, the log message should try to
+provide information about why this action was attempted, what caused the
+failure, how (if at all) it is handled, and what consequences this will have.
 
 ## Python
 
