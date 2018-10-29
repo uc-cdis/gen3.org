@@ -232,7 +232,7 @@ g3Entrance:
 </section>
 
 <section>
-  <h4 class="g3-text__center g3-minimum-wrapper g3-space__margin-sm-top">
+  <h4 class="g3-text__center g3-minimum-wrapper g3-space__padding-lg-top">
     {{< param "g3User.quote" >}}
   </h4>
   <p class="g3-text__center g3-minimum-wrapper g3-space__margin-sm-top g3-space__padding-lg-bottom">
