@@ -1,21 +1,4 @@
----
-title: "Style Guide"
-date: 2018-09-12T23:39:28-05:00
-layout: withtoc
-menuname: developerMenu
-draft: true
----
-{{% markdownwrapper %}}
 # Summary
-
-This RFC proposes a style guide for Python, JavaScript, Go code as well as
-Markdown written by the PlanX team.
-
-# Motivation
-
-As noted by Guido van Rossum, "code is read much more often than it is written".
-Thus, consistency and readability are valuable qualities in code, and a style
-guide helps to achieve and enforce both.
 
 * [Python Style Guide]
 * [Markdown Style Guide]
@@ -25,72 +8,68 @@ guide helps to achieve and enforce both.
 # Python Style Guide
 [Python Style Guide]: #python-style-guide
 
-The python style conventions here are largely based on the style recommended by
-the [PEP 8][pep8] standard. The [Google Python style guide][google-python] was
-referenced for the list of topics.
+For python code we use [black][black], an automatic code formatter. In general
+this should handle all the trivial points of code formatting. For developing
+python code, install black and either run it on your code before committing or
+set up a plugin in your editor to run it automatically (explained in the `black`
+README).
 
-## General Rules
+## Best Practices
 
-- Indent with 4 spaces.
-- All lines should be at most 79 characters long.
-- Separate top-level definitions (and modules, and constants, etc.) with 2 blank
-  lines; separate method definitions and "code paragraphs" (logical sections of
-  code within a function or method) with 1 blank line.
-- Use descriptive names and avoid single-letter variable names except for
+* Use implicit boolean-ness when possible. Sometimes comparing against `None`
+  specifically is required, in which case use `if _ is None` or `if _ is not
+  None`. Examples:
+
+```python
+# Good
+if not my_list:
+# Bad
+if len(my_list) == 0:
+
+# Good
+if my_boolean:
+# Bad
+if my_boolean == True:
+```
+
+* Prefer list, dictionary, or generator comprehensions over loops where
+  possible.
+* Use `assert` only for tests; for unexpected function inputs use `ValueError`.
+* Use underscore-prefixed names for "private" definitions.
+* Use descriptive names and avoid single-letter variable names except for inside
   iterators/generators where the variable is obvious (for example a range of
   integers) and exceptions (where the variable should be named `e`).
-- Use double quotes for docstrings and single quotes for string constants
-  (except where the string contains single quotes and can be escaped by using
-  double quotes).
-- Run a linter such as [pylint][pylint] over code while writing or before
-  committing, and certainly before merging in new code.
-- Never use semicolons.
-- Consistency is important.
+* [Don't use mutable default arguments.][mutable-defaults]
+* Use properties instead of getters/setters.
 
-## Imports
+## Variable Naming
 
-Per PEP 8, imports should be structured as follows, with the blank lines
-included:
+* `snake_case` style is the default style and applies to everything not
+  specified by a different style, including: variables, functions (and methods),
+  arguments, packages, and modules.
+* `PascalCase` style applies to classes (including exceptions).
+* `SCREAMING_SNAKE_CASE` style applies to global variables and constants.
 
-{{< highlight python "linenos=table" >}}
-# standard library imports
-# third-party imports
-# local imports
-{{< /highlight >}}
+## Logic
 
-The imports within each section should ideally be alphabetized. For example:
+Handle exceptional cases first where possible, and leave the "normal" flow of
+operation at the lowest level of indentation. For example:
+```python
+# Good
+def check_string(string):
+    if string == "unexpected":
+        return "that was unexpected"
+    return "your string is: {}".format(string)
 
-{{< highlight python "linenos=table" >}}
-from datetime import datetime, timedelta
-
-import flask
-from flask_sqlalchemy_session import current_session
-
-from .auth import login_required, get_current_user
-from .errors import Unauthorized
-{{< /highlight >}}
-
-This style makes it obvious where each import is from and easy to look for a
-specific library in the list of imports.
-
-Different libraries should be on separate lines: do
-
-{{< highlight python "linenos=table" >}}
-import math
-import random
-{{< /highlight >}}
-
-not
-
-{{< highlight python "linenos=table" >}}
-import math, random
-{{< /highlight >}}
+# Bad
+def check_string(string):
+    if string != "unexpected":
+        return "your string is: {}".format(string)
+    else:
+        return "that was unexpected"
+```
 
 ## Documentation
-
-All docstrings should be delimited by double quotes. We use the Sphinx
-documentation generator, which uses reStructuredText. The Sphinx documentation
-has a [good reference for reStructuredText][reStructuredText].
 
 Docstring summaries and comments should be written in the imperative mood (and
 preferably in complete sentences); for instance, write:
@@ -133,163 +112,11 @@ def foo(bar):
     return result_foo
 ```
 
-## Spacing
-
-Individual binary operators should have a space on either side:
-```python
-x = y + z
-```
-but if there are multiple binary operators with differing precedence, then, for
-just the operators with the highest precedence, the spaces should be removed:
-```python
-x = 2.5*y + z/8.0
-a = (math.pi*b + c/b) / (c - b)
-```
-
-## Breaking Long Lines
-
-Line-breaking with `\` should be avoided; implicit line joining using
-parentheses is preferred. For chaining methods and function calls, use the
-following style:
-```python
-var = (
-    obj
-    .method1()
-    .method2()
-    .method3()
-)
-```
-For function definitions with long arguments, use the following style:
-```python
-def func_with_some_very_long_arguments(
-        some_very_long_argument_1, some_very_long_argument_2,
-        some_very_long_argument_3):
-    # Function body
-```
-Note that for the function definition the arguments are indented by 8 spaces
-beyond the function `def`, to separate them from the indented block of the
-function body. The same style applies to other lines followed by an indented
-block; for example:
-```python
-with func_with_some_very_long_arguments(
-        some_very_long_argument_1, some_very_long_argument_2,
-        some_very_long_argument_3):
-    # Code block
-```
-Alternatively, for lists and function calls, the variables/arguments can be
-listed one per line with a comma after the last one:
-```python
-list_with_long_elements = [
-    long_list_element_1,
-    long_list_element_2,
-    long_list_element_3,
-]
-```
-
-### Long String Constants
-
-Break up long string constants in the following style.
-```python
-long_string = (
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse"
-    " posuere est leo, eget rhoncus libero venenatis vitae. Nulla lobortis"
-    " ligula eget pretium ultricies."
-)
-```
-
-## Whitespace and Blank Lines
-
-All "sections" of code should be separated by 2 blank lines (where a "section"
-is a function or class definition, import block, group of constants, etc.).
-Blank lines should be used sparingly in functions and blocks of code to
-delineate logical sections, like "paragraphs" of code.
-
-In a class, there should be one blank line between each method definition,
-including before the `__init__`.
-```python
-class Foo(object):
-    """
-    A class that represents a Foo.
-
-    Do not use if you are trying to represent a Bar.
-    """
-
-    def __init__(self, qux):
-        self.qux = qux
-
-    def __str__(self):
-        return 'Foo'
-```
-
-There should be no trailing whitespace at the end of any lines.
-
-## Logic
-
-### LBYL and EAFP
-
-Most conditionals can be expressed either in the "look before you leap" (LBYL)
-style or the "easier to ask forgiveness than permission" (EAFP) style:
-```python
-# LBYL style
-for bar in baz:
-    if bar not in foo:
-        continue
-    print(foo[bar])
-
-# EAFP style
-for bar in baz:
-    try:
-        print(foo[bar])
-    except KeyError:
-        continue
-```
-Prefer the style that leads to more readable code. The LBYL style is likely to
-be preferable in cases where the code in the non-exceptional case is longer,
-since it will be less nested. The EAFP style is likely to be preferable in
-cases where the `try` (or analogous code block) is short.
-
-### Empty Returns
-
-Empty return statements are not essential; however, do write an empty return
-statement when it is necessary to make obvious that the return type is None or
-to clarify the control flow of a function.
-
-## Variable Naming
-
-- `lowercase_with_underscores` style applies to:
-    - Packages
-    - Modules
-    - Functions
-    - Non-global variables
-    - Methods
-    - Arguments
-- `CapitalWordsNoUnderscores` style applies to:
-    - Classes
-    - Exceptions
-- `ALL_CAPS_WITH_UNDERSCORES` style applies to:
-    - Global variables
-
-## Directory Structure
-
-Use [this example][sample-repository] as a reference for creating new
-repositories/directories. Use the Apache License 2.0 in the `LICENSE` file
-(this file can be found in most `uc-cdis` repositories) and the following
-`NOTICE` (with the current year):
-```
-Copyright 2017 University of Chicago
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-```
-
 # Markdown Style Guide
 [Markdown Style Guide]: #markdown-style-guide
 
-- Lines should wrap at 80 characters long.
-- There should be a blank line before and after section headings:
+* Lines should wrap at 80 characters long.
+* There should be a blank line before and after section headings:
 
 ```markdown
 # Foo
@@ -395,37 +222,44 @@ test('Test asyncSetInterval', (done) => {
 
 Try to follow these rules of thumb when possible.
 
-Put generic (of general use), dumb (properties driven) components under src/components with a jest test case - ex:
-* components/Spinner.jsx
-* components/Spinner.test.jsx
+Put generic (of general use), dumb (properties driven) components under
+`src/components` with a jest test case - ex:
 
-Create a directory for higher level components (like a page) that assemble multiple customized child components or involve user interactions and backend orchestration - ex:
-* QueryPage/ReduxFilters.jsx
-* QueryPage/RelayResultTable.jsx
-* QueryPage/ReduxResultsPager.jsx
-* QueryPage/QueryPage.jsx
+* `components/Spinner.jsx`
+* `components/Spinner.test.jsx`
+
+Create a directory for higher level components (like a page) that assemble
+multiple customized child components or involve user interactions and backend
+orchestration - ex:
+
+* `QueryPage/ReduxFilters.jsx`
+* `QueryPage/RelayResultTable.jsx`
+* `QueryPage/ReduxResultsPager.jsx`
+* `QueryPage/QueryPage.jsx`
 
 # Go Style Guide
 [Go Style Guide]: #go-style-guide
 
-Go provides extensive style information when talking about how to review Go code. Additionally Go has a `gofmt` tool which should be used to auto format the code for mechanical style.
+Go provides extensive style information when talking about how to review Go
+code. Additionally Go has a `gofmt` tool which should be used to auto format the
+code for mechanical style.
 
 * [Go Code Review][gocodereview]
 * [Effective Go][effectivego]
 
 ## Highlights
 
-* Pascalcase for public functions, public export variables
-* Camelcase for private variables, and private functions
-* Braces for blocks - K&R style
-* Spaces - not tabs - 2 space indents
-* Don't use panic() for error handling, return error() instead
-* Organize imports into logical groups with the standard libraries first
+* Use `PascalCase` for any exported definitions and `camelCase` for non-exported
+  definitions.
+* Don't use `panic()` for error handling; return `error` instead.
+* Organize imports into logical groups with the standard libraries first.
 
 ## Code Organization
 
-* Test files, such as _test.go reside alongside the respective .go file (not in a separate subdir)
-* There should be only one package main and subsequent main.go file in your program
+* Test files, such as `_test.go` reside alongside the respective .go file (not
+  in a separate subdir).
+* There should be only one package main and subsequent main.go file in your
+  program.
 
 ```
 $GOPATH/
@@ -442,30 +276,21 @@ $GOPATH/
 
 * [Organizing Go][organizinggo]
 
-# Drawbacks
 
-The principal drawback to a style guide is the very likely event that not
-everyone will be pleased by all the stylistic decisions.
-
-# Alternatives
-
-The alternative is to not have a style guide.
-
-[pep8]: https://www.python.org/dev/peps/pep-0008/
+[airbnb-cssjs]: https://github.com/airbnb/javascript/tree/master/css-in-javascript
+[airbnb-js]: https://github.com/airbnb/javascript
+[airbnb-react]: https://github.com/airbnb/javascript/tree/master/react
+[airbnb-react]: https://github.com/airbnb/javascript/tree/master/react
+[black]: https://github.com/ambv/black
+[effectivego]: https://golang.org/doc/effective_go.html
+[gocodereview]: https://github.com/golang/go/wiki/CodeReviewComments
+[google-js]: https://google.github.io/styleguide/jsguide.html
+[google-python-docstrings]: http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 [google-python]: https://google.github.io/styleguide/pyguide.html
+[organizinggo]: https://talks.golang.org/2014/organizeio.slide#1
+[mutable-defaults]: https://docs.python-guide.org/writing/gotchas/#mutable-default-arguments
+[pep8]:  https://www.python.org/dev/peps/pep-0008/
+[polished]: https://polished.js.org/
 [pylint]: https://www.pylint.org/
 [reStructuredText]: http://www.sphinx-doc.org/en/stable/rest.html
-[sample-repository]: http://python-guide-pt-br.readthedocs.io/en/latest/writing/structure/#sample-repository
-[google-python-docstrings]: http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
-[airbnb-js]:https://github.com/airbnb/javascript
-[airbnb-react]:https://github.com/airbnb/javascript/tree/master/react
-[airbnb-cssjs]:https://github.com/airbnb/javascript/tree/master/css-in-javascript
-[google-js]:https://google.github.io/styleguide/jsguide.html
-[airbnb-react]:https://github.com/airbnb/javascript/tree/master/react
-[styledcomponents]:https://www.styled-components.com/
-[polished]:https://polished.js.org/
-[gocodereview]:https://github.com/golang/go/wiki/CodeReviewComments
-[effectivego]:https://golang.org/doc/effective_go.html
-[organizinggo]:https://talks.golang.org/2014/organizeio.slide#1
-
-{{% /markdownwrapper %}}
+[styledcomponents]: https://www.styled-components.com/
