@@ -143,7 +143,9 @@ The following shell script can be run from the command-line like:
 `sh gen3_manifest.sh <profile_name> <manifest_filename>`
 Where <profile_name> is the name of the profile configured in [step 2](link to step 2) above, and <manifest_filename> is the filename/path of the manifest file.
 
-The manifest file should not contain headers and each row should be only a GUID and filename separated by a tab, for example:
+The manifest file should not contain headers and each row should be only a GUID and filename separated by a tab.
+
+Example:
 ```
 a12ff17c-2fc0-475a-9c21-50c19950b082	filename-1.txt
 b22ff17c-2fc0-475a-9c21-50c19950b082	filename-2.txt
