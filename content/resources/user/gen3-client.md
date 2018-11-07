@@ -21,7 +21,11 @@ The gen3-client can be [downloaded from Github](https://github.com/uc-cdis/cdis-
 
 Or, in the case that you haven't added the client to your path, execute the program with the following command: `path/to/binary/gen3-client <options>`, where `path/to/binary` is `./` if working from the same directory as the client executable.
 
-For example: `./gen3-client <options>`
+Example:
+```
+./gen3-client <options>
+./gen-client --version
+```
 
 To see the help menu for the tool, simply type in `gen3-client` or `./gen3-client`.
 
@@ -32,13 +36,13 @@ Download the Windows 64-bit version of the gen3-client [here](https://github.com
 Add the unzipped executable to a directory, for example:
  "C:\Program Files\gen3-client\gen3-client.exe"
 
-1) Open the Start Menu and type "edit environment variables",
-2) Open the option "Edit the system environment variables"
-3) In the "System Properties" window that opens up, on the "Advanced" tab, click on the "Environment Variables" button.
-3) In the box labeled "System Variables", find the "Path" variable and click "Edit"
-4) In the window that pops up, click "New"
-5) Type in the full directory path of the executable file (e.g., "C:\Program Files\gen3-client")
-6) Click "Ok" on all the open windows and restart the command prompt if it is already open
+1. Open the Start Menu and type "edit environment variables",
+2. Open the option "Edit the system environment variables"
+3. In the "System Properties" window that opens up, on the "Advanced" tab, click on the "Environment Variables" button.
+4. In the box labeled "System Variables", find the "Path" variable and click "Edit"
+5. In the window that pops up, click "New"
+6. Type in the full directory path of the executable file (e.g., "C:\Program Files\gen3-client")
+7. Click "Ok" on all the open windows and restart the command prompt if it is already open
 
 Now you should be able to run the tool on the command-line from any directory by typing `gen3-client` (typing this alone should display the help menu).
 
@@ -47,11 +51,11 @@ Now you should be able to run the tool on the command-line from any directory by
 * * *
 Before using it to upload or download data, the gen3-client needs to be configured with API credentials downloaded from the user's data commons Profile:
 
-1) Download your credentials.json from the data commons by clicking on "Profile" in the top navigation bar.
-2) From the command-line, run the `gen3-client configure` command (see examples below).
-3) Enter the API endpoint of your data commons.
+1. Download your credentials.json from the data commons by clicking on "Profile" in the top navigation bar.
+2. From the command-line, run the `gen3-client configure` command (see examples below).
+3. Enter the API endpoint of your data commons.
 
-Examples:
+Example:
 ```
 gen3-client configure --profile <profile-name> --cred <credentials.json>
 
@@ -80,7 +84,7 @@ GUIDs are generated on the back-end, not submitted by users, and they are stored
 
 Once the GUIDs for files to upload are in hand, the gen3-client can be used to upload files to object storage using the `gen3-client upload` command.
 
-For example:
+Example:
 ```
 gen3-client upload --profile <profile-name> --guid <GUID> --file=<filename>
 
@@ -94,7 +98,7 @@ Successfully uploaded file "test.gif" to GUID dg.7519/b4642430-8c6e-465a-8e20-97
 * * *
 Once a data file is registered and uploaded to object storage, its GUID can be used to download the file with the `gen3-client download` command.
 
-For example:
+Example:
 ```
 gen3-client download --profile <profile name> --guid <GUID> --file=<filename>
 
@@ -139,7 +143,9 @@ The following shell script can be run from the command-line like:
 `sh gen3_manifest.sh <profile_name> <manifest_filename>`
 Where <profile_name> is the name of the profile configured in [step 2](link to step 2) above, and <manifest_filename> is the filename/path of the manifest file.
 
-The manifest file should not contain headers and each row should be only a GUID and filename separated by a tab, for example:
+The manifest file should not contain headers and each row should be only a GUID and filename separated by a tab.
+
+Example:
 ```
 a12ff17c-2fc0-475a-9c21-50c19950b082	filename-1.txt
 b22ff17c-2fc0-475a-9c21-50c19950b082	filename-2.txt
@@ -173,11 +179,11 @@ In order to register data files in a Gen3 data commons, the files' filenames, md
 
 The template TSV for a data file node should be downloaded from the node's entry page in the data dictionary and used as a template with this command. Then the wildcard character `*` can be used to add all matching files to the specified output tsv.
 
-For example:
+Example:
 ```
 gen3-client generate-tsv --from-template <template.tsv> --output <output.tsv> <wildcard>
 
-gen3-client generate-tsv --from-template submission_imaging_file_template.tsv --output images.tsv \*.dcm
+gen3-client generate-tsv --from-template imaging_file_template.tsv --output images.tsv \*.dcm
 Adding file image-1.dcm
 Adding file image-2.dcm
 Adding file image-3.dcm
@@ -186,8 +192,9 @@ Generated tsv images.tsv from files *.dcm!
 ```
 * Note that in Mac OS terminal, the asterisk ("\*", wildcard character) needs to be escaped with a backslash.
 
-The output file will have the filename, file_size, and md5sum properties for each of the matching files filled in. In order to complete the TSV, fill in the other required properties, including a column of "urls" with the s3 bucket location of the files:
+The output file will have the filename, file_size, and md5sum properties for each of the matching files filled in. In order to complete the TSV, fill in the other required properties, including a column of "urls" with the s3 bucket location of the files.
 
+Example:
 ```
 read_groups.submitter_id#1	type	project_id	submitter_id	data_category	data_format	data_type	experimental_strategy	file_name	file_size	md5sum	urls
 rg-1	submitted_aligned_reads	project-name	SAR1	Sequencing Reads	BAM	Aligned Reads	DNA Panel	SAR1.bam	2032590693	ba05a167e793f5c9159e468ff080647c	s3://my-data/SAR1.bam
