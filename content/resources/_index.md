@@ -14,7 +14,7 @@ g3Resources:
       link: /resources/user
     lists:
       - title: User Introduction
-        ul: 
+        ul:
           - name: How to contribute a data project to a Gen3 Data Commons
             link: /resources/user/submit-data
           - name: How to access data in a Gen3 Data Commons
@@ -23,8 +23,8 @@ g3Resources:
             link: /resources/user/analyze-data
       - title: Appendices
         ul:
-          - name: Using the CDIS data client
-            link: /resources/user/cdis-client
+          - name: Using the gen3-client command-line tool
+            link: /resources/user/gen3-client
           - name: Working with the API
             link: /resources/user/using-api
           - name: Working with the Proxy and Whitelist
@@ -44,7 +44,7 @@ g3Resources:
       link: /resources/operator
     lists:
       - title: Technical Introduction
-        ul: 
+        ul:
           - name: How to Setup Gen3
             link: /resources/operator
   r3:
@@ -56,13 +56,13 @@ g3Resources:
       link: /resources/developer
     lists:
       - title: Technical Introduction
-        ul: 
+        ul:
           - name: Introduction of Gen3’s micro services
             link: /resources/developer/micro-service
           - name: Introduction of technology
             link: /resources/developer/
       - title: Build Apps on Gen3
-        ul: 
+        ul:
           - name: Authentication
             link: /resources/developer/build-app#1-authentication
           - name: GraphQL Queries
