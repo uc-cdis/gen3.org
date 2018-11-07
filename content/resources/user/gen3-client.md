@@ -181,7 +181,7 @@ Example:
 ```
 gen3-client generate-tsv --from-template <template.tsv> --output <output.tsv> <wildcard>
 
-gen3-client generate-tsv --from-template submission_imaging_file_template.tsv --output images.tsv \*.dcm
+gen3-client generate-tsv --from-template imaging_file_template.tsv --output images.tsv \*.dcm
 Adding file image-1.dcm
 Adding file image-2.dcm
 Adding file image-3.dcm
@@ -190,8 +190,9 @@ Generated tsv images.tsv from files *.dcm!
 ```
 * Note that in Mac OS terminal, the asterisk ("\*", wildcard character) needs to be escaped with a backslash.
 
-The output file will have the filename, file_size, and md5sum properties for each of the matching files filled in. In order to complete the TSV, fill in the other required properties, including a column of "urls" with the s3 bucket location of the files:
+The output file will have the filename, file_size, and md5sum properties for each of the matching files filled in. In order to complete the TSV, fill in the other required properties, including a column of "urls" with the s3 bucket location of the files.
 
+Example:
 ```
 read_groups.submitter_id#1	type	project_id	submitter_id	data_category	data_format	data_type	experimental_strategy	file_name	file_size	md5sum	urls
 rg-1	submitted_aligned_reads	project-name	SAR1	Sequencing Reads	BAM	Aligned Reads	DNA Panel	SAR1.bam	2032590693	ba05a167e793f5c9159e468ff080647c	s3://my-data/SAR1.bam
