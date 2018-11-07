@@ -114,15 +114,20 @@ Downloading dg.7519/b4642430-8c6e-465a-8e20-97c458439387...
 * * *
 ## 5) Provide a manifest file for bulk download
 * * *
-
-Provide the client with a manifest to download a list of files.
-Get the manifest from ?
+A file download manifest can be generated using the data commons' "Exploration" tool by selecting a cohort then clicking on the "Manifest" button. The gen3-client will download all the files in the provided manifest using the `gen3-client download-manifest` command.
 
 Example:
 ```
 gen3-client download-manifest --download-path <path for files> --manifest <manifest file>
 
-
+gen3-client download-manifest --manifest manifest.json --profile bob --download-path downloads
+Finished downloads/63af95d3-98c3-4d6d-a6be-26398dbfc1d9 6723044 / 6723044 bytes (100%)
+Finished downloads/b30531f6-9caa-4356-a95f-5f4d6a012913 6721797 / 6721797 bytes (100%)
+Finished downloads/fbac9213-3564-422a-8809-119d4401d284 2744320 / 2744320 bytes (100%)
+...
+Finished downloads/bc40b861-c56d-490f-b4a4-f34d3c54de5f 2959360 / 2959360 bytes (100%)
+Finished downloads/24d0be10-d164-48ad-aafa-9fcaac682df9 2570240 / 2570240 bytes (100%)
+330 files downloaded.
 ```
 
 * * *
@@ -131,14 +136,14 @@ gen3-client download-manifest --download-path <path for files> --manifest <manif
 Users who need to semi-automate upload of a collection of files can modify the following shell script to fit their needs.
 
 The following shell script can be run from the command-line like:
-`sh cdc_manifest.sh <profile_name> <manifest_filename>`
+`sh gen3_manifest.sh <profile_name> <manifest_filename>`
 Where <profile_name> is the name of the profile configured in [step 2](link to step 2) above, and <manifest_filename> is the filename/path of the manifest file.
 
 The manifest file should not contain headers and each row should be only a GUID and filename separated by a tab, for example:
 ```
-a82ff17c-2fc0-475a-9c21-50c19950b082	filename-1.txt
-b82ff17c-2fc0-475a-9c21-50c19950b082	filename-2.txt
-c82ff17c-2fc0-475a-9c21-50c19950b082	filename-3.txt
+a12ff17c-2fc0-475a-9c21-50c19950b082	filename-1.txt
+b22ff17c-2fc0-475a-9c21-50c19950b082	filename-2.txt
+c32ff17c-2fc0-475a-9c21-50c19950b082	filename-3.txt
 ```
 Here is the example shell script for uploading files. The script text should be added to a file named, e.g., 'gen3_manifest.sh', and the script should then be run in the directory containing the files:
 
@@ -162,7 +167,7 @@ done
 ```
 
 * * *
-## 7) Semi-automate generation of a metadata TSV
+## 7) Generate a metadata TSV
 * * *
 In order to register data files in a Gen3 data commons, the files' filenames, md5sums, and file_size in bytes must be submitted as metadata. The gen3-client can help collect the values of these three properties using the `gen3-client generate-tsv` command.
 
@@ -180,3 +185,12 @@ Adding file image-4.dcm
 Generated tsv images.tsv from files *.dcm!
 ```
 * Note that in Mac OS terminal, the asterisk ("\*", wildcard character) needs to be escaped with a backslash.
+
+The output file will have the filename, file_size, and md5sum properties for each of the matching files filled in. In order to complete the TSV, fill in the other required properties, including a column of "urls" with the s3 bucket location of the files:
+
+```
+read_groups.submitter_id#1	type	project_id	submitter_id	data_category	data_format	data_type	experimental_strategy	file_name	file_size	md5sum	urls
+rg-1	submitted_aligned_reads	project-name	SAR1	Sequencing Reads	BAM	Aligned Reads	DNA Panel	SAR1.bam	2032590693	ba05a167e793f5c9159e468ff080647c	s3://my-data/SAR1.bam
+rg-2	submitted_aligned_reads	project-name	SAR2	Sequencing Reads	BAM	Aligned Reads	DNA Panel	SAR2.bam	2352570693	da15a177e7a3f5h9159e468ff080647c	s3://my-data/SAR2.bam
+...
+```
