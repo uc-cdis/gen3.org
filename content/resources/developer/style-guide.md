@@ -1,3 +1,11 @@
+---
+title: "Gen3 - Style Guide"
+date: 2018-11-07T16:58:29-05:00
+linktitle: /resources/developer
+layout: withtoc
+menuname: developerMenu
+---
+
 # Summary
 
 * [Python Style Guide]
