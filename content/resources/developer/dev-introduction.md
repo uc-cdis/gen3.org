@@ -129,7 +129,7 @@ git push
 
 * Merge using the default merge strategy (not squash or rebase). If you have
   many small or unnecessary commits, use `git rebase` to squash these before
-  merging. For example, `git rebased -i HEAD~5` will allow you to select commits
+  merging. For example, `git rebase -i HEAD~5` will allow you to select commits
   from the previous 5 commits to squash.
 
 **After merging the PR:**
