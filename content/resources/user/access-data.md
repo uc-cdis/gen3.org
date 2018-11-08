@@ -6,26 +6,33 @@ layout: withtoc
 menuname: userMenu
 ---
 {{% markdownwrapper %}}
-# Accessing metadata and data
+# Exploring metadata and downloading data files
+* * *
+In a Gen3 data commons, a distinction is made between two types of data: "data files and "metadata".
+A "data file" would be, for example, tabulated data values in spreadsheet, or a fastq file containing DNA sequences.
+On the other hand, "metadata" are key/value pairs (variables or "properties") that can be queried via the Gen3 data commons' API or viewed in the Gen3 data commons' "Exploration" tool.
+
+## Data Exploration Tool
+
+
+## Data File Access
+* * *
+The sponsor of a Gen3 data commons typically decides how users will access data in object storage. In some cases, approved users may be allowed to download data directly to their local computer from within an internet browser or with the [gen3-client](https://github.com/uc-cdis/cdis-data-client/releases), which is a command-line tool. When more security is required, users may be required to download and analyze data in a protected environment, such as a virtual machine (VM) in a virtual private cloud (VPC).
+
+### Accessing data files from within a browser
+* * *
+Data files can be downloaded using the "Exploration" tool in a Gen3 data commons, which is accessed by clicking on "Exploration" in the top navigation bar.
+
+Once data files are registered, their address in s3 object storage can be obtained by providing the file's GUID or 'object_id' to the following URL:
+https://gen3.datacommons.org/index/index/GUID
+
+Data files can be downloaded by providing the file's GUID to the following URL:
+https://gen3.datacommons.org/user/data/download/GUID
+
+### Downloading data files with the gen3-client
 * * *
 
-The sponsor of a Gen3 data commons typically decides how users will access data in object storage. In some cases, approved users may be allowed to download data directly to their local computer from within an internet browser or with the [cdis-data-client](https://github.com/uc-cdis/cdis-data-client/releases). When more security is required, users may be required to download and analyze data in a protected environment, such as a virtual machine (VM) in a virtual private cloud (VPC).
-
-
-## Accessing data from within a browser
-* * *
-
-Once data files are registered, their address in s3 object storage can be obtained by providing the file's UUID to the following URL:
-https://examplecommons.gen3.org/index/index/UUID
-
-Data files can be downloaded by providing the file's UUID to the following URL:
-https://examplecommons.gen3.org/user/data/download/UUID
-
-
-## Downloading data with the cdis-data-client
-* * *
-
-Data files can also be downloaded using the "cdis-data-client", which provides a simple command-line interface for downloading and uploading data files.
+Data files can also be downloaded using the [gen3-client](https://github.com/uc-cdis/cdis-data-client/releases), which provides a simple command-line interface for downloading and uploading data files.
 
 [Download the latest release of the client here.](https://github.com/uc-cdis/cdis-data-client/releases)
 

@@ -94,7 +94,7 @@ Uploading data ...
 Successfully uploaded file "test.gif" to GUID dg.7519/b4642430-8c6e-465a-8e20-97c458439387.
 ```
 * * *
-## 4) Download a data file using its UUID
+## 4) Download a data file using its GUID
 * * *
 Once a data file is registered and uploaded to object storage, its GUID can be used to download the file with the `gen3-client download` command.
 
@@ -162,7 +162,7 @@ guid=$(echo $f | awk '{print $1}')
 fname=$(echo $f | awk '{print $2}')
 if [ -f "$fname" ]
 then
-	echo Uploading file $fname with UUID $uuid
+	echo Uploading file $fname with GUID $guid
 	gen3-client upload --profile $1 --guid $guid --file $fname
 	echo Upload of $fname complete!
 else
