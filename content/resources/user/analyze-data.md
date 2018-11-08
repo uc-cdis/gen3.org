@@ -6,14 +6,14 @@ layout: withtoc
 menuname: userMenu
 ---
 {{% markdownwrapper %}}
-<h2> Data Analysis in the Gen3 Commons </h2>
+# Data Analysis in a Gen3 Data Commons
 
-How data is accessed in a Gen3 Data Commons must be agreed upon by the sponsor(s), data contributor(s), and the operator(s). Some data commons have rules that data cannot be downloaded outside of a Virtual Private Cloud. In these cases, data analysts may need to access and configure a virtual machine (VM) in the VPC where all analyses will be done. Other data commons may be able to grant users permissions to download data files directly to their local computers.
+How data is accessed in a Gen3 data commons must be agreed upon by the sponsor(s), data contributor(s), and the operator(s). Some data commons have rules that data cannot be downloaded outside of a Virtual Private Cloud. In these cases, data analysts may need to access and configure a virtual machine (VM) in the VPC where all analyses will be done. Other data commons may be able to grant users permissions to download data files directly to their local computers, while others may choose to allow analysis only in the Workspace.
 
 * * *
-## JupyterHub: Using Windmill's Workspace
+## Using the Gen3 Workspace
 * * *
-The Windmill data portal may provide a Workspace where users can access a personalized Jupyter server for data exploration and analysis. To access the workspace, click "Workspace" in the top navigation bar of the data portal.
+Gen3 data commons feature a Workspace where users can access a personalized Jupyter server for data exploration and analysis. To access the workspace, click "Workspace" in the top navigation bar of the data portal.
 ![Data portal Workspace button](workspace_button.png)
 
 Click "Start My Server" to start the Jupyter server in your Workspace:
@@ -21,6 +21,10 @@ Click "Start My Server" to start the Jupyter server in your Workspace:
 
 Or if a server is already running, click on "My Server" to access your files.
 ![Workspace home](my_server.png)
+
+You will then be presented with "Spawner Options", which display different VM flavors with varying processor and memory specifications and different tools pre-installed. After choosing a flavor and clicking Spawn, you will see your personal JupyterHub appear.
+
+![Spawner Options](spawner_options.png)
 
 The Jupyter Workspace supports interactive programming sessions in the Python and R languages. Code blocks are entered in cells, which can be executed individually in any order or all at once. Code documentation and comments can also be entered in cells, and the cell type can be set to support, e.g., Markdown. Results, including plots, tables, and graphics, can be generated in the workspace and downloaded as files.
 
