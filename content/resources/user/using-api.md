@@ -129,3 +129,20 @@ You can also review a graph of an individual project, toggling between views of 
 <h5> Example:  Graphing a project </h5>
 ![Graphing a project](graph-a-project.gif)
 
+* * *
+## Using the Gen3 SDK
+* * *
+The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic software development kit (SDK) to help users interact with the Gen3 API, which can be found on [Github](https://github.com/uc-cdis/gen3sdk-python). The Gen3 community is encouraged to add to the functions library or improve the notebook.  
+
+> NOTE:   As the Gen3 community updates repositories, you can keep them up to date using `git pull origin master`.
+
+To [install the Gen3 SDK](https://gen3sdk-python.readthedocs.io/en/latest/install.html), you can use the python installer 'pip'.
+
+Example:
+```
+# Install Gen3 SDK:
+pip install gen3
+
+# To clone and develop the source:
+git clone https://github.com/uc-cdis/gen3sdk-python.git
+```
