@@ -19,10 +19,13 @@ In a Gen3 data commons, a distinction is made between two types of data: "data f
 * * *
 One method of accessing metadata in a Gen3 data commons is using the data exploration tool in your web browser, which is reached by clicking "Exploration" in the top navigation bar or by navigating to the url: https://data.mycommons.org/explorer.
 The data exploration tool has a certain set of metadata properties that can be used as filters for selecting subsets of study subjects and data files.
-* Note: The properties used for filtering data are configurable and are chosen in collaboration with data commons sponsors, contributors and analysts. If you have a suggestion for a property to be added as a filter, contact the data commons support team with your request.
+
+> NOTE: The properties used for filtering data are configurable and are chosen in collaboration with data commons sponsors, contributors and analysts. If you have a suggestion for a property to be added as a filter, contact the data commons support team with your request.
+
 <!--
 Custom filters can also be added by clicking on the "add a custom filter" button. Begin typing the property you'd like to add as a custom filter and then select it. You can then enter the values of that property to filter data on.
 -->
+
 A spreadsheet containing available clinical, demographic, or experimental metadata can be downloaded by clicking on the corresponding button once a cohort or group of files has been selected.
 
 ## Querying metadata using the graphiQL interface
