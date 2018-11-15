@@ -9,6 +9,7 @@ before_script:
 - sudo dpkg -i hugo*.deb
 - echo $AWS_BUCKET
 script:
+- if [ "$TRAVIS_BRANCH" != "master" ]; then sed -i "s|baseURL: http://gen3.org/|baseURL: http://alpha.gen3.org/|g"; fi
 - hugo
 deploy:
   provider: s3
