@@ -4,6 +4,8 @@ date: 2018-09-14T16:58:29-05:00
 linktitle: /resources/developer
 layout: withtoc
 menuname: developerMenu
+description: An introduction to Gen3 microservices
+teaser: /img/figs/architecture.png
 ---
 
 ## Gen3’s Micro Services

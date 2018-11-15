@@ -4,6 +4,18 @@
     <meta charset="utf-8">
     {{ partial "css.html" . }}
     {{ partial "ga.html" . }}
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:title" content="{{ .Title }}" />
+    {{ if .Description }}
+      <meta property="og:description" content="{{ .Description }}" />
+    {{ else }}
+      <meta property="og:description" content="{{ .Title }}" />
+    {{ end }}
+    {{ if $.Param "teaser" }}
+      <meta property="og:image" content="{{ .Site.BaseURL }}{{ $.Param "teaser" }}" />
+    {{ else }}
+      <meta property="og:image" content="{{ .Site.BaseURL }}img/figs/gen3-product.png" />
+    {{ end }}
     <title>{{ .Title }}</title>
   </head>
   <body>
