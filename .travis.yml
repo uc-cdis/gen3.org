@@ -2,13 +2,15 @@ language: node_js
 sudo: required
 env:
   global:
-  - AWS_BUCKET=$(if [ "$TRAVIS_BRANCH" == "master" ]; then echo "gen3.org"; else echo
+  - BASE_URL=$(if [ "$TRAVIS_BRANCH" == "master" ]; then echo "gen3.org"; else echo
     "alpha.gen3.org"; fi)
+  - AWS_BUCKET=$BASE_URL
 before_script:
 - wget https://github.com/gohugoio/hugo/releases/download/v0.42.2/hugo_0.42.2_Linux-64bit.deb
 - sudo dpkg -i hugo*.deb
 - echo $AWS_BUCKET
 script:
+- sed -i "s|{BASE_URL}|${BASE_URL}|g" config.yaml
 - hugo
 deploy:
   provider: s3
