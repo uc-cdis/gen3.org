@@ -11,7 +11,7 @@ menuname: userMenu
 
 Here are some sample TSV file templates for example nodes in a Gen3 data dictionary.
 
-You should look at "Dictionary" section of your Gen3 data commons to find the complete list of nodes and their template TSVs.
+Look at the "Dictionary" section, for the Gen3 data commons, to find the complete list of nodes and their template TSVs.
 
 [study.tsv](study.tsv)
 
