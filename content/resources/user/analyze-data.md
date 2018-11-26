@@ -53,6 +53,58 @@ You can manage active Notebook and terminal processes by clicking on "Running". 
 ![Manage Running Sessions](running.gif)
 
 * * *
+## Installing the gen3-client in the Workspace
+* * *
+In order to download data files directly into your workspace, install and use the gen3-client in a terminal window from your Workspace.  Launch a terminal window by clicking on the "New" dropdown menu, then click on "Terminal".
+
+From the command line, the [Linux version of the gen3-client](https://github.com/uc-cdis/cdis-data-client/releases/download/0.2.1/dataclient_linux.zip) can be download using the `wget` command.
+
+```
+wget https://github.com/uc-cdis/cdis-data-client/releases/download/0.2.1/dataclient_linux.zip
+unzip dataclient_linux.zip
+./gen3-client help
+```
+
+Example:
+```
+jovyan@jupyter-user:~$ wget https://github.com/uc-cdis/cdis-data-client/releases/download/0.2.1/dataclient_linux.zip
+Resolving github-production-release-asset-2e65be.s3.amazonaws.com
+Connecting to github-production-release-asset-2e65be.s3.amazonaws.com
+HTTP request sent, awaiting response... 200 OK
+Length: 3886413 (3.7M) [application/octet-stream]
+Saving to: ‘dataclient_linux.zip’
+dataclient_linux.zip           100%[===================================================>]   3.71M  20.6MB/s    in 0.2s
+
+jovyan@jupyter-user:~$ unzip dataclient_linux.zip
+Archive:  dataclient_linux.zip
+  inflating: gen3-client
+
+jovyan@jupyter-user:~$ ./gen3-client help
+Gen3 Client for downloading, uploading and submitting data to data commons.
+gen3-client version: 0.2.1, commit: c3c10b9f1b7dc9ef81a4d27a1c637513e396d95c
+
+Usage:
+  gen3-client [command]
+
+Available Commands:
+  configure         Add or modify a configuration profile to your config file
+  download          download a file from a UUID
+  download-manifest download files from a specified manifest
+  generate-tsv      Generate a file upload tsv from a template
+  get               Send GET HTTP Request for given URI
+  help              Help about any command
+  post              Send POST HTTP Request to the gdcapi
+  put               Send PUT HTTP Request to the gdcapi
+  upload            Upload a file to a GUID
+
+Flags:
+  -h, --help             help for gen3-client
+      --profile string   Specify profile to add or edit with --profile user2 (default "default")
+
+Use "gen3-client [command] --help" for more information about a command.
+```
+
+* * *
 ## Using the Gen3 SDK
 * * *
 
@@ -92,7 +144,7 @@ For more detailed information on how to use the Gen3 SDK, see the Gen3 SDK secti
 		User ubuntu
 		ProxyCommand ssh -q -AXY headnode -W %h:%p
 	```
-2. After logging in to your 'analysis' VM, startup a jupyter notebook server from the command-line. 
+2. After logging in to your 'analysis' VM, startup a jupyter notebook server from the command-line.
 
 	Example:
 	```
