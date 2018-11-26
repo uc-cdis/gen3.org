@@ -15,7 +15,7 @@ The gen3-client provides an easy-to-use, command-line interface for uploading an
 ## 1) Installation Instructions
 * * *
 
-The gen3-client can be [downloaded from Github](https://github.com/uc-cdis/cdis-data-client/releases/tag/0.2.1) for Windows, Linux or Mac OS, or it can be installed from source using Google's [GO language](https://golang.org/dl/)(instructions in Github README).
+The gen3-client can be [downloaded from Github](https://github.com/uc-cdis/cdis-data-client/releases/tag/0.2.1) for Windows, Linux or Mac OS, or it can be installed from source using Google's [GO language](https://golang.org/dl/) (instructions in Github README).
 
 To install, download the correct file for your operating system to the location of your choice, unzip it, and add that location to your path. The program is executed from the command-line by running the command: `gen3-client <options>`.
 
@@ -195,7 +195,7 @@ Adding file image-3.dcm
 Adding file image-4.dcm
 Generated tsv images.tsv from files *.dcm!
 ```
-> __NOTE:__ In the Mac OS terminal, the asterisk, "\*", is a wildcard character and needs to be escaped with a backslash, "\".
+> __NOTE:__ In the Mac OS terminal, the asterisk, "\*", is a wildcard character and needs to be escaped with a backslash, "\\".
 
 The output file will have the filename, file_size, and md5sum properties for each of the matching files filled in. In order to complete the TSV, fill in the other required properties, including a column of "urls" with the s3 bucket location of the files.
 
