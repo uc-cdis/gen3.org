@@ -53,17 +53,20 @@ You can manage active Notebook and terminal processes by clicking on "Running". 
 ![Manage Running Sessions](running.gif)
 
 * * *
-## Installing the gen3-client in the Workspace
+## Getting Files into the Gen3 Workspace
 * * *
-In order to download data files directly into your workspace, install and use the gen3-client in a terminal window from your Workspace.  Launch a terminal window by clicking on the "New" dropdown menu, then click on "Terminal".
+In order to download data files directly from a Gen3 data commons into your workspace, install and use the [gen3-client](https://github.com/uc-cdis/cdis-data-client/releases) in a terminal window from your Workspace.  Launch a terminal window by clicking on the "New" dropdown menu, then click on "Terminal".
 
-From the command line, the [Linux version of the gen3-client](https://github.com/uc-cdis/cdis-data-client/releases/download/0.2.1/dataclient_linux.zip) can be download using the `wget` command.
+From the command line, download the latest [Linux version of the gen3-client](https://github.com/uc-cdis/cdis-data-client/releases/download/0.2.1/dataclient_linux.zip) using the `wget` command. Next, unzip the archive and add it to your path:
 
 ```
 wget https://github.com/uc-cdis/cdis-data-client/releases/download/0.2.1/dataclient_linux.zip
 unzip dataclient_linux.zip
-./gen3-client help
+PATH=$PATH:~/
 ```
+Now the gen3-client should be ready to use in your JupyterHub terminal.
+
+Other files you might need, like your `credentials.json` file to configure a profile or a download `manifest.json` file can be uploaded to your server by clicking on the "Upload" button or just dragging and dropping into the 'Files' tab. Text can also be pasted into a file by clicking "New", then choosing "Text File". Filenames can be changed by clicking the checkbox next to the file and then clicking the "Rename" button that appears.
 
 Example:
 ```
@@ -79,29 +82,20 @@ jovyan@jupyter-user:~$ unzip dataclient_linux.zip
 Archive:  dataclient_linux.zip
   inflating: gen3-client
 
-jovyan@jupyter-user:~$ ./gen3-client help
-Gen3 Client for downloading, uploading and submitting data to data commons.
-gen3-client version: 0.2.1, commit: c3c10b9f1b7dc9ef81a4d27a1c637513e396d95c
+jovyan@jupyter-user:~$ PATH=$PATH:~/
 
-Usage:
-  gen3-client [command]
+jovyan@jupyter-user:~$ gen3-client configure --profile bob --cred credentials.json
+  API endpoint: https://data.gen3.org
 
-Available Commands:
-  configure         Add or modify a configuration profile to your config file
-  download          download a file from a UUID
-  download-manifest download files from a specified manifest
-  generate-tsv      Generate a file upload tsv from a template
-  get               Send GET HTTP Request for given URI
-  help              Help about any command
-  post              Send POST HTTP Request to the gdcapi
-  put               Send PUT HTTP Request to the gdcapi
-  upload            Upload a file to a GUID
+jovyan@jupyter-user:~$ gen3-client download --profile bob --guid d4a40383-802d-4639-9b8b-e82c900f2c66 --file=results.txt
+  Successfully downloaded results.txt
 
-Flags:
-  -h, --help             help for gen3-client
-      --profile string   Specify profile to add or edit with --profile user2 (default "default")
+jovyan@jupyter-user:~$ mkdir files
 
-Use "gen3-client [command] --help" for more information about a command.
+jovyan@jupyter-user:~$ gen3-client download-manifest --manifest manifest.json --download-path files--profile ndh
+  Finished files/d30531f6-9caa-4356-a95f-5f4d6a012913 6721797 / 6721797 bytes (100%)
+  Finished files/6737a1de-22f0-45ce-a3b8-cfacc66c7ec0 6716095 / 6716095 bytes (100%)
+  2 files downloaded.
 ```
 
 * * *
