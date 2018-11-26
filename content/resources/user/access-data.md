@@ -45,11 +45,11 @@ One method of accessing metadata in a Gen3 data commons is using the data explor
 
 > __NOTE:__ For these user guides, https://data.mycommons.org is an example URL and will not be the actual URL of the data commons.
 
-[![Exploration](img/Gen3_Toolbar_exploration.png)](img/Gen3_Toolbar_exploration.png "Click to see the full image.")
+![Exploration](Gen3_Toolbar_exploration.png)
 
 The data exploration tool has a certain set of metadata properties that can be used as filters for selecting subsets of study subjects and data files.
 
-[![Facets](img/Gen3_facets.png)](img/Gen3_facets.png "Click to see the full image.")
+![Facets](Gen3_facets.png)
 
 > __NOTE:__ The properties used for filtering data are configurable and are chosen in collaboration with data commons sponsors, contributors and analysts. Contact the data commons support team with suggestions for a new property to be added as a filter.
 
@@ -59,22 +59,22 @@ Custom filters can also be added by clicking on the "add a custom filter" button
 
 A spreadsheet containing available clinical, demographic, or experimental metadata can be downloaded by clicking on the corresponding button once a cohort or group of files has been selected.
 
-[![Selection and Download](img/Gen3_selection_and_download_highlight.png)](img/Gen3_selection_and_download_highlight.png "Click to see the full image.")
+![Selection and Download](Gen3_selection_and_download_highlight.png)
 
 ## Querying Metadata Using the GraphiQL Interface
 * * *
 
 The metadata in a Gen3 commons can also be queried via the [graphQL query language](https://graphql.org/) using the graphiQL interface, which can be accessed by clicking "Query" in the top navigation bar or by navigating to the url: https://data.mycommons.org/query.
 
-[![Query](img/Gen3_Toolbar_query.png)](img/Gen3_Toolbar_query.png "Click to see the full image.")
+![Query](Gen3_Toolbar_query.png)
 
 The "Docs" button can be pressed to see documentation of the queryable nodes and properties. 
 
-[![GraphQL Docs](img/Gen3_GraphiQL_docs.png)](img/Gen3_GraphiQL_docs.png "Click to see the full image.")
+![GraphQL Docs](Gen3_GraphiQL_docs.png)
 
 For example, typing the name of a node, "sample", into the "Search Schema" search-box, and clicking the "root.sample" option will display all the properties that can be queried for that node.
 
-[![GraphQL Docs Example](img/Gen3_GraphiQL_docs_sample.png)](img/Gen3_GraphiQL_docs_sample.png "Click to see the full image.")[![GraphQL Docs Example 2](img/Gen3_GraphiQL_docs_sample_root.png)](img/Gen3_GraphiQL_docs_sample_root.png "Click to see the full image.")
+![GraphQL Docs Example](Gen3_GraphiQL_docs_sample.png)![GraphQL Docs Example 2](Gen3_GraphiQL_docs_sample_root.png)
 
 The following example query returns the case ids for which there are blood samples in the data commons:
 ```

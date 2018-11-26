@@ -18,7 +18,7 @@ menuname: userMenu
 
 > __NOTE:__ For these user guides, https://data.mycommons.org is an example URL and will not be the actual URL of the data commons.
 
-[![Dictionary Button](img/Gen3_Toolbar_Dictionary.png)](img/Gen3_Toolbar_Dictionary.png "Click to see the full image.")
+![Dictionary Button](Gen3_Toolbar_Dictionary.png)
 
 * * *
 

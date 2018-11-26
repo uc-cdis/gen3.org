@@ -53,7 +53,7 @@ Before using the gen3-client to upload or download data, the gen3-client needs t
 
 1. Download the "credentials.json" from the data commons by clicking on "Profile" in the top navigation bar and then creating an API key.
 
-[![Get credentials.json](img/Gen3_Keys.png)](img/Gen3_Keys.png "Click to see the full image.")
+![Get credentials.json](Gen3_Keys.png)
 
 2. From the command-line, run the `gen3-client configure` command (see examples below).
 3. Enter the API endpoint of the data commons.

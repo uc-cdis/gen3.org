@@ -28,7 +28,7 @@ Finally, each node in the data dictionary is linked in a logical manner to other
 
 The following image displays the data dictionary viewer, the 'biospecimen' node entry in the dictionary, and an example graphical model of a project:
 
-[![Data Dictionary](data-model.png)](data-model.png "Click to see the full image.")
+![Data Dictionary](data-model.png)
 
 ### Why Do Gen3 Commons Use a Data Model?
 
@@ -40,7 +40,7 @@ The following image displays the data dictionary viewer, the 'biospecimen' node 
 
 Once access has been granted to the Windmill data submission portal, we recommend reviewing the commons' specific data dictionary by clicking "Dictionary" in the top navigation bar. This tool helps users understand the variable types, requirements, and node dependencies or links required for submission. 
 
-[![Dictionary](img/Gen3_Toolbar_Dictionary.png)](img/Gen3_Toolbar_Dictionary.png "Click to see the full image.")
+![Dictionary](Gen3_Toolbar_Dictionary.png)
 
 If a desired submission element is not currently described in the model, users will need to work with the commons to extend the data model. Provide the commons with a description of the requested data elements, and they will work with the sponsor or data modeling working group to review the request and find an appropriate home for the data elements.
 
@@ -58,7 +58,7 @@ Besides the `submitter_id` and `type`, which are required for every record, othe
 
 Template TSVs are provided in each node's page in the data dictionary.
 
-[![Template](img/Gen3_Dictionary_Subject_template.png)](img/Gen3_Dictionary_Subject_template.png "Click to see the full image.")
+![Template](Gen3_Dictionary_Subject_template.png)
 
 ### Determine Submission Order via Node Links
 * * *
@@ -146,15 +146,15 @@ To submit a TSV:
 
 2) Click on "Data Submission" in the top navigation bar.
 
-[![Data Submission](img/Gen3_Toolbar_data_submission.png)](img/Gen3_Toolbar_data_submission.png "Click to see the full image.")
+![Data Submission](Gen3_Toolbar_data_submission.png)
 
 3) Click on "Submit Data" by the project to submit metadata.
 
-[![Submit Data](img/Gen3_Data_Submission_submit_data.png)](img/Gen3_Data_Submission_submit_data.png "Click to see the full image.")
+![Submit Data](Gen3_Data_Submission_submit_data.png)
 
 4) Click on "Upload File".
 
-[![Upload and Submit](img/Gen3_Data_Submission_Use_Form.png)](img/Gen3_Data_Submission_Use_Form.png "Click to see the full image.")
+![Upload and Submit](Gen3_Data_Submission_Use_Form.png)
 
 5) Navigate to the TSV and click "open", the contents of the TSV should appear in the grey box below.
 
@@ -207,9 +207,9 @@ If the submission throws errors or claims the submission to be invalid, it will 
 
 When viewing a project, clicking on a node name will allow the user to view the records in that node. From here a user can download, view, or completely delete records associated with any project they have delete access to.
 
-[![Node Click](img/Gen3_Model_Click_highlight.png)](img/Gen3_Model_Click_highlight.png "Click to see the full image.")
+![Node Click](Gen3_Model_Click_highlight.png)
 
-[![Node Information](img/Gen3_Model_node_view.png)](img/Gen3_Model_node_view.png "Click to see the full image.")
+![Node Information](Gen3_Model_node_view.png)
 
 ## 5. Upload Data Files to Object Storage
 * * *
