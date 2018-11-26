@@ -92,9 +92,9 @@ jovyan@jupyter-user:~$ gen3-client download --profile bob --guid d4a40383-802d-4
 
 jovyan@jupyter-user:~$ mkdir files
 
-jovyan@jupyter-user:~$ gen3-client download-manifest --manifest manifest.json --download-path files--profile ndh
-  Finished files/d30531f6-9caa-4356-a95f-5f4d6a012913 6721797 / 6721797 bytes (100%)
-  Finished files/6737a1de-22f0-45ce-a3b8-cfacc66c7ec0 6716095 / 6716095 bytes (100%)
+jovyan@jupyter-user:~$ gen3-client download-manifest --manifest manifest.json --download-path files--profile bob
+  Finished files/a30531c6-9caa-4356-a95f-5f4d6a012913 6721797 / 6721797 bytes (100%)
+  Finished files/5737b1de-22f0-45ce-a3b8-cfacc66c7ec0 6716095 / 6716095 bytes (100%)
   2 files downloaded.
 ```
 
