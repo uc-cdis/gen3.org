@@ -112,7 +112,7 @@ For more detailed information on how to use the Gen3 SDK, see the Gen3 SDK secti
 	ssh -N -L localhost:8888:localhost:8889 analysis
 	```
 
-	> NOTE:   In the example above "analysis" is the name of the ssh shortcut we [setup back in step 2](/user-guide/data-access/#2-ssh-to-virtual-machine-config).
+	> NOTE:   In the example above, "analysis" is the name of the ssh shortcut that was [setup back in step 2](/user-guide/data-access/#2-ssh-to-virtual-machine-config).
 
 4. Access the notebook in via browser.
 
