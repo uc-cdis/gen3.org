@@ -13,11 +13,9 @@ menuname: userMenu
 
 <h3>Overview</h3>
 
-The Center for Data Intensive Science (CDIS) at the University of Chicago has developed and maintains [the Gen3 software stack](https://cdis.uchicago.edu/gen3/) to help accelerate scientific discovery through creation of a collaborative infrastructure that enables sharing of information between stakeholders in industry, academia, and regulatory agencies.
+The Center for Translational Data Science (CTDS) at the University of Chicago has developed and maintains [the Gen3 software stack](https://cdis.uchicago.edu/gen3/) to help accelerate scientific discovery through creation of a collaborative infrastructure that enables sharing of information between stakeholders in industry, academia, and regulatory agencies.
 
 The Gen3 software stack is a [collection of microservices](https://cdis.uchicago.edu/gen3/) that enable the standing-up of data commons, which allows different partner organizations to pool data and grants approved researchers access to harmonized datasets in a scalable, reproducible, and secure manner.
-
-This documentation describes the commons and provides a [user guide to assist data contributors and analysts](/user-guide/guide-overview/).
 
 <h3>Guiding Principles</h3>
 
@@ -33,7 +31,7 @@ We believe that collaboration creates a knowledge pool that not only drives bett
 
 We believe that rapid innovation is most effectively achieved through an open infrastructure environment where portability and compatibility are maximized and knowledge is distributed broadly.
 
-For more information visit: [CDIS Guiding Principles](https://cdis.uchicago.edu/guiding-principles)
+For more information visit: [CTDS Guiding Principles](https://cdis.uchicago.edu/guiding-principles).
 
 <h3>Support</h3>
 Operation of the Gen3 commons is supported by generous grants from Amazon Web Services' [Grants for Research Credit Program](https://aws.amazon.com/research-credits/) and Microsoft Azure's [Research Grant Program](https://www.microsoft.com/en-us/research/academic-program/microsoft-azure-for-research/).
@@ -42,7 +40,7 @@ Operation of the Gen3 commons is supported by generous grants from Amazon Web Se
 ## The Data Commons Architecture
 * * *
 
-User access to the Gen3 data commons runs through a VPC or Virtual Private Cloud.   Access to data and analysis tools through a Virtual Private Cloud (VPC) allows for balance of usability and security.   All access is through a monitored head node.  Data is not directly accessed from the Internet.  
+User access to the Gen3 data commons runs through a Virtual Private Cloud (VPC).   Access to data and analysis tools through a VPC allows for balance of usability and security.   All access is through a monitored head node.  Data is not directly accessed from the Internet.  
 
 Other secure and compliant Gen3 member systems (including cloud based systems) can access Gen3 data through the API.
 
@@ -50,7 +48,7 @@ Other secure and compliant Gen3 member systems (including cloud based systems) c
 ![Gen3 Architecture](index/framework.png)
 
 * * *
-## Contact CDIS Staff
+## Contact CTDS Staff
 * * *
 
 * Locations:
@@ -67,7 +65,7 @@ Other secure and compliant Gen3 member systems (including cloud based systems) c
 
 
 * Email:
-	* General Inquiries: <cdis@uchicago.edu>
-	* Technical Support: <support@opensciencedatacloud.org> and <support@datacommons.io>
+	* General Inquiries: <cdis@uchicago.edu>.
+	* Technical Support: <support@opensciencedatacloud.org> and <support@datacommons.io>.
 
 * * *
