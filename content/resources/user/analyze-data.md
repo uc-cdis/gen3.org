@@ -53,6 +53,53 @@ You can manage active Notebook and terminal processes by clicking on "Running". 
 ![Manage Running Sessions](running.gif)
 
 * * *
+## Getting Files into the Gen3 Workspace
+* * *
+In order to download data files directly from a Gen3 data commons into your workspace, install and use the [gen3-client](https://github.com/uc-cdis/cdis-data-client/releases) in a terminal window from your Workspace.  Launch a terminal window by clicking on the "New" dropdown menu, then click on "Terminal".
+
+From the command line, download the latest [Linux version of the gen3-client](https://github.com/uc-cdis/cdis-data-client/releases/latest) using the `wget` command. Next, unzip the archive and add it to your path:
+
+Example:
+```
+wget https://github.com/uc-cdis/cdis-data-client/releases/download/0.2.1/dataclient_linux.zip
+unzip dataclient_linux.zip
+PATH=$PATH:~/
+```
+Now the gen3-client should be ready to use in your JupyterHub terminal.
+
+Other files you might need, like your `credentials.json` file to configure a profile or a download `manifest.json` file can be uploaded to your server by clicking on the "Upload" button or just dragging and dropping into the 'Files' tab. Text can also be pasted into a file by clicking "New", then choosing "Text File". Filenames can be changed by clicking the checkbox next to the file and then clicking the "Rename" button that appears.
+
+Example:
+```
+jovyan@jupyter-user:~$ wget https://github.com/uc-cdis/cdis-data-client/releases/download/0.2.1/dataclient_linux.zip
+Resolving github-production-release-asset-2e65be.s3.amazonaws.com
+Connecting to github-production-release-asset-2e65be.s3.amazonaws.com
+HTTP request sent, awaiting response... 200 OK
+Length: 3886413 (3.7M) [application/octet-stream]
+Saving to: ‘dataclient_linux.zip’
+dataclient_linux.zip           100%[===================================================>]   3.71M  20.6MB/s    in 0.2s
+
+jovyan@jupyter-user:~$ unzip dataclient_linux.zip
+Archive:  dataclient_linux.zip
+  inflating: gen3-client
+
+jovyan@jupyter-user:~$ PATH=$PATH:~/
+
+jovyan@jupyter-user:~$ gen3-client configure --profile bob --cred credentials.json
+  API endpoint: https://data.gen3.org
+
+jovyan@jupyter-user:~$ gen3-client download --profile bob --guid d4a40383-802d-4639-9b8b-e82c900f2c66 --file=results.txt
+  Successfully downloaded results.txt
+
+jovyan@jupyter-user:~$ mkdir files
+
+jovyan@jupyter-user:~$ gen3-client download-manifest --manifest manifest.json --download-path files--profile bob
+  Finished files/a30531c6-9caa-4356-a95f-5f4d6a012913 6721797 / 6721797 bytes (100%)
+  Finished files/5737b1de-22f0-45ce-a3b8-cfacc66c7ec0 6716095 / 6716095 bytes (100%)
+  2 files downloaded.
+```
+
+* * *
 ## Using the Gen3 SDK
 * * *
 
@@ -92,7 +139,7 @@ For more detailed information on how to use the Gen3 SDK, see the Gen3 SDK secti
 		User ubuntu
 		ProxyCommand ssh -q -AXY headnode -W %h:%p
 	```
-2. After logging in to your 'analysis' VM, startup a jupyter notebook server from the command-line. 
+2. After logging in to your 'analysis' VM, startup a jupyter notebook server from the command-line.
 
 	Example:
 	```
