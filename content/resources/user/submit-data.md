@@ -218,7 +218,7 @@ When viewing a project, clicking on a node name will allow the user to view the 
 
 Data files such as sequencing data (BAM, FASTQ), assay results, images, and PDFs should be uploaded with the Gen3 client.
 
-For detailed instructions, visit the [Gen3 client documentation](gen3-client.md). The metadata TSVs do not need to be submitted to the object store, as they have already been submitted via the API.
+For detailed instructions, visit the [Gen3 client documentation](../gen3-client/). The metadata TSVs do not need to be submitted to the object store, as they have already been submitted via the API.
 
 * Downloaded the [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases) for your operating system.
 * Configure a profile with credentials:
