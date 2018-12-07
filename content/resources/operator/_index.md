@@ -41,8 +41,8 @@ When adding a new project or study into a new or an already existing data dictio
 #### Referencing external data standards
 Gen3 is expanding the information in data dictionaries by including references to external standards such as the National Cancer Institute Thesaurus (NCIt).  This will help with the comparison of studies and projects and provide researchers with proper references.  The NCIt is being used for many of the schemas as it is inclusive of several different domains (e.g., cancer, drug, etc.).  It also has an abundance of temporal related terms (e.g., day, month, etc.) along with other useful categories of terms.  The benefit of this effort is that it will facilitate cross data common comparison.  For instance, if tuberculosis is a term associated with multiple studies, a search of that term will provide insight into each of the studies.  It will also help with the prevention of adding multiple terms for properties that mean the same thing.  The example below demonstrates a cross study comparison using YAML files (CTDS uses YAML files to help organize data dictionaries.  The files are used by internal systems to help manage the data dictionaries.)  The two files both relate to blood pressure finding, but each has a different term name.  The external reference helps with harmonization efforts by helping identify terms that have the same meaning.
 ```JSON
-    Dictionary 1:
-    Blood Pressure Measurement:
+Dictionary 1:
+Blood Pressure Measurement:
     description: Measurement of blood pressure
     enum:
       - 90 over 60 (90/60) or less
