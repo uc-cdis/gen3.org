@@ -107,7 +107,7 @@ In the above example, if "case_2" was enrolled in both "study-01" and "study-02"
 
 Special attention must be given to "data file" nodes as they contain variables that describe actual, raw data files, which will be uploaded to object storage by the data contributor and later downloaded by data analysts. Specifically, data files must be "registered" in order to be downloadable using the Windmill data portal or the [cdis-data-client](https://github.com/uc-cdis/cdis-data-client/releases).
 
-Registration of data files means adding a column in the data file node's TSV named "urls", and entering the URL/address of each file in object storage. This is usually a location in a project folder of a data commons bucket in s3 object storage: "s3://commons-bucket/project-name/filename".
+Registration of data files means entering the URL/address of each file in object storage to the "urls" column in the data file node's TSV. This URL is usually a location in a project folder of a data commons bucket in s3 object storage: "s3://commons-bucket/project-name/filename".
 
 For example, say the following local files need to be registered and then uploaded:
 
@@ -118,7 +118,7 @@ commandline-prompt$ ls -l
 -rw-r--r--@  1 username  staff     8B May 30 15:18 file-3.dcm
 ```
 
-Add a column 'urls' to the TSV and entering the full s3 path for each file in that column:
+In the 'urls' column of the TSV, enter the full s3 path for each file:
 
 | type | submitter_id | filename | file_size | md5sum|etc.... | urls |
 | :------------- | :------------- | :------------- | :------------- |:------------- | :------------- | :------------- |
