@@ -70,5 +70,5 @@ Blood Pressure Reading:
          term_version: 18.10e (Release date:2018-10-29)
          term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code= C54707"
 ```
-##### Specificity vs. Generality
+#### Specificity vs. Generality
 One of the goals when providing an external reference is to figure out the level of specificity when breaking down a property name that contains multiple concepts.  The question is whether the new references should be created with very specific designations (This is known as pre-coordination).   This option would likely create the need for the request of new terms in the external standard if the term is not in existence. The other question is should the use of multiple terms that already exist in an external standard be used (This is known as post-coordination).  The best practice adopted by CTDS is to use specificity whenever corresponding terms are available in the external standard.  However, If specific terms are not available, use generality by creating multiple terms that already exist in an external standard.  For instance, if grapefruit juice is a property of interest and it is not found in the external reference, but grapefruit and juice are found individually, then using the individual properties is the preferred method. 
