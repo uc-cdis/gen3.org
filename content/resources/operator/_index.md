@@ -29,7 +29,7 @@ Currently, Gen3 deployment using cloud automation relies on a number of supporti
 
 [Gen3 Cloud Automation](https://github.com/uc-cdis/cloud-automation)
 
- ## 3. Creating a New Data Dictionary
+## 3. Creating a New Data Dictionary
    
 ### Core Dictionary
    Gen3 is in the process of creating a baseline data dictionary that will allow users to create their own data dictionary. It would serve as a starting point for someone who is interested in creating their own dictionary.  It will be a consensus of previously used data dictionaries and will make the process of creating a data dictionary more efficient.  This [site](https://github.com/uc-cdis/compose-services/tree/master/example-schemas) contains sample dictionaries that can aid the process of creating new dictionaries.
