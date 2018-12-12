@@ -55,20 +55,17 @@ Before using the gen3-client to upload or download data, the gen3-client needs t
 
 ![Get credentials.json](Gen3_Keys.png)
 
-2. From the command-line, run the `gen3-client configure` command (see examples below).
-3. Enter the API endpoint of the data commons.
+2. From the command-line, run the `gen3-client configure` command with the --cred and --apiendpoint arguments (see examples below).
 
 Example:
 ```
-gen3-client configure --profile <profile-name> --cred <credentials.json>
+gen3-client configure --profile <profile-name> --cred <credentials.json> --apiendpoint <api-endpoint>
 
 Linux / Mac OS:
-gen3-client configure --profile bob --cred /Users/Bob/Downloads/credentials.json
-API endpoint: https://data.mycommons.org
+gen3-client configure --profile bob --cred /Users/Bob/Downloads/credentials.json --apiendpoint https://data.mycommons.org
 
 Windows:
-gen3-client configure --profile bob --cred C:\Users\Bob\Downloads\credentials.json
-API endpoint: https://data.mycommons.org
+gen3-client configure --profile bob --cred C:\Users\Bob\Downloads\credentials.json --apiendpoint https://data.mycommons.org
 ```
 
 > __NOTE:__ For these user guides, https://data.mycommons.org is an example URL and will not be the actual URL of the data commons.
