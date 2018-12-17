@@ -27,7 +27,7 @@ Cloud automation utilizes Terraform for repeatable infrastructure deployments on
 
 Currently, Gen3 deployment using cloud automation relies on a number of supporting features to be in place. It is a work in progress to continue to ease the Gen3 deployment process for groups without existing supporting infrastructure. We welcome all comments, feature requests, and pull requests using GitHub issues or the [Gen3 community](https://forums.gen3.org).
 
-[Gen3 Cloud Automation](https://github.com/uc-cdis/cloud-automation)
+[Gen3 Cloud Automation](https://github.com/uc-cdis/cloud-automation/blob/master/gen3)
 
 ## 3. Creating a New Data Dictionary
    
