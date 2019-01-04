@@ -3,6 +3,7 @@ FROM golang:1.8.3-alpine as builder
 ENV HUGO_VERSION 0.41
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux-64bit 
 ENV PATH=/usr/local/hugo:${PATH}
+ENV BASE_URL=
 
 RUN set -x \
     && apk upgrade --update \
@@ -16,8 +17,9 @@ RUN set -x \
 
 COPY . /gen3.org
 WORKDIR /gen3.org
-RUN hugo
-
+RUN sed -i "s|{BASE_URL}|${BASE_URL}|g" config.yaml \
+    && hugo
+    
 FROM nginx
 
 COPY --from=builder /gen3.org/public /usr/share/nginx/html
