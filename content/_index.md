@@ -11,7 +11,7 @@ g3Teaser:
     caption: Experience Demo
     link: https://nci-crdc-demo.datacommons.io/
     target: _blank
-  button2: 
+  button2:
     caption: Get Started
     link: /get-started
     target: _self
@@ -22,7 +22,7 @@ g3Feature:
   f2:
     title: Customize Your Gen3 Experience
     detail: Multiple Gen3 data commons can work together to create an interoperable ecosystem. Gen3 can be used to power APIs for a “thin middle” of framework services. These framework services provide the foundation on which you and your community can develop new tools for sharing and analyzing data with your group, collaborators, or the broader Gen3 community.
-  f3: 
+  f3:
     title: Facilitate Translational Data Science
     detail: Use Gen3’s built in tools to find your virtual cohort, and analyze the cohort in notebooks within a cloud environment to hasten your hypotheses testing and discoveries.
   f4:
@@ -59,7 +59,7 @@ g3User:
   by: Amit, Cloud Solutions Architect with Leidos
   title: Who's using Gen3?
   detail: Federal agencies, not-for-profits, and consortiums with members spanning the globe use Gen3 and its framework services to support their research communities, access and index their data, and facilitate scientific discoveries that impact the world.
-  button: 
+  button:
     caption: Experience Sandbox
     link: https://nci-crdc-demo.datacommons.io/
     target: _blank
@@ -84,20 +84,27 @@ g3Intro:
   button:
     caption: Technical Overview
     link: resources/user
+g3DataAccess:
+  title: Data Access Control on Gen3
+  para1: Gen3 manages data access via internal access control lists stored in a database. It is capable of pulling authorization information from multiple lists, as well as syncing with external sources such as dbGaP. Gen3 supports both users and groups defined in these access control lists - a user that is associated with a group will inherit that group’s permissions.
+  para2: Data is either stored in S3/Google buckets or in our graph database. Only users with "read-storage" and "write-storage" permissions will be able to access stored object data (files) within these buckets, and users with "read" and "write" permissions will be able to access data (clinical data and data that describes a file) in the graph database. These policies prevent public access. Gen3 is also capable of issuing presigned urls for authorized users to directly access objects within buckets, and both the generation of these presigned urls as well as the object downloads themselves are logged.
+  para2Fig: img/figs/data-access-diagram.png
+  para3: Gen3 also has a Role Based Access Control (RBAC) engine. It can be used to define data access controls and permissions on a more granular level, and can determine if a user is able to access a specific piece of data. Data in our graph database is modeled as a hierarchy that starts with Programs and Projects. A Program is the root of the tree, and represents an overall group for the data. A Program will have Projects underneath it that consist of any subgroups. Projects can then have many subgroups, and so on. Permissions are generally given on the Program level, but with the RBAC engine, Gen3 can provide more specific authorization that applies to nodes further down the tree.
+  para3Fig: img/figs/data-model-diagram.png
 g3DataFeature:
-  f1: 
+  f1:
     title: Easy Data Submission
     detail: Use one of the microservices or community tools to submit data objects and metadata to a Gen3 Commons. Or develop your own tools specific to your user community.
   f2:
     title: Easily Find Your Data in an Ecosystem
     detail: Gen3 will automatically index your data and provide globally unique identifiers (GUIDs). GUIDs can also be resolved at dataguids.org to find out where a data object lives within your data ecosystem.
-  f3: 
+  f3:
     title: Open-Source Community
     detail: Engage Gen3’s broad user community. Ask a question, answer a question, request a new feature, or see if anyone else has approached a technical or scientific problem like yours in their Gen3 data commons.
   f4:
     title: Customizable Options for Data Queries
     detail: Gen3’s UI includes a data exploration tool you can customize for your data. You can choose the queries or faceted searches your user community wants; decide whether the data is able to leave the cloud or not; or develop your own apps over Gen3 APIs.
-  f5: 
+  f5:
     title: Security & Compliance
     detail: Gen3 can be deployed with various levels of security and compliance. Deploy your data commons or ecosystem with the controls needed for your data and your user community.
   f6:
@@ -293,6 +300,20 @@ g3Entrance:
       {{< param "g3Intro.detail" >}}
     </p>
     <img class="g3-img__center g3-img" src="{{< param "g3Intro.fig" >}}"/>
+    <div class="g3-space__padding-md-top-bottom g3-mini-wrapper">
+      <h3 class="g3-text__center">{{< param "g3DataAccess.title" >}}</h3>
+      <p class="introduction g3-text__center g3-space__margin-sm-top">
+        {{< param "g3DataAccess.para1" >}}
+      </p>
+      <img class="g3-img__center g3-img__full-width" src="{{< param "g3DataAccess.para2Fig" >}}" />
+      <p class="introduction g3-text__center g3-space__margin-sm-top">
+        {{< param "g3DataAccess.para2" >}}
+      </p>
+      <img class="g3-img__center g3-img__full-width" src="{{< param "g3DataAccess.para3Fig" >}}" />
+      <p class="introduction g3-text__center g3-space__margin-sm-top">
+        {{< param "g3DataAccess.para3" >}}
+      </p>
+    </div>
     <div class="g3-text__center g3-space__margin-sm-top">
       <a class="g3-button g3-button--primary" href="{{< param "g3Intro.button.link" >}}">{{< param "g3Intro.button.caption" >}}</a>
     </div>
@@ -383,14 +404,3 @@ g3Entrance:
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
