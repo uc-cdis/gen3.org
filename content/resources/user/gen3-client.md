@@ -21,10 +21,10 @@ To install, download the correct file for your operating system to the location 
 
 Or, in the case that you haven't added the client to your path, execute the program with the following command: `path/to/binary/gen3-client <options>`, where `path/to/binary` is `./` if working from the same directory as the client executable.
 
-Example:
+Example Usage:
 ```
 ./gen3-client <options>
-./gen-client --version
+./gen3-client --version
 ```
 
 To see the help menu for the tool, simply type in `gen3-client` or `./gen3-client`.
@@ -57,23 +57,23 @@ Before using the gen3-client to upload or download data, the gen3-client needs t
 
 2. From the command-line, run the `gen3-client configure` command with the --cred and --apiendpoint arguments (see examples below).
 
-Example:
+Example Usage:
 ```
-gen3-client configure --profile <profile-name> --cred <credentials.json> --apiendpoint <api-endpoint>
+gen3-client configure --profile=<profile_name> --cred=<credentials.json> --apiendpoint=<api_endpoint_url>
 
-Linux / Mac OS:
-gen3-client configure --profile bob --cred /Users/Bob/Downloads/credentials.json --apiendpoint https://data.mycommons.org
+Mac/Linux:
+gen3-client configure --profile=bob --cred=/Users/Bob/Downloads/credentials.json --apiendpoint=https://data.mycommons.org
 
 Windows:
-gen3-client configure --profile bob --cred C:\Users\Bob\Downloads\credentials.json --apiendpoint https://data.mycommons.org
+gen3-client configure --profile=bob --cred=C:\Users\Bob\Downloads\credentials.json --apiendpoint=https://data.mycommons.org
 ```
 
 > __NOTE:__ For these user guides, https://data.mycommons.org is an example URL and will not be the actual URL of the data commons.
 
 When successfully executed, this will create a configuration file, which contains all the API keys and urls associated with each commons profile configured, located in the user folder:
 ```
-Windows: C:\Users\Bob\.gen3\config
 Mac/Linux: /Users/Bob/.gen3/config
+Windows: C:\Users\Bob\.gen3\config
 ```
 > __NOTE:__ These keys must be treated like important passwords; never share the contents of the `credentials.json` or gen3-client `config` file!
 
@@ -84,13 +84,13 @@ When metadata records are created in any node in a Gen3 data commons, these reco
 
 GUIDs are generated on the back-end, not submitted by users, and they are stored in the property `object_id`. The GUID or `object_id` for a submitted data file can be obtained via graphQL query or viewing the data file json record in the graphical model of the project.
 
-Once the GUIDs have been assigned to the data files for upload, the gen3-client can be used to upload files to object storage using the `gen3-client upload` command.
+Once the GUIDs have been assigned to the data files for upload, the gen3-client can be used to upload files to object storage using the `gen3-client upload-single` command.
 
-Example:
+Example Usage:
 ```
-gen3-client upload --profile <profile-name> --guid <GUID> --file=<filename>
+gen3-client upload-single --profile=<profile_name> --guid=<GUID> --file=<filename>
 
-gen3-client upload --profile bob --guid dg.7519/b4642430-8c6e-465a-8e20-97c458439387 --file=test.gif
+gen3-client upload-single --profile=bob --guid=dg.7519/b4642430-8c6e-465a-8e20-97c458439387 --file=test.gif
 
 Uploading data ...
 Successfully uploaded file "test.gif" to GUID dg.7519/b4642430-8c6e-465a-8e20-97c458439387.
@@ -99,12 +99,14 @@ Successfully uploaded file "test.gif" to GUID dg.7519/b4642430-8c6e-465a-8e20-97
 ## 4) Download a Data File Using a GUID
 * * *
 Once a data file is registered and uploaded to object storage, its GUID can be used to download the file with the `gen3-client download` command.
+The downloaded filename can be customized by supplying an optional `--file` argument. If the `--file` option was left in blank, the original filename will be used as default filename.
 
-Example:
+Example Usage:
 ```
-gen3-client download --profile <profile name> --guid <GUID> --file=<filename>
+gen3-client download --profile=<profile_name> --guid=<GUID> --file=<filename>
 
-gen3-client download --profile bob --guid b4642430-8c6e-465a-8e20-97c458439387 --file=test.gif
+gen3-client download --profile=bob --guid=b4642430-8c6e-465a-8e20-97c458439387 --file=test.gif
+
 Downloading dg.7519/b4642430-8c6e-465a-8e20-97c458439387...
 [1A  transferred 208473 / 11893028 bytes (1.75%)[K
 [1A  transferred 957017 / 11893028 bytes (8.05%)[K
@@ -122,11 +124,12 @@ Downloading dg.7519/b4642430-8c6e-465a-8e20-97c458439387...
 * * *
 A download manifest can be generated using the data commons' "Exploration" tool. After a cohort has been selected, clicking the "Manifest" button will create the manifest for the selected files. The gen3-client will download all the files in the provided manifest using the `gen3-client download-manifest` command.
 
-Example:
+Example Usage:
 ```
-gen3-client download-manifest --download-path <path for files> --manifest <manifest file>
+gen3-client download-manifest --profile=<profile_name> --manifest=<manifest_file> --download-path=<path_for_files>
 
-gen3-client download-manifest --manifest manifest.json --profile bob --download-path downloads
+gen3-client download-manifest --profile=bob --manifest=manifest.json --download-path=downloads
+
 Finished downloads/63af95d3-98c3-4d6d-a6be-26398dbfc1d9 6723044 / 6723044 bytes (100%)
 Finished downloads/b30531f6-9caa-4356-a95f-5f4d6a012913 6721797 / 6721797 bytes (100%)
 Finished downloads/fbac9213-3564-422a-8809-119d4401d284 2744320 / 2744320 bytes (100%)
@@ -139,39 +142,36 @@ Finished downloads/24d0be10-d164-48ad-aafa-9fcaac682df9 2570240 / 2570240 bytes 
 * * *
 ## 6) Provide a Manifest File for Bulk Upload
 * * *
-Users, who need to semi-automate the upload of files, can modify the following shell script to fit their needs. This shell script can be run from the command-line:
+Users can automate the upload of a bulk of files by provideing an upload manifest. Ideally the upload manifest is the same as the download manifest that can be generated automatically as described in the previous section. However, user can also create a "minimal" upload manifest on their own if needed.
+A upload manifest file is a JSON file that should not contain headers and each row should be only a GUID and filename separated by a tab.
 
-`sh gen3_manifest.sh <profile_name> <manifest_filename>`
-
-Where <profile_name\> is the name of the profile configured in step 2 above, and <manifest_filename\> is the filename/path of the manifest file.
-
-The manifest file should not contain headers and each row should be only a GUID and filename separated by a tab.
-
-Example:
+Example of manifest.json (Minimal):
 ```
-a12ff17c-2fc0-475a-9c21-50c19950b082	filename-1.txt
-b22ff17c-2fc0-475a-9c21-50c19950b082	filename-2.txt
-c32ff17c-2fc0-475a-9c21-50c19950b082	filename-3.txt
+{
+    "object_id": "a12ff17c-2fc0-475a-9c21-50c19950b082"
+  },
+  {
+    "object_id": "b12ff17c-2fc0-475a-9c21-50c19950b082"
+  },
+  {
+    "object_id": "c12ff17c-2fc0-475a-9c21-50c19950b082"
+  }
+}
 ```
-The following script text should be added to a file named 'gen3_manifest.sh', and the script should then be run in the directory containing the files. 
 
-``` bash
-#!/bin/bash
-cat $2 | while read line
-do
-f=`echo $line | tr -d '\r'`
-guid=$(echo $f | awk '{print $1}')
-fname=$(echo $f | awk '{print $2}')
-if [ -f "$fname" ]
-then
-	echo Uploading file $fname with GUID $guid
-	gen3-client upload --profile $1 --guid $guid --file $fname
-	echo Upload of $fname complete!
-else
-	echo $file not found.
-	exit 1
-fi
-done
+The gen3-client will upload all the files in the provided manifest using the `gen3-client upload-manifest` command.
+
+Example Usage:
+```
+gen3-client upload-manifest --profile=<profile_name> --manifest=<manifest_file> --upload-path=<path_for_files>
+
+gen3-client upload-manifest --profile=bob --manifest=manifest.json --upload-path=upload
+
+Uploading data ...
+Successfully uploaded file "a12ff17c-2fc0-475a-9c21-50c19950b082" to GUID a12ff17c-2fc0-475a-9c21-50c19950b082.
+Successfully uploaded file "b12ff17c-2fc0-475a-9c21-50c19950b082" to GUID b22ff17c-2fc0-475a-9c21-50c19950b082.
+Successfully uploaded file "c12ff17c-2fc0-475a-9c21-50c19950b082" to GUID c22ff17c-2fc0-475a-9c21-50c19950b082.
+3 files uploaded.
 ```
 
 * * *
@@ -181,11 +181,12 @@ In order to register data files in a Gen3 data commons, the filenames, md5sums, 
 
 The template TSV for a data file node should be downloaded from the node's entry page in the data dictionary and used as a template with this command. Then the wildcard character `*` can be used to add all matching files to the specified output tsv.
 
-Example:
+Example Usage:
 ```
-gen3-client generate-tsv --from-template <template.tsv> --output <output.tsv> <wildcard>
+gen3-client generate-tsv --from-template=<template.tsv> --output=<output.tsv> <wildcard>
 
-gen3-client generate-tsv --from-template imaging_file_template.tsv --output images.tsv \*.dcm
+gen3-client generate-tsv --from-template=imaging_file_template.tsv --output=images.tsv \*.dcm
+
 Adding file image-1.dcm
 Adding file image-2.dcm
 Adding file image-3.dcm
