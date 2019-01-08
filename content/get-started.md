@@ -15,7 +15,7 @@ g3Starts:
   s2:
     name: Submit Metadata & Data
     fig: /figs/features/submit-data.svg
-    detail: Create your whitelist yaml, use Gen3’s Sheepdog microservice to begin submitting metadata, and download the cdis-data-client to begin submitting data to your commons. Or look into how to build your own submission apps.
+    detail: Create your whitelist yaml, use Gen3’s Sheepdog microservice to begin submitting metadata, and download the gen3-client to begin submitting data to your commons. Or look into how to build your own submission apps.
     button:
       caption: Data Contribution
       link: /resources/user/submit-data

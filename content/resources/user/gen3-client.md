@@ -9,6 +9,7 @@ menuname: userMenu
 * * *
 # Download and Upload Files Using the Gen3-client
 * * *
+
 The gen3-client provides an easy-to-use, command-line interface for uploading and downloading data files to and from a Gen3 data commons.
 
 * * *
@@ -52,7 +53,6 @@ Now you should be able to run the tool on the command-line from any directory by
 Before using the gen3-client to upload or download data, the gen3-client needs to be configured with API credentials downloaded from the user's data commons Profile:
 
 1. Download the "credentials.json" from the data commons by clicking on "Profile" in the top navigation bar and then creating an API key.
-
 ![Get credentials.json](Gen3_Keys.png)
 
 2. From the command-line, run the `gen3-client configure` command with the --cred and --apiendpoint arguments (see examples below).
@@ -78,11 +78,52 @@ Windows: C:\Users\Bob\.gen3\config
 > __NOTE:__ These keys must be treated like important passwords; never share the contents of the `credentials.json` or gen3-client `config` file!
 
 * * *
-## 3) Upload a Data File Using a GUID
+## 3) Upload One or More Data File(s) without Using GUID(s)
 * * *
 When metadata records are created in any node in a Gen3 data commons, these records are assigned a unique, 128-bit ID called a ['GUID'](https://dataguids.org/).
 
-GUIDs are generated on the back-end, not submitted by users, and they are stored in the property `object_id`. The GUID or `object_id` for a submitted data file can be obtained via graphQL query or viewing the data file json record in the graphical model of the project.
+GUIDs are generated on the back-end, not submitted by users, and they are stored in the property `object_id`. In the past, GUIDs must be inserted into the common before actual data files can be uploaded. However, a recent update to the Gen3 data commons allows user to submit data files without pre-generated GUIDs. Instead, a random GUID will be generated and assigned to each data file that has been submitted via the `gen3-client upload` command.
+
+Example Usage:
+```
+* For uploading a single file:
+gen3-client upload --profile=<profile_name> --upload-path=<path_to_files/data.bam>
+* For uploading all files within an folder:
+gen3-client upload --profile=<profile_name> --upload-path=<path_to_files/folder/>
+* Can also support regex such as:
+gen3-client upload --profile=<profile_name> --upload-path=<path_to_files/folder/*>
+* Or:
+gen3-client upload --profile=<profile_name> --upload-path=<path_to_files/*/folder/*.bam>
+
+gen3-client upload --profile=bob --file=test.gif
+
+Uploading data ...
+test.gif  3.64 MiB / 3.64 MiB [==========================================================================================] 100.00%
+Successfully uploaded file "test.gif" to GUID 65f5d77c-1b2a-4f41-a2c9-9daed5a59f14.
+1 files uploaded.
+```
+
+### Local submission history:
+In this mode, the application will keeps tracking which local file has already been submitted to avoid potential duplication in submissions. These information are kept in an JSON file under the same user folder as where the `config` file lives, for example:
+```
+Mac/Linux: /Users/Bob/.gen3/<your_config_name>_history.json
+Windows: C:\Users\Bob\.gen3\<your_config_name>_history.json
+```
+
+Each object in the history JSON file is a key/value pair of the full file path of a file and GUID it associates with.
+
+Example of a History JSON File:
+```
+{
+  "/Users/Bob/test.gif":"65f5d77c-1b2a-4f41-a2c9-9daed5a59f14"
+}
+```
+
+
+* * *
+## 4) Upload a Single Data File Using a GUID
+* * *
+In this mode, a record that representing the data file with a pre-generated GUID must be already existing in the Gen3 data common's database of the `Indexd` service. The GUID or `object_id` for a submitted data file can then be obtained via graphQL query or viewing the data file JSON record in the graphical model of the project.
 
 Once the GUIDs have been assigned to the data files for upload, the gen3-client can be used to upload files to object storage using the `gen3-client upload-single` command.
 
@@ -90,13 +131,16 @@ Example Usage:
 ```
 gen3-client upload-single --profile=<profile_name> --guid=<GUID> --file=<filename>
 
-gen3-client upload-single --profile=bob --guid=dg.7519/b4642430-8c6e-465a-8e20-97c458439387 --file=test.gif
+gen3-client upload-single --profile=bob --guid=b4642430-8c6e-465a-8e20-97c458439387 --file=test.gif
 
 Uploading data ...
-Successfully uploaded file "test.gif" to GUID dg.7519/b4642430-8c6e-465a-8e20-97c458439387.
+test.gif  3.64 MiB / 3.64 MiB [==========================================================================================] 100.00%
+Successfully uploaded file "test.gif" to GUID b4642430-8c6e-465a-8e20-97c458439387.
+1 files uploaded.
 ```
+
 * * *
-## 4) Download a Data File Using a GUID
+## 5) Download a Single Data File Using a GUID
 * * *
 Once a data file is registered and uploaded to object storage, its GUID can be used to download the file with the `gen3-client download` command.
 The downloaded filename can be customized by supplying an optional `--file` argument. If the `--file` option was left in blank, the original filename will be used as default filename.
@@ -107,7 +151,7 @@ gen3-client download --profile=<profile_name> --guid=<GUID> --file=<filename>
 
 gen3-client download --profile=bob --guid=b4642430-8c6e-465a-8e20-97c458439387 --file=test.gif
 
-Downloading dg.7519/b4642430-8c6e-465a-8e20-97c458439387...
+Downloading b4642430-8c6e-465a-8e20-97c458439387...
 [1A  transferred 208473 / 11893028 bytes (1.75%)[K
 [1A  transferred 957017 / 11893028 bytes (8.05%)[K
 [1A  transferred 1757785 / 11893028 bytes (14.78%)[K
@@ -120,9 +164,9 @@ Downloading dg.7519/b4642430-8c6e-465a-8e20-97c458439387...
 ```
 
 * * *
-## 5) Provide a Manifest File for Bulk Download
+## 6) Provide a Manifest File for Bulk Download
 * * *
-A download manifest can be generated using the data commons' "Exploration" tool. After a cohort has been selected, clicking the "Manifest" button will create the manifest for the selected files. The gen3-client will download all the files in the provided manifest using the `gen3-client download-manifest` command.
+A download manifest can be generated using a Gen3 data common's "Exploration" tool. After a cohort has been selected, clicking the "Manifest" button will create the manifest for the selected files. The gen3-client will download all the files in the provided manifest using the `gen3-client download-manifest` command.
 
 Example Usage:
 ```
@@ -140,14 +184,14 @@ Finished downloads/24d0be10-d164-48ad-aafa-9fcaac682df9 2570240 / 2570240 bytes 
 ```
 
 * * *
-## 6) Provide a Manifest File for Bulk Upload
+## 7) Provide a Manifest File for Bulk Upload
 * * *
-Users can automate the upload of a bulk of files by provideing an upload manifest. Ideally the upload manifest is the same as the download manifest that can be generated automatically as described in the previous section. However, user can also create a "minimal" upload manifest on their own if needed.
-A upload manifest file is a JSON file that should not contain headers and each row should be only a GUID and filename separated by a tab.
+Users can automate the upload of a bulk of files by providing an upload manifest. Ideally the upload manifest is the same as the download manifest that can be generated automatically as described in the previous section. However, user can also create a "minimal" upload manifest on their own if needed. A valid "minimal" upload manifest file is a JSON file that could only contains many `object_id` fields. The value of each `object_id` field is the GUID of a data file that is going to be submitted. In this mode, for now we are assuming all the data files to be uploaded have the same filenames as their GUIDs.
 
 Example of manifest.json (Minimal):
 ```
 {
+  {
     "object_id": "a12ff17c-2fc0-475a-9c21-50c19950b082"
   },
   {
@@ -168,6 +212,9 @@ gen3-client upload-manifest --profile=<profile_name> --manifest=<manifest_file> 
 gen3-client upload-manifest --profile=bob --manifest=manifest.json --upload-path=upload
 
 Uploading data ...
+a12ff17c-2fc0-475a-9c21-50c19950b082  3.64 MiB / 3.64 MiB [==========================================================================================] 100.00%
+b12ff17c-2fc0-475a-9c21-50c19950b082  3.63 MiB / 3.63 MiB [==========================================================================================] 100.00%
+c12ff17c-2fc0-475a-9c21-50c19950b082  3.65 MiB / 3.65 MiB [==========================================================================================] 100.00%
 Successfully uploaded file "a12ff17c-2fc0-475a-9c21-50c19950b082" to GUID a12ff17c-2fc0-475a-9c21-50c19950b082.
 Successfully uploaded file "b12ff17c-2fc0-475a-9c21-50c19950b082" to GUID b22ff17c-2fc0-475a-9c21-50c19950b082.
 Successfully uploaded file "c12ff17c-2fc0-475a-9c21-50c19950b082" to GUID c22ff17c-2fc0-475a-9c21-50c19950b082.
@@ -175,7 +222,7 @@ Successfully uploaded file "c12ff17c-2fc0-475a-9c21-50c19950b082" to GUID c22ff1
 ```
 
 * * *
-## 7) Generate a metadata TSV
+## 8) Generate a metadata TSV
 * * *
 In order to register data files in a Gen3 data commons, the filenames, md5sums, and file_size in bytes, must be submitted as metadata. The gen3-client can help collect the values of these three properties using the `gen3-client generate-tsv` command.
 
@@ -197,7 +244,7 @@ Generated tsv images.tsv from files *.dcm!
 
 The output file will have the filename, file_size, and md5sum properties for each of the matching files filled in. In order to complete the TSV, fill in the other required properties, including a column of "urls" with the s3 bucket location of the files.
 
-Example:
+Example of an Complete TSV File:
 ```
 read_groups.submitter_id#1	type	project_id	submitter_id	data_category	data_format	data_type	experimental_strategy	file_name	file_size	md5sum	urls
 rg-1	submitted_aligned_reads	project-name	SAR1	Sequencing Reads	BAM	Aligned Reads	DNA Panel	SAR1.bam	2032590693	ba05a167e793f5c9159e468ff080647c	s3://my-data/SAR1.bam

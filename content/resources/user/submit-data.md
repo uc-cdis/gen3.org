@@ -105,7 +105,7 @@ In the above example, if "case_2" was enrolled in both "study-01" and "study-02"
 ## 3. Register Data Files with the Windmill Data Portal
 * * *
 
-Special attention must be given to "data file" nodes as they contain variables that describe actual, raw data files, which will be uploaded to object storage by the data contributor and later downloaded by data analysts. Specifically, data files must be "registered" in order to be downloadable using the Windmill data portal or the [cdis-data-client](https://github.com/uc-cdis/cdis-data-client/releases).
+Special attention must be given to "data file" nodes as they contain variables that describe actual, raw data files, which will be uploaded to object storage by the data contributor and later downloaded by data analysts. Specifically, data files must be "registered" in order to be downloadable using the Windmill data portal or the [gen3-client](https://github.com/uc-cdis/cdis-data-client/releases).
 
 Registration of data files means entering the URL/address of each file in object storage to the "urls" column in the data file node's TSV. This URL is usually a location in a project folder of a data commons bucket in s3 object storage: "s3://commons-bucket/project-name/filename".
 
@@ -221,7 +221,7 @@ Data files such as sequencing data (BAM, FASTQ), assay results, images, and PDFs
 For detailed instructions, visit the [Gen3 client documentation](../gen3-client/). The metadata TSVs do not need to be submitted to the object store, as they have already been submitted via the API.
 
 * Downloaded the [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases) for your operating system.
-* Configure a profile with credentials:
-`./gen3-client configure --profile <profile> --cred <credentials.json>`
-* Upload a data file using its GUID:
-`./gen3-client upload --profile <profile> --guid <GUID> --file=<filename>`
+* Configure a profile with credentials:  
+`./gen3-client configure --profile=<profile_name> --cred=<credentials.json> --apiendpoint=<api_endpoint_url>`
+* Upload a data file using its GUID:  
+`./gen3-client upload-single --profile=<profile_name> --guid=<GUID> --file=<filename>`
