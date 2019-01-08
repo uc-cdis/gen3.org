@@ -385,9 +385,277 @@ the [`dep` documentation][go-dep-docs] for more information.
 
 ## JavaScript
 
+### Introduction to React
+
+For frontend development, we use a Javascript library called [React](https://reactjs.org).
+React breaks down the frontend into components, or modular pieces that can be
+reused across a site. The goal is to make each component generic by passing it
+`props`, so that it can be used for different scenarios.
+
+### Components
+
+For example, say we were building a typical website. The homepage could be divided
+into several components such as:
+
+* The navigation bar
+* The footer
+* The header
+
+And within these components, there would be more components:
+
+* The navigation bar
+  * Buttons
+  * Dropdown menus
+* The footer
+  * Buttons
+* The header
+  * Buttons
+
+This way, we have a modular frontend that makes developing and testing easier, and
+also allows the reuse of these components in other areas.
+
+In order to customize these generic components, they would be passed `props`.
+These props are defined using the `prop-types` library, so that developers are
+aware of possible and required properties for each component.
+
+For example, if you had a component `Button`:
+
+```
+# /src/Button/index.jsx
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import './Button.css';
+
+class Button extends React.Component {
+  render() {
+    return (
+        <div class='button'>
+          <a href={this.props.buttonLink}>
+            Click Me!
+          </a>
+        </div>
+    )
+  }
+};
+
+Button.propTypes = {
+  buttonLink: PropTypes.string.isRequired,
+};
+
+export default Button;
+```
+
+You could use the button in multiple places by passing the prop `buttonLink`:
+
+```
+# /src/Homepage/index.jsx
+
+import React from 'react';
+import Button from '../Button/.';
+
+class Homepage extends React.Component {
+  render() {
+    return (
+        <Button buttonLink='gen3.org' />
+    )
+  }
+};
+
+export default Homepage;
+```
+
+Components can also have optional and default properties. You can use default properties
+as well as the ternary operator to display optional UI pieces. Continuing with the button example,
+maybe in some situations the button needs to have an icon:
+
+```
+# /src/Button/index.jsx
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import './Button.css';
+
+class Button extends React.Component {
+  render() {
+    return (
+        <div class='button'>
+          {
+            this.props.buttonIcon ? <img href={this.props.buttonIcon} /> : null
+          }
+          <a href={this.props.buttonLink}>
+            Click Me!
+          </a>
+        </div>
+    )
+  }
+};
+
+Button.propTypes = {
+  buttonLink: PropTypes.string.isRequired,
+  buttonIcon: PropTypes.string,
+};
+
+Button.defaultProps = {
+  buttonIcon: null,
+};
+
+export default Button;
+```
+
+Looking back at the `Homepage` example, an icon would not be displayed here since
+the `buttonIcon` property did not get passed to the `Button` component, and it was
+set to a default of `null`. However in the below example, there would be an icon
+displayed:
+
+```
+# /src/LoginPage/index.jsx
+
+import React from 'react';
+import Button from '../Button/.';
+
+class LoginPage extends React.Component {
+  render() {
+    return (
+        <Button buttonLink='gen3.org' buttonIcon='/img/icon.svg' />
+    )
+  }
+};
+
+export default LoginPage;
+```
+
+These default properties allow for us to make our components even more reusable,
+and cover a wide variety of scenarios.
+
+Components can also have `state`. Generally, we try to avoid using state if possible
+because it can get messy when many component have their own state.
+
+For an example with using state, say you wanted to develop a dropdown menu.
+This menu would need to keep track of when it is open and when it is closed.
+
+```
+# /src/Dropdown/index.jsx
+
+import React from 'react';
+import './Dropdown.css';
+
+class Dropdown extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false,
+    };
+  }
+
+  toggleDropdown = () => {
+    this.setState({ isOpen: !this.state.isOpen });
+  };
+
+  render() {
+    return (
+      <div class='dropdown'>
+        {
+          this.state.isOpen ? (
+            <div class='dropdown__menu'>
+              The Dropdown Menu is open!
+            </div>
+          ) : null
+        }
+        <div class='dropdown__button' onClick={this.toggleDropdown}>
+          Toggle Dropdown
+        </div>
+      </div>
+    )
+  }
+}
+
+export default Dropdown;
+```
+
+In this `Dropdown`, the `dropdown__menu` will only be displayed if the component's state
+of `isOpen` is `true`. In the constructor we set it to `false` by default, and this
+is togglable by clicking on the `dropdown__button` button.
+
+### Redux
+
+[Redux](https://redux.js.org/introduction/getting-started) is a way to keep track
+of state across components, for an entire site. Each component containing its own
+state can get complicated, so Redux uses the idea of a central `store` to keep
+track of the larger state of components. In the above example, we used a
+component's state to keep track of if a menu should be open or  not. An example
+of using Redux to store state would be for things like what user is logged into
+your web application. This is information that needs to be accessed in more than
+one component, so instead of storing it in individual components it should be
+contained in the Redux store.
+
+### Folder Structure
+
+When building a new component, the folder is named after the component and
+generally contains 3 or 4 parts - the component implementation, the tests, the styles,
+and a [Redux](https://redux.js.org/introduction/getting-started) component if necessary.
+
+For example, if creating a component called "Header", the directory structure would be:
+
+- Header
+  - index.jsx
+  - Header.test.jsx
+  - Header.css
+  - ReduxHeader.js
+
+### Using the UI library
+
+When tasked with adding frontend functionality or components to Gen3, the first
+step is to decide if this new feature would be useful in other parts of Gen3.
+If the answer is yes, then the ideal next step would be to add the feature as a
+generic component to our [Gen3 UI Library](https://github.com/uc-cdis/gen3-ui-component),
+and then import it. This way we can build a comprehensive UI library of components
+that can be used across all of our development, creating a cohesive UI and also
+making UI development easier in the future.
+
+For example, if a developer were tasked with creating a dropdown menu for Windmill,
+this is a component that would probably be useful in other ways in the future, so
+it would be good to add it as a generic component to our UI library.
+
+To update the UI library, follow the instructions in the [README](https://github.com/uc-cdis/gen3-ui-component).
+
+In order to see what components are available in the UI library, first clone the
+[repository](https://github.com/uc-cdis/gen3-ui-component).
+
+To be able to view the library, you must have `npm` installed. To install this,
+download [node](https://nodejs.org/en/download/). Once the installation is complete,
+check that it was successful by running `node -v` and `npm -v` in the command line.
+
+Once those dependencies are installed, `cd` into the `gen3-ui-component` directory,
+and use `npm run storybook`. This will start the UI library at `localhost:9001`.
+Navigate to that url to see all of our components.
+
+If there is a component in the UI library you would like to use, you can import it.
+For example:
+
+```
+import React from 'react';
+import Button from '@gen3/ui-component/dist/components/Button';
+
+class Component extends React.Component {
+  render() {
+    return (
+      <Button link='gen3.org' />
+    )
+  }
+}
+```
+
+There are also Gen3 fonts, colors, and other CSS styles available. If you would
+like to use our CSS classes and color variables, import the Gen3 stylesheet at
+the top of your `.css` file:
+
+`@import '~@gen3/ui-component/dist/css/base.css';`
+
 ### Style
 
-Follow the [JavaScript style guide][js-style-guide].
+Follow the [JavaScript style guide][js-style-guide] for information about testing,
+as well as the [CSS style guide][css-style-guide] for frontend development.
 
 ## Licensing and Attribution
 
@@ -420,6 +688,7 @@ SO, *with or without attribution*.
 [apache]: https://www.apache.org/licenses/LICENSE-2.0
 [arborist]: https://github.com/uc-cdis/arborist
 [black]: https://github.com/ambv/black
+[css-style-guide]: ../style-guide#css-style-guide
 [fair-use]: https://www.copyright.gov/fair-use/more-info.html
 [go-dep]: https://github.com/golang/dep
 [go-dep-docs]: https://golang.github.io/dep/docs/introduction.html
