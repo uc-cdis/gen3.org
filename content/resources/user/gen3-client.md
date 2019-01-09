@@ -228,7 +228,9 @@ In order to register data files in a Gen3 data commons, the filenames, md5sums, 
 
 The template TSV for a data file node should be downloaded from the node's entry page in the data dictionary and used as a template with this command. Then the wildcard character `*` can be used to add all matching files to the specified output tsv.
 
-To download template TSVs from a common, open the common's Windmill data portal and click on "Dictionary" in the top navigation bar. From the "Dictionary" page, click "Table View" button on the left to display a table that contains all nodes and properties of that common. To the right of each node entry in the table, there is a button to download a TSV format template of that node.
+To download template TSVs from a common, open the common's Windmill data portal and click on "Dictionary" in the top navigation bar to open the data dictionary. Template TSVs can be obtained from each node's page in the data dictionary by clicking on the node's name.
+
+![Template](Gen3_Dictionary_Subject_template.png)
 
 Example Usage:
 ```
