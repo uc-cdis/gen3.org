@@ -50,9 +50,9 @@ Now you should be able to run the tool on the command-line from any directory by
 * * *
 ## 2) Configure a Profile with Credentials
 * * *
-Before using the gen3-client to upload or download data, the gen3-client needs to be configured with API credentials downloaded from the user's data commons Profile:
+Before using the gen3-client to upload or download data, the gen3-client needs to be configured with API credentials downloaded from the user's data commons Profile (via Windmill data portal):
 
-1. Download the "credentials.json" from the data commons by clicking on "Profile" in the top navigation bar and then creating an API key.
+1. To download the "credentials.json" from the data commons, user should starts from that common's Windmill data portal, followed by clicking on "Profile" in the top navigation bar and then creating an API key. In the popup window which informs user an API key has been successfully created, click the "Download json" button to save the API key to local machine.
 ![Get credentials.json](Gen3_Keys.png)
 
 2. From the command-line, run the `gen3-client configure` command with the --cred and --apiendpoint arguments (see examples below).
@@ -104,7 +104,7 @@ Successfully uploaded file "test.gif" to GUID 65f5d77c-1b2a-4f41-a2c9-9daed5a59f
 ```
 
 ### Local submission history:
-In this mode, the application will keeps tracking which local file has already been submitted to avoid potential duplication in submissions. These information are kept in an JSON file under the same user folder as where the `config` file lives, for example:
+In this mode, the application will keep track of which local files have already been submitted to avoid potential duplication in submissions. This information is kept in a JSON file under the same user folder as where the `config` file lives, for example:
 ```
 Mac/Linux: /Users/Bob/.gen3/<your_config_name>_history.json
 Windows: C:\Users\Bob\.gen3\<your_config_name>_history.json
@@ -123,7 +123,7 @@ Example of a History JSON File:
 * * *
 ## 4) Upload a Single Data File Using a GUID
 * * *
-In this mode, a record that representing the data file with a pre-generated GUID must be already existing in the Gen3 data common's database of the `Indexd` service. The GUID or `object_id` for a submitted data file can then be obtained via graphQL query or viewing the data file JSON record in the graphical model of the project.
+In this mode, a record that represents the data file with a pre-generated GUID must already exist in the Gen3 data common's database of the `Indexd` service. The GUID or `object_id` for a submitted data file can then be obtained via graphQL query or viewing the data file JSON record in the graphical model of the project.
 
 Once the GUIDs have been assigned to the data files for upload, the gen3-client can be used to upload files to object storage using the `gen3-client upload-single` command.
 
@@ -143,7 +143,7 @@ Successfully uploaded file "test.gif" to GUID b4642430-8c6e-465a-8e20-97c4584393
 ## 5) Download a Single Data File Using a GUID
 * * *
 Once a data file is registered and uploaded to object storage, its GUID can be used to download the file with the `gen3-client download` command.
-The downloaded filename can be customized by supplying an optional `--file` argument. If the `--file` option was left in blank, the original filename will be used as default filename.
+The downloaded filename can be customized by supplying an optional `--file` argument. If the `--file` option was left blank, the original filename will be used as default filename.
 
 Example Usage:
 ```
@@ -166,7 +166,7 @@ Downloading b4642430-8c6e-465a-8e20-97c458439387...
 * * *
 ## 6) Provide a Manifest File for Bulk Download
 * * *
-A download manifest can be generated using a Gen3 data common's "Exploration" tool. After a cohort has been selected, clicking the "Manifest" button will create the manifest for the selected files. The gen3-client will download all the files in the provided manifest using the `gen3-client download-manifest` command.
+A download manifest can be generated using a Gen3 data common's "Exploration" tool. To use the "Exploration" tool, open the common's Windmill data portal and click on "Exploration" in the top navigation bar. After a cohort has been selected, clicking the "Download Manifest" button will create the manifest for the selected files. The gen3-client will download all the files in the provided manifest using the `gen3-client download-manifest` command.
 
 Example Usage:
 ```
@@ -186,7 +186,7 @@ Finished downloads/24d0be10-d164-48ad-aafa-9fcaac682df9 2570240 / 2570240 bytes 
 * * *
 ## 7) Provide a Manifest File for Bulk Upload
 * * *
-Users can automate the upload of a bulk of files by providing an upload manifest. Ideally the upload manifest is the same as the download manifest that can be generated automatically as described in the previous section. However, user can also create a "minimal" upload manifest on their own if needed. A valid "minimal" upload manifest file is a JSON file that could only contains many `object_id` fields. The value of each `object_id` field is the GUID of a data file that is going to be submitted. In this mode, for now we are assuming all the data files to be uploaded have the same filenames as their GUIDs.
+Users can automate the upload of a bulk of files by providing an upload manifest. Ideally the upload manifest is the same as the download manifest that can be generated automatically as described in the previous section. However, user can also create a "minimal" upload manifest on their own if needed. A valid 'minimal' upload file is a JSON file that only contains `object_id` fields. The value of each `object_id` field is the GUID of a data file that is going to be submitted. In this mode, for now we are assuming all the data files to be uploaded have the same filenames as their GUIDs.
 
 Example of manifest.json (Minimal):
 ```
@@ -228,6 +228,8 @@ In order to register data files in a Gen3 data commons, the filenames, md5sums, 
 
 The template TSV for a data file node should be downloaded from the node's entry page in the data dictionary and used as a template with this command. Then the wildcard character `*` can be used to add all matching files to the specified output tsv.
 
+To download template TSVs from a common, open the common's Windmill data portal and click on "Dictionary" in the top navigation bar. From the "Dictionary" page, click "Table View" button on the left to display a table that contains all nodes and properties of that common. To the right of each node entry in the table, there is a button to download a TSV format template of that node.
+
 Example Usage:
 ```
 gen3-client generate-tsv --from-template=<template.tsv> --output=<output.tsv> <wildcard>
@@ -240,7 +242,7 @@ Adding file image-3.dcm
 Adding file image-4.dcm
 Generated tsv images.tsv from files *.dcm!
 ```
-> __NOTE:__ In the Mac OS terminal, the asterisk, "\*", is a wildcard character and needs to be escaped with a backslash, "\\".
+> __NOTE:__ In the MacOS terminal, the asterisk "\*" is a wildcard character and needs to be escaped with a backslash "\\".
 
 The output file will have the filename, file_size, and md5sum properties for each of the matching files filled in. In order to complete the TSV, fill in the other required properties, including a column of "urls" with the s3 bucket location of the files.
 
