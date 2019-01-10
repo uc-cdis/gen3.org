@@ -11,6 +11,7 @@ menuname: developerMenu
 * [Python Style Guide]
 * [Markdown Style Guide]
 * [Javascript Style Guide]
+* [CSS Style Guide]
 * [Go Style Guide]
 
 # Python Style Guide
@@ -155,14 +156,6 @@ Airbnb and Google both have extensive javascript style guides online that are mo
 * Name files with JSX with .jsx suffix
 * Decouple components and redux/relay bindings to allow component re-use when possible
 
-## CSS in Javascript
-
-We use [styledcomponents][styledcomponents] to manage CSS in javascript with helpers from
-[polished][polished].  A generic component Foo.jsx should export a component with
-a standard set of CSS rules attached to it, and a user of Foo can extend
-those rules via a MyFoo component.  Styledcomponents also allows an application to apply 
-an application-wide theme.
-
 ## Unit tests
 
 We use [jestjs](https://facebook.github.io/jest/).  We can setup a basic sanity-check test of a dumb React component (to guard against basic regressions) with the [enzymejs](https://github.com/airbnb/enzyme) helpers.  For example:
@@ -226,24 +219,93 @@ test('Test asyncSetInterval', (done) => {
 });
 ```
 
-## Code Organization
+# CSS Style Guide
 
-Try to follow these rules of thumb when possible.
+[CSS Style Guide]: #css-style-guide
 
-Put generic (of general use), dumb (properties driven) components under
-`src/components` with a jest test case - ex:
+## General Structure
 
-* `components/Spinner.jsx`
-* `components/Spinner.test.jsx`
+* Use class selectors (.class-name instead of #class-name)
+* Separate class names with hypens instead of camel case (.class-name instead of .className)=
+* The CSS file should be named {component}.css, and be in the same folder as the component. It is then imported into the component's .jsx file.
 
-Create a directory for higher level components (like a page) that assemble
-multiple customized child components or involve user interactions and backend
-orchestration - ex:
+## Naming
 
-* `QueryPage/ReduxFilters.jsx`
-* `QueryPage/RelayResultTable.jsx`
-* `QueryPage/ReduxResultsPager.jsx`
-* `QueryPage/QueryPage.jsx`
+We are moving toward using the BEM methodology in terms of CSS organizational conventions. This means we are dividing chunks of code within a component into blocks, are avoiding nesting components, and are using the naming convention of `{block}__{elements}--{modifer}`. {element} and {modifier} are optional depending on the situation - see the BEM guidelines for more examples.
+
+## Example
+
+Say we have a simple component called Component:
+
+```
+import './Component.css';
+
+class Component extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>This is my component</h1>
+        <button>Submit</button>
+        <button>Cancel</button>
+      </div>
+    );
+  }
+}
+```
+
+Our block would be .component, and elements in that block would consist of the buttons and the title. So our CSS would look like this, based on the BEM naming conventions:
+
+```
+.component { }
+.component__title { }
+.component__button { }
+```
+And the code would look like this:
+```
+import './Component.css';
+
+class Component extends React.Component {
+  render() {
+    return (
+      <div className="component">
+        <h1 className="component__title">This is my component</h1>
+        <button className="component__button">Submit</button>
+        <button className="component__button">Cancel</button>
+      </div>
+    );
+  }
+}
+```
+
+The buttons can also have modifiers - let's say we want two different colors depending on if the button is a submit button or a cancel button. Then our CSS and code would look something like this, respectively:
+
+```
+.component { }
+.component__title { }
+.component__button { }
+.component__button--submit {
+  color: blue;
+}
+.component__button--cancel {
+  color: red;
+}
+```
+
+```
+import './Component.css';
+
+class Component extends React.Component {
+  render() {
+    return (
+      <div className="component">
+        <h1 className="component__title">This is my component</h1>
+        <button className="component__button component__button--submit">Submit</button>
+        <button className="component__button component__button--cancel">Cancel</button>
+      </div>
+    );
+  }
+}
+```
 
 # Go Style Guide
 [Go Style Guide]: #go-style-guide
