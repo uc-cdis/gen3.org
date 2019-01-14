@@ -23,6 +23,8 @@ g3Resources:
             link: /resources/user/analyze-data
       - title: Appendices
         ul:
+          - name: Types of data in a Gen3 Data Commons
+            link: /resources/user/data-types
           - name: Using the gen3-client command-line tool
             link: /resources/user/gen3-client
           - name: Working with the API

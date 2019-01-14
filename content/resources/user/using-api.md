@@ -80,7 +80,7 @@ If an an error such as "You don't have access... " occurs, then the API key is m
 
 * * *
 
-## Queries in the Submission Portal: GraphQL
+## Queries in the Submission Portal: GraphiQL
 * * *
 
 Queries can directly run in the submission portal by clicking the "Query" magnifying glass or directly at: https://data.mycommons.org/graphql. The query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, and generally make it easier for Gen3 members to find information.
@@ -92,7 +92,7 @@ Queries can directly run in the submission portal by clicking the "Query" magnif
 ### Pagination and Offsets
 Queries by defult return the first 10 entries. To return more entries, the query call can specify a larger number such as `(first:100)`.
 
-In the case that too many results are returned, a timeout error might occur. In that case, use [pagination](http://graphql.org/learn/pagination/) to break up the query. 
+In the case that too many results are returned, a timeout error might occur. In that case, use [pagination](http://graphql.org/learn/pagination/) to break up the query.
 
 For example, if there are 2,550 records returned, and the graphiQL query is timing out with ```(first:3000)```, then break the query into multiple queries with offsets:
 
@@ -140,7 +140,7 @@ A user can review a graph of an individual project, by toggling between views of
 ## Using the Gen3 SDK
 * * *
 
-The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic software development kit (SDK) to help users interact with the Gen3 API, which can be found on [Github](https://github.com/uc-cdis/gen3sdk-python). The Gen3 community is encouraged to add to the functions library and/or improve the notebook.  
+The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic software development kit (SDK) to help users interact with the Gen3 API, which can be found on [Github](https://github.com/uc-cdis/gen3sdk-python). The Gen3 community is encouraged to help improve the gen3sdk by adding functions to the library or developing Jupyter Notebooks that use it.
 
 > __NOTE:__ As the Gen3 community updates repositories, keep them up to date using `git pull origin master`.
 
@@ -153,4 +153,49 @@ pip install gen3
 
 # To clone and develop the source:
 git clone https://github.com/uc-cdis/gen3sdk-python.git
+```
+
+* * *
+# Querying and Downloading Metadata using the API
+* * *
+Users with read access to a project can download individual metadata records in the project or all records in a specified node of the project using the API.
+
+The API endpoint for downloading all the records in a single node of a project is:
+```
+{commons-url}/api/v0/submission/{program}/{project}/export/?node_label={node}&format={json/tsv}
+ Where:
+{commons-url} is the gen3 data commons url (for example, 'data.bloodpac.org'),
+{program} is the program name (for example, 'bpa'),
+{project} is the project name
+{node} is the name of the node
+{json/tsv} is the format in which data will be downloaded, either json or tsv
+ ```
+For example, submitting the following API request will download all the records in the 'sample' node of the project 'training-example' in an example data commons (data.mycommons.org) as a tab-separated values file (TSV):
+```
+ https://data.mycommons.org/api/v0/submission/training/example/export/?node_label=sample&format=tsv
+```
+
+ The API endpoint for downloading a single record in a project is as follows:
+```
+{commons-url}/api/v0/submission/{program}/{project}/export?ids={ids}&format={json/tsv}
+ Where:
+{commons-url} is the gen3 data commons url (for example, 'data.bloodpac.org'),
+{program} is the program name (for example, 'bpa'),
+{project} is the project name
+{ids} is a comma separated list of the UUIDs for the records to be downloaded
+{json/tsv} is the format in which data will be downloaded, either json or tsv
+ ```
+
+ For example, submitting the following API request will download the two records corresponding to the UUIDs (bae26d13-9231-44e7-b6da-8057b35ad829 and e2b5705f-cd0b-4f4b-bb37-0c3e3032b71d), which are in the 'read_group' node of the project 'training-example' in the example data commons. This downloads a 'read_group.tsv' file.
+
+ ```
+ https://data.mycommons.org/api/v0/submission/training/example/export?ids=bae26d13-9231-44e7-b6da-8057b35ad829,e2b5705f-cd0b-4f4b-bb37-0c3e3032b71d&format=tsv
+```
+
+ If the list of UUIDs contains ids from different nodes in a project, then the data returned will be an archive containing a separate tsv/json per node.
+
+ For example, if we add a third UUID to the previous comma-separated list of ids (c003a4b4-7d92-49d0-a412-375905328dca), which is the UUID of a record in the 'sample' node, then submitting the following request will download a 'tar.gz' archive containing a 'sample.tsv' and a 'read_group.tsv'.
+
+ ```
+ https://data.mycommons.org/api/v0/submission/training/example/export?ids=aae26d13-9231-44e7-b6da-8057b35ad829,d2b5705f-cd0b-4f4b-bb37-0c3e3032b71d,c003a4b4-7d92-49d0-a412-375905328dca&format=tsv
 ```

@@ -6,45 +6,70 @@ layout: withtoc
 menuname: userMenu
 ---
 {{% markdownwrapper %}}
-# Submitting Metadata and Data
+# Submitting Data Files and Linking Metadata in a Gen3 Data Commons
 * * *
 
-## 1. Review the Data Model
+Data in a Gen3 data commons is either stored in variables that are exposed to the API for query (what we refer to as 'metadata') or it is stored in files that must be downloaded prior to knowing their content (or 'data files'). For more information on the difference between data files and metadata exposed to the API, see the documentation on [data types in a Gen3 data commons](/resources/user/data-types).
+
+
+## 1. Upload Data Files to Object Storage
 * * *
 
-### What is the Data Model?
+Data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., should be uploaded with the Gen3 client:
 
-Every Gen3 data commons employs a data model, which serves to describe, organize, and harmonize data sets submited by different users. Data harmonization facilitates cross-project analyses and is thus one of the pillars of the data commons paradigm.
+* Downloaded the [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases) for your operating system.
+* Configure a profile with credentials:  
+`./gen3-client configure --profile=<profile_name> --cred=<credentials.json> --apiendpoint=<api_endpoint_url>`
+* Upload a data file using its GUID:  
+`./gen3-client upload --profile=<profile_name> --upload-path=~/files/example.txt`
 
-The data model organizes experimental metadata variables, "properties", into linked categories, "nodes", through the use of a data dictionary. The data dictionary lists and describes all nodes in the data model, as well as defines and describes the properties in each node.
+For detailed instructions, visit the [Gen3 client documentation](../gen3-client/).
 
-For example:
+## 2. Map Your Files to a Data File Node
+* * *
 
-* Clinical variables like a primary cancer diagnosis or a subject's gender might go into the "diagnosis" or "demographic" nodes, respectively. 
-* Sample-related variables like how a tumor sample was collected and what analyte was extracted from it might go into the "biospecimen" or "analyte" nodes, respectively. 
-* Data files also have associated metadata variables like file size, format, and the file's location in object storage. These properties are grouped into nodes that describe various types of data files, like "mri_image", for an MRI image data file.
+Once data files are successfully uploaded, the files must be mapped to the appropriate node in the data model before they're accessible to authorized users.
 
-Finally, each node in the data dictionary is linked in a logical manner to other nodes, which facilitates generating a visual overview, or graphical model, of a project.
+1) Go to your data commons submission portal website.
+2) Click "Data Submission"
+![data submission image](data_submission.png)
+3) Click "Map My Files"
+![map my files image](map_my_files.png)
+4) Select the files to map using the checkboxes
+5) Select the node that the files belong to
+6) Fill out the values of required properties using the mapping tool
+7) Finalize your submission
 
-The following image displays the data dictionary viewer, the 'biospecimen' node entry in the dictionary, and an example graphical model of a project:
 
-![Data Dictionary](data-model.png)
+## 3. Submit Additional Project Metadata
+* * *
 
-### Why Do Gen3 Commons Use a Data Model?
+Once data files have been mapped to the appropriate data file node, the rest of the study's metadata (be it patient clinical information, sample processing methods, pipeline/workflow parameters, etc.) should be submitted to the appropriate nodes and link to the data files in order to allow filtering or querying of submitted data files based on these various experimental properties.
 
-* Having all participating members use the same data model:
-    * Allows for standardized metadata elements across a commons.
-    * Permits flexible and scaleable API generation based on data commons software that reads the data model schema.   
-    * Lets users query the commons API so that an ecosystem of applications can be built.
-    * Helps automate the validation of submitted data.   
 
-Once access has been granted to the Windmill data submission portal, we recommend reviewing the commons' specific data dictionary by clicking "Dictionary" in the top navigation bar. This tool helps users understand the variable types, requirements, and node dependencies or links required for submission. 
 
-![Dictionary](Gen3_Toolbar_Dictionary.png)
 
-If a desired submission element is not currently described in the model, users will need to work with the commons to extend the data model. Provide the commons with a description of the requested data elements, and they will work with the sponsor or data modeling working group to review the request and find an appropriate home for the data elements.
 
-In the case of developing a personal data dictionary, such as for use with Docker Compose, please note that due to the graph nature of the data model, some nodes are dependent on others. In addition, the Windmill service specifies nodes that are required for it run properly through preset parameters. For example, if Windmill is set to use the default data dictionary, it will require the `Case`, `Experiment`, and `Aliquot` nodes. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## 2. Prepare Metadata TSVs for Each Node in the Project
@@ -73,13 +98,13 @@ The `program` and `project` nodes are the most upstream nodes and are created by
 
 At least one link is required for every record in a TSV, and sometimes multiple links could be specified. The links are specified in a TSV with the variable header `<nodes>.submitter_id`, where <nodes\> is the upstream node the record is linking to. The value of this variable is the specific submitter_id of the link.
 
-For example, there are four cases in two studies in one `project`. The `study` node was made with two study `submitter_id`s: "study-01" and "study-02". The "case.tsv" file uploaded to describe the study participants enrolled will have a corresponding study. 
+For example, there are four cases in two studies in one `project`. The `study` node was made with two study `submitter_id`s: "study-01" and "study-02". The "case.tsv" file uploaded to describe the study participants enrolled will have a corresponding study.
 
 #### case.tsv
 
 |case|	submitter_id|	studies.submitter_id|
 |--|--|--|
-|1|case_1|study-01|	
+|1|case_1|study-01|
 |2|case_2|study-02|
 |3|case_3|study-01|
 |4|case_4|study-01|
@@ -97,7 +122,7 @@ In the above example, if "case_2" was enrolled in both "study-01" and "study-02"
 
 |case|submitter_id|studies.submitter_id#1|studies.submitter_id#2|
 |--|--|--|--|
-|1|case_1|study-01||	
+|1|case_1|study-01||
 |2|case_2|study-01|study-02|
 |3|case_3|study-01||
 |4|case_4|study-01||
@@ -210,18 +235,3 @@ When viewing a project, clicking on a node name will allow the user to view the 
 ![Node Click](Gen3_Model_Click_highlight.png)
 
 ![Node Information](Gen3_Model_node_view.png)
-
-## 5. Upload Data Files to Object Storage
-* * *
-
-<h3> Preparing Data </h3>
-
-Data files such as sequencing data (BAM, FASTQ), assay results, images, and PDFs should be uploaded with the Gen3 client.
-
-For detailed instructions, visit the [Gen3 client documentation](../gen3-client/). The metadata TSVs do not need to be submitted to the object store, as they have already been submitted via the API.
-
-* Downloaded the [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases) for your operating system.
-* Configure a profile with credentials:  
-`./gen3-client configure --profile=<profile_name> --cred=<credentials.json> --apiendpoint=<api_endpoint_url>`
-* Upload a data file using its GUID:  
-`./gen3-client upload-single --profile=<profile_name> --guid=<GUID> --file=<filename>`
