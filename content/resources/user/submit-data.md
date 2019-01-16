@@ -11,75 +11,61 @@ menuname: userMenu
 
 Data in a Gen3 data commons is either stored in variables that are exposed to the API for query (what we refer to as 'metadata') or it is stored in files that must be downloaded prior to knowing their content (or 'data files'). For more information on the difference between data files and metadata exposed to the API, see the documentation on [data types in a Gen3 data commons](/resources/user/data-types).
 
-
 ## 1. Upload Data Files to Object Storage
 * * *
 
-Data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., should be uploaded with the Gen3 client:
+Data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., should be uploaded to object storage with the Gen3 client:
 
-* Downloaded the [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases) for your operating system.
-* Configure a profile with credentials:  
-`./gen3-client configure --profile=<profile_name> --cred=<credentials.json> --apiendpoint=<api_endpoint_url>`
-* Upload a data file using its GUID:  
-`./gen3-client upload --profile=<profile_name> --upload-path=~/files/example.txt`
+* Download the [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases/latest) for your operating system.
+* Configure a profile with credentials downloaded from your Profile:  
+```
+./gen3-client configure --profile=<profile_name> --cred=<credentials.json> --apiendpoint=<api_endpoint_url>
 
-For detailed instructions, visit the [Gen3 client documentation](../gen3-client/).
+For example:
+./gen3-client configure --profile=gen3 --cred=~/Downloads/credentials.json --apiendpoint=https://data.mycommons.org/
+```
+* Upload Files: single data file, a directory of files, or matching files  
+```
+./gen3-client upload --profile=<profile_name> --upload-path=~/files/example.txt
+./gen3-client upload --profile=<profile_name> --upload-path=~/files/
+./gen3-client upload --profile=<profile_name> --upload-path=~/files/*.txt
+```
+
+For detailed instructions, visit the [Gen3 client documentation](/resources/user/gen3-client).
 
 ## 2. Map Your Files to a Data File Node
 * * *
 
 Once data files are successfully uploaded, the files must be mapped to the appropriate node in the data model before they're accessible to authorized users.
 
-1) Go to your data commons submission portal website.
-2) Click "Data Submission"
+1. Go to your data commons submission portal website.
+2. Click "Data Submission".
 ![data submission image](data_submission.png)
-3) Click "Map My Files"
+3. Click "Map My Files".
 ![map my files image](map_my_files.png)
-4) Select the files to map using the checkboxes
-5) Select the node that the files belong to
-6) Fill out the values of required properties using the mapping tool
-7) Finalize your submission
-
+4. Select the files to map using the checkboxes.
+5. Select the project and node that the files belong to.
+6. Fill out the values of any required properties.
+7. Finalize your submission.
 
 ## 3. Submit Additional Project Metadata
 * * *
 
-Once data files have been mapped to the appropriate data file node, the rest of the study's metadata (be it patient clinical information, sample processing methods, pipeline/workflow parameters, etc.) should be submitted to the appropriate nodes and link to the data files in order to allow filtering or querying of submitted data files based on these various experimental properties.
+Once data files have been mapped to the appropriate data file node, the rest of the study's metadata (e.g., patient clinical information, sample processing methods, pipeline/workflow parameters, etc.) should be submitted to the appropriate nodes. These metadata are submitted in tab-separated value (TSV) files for each node in the project, which can be downloaded from the "Dictionary" page of the data commons website.
+
+It may be helpful to think of each TSV as a node in the graph of the data model. Column headers in the TSV are the properties stored in that node, and each row represents a "record" or "entity" in that node.
+
+Properties in a node are either required or not, and this can be determined in the data dictionary's "Required" column for a specific node. 
 
 
+### There are a number of properties that deserve special attention:
 
+1. submitter_id: Each record in every node will have a `submitter_id`, which is a unique alphanumeric identifier (any combination of ASCII characters) for that record across the whole project and is specified by the data submitter. It is entirely up to the data contributor what the submitter_id will be for each record in a project, but the string chosen must be unique within that project.
 
+2. type: Every node has a `type` property, which is simply the name of the node. By providing the node name in the "type" property, the submission portal knows which node to put the data in.
 
+3. project_id:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 2. Prepare Metadata TSVs for Each Node in the Project
-* * *
-
-Data contributors will need to prepare metadata for their submission in tab-separated value (TSV) files for each node in their project.
-
-It may be helpful to think of each TSV as a node in the graph of the data model. Column headers in the TSV are the properties, metadata variables, stored in that node.  Each row is a "record" or "entity" in that node. Each record in every node will have a `submitter_id`, which is a unique alphanumeric identifier for that record across the whole project and is specified by the data submitter, and a `type`, which is simply the node name.
-
-Besides the `submitter_id` and `type`, which are required for every record, other properties are either required or not, and this can be determined in the data dictionary's "Required" column for a specific node.
 
 Template TSVs are provided in each node's page in the data dictionary.
 
@@ -126,6 +112,20 @@ In the above example, if "case_2" was enrolled in both "study-01" and "study-02"
 |2|case_2|study-01|study-02|
 |3|case_3|study-01||
 |4|case_4|study-01||
+
+
+
+## 4. Link Files to their Metadata
+
+Finally, once project metadata have been submitted, data files are linked to their parent node to allow filtering or querying of submitted data files based on these experimental/clinical metadata.
+
+
+
+
+
+
+
+
 
 ## 3. Register Data Files with the Windmill Data Portal
 * * *
