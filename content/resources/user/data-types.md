@@ -14,7 +14,7 @@ In a Gen3 data commons, a semantic distinction is made between two types of data
 
 * A "data file" would be information like tabulated data values in spreadsheet or a fastq/bam file containing DNA sequences. The contents of the file are not exposed to the API as queryable properties, so the file must be downloaded to view its content.
 
-* "Metadata" are variables or key/value pairs that can be queried via the Gen3 data commons' API or viewed in the Gen3 data commons' data exploration tool. In this sense, a key/value pair is essentially a variable and its value. In a Gen3 data dictionary, variable names are termed "properties", and data contributors provide the values for these pre-defined properties in their data submissions.
+* "Metadata" are variables that help to organize or convey additional information about corresponding data files so that they can be queried via the Gen3 data commons' API or viewed in the Gen3 data commons' data exploration tool. In a Gen3 data dictionary, variable names are termed "properties", and data contributors provide the values for these pre-defined properties in their data submissions.
 
 Examples of Metadata are:
 
