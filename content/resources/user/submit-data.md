@@ -33,9 +33,6 @@ Data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, im
 * Configure a profile with credentials downloaded from your Profile:  
 ```
 ./gen3-client configure --profile=<profile_name> --cred=<credentials.json> --apiendpoint=<api_endpoint_url>
-
-For example:
-./gen3-client configure --profile=gen3 --cred=~/Downloads/credentials.json --apiendpoint=https://data.mycommons.org/
 ```
 * Upload Files: single data file, a directory of files, or matching files  
 ```
