@@ -6,55 +6,77 @@ layout: withtoc
 menuname: userMenu
 ---
 {{% markdownwrapper %}}
-# Submitting Metadata and Data
+# Submitting Data Files and Linking Metadata in a Gen3 Data Commons
 * * *
 
-## 1. Review the Data Model
+Data in a Gen3 data commons is either stored in variables that are exposed to the API for query (what we refer to as 'metadata') or it is stored in files that must be downloaded prior to knowing their content (or 'data files'). For more information on the difference between data files and metadata exposed to the API, see the documentation on [data types in a Gen3 data commons](/resources/user/data-types).
+
+## 1. Create a Core Metadata Collection for your Project
+* * *
+<!--
+This section could be removed if we (semi)automate CMC creation for users
+-->
+1. Go to your data commons' submission portal website
+2. Click on 'Data Submission'
+3. Find your project in the List of Projects and click 'Submit Data'
+4. Click "Use Form Submission" and choose "core_metadata_collection"
+5. Fill in the required information and click 'Upload submission json from form'
+6. Click 'Submit'
+7. Make note of the 'submitter_id' of your core_metadata_collection record for later
+
+## 2. Upload Data Files to Object Storage
 * * *
 
-### What is the Data Model?
+Data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., should be uploaded to object storage with the Gen3 client:
 
-Every Gen3 data commons employs a data model, which serves to describe, organize, and harmonize data sets submited by different users. Data harmonization facilitates cross-project analyses and is thus one of the pillars of the data commons paradigm.
+* Download the [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases/latest) for your operating system.
+* Configure a profile with credentials downloaded from your Profile:  
+```
+./gen3-client configure --profile=<profile_name> --cred=<credentials.json> --apiendpoint=<api_endpoint_url>
+```
+* Upload Files: single data file, a directory of files, or matching files  
+```
+./gen3-client upload --profile=<profile_name> --upload-path=~/files/example.txt
+./gen3-client upload --profile=<profile_name> --upload-path=~/files/
+./gen3-client upload --profile=<profile_name> --upload-path=~/files/*.txt
+```
 
-The data model organizes experimental metadata variables, "properties", into linked categories, "nodes", through the use of a data dictionary. The data dictionary lists and describes all nodes in the data model, as well as defines and describes the properties in each node.
+For detailed instructions, visit the [Gen3 client documentation](/resources/user/gen3-client).
 
-For example:
-
-* Clinical variables like a primary cancer diagnosis or a subject's gender might go into the "diagnosis" or "demographic" nodes, respectively. 
-* Sample-related variables like how a tumor sample was collected and what analyte was extracted from it might go into the "biospecimen" or "analyte" nodes, respectively. 
-* Data files also have associated metadata variables like file size, format, and the file's location in object storage. These properties are grouped into nodes that describe various types of data files, like "mri_image", for an MRI image data file.
-
-Finally, each node in the data dictionary is linked in a logical manner to other nodes, which facilitates generating a visual overview, or graphical model, of a project.
-
-The following image displays the data dictionary viewer, the 'biospecimen' node entry in the dictionary, and an example graphical model of a project:
-
-![Data Dictionary](data-model.png)
-
-### Why Do Gen3 Commons Use a Data Model?
-
-* Having all participating members use the same data model:
-    * Allows for standardized metadata elements across a commons.
-    * Permits flexible and scaleable API generation based on data commons software that reads the data model schema.   
-    * Lets users query the commons API so that an ecosystem of applications can be built.
-    * Helps automate the validation of submitted data.   
-
-Once access has been granted to the Windmill data submission portal, we recommend reviewing the commons' specific data dictionary by clicking "Dictionary" in the top navigation bar. This tool helps users understand the variable types, requirements, and node dependencies or links required for submission. 
-
-![Dictionary](Gen3_Toolbar_Dictionary.png)
-
-If a desired submission element is not currently described in the model, users will need to work with the commons to extend the data model. Provide the commons with a description of the requested data elements, and they will work with the sponsor or data modeling working group to review the request and find an appropriate home for the data elements.
-
-In the case of developing a personal data dictionary, such as for use with Docker Compose, please note that due to the graph nature of the data model, some nodes are dependent on others. In addition, the Windmill service specifies nodes that are required for it run properly through preset parameters. For example, if Windmill is set to use the default data dictionary, it will require the `Case`, `Experiment`, and `Aliquot` nodes. 
-
-
-## 2. Prepare Metadata TSVs for Each Node in the Project
+## 2. Map Your Files to a Data File Node
 * * *
 
-Data contributors will need to prepare metadata for their submission in tab-separated value (TSV) files for each node in their project.
+Once data files are successfully uploaded, the files must be mapped to the appropriate node in the data model before they're accessible to authorized users.
 
-It may be helpful to think of each TSV as a node in the graph of the data model. Column headers in the TSV are the properties, metadata variables, stored in that node.  Each row is a "record" or "entity" in that node. Each record in every node will have a `submitter_id`, which is a unique alphanumeric identifier for that record across the whole project and is specified by the data submitter, and a `type`, which is simply the node name.
+1. Go to your data commons submission portal website.
+2. Click "Data Submission".
+![data submission image](data_submission.png)
+3. Click "Map My Files".
+![map my files image](map_my_files.png)
+4. Select the files to map using the checkboxes.
+5. Select the project and node that the files belong to.
+6. Fill out the values of any required properties.
+7. Finalize your submission.
 
-Besides the `submitter_id` and `type`, which are required for every record, other properties are either required or not, and this can be determined in the data dictionary's "Required" column for a specific node.
+## 3. Submit Additional Project Metadata
+* * *
+
+Once data files have been mapped to the appropriate data file node, the rest of the study's metadata (e.g., patient clinical information, sample processing methods, pipeline/workflow parameters, etc.) should be submitted to the appropriate nodes. These metadata are submitted in tab-separated value (TSV) files for each node in the project, which can be downloaded from the "Dictionary" page of the data commons website.
+
+It may be helpful to think of each TSV as a node in the graph of the data model. Column headers in the TSV are the properties stored in that node, and each row represents a "record" or "entity" in that node.
+
+Properties in a node are either required or not, and this can be determined by referencing the data dictionary's viewer's "Required" column for a specific node.
+
+
+### There are a number of properties that deserve special mention:
+
+1. `submitter_id`: Each record in every node will have a `submitter_id`, which is a unique alphanumeric identifier (any combination of ASCII characters) for that record across the whole project and is specified by the data submitter. It is entirely up to the data contributor what the submitter_id will be for each record in a project, but the string chosen must be unique within that project.
+
+2. `type`: Every node has a `type` property, which is simply the name of the node. By providing the node name in the "type" property, the submission portal knows which node to put the data in.
+
+3. `id`: Every record in every node in a data commons has the unique property `id`, which is not submitted by the data contributor but rather generated on the backend. The value of the property `id` is a 128-bit UUID (a unique 32 character identifier).
+
+4. `project_id` and `code`: Every project record in a data commons is linked to a parent `program` node and has the properties `project_id` and a `code`. The property `project_id` is the dash-separated combination of `program` and `code`. For example, if your project was named 'Experiment1', and this project was part of the 'Pilot' program, the project's `project_id` would be 'Pilot-Experiment1', and the project's `code` would be 'Experiment1'. Finally, just like every record in the data commons, the project has the unique property `id`, which is not to be confused with the project's `project_id`.
 
 Template TSVs are provided in each node's page in the data dictionary.
 
@@ -63,30 +85,31 @@ Template TSVs are provided in each node's page in the data dictionary.
 ### Determine Submission Order via Node Links
 * * *
 
-The prepared TSV files must be submitted in a specific order due to node links. Referring back to the graphical data model, a node cannot be submitted without first submitting the nodes to which it is linked upstream. If metadata is submitted out of order, such as a link to an upstream node that does not yet exist, the validator will reject the submission on the basis that the dependency is not present with the error message, "INVALID_LINK".
+The prepared TSV files must be submitted in a specific order due to node links. Referring back to the graphical data model, a record cannot be submitted without first submitting the record(s) to which it is linked upstream (its "parent"). If metadata are submitted out of order, such as submitting a TSV with links to parent records that don't yet exist, the validator will reject the submission on the basis that the dependency is not present with the error message, "INVALID_LINK".
 
-The `program` and `project` nodes are the most upstream nodes and are created by a commons administrator. The first node submitted by data contributor is usually the `study` or `experiment` node, which points directly upstream to the `project` node. Next, the study participants are recorded in the `case` node, and subsequently any clinical information (demographics, diagnoses, etc.), biospecimen data (biopsy samples, extracted analytes), are linked to each case. Finally, metadata describing the actual raw data files to be uploaded to object storage are the last nodes submitted.
+The `program` and `project` nodes are the most upstream nodes and are created by a commons administrator. The first node submitted by data contributors after `core_metadata_collection` is usually the `study` or `experiment` node, which points directly upstream to the `project` node.
 
+Often next the study participants are recorded in the `case` or `subject` node, and subsequently any clinical information (demographics, diagnoses, etc.), biospecimen data (biopsy samples, extracted analytes), or other experimental methods/details are linked to each case.
 
-### Specifying Required Links
+### More about Specifying Required Links
 * * *
 
-At least one link is required for every record in a TSV, and sometimes multiple links could be specified. The links are specified in a TSV with the variable header `<nodes>.submitter_id`, where <nodes\> is the upstream node the record is linking to. The value of this variable is the specific submitter_id of the link.
+At least one link is required for every record in a TSV, and sometimes multiple links could be specified. The links are specified in a TSV with the variable header `<nodes>.submitter_id`, where <nodes\> is the back-reference of the upstream node the record is linking to. The value of this link variable is the specific `submitter_id` of the parent record. TSV or JSON templates that list all the possible link headers can be downloaded from the Data Dictionary Viewer on the data commons' website.
 
-For example, there are four cases in two studies in one `project`. The `study` node was made with two study `submitter_id`s: "study-01" and "study-02". The "case.tsv" file uploaded to describe the study participants enrolled will have a corresponding study. 
+For example, there are four cases in two studies in one `project`. The `study` node was made with two study `submitter_id`s: "study-01" and "study-02". The "case.tsv" file uploaded to describe the study participants enrolled will have a corresponding study.
 
 #### case.tsv
 
 |case|	submitter_id|	studies.submitter_id|
 |--|--|--|
-|1|case_1|study-01|	
+|1|case_1|study-01|
 |2|case_2|study-02|
 |3|case_3|study-01|
 |4|case_4|study-01|
 
 In this example cases 1, 2, and 4 all belong to "study-01", but case 2 belongs to "study-02". All the cases have different `submitter_id`s and these will be used in the subtending node that refers to a specific case.
 
-> __NOTE:__ The `submitter_id` needs to be unique not only within one node, but across all nodes.
+> __NOTE:__ The `submitter_id` needs to be unique not only within one node, but across all nodes in a project. The combination of `submitter_id` and `project_id` must be unique.
 
 ### Specifying Multiple Links
 * * *
@@ -97,46 +120,12 @@ In the above example, if "case_2" was enrolled in both "study-01" and "study-02"
 
 |case|submitter_id|studies.submitter_id#1|studies.submitter_id#2|
 |--|--|--|--|
-|1|case_1|study-01||	
+|1|case_1|study-01||
 |2|case_2|study-01|study-02|
 |3|case_3|study-01||
 |4|case_4|study-01||
 
-## 3. Register Data Files with the Windmill Data Portal
-* * *
-
-Special attention must be given to "data file" nodes as they contain variables that describe actual, raw data files, which will be uploaded to object storage by the data contributor and later downloaded by data analysts. Specifically, data files must be "registered" in order to be downloadable using the Windmill data portal or the [gen3-client](https://github.com/uc-cdis/cdis-data-client/releases).
-
-Registration of data files means entering the URL/address of each file in object storage to the "urls" column in the data file node's TSV. This URL is usually a location in a project folder of a data commons bucket in s3 object storage: "s3://commons-bucket/project-name/filename".
-
-For example, say the following local files need to be registered and then uploaded:
-
-```
-commandline-prompt$ ls -l
--rw-r--r--@  1 username  staff     6B May 30 15:18 file-1.dcm
--rw-r--r--@  1 username  staff     7B May 30 15:18 file-2.dcm
--rw-r--r--@  1 username  staff     8B May 30 15:18 file-3.dcm
-```
-
-In the 'urls' column of the TSV, enter the full s3 path for each file:
-
-| type | submitter_id | filename | file_size | md5sum|etc.... | urls |
-| :------------- | :------------- | :------------- | :------------- |:------------- | :------------- | :------------- |
-| mri_image | file-id-1 | file-1.dcm | 6365 |(md5sum value)| ... | s3://commons-bucket/project-name/file1.txt |
-| mri_image | file-id-2 | file-2.dcm | 72346 |(md5sum value)| ... | s3://commons-bucket/project-name/file2.txt |
-| mri_image | file-id-3 | file-3.dcm | 23468 |(md5sum value)| ... | s3://commons-bucket/project-name/file3.txt |
-
-
-Please make sure to check with the commons operator that the correct commons bucket name is used prior to submitting a data file node TSV. Once the data files are registered, their metadata cannot be easily changed and the metadata record must be deleted and re-created.
-
-Also be aware that metadata describing data files that will be uploaded to s3 object storage need to include the file size and md5sum in addition to the address of the file in s3 object storage. Therefore, before submitting data file metadata TSVs, make sure all of that information is included and correct. This information is used by data downloaders to confirm completeness of the download file via the md5sum and file size.
-
-## 4. Submit TSVs and Validate Metadata
-* * *
-
 ### Begin Metadata TSV Submissions
-
-To start submitting metadata TSVs, the first node, `project`, needs to be created by a commons administrator. Remembering that TSVs must be submitted for each node in a specific order, begin with the first node downstream of project based on the dictionary, often `study` or `experiment`, and continue to submit TSVs until all data file nodes are submitted and properly registered.
 
 From the Windmill data portal, click on "Data Submission" and then click "Submit Data" beside the project for which the metadata TSVs are being submitted.
 
@@ -211,17 +200,13 @@ When viewing a project, clicking on a node name will allow the user to view the 
 
 ![Node Information](Gen3_Model_node_view.png)
 
-## 5. Upload Data Files to Object Storage
-* * *
+## 4. Link Files to their Metadata
 
-<h3> Preparing Data </h3>
+Finally, once project metadata have been submitted, data file records are linked to their parent node records to allow filtering or querying of submitted data files based on these experimental/clinical metadata.
 
-Data files such as sequencing data (BAM, FASTQ), assay results, images, and PDFs should be uploaded with the Gen3 client.
+The easiest way to create the link between your data files' records and the records in their parent node is as follows:
 
-For detailed instructions, visit the [Gen3 client documentation](../gen3-client/). The metadata TSVs do not need to be submitted to the object store, as they have already been submitted via the API.
-
-* Downloaded the [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases) for your operating system.
-* Configure a profile with credentials:  
-`./gen3-client configure --profile=<profile_name> --cred=<credentials.json> --apiendpoint=<api_endpoint_url>`
-* Upload a data file using its GUID:  
-`./gen3-client upload-single --profile=<profile_name> --guid=<GUID> --file=<filename>`
+1. Download a TSV or JSON of the data file records.
+2. Add the link to the appropriate parent record for each data file record by adding the parent record's `submitter_id`
+3. Go to the Data Submission page for your project and re-submit the data file records to update them with the new link.
+4. Confirm in the graphical model that files are linked as expected.

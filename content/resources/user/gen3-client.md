@@ -96,7 +96,7 @@ Windows: C:\Users\Bob\.gen3\config
 
 * * *
 
-When data files are uploaded to a Gen3 data common's object storage, they should be registered and assigned with a unique, 128-bit ID called a ['GUID'](https://dataguids.org/). GUIDs are generated on the back-end, not submitted by users, and they are stored in the property `object_id`. 
+When data files are uploaded to a Gen3 data common's object storage, they should be registered and assigned with a unique, 128-bit ID called a ['GUID'](https://dataguids.org/). GUIDs are generated on the back-end, not submitted by users, and they are stored in the property `object_id`.
 
 When using the `gen3-client upload` command, a random GUID will be generated and assigned to each data file that has been submitted.
 

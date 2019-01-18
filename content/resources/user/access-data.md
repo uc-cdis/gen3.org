@@ -10,34 +10,8 @@ menuname: userMenu
 # Exploring Metadata and Downloading Data Files
 
 * * *
-In a Gen3 data commons, a distinction is made between two types of data: "data files" and "metadata".
 
-* A "data file" would be information like tabulated data values in spreadsheet, or a fastq/bam file containing DNA sequences. The contents of the file are not exposed to the API as queryable properties, so the file must be downloaded to view its content.
-
-* "Metadata" are key/value pairs, "properties", that can be queried via the Gen3 data commons' API or viewed in the Gen3 data commons' data exploration tool. 
-
-Examples of Metadata are:
-
-* Properties of a data file:
-	* File size
-	*	Filename
-	* File format
-* Values derived from a data file:
-	* Genotypes derived from a sequencing file.
-	* Brain region volume derived from an image file.
-* Experimental details:
-	* Kit used for an immunoassay.
-	* Type of blood collection tube used for biospecimen collection.
-* Demographic information.
-	* Race
-	* Gender
-	* Age
-* Clinical information
-	* Military history.
-	* Medical history.
-
-
-This format allows analysts to search for files of interest using the metadata for querying. This metadata can be accessed by clicking on "Exploration" link in the top navigation bar of the data commons submission portal.
+The [data in a Gen3 data commons](/resources/user/data-types) can be browsed and downloaded using tools either in the submission portal website or from the command-line.
 
 ## Exploration Tool
 * * *
@@ -68,7 +42,7 @@ The metadata in a Gen3 commons can also be queried via the [graphQL query langua
 
 ![Query](Gen3_Toolbar_query.png)
 
-The "Docs" button can be pressed to see documentation of the queryable nodes and properties. 
+The "Docs" button can be pressed to see documentation of the queryable nodes and properties.
 
 ![GraphQL Docs](Gen3_GraphiQL_docs.png)
 
@@ -98,11 +72,13 @@ The sponsor of a Gen3 data commons typically decides how users will access data 
 
 * In some cases, approved users may be allowed to download files directly to their local computer from within an internet browser using the Gen3 data commons Exploration tool or with the [gen3-client](/resources/user/gen3-client), which is a command-line tool.
 
-* When more security is required, users may be required to download and analyze data files in a protected environment. Such environments include virtual machines (VM) in a virtual private cloud (VPC) or in the Gen3 Workspace, which is accessed by clicking on "Workspace" in the top navigation bar of the data commons website. More information on how to access and use the Gen3 Workspace is documented [here](/resources/user/analyze-data).
+* When more security is required, users may be required to download and analyze data files in a protected environment. Such environments include virtual machines (VM) in a virtual private cloud (VPC) or in the Gen3 Workspace, which is accessed by clicking on "Workspace" in the top navigation bar of the data commons website. For more information, see the [documentation on how to access and use the Gen3 Workspace](/resources/user/analyze-data).
 
 ## Downloading a Data File Using the Exploration Tool
 
 Files can be browsed using the data exploration tool in a Gen3 data commons. Individual files can be downloaded by simply clicking on the filename and then clicking the download button.
+
+__Note:__ If a commons restricts data download access to within a virtual private cloud (VPC), then an "Access Denied" error will be displayed by the website.
 
 ## Using a Data File Download Manifest with the Gen3-Client
 
