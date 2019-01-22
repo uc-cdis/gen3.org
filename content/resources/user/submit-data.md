@@ -9,56 +9,86 @@ menuname: userMenu
 # Submitting Data Files and Linking Metadata in a Gen3 Data Commons
 * * *
 
+The following guide details the steps a data contributor must take to submit a project to a Gen3 data commons.
+
 Data in a Gen3 data commons is either stored in variables that are exposed to the API for query (what we refer to as 'metadata') or it is stored in files that must be downloaded prior to knowing their content (or 'data files'). For more information on the difference between data files and metadata exposed to the API, see the documentation on [data types in a Gen3 data commons](/resources/user/data-types).
 
-## 1. Create a Core Metadata Collection for your Project
+The process of uploading a data project to a Gen3 data commons is simple:
+	1. Upload data files
+	2. Map data files to a node in the data dictionary
+	3. Map additional clinical/experimental metadata to nodes in the data model
+	4. Link the data file node(s) to appropriate parent node(s)
+
+The following sections provide step-by-step instructions for this process:
+
+## 1. Prepare your Project in Submission Portal
 * * *
 <!--
 This section could be removed if we (semi)automate CMC creation for users
 -->
-1. Go to your data commons' submission portal website
-2. Click on 'Data Submission'
-3. Find your project in the List of Projects and click 'Submit Data'
-4. Click "Use Form Submission" and choose "core_metadata_collection"
-5. Fill in the required information and click 'Upload submission json from form'
-6. Click 'Submit'
-7. Make note of the 'submitter_id' of your core_metadata_collection record for later
+
+In order to upload data files, at least one record in the `core_metadata_collection` node must exist. If your project already has at least one record in this node, you can skip to step 2 below.
+
+Do the following to create your first `core_metadata_collection` record:
+
+	1. Go to your data commons' submission portal website
+	2. Click on 'Submit Data'
+	3. Find your project in the List of Projects and click 'Submit Data'
+	4. Click 'Use Form Submission' and choose `core_metadata_collection` from the dropdown list
+	5. Fill in the required information: minimally, the `submitter_id` and the `projects.code` (the name of your project without the "program-" prefix). If your project url is https://data.mycommons.org/example-training, your project's `code` would be just 'training', the `program` would be 'example', and your `project_id` would be the combination: 'example-training'.
+	6. Click 'Upload submission json from form' and then 'Submit'
+	7. Make note of the `submitter_id` of your `core_metadata_collection` record for step 3 below
+
+You should have received the message:
+succeeded: 200
+Successfully created entities: 1 of core_metadata_collection
+
+If you received any other message, then check the 'Details' to help determine the error.
+
+To view the records in the `core_metadata_collection` node in your project, you can go to:
+https://data.mycommons.org/example-training/search?node_type=core_metadata_collection
 
 ## 2. Upload Data Files to Object Storage
 * * *
 
-Data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., should be uploaded to object storage with the Gen3 client:
+Data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., are uploaded to object storage with the command-line tool gen3-client.
 
-* Download the [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases/latest) for your operating system.
-* Configure a profile with credentials downloaded from your Profile:  
-```
-./gen3-client configure --profile=<profile_name> --cred=<credentials.json> --apiendpoint=<api_endpoint_url>
-```
-* Upload Files: single data file, a directory of files, or matching files  
-```
-./gen3-client upload --profile=<profile_name> --upload-path=~/files/example.txt
-./gen3-client upload --profile=<profile_name> --upload-path=~/files/
-./gen3-client upload --profile=<profile_name> --upload-path=~/files/*.txt
-```
+	1. Download the latest [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases/latest) for your operating system.
+	2. Configure a profile with credentials downloaded from your Profile:  
 
-For detailed instructions, visit the [Gen3 client documentation](/resources/user/gen3-client).
+	```
+	./gen3-client configure --profile=<profile_name> --cred=<credentials.json> --apiendpoint=<api_endpoint_url>
 
-## 2. Map Your Files to a Data File Node
+	```
+	3. Upload Files: single data file, a directory of files, or matching files
+
+	```
+	./gen3-client upload --profile=<profile_name> --upload-path=~/files/example.txt
+
+	./gen3-client upload --profile=<profile_name> --upload-path=~/files/
+
+	./gen3-client upload --profile=<profile_name> --upload-path=~/files/*.txt
+
+	```
+
+For detailed instructions on configuring and using the gen3-client, visit the [Gen3 client documentation](/resources/user/gen3-client).
+
+## 3. Map Uploaded Files to a Data File Node
 * * *
 
 Once data files are successfully uploaded, the files must be mapped to the appropriate node in the data model before they're accessible to authorized users.
 
-1. Go to your data commons submission portal website.
-2. Click "Data Submission".
-![data submission image](data_submission.png)
-3. Click "Map My Files".
-![map my files image](map_my_files.png)
-4. Select the files to map using the checkboxes.
-5. Select the project and node that the files belong to.
-6. Fill out the values of any required properties.
-7. Finalize your submission.
+	1. Go to your data commons submission portal website.
+	2. Click "Submit Data".
+	![data submission image](submit-data.png)
+	3. Click "Map My Files".
+	![map my files image](map_my_files.png)
+	4. Select the files to map using the checkboxes.
+	5. Select the project and node that the files belong to.
+	6. Fill out the values of any required properties.
+	7. Finalize your submission.
 
-## 3. Submit Additional Project Metadata
+## 4. Submit Additional Project Metadata
 * * *
 
 Once data files have been mapped to the appropriate data file node, the rest of the study's metadata (e.g., patient clinical information, sample processing methods, pipeline/workflow parameters, etc.) should be submitted to the appropriate nodes. These metadata are submitted in tab-separated value (TSV) files for each node in the project, which can be downloaded from the "Dictionary" page of the data commons website.
@@ -131,23 +161,15 @@ From the Windmill data portal, click on "Data Submission" and then click "Submit
 
 To submit a TSV:
 
-1) Login to the Windmill data portal for the commons.
-
-2) Click on "Data Submission" in the top navigation bar.
-
+1. Login to the Windmill data portal for the commons.
+2. Click on "Data Submission" in the top navigation bar.
 ![Data Submission](Gen3_Toolbar_data_submission.png)
-
-3) Click on "Submit Data" by the project to submit metadata.
-
+3. Click on "Submit Data" by the project to submit metadata.
 ![Submit Data](Gen3_Data_Submission_submit_data.png)
-
-4) Click on "Upload File".
-
+4. Click on "Upload File".
 ![Upload and Submit](Gen3_Data_Submission_Use_Form.png)
-
-5) Navigate to the TSV and click "open", the contents of the TSV should appear in the grey box below.
-
-6) Click "Submit".
+5. Navigate to the TSV and click "open", the contents of the TSV should appear in the grey box below.
+6. Click "Submit".
 
 A message should appear that indicates either success (green, "succeeded: 200") or failure (grey, "failed: 400"). Further details can be reviewed by clicking on "DETAILS", which displays the API response in JSON form. Each record/entity that was submitted, it gets a true/false value for "valid" and lists "errors" if it was not valid.
 
@@ -200,13 +222,13 @@ When viewing a project, clicking on a node name will allow the user to view the 
 
 ![Node Information](Gen3_Model_node_view.png)
 
-## 4. Link Files to their Metadata
+## 5. Link Files to their Metadata
 
 Finally, once project metadata have been submitted, data file records are linked to their parent node records to allow filtering or querying of submitted data files based on these experimental/clinical metadata.
 
 The easiest way to create the link between your data files' records and the records in their parent node is as follows:
 
-1. Download a TSV or JSON of the data file records.
-2. Add the link to the appropriate parent record for each data file record by adding the parent record's `submitter_id`
-3. Go to the Data Submission page for your project and re-submit the data file records to update them with the new link.
-4. Confirm in the graphical model that files are linked as expected.
+	1. Download a TSV or JSON of the data file records.
+	2. Add the link to the appropriate parent record for each data file record by adding the parent record's `submitter_id`
+	3. Go to the Data Submission page for your project and re-submit the data file records to update them with the new link.
+	4. Confirm in the graphical model that files are linked as expected.
