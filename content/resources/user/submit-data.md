@@ -246,8 +246,14 @@ The easiest way to create the link between your data files' records and the reco
 3. Go to the Data Submission page for your project and re-submit the data file records to update them with the new link.
 4. Confirm in the graphical model that files are linked as expected.
 
-> __Note:__ All records in a node can be downloaded in a single TSV file by hitting the data commons data export API. For example, replace the first part of the following url with your project's url and 'imaging_file' with the node you'd like to download records for:
+> __Note:__ All records in a node can be downloaded in a single TSV file by hitting the data commons' data export API:
+
+```
+<commons-url>/api/v0/submission/<program>/<project>/export/?node_label=<node>&format=tsv
+```
+
+For example, the following link would download a single TSV containing all the `core_metadata_collection` records in the project "example-training" from the commons "data.mycommons.org":
 
 https://data.mycommons.org/api/v0/submission/example/training/export/?node_label=core_metadata_collection&format=tsv
 
-The links in the downloaded TSV can be updated by filling in the submitter_ids of the parent records, saving, and re-submitting the file to the data portal website using 'Upload File'.
+The links in the downloaded TSV can be updated by filling in the submitter_ids of the corresponding parent records, saving, and re-submitting the file to the data portal website using 'Upload File'.
