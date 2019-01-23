@@ -14,6 +14,7 @@ The following guide details the steps a data contributor must take to submit a p
 Data in a Gen3 data commons is either stored in variables that are exposed to the API for query (what we refer to as 'metadata') or it is stored in files that must be downloaded prior to knowing their content (or 'data files'). For more information on the difference between data files and metadata exposed to the API, see the documentation on [data types in a Gen3 data commons](/resources/user/data-types).
 
 The process of uploading a data project to a Gen3 data commons is simple:
+
 	1. Prepare Project in Submission Portal
 	2. Upload Data Files to Object Storage
 	3. Map Uploaded Files to a Data File Node
