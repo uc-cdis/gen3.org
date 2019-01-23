@@ -11,15 +11,15 @@ menuname: userMenu
 
 The following guide details the steps a data contributor must take to submit a project to a Gen3 data commons.
 
-Data in a Gen3 data commons is either stored in variables that are exposed to the API for query (what we refer to as 'metadata') or it is stored in files that must be downloaded prior to knowing their content (or 'data files'). For more information on the difference between data files and metadata exposed to the API, see the documentation on [data types in a Gen3 data commons](/resources/user/data-types).
+Data in a Gen3 data commons are either stored in variables that are exposed to the API for query (what we refer to as 'metadata') or are stored in files that must be downloaded prior to knowing their content (or 'data files'). For more information on the difference between data files and metadata exposed to the API, see the documentation on [data types in a Gen3 data commons](/resources/user/data-types).
 
 The process of uploading a data project to a Gen3 data commons is simple:
 
-	1. Prepare Project in Submission Portal
-	2. Upload Data Files to Object Storage
-	3. Map Uploaded Files to a Data File Node
-	4. Submit Additional Project Metadata
-	5. Link Files to their Metadata
+	1. [Prepare Project in Submission Portal](#1.-prepare-project-in-submission-portal)
+	2. [Upload Data Files to Object Storage](#2.-upload-data-files-to-object-storage)
+	3. [Map Uploaded Files to a Data File Node](#3.-map-uploaded-files-to-a-data-file-node)
+	4. [Submit Additional Project Metadata](#4.-submit-additional-project-metadata)
+	5. [Link Data File Records to their Metadata Records](#5.-link-files-to-their-metadata)
 
 The following sections provide step-by-step instructions for this process:
 
