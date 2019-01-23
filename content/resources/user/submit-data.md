@@ -88,14 +88,23 @@ Once data files are successfully uploaded, the files must be mapped to the appro
 
 1. Go to your data commons submission portal website.
 2. Click 'Submit Data'.
+
 ![submit-data.png](submit-data.png)
+
 3. Click 'Map My Files' button.
+
 ![map_my_files.png](map-my-files.png)
+
 4. Select the files to map using the checkboxes and click 'Map Files' button.
+
 ![select-files.png](select-files.png)
+
 5. Select the project and node that the files belong to.
+
 ![map-to-node.png](map-to-node.png)
+
 6. Fill in the values of any required properties and click 'Submit' button.
+
 ![fill-required-properties.png](fill-required-properties.png)
 
 > __Note:__ The required property 'Type' in step 6 is the node's name (the 'type' of node) and should be the same as the value selected from the node dropdown list in step 5.
@@ -143,6 +152,7 @@ For example, there are four cases in two studies in one `project`. The `study` n
 
 #### case.tsv
 
+
 |case|	submitter_id|	studies.submitter_id|
 |--|--|--|
 |1|case_1|study-01|
@@ -160,6 +170,7 @@ In this example cases 1, 2, and 4 all belong to "study-01", but case 2 belongs t
 Links can be one-to-one, many-to-one, one-to-many, and many-to-many. Since a single study participant can be enrolled in multiple studies, and a single study will have multiple cases enrolled in it, this link is "many-to-many". On the other hand, since a single study cannot be linked to multiple projects, but a single project can have many studies linked to it, the study -> project link is "many-to-one".
 
 In the above example, if "case_2" was enrolled in both "study-01" and "study-02", then there would be two columns to specify these links in the case.tsv file: "studies.submitter_id#1" and "studies.submitter_id#2". The values would be "study-01" for one of them and "study-02" for the other.
+
 
 |case|submitter_id|studies.submitter_id#1|studies.submitter_id#2|
 |--|--|--|--|
