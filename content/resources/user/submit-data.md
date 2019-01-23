@@ -68,7 +68,7 @@ Data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, im
 	./gen3-client configure --profile=<profile_name> --cred=<credentials.json> --apiendpoint=<api_endpoint_url>
 
 	```
-3. Upload Files: single data file, a directory of files, or matching files
+3. Upload Files: single data file, a directory of files, or matching files:
 
 	```
 	./gen3-client upload --profile=<profile_name> --upload-path=~/files/example.txt
@@ -95,7 +95,7 @@ Once data files are successfully uploaded, the files must be mapped to the appro
 ![select-files.png](select-files.png)
 5. Select the project and node that the files belong to.
 ![map-to-node.png](map-to-node.png)
-6. Fill out the values of any required properties and click 'Submit' button.
+6. Fill in the values of any required properties and click 'Submit' button.
 ![fill-required-properties.png](fill-required-properties.png)
 
 > __Note:__ The required property 'Type' in step 6 is the node's name (the 'type' of node) and should be the same as the value selected from the node dropdown list in step 5.
@@ -256,4 +256,4 @@ For example, the following link would download a single TSV containing all the `
 
 https://data.mycommons.org/api/v0/submission/example/training/export/?node_label=core_metadata_collection&format=tsv
 
-The links in the downloaded TSV can be updated by filling in the submitter_ids of the corresponding parent records, saving, and re-submitting the file to the data portal website using 'Upload File'.
+The links in the downloaded TSV can be updated by filling in the submitter_ids of the corresponding parent records, saving, and re-submitting the file to the data portal website using 'Upload File' as done in [step 4](#more-about-specifying-required-links).
