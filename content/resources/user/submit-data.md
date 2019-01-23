@@ -14,14 +14,19 @@ The following guide details the steps a data contributor must take to submit a p
 Data in a Gen3 data commons is either stored in variables that are exposed to the API for query (what we refer to as 'metadata') or it is stored in files that must be downloaded prior to knowing their content (or 'data files'). For more information on the difference between data files and metadata exposed to the API, see the documentation on [data types in a Gen3 data commons](/resources/user/data-types).
 
 The process of uploading a data project to a Gen3 data commons is simple:
-	1. Upload data files
-	2. Map data files to a node in the data dictionary
-	3. Map additional clinical/experimental metadata to nodes in the data model
-	4. Link the data file node(s) to appropriate parent node(s)
+	1. Prepare Project in Submission Portal
+	2. Upload Data Files to Object Storage
+	3. Map Uploaded Files to a Data File Node
+	4. Submit Additional Project Metadata
+	5. Link Files to their Metadata
+
+	1. Upload data files using the gen3-client.
+	2. Map data files to a node in the data dictionary.
+	3.
 
 The following sections provide step-by-step instructions for this process:
 
-## 1. Prepare your Project in Submission Portal
+## 1. Prepare Project in Submission Portal
 * * *
 <!--
 This section could be removed if we (semi)automate CMC creation for users
@@ -79,34 +84,39 @@ For detailed instructions on configuring and using the gen3-client, visit the [G
 Once data files are successfully uploaded, the files must be mapped to the appropriate node in the data model before they're accessible to authorized users.
 
 	1. Go to your data commons submission portal website.
-	2. Click "Submit Data".
-	![data submission image](submit-data.png)
-	3. Click "Map My Files".
-	![map my files image](map_my_files.png)
-	4. Select the files to map using the checkboxes.
+	2. Click 'Submit Data'.
+	![submit-data.png](submit-data.png)
+	3. Click 'Map My Files' button.
+	![map_my_files.png](map_my_files.png)
+	4. Select the files to map using the checkboxes and click 'Map Files' button.
+	![select-files.png](select-files.png)
 	5. Select the project and node that the files belong to.
-	6. Fill out the values of any required properties.
-	7. Finalize your submission.
+	![map-to-node.png](map-to-node.png)
+	6. Fill out the values of any required properties and click 'Submit' button.
+	![fill-required-properties.png](fill-required-properties.png)
+
+> __Note:__ The required property 'Type' in step 6 is the node's name (the 'type' of node) and should be the same as the value selected from the node dropdown list in step 5.
+
+You should receive the message "# files mapped successfully!" upon success.
 
 ## 4. Submit Additional Project Metadata
 * * *
 
-Once data files have been mapped to the appropriate data file node, the rest of the study's metadata (e.g., patient clinical information, sample processing methods, pipeline/workflow parameters, etc.) should be submitted to the appropriate nodes. These metadata are submitted in tab-separated value (TSV) files for each node in the project, which can be downloaded from the "Dictionary" page of the data commons website.
+Once data files have been mapped to the appropriate data file node, the rest of the project's metadata (e.g., patient clinical information, sample processing methods, pipeline/workflow parameters, etc.) should be submitted to the appropriate nodes. These metadata are submitted in tab-separated value (TSV) files for each node in the project, which can be downloaded from the "Dictionary" page of the data commons website.
 
-It may be helpful to think of each TSV as a node in the graph of the data model. Column headers in the TSV are the properties stored in that node, and each row represents a "record" or "entity" in that node.
+It may be helpful to think of each TSV as a node in the graph of the data model. Column headers in the TSV are the properties stored in that node, and each row represents a "record" or "entity" in that node. When a TSV is successfully submitted, each row in that TSV becomes a single record in the node.
 
 Properties in a node are either required or not, and this can be determined by referencing the data dictionary's viewer's "Required" column for a specific node.
 
+There are a number of properties that deserve special mention:
 
-### There are a number of properties that deserve special mention:
+	* `submitter_id`: Each record in every node will have a `submitter_id`, which is a unique alphanumeric identifier (any combination of ASCII characters) for that record across the whole project and is specified by the data submitter. It is entirely up to the data contributor what the submitter_id will be for each record in a project, but the string chosen must be unique within that project.
 
-1. `submitter_id`: Each record in every node will have a `submitter_id`, which is a unique alphanumeric identifier (any combination of ASCII characters) for that record across the whole project and is specified by the data submitter. It is entirely up to the data contributor what the submitter_id will be for each record in a project, but the string chosen must be unique within that project.
+	* `type`: Every node has a `type` property, which is simply the name of the node. By providing the node name in the "type" property, the submission portal knows which node to put the data in.
 
-2. `type`: Every node has a `type` property, which is simply the name of the node. By providing the node name in the "type" property, the submission portal knows which node to put the data in.
+	* `id`: Every record in every node in a data commons has the unique property `id`, which is not submitted by the data contributor but rather generated on the backend. The value of the property `id` is a 128-bit UUID (a unique 32 character identifier).
 
-3. `id`: Every record in every node in a data commons has the unique property `id`, which is not submitted by the data contributor but rather generated on the backend. The value of the property `id` is a 128-bit UUID (a unique 32 character identifier).
-
-4. `project_id` and `code`: Every project record in a data commons is linked to a parent `program` node and has the properties `project_id` and a `code`. The property `project_id` is the dash-separated combination of `program` and `code`. For example, if your project was named 'Experiment1', and this project was part of the 'Pilot' program, the project's `project_id` would be 'Pilot-Experiment1', and the project's `code` would be 'Experiment1'. Finally, just like every record in the data commons, the project has the unique property `id`, which is not to be confused with the project's `project_id`.
+	* `project_id` and `code`: Every project record in a data commons is linked to a parent `program` node and has the properties `project_id` and a `code`. The property `project_id` is the dash-separated combination of `program` and `code`. For example, if your project was named 'Experiment1', and this project was part of the 'Pilot' program, the project's `project_id` would be 'Pilot-Experiment1', and the project's `code` would be 'Experiment1'. Finally, just like every record in the data commons, the project has the unique property `id`, which is not to be confused with the project's `project_id`.
 
 Template TSVs are provided in each node's page in the data dictionary.
 
@@ -117,7 +127,7 @@ Template TSVs are provided in each node's page in the data dictionary.
 
 The prepared TSV files must be submitted in a specific order due to node links. Referring back to the graphical data model, a record cannot be submitted without first submitting the record(s) to which it is linked upstream (its "parent"). If metadata are submitted out of order, such as submitting a TSV with links to parent records that don't yet exist, the validator will reject the submission on the basis that the dependency is not present with the error message, "INVALID_LINK".
 
-The `program` and `project` nodes are the most upstream nodes and are created by a commons administrator. The first node submitted by data contributors after `core_metadata_collection` is usually the `study` or `experiment` node, which points directly upstream to the `project` node.
+The `program` and `project` nodes are the most upstream nodes and are created by a commons administrator. The first node submitted by data contributors after `core_metadata_collection` depends on the specific data dictionary employed by the data commons but is usually the `study` or `experiment` node, which points directly upstream to the `project` node.
 
 Often next the study participants are recorded in the `case` or `subject` node, and subsequently any clinical information (demographics, diagnoses, etc.), biospecimen data (biopsy samples, extracted analytes), or other experimental methods/details are linked to each case.
 
@@ -161,15 +171,15 @@ From the Windmill data portal, click on "Data Submission" and then click "Submit
 
 To submit a TSV:
 
-1. Login to the Windmill data portal for the commons.
-2. Click on "Data Submission" in the top navigation bar.
-![Data Submission](Gen3_Toolbar_data_submission.png)
-3. Click on "Submit Data" by the project to submit metadata.
-![Submit Data](Gen3_Data_Submission_submit_data.png)
-4. Click on "Upload File".
-![Upload and Submit](Gen3_Data_Submission_Use_Form.png)
-5. Navigate to the TSV and click "open", the contents of the TSV should appear in the grey box below.
-6. Click "Submit".
+	1. Login to the Windmill data portal for the commons.
+	2. Click on "Data Submission" in the top navigation bar.
+	![Data Submission](Gen3_Toolbar_data_submission.png)
+	3. Click on "Submit Data" by the project to submit metadata.
+	![Submit Data](Gen3_Data_Submission_submit_data.png)
+	4. Click on "Upload File".
+	![Upload and Submit](Gen3_Data_Submission_Use_Form.png)
+	5. Navigate to the TSV and click "open", the contents of the TSV should appear in the grey box below.
+	6. Click "Submit".
 
 A message should appear that indicates either success (green, "succeeded: 200") or failure (grey, "failed: 400"). Further details can be reviewed by clicking on "DETAILS", which displays the API response in JSON form. Each record/entity that was submitted, it gets a true/false value for "valid" and lists "errors" if it was not valid.
 
@@ -224,7 +234,7 @@ When viewing a project, clicking on a node name will allow the user to view the 
 
 ## 5. Link Files to their Metadata
 
-Finally, once project metadata have been submitted, data file records are linked to their parent node records to allow filtering or querying of submitted data files based on these experimental/clinical metadata.
+Finally, once project metadata have been submitted, data file records are linked to the corresponding records in the parent node to allow filtering or querying of submitted data files based on these experimental/clinical metadata.
 
 The easiest way to create the link between your data files' records and the records in their parent node is as follows:
 
