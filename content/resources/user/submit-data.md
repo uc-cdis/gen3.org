@@ -20,10 +20,6 @@ The process of uploading a data project to a Gen3 data commons is simple:
 	4. Submit Additional Project Metadata
 	5. Link Files to their Metadata
 
-	1. Upload data files using the gen3-client.
-	2. Map data files to a node in the data dictionary.
-	3.
-
 The following sections provide step-by-step instructions for this process:
 
 ## 1. Prepare Project in Submission Portal
