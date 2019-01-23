@@ -231,9 +231,9 @@ If the submission throws errors or claims the submission to be invalid, it will 
 
 When viewing a project, clicking on a node name will allow the user to view the records in that node. From here a user can download, view, or completely delete records associated with any project they have delete access to.
 
-![Node Click](/resources/user/submit-data/Gen3_Model_Click_highlight.png)
+![Node Click](Gen3_Model_Click_highlight.png)
 
-![Node Information](/resources/user/submit-data/Gen3_Model_node_view.png)
+![Node Information](Gen3_Model_node_view.png)
 
 ## 5. Link Files to their Metadata
 
