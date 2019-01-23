@@ -15,11 +15,11 @@ Data in a Gen3 data commons are either stored in variables that are exposed to t
 
 The process of uploading a data project to a Gen3 data commons is simple:
 
-	1. [Prepare Project in Submission Portal](#1.-prepare-project-in-submission-portal)
-	2. [Upload Data Files to Object Storage](#2.-upload-data-files-to-object-storage)
-	3. [Map Uploaded Files to a Data File Node](#3.-map-uploaded-files-to-a-data-file-node)
-	4. [Submit Additional Project Metadata](#4.-submit-additional-project-metadata)
-	5. [Link Data File Records to their Metadata Records](#5.-link-files-to-their-metadata)
+1. [Prepare Project in Submission Portal](#1.-prepare-project-in-submission-portal)
+2. [Upload Data Files to Object Storage](#2.-upload-data-files-to-object-storage)
+3. [Map Uploaded Files to a Data File Node](#3.-map-uploaded-files-to-a-data-file-node)
+4. [Submit Additional Project Metadata](#4.-submit-additional-project-metadata)
+5. [Link Data File Records to their Metadata Records](#5.-link-files-to-their-metadata)
 
 The following sections provide step-by-step instructions for this process:
 
@@ -33,13 +33,13 @@ In order to upload data files, at least one record in the `core_metadata_collect
 
 Do the following to create your first `core_metadata_collection` record:
 
-	1. Go to your data commons' submission portal website
-	2. Click on 'Submit Data'
-	3. Find your project in the List of Projects and click 'Submit Data'
-	4. Click 'Use Form Submission' and choose `core_metadata_collection` from the dropdown list (or [edit and upload this TSV](/resources/user/submit-data/gen3_core_metadata_collection_template.tsv) by clicking 'Upload File' then 'Submit')
-	5. Fill in the required information (see Note below)
-	6. Click 'Upload submission json from form' and then 'Submit'
-	7. Make note of the `submitter_id` of your `core_metadata_collection` record for step 3 below
+1. Go to your data commons' submission portal website
+2. Click on 'Submit Data'
+3. Find your project in the List of Projects and click 'Submit Data'
+4. Click 'Use Form Submission' and choose `core_metadata_collection` from the dropdown list (or [edit and upload this TSV](/resources/user/submit-data/gen3_core_metadata_collection_template.tsv) by clicking 'Upload File' then 'Submit')
+5. Fill in the required information (see Note below)
+6. Click 'Upload submission json from form' and then 'Submit'
+7. Make note of the `submitter_id` of your `core_metadata_collection` record for step 3 below
 
 >__Note:__ Minimally, `submitter_id` and `projects.code` are required properties. The project `code` is the name of your project without the "program-" prefix). For example, if your project url is https://data.mycommons.org/example-training, your project's `code` would be 'training', the `program` would be 'example', and your `project_id` would be the combination: 'example-training'.
 
