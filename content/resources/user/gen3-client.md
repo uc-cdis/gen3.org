@@ -21,7 +21,7 @@ The gen3-client provides an easy-to-use, command-line interface for uploading an
 
 * * *
 
-The gen3-client can be [downloaded from Github](https://github.com/uc-cdis/cdis-data-client/releases/tag/0.2.1) for Windows, Linux or Mac OS, or it can be installed from source using Google's [GO language](https://golang.org/dl/) (instructions in Github README).
+The gen3-client can be [downloaded from Github](https://github.com/uc-cdis/cdis-data-client/releases/latest) for Windows, Linux or Mac OS, or it can be installed from source using Google's [GO language](https://golang.org/dl/) (instructions in Github README).
 
 To install, download the correct file for your operating system to the location of your choice, unzip it, and add that location to your path. The program is executed from the command-line by running the command: `gen3-client <options>`.
 
@@ -38,7 +38,7 @@ To see the help menu for the tool, simply type in `gen3-client` or `./gen3-clien
 
 ### Windows Installation Instructions
 
-Download the Windows 64-bit version of the gen3-client [here](https://github.com/uc-cdis/cdis-data-client/releases/download/0.2.1/dataclient_win64.zip).
+Download the Windows 64-bit version of the gen3-client [here](https://github.com/uc-cdis/cdis-data-client/releases/latest).
 
 Add the unzipped executable to a directory, for example:
  "C:\Program Files\gen3-client\gen3-client.exe"

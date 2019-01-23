@@ -55,13 +55,13 @@ You can manage active Notebook and terminal processes by clicking on "Running". 
 * * *
 ## Getting Files into the Gen3 Workspace
 * * *
-In order to download data files directly from a Gen3 data commons into your workspace, install and use the [gen3-client](https://github.com/uc-cdis/cdis-data-client/releases) in a terminal window from your Workspace.  Launch a terminal window by clicking on the "New" dropdown menu, then click on "Terminal".
+In order to download data files directly from a Gen3 data commons into your workspace, install and use the [gen3-client](https://github.com/uc-cdis/cdis-data-client/releases/latest) in a terminal window from your Workspace.  Launch a terminal window by clicking on the "New" dropdown menu, then click on "Terminal".
 
 From the command line, download the latest [Linux version of the gen3-client](https://github.com/uc-cdis/cdis-data-client/releases/latest) using the `wget` command. Next, unzip the archive and add it to your path:
 
 Example:
 ```
-wget https://github.com/uc-cdis/cdis-data-client/releases/download/0.2.1/dataclient_linux.zip
+wget https://github.com/uc-cdis/cdis-data-client/releases/download/0.3.0/dataclient_linux.zip
 unzip dataclient_linux.zip
 PATH=$PATH:~/
 ```
@@ -71,7 +71,7 @@ Other files you might need, like your `credentials.json` file to configure a pro
 
 Example:
 ```
-jovyan@jupyter-user:~$ wget https://github.com/uc-cdis/cdis-data-client/releases/download/0.2.1/dataclient_linux.zip
+jovyan@jupyter-user:~$ wget https://github.com/uc-cdis/cdis-data-client/releases/download/0.3.0/dataclient_linux.zip
 Resolving github-production-release-asset-2e65be.s3.amazonaws.com
 Connecting to github-production-release-asset-2e65be.s3.amazonaws.com
 HTTP request sent, awaiting response... 200 OK
