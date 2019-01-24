@@ -90,23 +90,23 @@ Once data files are successfully uploaded, the files must be mapped to the appro
 
 2. Click 'Submit Data'.
 
-![submit-data.png](submit-data.png)
+    ![submit-data.png](submit-data.png)
 
 3. Click 'Map My Files' button.
 
-![map_my_files.png](map-my-files.png)
+    ![map_my_files.png](map-my-files.png)
 
 4. Select the files to map using the checkboxes and click 'Map Files' button.
 
-![select-files.png](select-files.png)
+    ![select-files.png](select-files.png)
 
 5. Select the project and node that the files belong to.
 
-![map-to-node.png](map-to-node.png)
+    ![map-to-node.png](map-to-node.png)
 
 6. Fill in the values of any required properties and click 'Submit' button.
 
-![fill-required-properties.png](fill-required-properties.png)
+    ![fill-required-properties.png](fill-required-properties.png)
 
 > __Note:__ The required property 'Type' in step 6 is the node's name (the 'type' of node) and should be the same as the value selected from the node dropdown list in step 5.
 
