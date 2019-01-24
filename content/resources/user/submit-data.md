@@ -154,12 +154,12 @@ For example, there are four cases in two studies in one `project`. The `study` n
 #### case.tsv
 
 
-|case|	submitter_id|	studies.submitter_id|
-|--|--|--|
-|1|case_1|study-01|
-|2|case_2|study-02|
-|3|case_3|study-01|
-|4|case_4|study-01|
+| case | submitter_id | studies.submitter_id |
+| --- | --- | --- |
+| 1 | case_1 | study-01 |
+| 2 | case_2 | study-02 |
+| 3 | case_3 | study-01 |
+| 4 | case_4 | study-01 |
 
 
 In this example cases 1, 2, and 4 all belong to "study-01", but case 2 belongs to "study-02". All the cases have different `submitter_id`s and these will be used in the subtending node that refers to a specific case.
@@ -174,12 +174,12 @@ Links can be one-to-one, many-to-one, one-to-many, and many-to-many. Since a sin
 In the above example, if "case_2" was enrolled in both "study-01" and "study-02", then there would be two columns to specify these links in the case.tsv file: "studies.submitter_id#1" and "studies.submitter_id#2". The values would be "study-01" for one of them and "study-02" for the other.
 
 
-|case|submitter_id|studies.submitter_id#1|studies.submitter_id#2|
-|--|--|--|--|
-|1|case_1|study-01||
-|2|case_2|study-01|study-02|
-|3|case_3|study-01||
-|4|case_4|study-01||
+| case | submitter_id | studies.submitter_id#1 | studies.submitter_id#2 |
+| --- | --- | --- | --- |
+| 1 | case_1 | study-01 | |
+| 2 | case_2 | study-01 | study-02 |
+| 3 | case_3 | study-01 | |
+| 4 | case_4 | study-01 | |
 
 
 ### Begin Metadata TSV Submissions
