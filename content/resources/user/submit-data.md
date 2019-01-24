@@ -87,15 +87,25 @@ For detailed instructions on configuring and using the gen3-client, visit the [G
 Once data files are successfully uploaded, the files must be mapped to the appropriate node in the data model before they're accessible to authorized users.
 
 1. Go to your data commons submission portal website.
+
 2. Click 'Submit Data'.
+
 ![submit-data.png](submit-data.png)
+
 3. Click 'Map My Files' button.
+
 ![map_my_files.png](map-my-files.png)
+
 4. Select the files to map using the checkboxes and click 'Map Files' button.
+
 ![select-files.png](select-files.png)
+
 5. Select the project and node that the files belong to.
+
 ![map-to-node.png](map-to-node.png)
+
 6. Fill in the values of any required properties and click 'Submit' button.
+
 ![fill-required-properties.png](fill-required-properties.png)
 
 > __Note:__ The required property 'Type' in step 6 is the node's name (the 'type' of node) and should be the same as the value selected from the node dropdown list in step 5.
@@ -143,12 +153,14 @@ For example, there are four cases in two studies in one `project`. The `study` n
 
 #### case.tsv
 
-|case|	submitter_id|	studies.submitter_id|
-|--|--|--|
-|1|case_1|study-01|
-|2|case_2|study-02|
-|3|case_3|study-01|
-|4|case_4|study-01|
+
+| case | submitter_id | studies.submitter_id |
+| --- | --- | --- |
+| 1 | case_1 | study-01 |
+| 2 | case_2 | study-02 |
+| 3 | case_3 | study-01 |
+| 4 | case_4 | study-01 |
+
 
 In this example cases 1, 2, and 4 all belong to "study-01", but case 2 belongs to "study-02". All the cases have different `submitter_id`s and these will be used in the subtending node that refers to a specific case.
 
@@ -161,12 +173,14 @@ Links can be one-to-one, many-to-one, one-to-many, and many-to-many. Since a sin
 
 In the above example, if "case_2" was enrolled in both "study-01" and "study-02", then there would be two columns to specify these links in the case.tsv file: "studies.submitter_id#1" and "studies.submitter_id#2". The values would be "study-01" for one of them and "study-02" for the other.
 
-|case|submitter_id|studies.submitter_id#1|studies.submitter_id#2|
-|--|--|--|--|
-|1|case_1|study-01||
-|2|case_2|study-01|study-02|
-|3|case_3|study-01||
-|4|case_4|study-01||
+
+| case | submitter_id | studies.submitter_id#1 | studies.submitter_id#2 |
+| --- | --- | --- | --- |
+| 1 | case_1 | study-01 | |
+| 2 | case_2 | study-01 | study-02 |
+| 3 | case_3 | study-01 | |
+| 4 | case_4 | study-01 | |
+
 
 ### Begin Metadata TSV Submissions
 
