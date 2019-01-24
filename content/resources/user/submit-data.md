@@ -191,11 +191,11 @@ To submit a TSV:
 
 1. Login to the Windmill data portal for the commons.
 2. Click on "Data Submission" in the top navigation bar.
-    ![Data Submission](/resources/user/submit-data/Gen3_Toolbar_data_submission.png)
+    ![Data Submission](Gen3_Toolbar_data_submission.png)
 3. Click on "Submit Data" by the project to submit metadata.
-    ![Submit Data](/resources/user/submit-data/Gen3_Data_Submission_submit_data.png)
+    ![Submit Data](Gen3_Data_Submission_submit_data.png)
 4. Click on "Upload File".
-    ![Upload and Submit](/resources/user/submit-data/Gen3_Data_Submission_Use_Form.png)
+    ![Upload and Submit](Gen3_Data_Submission_Use_Form.png)
 5. Navigate to the TSV and click "open", the contents of the TSV should appear in the grey box below.
 6. Click "Submit".
 
