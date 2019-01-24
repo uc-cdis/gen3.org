@@ -108,6 +108,7 @@ Once data files are successfully uploaded, the files must be mapped to the appro
 
     ![fill-required-properties.png](fill-required-properties.png)
 
+
 > __Note:__ The required property 'Type' in step 6 is the node's name (the 'type' of node) and should be the same as the value selected from the node dropdown list in step 5.
 
 You should receive the message "# files mapped successfully!" upon success.
