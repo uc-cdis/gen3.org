@@ -12,7 +12,7 @@ menuname: userMenu
 * * *
 In a Gen3 data commons, a semantic distinction is made between two types of data: "data files" and "metadata".
 
-* A "data file" would be information like tabulated data values in spreadsheet or a fastq/bam file containing DNA sequences. The contents of the file are not exposed to the API as queryable properties, so the file must be downloaded to view its content.
+* A "data file" could be information like tabulated data values in a spreadsheet or a fastq/bam file containing DNA sequences. The contents of the file are not exposed to the API as queryable properties, so the file must be downloaded to view its content.
 
 * "Metadata" are variables that help to organize or convey additional information about corresponding data files so that they can be queried via the Gen3 data commons' API or viewed in the Gen3 data commons' data exploration tool. In a Gen3 data dictionary, variable names are termed "properties", and data contributors provide the values for these pre-defined properties in their data submissions.
 
@@ -64,7 +64,7 @@ Each node in the data dictionary is linked in a logical manner to other nodes, w
 
 The following image displays the data dictionary viewer, the 'biospecimen' node entry in the dictionary, and an example graphical model of a project:
 
-![Data Dictionary](data-model.png)
+![data-model.png](data-model.png)
 
 ### Why Do Gen3 Commons Use a Data Model?
 
@@ -76,7 +76,7 @@ The following image displays the data dictionary viewer, the 'biospecimen' node 
 
 Once access has been granted to the Windmill data submission portal, we recommend reviewing the commons' specific data dictionary by clicking "Dictionary" in the top navigation bar. This tool helps users understand the variable types, requirements, and node dependencies or links required for submission.
 
-![Dictionary](Gen3_Toolbar_Dictionary.png)
+![Gen3_Toolbar_Dictionary.png](Gen3_Toolbar_Dictionary.png)
 
 If a desired submission element is not currently described in the model, users will need to work with the commons to extend the data model. Provide the commons with a description of the requested data elements, and they will work with the sponsor or data modeling working group to review the request and find an appropriate home for the data elements.
 
