@@ -190,13 +190,22 @@ From the Windmill data portal, click on "Data Submission" and then click "Submit
 To submit a TSV:
 
 1. Login to the Windmill data portal for the commons.
+
 2. Click on "Data Submission" in the top navigation bar.
+
     ![Data Submission](Gen3_Toolbar_data_submission.png)
+
 3. Click on "Submit Data" by the project to submit metadata.
+
     ![Submit Data](Gen3_Data_Submission_submit_data.png)
+
 4. Click on "Upload File".
+
     ![Upload and Submit](Gen3_Data_Submission_Use_Form.png)
-5. Navigate to the TSV and click "open", the contents of the TSV should appear in the grey box below.
+
+5. Navigate to the TSV and click "open", the contents of the TSV should appear in the grey box
+below.
+
 6. Click "Submit".
 
 A message should appear that indicates either success (green, "succeeded: 200") or failure (grey, "failed: 400"). Further details can be reviewed by clicking on "DETAILS", which displays the API response in JSON form. Each record/entity that was submitted, it gets a true/false value for "valid" and lists "errors" if it was not valid.
