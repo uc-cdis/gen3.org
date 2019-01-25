@@ -13,7 +13,18 @@ menuname: userMenu
 
 * * *
 
-The gen3-client provides an easy-to-use, command-line interface for uploading and downloading data files to and from a Gen3 data commons.
+The gen3-client provides an easy-to-use, command-line interface for uploading and downloading data files to and from a Gen3 data commons from the terminal or command prompt.
+
+This guide has the following sections:
+
+1. [Installation Instructions](#1-installation-instructions)
+2. [Configure a Profile](#2-configure-a-profile-with-credentials)
+3. [Upload Data Files](#3-upload-data-files)
+4. [Download Files](#4-download-a-single-data-file-using-a-guid)
+5. [Multiple File Download with Manifest](#5-provide-a-manifest-file-for-bulk-download)
+6. [Generate a Metadata Submission TSV](#6-generate-a-metadata-tsv)
+7. [Upload Single File with GUID](#7-how-to-upload-a-single-data-file-using-a-guid)
+8. [Upload Multiple Files with Manifest](#8-how-to-upload-multiple-data-files-using-a-manifest)
 
 * * *
 
@@ -23,35 +34,62 @@ The gen3-client provides an easy-to-use, command-line interface for uploading an
 
 The gen3-client can be [downloaded from Github](https://github.com/uc-cdis/cdis-data-client/releases/latest) for Windows, Linux or Mac OS, or it can be installed from source using Google's [GO language](https://golang.org/dl/) (instructions in Github README).
 
-To install, download the correct file for your operating system to the location of your choice, unzip it, and add that location to your path. The program is executed from the command-line by running the command: `gen3-client <options>`.
+To install, download the correct version for your operating system and unzip the archive. The program must be executed from the command-line by running the command `gen3-client <options>`. For more detailed instructions, see the section below for your operating system.
 
-Or, in the case that you haven't added the client to your path, execute the program with the following command: `path/to/binary/gen3-client <options>`, where `path/to/binary` is `./` if working from the same directory as the client executable.
+>__Note:__ Do not try to run the program by double-clicking on it. Instead, execute the program from within the shell / terminal / command prompt. The program does not provide a graphical user interface (GUI) at this time; so, commands are sent by typing them into the terminal.
 
-Example Usage:
+### Mac OS X / Linux Installation Instructions
 
-```
-gen3-client <options>
-gen3-client --version
-```
+1. [Download the latest Mac OS X or Linux version of the gen3-client here](https://github.com/uc-cdis/cdis-data-client/releases/latest).
+2. Unzip the archive
+3. Add the unzipped executable to a directory, for example: `~/.gen3/gen3-client.exe`
+4. Open a terminal window.
+5. Add the directory containing the executable to your Path environment variable by entering this command in the terminal: `echo 'export PATH=$PATH:~/.gen3' >>~/.bash_profile`.
 
-To see the help menu for the tool, simply type in `gen3-client` or `./gen3-client`.
+Now you can execute the program by opening a terminal window and entering the command `gen3-client`.
 
 ### Windows Installation Instructions
 
-Download the Windows 64-bit version of the gen3-client [here](https://github.com/uc-cdis/cdis-data-client/releases/latest).
+1. [Download the Windows version of the gen3-client here](https://github.com/uc-cdis/cdis-data-client/releases/latest).
+2. Unzip the archive
+3. Add the unzipped executable to a directory, for example: `C:\Program Files\gen3-client\gen3-client.exe`
+4. Open the Start Menu and type "edit environment variables".
+5. Open the option "Edit the system environment variables".
+6. In the "System Properties" window that opens up, on the "Advanced" tab, click on the "Environment Variables" button.
+7. In the box labeled "System Variables", find the "Path" variable and click "Edit".
+8. In the window that pops up, click "New".
+9. Type in the full directory path of the executable file (e.g., `C:\Program Files\gen3-client`).
+10. Click "Ok" on all the open windows and restart the command prompt if it is already open by entering `cmd` into the start menu and hitting enter.
 
-Add the unzipped executable to a directory, for example:
- "C:\Program Files\gen3-client\gen3-client.exe"
+### View the Help Menu
 
-1. Open the Start Menu and type "edit environment variables".
-2. Open the option "Edit the system environment variables".
-3. In the "System Properties" window that opens up, on the "Advanced" tab, click on the "Environment Variables" button.
-4. In the box labeled "System Variables", find the "Path" variable and click "Edit".
-5. In the window that pops up, click "New".
-6. Type in the full directory path of the executable file (e.g., "C:\Program Files\gen3-client").
-7. Click "Ok" on all the open windows and restart the command prompt if it is already open.
+The tool can now be run on the command-line in your terminal or command prompt by typing `gen3-client`. Typing this alone displays the help menu.
 
-Now you should be able to run the tool on the command-line from any directory by typing `gen3-client` (typing this alone should display the help menu).
+### Notes about Working in the Shell
+
+#### File Paths
+
+When you create or download a file on your computer, that file is located in a folder (or directory) in your computer's file system. For example, if you create the text file `example.txt` in the folder `My Documents`, the "full path" of that file is, for example, `C:\Users\Bob\My Documents\example.txt` in Windows or `/Users/Bob/Documents/example.txt` in Mac OS X.
+
+#### Present Working Directory
+
+After opening a shell, command prompt or terminal window, you are "in" a folder known as the "present working directory". You can change directories with the `cd <directory>` command in either shell. To view your present working directory, enter the command `echo $PWD` in a Mac terminal or `cd` alone in the Windows command prompt.
+
+You can list the contents of your present working directory by entering the command `ls` in the Mac terminal or `dir` in the Windows command prompt. These files in the present working directory can be accessed by commands you type just by entering their filenames: for example, `cat example.txt` would print the contents of the file `example.txt` in the Mac terminal if your present working directory is `/Users/Bob/Documents`. However, if you're in a different directory, you must enter the "full path" of the file: for example, if your present working directory is the `My Downloads` folder instead of `My Documents`, then you would need to specify the full path of the file and enter the command `type "C:\Users\Bob\My Documents\example.txt"`, to print the file's contents.
+
+#### Updating the PATH Environment Variable
+
+When working in your shell, you can define variables that help make work easier. One such variable is PATH, which is a list of directories where executable programs are located. By adding a folder to the PATH, programs in that folder can be executed from any other folder/directory regardless of the present working directory.
+
+So, by adding the directory containing the gen3-client program to your PATH variable, you can run it from any working directory without specifying the "full path" of the program. Simply enter the command `gen3-client`, and you will run the program.
+
+> __Note:__ In the case that you haven't properly added the client to your path, the program can still be executed with the following command: `/full/path/to/executable/gen3-client <options>`. If you are working in the directory containing the executable, then `path/to/executable` is simply `./`. So the command from the executable's directory would be `./gen3-client`.
+
+#### Sending Parameters to Programs on Command-line
+
+Most programs require some sort of user input to run properly. Some programs will prompt you for input after execution, while other programs are sent this input during execution as "arguments" or "options". The gen3-client uses the latter method of sending user input as command arguments during program execution.
+
+For example, when configuring a profile with the client (details are in the following section), the user must specify the `configure` option and also specify the profile name, API endpoint, and credentails file by adding the flags `--profile`, `--apiendpoint` and `--cred` to the end of the command (see next section for specific examples).
 
 * * *
 
@@ -92,7 +130,7 @@ Windows: C:\Users\Bob\.gen3\config
 
 * * *
 
-## 3) Upload Data File(s)
+## 3) Upload Data Files
 
 * * *
 
@@ -120,7 +158,7 @@ Successfully uploaded file "test.gif" to GUID 65f5d77c-1b2a-4f41-a2c9-9daed5a59f
 1 files uploaded.
 ```
 
-### Option Flags
+### Arguments or User Input Flags
 
 <table class="g3-markdown-wrapper">
   <tr>
