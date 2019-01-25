@@ -7,6 +7,27 @@ menuname: userMenu
 ---
 {{% markdownwrapper %}}
 
+<style>
+table {
+  font-family: 'Khula', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  border: 1px solid #000000;
+  text-align: center;
+  padding: 8px;
+  background-color: #dddddd;
+}
+
+td {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+</style>
+
 * * *
 
 # Download and Upload Files Using the Gen3-client
@@ -119,6 +140,53 @@ test.gif  3.64 MiB / 3.64 MiB [=================================================
 Successfully uploaded file "test.gif" to GUID 65f5d77c-1b2a-4f41-a2c9-9daed5a59f14.
 1 files uploaded.
 ```
+
+### Option Flags
+
+<table>
+  <tr>
+    <th>Flag name</th>
+    <th>Required?</th>
+    <th>Default value</th>
+    <th>Explanation</th>
+    <th>Sample usage</th>
+  </tr>
+  <tr>
+    <td>profile</td>
+    <td>Yes</td>
+    <td>N/A</td>
+    <td>The profile name that user wishes to use from the config file.</td>
+    <td>--profile=Bob</td>
+  </tr>
+  <tr>
+    <td>upload-path</td>
+    <td>Yes</td>
+    <td>N/A</td>
+    <td>The directory or file in which contains file(s) to be uploaded.</td>
+    <td>--upload-path=../data_folder/</td>
+  </tr>
+  <tr>
+    <td>batch</td>
+    <td>No</td>
+    <td>false</td>
+    <td>If set to `true`, gen3-client will upload multiple files simultaneously. The maximum number of file can be uploaded at a same time is specified by the `numparallel` option</td>
+    <td>--batch=true</td>
+  </tr>
+  <tr>
+    <td>numparallel</td>
+    <td>No</td>
+    <td>3</td>
+    <td>Number of uploads to run in parallel. Must be used in together with the `batch` option.</td>
+    <td>--numparallel=5</td>
+  </tr>
+  <tr>
+    <td>include-subdirname</td>
+    <td>No</td>
+    <td>false</td>
+    <td>Include subdirectory names in file name.</td>
+    <td>--include-subdirname=true</td>
+  </tr>
+</table>
 
 ### Local Submission History
 
