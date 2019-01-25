@@ -75,7 +75,7 @@ When you create or download a file on your computer, that file is located in a f
 
 After opening a shell, command prompt or terminal window, you are "in" a folder known as the "present working directory". You can change directories with the `cd <directory>` command in either shell. To view your present working directory, enter the command `echo $PWD` in a Mac terminal or `cd` alone in the Windows command prompt.
 
-You can list the contents of your present working directory by entering the command `ls` in the Mac terminal or `dir` in the Windows command prompt. These files in the present working directory can be accessed by commands you type just by entering their filenames: for example, `cat example.txt` would print the contents of the file `example.txt` in the Mac terminal if your present working directory is `/Users/Bob/Documents`. However, if you're in a different directory, you must enter the "full path" of the file: for example, if your present working directory is the `My Downloads` folder instead of `My Documents`, then you would need to specify the full path of the file and enter the command `type "C:\Users\Bob\My Documents\example.txt"`, to print the file's contents.
+You can list the contents of your present working directory by entering the command `ls` in the Mac terminal or `dir` in the Windows command prompt. These files in the present working directory can be accessed by commands you type just by entering their filenames: for example, `cat example.txt` would print the contents of the file `example.txt` in the Mac terminal if your present working directory is `/Users/Bob/Documents`. However, if you're in a different directory, you must enter the "full path" of the file: for example, if your present working directory is the `My Downloads` folder instead of `My Documents`, then you would need to specify the full path of the file and enter the command `type "C:\Users\Bob\My Documents\example.txt"`, to print the file's contents in the Windows command prompt.
 
 #### Updating the PATH Environment Variable
 
@@ -83,7 +83,7 @@ When working in your shell, you can define variables that help make work easier.
 
 So, by adding the directory containing the gen3-client program to your PATH variable, you can run it from any working directory without specifying the "full path" of the program. Simply enter the command `gen3-client`, and you will run the program.
 
-> __Note:__ In the case that you haven't properly added the client to your path, the program can still be executed with the following command: `/full/path/to/executable/gen3-client <options>`. If you are working in the directory containing the executable, then `path/to/executable` is simply `./`. So the command from the executable's directory would be `./gen3-client`.
+> __Note:__ In the case that you haven't properly added the client to your path, the program can still be executed from any directory with the following command: `/full/path/to/executable/gen3-client <options>`. If you are working in the directory containing the executable, then `/full/path/to/executable` is simply `./`. So the command from the executable's directory would be `./gen3-client`.
 
 #### Sending Parameters to Programs on Command-line
 
@@ -158,7 +158,7 @@ Successfully uploaded file "test.gif" to GUID 65f5d77c-1b2a-4f41-a2c9-9daed5a59f
 1 files uploaded.
 ```
 
-### Arguments or User Input Flags
+### Options and User Input Flags
 
 <table class="g3-markdown-wrapper">
   <tr>
