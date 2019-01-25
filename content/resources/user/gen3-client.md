@@ -7,27 +7,6 @@ menuname: userMenu
 ---
 {{% markdownwrapper %}}
 
-<style>
-table {
-  font-family: 'Khula', sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th {
-  border: 1px solid #000000;
-  text-align: center;
-  padding: 8px;
-  background-color: #dddddd;
-}
-
-td {
-  border: 1px solid #000000;
-  text-align: left;
-  padding: 8px;
-}
-</style>
-
 * * *
 
 # Download and Upload Files Using the Gen3-client
@@ -143,7 +122,7 @@ Successfully uploaded file "test.gif" to GUID 65f5d77c-1b2a-4f41-a2c9-9daed5a59f
 
 ### Option Flags
 
-<table>
+<table class="g3-markdown-wrapper">
   <tr>
     <th>Flag name</th>
     <th>Required?</th>
