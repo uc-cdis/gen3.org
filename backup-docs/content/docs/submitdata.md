@@ -80,7 +80,7 @@ Once the "case.tsv" file is uploaded and creates the record "case-01" in the "ca
 ## 3. Register data files with the Windmill data portal
 * * *
 
-Special attention must be given to "data file" nodes, which house variables that describe actual, raw data files that are to up be uploaded to object storage by the data contributor and later downloaded by data analysts. Specifically, data files must be "registered" in order to be downloadable using the Windmill data portal or the [cdis-data-client](https://github.com/uc-cdis/cdis-data-client/releases).
+Special attention must be given to "data file" nodes, which house variables that describe actual, raw data files that are to up be uploaded to object storage by the data contributor and later downloaded by data analysts. Specifically, data files must be "registered" in order to be downloadable using the Windmill data portal or the [cdis-data-client](https://github.com/uc-cdis/cdis-data-client/releases/latest).
 
 Registration of data files simply means adding a column in the data file node's TSV named "urls" and entering the URL/address of each file in object storage (row in the TSV) in that column. This is usually a location in a project folder of a data commons bucket in s3 object storage, e.g.: "s3://commons-bucket/project-name/filename".
 
@@ -181,7 +181,7 @@ When you are viewing a project, you can click on a node name to view the records
 Data files such as sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., should be uploaded with the CDIS data client.
 For detailed instructions, visit [the cdis-data client documentation](/appendices/cdis-data-client/). The metadata TSVs you prepared do not need to be submitted to the object store, as they have already been submitted via the API.
 
-* Downloaded the [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases) for your operating system.
+* Downloaded the [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases/latest) for your operating system.
 * Configure a profile with credentials:
 `./cdis-data-client configure --profile <profile> --cred <credentials.json>`
 * Upload a data file using its UUID:

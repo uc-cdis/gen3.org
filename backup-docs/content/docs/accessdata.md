@@ -11,7 +11,7 @@ bref = ""
 # Accessing metadata and data
 * * *
 
-The sponsor of a Gen3 data commons typically decides how users will access data in object storage. In some cases, approved users may be allowed to download data directly to their local computer from within an internet browser or with the [cdis-data-client](https://github.com/uc-cdis/cdis-data-client/releases). When more security is required, users may be required to download and analyze data in a protected environment, such as a virtual machine (VM) in a virtual private cloud (VPC).
+The sponsor of a Gen3 data commons typically decides how users will access data in object storage. In some cases, approved users may be allowed to download data directly to their local computer from within an internet browser or with the [cdis-data-client](https://github.com/uc-cdis/cdis-data-client/releases/latest). When more security is required, users may be required to download and analyze data in a protected environment, such as a virtual machine (VM) in a virtual private cloud (VPC).
 
 
 ## Accessing data from within a browser
@@ -29,7 +29,7 @@ https://examplecommons.gen3.org/user/data/download/UUID
 
 Data files can also be downloaded using the "cdis-data-client", which provides a simple command-line interface for downloading and uploading data files.
 
-[Download the latest release of the client here.](https://github.com/uc-cdis/cdis-data-client/releases)
+[Download the latest release of the client here.](https://github.com/uc-cdis/cdis-data-client/releases/latest)
 
 Once downloaded and installed, the client can be configured with the API credentials.json downloaded from your Profile in the data portal:
 ```

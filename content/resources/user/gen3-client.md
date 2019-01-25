@@ -21,7 +21,7 @@ The gen3-client provides an easy-to-use, command-line interface for uploading an
 
 * * *
 
-The gen3-client can be [downloaded from Github](https://github.com/uc-cdis/cdis-data-client/releases/tag/0.2.1) for Windows, Linux or Mac OS, or it can be installed from source using Google's [GO language](https://golang.org/dl/) (instructions in Github README).
+The gen3-client can be [downloaded from Github](https://github.com/uc-cdis/cdis-data-client/releases/latest) for Windows, Linux or Mac OS, or it can be installed from source using Google's [GO language](https://golang.org/dl/) (instructions in Github README).
 
 To install, download the correct file for your operating system to the location of your choice, unzip it, and add that location to your path. The program is executed from the command-line by running the command: `gen3-client <options>`.
 
@@ -38,7 +38,7 @@ To see the help menu for the tool, simply type in `gen3-client` or `./gen3-clien
 
 ### Windows Installation Instructions
 
-Download the Windows 64-bit version of the gen3-client [here](https://github.com/uc-cdis/cdis-data-client/releases/download/0.2.1/dataclient_win64.zip).
+Download the Windows 64-bit version of the gen3-client [here](https://github.com/uc-cdis/cdis-data-client/releases/latest).
 
 Add the unzipped executable to a directory, for example:
  "C:\Program Files\gen3-client\gen3-client.exe"
@@ -119,6 +119,53 @@ test.gif  3.64 MiB / 3.64 MiB [=================================================
 Successfully uploaded file "test.gif" to GUID 65f5d77c-1b2a-4f41-a2c9-9daed5a59f14.
 1 files uploaded.
 ```
+
+### Option Flags
+
+<table class="g3-markdown-wrapper">
+  <tr>
+    <th>Flag name</th>
+    <th>Required?</th>
+    <th>Default value</th>
+    <th>Explanation</th>
+    <th>Sample usage</th>
+  </tr>
+  <tr>
+    <td>profile</td>
+    <td>Yes</td>
+    <td>N/A</td>
+    <td>The profile name that user wishes to use from the config file.</td>
+    <td>--profile=Bob</td>
+  </tr>
+  <tr>
+    <td>upload-path</td>
+    <td>Yes</td>
+    <td>N/A</td>
+    <td>The directory or file in which contains file(s) to be uploaded.</td>
+    <td>--upload-path=../data_folder/</td>
+  </tr>
+  <tr>
+    <td>batch</td>
+    <td>No</td>
+    <td>false</td>
+    <td>If set to `true`, gen3-client will upload multiple files simultaneously. The maximum number of file can be uploaded at a same time is specified by the `numparallel` option</td>
+    <td>--batch=true</td>
+  </tr>
+  <tr>
+    <td>numparallel</td>
+    <td>No</td>
+    <td>3</td>
+    <td>Number of uploads to run in parallel. Must be used in together with the `batch` option.</td>
+    <td>--numparallel=5</td>
+  </tr>
+  <tr>
+    <td>include-subdirname</td>
+    <td>No</td>
+    <td>false</td>
+    <td>Include subdirectory names in file name.</td>
+    <td>--include-subdirname=true</td>
+  </tr>
+</table>
 
 ### Local Submission History
 
