@@ -90,23 +90,24 @@ Once data files are successfully uploaded, the files must be mapped to the appro
 
 2. Click 'Submit Data'.
 
-![submit-data.png](submit-data.png)
+    ![submit-data.png](submit-data.png)
 
 3. Click 'Map My Files' button.
 
-![map_my_files.png](map-my-files.png)
+    ![map_my_files.png](map-my-files.png)
 
 4. Select the files to map using the checkboxes and click 'Map Files' button.
 
-![select-files.png](select-files.png)
+    ![select-files.png](select-files.png)
 
 5. Select the project and node that the files belong to.
 
-![map-to-node.png](map-to-node.png)
+    ![map-to-node.png](map-to-node.png)
 
 6. Fill in the values of any required properties and click 'Submit' button.
 
-![fill-required-properties.png](fill-required-properties.png)
+    ![fill-required-properties.png](fill-required-properties.png)
+
 
 > __Note:__ The required property 'Type' in step 6 is the node's name (the 'type' of node) and should be the same as the value selected from the node dropdown list in step 5.
 
@@ -189,13 +190,22 @@ From the Windmill data portal, click on "Data Submission" and then click "Submit
 To submit a TSV:
 
 1. Login to the Windmill data portal for the commons.
-2. Click on "Data Submission" in the top navigation bar.
-![Data Submission](/resources/user/submit-data/Gen3_Toolbar_data_submission.png)
-3. Click on "Submit Data" by the project to submit metadata.
-![Submit Data](/resources/user/submit-data/Gen3_Data_Submission_submit_data.png)
-4. Click on "Upload File".
-![Upload and Submit](/resources/user/submit-data/Gen3_Data_Submission_Use_Form.png)
-5. Navigate to the TSV and click "open", the contents of the TSV should appear in the grey box below.
+
+2. Click on "Data Submission" in the top navigation bar.  
+
+    ![Data Submission](Gen3_Toolbar_data_submission.png)
+
+3. Click on "Submit Data" by the project to submit metadata.  
+
+    ![Submit Data](Gen3_Data_Submission_submit_data.png)
+
+4. Click on "Upload File".  
+
+    ![Upload and Submit](Gen3_Data_Submission_Use_Form.png)
+
+5. Navigate to the TSV and click "open", the contents of the TSV should appear in the grey box
+below.
+
 6. Click "Submit".
 
 A message should appear that indicates either success (green, "succeeded: 200") or failure (grey, "failed: 400"). Further details can be reviewed by clicking on "DETAILS", which displays the API response in JSON form. Each record/entity that was submitted, it gets a true/false value for "valid" and lists "errors" if it was not valid.
