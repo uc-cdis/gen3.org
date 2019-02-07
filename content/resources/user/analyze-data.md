@@ -8,13 +8,17 @@ menuname: userMenu
 {{% markdownwrapper %}}
 # Data Analysis in a Gen3 Data Commons
 
-Data access in a Gen3 data commons must be agreed upon by the sponsor(s), data contributor(s), and the operator(s). Some data commons have rules that data cannot be downloaded outside of a Virtual Private Cloud (VPC). In these cases, data analysts may need to access and configure a virtual machine (VM) in the VPC where all analyses will be done. Other data commons may be able to grant users permissions to download data files directly to their local computers, while others may choose to allow analysis only in the Workspace.
+How data is accessed in a Gen3 data commons is determined by the commons' sponsor(s), data contributor(s), and/or  operator(s). Some data commons have rules that data cannot be downloaded outside of a Virtual Private Cloud (VPC). In these cases, data analysts may need to access and configure a virtual machine (VM) in the VPC where all analyses will be done. Other data commons may be able to grant users permissions to download data files directly to their local computers, while others may choose to allow analysis only in the Gen3-provided Workspace.
 
 * * *
 ## Using the Gen3 Workspace
 * * *
 
-Gen3 data commons feature a Workspace where users can access a personalized Jupyter server for data exploration and analysis. To access the workspace, click "Workspace" in the top navigation bar of the data portal.
+The software stack that powers Gen3 data commons' features a built-in "Workspace" where users can access a Jupyter Hub for data exploration and analysis. Jupyter Hub allows the creation of Python and R Jupyter notebooks and execution of scripts from the command-line in a Linux terminal.
+
+An individual's Workspace includes a persistent drive in which analysis notebooks, scripts, data files, etc., are saved and persist even after logout. When a user logs out of their Workspace, their personal drive in unmounted, but when they log back in, the drive is mounted to their new VM, making their previous files and analyses accessible.
+
+To access the workspace, click "Workspace" in the top navigation bar of the data portal.
 
 ![Data portal Workspace button](workspace_button.png)
 
