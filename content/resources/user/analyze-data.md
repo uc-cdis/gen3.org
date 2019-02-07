@@ -16,7 +16,7 @@ How data is accessed in a Gen3 data commons is determined by the commons' sponso
 
 The software stack that powers Gen3 data commons' features a built-in "Workspace" where users can access a Jupyter Hub for data exploration and analysis. Jupyter Hub allows the creation of Python and R Jupyter notebooks and execution of scripts from the command-line in a Linux terminal.
 
-An individual's Workspace includes a persistent drive in which analysis notebooks, scripts, data files, etc., are saved and persist even after logout. When a user logs out of their Workspace, their personal drive in unmounted, but when they log back in, the drive is mounted to their new VM, making their previous files and analyses accessible.
+An individual's Workspace includes a persistent drive in which analysis notebooks, scripts, data files, etc., are saved and persist even after logout. When a user logs out of their Workspace, their personal drive is unmounted, but when they log back in, the drive is mounted to their new VM, making their previously saved files and analyses accessible.
 
 To access the workspace, click "Workspace" in the top navigation bar of the data portal.
 
