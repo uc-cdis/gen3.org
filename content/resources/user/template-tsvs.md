@@ -1,5 +1,5 @@
 ---
-title: "Gen3 - Template TSVs"
+title: "Gen3 - TSV Formatting and Templates"
 date: 2018-09-18T15:12:12-05:00
 linktitle: /resources/user
 layout: withtoc
