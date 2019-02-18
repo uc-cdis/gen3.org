@@ -6,7 +6,7 @@ date: 2018-09-04T22:16:21-05:00
 g3Teaser:
   fig: /figs/webinar.svg
   title: Gen3 Webinars
-  detail: The Gen3 webinars are focused on helping the community understand what Gen3 does, what the Data Commons Frame Services (DCFS) are, and how both can be used to aid in the construction and operation of data commons.
+  detail: The Gen3 webinars are focused on helping the community understand what Gen3 does, what the Data Commons Framework Services (DCFS) are, and how both can be used to aid in the construction and operation of data commons.
 ---
 
 <section class="g3-bg__mint">
