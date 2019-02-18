@@ -15,9 +15,9 @@
     </div>
     <nav class="g3-header__navbar">
       {{ range .Site.Menus.mainmenu.ByWeight }}
-        {{ $isPage := eq .Identifier $currentNode.LinkTitle }}
-        {{ $hasPage := ($currentNode.HasMenuCurrent "mainmenu" .)}}
-        {{ $isItemActive := or $isPage $hasPage }}
+        {{ $isCurrentPage := eq .URL $currentNode.RelPermalink }}
+        {{ $menuHasCurrentPage := ($currentNode.HasMenuCurrent "mainmenu" .)}}
+        {{ $isItemActive := or $isCurrentPage $menuHasCurrentPage }}
           <div class="g3-header__nav-item {{if $isItemActive }}g3-header__nav-item--active{{end}}">
               <a href="{{ .URL }}" class="g3-header__nav-link">{{ .Name }}</a>
               {{ if .HasChildren }}
