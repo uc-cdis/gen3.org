@@ -263,18 +263,10 @@ on to avoid dependency conflicts, you may also want to install [pyenv][] and
 
 ### Repository Setup
 
-Use [this guide][sample-repository] as a reference for creating new
-repositories/directories. Use the Apache License 2.0 in the `LICENSE` file (this
-file can be found in most `uc-cdis` repositories) and the following `NOTICE`
-(with the current year):
+To create a new repository, install [Cookiecutter][] and run:
+
 ```
-Copyright 2017 University of Chicago
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+cookiecutter gh:uc-cdis/template-repo
 ```
 
 ### Style
@@ -741,11 +733,11 @@ SO, *with or without attribution*.
 [k8s-dev]: https://github.com/uc-cdis/cdis-wiki/blob/master/dev/K8s-dev.md
 [k8s-tutorials]: https://kubernetes.io/docs/tutorials/
 [python-style-guide]: ../style-guide#python-style-guide
-[sample-repository]: https://www.kennethreitz.org/essays/repository-structure-and-python
 [virtualenv]: https://virtualenv.pypa.io/en/stable/
 [Pipenv]: https://pipenv.readthedocs.io/en/latest/
 [pyenv]: https://github.com/pyenv/pyenv
 [pyenv-virtualenv]: https://github.com/pyenv/pyenv-virtualenv
 [virtualenvwrapper]: https://virtualenvwrapper.readthedocs.io/en/latest/
+[Cookiecutter]: https://github.com/audreyr/cookiecutter
 
 {{% /markdownwrapper %}}
