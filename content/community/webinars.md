@@ -30,7 +30,7 @@ g3Teaser:
 <section class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
     <div class="g3-inner-wrapper">
         <h3 class="g3-text__center g3-minimum-wrapper g3-space__padding-lg-top">Authentication, Authorization, and Indexing with Gen3</h3>
-        <h4>Date: Mar. 13th, 2019 at 1 PM U.S. Central Time. <a href="https://www.eventbrite.com/e/gen3-dcf-services-webinar-authentication-authorization-and-indexing-tickets-56353002347?aff=gen3">Register on EventBrite</a></h4>
+        <h4>Date: Mar. 13th, 2019 at 1 PM U.S. Central Time. <a class="g3-button--secondary g3-button" href="https://www.eventbrite.com/e/gen3-dcf-services-webinar-authentication-authorization-and-indexing-tickets-56353002347?aff=gen3">Register on EventBrite</a></h4>
         <p><strong>Description:</strong> During this webinar we will dive into technical details of the servcies that Data Commons Framework created such as Authentication, Authorization and Indexing with Fence & Indexd.</p>
         <p><strong>Meeting Format:</strong><br/>
             30 Mins Presentation<br/>
