@@ -97,7 +97,7 @@ Some example commit messages:
 ### Pull Requests (PRs)
 
 To link a PR on GitHub to Jira, add its identifier `PXD-{NUMBER}` in the PR
-title.
+title. Don't mention Jira numbers in the source code.
 
 **Before submitting a PR for review, try to make sure you've accomplished these things:**
 
@@ -110,6 +110,20 @@ title.
 * If the PR should synchronize with Jira, the PR title includes the story
   number.
 * The PR addresses a specific issue, and not multiple issues at once.
+
+Some notes about how to write a decent PR description:
+
+* Use list items to describe changes made in the PR under header-3 (e.g. `### Bug Fixes`)
+  categories, the bullets will be collected by category when generating [release notes](https://github.com/uc-cdis/release-helper).
+  Most projects provide PR template with predefined categories, try to use the matching
+  ones and delete the unused ones.
+* Any text before the first header-3 will **not** be included in the release notes, use
+  this section for general comments, review hints or -
+* remaining tasks with GitHub check list markdown syntax if the PR is a WIP, they'll be
+  reflected in the PR list, very handy. Also prefix or tag the PR with `[WIP]` if so.
+* Remove visible help tips from PR template if any.
+* Add a link to GitHub-rendered page if the PR is for Markdown documentation.
+
 
 **To merge the PR:**
 
@@ -304,6 +318,12 @@ Versions must not be pinned in `setup.py`, however you may specify ranges:
 
 ```
 "requests>=2.19.1,<3.0.0"
+```
+
+or preferably depend on [compatible releases](https://www.python.org/dev/peps/pep-0440/#compatible-release):
+
+```
+"requests~=2.19"
 ```
 
 With above rules, for both applications and libraries, you may start development
