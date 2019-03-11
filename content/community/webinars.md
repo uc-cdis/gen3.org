@@ -23,7 +23,7 @@ g3Previous:
 
 <section class="g3-bg__mint">
   <div class="g3-outer-wrapper g3-flex-content g3-flex-content__reverse">
-    <div class="g3-col__65 g3-flex-content g3-space__padding-md-top g3-mb-space__padding-md-bottom">
+    <div class="g3-col__65 g3-flex-content g3-space__margin-md-top-bottom">
       <img class="g3-img__full-width" src="{{< param "g3Teaser.fig" >}}"/>
     </div>
     <div class="g3-space__padding-lg-top g3-space__padding-lg-bottom g3-col__35">
