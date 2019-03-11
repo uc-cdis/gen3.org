@@ -7,6 +7,18 @@ g3Teaser:
   fig: /figs/webinar.svg
   title: Gen3 Webinars
   detail: The Gen3 webinars are focused on helping the community understand what Gen3 does, what the Data Commons Framework Services (DCFS) are, and how both can be used to aid in the construction and operation of data commons.
+g3Upcoming:
+  - Title: DCF Services Webinar - Authentication, Authorization and Data Access
+    Date: Mar. 13th, 2019 at 1 PM U.S. Central Time.
+    Description: During this webinar we will dive into technical details of the servcies that Data Commons Framework created such as Authentication, Authorization and Indexing with Fence & Indexd.
+    Image: coming_soon.svg
+    Link: https://www.eventbrite.com/e/gen3-dcf-services-webinar-authentication-authorization-and-indexing-tickets-56353002347?aff=gen3
+g3Previous:
+  - Title: Introduction to Gen3
+    Date: Feb. 14th, 2019
+    Description: We will introduce attendees to the Gen3 platform and data commons more broadly. Join us as we walk through Gen3’s components and demonstrate how researchers can bring data into Gen3 and use our suite of open-source tools to drive scientific discovery.
+    Slides: Webinar_20190214.pdf
+    Youtube: i_-e0jpJCK4
 ---
 
 <section class="g3-bg__mint">
@@ -29,29 +41,16 @@ g3Teaser:
 
 <section class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
     <div class="g3-inner-wrapper">
-        <h3 class="g3-text__center g3-minimum-wrapper g3-space__padding-lg-top">Authentication, Authorization, and Indexing with Gen3</h3>
-        <h4>Date: Mar. 13th, 2019 at 1 PM U.S. Central Time. <a class="g3-button--secondary g3-button" href="https://www.eventbrite.com/e/gen3-dcf-services-webinar-authentication-authorization-and-indexing-tickets-56353002347?aff=gen3">Register on EventBrite</a></h4>
-        <p><strong>Description:</strong> During this webinar we will dive into technical details of the servcies that Data Commons Framework created such as Authentication, Authorization and Indexing with Fence & Indexd.</p>
-        <p><strong>Meeting Format:</strong><br/>
-            30 Mins Presentation<br/>
-            30 Mins Q&A (Please post your questions in the zoom chat and we will answer in this time frame)<br/>
-        </p>
-        <p><strong>Slides:</strong> Coming soon</p>
-        <p><strong>Video:</strong> Coming soon</p>
+        <h2>Upcoming Webinars</h2>
     </div>
 </section>
 
+{{< webinar "g3Upcoming" >}}
 
-<section class="g3-bg__solight g3-space__padding-sm-top g3-space__padding-sm-bottom">
+<section class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
     <div class="g3-inner-wrapper">
-        <h3 class="g3-text__center g3-minimum-wrapper g3-space__padding-lg-top">Introduction to Gen3</h3>
-        <h4>Date: Feb. 14th, 2019</h4>
-        <p><strong>Description:</strong> We will introduce attendees to the Gen3 platform and data commons more broadly. Join us as we walk through Gen3’s components and demonstrate how researchers can bring data into Gen3 and use our suite of open-source tools to drive scientific discovery.</p>
-        <p><strong>Meeting Format:</strong><br/>
-            30 Mins Presentation<br/>
-            30 Mins Q&A (Please post your questions in the zoom chat and we will answer in this time frame)<br/>
-        </p>
-        <p><strong>Slides:</strong> <a href="Webinar_20190214.pdf">PDF</a></p>
-        <p><strong>Video:</strong> Coming soon</p>
+        <h2>Previous Webinars</h2>
     </div>
 </section>
+
+{{< webinar "g3Previous" >}}
