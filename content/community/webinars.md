@@ -8,12 +8,17 @@ g3Teaser:
   title: Gen3 Webinars
   detail: The Gen3 webinars are focused on helping the community understand what Gen3 does, what the Data Commons Framework Services (DCFS) are, and how both can be used to aid in the construction and operation of data commons.
 g3Upcoming:
+  - Title: Gen3 Data Modeling - Herding Data Submissions & Hunting Down Data (Sheepdog & Peregrine)
+    Date: May 9th, 2019 at 1 PM U.S. Central Time.
+    Description: This webinar will cover the creation of data models, and data dictionaries in Gen3. 
+    Image: coming_soon.svg
+    Link: https://www.eventbrite.com/e/gen3-data-modeling-herding-data-submissions-hunting-down-datasheepdog-peregrine-tickets-58469774670?aff=gen3
+g3Previous:
   - Title: DCF Services Webinar - Authentication, Authorization and Data Access
-    Date: Mar. 13th, 2019 at 1 PM U.S. Central Time.
+    Date: Mar. 13th, 2019
     Description: During this webinar we will dive into technical details of the services that Data Commons Framework created such as Authentication, Authorization and Indexing with Fence & Indexd.
     Image: coming_soon.svg
-    Link: https://www.eventbrite.com/e/gen3-dcf-services-webinar-authentication-authorization-and-indexing-tickets-56353002347?aff=gen3
-g3Previous:
+    Slides: Webinar_20190313.pdf
   - Title: Introduction to Gen3
     Date: Feb. 14th, 2019
     Description: We will introduce attendees to the Gen3 platform and data commons more broadly. Join us as we walk through Gen3’s components and demonstrate how researchers can bring data into Gen3 and use our suite of open-source tools to drive scientific discovery.
