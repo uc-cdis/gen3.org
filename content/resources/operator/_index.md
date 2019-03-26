@@ -11,9 +11,9 @@ menuname: operatorMenu
 
 ## 1. Docker-Compose
 
-Docker-compose allows you to quickly run a Gen3 commons on a single computer or in a single VM in a matter of minutes. 
+Docker-compose allows you to quickly run a Gen3 commons on a single computer or in a single VM in a matter of minutes.
 
-This option is suitable for those that wish to run a small data commons, experiment with the technology, or even do local development on the Gen3 services. Using this method does not get you the full suite of automation, and logging for Gen3 commons. 
+This option is suitable for those that wish to run a small data commons, experiment with the technology, or even do local development on the Gen3 services. Using this method does not get you the full suite of automation, and logging for Gen3 commons.
 
 We strongly recommend you start here for your first experience running the Gen3 platform.
 
@@ -30,17 +30,23 @@ Currently, Gen3 deployment using cloud automation relies on a number of supporti
 [Gen3 Cloud Automation](https://github.com/uc-cdis/cloud-automation/blob/master/gen3)
 
 ## 3. Creating a New Data Dictionary
-   
+
 ### Core Dictionary
-   Gen3 is in the process of creating a baseline data dictionary that will allow users to create their own data dictionary. It would serve as a starting point for someone who is interested in creating their own dictionary.  It will be a consensus of previously used data dictionaries and will make the process of creating a data dictionary more efficient.  This [site](https://github.com/uc-cdis/compose-services/tree/master/example-schemas) contains sample dictionaries that can aid the process of creating new dictionaries.
+Gen3 is in the process of creating a baseline data dictionary that will allow users to create their own data dictionary. It would serve as a starting point for someone who is interested in creating their own dictionary.  It will be a consensus of previously used data dictionaries and will make the process of creating a data dictionary more efficient.  This [site](https://github.com/uc-cdis/compose-services/tree/master/example-schemas) contains sample dictionaries that can aid the process of creating new dictionaries.
+
 ### Modifying a Data Dictionary
 Once users have obtained the baseline dictionary, users can make updates to it.  To create a data dictionary tailored to a particular project, the user can modify the baseline dictionary using a program which automatically updates the dictionary given TSV input which specifies the desired changes to the dictionary. The updates are based on instructions that are included in a TSV file such as update a property, delete a node, etc.  Instructions for implementing the script can be found [here](https://github.com/uc-cdis/planx-bioinfo-tools/tree/feat/auto_tools/dictionary_tools).  For those that are interested in making edits directly to a YAML file, we are also in the process of automating this process.
+
 ### Best Practices
+
 #### Data Normalization
 When adding a new project or study into a new or an already existing data dictionary, it is important to follow the process of normalizing of data.  This process helps with the prevention of redundant data.  Before submitting new data to the data dictionary, check the current dictionary for properties that already exist.  If there is a similar property that exist, it is best to use the existing property.  For example, if a candidate property named “infection agent” and a property named “infectious agent” already exist, then use “infectious agent.”
+
 #### Referencing external data standards
 Gen3 is expanding the information in data dictionaries by including references to external standards such as the National Cancer Institute Thesaurus (NCIt).  This will help with the comparison of studies and projects and provide researchers with proper references.  The NCIt is being used for many of the schemas as it is inclusive of several different domains (e.g., cancer, drug, etc.).  It also has an abundance of temporal related terms (e.g., day, month, etc.) along with other useful categories of terms.  The benefit of this effort is that it will facilitate cross data common comparison.  For instance, if tuberculosis is a term associated with multiple studies, a search of that term will provide insight into each of the studies.  It will also help with the prevention of adding multiple terms for properties that mean the same thing.  The example below demonstrates a cross study comparison using YAML files (CTDS uses YAML files to help organize data dictionaries.  The files are used by internal systems to help manage the data dictionaries.)  The two files both relate to blood pressure finding, but each has a different term name.  The external reference helps with harmonization efforts by helping identify terms that have the same meaning.
+
 ```JSON
+
 Dictionary 1:
 Blood Pressure Measurement:
     description: Measurement of blood pressure
@@ -70,5 +76,19 @@ Blood Pressure Reading:
          term_version: 18.10e (Release date:2018-10-29)
          term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code= C54707"
 ```
+
 #### Specificity vs. Generality
-One of the goals when providing an external reference is to figure out the level of specificity when breaking down a property name that contains multiple concepts.  The question is whether the new references should be created with very specific designations (This is known as pre-coordination).   This option would likely create the need for the request of new terms in the external standard if the term is not in existence. The other question is should the use of multiple terms that already exist in an external standard be used (This is known as post-coordination).  The best practice adopted by CTDS is to use specificity whenever corresponding terms are available in the external standard.  However, If specific terms are not available, use generality by creating multiple terms that already exist in an external standard.  For instance, if grapefruit juice is a property of interest and it is not found in the external reference, but grapefruit and juice are found individually, then using the individual properties is the preferred method. 
+
+One of the goals when providing an external reference is to figure out the level of specificity when breaking down a property name that contains multiple concepts.  The question is whether the new references should be created with very specific designations (This is known as pre-coordination).   This option would likely create the need for the request of new terms in the external standard if the term is not in existence. The other question is should the use of multiple terms that already exist in an external standard be used (This is known as post-coordination).  The best practice adopted by CTDS is to use specificity whenever corresponding terms are available in the external standard.  However, If specific terms are not available, use generality by creating multiple terms that already exist in an external standard.  For instance, if grapefruit juice is a property of interest and it is not found in the external reference, but grapefruit and juice are found individually, then using the individual properties is the preferred method.
+
+## 4. Programs and Projects
+
+In a Gen3 Data Commons, programs and projects are two administrative nodes in the graph database that serve as the most upstream nodes. A program must be created first, followed by a project. Any subsequent data submission and data access, along with control of access to data, is done through the project scope.
+
+In order to create a program or a project, you need administrator privileges. If not done before, edit the `Secrets/user.yaml` file and set up your priveleges for the services, programs, and projects following the example format shown in the file.
+
+To create a program, visit the URL where your Gen3 Commons is hosted and append `/_root`. If you are running the Docker Compose setup locally, then this will be `localhost/_root`. Otherwise, this will be whatever you set the `hostname` field to in the creds files for the services with `/_root` added to the end. Here, you can choose to either use form submission or upload a file. Choose form submission, search for "program," and then fill in the "dbgap_accession_number" and "name" fields, and hit "Submit". If the message is green ("succeeded:200"), that indicates success, while a grey message indicates failure. More details can be viewed by clicking on the "DETAILS" button.
+
+To create a project, visit the URL where your Gen3 Commons is hosted and append the name of the program you want to create the project under. For example, if you are running the Docker Compose setup locally and would like to create a project under the program "Program1", the URL you will visit will be `localhost/Program1`. You will see the same options to use form submission or upload a file. This time, search for "project," and then fill in the fields and hit "Submit." Again, a green message indicates success while a grey message indicates failure, and more details can be viewed by clicking on the "DETAILS" button.
+
+Once you've created a program and a project, you're ready to start submitting data for that project! Please note that Data Submission refers to metadata regarding the file(s) (Image, Sequencing files etc.) that are to be uploaded. Please refer to the [Gen3 website](https://gen3.org/resources/user/submit-data/) for additional details.
