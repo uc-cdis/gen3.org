@@ -17,8 +17,8 @@ g3Previous:
   - Title: DCF Services Webinar - Authentication, Authorization and Data Access
     Date: Mar. 13th, 2019
     Description: During this webinar we will dive into technical details of the services that Data Commons Framework created such as Authentication, Authorization and Indexing with Fence & Indexd.
-    Image: coming_soon.svg
     Slides: Webinar_20190313.pdf
+    Youtube: 3sjkTG6XP4Y
   - Title: Introduction to Gen3
     Date: Feb. 14th, 2019
     Description: We will introduce attendees to the Gen3 platform and data commons more broadly. Join us as we walk through Gen3’s components and demonstrate how researchers can bring data into Gen3 and use our suite of open-source tools to drive scientific discovery.
