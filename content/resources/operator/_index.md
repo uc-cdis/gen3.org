@@ -32,7 +32,7 @@ Currently, Gen3 deployment using cloud automation relies on a number of supporti
 ## 3. Creating a New Data Dictionary
 
 ### Core Dictionary
-Gen3 is in the process of creating a baseline data dictionary that will allow users to create their own data dictionary. It would serve as a starting point for someone who is interested in creating their own dictionary.  It will be a consensus of previously used data dictionaries and will make the process of creating a data dictionary more efficient.  This [site](https://github.com/uc-cdis/compose-services/tree/master/example-schemas) contains sample dictionaries that can aid the process of creating new dictionaries.
+Gen3 introduced the [DCF data dictionary](https://github.com/uc-cdis/dcfdictionary) that allows users to construct their own data dictionary. It could serve as a starting point for someone who is interested in creating their own dictionary. It is a consensus of previously used data dictionaries and makes the process of creating a data dictionary more efficient.
 
 ### Modifying a Data Dictionary
 Once users have obtained the baseline dictionary, users can make updates to it.  To create a data dictionary tailored to a particular project, the user can modify the baseline dictionary using a program which automatically updates the dictionary given TSV input which specifies the desired changes to the dictionary. The updates are based on instructions that are included in a TSV file such as update a property, delete a node, etc.  Instructions for implementing the script can be found [here](https://github.com/uc-cdis/planx-bioinfo-tools/tree/feat/auto_tools/dictionary_tools).  For those that are interested in making edits directly to a YAML file, we are also in the process of automating this process.
