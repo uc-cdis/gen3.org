@@ -6,7 +6,7 @@ date: 2018-09-04T22:16:21-05:00
 g3Teaser:
   fig: /figs/webinar.svg
   title: Gen3 Webinars
-  detail: The Gen3 webinars are focused on helping the community understand what Gen3 does, what the Data Commons Framework Services (DCFS) are, and how both can be used to aid in the construction and operation of data commons.
+  detail: The Gen3 webinars are focused on helping the community understand what Gen3 does, what the Data Commons Framework Services (DCFS) are and how both can be used to aid in the construction and operation of data commons.
 g3Upcoming:
   - Title: Gen3 Data Modeling - Herding Data Submissions & Hunting Down Data (Sheepdog & Peregrine)
     Date: May 9th, 2019 at 1 PM U.S. Central Time.
