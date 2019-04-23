@@ -6,7 +6,7 @@ date: 2018-09-04T22:16:21-05:00
 g3Teaser:
   fig: figs/kv.svg
   title: Gen3 is how data commons are made.
-  detail: A data commons is a cloud-based software platform for managing, analyzing, harmonizing and sharing large datasets. Gen3 is an open source platform for developing data commons. Data commons accelerate and democratize the process of scientific discovery, especially over large or complex datasets.
+  detail: A data commons is a cloud-based software platform for managing, analyzing, harmonizing, and sharing large datasets. Gen3 is an open source platform for developing data commons. Data commons accelerate and democratize the process of scientific discovery, especially over large or complex datasets.
   button1:
     caption: Experience Demo
     link: https://nci-crdc-demo.datacommons.io/
