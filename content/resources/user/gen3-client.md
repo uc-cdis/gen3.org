@@ -32,7 +32,7 @@ This guide has the following sections:
 
 * * *
 
-The gen3-client can be [downloaded from Github](https://github.com/uc-cdis/cdis-data-client/releases/latest) for Windows, Linux or Mac OS, or it can be installed from source using Google's [GO language](https://golang.org/dl/) (instructions in Github README).
+The gen3-client can be [downloaded from Github](https://github.com/uc-cdis/cdis-data-client/releases/latest) for Windows, Linux, or Mac OS, or it can be installed from source using Google's [GO language](https://golang.org/dl/) (instructions in Github README).
 
 To install, download the correct version for your operating system and unzip the archive. The program must be executed from the command-line by running the command `gen3-client <options>`. For more detailed instructions, see the section below for your operating system.
 
@@ -42,7 +42,7 @@ To install, download the correct version for your operating system and unzip the
 
 1. [Download the latest Mac OS X or Linux version of the gen3-client here](https://github.com/uc-cdis/cdis-data-client/releases/latest).
 2. Unzip the archive
-3. Add the unzipped executable to a directory, for example: `~/.gen3/gen3-client.exe`
+3. Add the unzipped executable to a directory, for example: `~/.gen3/gen3-client.exe.`
 4. Open a terminal window.
 5. Add the directory containing the executable to your Path environment variable by entering this command in the terminal: `echo 'export PATH=$PATH:~/.gen3' >>~/.bash_profile`.
 
@@ -51,8 +51,8 @@ Now you can execute the program by opening a terminal window and entering the co
 ### Windows Installation Instructions
 
 1. [Download the Windows version of the gen3-client here](https://github.com/uc-cdis/cdis-data-client/releases/latest).
-2. Unzip the archive
-3. Add the unzipped executable to a directory, for example: `C:\Program Files\gen3-client\gen3-client.exe`
+2. Unzip the archive.
+3. Add the unzipped executable to a directory, for example: `C:\Program Files\gen3-client\gen3-client.exe.`
 4. Open the Start Menu and type "edit environment variables".
 5. Open the option "Edit the system environment variables".
 6. In the "System Properties" window that opens up, on the "Advanced" tab, click on the "Environment Variables" button.
@@ -89,7 +89,7 @@ So, by adding the directory containing the gen3-client program to your PATH vari
 
 Most programs require some sort of user input to run properly. Some programs will prompt you for input after execution, while other programs are sent this input during execution as "arguments" or "options". The gen3-client uses the latter method of sending user input as command arguments during program execution.
 
-For example, when configuring a profile with the client (details are in the following section), the user must specify the `configure` option and also specify the profile name, API endpoint, and credentails file by adding the flags `--profile`, `--apiendpoint` and `--cred` to the end of the command (see next section for specific examples).
+For example, when configuring a profile with the client (details are in the following section), the user must specify the `configure` option and also specify the profile name, API endpoint, and credentials file by adding the flags `--profile`, `--apiendpoint` and `--cred` to the end of the command (see next section for specific examples).
 
 * * *
 
@@ -99,7 +99,7 @@ For example, when configuring a profile with the client (details are in the foll
 
 Before using the gen3-client to upload or download data, the gen3-client needs to be configured with API credentials downloaded from the user's data commons Profile (via Windmill data portal):
 
-1. To download the "credentials.json" from the data commons, user should starts from that common's Windmill data portal, followed by clicking on "Profile" in the top navigation bar and then creating an API key. In the popup window which informs user an API key has been successfully created, click the "Download json" button to save the API key to local machine.
+1. To download the "credentials.json" from the data commons, the user should start from that common's Windmill data portal, followed by clicking on "Profile" in the top navigation bar and then creating an API key. In the popup window which informs user an API key has been successfully created, click the "Download json" button to save the API key to a local machine.
 
     ![Get credentials.json](Gen3_Keys.png)
 
@@ -216,7 +216,7 @@ Windows: C:\Users\Bob\.gen3\<your_config_name>_history.json
 
 Each object in the history JSON file is a key/value pair of the full file path of a file and GUID it associates with.
 
-Example of a History JSON File:
+Example of a history JSON File:
 
 ```
 {
@@ -308,7 +308,7 @@ Generated tsv images.tsv from files *.dcm!
 
 The output file will have the filename, file_size, and md5sum properties for each of the matching files filled in. In order to complete the TSV, fill in the other required properties, including a column of "urls" with the s3 bucket location of the files.
 
-Example of an Complete TSV File:
+Example of a Complete TSV File:
 
 ```
 read_groups.submitter_id#1	type	project_id	submitter_id	data_category	data_format	data_type	experimental_strategy	file_name	file_size	md5sum	urls
@@ -346,7 +346,7 @@ Successfully uploaded file "test.gif" to GUID b4642430-8c6e-465a-8e20-97c4584393
 
 * * *
 
-Users can automate the upload of a bulk of files by providing an upload manifest. Ideally the upload manifest is the same as the download manifest that can be generated automatically as described in the previous section. However, user can also create a "minimal" upload manifest on their own if needed. A valid 'minimal' upload file is a JSON file that only contains `object_id` fields. The value of each `object_id` field is the GUID of a data file that is going to be submitted. In this mode, for now we are assuming all the data files to be uploaded have the same filenames as their GUIDs.
+Users can automate the upload of a bulk of files by providing an upload manifest. Ideally the upload manifest is the same as the download manifest that can be generated automatically as described in the previous section. However, the user can also create a "minimal" upload manifest on their own if needed. A valid 'minimal' upload file is a JSON file that only contains `object_id` fields. The value of each `object_id` field is the GUID of a data file that is going to be submitted. In this mode, for now we are assuming all the data files to be uploaded have the same filenames as their GUIDs.
 
 Example of manifest.json (Minimal):
 
