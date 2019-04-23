@@ -41,7 +41,7 @@ Do the following to create your first `core_metadata_collection` record:
 6. Click 'Upload submission json from form' and then 'Submit'
 7. Make note of the `submitter_id` of your `core_metadata_collection` record for step 3 below
 
->__Note:__ Minimally, `submitter_id` and `projects.code` are required properties. The project `code` is the name of your project without the "program-" prefix). For example, if your project url is https://data.mycommons.org/example-training, your project's `code` would be 'training', the `program` would be 'example', and your `project_id` would be the combination: 'example-training'.
+>__Note:__ Minimally, `submitter_id` and `projects.code` are required properties. The project `code` is the name of your project without the "program-" prefix. For example, if your project url is https://data.mycommons.org/example-training, your project's `code` would be 'training', the `program` would be 'example', and your `project_id` would be the combination: 'example-training'.
 
 You should have received the message:
 
@@ -143,12 +143,12 @@ The prepared TSV files must be submitted in a specific order due to node links. 
 
 The `program` and `project` nodes are the most upstream nodes and are created by a commons administrator. The first node submitted by data contributors after `core_metadata_collection` depends on the specific data dictionary employed by the data commons but is usually the `study` or `experiment` node, which points directly upstream to the `project` node.
 
-Often next the study participants are recorded in the `case` or `subject` node, and subsequently any clinical information (demographics, diagnoses, etc.), biospecimen data (biopsy samples, extracted analytes), or other experimental methods/details are linked to each case.
+Often the study participants are recorded in the `case` or `subject` node, and subsequently any clinical information (demographics, diagnoses, etc.), biospecimen data (biopsy samples, extracted analytes), or other experimental methods/details are linked to each case.
 
 ### More about Specifying Required Links
 * * *
 
-At least one link is required for every record in a TSV, and sometimes multiple links could be specified. The links are specified in a TSV with the variable header `<nodes>.submitter_id`, where <nodes\> is the back-reference of the upstream node the record is linking to. The value of this link variable is the specific `submitter_id` of the parent record. TSV or JSON templates that list all the possible link headers can be downloaded from the Data Dictionary Viewer on the data commons' website.
+At least one link is required for every record in a TSV, and sometimes multiple links could be specified. The links are specified in a TSV with the variable header `<nodes>.submitter_id`, where <nodes\> the back-reference of the upstream node record is linking to. The value of this link variable is the specific `submitter_id` of the parent record. TSV or JSON templates that list all the possible link headers can be downloaded from the Data Dictionary Viewer on the data commons' website.
 
 For example, there are four cases in two studies in one `project`. The `study` node was made with two study `submitter_id`s: "study-01" and "study-02". The "case.tsv" file uploaded to describe the study participants enrolled will have a corresponding study.
 
@@ -203,12 +203,12 @@ To submit a TSV:
 
     ![Upload and Submit](Gen3_Data_Submission_Use_Form.png)
 
-5. Navigate to the TSV and click "open", the contents of the TSV should appear in the grey box
+5. Navigate to the TSV and click "open". The contents of the TSV should appear in the grey box
 below.
 
 6. Click "Submit".
 
-A message should appear that indicates either success (green, "succeeded: 200") or failure (grey, "failed: 400"). Further details can be reviewed by clicking on "DETAILS", which displays the API response in JSON form. Each record/entity that was submitted, it gets a true/false value for "valid" and lists "errors" if it was not valid.
+A message should appear that indicates either success (green, "succeeded: 200") or failure (grey, "failed: 400"). Further details can be reviewed by clicking on "DETAILS", which displays the API response in JSON form. Each record/entity that was submitted, gets a true/false value for "valid" and lists "errors" if it was not valid.
 
 For anything other than success, check the other fields for any information on the error with the submission. The most descriptive information will be found in the individual entity transaction logs. Each line in the TSV will have its own output with the following attributes:
 
@@ -265,8 +265,8 @@ Finally, once project metadata have been submitted, data file records are linked
 
 The easiest way to create the link between your data files' records and the records in their parent node is as follows:
 
-1. Download a TSV or JSON of the data file records (see Note below)
-2. Add the link to the appropriate parent record for each data file record by adding the parent record's `submitter_id`
+1. Download a TSV or JSON of the data file records (see Note below).
+2. Add the link to the appropriate parent record for each data file record by adding the parent record's `submitter_id`.
 3. Go to the Data Submission page for your project and re-submit the data file records to update them with the new link.
 4. Confirm in the graphical model that files are linked as expected.
 
