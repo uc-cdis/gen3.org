@@ -25,7 +25,7 @@ We believe that data must be open and accessible within the research community t
 
 * OPEN-SOURCE
 
-We believe that collaboration creates a knowledge pool that not only drives better software development, but also connects us to a active community in pursuit of shared social impact.  We have long benefitted from open-source software and are committed to contributing to future generations of software and scholars.
+We believe that collaboration creates a knowledge pool that not only drives better software development, but also connects us to an active community in pursuit of shared social impact.  We have long benefitted from open-source software and are committed to contributing to future generations of software and scholars.
 
 * OPEN INFRASTRUCTURE
 
@@ -42,7 +42,7 @@ Operation of the Gen3 commons is supported by generous grants from Amazon Web Se
 
 User access to the Gen3 data commons runs through a Virtual Private Cloud (VPC).   Access to data and analysis tools through a VPC allows for balance of usability and security.   All access is through a monitored head node.  Data is not directly accessed from the Internet.  
 
-Other secure and compliant Gen3 member systems (including cloud based systems) can access Gen3 data through the API.
+Other secure and compliant Gen3 member systems (including cloud-based systems) can access Gen3 data through the API.
 
 <h3> Diagram of the System Architecture </h3>
 ![Gen3 Architecture](index/framework.png)
