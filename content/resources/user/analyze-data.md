@@ -36,7 +36,7 @@ You will then be presented with "Spawner Options", which display different VM fl
 
 The Jupyter Workspace supports interactive programming sessions in the Python and R languages. Code blocks are entered in cells, which can be executed individually or all at once. Code documentation and comments can also be entered in cells, and the cell type can be set to support Markdown. Results, including plots, tables, and graphics, can be generated in the workspace and downloaded as files.
 
-After editing a Jupyter notebook, it can be saved in the Workspace to revisit later by clicking the "Save" icon or by clicking "File" and then clicking "Save and checkpoint". Notebooks and files can also be downloaded from the server to your local computer by clicking "File" then "Download as". Similarly, notebooks and files can be uploaded to the Jupyter server from a local computer by clicking on the "Upload" button from the server's home page.
+After editing a Jupyter notebook, it can be saved in the Workspace to revisit later by clicking the "Save" icon or by clicking "File" and then clicking "Save and Checkpoint". Notebooks and files can also be downloaded from the server to your local computer by clicking "File" then "Download as". Similarly, notebooks and files can be uploaded to the Jupyter server from a local computer by clicking on the "Upload" button from the server's home page.
 
 ![Upload Save Download Notebook](upload_save_download.gif)
 
@@ -156,7 +156,7 @@ For more detailed information on how to use the Gen3 SDK, see the Gen3 SDK secti
 
 	Next you will want to set up a connection so that you can access the notebook being served from the VM to a browser in your local machine.
 
-	On a terminal session from your local machine, not in the VM, setup the connection.
+	Setup the connection on a terminal session from your local machine, not in the VM.
 
 	Example:
 	```
@@ -165,9 +165,9 @@ For more detailed information on how to use the Gen3 SDK, see the Gen3 SDK secti
 
 	> NOTE:   In the example above, "analysis" is the name of the ssh shortcut that was [setup back in step 2](/user-guide/data-access/#2-ssh-to-virtual-machine-config).
 
-4. Access the notebook in via browser.
+4. Access the notebook via your browser.
 
-	In your preferred browser and enter http://localhost:8888/;   Then from the VM terminal session, copy and paste the token from the notebook server into the requested spot in your browser.
+	In your preferred browser enter http://localhost:8888/;   then from the VM terminal session, copy and paste the token from the notebook server into the requested spot in your browser.
 
  	Example:   Run Server, port forward, access notebook in browser</h5>
 	![Jupyter notebook example](jupyter.gif)
