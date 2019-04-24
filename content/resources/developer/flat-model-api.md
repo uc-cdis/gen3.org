@@ -35,7 +35,7 @@ For example, to query `subject` and get `id`, `year_of_birth` and `vital_status`
 
 ### Paging & Sorting
 
-By default, flat model GraphQL returns only first 10 matches. To find out more matches, you can specify `first` and `offset` parameters for `hits`:
+By default, flat model GraphQL returns only the first 10 matches. To find more matches, you can specify `first` and `offset` parameters for `hits`:
 
 ```
 {
@@ -81,7 +81,7 @@ In addition, `hits` supports sorting with the `sort` keyword. In this keys it wi
 }
 ```
 
-Multiple sorting will sort by all the field. The following query will result in **subjects** sorted descended by `_samples_count` and for equal `_samples_count` it will sort ascending by `_aliquots_count`.
+Multiple sorting will sort by all fields. The following query will result in **subjects** sorted descended by `_samples_count` and for equal `_samples_count` it will sort ascending by `_aliquots_count`.
 
 ```
 {
@@ -116,7 +116,7 @@ Flat model supports two types of the aggregations: `bucket` for strings and enum
 
 `bucket` support `key` for the actual value and `doc_count` for the number of matched items with this value.
 
-`stats` support wider range of aggregations related to the numerical values, including `min`, `max`, `avg` and `sum`. It does has `count`, to return the total number of matched items, for which this numerical value exists.
+`stats` support wider range of aggregations related to the numerical values, including `min`, `max`, `avg`, and `sum`. It has `count`, to return the total number of matched items, for which this numerical value exists.
 
 ```
 {
@@ -148,7 +148,7 @@ Flat model GraphQL also supports filtering with Simple Query Object Notation, wh
 
 `filter` supported for both `aggregations` and `hits`.
 
-The following query will result in the **subjects** whos `vital_status` is `Alive` and their statistics on `_samples_count`.
+The following query will result in the **subjects** whose `vital_status` is `Alive` and their statistics on `_samples_count`.
 
 ```
 {
