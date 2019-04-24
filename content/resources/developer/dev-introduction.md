@@ -619,8 +619,8 @@ is togglable by clicking on the `dropdown__button` button.
 of state across components, for an entire site. Each component containing its own
 state can get complicated, so Redux uses the idea of a central `store` to keep
 track of the larger state of components. In the above example, we used a
-component's state to keep track of if a menu should be open or  not. An example
-of using Redux to store state would be for things like what user is logged into
+component's state to keep track of whether a menu should be open or  not. An example
+of using Redux to store state would be for things like which user is logged into
 your web application. This is information that needs to be accessed in more than
 one component, so instead of storing it in individual components it should be
 contained in the Redux store.
@@ -646,7 +646,7 @@ step is to decide if this new feature would be useful in other parts of Gen3.
 If the answer is yes, then the ideal next step would be to add the feature as a
 generic component to our [Gen3 UI Library](https://github.com/uc-cdis/gen3-ui-component),
 and then import it. This way we can build a comprehensive UI library of components
-that can be used across all of our development, creating a cohesive UI and also
+that can be used across all of our development, creating a cohesive UI, and also
 making UI development easier in the future.
 
 For example, if a developer were tasked with creating a dropdown menu for Windmill,
