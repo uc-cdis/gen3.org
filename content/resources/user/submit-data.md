@@ -54,7 +54,7 @@ If you received any other message, then check the 'Details' to help determine th
 
 To view the records in the `core_metadata_collection` node in your project, you can go to:
 https://data.mycommons.org/example-training/search?node_type=core_metadata_collection
-(replacing the first part of that url with the url of your actual project)
+(replacing the first part of that url with the url of your actual project).
 
 ## 2. Upload Data Files to Object Storage
 * * *
