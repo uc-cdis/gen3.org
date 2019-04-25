@@ -17,7 +17,7 @@ The Gen3 platform is a set of services that enables users to use data and comput
 Files on disk that are typically analyzed as a whole or in chunks. They are typically petabyte scale in data commons and sit in object storage.
 
 ### Rich Data
-Data that are harmonized, indexed in various databases, discoverable and queryable.
+Data that are harmonized, indexed in various databases, discoverable, and queryable.
 
 ## Data management
 
@@ -57,7 +57,7 @@ Tube is driven by configuration files which describe the flat document structure
 - A file-centric document that denormalizes biospecimen and clinical attributes for each file. This targets bioinformaticians who want to filter by specific clinical/biospecimen attributes and select files on which to run analysis.
 - A case-centric document that denormalizes biospecimen and clinical attributes for each case. This targets clinicians who want to see distributions based on clinical attributes among cases. Most of the time, these cases represent patients.
 
-[living document for data exploration architecture](https://github.com/uc-cdis/cdis-wiki/tree/master/dev/gen3/data_explorer)
+[Living document for data exploration architecture](https://github.com/uc-cdis/cdis-wiki/tree/master/dev/gen3/data_explorer)
 
 ## Workspace Systems
 

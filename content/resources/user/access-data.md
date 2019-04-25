@@ -15,7 +15,7 @@ The [data in a Gen3 data commons](/resources/user/data-types) can be browsed and
 
 ## Exploration Tool
 * * *
-One method of accessing metadata in a Gen3 data commons is using the data exploration tool in a web browser. This is page can be reached by clicking "Exploration" in the top navigation bar or by navigating to the url: https://data.mycommons.org/explorer.
+One method of accessing metadata in a Gen3 data commons is using the data exploration tool in a web browser. This page can be reached by clicking "Exploration" in the top navigation bar or by navigating to the url: https://data.mycommons.org/explorer.
 
 > __NOTE:__ For these user guides, https://data.mycommons.org is an example URL and will not be the actual URL of the data commons.
 
@@ -25,7 +25,7 @@ The data exploration tool has a certain set of metadata properties that can be u
 
 ![Facets](Gen3_facets.png)
 
-> __NOTE:__ The properties used for filtering data are configurable and are chosen in collaboration with data commons sponsors, contributors and analysts. Contact the data commons support team with suggestions for a new property to be added as a filter.
+> __NOTE:__ The properties used for filtering data are configurable and are chosen in collaboration with data commons sponsors, contributors, and analysts. Contact the data commons support team with suggestions for a new property to be added as a filter.
 
 <!--
 Custom filters can also be added by clicking on the "add a custom filter" button. Begin typing the property you would like to add as a custom filter and then select it. You can then enter the values of that property to filter data on.

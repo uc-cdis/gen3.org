@@ -30,7 +30,7 @@ The column headers of a TSV are the properties of a node, and the rows in TSVs a
 
 * id
 
-	Every record in every node in the data commons has the property `id`, which is a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier), not to be confused with "submitter_id" or "project_id"
+	Every record in every node in the data commons has the property `id`, which is a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier), not to be confused with "submitter_id" or "project_id".
 
 * links
 
