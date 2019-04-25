@@ -49,7 +49,7 @@ g3Roles:
   r3:
     name: Developers
     fig: /figs/roles/icon-devs.svg
-    detail: Integrate Gen3 APIs into your services and the utilize our open-source software libraries so you can focus on your tools.
+    detail: Integrate Gen3 APIs into your services and utilize our open-source software libraries so you can focus on your tools.
     button:
       caption: Gen3 Developer
       target: _self
