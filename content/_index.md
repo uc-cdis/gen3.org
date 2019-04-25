@@ -33,7 +33,7 @@ g3Roles:
   r1:
     name: Bioinformaticians
     fig: /figs/roles/icon-bio.svg
-    detail: Organized data allows you to focus on creating unique pipelines and analysis for your projects.
+    detail: Organized data allows you to focus on creating unique pipelines and analyses for your projects.
     button:
       caption: Pipeline Library
       target: _blank
