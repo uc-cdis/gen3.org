@@ -172,7 +172,7 @@ Google Sign-In / Microsoft Office 365 secure authentication systems as registere
 
 _Pros_
 
-* Most users either have an Google/Microsoft identities or can easily create one.
+* Most users either have a Google/Microsoft identity or can easily create one.
 
 _Cons_
 
