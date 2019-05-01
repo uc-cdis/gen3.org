@@ -88,7 +88,7 @@ The following methods of authentication are supported in Gen3. They are listed i
 
 ### eRA Commons
 
-Authentication system developed by NIH for managing for research grants.
+Authentication system developed by NIH for the management of research grants.
 
 _Pros_
 
@@ -155,7 +155,7 @@ _Cons_
 
 ### ORCID
 
-Provide an identifier for individuals to use with their name as they engage in research, scholarship, and innovation activities. 
+Provides an identifier for individuals to use with their name as they engage in research, scholarship, and innovation activities. 
 
 _Pros_
 
