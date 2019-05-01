@@ -136,7 +136,7 @@ _Pros_
 _Cons_
 
 * Can only be used if the user’s organization is part of the InCommon federation. 
-* Reference this resource for organizations supported by InCommon.
+* Reference [this resource](https://www.opensciencedatacloud.org/console/) for organizations supported by InCommon.
 
 ### eduGAIN
 
@@ -151,7 +151,7 @@ _Pros_
 _Cons_
 
 * Can only be used if the user’s organization is part of one of the 60+ federations participating in eduGAIN. 
-* Reference this resource for organizations supported by eduGAIN.
+* Reference [this resource](https://edugain.org/participants/how-to-use-edugain/) for organizations supported by eduGAIN.
 
 ### ORCID
 
