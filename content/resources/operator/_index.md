@@ -81,7 +81,106 @@ Blood Pressure Reading:
 
 One of the goals when providing an external reference is to figure out the level of specificity when breaking down a property name that contains multiple concepts.  The question is whether the new references should be created with very specific designations (This is known as pre-coordination).   This option would likely create the need for the request of new terms in the external standard if the term is not in existence. The other question is, should the use of multiple terms that already exist in an external standard be used (This is known as post-coordination)?  The best practice adopted by CTDS is to use specificity whenever corresponding terms are available in the external standard.  However, If specific terms are not available, use generality by creating multiple terms that already exist in an external standard.  For instance, if grapefruit juice is a property of interest and it is not found in the external reference, but grapefruit and juice are found individually, then using the individual properties is the preferred method.
 
-## 4. Programs and Projects
+
+## 4. Authentication Methods
+
+The following methods of authentication are supported in Gen3. They are listed in order of preference from OCC perspective, and technological and governance considerations are outlined below.
+
+### eRA Commons
+
+Authentication system developed by NIH for managing for research grants.
+
+_Pros_
+
+* Intended for officials, principal investigators, trainees and post-docs at institutions/organizations to access and share information relating to research grants.
+
+_Cons_
+
+* Can only be used if sponsored by an NIH institute.
+
+### Google (organizational account)
+
+Google Sign-In secure authentication system as provided by the user’s organization.
+
+_Pros_
+
+* User’s organization inherently takes responsibility for actions taken by user under the auspice of their organizational identity.
+* User’s organization takes responsibility for activating/deactivating and monitoring identity.
+
+_Cons_
+
+* Can only be used if the user’s organization utilizes Google for identity management.
+
+### Microsoft Office 365 (organizational account)
+
+Microsoft Office 365 secure authentication system as provided by the user’s organization.
+
+_Pros_
+
+* User’s organization inherently takes responsibility for actions taken by user under the auspice of their organizational identity.
+* User’s organization takes responsibility for activating/deactivating and monitoring identity.
+
+_Cons_
+
+* Can only be used if the user’s organization utilizes Microsoft Office 365 for identity management.
+
+### InCommon
+
+InCommon, operated by Internet2, provides a secure and privacy-preserving trust fabric for research and higher education, and their partners, in the United States. Individual identity providers, such as NIH iTrust and most academic institutions, are federated by InCommon.
+
+_Pros_
+
+* User’s organization inherently takes responsibility for actions taken by user under the auspice of their organizational identity.
+* User’s organization takes responsibility for activating/deactivating and monitoring identity.
+
+_Cons_
+
+* Can only be used if the user’s organization is part of the InCommon federation. 
+* Reference this resource for organizations supported by InCommon.
+
+### eduGAIN
+
+eduGAIN is an international “interfederation” of identity and service providers around the world. InCommon is a participant in eduGAIN.
+
+_Pros_
+
+* User’s organization inherently takes responsibility for actions taken by user under the auspice of their organizational identity.
+* User’s organization takes responsibility for activating/deactivating and monitoring identity.
+* International presence, and InCommon is a participant
+
+_Cons_
+
+* Can only be used if the user’s organization is part of one of the 60+ federations participating in eduGAIN. 
+* Reference this resource for organizations supported by eduGAIN.
+
+### ORCID
+
+Provide an identifier for individuals to use with their name as they engage in research, scholarship, and innovation activities. 
+
+_Pros_
+
+* Most (all) researchers either have an ORCID or can easily create an ORCID.
+
+_Cons_
+
+* User’s organization does not inherently take responsibility for actions taken by user under auspice of ORCID identity.
+* Neither user’s organization nor ORCID take responsibility for activating/deactivating users based on affiliation.
+
+### Google / Microsoft Office 365 (personal account)
+
+Google Sign-In / Microsoft Office 365 secure authentication systems as registered by an individual with no organizational affiliation or management.
+
+_Pros_
+
+* Most users either have an Google/Microsoft identities or can easily create one.
+
+_Cons_
+
+* User’s organization does not inherently take responsibility for actions taken by user under auspice of personal Google/Microsoft identify.
+* Neither user’s organization does not take responsibility for activating/deactivating users based on affiliation.
+
+
+## 5. Programs and Projects
 
 In a Gen3 Data Commons, programs and projects are two administrative nodes in the graph database that serve as the most upstream nodes. A program must be created first, followed by a project. Any subsequent data submission and data access, along with control of access to data, is done through the project scope.
 
