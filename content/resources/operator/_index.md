@@ -9,15 +9,15 @@ menuname: operatorMenu
 
 # Running a Gen3 Data Commons
 
-## 1. Docker-Compose
+## 1. Compose Services
 
-Docker-compose allows you to quickly run a Gen3 commons on a single computer or in a single VM in a matter of minutes.
+Compose Services allow you to quickly run a Gen3 commons on a single computer or in a single VM in a matter of minutes.
 
 This option is suitable for those that wish to run a small data commons, experiment with the technology, or even do local development on the Gen3 services. Using this method does not get you the full suite of automation, and logging for Gen3 commons.
 
 We strongly recommend you start here for your first experience running the Gen3 platform.
 
-[Gen3 Docker-Compose](https://github.com/uc-cdis/compose-services)
+[Gen3 Compose Services](https://github.com/uc-cdis/compose-services)
 
 ## 2. Cloud Automation
 
@@ -35,7 +35,7 @@ Currently, Gen3 deployment using cloud automation relies on a number of supporti
 Gen3 introduced the [DCF data dictionary](https://github.com/uc-cdis/dcfdictionary) that allows users to construct their own data dictionary. It could serve as a starting point for someone who is interested in creating their own dictionary. It is a consensus of previously used data dictionaries and makes the process of creating a data dictionary more efficient.
 
 ### Modifying a Data Dictionary
-Once users have obtained the baseline dictionary, users can make updates to it.  To create a data dictionary tailored to a particular project, the user can modify the baseline dictionary using a program which automatically updates the dictionary given TSV input which specifies the desired changes to the dictionary. The updates are based on instructions that are included in a TSV file such as update a property, delete a node, etc.  Instructions for implementing the script can be found [here](https://github.com/uc-cdis/planx-bioinfo-tools/tree/feat/auto_tools/dictionary_tools).  For those that are interested in making edits directly to a YAML file, we are also in the process of automating this process.
+Once users have obtained the baseline dictionary, users can make updates to it.  To create a data dictionary tailored to a particular project, the user can modify the baseline dictionary using a program which automatically updates the dictionary given TSV input which specifies the desired changes to the dictionary. The updates are based on instructions that are included in a TSV file such as update a property, delete a node, etc.  Instructions for implementing the script can be found [here](https://github.com/uc-cdis/planx-bioinfo-tools/tree/master/dictionary_tools). For those that are interested in making edits directly to a YAML file, we are also in the process of automating this process.
 
 ### Best Practices
 
