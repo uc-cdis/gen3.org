@@ -36,4 +36,7 @@ menuname: userMenu
 
 ### Opening Properties View:
 ![Opening Properties View](properties-view.gif)
+
+### Search for Node, Property, or Description:
+![Search](search.gif)
 * * *
