@@ -41,10 +41,10 @@ To install, download the correct version for your operating system and unzip the
 ### Mac OS X / Linux Installation Instructions
 
 1. [Download the latest Mac OS X or Linux version of the gen3-client here](https://github.com/uc-cdis/cdis-data-client/releases/latest).
-2. Unzip the archive
-3. Add the unzipped executable to a directory, for example: `~/.gen3/gen3-client.exe.`
+2. Unzip the archive.
+3. Add the unzipped executable to a directory, for example: `~/.gen3/gen3-client.exe`.
 4. Open a terminal window.
-5. Add the directory containing the executable to your Path environment variable by entering this command in the terminal: `echo 'export PATH=$PATH:~/.gen3' >>~/.bash_profile`.
+5. Add the directory containing the executable to your Path environment variable by entering this command in the terminal: `echo 'export PATH=$PATH:~/.gen3' >> ~/.bash_profile`.
 
 Now you can execute the program by opening a terminal window and entering the command `gen3-client`.
 
@@ -52,7 +52,7 @@ Now you can execute the program by opening a terminal window and entering the co
 
 1. [Download the Windows version of the gen3-client here](https://github.com/uc-cdis/cdis-data-client/releases/latest).
 2. Unzip the archive.
-3. Add the unzipped executable to a directory, for example: `C:\Program Files\gen3-client\gen3-client.exe.`
+3. Add the unzipped executable to a directory, for example: `C:\Program Files\gen3-client\gen3-client.exe`.
 4. Open the Start Menu and type "edit environment variables".
 5. Open the option "Edit the system environment variables".
 6. In the "System Properties" window that opens up, on the "Advanced" tab, click on the "Environment Variables" button.
