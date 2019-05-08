@@ -23,14 +23,17 @@ menuname: userMenu
 * * *
 
 ### Viewing Data Dictionary as a Graph:
-![Dictionary Graph Details](dd-graph-details.png)
-
-### Toggling the Graph View:
-![Dictionary Graph](dd-graph.png)
+![Dictionary Graph](graph.png)
 
 ### Viewing Data Dictionary as Tables:
-![Dictionary Table](dd-table.png)
+![Dictionary Table](table.png)
 
 ### Toggling Between Different Views
-![Data Dictionary Viewer](dd-viewer.gif)
+![Data Dictionary Viewer](switch-to-table.gif)
+
+### Viewing Properties of a Single Node:
+![Properties of a Node](properties.png)
+
+### Opening Properties View:
+![Opening Properties View](properties-view.gif)
 * * *
