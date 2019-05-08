@@ -39,4 +39,7 @@ menuname: userMenu
 
 ### Search for Node, Property, or Description:
 ![Search](search.gif)
+
+### Download Submission Templates:
+![Download Templates](download-templates.gif)
 * * *
