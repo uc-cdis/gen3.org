@@ -59,4 +59,5 @@ menuname: userMenu
 * Your download will be a ZIP file containing containing multiple files: One is a submission template for the selected node, and the others are submission templates for each parent node.
 * See the README contained in the download for more information on how to use the templates.
 ![Download Templates](download-templates.gif)
+
 * * *
