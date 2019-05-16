@@ -15,7 +15,7 @@ Compose Services allow you to quickly run a Gen3 commons on a single computer or
 
 This option is suitable for those that wish to run a small data commons, experiment with the technology, or even do local development on the Gen3 services.
 
-We recommend you start here for your first experience running the Gen3 platform. Using Compose Services will not make the full suite of automation and logging for Gen3 commons available. If you are considering to create bigger data commons or deploy data commons in production environments, we strongly recommend you use [Cloud Automation](#2-cloud-automation) for these purposes.
+We recommend you start here for your first experience running the Gen3 platform. Using Compose Services will not make the full suite of automation and logging for Gen3 commons available. If you intend to create a bigger data commons or deploy a data commons in a production environment, we strongly recommend you use [Cloud Automation](#2-cloud-automation) for these purposes.
 
 [Gen3 Compose Services](https://github.com/uc-cdis/compose-services)
 
