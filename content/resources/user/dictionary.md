@@ -38,23 +38,23 @@ menuname: userMenu
 ![Data Dictionary Viewer](switch-to-table.gif)
 
 ### Viewing Properties of a Single Node:
-* Click on a node to see its parent nodes and information about its properties
+* The Properties View of a node lists each property, the property's type, whether or not the property is required, and a brief description of the property.
 ![Properties of a Node](properties.png)
 
 ### Opening Properties View:
-* The Properties View of a node lists each property, the property's type, whether or not the property is required, and a brief description of the property.
+* Click on a node to see its parent nodes and information about its properties.
 ![Opening Properties View](properties-view.gif)
 
 ### Search for Node, Property, or Description:
 * Enter a search a term in the search box.
 * Search terms can be node names, node descriptions, property names, and property descriptions.
 * While typing, a list of suggestions appears below the search bar. Click on a suggestion to search for it.
-* A searh will display all nodes that contain the search term in either its name or description, or its properties' names or descriptions.
+* A search will display all nodes that contain the search term in either its name or description, or its properties' names or descriptions.
 * A history of your searches appears below the search bar. Click on an item here to display the results again.
 ![Search](search.gif)
 
 ### Download Submission Templates:
-* You can download a submission template to help you in submitting files.
+* You can download a submission template to help you with submitting files.
 * Submission templates can be either JSON or TSV files.
 * Your download will be a ZIP file containing containing multiple files: One is a submission template for the selected node, and the others are submission templates for each parent node.
 * See the README contained in the download for more information on how to use the templates.
