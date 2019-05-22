@@ -57,7 +57,7 @@ menuname: userMenu
 * In the Graph View, you can download submission templates to help you with submitting your project's data.
 * Click a node in the graph that you'd like to submit, and all parent nodes will be highlighted.
 * Click the "Download templates" button to the left of the highlighted graph. Submission templates can be either JSON or TSV files.
-* Your download will be a ZIP file containing containing multiple files: One is a submission template for the selected node, and the others are submission templates for each parent node.
+* Your download will be a ZIP file containing multiple files: One is a submission template for the selected node, and the others are submission templates for each parent node.
 * See the README contained in the download for more information on how to use the templates.
 ![Download Templates](download-templates.gif)
 
