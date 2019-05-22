@@ -24,7 +24,7 @@ menuname: userMenu
 
 ### Viewing Data Dictionary as a Graph:
 * View the Data Dictionary as a graph to see each node, its properties, and its relationships.
-* Relationships between nodes are represented by arrows from one node to another..
+* Relationships between nodes are represented by arrows from one node to another.
 ![Dictionary Graph](graph.png)
 
 ### Viewing Data Dictionary as Tables:
