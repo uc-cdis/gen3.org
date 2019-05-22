@@ -54,7 +54,7 @@ menuname: userMenu
 ![Search](search.gif)
 
 ### Download Submission Templates:
-* You can download a submission template to help you with submitting files.
+* In the Graph View, you can download submission templates to help you with submitting your project's data.
 * Submission templates can be either JSON or TSV files.
 * Your download will be a ZIP file containing containing multiple files: One is a submission template for the selected node, and the others are submission templates for each parent node.
 * See the README contained in the download for more information on how to use the templates.
