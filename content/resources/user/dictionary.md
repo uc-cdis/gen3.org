@@ -28,7 +28,7 @@ menuname: userMenu
 ![Dictionary Graph](graph.png)
 
 ### Viewing Data Dictionary as Tables:
-* View the Data Dictionary as a table to see the name and a brief description of each node, organized by node type.
+* View the Data Dictionary as a table to see the name and a brief description of each node, organized by node category.
 * Click on the name of a node to display more information about its properties.
 * Click on a button in the Download Template column to a download a template for uploading a file of that particular node type. The file can be downloaded as a JSON or TSV file.
 ![Dictionary Table](table.png)
