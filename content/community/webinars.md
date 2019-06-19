@@ -14,7 +14,7 @@ g3Upcoming:
     Image: coming_soon.svg
     Link: https://www.eventbrite.com/e/gen3-webinar-come-and-learn-with-us-tickets-63399391286?aff=gen3
 g3Previous:
-- Title: Data Science with Gen3 - Using Jupyter Notebooks
+  - Title: Data Science with Gen3 - Using Jupyter Notebooks
     Date: June 13th, 2019
     Description: Join us as we walk through Gen3’s services and demonstrate how researchers can bring data into Gen3 and get access to a data ecosystem with open-source tools to drive scientific discovery. During this webinar we will dive into the details of data science with Gen3 and how Jupyter Notebooks work with Gen3.
     Youtube: Ca7F502oYsY
