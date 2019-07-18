@@ -85,6 +85,7 @@ One of the goals when providing an external reference is to figure out the level
 
 When making updates to data dictionaries, it is important to document these changes for good record keeping purposes.  The documentation should be implemented in the release notes of respective github site. 
 
+_Example Documentation_
 Gen3 Product: Sample Data Hub
 Release Date: May 30, 2019
 New Features and Changes
