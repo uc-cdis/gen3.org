@@ -81,8 +81,26 @@ Blood Pressure Reading:
 
 One of the goals when providing an external reference is to figure out the level of specificity when breaking down a property name that contains multiple concepts.  The question is whether the new references should be created with very specific designations (This is known as pre-coordination).   This option would likely create the need for the request of new terms in the external standard if the term is not in existence. The other question is, should the use of multiple terms that already exist in an external standard be used (This is known as post-coordination)?  The best practice adopted by CTDS is to use specificity whenever corresponding terms are available in the external standard.  However, If specific terms are not available, use generality by creating multiple terms that already exist in an external standard.  For instance, if grapefruit juice is a property of interest and it is not found in the external reference, but grapefruit and juice are found individually, then using the individual properties is the preferred method.
 
+## 4. Dictionary Update Documentation
 
-## 4. Authentication Methods
+When making updates to data dictionaries, it is important to document these changes for good record keeping purposes.  The documentation should be implemented in the release notes of respective github site. 
+
+Gen3 Product: Sample Data Hub
+Release Date: May 30, 2019
+New Features and Changes
+
+Created the following node:
+sample
+
+Added the following properties to the sample node:
+sample_name
+sampe_time
+
+Removed the following properties from the demographic node:
+sex
+height
+
+## 5. Authentication Methods
 
 The following methods of authentication are supported in Gen3. They are listed in order of preference from OCC perspective, and technological and governance considerations are outlined below.
 
@@ -180,7 +198,7 @@ _Cons_
 * Neither user’s organization does not take responsibility for activating/deactivating users based on affiliation.
 
 
-## 5. Programs and Projects
+## 6. Programs and Projects
 
 In a Gen3 Data Commons, programs and projects are two administrative nodes in the graph database that serve as the most upstream nodes. A program must be created first, followed by a project. Any subsequent data submission and data access, along with control of access to data, is done through the project scope.
 
