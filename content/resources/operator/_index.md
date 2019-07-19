@@ -86,22 +86,22 @@ One of the goals when providing an external reference is to figure out the level
 When making updates to data dictionaries, it is important to document these changes for good record keeping purposes.  The documentation should be implemented in the release notes of respective github site. 
 
 ### Example Documentation
+<dl>
+<dt>Gen3 Product: Sample Data Hub</dt>
+<dt>Release Date: May 30, 2019</dt>
+<dt>New Features and Changes</dt>
 
-<dd>Gen3 Product: Sample Data Hub</dd>
-<dd>Release Date: May 30, 2019</dd>
-<dd>New Features and Changes</dd>
-
-<dd>Created the following node:</dd>
+<dt>Created the following node:</dt>
 <dd>sample</dd>
 
-<dd>Added the following properties to the sample node:</dd>
+<dt>Added the following properties to the sample node:</dt>
 <dd>sample_name</dd>
 <dd>sampe_time</dd>
 
-<dd>Removed the following properties from the demographic node:</dd>
+<dt>Removed the following properties from the demographic node:</dt>
 <dd>sex</dd>
 <dd>height</dd>
-
+</dl>
 * * *
 ## Contact CTDS Staff
 * * *
