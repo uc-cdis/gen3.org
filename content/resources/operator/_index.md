@@ -94,20 +94,29 @@ When making updates to data dictionaries, it is important to document these chan
       Created the following node:
       sample
 
-      Added the following properties to the sample node:
+      Add the following properties to the sample node:
       sample_name
       sampe_time
 
-      Removed the following properties from the demographic node:
+      Remove the following properties from the demographic node:
       sex
       height
 
-      Added new link: 
+      Add new link: 
       sample to visit node
 
 Proper documentation of dictionary updates fosters accountability and creates a historical representaion of all dictionary changes that will allow future operators of the dictionary to understand how the dictionary has evolved over time.    
 
-When generating the release notes there are ([conventions] https://github-tools.github.io/github-release-notes/concept.html) that have been established that 
+When generating the release notes there are [conventions] (https://github-tools.github.io/github-release-notes/concept.html) that have been established that help with transparency and readability.  The coventions include:
+
+  1) Start the subject line with a verb (e.g. Change header styles)
+  2) Use the imperative mood in the subject line (e.g. Fix, not Fixed or Fixes header styles)
+  3) Limit the subject line to about 50 characters
+  4) Do not end the subject line with a period
+  5) Separate subject from body with a blank line
+  6) Wrap the body at 72 characters
+  7) Use the body to explain what and why not how
+
 * * *
 ## Contact CTDS Staff
 * * *
