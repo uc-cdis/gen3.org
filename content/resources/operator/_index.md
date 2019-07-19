@@ -107,7 +107,7 @@ When making updates to data dictionaries, it is important to document these chan
 
 Proper documentation of dictionary updates fosters accountability and creates a historical representaion of all dictionary changes that will allow future operators of the dictionary to understand how the dictionary has evolved over time.    
 
-When generating the release notes there are [conventions](https://github-tools.github.io/github-release-notes/concept.html) that have been established that help with transparency and readability.  The coventions include:
+When generating the release notes there are [conventions](https://github-tools.github.io/github-release-notes/concept.html) that have been established that help with transparency and readability of release notes.  The coventions include:
 
   1) Start the subject line with a verb (e.g. Update to enumberated value)
   2) Use the imperative mood in the subject line (e.g. Add, not Added or Adds header styles)
