@@ -85,21 +85,38 @@ One of the goals when providing an external reference is to figure out the level
 
 When making updates to data dictionaries, it is important to document these changes for good record keeping purposes.  The documentation should be implemented in the release notes of respective github site. 
 
-_Example Documentation_
+###_Example Documentation_
+
 Gen3 Product: Sample Data Hub
 Release Date: May 30, 2019
 New Features and Changes
 
-Created the following node:
-sample
+>Created the following node:
+>sample
 
-Added the following properties to the sample node:
-sample_name
-sampe_time
+>Added the following properties to the sample node:
+>sample_name
+>sampe_time
 
-Removed the following properties from the demographic node:
-sex
-height
+>Removed the following properties from the demographic node:
+>sex
+>height
+
+* * *
+## Contact CTDS Staff
+* * *
+
+* Locations:
+	* [Shoreland](https://www.google.com/maps/place/Shoreland/@41.7962274,-87.5837128,17z/data=!3m1!4b1!4m5!3m4!1s0x880e297518655577:0x2fb20b44b0d04984!8m2!3d41.7962274!4d-87.5815188):
+		5454 South Shore Drive
+		Suite 2B
+		Chicago, IL 60615
+<br>
+	* [University of Chicago](https://www.google.com/maps/place/Knapp+Center+for+Biomedical+Discovery+KCBD/@41.7916469,-87.6055968,17z/data=!3m1!4b1!4m5!3m4!1s0x880e293eb63accd1:0xb6f95ee97c4b5e08!8m2!3d41.7916469!4d-87.6034081):
+		900 East 57th Street
+		10th Floor, Room 10148
+		Chicago, IL 60616
+<br>
 
 ## 5. Authentication Methods
 
