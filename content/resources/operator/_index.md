@@ -83,7 +83,7 @@ One of the goals when providing an external reference is to figure out the level
 
 ## 4. Dictionary Update Documentation
 
-When making updates to data dictionaries, it is important to document these changes for good record keeping purposes.  The documentation should be implemented in the release notes of the respective github site.  All changes should be denoted from minor to major changes.  Common updates include enumerated value modifications, adding or removing properties or nodes, and updates to links that describe relationships and dependencies between nodes.
+When making updates to data dictionaries, it is important to document these changes for good record keeping purposes.  The documentation should be implemented in the release notes of the respective GitHub site.  All changes should be denoted from minor to major changes.  Common updates include enumerated value modifications, adding or removing properties or nodes, and updates to links that describe relationships and dependencies between nodes.
 
 ### Example Documentation
 
@@ -105,8 +105,9 @@ When making updates to data dictionaries, it is important to document these chan
       Added new link: 
       sample to visit node
 
-Proper documentation of dictionary updates fosters accountability and creates a historical representaion of all dictionary these changes that will allow future operators of the dictionary to understand how the dictionary has evolved over time.    
+Proper documentation of dictionary updates fosters accountability and creates a historical representaion of all dictionary changes that will allow future operators of the dictionary to understand how the dictionary has evolved over time.    
 
+When generating the release notes there are ([conventions] https://github-tools.github.io/github-release-notes/concept.html) that have been established that 
 * * *
 ## Contact CTDS Staff
 * * *
