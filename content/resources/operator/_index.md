@@ -83,25 +83,25 @@ One of the goals when providing an external reference is to figure out the level
 
 ## 4. Dictionary Update Documentation
 
-When making updates to data dictionaries, it is important to document these changes for good record keeping purposes.  The documentation should be implemented in the release notes of respective github site. 
+When making updates to data dictionaries, it is important to document these changes for good record keeping purposes.  The documentation should be implemented in the release notes of the respective github site. 
 
 ### Example Documentation
-<dl>
-<dt>Gen3 Product: Sample Data Hub</dt>
-<dt>Release Date: May 30, 2019</dt>
-<dt>New Features and Changes</dt>
 
-<dt>Created the following node:</dt>
-<dd>sample</dd>
+      Gen3 Product: Sample Data Hub
+      Release Date: May 30, 2019
+      New Features and Changes
 
-<dt>Added the following properties to the sample node:</dt>
-<dd>sample_name</dd>
-<dd>sampe_time</dd>
+      Created the following node:
+      sample
 
-<dt>Removed the following properties from the demographic node:</dt>
-<dd>sex</dd>
-<dd>height</dd>
-</dl>
+      Added the following properties to the sample node:
+      sample_name
+      sampe_time
+
+      Removed the following properties from the demographic node:
+      sex
+      height
+
 * * *
 ## Contact CTDS Staff
 * * *
