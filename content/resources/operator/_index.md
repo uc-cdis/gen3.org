@@ -91,7 +91,7 @@ When making updates to data dictionaries, it is important to document these chan
       Release Date: May 30, 2019
       New Features and Changes
 
-      Created the following node:
+      Create the following node:
       sample
 
       Add the following properties to the sample node:
@@ -109,13 +109,13 @@ Proper documentation of dictionary updates fosters accountability and creates a 
 
 When generating the release notes there are [conventions] (https://github-tools.github.io/github-release-notes/concept.html) that have been established that help with transparency and readability.  The coventions include:
 
-  1) Start the subject line with a verb (e.g. Change header styles)
-  2) Use the imperative mood in the subject line (e.g. Fix, not Fixed or Fixes header styles)
+  1) Start the subject line with a verb (e.g. Update to enumberated value)
+  2) Use the imperative mood in the subject line (e.g. Add, not Added or Adds header styles)
   3) Limit the subject line to about 50 characters
   4) Do not end the subject line with a period
   5) Separate subject from body with a blank line
   6) Wrap the body at 72 characters
-  7) Use the body to explain what and why not how
+  7) Use the body to explain what and why, not how
 
 * * *
 ## Contact CTDS Staff
