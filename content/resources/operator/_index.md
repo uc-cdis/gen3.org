@@ -117,22 +117,6 @@ When generating the release notes there are [conventions](https://github-tools.g
   6) Wrap the body at 72 characters
   7) Use the body to explain what and why, not how
 
-* * *
-## Contact CTDS Staff
-* * *
-
-* Locations:
-	* [Shoreland](https://www.google.com/maps/place/Shoreland/@41.7962274,-87.5837128,17z/data=!3m1!4b1!4m5!3m4!1s0x880e297518655577:0x2fb20b44b0d04984!8m2!3d41.7962274!4d-87.5815188):
-		5454 South Shore Drive
-		Suite 2B
-		Chicago, IL 60615
-<br>
-	* [University of Chicago](https://www.google.com/maps/place/Knapp+Center+for+Biomedical+Discovery+KCBD/@41.7916469,-87.6055968,17z/data=!3m1!4b1!4m5!3m4!1s0x880e293eb63accd1:0xb6f95ee97c4b5e08!8m2!3d41.7916469!4d-87.6034081):
-		900 East 57th Street
-		10th Floor, Room 10148
-		Chicago, IL 60616
-<br>
-
 ## 5. Authentication Methods
 
 The following methods of authentication are supported in Gen3. They are listed in order of preference from OCC perspective, and technological and governance considerations are outlined below.
