@@ -40,10 +40,10 @@ Once users have obtained the baseline dictionary, users can make updates to it. 
 ### Best Practices
 
 #### Data Normalization
-When adding a new project or study into a new or an already existing data dictionary, it is important to follow the process of normalizing of data.  This process helps with the prevention of redundant data.  Before submitting new data to the data dictionary, check the current dictionary for properties that already exist.  If there is a similar property that exists, it is best to use the existing property.  For example, if a candidate property named “infection agent” and a property named “infectious agent” already exist, then use “infectious agent.”
+When adding a new project or study into a new or an already existing data dictionary, it is important to follow the process of harmonization of data.  This process helps with the prevention of redundant data.  Before submitting new data to the data dictionary, check the current dictionary for properties that already exist.  If there is a similar property that exists, it is best practice to use the existing property.  For example, if a candidate property named “infection agent” and a property named “infectious agent” already exist, then use “infectious agent.”
 
 #### Referencing external data standards
-Gen3 is expanding the information in data dictionaries by including references to external standards such as the National Cancer Institute Thesaurus (NCIt).  This will help with the comparison of studies and projects and provide researchers with proper references.  The NCIt is being used for many of the schemas as it is inclusive of several different domains (e.g., cancer, drug, etc.).  It also has an abundance of temporal related terms (e.g., day, month, etc.) along with other useful categories of terms.  The benefit of this effort is that it will facilitate cross data common comparison.  For instance, if tuberculosis is a term associated with multiple studies, a search of that term will provide insight into each of the studies.  It will also help with the prevention of adding multiple terms for properties that mean the same thing.  The example below demonstrates a cross study comparison using YAML files (CTDS uses YAML files to help organize data dictionaries.  The files are used by internal systems to help manage the data dictionaries.)  The two files both relate to blood pressure finding, but each has a different term name.  The external reference helps with harmonization efforts by helping identify terms that have the same meaning.
+Gen3 is expanding the information in data dictionaries by including references to controlled vocabularies such as the National Cancer Institute Thesaurus (NCIt).  This will help with the comparison of studies and projects across data commons and provide researchers with proper references.  The NCIt is being used for many of the schemas as it is inclusive of several different domains (for example, clinical, drug, etc.).  It also has an abundance of non-domain related terms such as nominal (for example, gender, race) and ordinal (for example, left, right, first, last) along with other useful categories of terms.  The benefit of this effort is that it will facilitate cross data common comparison.  For instance, if tuberculosis is a term associated with multiple studies, a search of that term will provide insight into each of the studies.  It will also help with the prevention of adding multiple terms for properties that mean the same thing.  The example below demonstrates a cross study comparison using YAML files (Gen3 uses YAML files to help organize data dictionaries.  The files are used by internal systems to help manage the data dictionaries.)  The two files both relate to blood pressure finding, but each has a different term name.  The external reference helps with harmonization efforts by helping identify terms that have the same meaning.
 
 ```JSON
 
@@ -79,10 +79,45 @@ Blood Pressure Reading:
 
 #### Specificity vs. Generality
 
-One of the goals when providing an external reference is to figure out the level of specificity when breaking down a property name that contains multiple concepts.  The question is whether the new references should be created with very specific designations (This is known as pre-coordination).   This option would likely create the need for the request of new terms in the external standard if the term is not in existence. The other question is, should the use of multiple terms that already exist in an external standard be used (This is known as post-coordination)?  The best practice adopted by CTDS is to use specificity whenever corresponding terms are available in the external standard.  However, If specific terms are not available, use generality by creating multiple terms that already exist in an external standard.  For instance, if grapefruit juice is a property of interest and it is not found in the external reference, but grapefruit and juice are found individually, then using the individual properties is the preferred method.
+One of the goals when providing an external reference is to figure out the level of specificity when breaking down a property name that contains multiple concepts.  The question is whether the new references should be created with very specific designations (This is known as pre-coordination).   This option would likely create the need for the request of new terms in the external standard if the term is not in existence. The other question is, should the use of multiple terms that already exist in an external standard be used (This is known as post-coordination)?  The best practice adopted by Gen3 is to use specificity whenever corresponding terms are available in the external standard.  However, If specific terms are not available, use generality by creating multiple terms that already exist in an external standard.  For instance, if grapefruit juice is a property of interest and it is not found in the external reference, but grapefruit and juice are found individually, then using the individual properties is the preferred method.
 
+## 4. Dictionary Update Documentation
 
-## 4. Authentication Methods
+When making updates to data dictionaries, it is important to document these changes for good record keeping purposes.  The documentation should be implemented in the release notes of the respective GitHub site.  All changes should be denoted from minor to major changes.  Common updates include enumerated value modifications, adding or removing properties or nodes, and updates to links that describe relationships and dependencies between nodes.
+
+### Example Documentation
+
+      Gen3 Product: Sample Data Hub
+      Release Date: May 30, 2019
+      New Features and Changes
+
+      Create the following node:
+      sample
+
+      Add the following properties to the sample node:
+      sample_name
+      sampe_time
+
+      Remove the following properties from the demographic node:
+      sex
+      height
+
+      Add new link: 
+      sample to visit node
+
+Proper documentation of dictionary updates fosters accountability and creates a historical representation of all dictionary changes that will allow future operators of the dictionary to understand how the dictionary has evolved over time.    
+
+When generating the release notes there are [conventions](https://github-tools.github.io/github-release-notes/concept.html) that have been established that help with transparency and readability of release notes.  The conventions include:
+
+  1) Start the subject line with a verb (for example, Update to enumerated value)
+  2) Use the imperative mood in the subject line (for example, Add, not Added or Adds header styles)
+  3) Limit the subject line to about 50 characters
+  4) Do not end the subject line with a period
+  5) Separate subject from body with a blank line
+  6) Wrap the body at 72 characters
+  7) Use the body to explain what and why, not how
+
+## 5. Authentication Methods
 
 The following methods of authentication are supported in Gen3. They are listed in order of preference from OCC perspective, and technological and governance considerations are outlined below.
 
@@ -180,7 +215,7 @@ _Cons_
 * Neither user’s organization does not take responsibility for activating/deactivating users based on affiliation.
 
 
-## 5. Programs and Projects
+## 6. Programs and Projects
 
 In a Gen3 Data Commons, programs and projects are two administrative nodes in the graph database that serve as the most upstream nodes. A program must be created first, followed by a project. Any subsequent data submission and data access, along with control of access to data, is done through the project scope.
 
