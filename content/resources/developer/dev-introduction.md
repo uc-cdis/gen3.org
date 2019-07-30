@@ -143,7 +143,7 @@ git push
 We are always looking for feedback and welcome PRs from Gen3 community!
 
 If you have feedback on current implementation or feature proposal - please let
-us know on the [forum](https://forums.gen3.org/), in the slack channel or
+us know on the [forum](https://forums.gen3.org/), in the slack channel or,
 through [corresponding](https://github.com/uc-cdis) GitHub issues.
 
 Your Pull Requests help us to further improve the software. Please submit your
