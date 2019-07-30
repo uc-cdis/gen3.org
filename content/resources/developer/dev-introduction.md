@@ -138,6 +138,21 @@ git push
 * If necessary, create a new release version (click the `Releases` tab in the
   main GitHub page).
 
+### Community PR review process
+
+We are always looking for feedback and welcome PRs from Gen3 community!
+
+If you have feedback on current implementation or feature proposal - please let
+us know on the [forum](https://forums.gen3.org/), in the slack channel, or
+through [corresponding](https://github.com/uc-cdis) GitHub issues.
+
+Your Pull Requests help us to further improve the software. Please submit your
+Pull Request with detailed [description](#pull-requests-prs) and let us know
+about it through [forum](https://forums.gen3.org/) or slack. We will look at it
+as soon as possible! We will try to review it in the next sprint, but in rare
+cases, it could take longer.
+
+
 ## Kubernetes
 
 We use Kubernetes (sometimes abbreviated as k8s) to orchestrate our deployments.
