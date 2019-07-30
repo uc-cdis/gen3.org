@@ -146,7 +146,7 @@ If you have feedback on current implementation or feature proposal - please let
 us know on the [forum](https://forums.gen3.org/), in the slack channel or
 through [corresponding](https://github.com/uc-cdis) GitHub issues.
 
-Your Pull Requests help us to improve the software further. Please submit your
+Your Pull Requests help us to further improve the software. Please submit your
 Pull Request with detailed [description](#pull-requests-prs) and let us know
 about it through [forum](https://forums.gen3.org/) or slack. We will look at it
 as soon as possible! We will try to review it in the next sprint, but in rare
