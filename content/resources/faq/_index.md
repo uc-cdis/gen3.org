@@ -70,7 +70,7 @@ vary depending on Operating System you use.
 ## 2. Cloud Automation ![Cloud Automation](img/cloud-automation.svg)
 
 
-** I'm setting up a CSOC-free instance, what should I set for the 
+**I'm setting up a CSOC-free instance, what should I set for the 
 `config_folder`**
 
 The `config_folder` variable sets the location of your `user.yaml` file. If you
@@ -81,7 +81,7 @@ later when deploying kubernetes, you will be able to point the location of your
 permissions file.
 
 
-**I modified `user.yaml` file. How to update Arborist?
+**I modified `user.yaml` file. How to update Arborist?**
 
 If you run `gen3 job run usersync` changes should be picked up automatically.
 If you don't want to run that command every time you make changes to your
@@ -155,7 +155,7 @@ you also updated the `user.yaml` in the folder `apis_configs`, you need to run
 `gen3 job run useryaml-job`.
 
 
-** I'm storing `user.yaml` in S3 (not locally) and updated it, how to ensure
+**I'm storing `user.yaml` in S3 (not locally) and updated it, how to ensure
 changes take effect?**
 
 After you change `user.yaml`, run `gen3 kube-setup-secrets` and `gen3 job run
@@ -165,13 +165,12 @@ usersync`.
 **I see my data on a Query page, but not in Exploration page. What other
 services do I need to deploy/configure to have it running?**
 
-The Exploration page needs to be set up with Elastic Search using Guppy. Here
-are some links about how set up Guppy:
-https://github.com/uc-cdis/guppy/blob/master/README.md,
-https://github.com/uc-cdis/cloud-automation/blob/master/kube/services/guppy/README.md
-
-Examples on how to configure the portal to use Guppy:
-https://github.com/uc-cdis/data-portal/pull/505
+The Exploration page needs to be set up with Elastic Search using Guppy. Please
+refer to the relevant
+[Guppy](https://github.com/uc-cdis/guppy/blob/master/README.md) and [Cloud
+Automation](https://github.com/uc-cdis/cloud-automation/blob/master/kube/services/guppy/README.md)
+documentation, and see an [Sample
+Configuration](https://github.com/uc-cdis/data-portal/pull/505) for the Guppy.
 
 
 ## Data Dictionary
