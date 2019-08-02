@@ -165,7 +165,6 @@ usersync`.
 **I see my data on a Query page, but not in Exploration page. What other
 services do I need to deploy/configure to have it running?**
 
-
 The Exploration page needs to be set up with Elastic Search using Guppy. Here
 are some links about how set up Guppy:
 https://github.com/uc-cdis/guppy/blob/master/README.md,
@@ -173,4 +172,23 @@ https://github.com/uc-cdis/cloud-automation/blob/master/kube/services/guppy/READ
 
 Examples on how to configure the portal to use Guppy:
 https://github.com/uc-cdis/data-portal/pull/505
+
+
+## Data Dictionary
+
+**I'm customizing data schema, where I can find information about the data
+dictionary customization, variables' definition, and files formatting?**
+
+Please refer documentation about [Creating New
+Dictionary](https://gen3.org/resources/operator/#3-creating-a-new-data-dictionary),
+[Data Types](https://gen3.org/resources/user/data-types/) and
+[Templates](https://gen3.org/resources/user/template-tsvs/)
+
+
+**I have a dictionary in my local schemas folder, how can I generate the
+`schema.json`**
+
+You can use our [dictionaryutils](https://github.com/uc-cdis/dictionaryutils)
+tool.  You can find an example on how to generate JSON in the
+[README](https://github.com/uc-cdis/dictionaryutils#use-dictionaryutils-to-dump-a-dictionary)
 
