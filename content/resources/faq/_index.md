@@ -1,12 +1,3 @@
----
-identifier: faq
-title: Frequently Asked Questions
-linktitle: /resources/faq
-date: 2019-07-31T22:16:21-05:00
-layout: withtoc
-menuname: faqMenu
----
-
 # Frequently Asked Questions
 
 ## 1. Compose Services ![Compose Services](img/compose-services.svg)
