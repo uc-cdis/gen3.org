@@ -11,6 +11,7 @@ menuname: faqMenu
 
 ## <a name="1-compose-services"></a>1. Compose Services ![Compose Services](img/compose-services.svg)
 
+
 **I installed Compose Services, how do I create a program and a project?**
 
 Please refer to corresponding
@@ -64,7 +65,6 @@ field in the `fence_config.yaml` file, and the `hostname` field in the
 
 You can add self-signed certificate to your trusted certificates. Steps may
 vary depending on Operating System you use.
-
 
 
 ## <a name="2-cloud-automation"></a>2. Cloud Automation ![Cloud Automation](img/cloud-automation.svg)
