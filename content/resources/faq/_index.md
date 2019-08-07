@@ -1,3 +1,12 @@
+---
+identifier: faq
+title: Gen3 - Set up Gen3
+linktitle: /resources/faq
+date: 2019-08-07T10:57:21-05:00
+layout: withtoc
+menuname: faqMenu
+---
+
 # Frequently Asked Questions
 
 ## 1. Compose Services ![Compose Services](img/compose-services.svg)
