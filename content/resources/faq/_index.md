@@ -1,6 +1,6 @@
 ---
 identifier: faq
-title: Gen3 - Set up Gen3
+title: Frequently Asked Questions
 linktitle: /resources/faq
 date: 2019-08-07T10:57:21-05:00
 layout: withtoc
@@ -9,7 +9,7 @@ menuname: faqMenu
 
 # Frequently Asked Questions
 
-## 1. Compose Services ![Compose Services](img/compose-services.svg)
+## <a name="1-compose-services"></a>1. Compose Services ![Compose Services](img/compose-services.svg)
 
 **I installed Compose Services, how do I create a program and a project?**
 
@@ -67,7 +67,7 @@ vary depending on Operating System you use.
 
 
 
-## 2. Cloud Automation ![Cloud Automation](img/cloud-automation.svg)
+## <a name="2-cloud-automation"></a>2. Cloud Automation ![Cloud Automation](img/cloud-automation.svg)
 
 
 **I'm setting up a CSOC-free instance, what should I set for the 
