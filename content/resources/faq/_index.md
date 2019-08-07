@@ -1,6 +1,16 @@
+---
+identifier: faq
+title: Frequently Asked Questions
+linktitle: /resources/faq
+date: 2019-08-07T10:57:21-05:00
+layout: withtoc
+menuname: faqMenu
+---
+
 # Frequently Asked Questions
 
-## 1. Compose Services ![Compose Services](img/compose-services.svg)
+## Compose Services
+
 
 **I installed Compose Services, how do I create a program and a project?**
 
@@ -57,8 +67,7 @@ You can add self-signed certificate to your trusted certificates. Steps may
 vary depending on Operating System you use.
 
 
-
-## 2. Cloud Automation ![Cloud Automation](img/cloud-automation.svg)
+## Cloud Automation
 
 
 **I'm setting up a CSOC-free instance, what should I set for the 
