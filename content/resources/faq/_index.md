@@ -96,7 +96,7 @@ title at your choice. Then reroll portal with `gen3 kube-setup-portal`.
 
 After updating the Fence configuration, run `kubectl delete secret
 fence-config`, `gen3 kube-setup-fence` and roll Fence for configuration changes
-to take effect with `gen3 roll fence`
+to take effect with `gen3 roll fence`.
 
 
 **GraphiQL on Query page form throwing errors**
@@ -153,7 +153,7 @@ After you change `user.yaml`, run `gen3 kube-setup-secrets` and `gen3 job run
 usersync`.
 
 
-**I see my data on a Query page, but not in Exploration page. What other
+**I see my data on a Query page, but not in the Exploration page. What other
 services do I need to deploy/configure to have it running?**
 
 The Exploration page needs to be set up with Elastic Search using Guppy. Please
