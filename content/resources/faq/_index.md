@@ -71,7 +71,7 @@ vary depending on Operating System you use.
 
 
 **I'm setting up a CSOC-free instance, what should I set for the 
-`config_folder`**
+`config_folder`?**
 
 The `config_folder` variable sets the location of your `user.yaml` file. If you
 are using a local file, you can put any value - it won't be used. If you are
@@ -90,7 +90,7 @@ kubernetes will check for changes every hour and update services accordingly.
 
 
 **How to change the string "Generic Data Commons" in webpages of my Cloud
-Automation**
+Automation?**
 
 You can override the default configuration in your commons by using
 `gitops.json` file. Set your `portal_app` to `gitops` in your file
@@ -108,7 +108,7 @@ fence-config`, `gen3 kube-setup-fence` and roll Fence for configuration changes
 to take effect with `gen3 roll fence`.
 
 
-**GraphiQL on Query page form throwing errors**
+**GraphiQL on Query page form throwing errors.**
 
 You may need to hit the `Switch to Graph Model` button in the upper right
 corner.
@@ -185,7 +185,7 @@ Dictionary](https://gen3.org/resources/operator/#3-creating-a-new-data-dictionar
 
 
 **I have a dictionary in my local schemas folder, how can I generate the
-`schema.json`**
+`schema.json`?**
 
 You can use our [dictionaryutils](https://github.com/uc-cdis/dictionaryutils)
 tool.  You can find an example on how to generate JSON in the
