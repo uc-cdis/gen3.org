@@ -7,8 +7,8 @@ g3Teaser:
   fig: /figs/webinar.svg
   title: Gen3 Webinars
   detail: The Gen3 webinars are focused on helping the community understand what Gen3 does, what the Data Commons Framework Services (DCFS) are, and how both can be used to aid in the construction and operation of data commons.
-g3Upcoming:
- <!--- - Title: Gen3 Webinar - Come and Learn with us!
+<!--- g3Upcoming:
+  - Title: Gen3 Webinar - Come and Learn with us!
     Date: August 8th, 2019 at 1 PM U.S. Central Time.
     Description: Join us as we walk through Gen3’s services and demonstrate how researchers can bring data into Gen3 and get access to a data ecosystem with open-source tools to drive scientific discovery.
     Image: coming_soon.svg
