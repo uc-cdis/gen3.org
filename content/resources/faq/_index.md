@@ -89,7 +89,7 @@ If you don't want to run that command every time you make changes to your
 kubernetes will check for changes every hour and update services accordingly.
 
 
-<h4>How to change the string "Generic Data Commons" in webpages of my Cloud
+<h4>How do I change the title of my webpage from the default "Generic Data Commons"?
 Automation?</h4>
 
 You can override the default configuration in your commons by using
