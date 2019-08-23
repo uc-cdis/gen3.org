@@ -81,7 +81,7 @@ later when deploying kubernetes, you will be able to point the location of your
 permissions file.
 
 
-<h4>I modified `user.yaml` file. How to update Arborist?</h4>
+<h4>I modified the `user.yaml` file. How to update Arborist?</h4>
 
 If you run `gen3 job run usersync` changes should be picked up automatically.
 If you don't want to run that command every time you make changes to your
