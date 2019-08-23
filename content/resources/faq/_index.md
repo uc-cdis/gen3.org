@@ -108,7 +108,7 @@ fence-config`, `gen3 kube-setup-fence` and roll Fence for configuration changes
 to take effect with `gen3 roll fence`.
 
 
-<h4>GraphiQL on Query page form throwing errors.</h4>
+<h4>I receive errors when running queries on the GraphiQL "Query" page, e.g., Cannot query field "field" on type "Root".</h4>
 
 You may need to hit the `Switch to Graph Model` button in the upper right
 corner.
