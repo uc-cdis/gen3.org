@@ -43,7 +43,7 @@ Please ensure you are using `dbgap_accession_number` value as an identifier for
 the `auth_id` field, not program's `name` or project's `code`.
 
 
-<h4>I see a warning about my connection is not being private.</h4>
+<h4>I see a warning about my connection not being private.</h4>
 
 Don't worry. The warning about connection not being private appears because
 `creds_setup.sh` script generated self-signed SSL certificate to allow
@@ -60,7 +60,7 @@ field in the `fence_config.yaml` file, and the `hostname` field in the
 `peregrine.json` and `sheepdog.json` files.
 
 
-<h4>I'm trying to upload files with gen3-client, but receive an error 
+<h4>I'm trying to upload files with gen3-client, but received an error 
 `x509: certificate signed by unknown authority`.</h4>
 
 You can add self-signed certificate to your trusted certificates. Steps may
@@ -134,8 +134,8 @@ portal`.  Please note, if you are making significant changes to the dictionary,
 you will also need to update `portal_app` in the manifest.
 
 
-<h4>I branched out windmill portal, should I update manifest with a new version of
-portal?</h4>
+<h4>I branched out the Windmill portal, should I update manifest with a new
+version of portal?</h4>
 
 Yes, you can update the manifest to use your version of the portal and use `gen3
 kube-setup-portal` or `gen3 roll portal` to changes to take effect.
