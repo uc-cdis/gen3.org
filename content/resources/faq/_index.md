@@ -126,7 +126,7 @@ documentation.
 `kubectl logs <name of pod>` can show you corresponding errors in the logs.
 
 
-<h4>I uploaded the new dictionary, what service should I restart?</h4>
+<h4>I've updated the data dictionary, what services should I restart for the change to take effect?</h4>
 
 First, restart Peregrine `gen3 roll peregrine` and Sheepdog `gen3 roll
 sheepdog`.  After these two services restarted, please portal with `gen3 roll
