@@ -101,7 +101,7 @@ as a template for your own `gitops.json` file. Set navigation title and login
 title at your choice. Then reroll portal with `gen3 kube-setup-portal`.
 
 
-<h4>I updated Fence configuration but changes don't appear?</h4>
+<h4>I updated the Fence configuration. Why haven't the changes taken effect?</h4>
 
 After updating the Fence configuration, run `kubectl delete secret
 fence-config`, `gen3 kube-setup-fence` and roll Fence for configuration changes
