@@ -59,8 +59,8 @@ g3Resources:
     lists:
       - title: Technical Introduction
         ul:
-          - name: Introduction of Gen3’s micro services
-            link: /resources/developer/micro-service
+          - name: Introduction of Gen3’s microservices
+            link: /resources/developer/microservice
           - name: Introduction of technology
             link: /resources/developer/
       - title: Build Apps on Gen3
