@@ -31,7 +31,7 @@ The Windmill service is an interactive website that allows users to explore, sub
 
 This table is helpful for debugging errors in front-end applications like [Windmill: data portal](https://github.com/uc-cdis/data-portal) or other Gen3 clients. You can easily identify the running service that is returning an error, based on its absolute HTTP request path.
 
-| Microservice                 | URL Path Prefix (NGINX Location) | GitHub Repository                                                                          |
+| Micro Service                 | URL Path Prefix (NGINX Location) | GitHub Repository                                                                          |
 |------------------------------|----------------------------------|--------------------------------------------------------------------------------------------|
 | ambassador-service           | /lw-workspace/proxy/             | https://github.com/uc-cdis/cloud-automation/tree/master/kube/services/ambassador           |
 | arborist-service             | /gen3-authz                      | https://github.com/uc-cdis/arborist                                                        |
