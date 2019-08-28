@@ -82,11 +82,11 @@ One of the goals when providing an external reference is to figure out the level
 
 #### Creating Valuable Data Descriptions
 
-It is important to create clear and concise descriptions for each property in a dictionary.  The descriptions should be understandable by someone who is not familiar with a particular dictionary.  When available, including the unit of measure in parenthesis at the end of the description would be helpful in cases where the unit of measure is not included in the description. When a clear description is not readily available, it is recommended that an external vocabulary such as NCIt be used as they offer definitions for terms that are related to a plethera of domains.
+It is important to create clear and concise descriptions for each property in a dictionary.  The descriptions should be understandable by someone who is not familiar with a particular domain.  When available, including the unit of measure in parenthesis at the end of the description would be helpful in cases where the unit of measure is not included elsewhere in the description. When a clear description is not readily available, it is recommended that an external vocabulary such as NCIt be used as they offer definitions for terms from a plethera of domains.
 
 #### Avoiding Data Loops
 
-When creating a data model, avoiding loops or cycles between nodes.  A cycle is created when a relationship between nodes is created on top of an already existing chain of relationships.  In other words, loops occur when one relationship is completely derivable from combined relationships that already exist.  Loops have a negative effects on down stream processes such as ETL Mappings.
+When creating a data model it's important to avoid loops or cycles between nodes.  A cycle is created when a relationship between nodes is created on top of an already existing chain of relationships.  In other words, loops occur when one relationship is completely derivable from combined relationships that already exist.  Loops have a negative effects on down stream processes such as ETL Mappings.  Functions and tools 
 
 ## 4. Dictionary Update Documentation
 
