@@ -32,15 +32,10 @@ We welcome all comments, feature requests, and pull requests using GitHub issues
 ## 3. Creating a New Data Dictionary
 
 ### Core Dictionary
-Gen3 introduced the [DCF data dictionary](https://github.com/uc-cdis/dcfdictionary) that allows users to construct their own data dictionary. It could serve as a starting point for someone who is interested in creating their own dictionary. It is a consensus of previously used data dictionaries and makes the process of creating a data dictionary more efficient.
+Gen3 introduced the [DCF data dictionary](https://github.com/uc-cdis/dcfdictionary) that allows users to construct their own data dictionary. It could serve as a starting point for someone who is interested in creating their own dictionary. It is a consensus of previously used data dictionaries and makes the process of creating a data dictionary more efficient.  It is composed of several nodes that are categorized based on the type of data they are modeling such as medical history, biospecimen, and data file.  The Project, Study, and Subject nodes are administrative nodes that are required for any DCF data commons.  Also, the Subject node level is where the nodes start differentiationg between commons.  It can also be represented as Case depending on the use case.  The Subject node links to the Demographic and Diagnosis clinical nodes.  The Demograpic node stores properties that represent the statistical characterization of human populations or segments of human populations (for example, characterization by year of birth, sex, and race).  This node is typically used to store properties that do not change over time.  The Diagnosis clinical node represents the investigation, analysis, and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.  A clinical node that is not included in the DCF is the Visit or Follow-Up node.  The Visit node is used to store longitudinal data that is collected over time and usually has a many to one relationship with its parent node.  If the need arises, the node can be added to a data dictionary. 
 
 ### Modifying a Data Dictionary
 Once users have obtained the baseline dictionary, users can make updates to it.  To create a data dictionary tailored to a particular project, the user can modify the baseline dictionary using a program which automatically updates the dictionary given TSV input which specifies the desired changes to the dictionary. The updates are based on instructions that are included in a TSV file such as update a property, delete a node, etc.  Instructions for implementing the script can be found [here](https://github.com/uc-cdis/planx-bioinfo-tools/tree/master/dictionary_tools). For those that are interested in making edits directly to a YAML file, we are also in the process of automating this process.
-
-### Best Practices
-
-#### Data Normalization
-When adding a new project or study into a new or an already existing data dictionary, it is important to follow the process of harmonization of data.  This process helps with the prevention of redundant data.  Before submitting new data to the data dictionary, check the current dictionary for properties that already exist.  If there is a similar property that exists, it is best practice to use the existing property.  For example, if a candidate property named “infection agent” and a property named “infectious agent” already exist, then use “infectious agent.”
 
 #### Referencing external data standards
 Gen3 is expanding the information in data dictionaries by including references to controlled vocabularies such as the National Cancer Institute Thesaurus (NCIt).  This will help with the comparison of studies and projects across data commons and provide researchers with proper references.  The NCIt is being used for many of the schemas as it is inclusive of several different domains (for example, clinical, drug, etc.).  It also has an abundance of non-domain related terms such as nominal (for example, gender, race) and ordinal (for example, left, right, first, last) along with other useful categories of terms.  The benefit of this effort is that it will facilitate cross data common comparison.  For instance, if tuberculosis is a term associated with multiple studies, a search of that term will provide insight into each of the studies.  It will also help with the prevention of adding multiple terms for properties that mean the same thing.  The example below demonstrates a cross study comparison using YAML files (Gen3 uses YAML files to help organize data dictionaries.  The files are used by internal systems to help manage the data dictionaries.)  The two files both relate to blood pressure finding, but each has a different term name.  The external reference helps with harmonization efforts by helping identify terms that have the same meaning.
@@ -76,10 +71,22 @@ Blood Pressure Reading:
          term_version: 18.10e (Release date:2018-10-29)
          term_url: "https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code= C54707"
 ```
+### Best Practices
+
+#### Data Normalization
+When adding a new project or study into a new or an already existing data dictionary, it is important to follow the process of harmonization of data.  This process helps with the prevention of redundant data.  Before submitting new data to the data dictionary, check the current dictionary for properties that already exist.  If there is a similar property that exists, it is best practice to use the existing property.  For example, if a candidate property named “infection agent” and a property named “infectious agent” already exist, then use “infectious agent.”
 
 #### Specificity vs. Generality
 
 One of the goals when providing an external reference is to figure out the level of specificity when breaking down a property name that contains multiple concepts.  The question is whether the new references should be created with very specific designations (This is known as pre-coordination).   This option would likely create the need for the request of new terms in the external standard if the term is not in existence. The other question is, should the use of multiple terms that already exist in an external standard be used (This is known as post-coordination)?  The best practice adopted by Gen3 is to use specificity whenever corresponding terms are available in the external standard.  However, If specific terms are not available, use generality by creating multiple terms that already exist in an external standard.  For instance, if grapefruit juice is a property of interest and it is not found in the external reference, but grapefruit and juice are found individually, then using the individual properties is the preferred method.
+
+#### Creating Valuable Data Descriptions
+
+It is important to create clear and concise descriptions for each property in a dictionary.  The descriptions should be understandable by someone who is not familiar with a particular dictionary.  When available, including the unit of measure in parenthesis at the end of the description would be helpful in cases where the unit of measure is not included in the description. When a clear description is not readily available, it is recommended that an external vocabulary such as NCIt be used as they offer definitions for terms that are related to a plethera of domains.
+
+#### Avoiding Data Loops
+
+When creating a data model, avoiding loops or cycles between nodes.  A cycle is created when a relationship between nodes is created on top of an already existing chain of relationships.  In other words, loops occur when one relationship is completely derivable from combined relationships that already exist.  Loops have a negative effects on down stream processes such as ETL Mappings.
 
 ## 4. Dictionary Update Documentation
 
