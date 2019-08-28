@@ -86,7 +86,7 @@ It is important to create clear and concise descriptions for each property in a 
 
 #### Avoiding Data Loops
 
-When creating a data model it's important to avoid loops or cycles between nodes.  A cycle is created when a relationship between nodes is created on top of an already existing chain of relationships.  In other words, loops occur when one relationship is completely derivable from combined relationships that already exist.  Loops have a negative effects on down stream processes such as ETL Mappings.  Functions and tools 
+When creating a data model it's important to avoid loops or cycles between nodes.  A cycle is created when a relationship between nodes is created on top of an already existing chain of relationships.  In other words, loops occur when one relationship is completely derivable from combined relationships that already exist.  Loops have a negative effects on down stream functions and tools such as ETL mappings and elastic search.  
 
 ## 4. Dictionary Update Documentation
 
