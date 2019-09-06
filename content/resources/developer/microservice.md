@@ -38,7 +38,6 @@ This table is helpful for debugging errors in front-end applications like [Windm
 | arborist-service             | ~ /authz/?                       | https://github.com/uc-cdis/arborist                                                        |
 | arborist-service             | /authz/resources                 | https://github.com/uc-cdis/arborist                                                        |
 | arborist-service             | /gen3-authz-test                 | https://github.com/uc-cdis/arborist                                                        |
-| arranger-service             | /api/v0/flat-search/             | https://github.com/uc-cdis/arborist                                                        |
 | fence-service                | /authn-proxy                     | https://github.com/uc-cdis/fence                                                           |
 | fence-service                | /user/                           | https://github.com/uc-cdis/fence                                                           |
 | fenceshib-service            | /                                | https://github.com/uc-cdis/cloud-automation/tree/master/kube/services/fenceshib            |
@@ -57,11 +56,8 @@ This table is helpful for debugging errors in front-end applications like [Windm
 | peregrine-service            | /api/v0/submission/graphql       | https://github.com/uc-cdis/peregrine                                                       |
 | peregrine-service            | /api/v0/submission/getschema     | https://github.com/uc-cdis/peregrine                                                       |
 | pidgin-service               | /coremetadata/                   | https://github.com/uc-cdis/pidgin                                                          |
-| portal-service               | /                                | https://github.com/uc-cdis/data-portal                                                     |
 | prometheus-server            | /prometheus/                     | https://github.com/uc-cdis/cloud-automation/tree/master/kube/services/monitoring           |
 | sheepdog-service             | /api/                            | https://github.com/uc-cdis/sheepdog                                                        |
-| shiny-nb2-service            | ~ ^/(shiny\|explore)/             | https://github.com/uc-cdis/cloud-automation/tree/master/kube/services/shiny                |
-| shiny-service                | ~ ^/(shiny\|explore)/             | https://github.com/uc-cdis/cloud-automation/tree/master/kube/services/shiny                |
 | sower-service                | /job/                            | https://github.com/uc-cdis/sower                                                           |
 | workspace-token-service      | /wts/                            | https://github.com/uc-cdis/workspace-token-service                                         |
 
