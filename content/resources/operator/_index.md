@@ -92,7 +92,7 @@ It's important to create clear and concise descriptions for each property in a d
 
 When creating a data model it's important to avoid loops or cycles between nodes.  A cycle is created when a relationship between nodes is created on top of an already existing chain of relationships.  In other words, loops occur when one relationship is completely derivable from combined relationships that already exist.  Loops have a negative effects on down stream functions and tools such as ETL mappings and elastic search.  
 
-The following diagram is an example of a loop:
+The following diagram is an example of a loop as R3 is redundant as it brings no new associations that are not already presented by the combination of R1 and R2:
 
 ![Loop example](img/loop.png)
 
