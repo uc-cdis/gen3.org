@@ -32,9 +32,9 @@ This guide has the following sections:
 
 * * *
 
-The gen3-client can be [downloaded from Github](https://github.com/uc-cdis/cdis-data-client/releases/latest) for Windows, Linux, or Mac OS, or it can be installed from source using Google's [GO language](https://golang.org/dl/) (instructions in Github README).
+A binary executable of the latest version of the gen3-client should be [downloaded from Github](https://github.com/uc-cdis/cdis-data-client/releases/latest). Choose the file that matches your operating system (Windows, Linux, or Mac OS).
 
-To install, download the correct version for your operating system and unzip the archive. The program must be executed from the command-line by running the command `gen3-client <options>`. For more detailed instructions, see the section below for your operating system.
+No installation is necessary. Simply download the correct version for your operating system and unzip the archive. The program is then executed from the command-line by running the command `gen3-client <options>`. For more detailed instructions, see the section below for your operating system.
 
 >__Note:__ Do not try to run the program by double-clicking on it. Instead, execute the program from within the shell / terminal / command prompt. The program does not provide a graphical user interface (GUI) at this time; so, commands are sent by typing them into the terminal.
 
@@ -61,9 +61,12 @@ Now you can execute the program by opening a terminal window and entering the co
 9. Type in the full directory path of the executable file (e.g., `C:\Program Files\gen3-client`).
 10. Click "Ok" on all the open windows and restart the command prompt if it is already open by entering `cmd` into the start menu and hitting enter.
 
+> __Note__ To download the latest version of the file from the command-line, use the command:
+`curl https://api.github.com/repos/uc-cdis/cdis-data-client/releases/latest | grep browser_download_url.*osx |  cut -d '"' -f 4 | wget -qi -` for Mac OS or `curl https://api.github.com/repos/uc-cdis/cdis-data-client/releases/latest | grep browser_download_url.*linux |  cut -d '"' -f 4 | wget -qi -` for Linux.
+
 ### View the Help Menu
 
-The tool can now be run on the command-line in your terminal or command prompt by typing `gen3-client`. Typing this alone displays the help menu.
+The tool can now be run on the command-line in your terminal or command prompt by typing `gen3-client`. Typing this alone or `gen3-client help` will display the help menu. For help on a particular command, enter: `gen3-client <command> help`
 
 ### Notes about Working in the Shell
 
@@ -103,7 +106,7 @@ Before using the gen3-client to upload or download data, the gen3-client needs t
 
     ![Get credentials.json](Gen3_Keys.png)
 
-2. From the command-line, run the `gen3-client configure` command with the --cred and --apiendpoint arguments (see examples below).
+2. From the command-line, run the `gen3-client configure` command with the `--cred`, `--apiendpoint`, and `--profile` arguments (see examples below).
 
 Example Usage:
 
@@ -134,9 +137,11 @@ Windows: C:\Users\Bob\.gen3\config
 
 * * *
 
-When data files are uploaded to a Gen3 data common's object storage, they should be registered and assigned with a unique, 128-bit ID called a ['GUID'](https://dataguids.org/). GUIDs are generated on the back-end, not submitted by users, and they are stored in the property `object_id`.
+For the typical data contributor, the `gen3-client upload` command should be used to upload data files to a Gen3 Data Commons. The commands `upload-single` and `upload-multiple` are used only in special cases, e.g., when a file or collection of files are uploaded to specific GUIDs *after* generating structured data records for the files. These two commands are described in further detail in sections 7 and 8 below.
 
-When using the `gen3-client upload` command, a random GUID will be generated and assigned to each data file that has been submitted.
+When data files are uploaded to a Gen3 data common's object storage, they are assigned a unique, 128-bit ID called a ['GUID'](https://dataguids.org/), which stands for "globally unique identifier". GUIDs are generated on the back-end, not submitted by users, and they are stored in the property `object_id` of data_file records.
+
+When using the `gen3-client upload` command, a random, unique GUID will be generated and assigned to each data file that has been submitted.
 
 Example Usage:
 
@@ -207,22 +212,24 @@ Successfully uploaded file "test.gif" to GUID 65f5d77c-1b2a-4f41-a2c9-9daed5a59f
 
 ### Local Submission History
 
-In this mode, the application will keep track of which local files have already been submitted to avoid potential duplication in submissions. This information is kept in a JSON file under the same user folder as where the `config` file lives, for example:
+The application will keep track of which local files have already been submitted to avoid potential duplication in submissions. This information is kept in a JSON file in the "logs" directory under the same user folder as where the `config` file lives, for example:
 
 ```
-Mac/Linux: /Users/Bob/.gen3/<your_config_name>_history.json
-Windows: C:\Users\Bob\.gen3\<your_config_name>_history.json
+Mac/Linux: /Users/Bob/.gen3/logs/<your_config_name>_succeeded_log.json
+Windows: C:\Users\Bob\.gen3\logs\<your_config_name>_succeeded_log.json
 ```
 
-Each object in the history JSON file is a key/value pair of the full file path of a file and GUID it associates with.
+Each object in the succeeded log file is a key/value pair of the full file path of a file and GUID it associates with.
 
-Example of a history JSON File:
+Example of a succeeded log JSON File:
 
 ```
 {
   "/Users/Bob/test.gif":"65f5d77c-1b2a-4f41-a2c9-9daed5a59f14"
 }
 ```
+
+In the rare case that you need to upload the same file again, the success log file will need to be moved, renamed, or deleted. Alternatively, the file itself can be moved or renamed as the information stored in the succeeded_log.json is the file's fullpath.
 
 * * *
 
