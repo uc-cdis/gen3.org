@@ -27,7 +27,7 @@ g3Feature:
     detail: Use Gen3’s built in tools to find your virtual cohort, and analyze the cohort in notebooks within a cloud environment to hasten your hypotheses testing and discoveries.
   f4:
     title: Scale Your Large Dataset with Any File Types
-    detail: Gen3 APIs enable support for importing data from a variaty of platforms including from common clinical to genomic data platforms. Since Gen3 is a growing community, you could repurpose another person’s tools with your data, data commons, or data ecosystem.
+    detail: Gen3 APIs enable support for importing data from a variety of platforms including from common clinical to genomic data platforms. Since Gen3 is a growing community, you could repurpose another person’s tools with your data, data commons, or data ecosystem.
 g3Roles:
   title: Gen3 helps you as...
   r1:
