@@ -38,7 +38,7 @@ The following image depicts the graph view of the DCF data dictionary (The key i
 
 ![graph view](img/dcf_dictionary.png)
 
-#### Representing Longitudinal Data
+### Representing Longitudinal Data
 Gen3 provides the ability to store longitudinal data.  A clinical node that is not included in the DCF is the Visit or Follow-Up node. The Visit node is used to store longitudinal data that is collected over time and usually has a many to one relationship with its parent node, meaning that an observation/response was observed for a subject/unit repeatedly over time. Clinical properties that are common for this node include height, weight, and bmi. Properties such as days_to_follow_up and days_to_visit provide a means to keep track of timing between visits. 
 
 ### Modifying a Data Dictionary
