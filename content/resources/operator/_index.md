@@ -32,14 +32,35 @@ We welcome all co mments, feature requests, and pull requests using GitHub issue
 ## 3. Creating a New Data Dictionary
 
 ### Core Dictionary
-Gen3 introduced the [DCF data dictionary](https://github.com/uc-cdis/dcfdictionary) that allows users to construct their own data dictionary. It could serve as a starting point for someone who is interested in creating their own dictionary. It's a consensus of previously used data dictionaries and makes the process of creating a data dictionary more efficient.  It's composed of several nodes that are categorized based on the type of data they are modeling such as Clinical, Biospecimen, and Data File.  The Project, Study, and Subject nodes are administrative nodes that are required for any Gen3 data commons.  Administrative nodes store basic project and study information for their associated cases or subjects.  Also, the Subject node (which is also an administrative node) level is where the nodes start differentiationg between commons.  It can also be represented as Case depending on the use case.  The Subject node links to the Demographic and Diagnosis clinical nodes.  These nodes are Clinical nodes that are used to store clinical and medical history related data.  The Demograpic node stores properties that represent the statistical characterization of human populations or segments of human populations (for example, characterization by year of birth, sex, and race).  This node is typically used to store properties that do not change over time.  The Diagnosis clinical node represents the investigation, analysis, and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms. It also pertains to the scientific determination of any kind and the concise results of such an investigation.  Another node category is the index file that stores the metadata that is associated with different file formats (for example, BAI and BAM).  The Analysis node category stores data that is associated with genomic pipline data that is typical of next generation sequencing (NGS).  The Data File node category is used to store metadata related to data files that are stored in the cloud.  If the need arises, the node can be added to a data dictionary.  Finally, the Notation node category is used to store data that does not fit into other categories (for example, it doesn't store index files, data files, or analysis data).  The ability to update/modify a dictionary is an important functionality that may arise based on project and clinical data needs. 
+Gen3 introduced the [DCF data dictionary](https://github.com/uc-cdis/dcfdictionary) that allows users to construct their own data dictionary. It could serve as a starting point for someone who is interested in creating their own dictionary. It's a consensus of previously used data dictionaries and makes the process of creating a data dictionary more efficient.  It's composed of several nodes that are categorized based on the type of data they are modeling such as Clinical, Biospecimen, and Data File.  
+
+### Node Categories 
+#### Administrative
+The Project, Study, and Subject nodes are administrative nodes that are required for any Gen3 data commons.  Administrative nodes store basic project and study information for their associated cases or subjects.  Also, the Subject node (which is also an administrative node) level is where the nodes start differentiationg between commons.  It can also be represented as Case depending on the use case.  
+
+#### Clinical
+The Subject node links to the Demographic and Diagnosis clinical nodes. These nodes are Clinical nodes that are used to store clinical and medical history related data. The Demograpic node stores properties that represent the statistical characterization of human populations or segments of human populations (for example, characterization by year of birth, sex, and race). This node is typically used to store properties that do not change over time. The Diagnosis clinical node represents the investigation, analysis, and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms. It also pertains to the scientific determination of any kind and the concise results of such an investigation. 
+
+#### Biospecimen
+
+#### Index File
+Another node category is the index file that stores the metadata that is associated with different file formats (for example, BAI and BAM).  
+
+#### Analysis
+The Analysis node category stores data that is associated with genomic pipline data that is typical of next generation sequencing (NGS).  
+
+#### Data File
+The Data File node category is used to store metadata related to data files that are stored in the cloud.  If the need arises, the node can be added to a data dictionary.  
+
+#### Notation
+Finally, the Notation node category is used to store data that does not fit into other categories (for example, it doesn't store index files, data files, or analysis data).  The ability to update/modify a dictionary is an important functionality that may arise based on project and clinical data needs. 
 
 The following image depicts the graph view of the DCF data dictionary (The key in the top right corner of the image indicates the node categories):
 
 ![graph view](img/dcf_dictionary.png)
 
 ### Representing Longitudinal Data
-Gen3 provides the ability to store longitudinal data.  A clinical node that is not included in the DCF is the Visit or Follow-Up node. The Visit node is used to store longitudinal data that is collected over time and usually has a many to one relationship with its parent node, meaning that an observation/response was observed for a subject/unit repeatedly over time. Clinical properties that are common for this node include height, weight, and bmi. Properties such as days_to_follow_up and days_to_visit provide a means to keep track of timing between visits. 
+Gen3 provides the ability to store longitudinal data.  A clinical node that is not included in the DCF is the Visit or Follow-Up node. The Visit node is used to store longitudinal data that is collected over time and usually has a many to one relationship with its parent node, meaning that an observation/response was observed for a subject/unit repeatedly over time. Clinical properties that are common for this node include height, weight, and bmi (body mass index). Properties such as days_to_birth, days_to_death, days_to_last_follow_up, and days_to_treatment provide a means to keep track of timing between visits while protecting study participant identities. 
 
 ### Modifying a Data Dictionary
 Once users have obtained the baseline dictionary, users can make updates to it.  To create a data dictionary tailored to a particular project, the user can modify the baseline dictionary using a program which automatically updates the dictionary given TSV input which specifies the desired changes to the dictionary. The updates are based on instructions that are included in a TSV file such as update a property, delete a node, etc.  Instructions for implementing the script can be found [here](https://github.com/uc-cdis/planx-bioinfo-tools/tree/master/dictionary_tools). For those that are interested in making edits directly to a YAML file, we are also in the process of automating this process.
