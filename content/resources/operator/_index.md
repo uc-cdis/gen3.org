@@ -46,13 +46,13 @@ The Subject node links to the Demographic and Diagnosis clinical nodes. These no
 The Biospecimen node category is associated with data related to biological specimens as it relates to testing, diagnostic, propagation, treatment or research purposes.  The biospecimen can contain one or more components including but not limited to cellular molecules, cells, tissues, organs, body fluids, embryos,and body excretory products.
 
 #### Index File
-The Index File node category stores the metadata that is associated with different file formats (for example, BAI and BAM).  
+The Index File node category stores the metadata that is associated with different file formats (for example, BAI and BAM).  For example, the Aligned Reads Index node contains the index for a set of aligned reads.
 
 #### Analysis
-The Analysis node category stores data that is associated with genomic pipline data that is typical of next generation sequencing (NGS).  
+The Analysis node category stores data that is associated with genomic pipeline data that is typical of next generation sequencing (NGS).  
 
 #### Data File
-The Data File node category is used to store metadata related to data files that are stored in the cloud.  If the need arises, the node can be added to a data dictionary.  
+The Data File node category is used to store metadata related to data files that are stored in the cloud.    
 
 #### Notation
 The Notation node category is used to store data that does not fit into other categories (for example, it doesn't store index files, data files, or analysis data).  The ability to update/modify a dictionary is an important functionality that may arise based on project and clinical data needs. 
@@ -62,7 +62,7 @@ The following image depicts the graph view of the DCF data dictionary (The key i
 ![graph view](img/dcf_dictionary.png)
 
 ### Representing Longitudinal Data
-Gen3 provides the ability to store longitudinal data.  A clinical node that is not included in the DCF is the Visit or Follow-Up node. The Visit node is clinical node that is used to store longitudinal data that is collected over time and usually has a many to one relationship with its parent node, meaning that an observation/response was observed for a subject/unit repeatedly over time. Clinical properties that are common for this node include height, weight, and bmi (body mass index). Properties such as days_to_birth, days_to_death, days_to_last_follow_up, and days_to_treatment provide a means to keep track of timing between visits while protecting study participant identities. 
+Gen3 provides the ability to store longitudinal data.  A clinical node that is not included in the DCF is the Visit or Follow-Up node. The Visit node is clinical node that is used to store longitudinal data that is collected over time and usually has a many to one relationship with its parent node, meaning that an observation/response was observed for a subject/unit repeatedly over time. Clinical properties that are common for this node include height, weight, and bmi (body mass index). Gen3 doesn't allow the reporting of actual dates.  As a result, the concept of date intervals can be used in its place.  Time points can be reported in relation to the number of day since the patients first vist.  Properties such as days_to_birth, days_to_death, days_to_last_follow_up, and days_to_treatment provide a means to keep track of timing between visits while protecting study participant identities. If the need arises, the node can be added to a data dictionary.
 
 ### Modifying a Data Dictionary
 Once users have obtained the baseline dictionary, users can make updates to it.  To create a data dictionary tailored to a particular project, the user can modify the baseline dictionary using a program which automatically updates the dictionary given TSV input which specifies the desired changes to the dictionary. The updates are based on instructions that are included in a TSV file such as update a property, delete a node, etc.  Instructions for implementing the script can be found [here](https://github.com/uc-cdis/planx-bioinfo-tools/tree/master/dictionary_tools). For those that are interested in making edits directly to a YAML file, we are also in the process of automating this process.
