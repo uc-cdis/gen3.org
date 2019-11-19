@@ -13,7 +13,7 @@ menuname: userMenu
 
 * * *
 
-The gen3-client provides an easy-to-use, command-line interface for uploading and downloading data files to and from a Gen3 data commons from the terminal or command prompt.
+The gen3-client provides an easy-to-use, command-line interface for uploading and downloading data files to and from a Gen3 data commons from the terminal or command prompt, respectively.
 
 This guide has the following sections:
 
@@ -25,7 +25,8 @@ This guide has the following sections:
 6. [Generate a Metadata Submission TSV](#6-generate-a-metadata-tsv)
 7. [Upload Single File with GUID](#7-how-to-upload-a-single-data-file-using-a-guid)
 8. [Upload Multiple Files with Manifest](#8-how-to-upload-multiple-data-files-using-a-manifest)
-
+9. [Quick Start](#9-quick-start)
+10. [Working from the Command-line](#10-working-from-the-command-line)
 * * *
 
 ## 1) Installation Instructions
@@ -40,7 +41,7 @@ No installation is necessary. Simply download the correct version for your opera
 
 ### Mac OS X / Linux Installation Instructions
 
-1. [Download the latest Mac OS X or Linux version of the gen3-client here](https://github.com/uc-cdis/cdis-data-client/releases/latest).
+1. Download the latest Mac OS X or Linux version of the gen3-client [here](https://github.com/uc-cdis/cdis-data-client/releases/latest).
 2. Unzip the archive.
 3. Add the unzipped executable to a directory, for example: `~/.gen3/gen3-client.exe`.
 4. Open a terminal window.
@@ -61,38 +62,18 @@ Now you can execute the program by opening a terminal window and entering the co
 9. Type in the full directory path of the executable file (e.g., `C:\Program Files\gen3-client`).
 10. Click "Ok" on all the open windows and restart the command prompt if it is already open by entering `cmd` into the start menu and hitting enter.
 
-> __Note__ To download the latest version of the file from the command-line, use the command:
-`curl https://api.github.com/repos/uc-cdis/cdis-data-client/releases/latest | grep browser_download_url.*osx |  cut -d '"' -f 4 | wget -qi -` for Mac OS or `curl https://api.github.com/repos/uc-cdis/cdis-data-client/releases/latest | grep browser_download_url.*linux |  cut -d '"' -f 4 | wget -qi -` for Linux.
+> __Note__ To download the latest version of the file from the command-line, use the following commands from your terminal:
+```
+# Mac OS:
+curl https://api.github.com/repos/uc-cdis/cdis-data-client/releases/latest | grep browser_download_url.*osx |  cut -d '"' -f 4 | wget -qi -
 
+# Linux:
+curl https://api.github.com/repos/uc-cdis/cdis-data-client/releases/latest | grep browser_download_url.*linux |  cut -d '"' -f 4 | wget -qi -
+```
 ### View the Help Menu
 
-The tool can now be run on the command-line in your terminal or command prompt by typing `gen3-client`. Typing this alone or `gen3-client help` will display the help menu. For help on a particular command, enter: `gen3-client <command> help`
+To check that your copy of the client is working and confirm the version, the tool can be run on the command-line in your terminal or command prompt by entering `gen3-client`. Typing this alone or `gen3-client help` will display the help menu. For help on a particular command, enter: `gen3-client <command> help`. Note that you must provide the full path of the tool in order for the commands to run, for example, `./gen3-client` while working from the directory containing the client. Alternatively, you can [add the location of the gen3-client executable to your shell's PATH environment variable](#10-working-from-the-command-line).
 
-### Notes about Working in the Shell
-
-#### File Paths
-
-When you create or download a file on your computer, that file is located in a folder (or directory) in your computer's file system. For example, if you create the text file `example.txt` in the folder `My Documents`, the "full path" of that file is, for example, `C:\Users\Bob\My Documents\example.txt` in Windows or `/Users/Bob/Documents/example.txt` in Mac OS X.
-
-#### Present Working Directory
-
-After opening a shell, command prompt or terminal window, you are "in" a folder known as the "present working directory". You can change directories with the `cd <directory>` command in either shell. To view your present working directory, enter the command `echo $PWD` in a Mac terminal or `cd` alone in the Windows command prompt.
-
-You can list the contents of your present working directory by entering the command `ls` in the Mac terminal or `dir` in the Windows command prompt. These files in the present working directory can be accessed by commands you type just by entering their filenames: for example, `cat example.txt` would print the contents of the file `example.txt` in the Mac terminal if your present working directory is `/Users/Bob/Documents`. However, if you're in a different directory, you must enter the "full path" of the file: for example, if your present working directory is the `My Downloads` folder instead of `My Documents`, then you would need to specify the full path of the file and enter the command `type "C:\Users\Bob\My Documents\example.txt"`, to print the file's contents in the Windows command prompt.
-
-#### Updating the PATH Environment Variable
-
-When working in your shell, you can define variables that help make work easier. One such variable is PATH, which is a list of directories where executable programs are located. By adding a folder to the PATH, programs in that folder can be executed from any other folder/directory regardless of the present working directory.
-
-So, by adding the directory containing the gen3-client program to your PATH variable, you can run it from any working directory without specifying the "full path" of the program. Simply enter the command `gen3-client`, and you will run the program.
-
-> __Note:__ In the case that you haven't properly added the client to your path, the program can still be executed from any directory with the following command: `/full/path/to/executable/gen3-client <options>`. If you are working in the directory containing the executable, then `/full/path/to/executable` is simply `./`. So the command from the executable's directory would be `./gen3-client`.
-
-#### Sending Parameters to Programs on Command-line
-
-Most programs require some sort of user input to run properly. Some programs will prompt you for input after execution, while other programs are sent this input during execution as "arguments" or "options". The gen3-client uses the latter method of sending user input as command arguments during program execution.
-
-For example, when configuring a profile with the client (details are in the following section), the user must specify the `configure` option and also specify the profile name, API endpoint, and credentials file by adding the flags `--profile`, `--apiendpoint` and `--cred` to the end of the command (see next section for specific examples).
 
 * * *
 
@@ -102,11 +83,11 @@ For example, when configuring a profile with the client (details are in the foll
 
 Before using the gen3-client to upload or download data, the gen3-client needs to be configured with API credentials downloaded from the user's data commons Profile (via Windmill data portal):
 
-1. To download the "credentials.json" from the data commons, the user should start from that common's Windmill data portal, followed by clicking on "Profile" in the top navigation bar and then creating an API key. In the popup window which informs user an API key has been successfully created, click the "Download json" button to save the API key to a local machine.
+1. To download the "credentials.json" from the data commons, the user should start from that common's Windmill data portal, followed by clicking on "Profile" in the top navigation bar and then creating an API key. In the popup window which informs user an API key has been successfully created, click the "Download json" button to save a local copy of the API key.
 
     ![Get credentials.json](Gen3_Keys.png)
 
-2. From the command-line, run the `gen3-client configure` command with the `--cred`, `--apiendpoint`, and `--profile` arguments (see examples below).
+2. From the command-line, run the `gen3-client configure` command with the `--cred`, `--apiendpoint`, and `--profile` flags (see examples below).
 
 Example Usage:
 
@@ -114,10 +95,10 @@ Example Usage:
 gen3-client configure --profile=<profile_name> --cred=<credentials.json> --apiendpoint=<api_endpoint_url>
 
 Mac/Linux:
-gen3-client configure --profile=bob --cred=/Users/Bob/Downloads/credentials.json --apiendpoint=https://data.mycommons.org
+gen3-client configure --profile=demo --cred=/Users/Bob/Downloads/credentials.json --apiendpoint=https://data.mycommons.org
 
 Windows:
-gen3-client configure --profile=bob --cred=C:\Users\Bob\Downloads\credentials.json --apiendpoint=https://data.mycommons.org
+gen3-client configure --profile=demo --cred=C:\Users\Bob\Downloads\credentials.json --apiendpoint=https://data.mycommons.org
 ```
 
 > __NOTE:__ For these user guides, https://data.mycommons.org is an example URL and will not be the actual URL of the data commons.
@@ -131,13 +112,30 @@ Windows: C:\Users\Bob\.gen3\config
 
 > __NOTE:__ These keys must be treated like important passwords; never share the contents of the `credentials.json` or gen3-client `config` file!
 
+You should receive an error if you enter an incorrect API endpoint for your credentials: `Error occurred when validating profile config: The provided apiendpoint 'https://data-commons.org' is possibly not a valid Gen3 data commons.`
+
+You should also receive an error if you provided credentials that are not related to that API endpoint: `Error occurred when validating profile config: Invalid credentials for apiendpoint 'https://data.commons.org': check if your credentials are expired or incorrect.`
+
+To confirm you successfully configured a profile with the correct authorization privileges, you can run the `gen3-client auth` command. For example:
+```
+gen3-client auth --profile=demo
+```
+This should list your access privileges for each project in the commons you have access to, for example:
+```
+2019/11/19 11:59:04
+You have access to the following project(s) at https://nci-crdc-demo.datacommons.io:
+2019/11/19 11:59:04 CPTAC [read read-storage]
+2019/11/19 11:59:04 DCF [create delete read read-storage update upload write-storage]
+```
+<!-- Need to add a link to documentation on what each privilege does -->
+
 * * *
 
 ## 3) Upload Data Files
 
 * * *
 
-For the typical data contributor, the `gen3-client upload` command should be used to upload data files to a Gen3 Data Commons. The commands `upload-single` and `upload-multiple` are used only in special cases, e.g., when a file or collection of files are uploaded to specific GUIDs *after* generating structured data records for the files. These two commands are described in further detail in sections 7 and 8 below.
+For the typical data contributor, the `gen3-client upload` command should be used to upload data files to a Gen3 Data Commons. The commands `upload-single` and `upload-multiple` are used only in special cases, for example, when a file or collection of files are uploaded to specific GUIDs *after* generating structured data records for the files. These two commands are described in further detail in sections 7 and 8 below.
 
 When data files are uploaded to a Gen3 data common's object storage, they are assigned a unique, 128-bit ID called a ['GUID'](https://dataguids.org/), which stands for "globally unique identifier". GUIDs are generated on the back-end, not submitted by users, and they are stored in the property `object_id` of data_file records.
 
@@ -237,26 +235,26 @@ In the rare case that you need to upload the same file again, the success log fi
 
 * * *
 
-Once a data file is registered and uploaded to object storage, its GUID can be used to download the file with the `gen3-client download` command.
-The downloaded filename can be customized by supplying an optional `--file` argument. If the `--file` option was left blank, the original filename will be used as default filename.
+Once a data file is registered and uploaded to object storage, its GUID can be used to download the file with the `gen3-client download-single` command.
+
+Required Flags:
+* --profile:
+* --guid:
+
+Optional Flags:
+* --download-path: Specify the directory to store files in.
+* --filename-format:
+
+* --no-prompt:
+* --protocol: s3 http ftp https gs
+* --rename:
+* --skip-completed:
+
 
 Example Usage:
 
 ```
-gen3-client download --profile=<profile_name> --guid=<GUID> --file=<filename>
-
-gen3-client download --profile=bob --guid=b4642430-8c6e-465a-8e20-97c458439387 --file=test.gif
-
-Downloading b4642430-8c6e-465a-8e20-97c458439387...
-[1A  transferred 208473 / 11893028 bytes (1.75%)[K
-[1A  transferred 957017 / 11893028 bytes (8.05%)[K
-[1A  transferred 1757785 / 11893028 bytes (14.78%)[K
-[1A  transferred 2871897 / 11893028 bytes (24.15%)[K
-[1A  transferred 4177497 / 11893028 bytes (35.13%)[K
-[1A  transferred 5953113 / 11893028 bytes (50.06%)[K
-[1A  transferred 8076889 / 11893028 bytes (67.91%)[K
-[1A  transferred 10757721 / 11893028 bytes (90.45%)[K
-[1A[KSuccessfully downloaded test.gif
+gen3-client download-single --profile=demo --guid=39b05d1f-f8a2-478c-a728-c16f6d0d8a7c --no-prompt --protocol=http
 ```
 
 * * *
@@ -389,3 +387,73 @@ Successfully uploaded file "b12ff17c-2fc0-475a-9c21-50c19950b082" to GUID b22ff1
 Successfully uploaded file "c12ff17c-2fc0-475a-9c21-50c19950b082" to GUID c22ff17c-2fc0-475a-9c21-50c19950b082.
 3 files uploaded.
 ```
+
+* * *
+
+## 9) Quick Start
+
+* * *
+
+### MAC OS
+1. Download the latest version of the client:
+```
+!curl https://api.github.com/repos/uc-cdis/cdis-data-client/releases/latest | grep browser_download_url.*osx |  cut -d '"' -f 4 | wget -qi -
+!unzip dataclient_osx.zip
+!mv gen3-client /Users/christopher/.gen3
+!rm dataclient_osx.zip`
+```
+2. Configure a profile:
+```
+gen3-client configure --profile=demo --cred=~/Downloads/demo-credentials.json --apiendpoint=https://nci-crdc-demo.datacommons.io/`
+```
+3. Check your authorization privileges:
+```
+gen3-client auth --profile=demo
+```
+4. Upload a file:
+```
+gen3-client upload --profile=demo --upload-path=test.txt
+```
+5. Download a file:
+```
+gen3-client download-single --profile=demo --guid=39b05d1f-f8a2-478c-a728-c16f6d0d8a7c --no-prompt
+```
+6. Download using file manifest:
+```
+gen3-client download-manifest ...
+```
+
+* * *
+
+## 10) Working from the Command-line
+
+* * *
+
+This section contains some general notes about working from the command-line and includes information on how to set-up your command-line shell to make working with the gen3-client easier.
+
+#### File Paths
+
+When you create or download a file on your computer, that file is located in a folder (or directory) in your computer's file system. For example, if you create the text file `example.txt` in the folder `My Documents`, the "full path" of that file is, for example, `C:\Users\Bob\My Documents\example.txt` in Windows or `/Users/Bob/Documents/example.txt` in Mac OS X.
+
+#### Present Working Directory
+
+After opening a shell, command prompt or terminal window, you are "in" a folder known as the "present working directory". You can change directories with the `cd <directory>` command in either shell. To view your present working directory, enter the command `echo $PWD` in a Mac terminal or `cd` alone in the Windows command prompt.
+
+You can list the contents of your present working directory by entering the command `ls` in the Mac terminal or `dir` in the Windows command prompt. These files in the present working directory can be accessed by commands you type just by entering their filenames: for example, `cat example.txt` would print the contents of the file `example.txt` in the Mac terminal if your present working directory is `/Users/Bob/Documents`. However, if you're in a different directory, you must enter the "full path" of the file: for example, if your present working directory is the `My Downloads` folder instead of `My Documents`, then you would need to specify the full path of the file and enter the command `type "C:\Users\Bob\My Documents\example.txt"`, to print the file's contents in the Windows command prompt.
+
+#### Updating the PATH Environment Variable
+
+When working in your shell, you can define variables that help make work easier. One such variable is PATH, which is a list of directories where executable programs are located. By adding a folder to the PATH, programs in that folder can be executed from any other folder/directory regardless of the present working directory.
+
+So, by adding the directory containing the gen3-client program to your PATH variable, you can run it from any working directory without specifying the "full path" of the program. Simply enter the command `gen3-client`, and you will run the program.
+
+> __Note:__ In the case that you haven't properly added the client to your path, the program can still be executed from any directory with the following command: `/full/path/to/executable/gen3-client <options>`. If you are working in the directory containing the executable, then `/full/path/to/executable` is simply `./`. So the command from the executable's directory would be `./gen3-client`.
+
+#### Sending Parameters to Programs on Command-line
+
+Most programs require some sort of user input to run properly. Some programs will prompt you for input after execution, while other programs are sent this input during execution as "flags" (AKA "arguments" or "options"). The gen3-client uses the latter method of sending user input as command arguments during program execution.
+
+For example, when configuring a profile with the client (details are in the following section), the user must specify the `configure` option and also specify the profile name, API endpoint, and credentials file by adding the flags `--profile`, `--apiendpoint` and `--cred` to the end of the command (see [configuring a profile section](#2-configure-a-profile-with-credentials) above for specific examples).
+
+* * *
+* * *
