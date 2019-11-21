@@ -437,17 +437,17 @@ Successfully deleted GUID 9bd009b6-e518-4fe5-9056-2b5cba163ca3
 Once a data file is registered and uploaded to object storage, its GUID can be used to download the file with the `gen3-client download-single` command.
 
 Required Flags:
-* --profile:
-* --guid:
+* --profile: The user profile specifying the api-endpoint and credentials.
+* --guid: The GUID (or "object_id" in Postgres or "did" in indexd) of the file.
 
 Optional Flags:
 * --download-path: Specify the directory to store files in.
-* --filename-format:
+* --filename-format: The format of filename to be used, including "original", "guid" and "combined" (default "original").
 
-* --no-prompt:
-* --protocol: s3 http ftp https gs
-* --rename:
-* --skip-completed:
+* --no-prompt: If set to true, no user prompt message will be displayed regarding the filename-format.
+* --protocol: The protocol to use for file download. Accepted options are: "s3", "http", "ftp", "https", and "gs".
+* --rename: If "--filename-format=original" is used, this will rename files by appending a counter value to its filename when files with the same name are in the download-path, otherwise the original filename will be used.
+* --skip-completed:  If set to true, the filename and file size of files in the `download-path` are compared to the file being downloaded. If there are any matches, the file will not be downloaded.
 
 
 Example Usage:
