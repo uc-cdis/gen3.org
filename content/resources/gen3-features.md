@@ -1,3 +1,11 @@
+---
+identifier: gen3-features
+title: Gen3 features
+linktitle: /resources/gen3-features
+date: 2019-12-04T10:57:21-05:00
+---
+
+
 # A list of Gen3 features
 
 Gen3 is an open-source platform that enables the standing-up of data commons for managing, analyzing, and sharing research data. Below you can find an exhaustive list of Gen3 features.
