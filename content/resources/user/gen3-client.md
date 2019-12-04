@@ -488,6 +488,8 @@ Finished downloads/24d0be10-d164-48ad-aafa-9fcaac682df9 2570240 / 2570240 bytes 
 
 In order to register data files in a Gen3 data commons, the filenames, md5sums, and file_size in bytes, must be submitted as metadata. The gen3-client can help collect the values of these three properties using the `gen3-client generate-tsv` command.
 
+> __NOTE:__ For most data uploaders, using the `gen3-client upload` command followed by mapping files in Windmill is the preferred method for uploading files. See [this section](/resources/user/submit-data) of the documentation for details.
+
 The template TSV for a data file node should be downloaded from the node's entry page in the data dictionary and used as a template with this command. Then the wildcard character `*` can be used to add all matching files to the specified output tsv.
 
 To download template TSVs from a common, open the common's Windmill data portal and click on "Dictionary" in the top navigation bar to open the data dictionary. Template TSVs can be obtained from each node's page in the data dictionary by clicking on the node's name.
@@ -527,9 +529,11 @@ rg-2	submitted_aligned_reads	project-name	SAR2	Sequencing Reads	BAM	Aligned Read
 
 * * *
 
-If a record of a data file has already been registered, which means a record that represents the data file with a pre-generated GUID already exists in the Gen3 data common's database of the `Indexd` service, then gen3-client can be used to upload a file to object storage with that GUID using the `gen3-client upload-single` command.
+If a data file has already been assigned a GUID via registration in a Gen3 data commons' indexd database, then the gen3-client can be used to upload the file associated with that GUID to object storage via the `gen3-client upload-single` command.
 
-The GUID or `object_id` for a submitted data file can then be obtained via graphQL query or viewing the data file JSON record in the graphical model of the project.
+> __NOTE:__ For most data uploaders, using the `gen3-client upload` command followed by mapping files in Windmill is the preferred method for uploading files. See [this section](/resources/user/submit-data) of the documentation for details.
+
+The GUID or `object_id` property for a submitted data file can then be obtained via graphQL query or viewing the data file JSON record in the graphical model of the project.
 
 Example Usage:
 
@@ -550,7 +554,7 @@ Successfully uploaded file "test.gif" to GUID b4642430-8c6e-465a-8e20-97c4584393
 
 * * *
 
-Users can automate the upload of a bulk of files by providing an upload manifest. Ideally the upload manifest is the same as the download manifest that can be generated automatically as described in the previous section. However, the user can also create a "minimal" upload manifest on their own if needed. A valid 'minimal' upload file is a JSON file that only contains `object_id` fields. The value of each `object_id` field is the GUID of a data file that is going to be submitted. In this mode, for now we are assuming all the data files to be uploaded have the same filenames as their GUIDs.
+Users can automate the bulk upload of data files by providing the gen3-client with an upload manifest. Ideally the upload manifest is the same as the download manifest that can be generated automatically as described in the previous section. However, the user can also create a "minimal" upload manifest on their own if needed. A valid 'minimal' upload file is a JSON file that only contains `object_id` fields. The value of each `object_id` field is the GUID of a data file that is going to be submitted. In this mode, for now we are assuming all the data files to be uploaded have the same filenames as their GUIDs.
 
 Example of manifest.json (Minimal):
 
@@ -616,10 +620,6 @@ gen3-client upload --profile=demo --upload-path=test.txt
 5. Download a file:
 ```
 gen3-client download-single --profile=demo --guid=39b05d1f-f8a2-478c-a728-c16f6d0d8a7c --no-prompt
-```
-6. Download using file manifest:
-```
-gen3-client download-manifest ...
 ```
 
 * * *
