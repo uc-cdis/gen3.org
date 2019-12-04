@@ -3,6 +3,7 @@ identifier: gen3-features
 title: Gen3 Features
 linktitle: /resources/gen3-features
 layout: withtoc
+menuname: featuresMenu
 date: 2019-12-04T10:57:21-05:00
 ---
 
