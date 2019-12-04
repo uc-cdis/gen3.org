@@ -1,6 +1,6 @@
 # A list of Gen3 features
 
-This is intended as a non-technical, as exhaustive as possible list of features that would be interesting to potential future Gen3 Commons users. We should name *features*, not *services*.
+Gen3 is an open source platform that enable the standing-up of data commons for managing, analyzing, and sharing research data. Below you can find an exhaustive list of Gen3 features.
 
 ## Dictionary and metadata
 
