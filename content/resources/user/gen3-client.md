@@ -27,6 +27,7 @@ This guide has the following sections:
 8. [Upload Multiple Files with Manifest](#8-how-to-upload-multiple-data-files-using-a-manifest)
 9. [Quick Start](#9-quick-start)
 10. [Working from the Command-line](#10-working-from-the-command-line)
+
 * * *
 
 ## 1) Installation Instructions
@@ -70,6 +71,7 @@ curl https://api.github.com/repos/uc-cdis/cdis-data-client/releases/latest | gre
 # Linux:
 curl https://api.github.com/repos/uc-cdis/cdis-data-client/releases/latest | grep browser_download_url.*linux |  cut -d '"' -f 4 | wget -qi -
 ```
+
 ### View the Help Menu
 
 To check that your copy of the client is working and confirm the version, the tool can be run on the command-line in your terminal or command prompt by entering `gen3-client`. Typing this alone or `gen3-client help` will display the help menu. For help on a particular command, enter: `gen3-client <command> help`. Note that you must provide the full path of the tool in order for the commands to run, for example, `./gen3-client` while working from the directory containing the client. Alternatively, you can [add the location of the gen3-client executable to your shell's PATH environment variable](#10-working-from-the-command-line).
