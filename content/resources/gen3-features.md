@@ -2,7 +2,7 @@
 identifier: gen3-features
 title: Gen3 Features
 linktitle: /resources/gen3-features
-date: 2019-12-04T10:57:21-05:00
+date: 
 ---
 
 
@@ -10,7 +10,7 @@ date: 2019-12-04T10:57:21-05:00
 
 Gen3 is an open-source platform that enables the standing-up of data commons for managing, analyzing, and sharing research data. Below you can find an exhaustive list of Gen3 features.
 
-## Dictionary and metadata
+## Dictionary and structured data
 
 * Explore the graph in the dictionary page of Windmill:
     * Search keywords
@@ -19,18 +19,18 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
 * Explore project graphs and nodes in Windmill:
     * Visualize graph model
     * Browse/download data for each node
-* Metadata submission (create, update, delete records) in JSON, TSV or CSV:
+* Structured data submission (create, update, delete records) in JSON, TSV or CSV:
     * Submission page of Windmill
     * Gen3 SDK (Python, R)
-* Export metadata as a JSON, TSV or CSV file
-* The metadata is stored in Postgres databases
+* Export structured data as a JSON, TSV or CSV file
+* Structured data is stored in Postgres databases
 * ElasticSearch:
-    * The metadata can be stored in ElasticSearch by using our ETL tool
-    * Explore the ElasticSearch metadata using Guppy
+    * Structured data can be stored in ElasticSearch by using our ETL tool
+    * Explore the ElasticSearch structured data using Guppy
 * Generate fake data specific to a dictionary for testing
 * Import and export using the Portable Format for Biomedical Data (PFB): *(Work in progress)*
     * Import and export a dictionary
-    * Import and export metadata
+    * Import and export structured data
 
 ## Data files
 
@@ -44,12 +44,12 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
 * Data download:
     * Gen3 Client
     * Files page of Windmill
-* Core metadata endpoint to get information about a data file
+* Core structured data endpoint to get information about a data file
 
 ## Data exploration and analysis
 
-* GraphQL endpoint and UI to explore the metadata via Peregrine (graph data)
-* GraphQL endpoint and UI to explore the metadata via Guppy (flat ElasticSearch data)
+* GraphQL endpoint and UI to explore structured data via Peregrine (graph data)
+* GraphQL endpoint and UI to explore Structured data via Guppy (flat ElasticSearch data)
 * Explorer page of Windmill
     * Filters to select a cohort
     * Charts and visualizations: count, pie charts, bar charts, stacked bar charts, heatmaps
