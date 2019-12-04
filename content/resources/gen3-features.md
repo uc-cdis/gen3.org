@@ -16,7 +16,7 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
     * Search keywords
     * Visualize possible paths between nodes
     * Download JSON or TSV format for node templates 
-* Explorer project graph and nodes in Windmill:
+* Explore project graphs and nodes in Windmill:
     * Visulize graph model
     * Browse/download data for each node
 * Metadata submission (create, update, delete records) in JSON, TSV or CSV:
