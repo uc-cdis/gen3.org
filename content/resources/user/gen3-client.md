@@ -60,7 +60,7 @@ Now you can execute the program by opening a terminal window and entering the co
 6. In the "System Properties" window that opens up, on the "Advanced" tab, click on the "Environment Variables" button.
 7. In the box labeled "System Variables", find the "Path" variable and click "Edit".
 8. In the window that pops up, click "New".
-9. Type in the full directory path of the executable file (e.g., `C:\Program Files\gen3-client`).
+9. Type in the full directory path of the executable file (for example, `C:\Program Files\gen3-client`).
 10. Click "Ok" on all the open windows and restart the command prompt if it is already open by entering `cmd` into the start menu and hitting enter.
 
 > __Note__ To download the latest version of the file from the command-line, use the following commands from your terminal:
