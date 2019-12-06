@@ -18,7 +18,7 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
     * Search keywords
     * Visualize possible paths between nodes
     * Download JSON or TSV format for node templates 
-* Explore [project graphs and nodes](../user/data-types/#what-is-a-data-dictionary-and-data-mode) in [Windmill](https://github.com/uc-cdis/data-portal):
+* Explore [project graphs and nodes](../user/data-types/#what-is-a-data-dictionary-and-data-model) in [Windmill](https://github.com/uc-cdis/data-portal):
     * Visualize graph model
     * Browse/download data for each node
 * Structured [data submission](../user/submit-data/) (create, update, delete records) in JSON, TSV or CSV:
