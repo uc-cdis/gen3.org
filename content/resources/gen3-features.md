@@ -50,9 +50,9 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
 
 ## Data exploration and analysis
 
-* GraphQL endpoint and UI to [explore structured data](../user/access-data/querying-metadata-using-the-graphiql-interface) via [Peregrine](https://github.com/uc-cdis/peregrine) (graph data)
-* GraphQL endpoint and UI to explore [flattened data](../user/access-data/querying-metadata-using-the-graphiql-interface) via [Guppy](https://github.com/uc-cdis/guppy) (in ElasticSearch)
-* [Explorer page](../user/access-data/exploration-tool) of [Windmill](https://github.com/uc-cdis/data-portal)
+* GraphQL endpoint and UI to [explore structured data](../user/access-data/#querying-metadata-using-the-graphiql-interface) via [Peregrine](https://github.com/uc-cdis/peregrine) (graph data)
+* GraphQL endpoint and UI to explore [flattened data](../user/access-data/#querying-metadata-using-the-graphiql-interface) via [Guppy](https://github.com/uc-cdis/guppy) (in ElasticSearch)
+* [Explorer page](../user/access-data/#exploration-tool) of [Windmill](https://github.com/uc-cdis/data-portal)
     * Filters to select a cohort
     * Charts and visualizations: count, pie charts, bar charts, stacked bar charts, heatmaps
     * Download clinical data for the selected cohort
