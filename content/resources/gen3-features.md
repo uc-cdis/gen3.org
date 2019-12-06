@@ -26,8 +26,8 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
     * Gen3 SDK (Python, R)
 * Export structured data as a JSON, TSV or CSV file
 * Structured data is stored in Postgres databases
-* ElasticSearch:
-    * Structured data can be stored in ElasticSearch by using our ETL tool
+* Flattened data:
+    * Structured data can be flattened and stored in ElasticSearch by using our ETL tool
     * Explore the ElasticSearch structured data using Guppy
 * Generate fake data specific to a dictionary for testing
 * Import and export using the Portable Format for Biomedical Data (PFB): *(Work in progress)*
