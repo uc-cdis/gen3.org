@@ -51,7 +51,7 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
 ## Data exploration and analysis
 
 * GraphQL endpoint and UI to explore structured data via Peregrine (graph data)
-* GraphQL endpoint and UI to explore Structured data via Guppy (flat ElasticSearch data)
+* GraphQL endpoint and UI to explore flattened data via Guppy (in ElasticSearch)
 * Explorer page of Windmill
     * Filters to select a cohort
     * Charts and visualizations: count, pie charts, bar charts, stacked bar charts, heatmaps
