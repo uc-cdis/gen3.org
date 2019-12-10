@@ -46,7 +46,7 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
 * [Data download](../user/access-data/#downloading-data-files):
     * [Gen3 Client](../user/gen3-client/)
     * Files page of Windmill
-* Core structured data endpoint to get information about a data file
+* Core metadata endpoint to get information about a data file
 
 ## Data exploration and analysis
 
