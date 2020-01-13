@@ -464,14 +464,14 @@ gen3-client download-single --profile=demo --guid=39b05d1f-f8a2-478c-a728-c16f6d
 
 * * *
 
-A download manifest can be generated using a Gen3 data common's "Exploration" tool. To use the "Exploration" tool, open the common's Windmill data portal and click on "Exploration" in the top navigation bar. After a cohort has been selected, clicking the "Download Manifest" button will create the manifest for the selected files. The gen3-client will download all the files in the provided manifest using the `gen3-client download-manifest` command.
+A download manifest can be generated using a Gen3 data common's "Exploration" tool. To use the "Exploration" tool, open the common's Windmill data portal and click on "Exploration" in the top navigation bar. After a cohort has been selected, clicking the "Download Manifest" button will create the manifest for the selected files. The gen3-client will download all the files in the provided manifest using the `gen3-client download-multiple` command.
 
 Example Usage:
 
 ```
-gen3-client download-manifest --profile=<profile_name> --manifest=<manifest_file> --download-path=<path_for_files>
+gen3-client download-multiple --profile=<profile_name> --manifest=<manifest_file> --download-path=<path_for_files>
 
-gen3-client download-manifest --profile=demo --manifest=manifest.json --download-path=downloads
+gen3-client download-multiple --profile=demo --manifest=manifest.json --download-path=downloads
 
 Finished downloads/63af95d3-98c3-4d6d-a6be-26398dbfc1d9 6723044 / 6723044 bytes (100%)
 Finished downloads/b30531f6-9caa-4356-a95f-5f4d6a012913 6721797 / 6721797 bytes (100%)
@@ -556,7 +556,7 @@ Successfully uploaded file "test.gif" to GUID b4642430-8c6e-465a-8e20-97c4584393
 
 * * *
 
-Users can automate the bulk upload of data files by providing the gen3-client with an upload manifest. Ideally the upload manifest is the same as the download manifest that can be generated automatically as described in the previous section. However, the user can also create a "minimal" upload manifest on their own if needed. A valid 'minimal' upload file is a JSON file that only contains `object_id` fields. The value of each `object_id` field is the GUID of a data file that is going to be submitted. In this mode, for now we are assuming all the data files to be uploaded have the same filenames as their GUIDs.
+Users can automate the bulk upload of data files by providing the gen3-client with an upload manifest. The upload manifest should follow the same format as the download manifest, which is described in the previous section. Minimally, the manifest file is a JSON that contains `object_id` fields. The value of each `object_id` field is the GUID (globally unique identifier) of a data file that will be uploaded. In this mode, we assume the filenames of data files to be uploaded are the same as the GUIDs.
 
 Example of manifest.json (Minimal):
 
@@ -574,14 +574,14 @@ Example of manifest.json (Minimal):
 }
 ```
 
-The gen3-client will upload all the files in the provided manifest using the `gen3-client upload-manifest` command.
+The gen3-client will upload all the files in the provided manifest using the `gen3-client upload-multiple` command.
 
 Example Usage:
 
 ```
-gen3-client upload-manifest --profile=<profile_name> --manifest=<manifest_file> --upload-path=<path_for_files>
+gen3-client upload-multiple --profile=<profile_name> --manifest=<manifest_file> --upload-path=<path_for_files>
 
-gen3-client upload-manifest --profile=demo --manifest=manifest.json --upload-path=upload
+gen3-client upload-multiple --profile=demo --manifest=manifest.json --upload-path=upload
 
 Uploading data ...
 a12ff17c-2fc0-475a-9c21-50c19950b082  3.64 MiB / 3.64 MiB [==========================================================================================] 100.00%
