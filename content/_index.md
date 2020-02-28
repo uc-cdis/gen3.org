@@ -112,9 +112,9 @@ g3DataFeature:
     detail: You can leave your data open to the Internet or control access at deeper levels within your own data use ontology, from the core data to the data objects.
 g3Contributor:
   title: Contributor
-  fig: figs/cdis-logo.svg
+  fig: figs/ctds-logo.png
   target: _blank
-  link: https://cdis.uchicago.edu/
+  link: https://ctds.uchicago.edu/
 g3Entrance:
   e1:
     title: Join the Discussion
