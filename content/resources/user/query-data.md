@@ -11,19 +11,19 @@ menuname: userMenu
 
 The following guide provides details on how to send graphQL queries to retrieve data from a Gen3 Data Commons.
 
-## Find files by querying 'datanode'.
+## 1. Find files by querying 'datanode'
 ---
-### Finding specific files
+### 1a. Finding specific files
 ---
-* Metadata for specific files can be obtained by including arguments in "datanode" queries
-    * submitter_id: get information for a specific submitter_id
-    * quick_search: get information for all files with partial matches in submitter_id
-    * file_name: get information for files matching a specified filename.
+* Metadata for specific files can be obtained by including arguments in "datanode" queries. The following are some commonly used arguments (not an exhaustive list):
+    * `submitter_id: "a_submitter_id"`: get information for a specific submitter_id
+    * `quick_search: "a_substring"`: get information for all files with partial matches in submitter_id
+    * `file_name: "a_filename.txt"`: get information for files matching a specified filename.
 * For example, the following arguments can be used to obtain similar results:
-    * `(quick_search: "sub-70080")` will return files with the substring "sub-70080" in the submitter_id.
-    * `(file_name: "sub-70080_T1w.nii.gz")` will return only files with that exact filename.
-    * `(submitter_id: "OpenNeuro-ds000030_sub-70080_T1w.nii_6ff0")` will return only the file with that exact submitter_id, which must be unique within a node.
-* The following query can be pasted into the graphiQL interface at https://gen3.datacommons.io/query:
+    * `quick_search: "sub-70080"` will return files with the substring "sub-70080" in the submitter_id.
+    * `file_name: "sub-70080_T1w.nii.gz"` will return only files with that exact filename.
+    * `submitter_id: "OpenNeuro-ds000030_sub-70080_T1w.nii_6ff0"` will return only the file with that exact submitter_id, which must be unique within a node.
+* The following example query can be pasted into the graphiQL interface at https://gen3.datacommons.io/query (be sure to click "Switch to Graph Model"). Note that in this example, there are three individual "datanode" queries that are sent simultaneously and assigned labels ("match_file_name", "match_quick_search", and "match_submitter_id"):
 
 ```
 
@@ -43,7 +43,7 @@ The following guide provides details on how to send graphQL queries to retrieve 
 }
 ```
 
-* Result: applying the `file_name` and `submitter_id` arguments results in only the files that match the provided string exactly, while using a `quick_search` argument returns all files that match the sub-string, two in this case.
+* Result: applying the `file_name` and `submitter_id` arguments returns only the files that match the provided string exactly, while the `quick_search` argument returns all files with a submitter_id that matches the sub-string, two in this case.
 
 ```
 {
