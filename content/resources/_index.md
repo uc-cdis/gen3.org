@@ -37,6 +37,8 @@ g3Resources:
             link: /resources/user/template-tsvs
           - name: Managing Submission Timepoints
             link: /resources/user/manage-submission
+          - name: Query the Data
+            link: /resources/user/query-data
   r2:
     name: Gen3 Operator
     fig: /figs/roles/icon-research.svg
