@@ -436,7 +436,10 @@ Successfully deleted GUID 9bd009b6-e518-4fe5-9056-2b5cba163ca3
 
 * * *
 
-Once a data file is registered and uploaded to object storage, its GUID can be used to download the file with the `gen3-client download-single` command.
+Files with a valid storage location in the file index database (AKA *indexd*) can downloaded using the `gen3-client download-single` command by providing the file's object_id (AKA *GUID* or *did*).
+
+For example, the indexd record for object_id ["00149bcf-e057-4ecc-b22d-53648ae0b35f"](https://gen3.datacommons.io/index/00149bcf-e057-4ecc-b22d-53648ae0b35f) points to a [location in the GDC](https://api.gdc.cancer.gov/data/47b982b3-c7ce-4ca7-8c86-c71c15979620).
+
 
 Required Flags:
 * --profile: The user profile specifying the api-endpoint and credentials.
@@ -458,7 +461,7 @@ Optional Flags:
 Example Usage:
 
 ```
-gen3-client download-single --profile=demo --guid=39b05d1f-f8a2-478c-a728-c16f6d0d8a7c --no-prompt --protocol=http
+gen3-client download-single --profile=demo --guid=00149bcf-e057-4ecc-b22d-53648ae0b35f --no-prompt --skip-completed
 ```
 
 * * *
