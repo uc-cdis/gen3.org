@@ -436,7 +436,10 @@ Successfully deleted GUID 9bd009b6-e518-4fe5-9056-2b5cba163ca3
 
 * * *
 
-Once a data file is registered and uploaded to object storage, its GUID can be used to download the file with the `gen3-client download-single` command.
+Files with a valid storage location in the file index database (AKA *indexd*) can downloaded using the `gen3-client download-single` command by providing the file's object_id (AKA *GUID* or *did*).
+
+For example, the indexd record for object_id ["00149bcf-e057-4ecc-b22d-53648ae0b35f"](https://gen3.datacommons.io/index/00149bcf-e057-4ecc-b22d-53648ae0b35f) points to a [location in the GDC](https://api.gdc.cancer.gov/data/47b982b3-c7ce-4ca7-8c86-c71c15979620).
+
 
 Required Flags:
 * --profile: The user profile specifying the api-endpoint and credentials.
@@ -449,13 +452,16 @@ Optional Flags:
 * --no-prompt: If set to true, no user prompt message will be displayed regarding the filename-format.
 * --protocol: The protocol to use for file download. Accepted options are: "s3", "http", "ftp", "https", and "gs".
 * --rename: If "--filename-format=original" is used, this will rename files by appending a counter value to its filename when files with the same name are in the download-path, otherwise the original filename will be used.
-* --skip-completed:  If set to true, the filename and file size of files in the `download-path` are compared to the file being downloaded. If there are any matches, the file will not be downloaded.
+* --skip-completed:  If set to true, the name and size of local files in the `download-path` are compared to the information in the file index database. If a local file in the `download-path` matches both the name and size, it will not be downloaded.
+
+
+> __NOTE:__ The "--skip-completed" option also attempts to resume downloading partially downloaded files using a ranged download. That is, if a local file with the same name exists in the `download-path`, but the size does not match what is in the file index, the client will attempt to resume the download where it left off.
 
 
 Example Usage:
 
 ```
-gen3-client download-single --profile=demo --guid=39b05d1f-f8a2-478c-a728-c16f6d0d8a7c --no-prompt --protocol=http
+gen3-client download-single --profile=demo --guid=00149bcf-e057-4ecc-b22d-53648ae0b35f --no-prompt --skip-completed
 ```
 
 * * *
@@ -465,6 +471,12 @@ gen3-client download-single --profile=demo --guid=39b05d1f-f8a2-478c-a728-c16f6d
 * * *
 
 A download manifest can be generated using a Gen3 data common's "Exploration" tool. To use the "Exploration" tool, open the common's Windmill data portal and click on "Exploration" in the top navigation bar. After a cohort has been selected, clicking the "Download Manifest" button will create the manifest for the selected files. The gen3-client will download all the files in the provided manifest using the `gen3-client download-multiple` command.
+
+> __NOTE:__ The download-multiple command supports multi-threaded downloads using the "--numparallel" option. While using this option will decrease time to download when downloading a batch of files, it is not recommended to use this option when trying to download extremely large files (50+ GB).
+
+
+> __NOTE:__ If a download command is interrupted and results in partially downloaded files, the "--skip-completed" option can be used to attempt to resume downloading the partially downloaded files using a ranged download. The gen3-client will compare the file_size and file_name for each file in the "--download-path", and resume downloading any files in the manifest that do not match both.
+
 
 Example Usage:
 
