@@ -449,7 +449,7 @@ Optional Flags:
 * --no-prompt: If set to true, no user prompt message will be displayed regarding the filename-format.
 * --protocol: The protocol to use for file download. Accepted options are: "s3", "http", "ftp", "https", and "gs".
 * --rename: If "--filename-format=original" is used, this will rename files by appending a counter value to its filename when files with the same name are in the download-path, otherwise the original filename will be used.
-* --skip-completed:  If set to true, the filename and file size of files in the `download-path` are compared to the file being downloaded. If there are any matches, the file will not be downloaded.
+* --skip-completed:  If set to true, the name and size of local files in the `download-path` are compared to the information in the file index database. If a local file with the same name exists, but the size does not match what is in the file index, the client will attempt to resume the download using a ranged download. If a local file in the `download-path` matches both the name and size, it will not be downloaded.
 
 
 Example Usage:
@@ -465,6 +465,12 @@ gen3-client download-single --profile=demo --guid=39b05d1f-f8a2-478c-a728-c16f6d
 * * *
 
 A download manifest can be generated using a Gen3 data common's "Exploration" tool. To use the "Exploration" tool, open the common's Windmill data portal and click on "Exploration" in the top navigation bar. After a cohort has been selected, clicking the "Download Manifest" button will create the manifest for the selected files. The gen3-client will download all the files in the provided manifest using the `gen3-client download-multiple` command.
+
+> __NOTE:__ The download-multiple command supports multi-threaded downloads using the "--numparallel" option. While using this option will decrease time to download when downloading a batch of files, it is not recommended to use this option when trying to download extremely large files (50+ GB).
+
+
+> __NOTE:__ If a download command is interrupted and results in partially downloaded files, the "--skip-completed" option can be used to attempt to resume downloading the partially downloaded files using a ranged download. The gen3-client will compare the file_size and file_name for each file in the "--download-path", and resume downloading any files in the manifest that do not match both.
+
 
 Example Usage:
 
