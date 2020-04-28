@@ -449,7 +449,10 @@ Optional Flags:
 * --no-prompt: If set to true, no user prompt message will be displayed regarding the filename-format.
 * --protocol: The protocol to use for file download. Accepted options are: "s3", "http", "ftp", "https", and "gs".
 * --rename: If "--filename-format=original" is used, this will rename files by appending a counter value to its filename when files with the same name are in the download-path, otherwise the original filename will be used.
-* --skip-completed:  If set to true, the name and size of local files in the `download-path` are compared to the information in the file index database. If a local file with the same name exists, but the size does not match what is in the file index, the client will attempt to resume the download using a ranged download. If a local file in the `download-path` matches both the name and size, it will not be downloaded.
+* --skip-completed:  If set to true, the name and size of local files in the `download-path` are compared to the information in the file index database. If a local file in the `download-path` matches both the name and size, it will not be downloaded.
+
+
+> __NOTE:__ The "--skip-completed" option also attempts to resume downloading partially downloaded files using a ranged download. That is, if a local file with the same name exists in the `download-path`, but the size does not match what is in the file index, the client will attempt to resume the download where it left off.
 
 
 Example Usage:
