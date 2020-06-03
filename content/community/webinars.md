@@ -19,7 +19,7 @@ g3Upcoming:
     Description: |
       Join us as we discuss Framework Services and how it enables interoperability across ecosystems. During this webinar we'll dive into the technical details of Gen3’s open-source implementation of Framework Services, including AuthN/AuthZ and standards such as GA4GH's Data Repository Service (DRS).
       
-      <a href="https://zoom.us/j/9414330005?pwd=ejBMWUlIdkZKODFubVRWbnlOckMxUT09">Join Zoom Meeting</a> (Meeting ID: 941 433 0005, Password: DCF)
+      Join Zoom Meeting https://zoom.us/j/9414330005?pwd=ejBMWUlIdkZKODFubVRWbnlOckMxUT09 (Meeting ID: 941 433 0005, Password: DCF)
     Image: coming_soon.svg
 
 g3Previous:
