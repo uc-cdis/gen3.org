@@ -17,9 +17,12 @@ g3Upcoming:
   - Title: NCI DCFS Interoperability with Framework Services
     Date: June 9th, 2020 at 2 PM U.S. Central Time.
     Description: |
-      Join us as we discuss Framework Services and how it enables interoperability across ecosystems. During this webinar we'll dive into the technical details of Gen3’s open-source implementation of Framework Services, including AuthN/AuthZ and standards such as GA4GH's Data Repository Service (DRS). Join Zoom Meeting https://zoom.us/j/9414330005?pwd=ejBMWUlIdkZKODFubVRWbnlOckMxUT09 (Meeting ID: 941 433 0005, Password: DCF)
+      Join us as we discuss Framework Services and how it enables interoperability across ecosystems. During this webinar we'll dive into the technical details of Gen3’s open-source implementation of Framework Services, including AuthN/AuthZ and standards such as GA4GH's Data Repository Service (DRS).
+      
+      Join Zoom Meeting https://zoom.us/j/9414330005?pwd=ejBMWUlIdkZKODFubVRWbnlOckMxUT09
+      Meeting ID: 941 433 0005
+      Password: DCF
     Image: coming_soon.svg
-    Link: https://zoom.us/j/9414330005?pwd=ejBMWUlIdkZKODFubVRWbnlOckMxUT09 (Meeting ID 941 433 0005, Password DCF)
 
 g3Previous:
   - Title: Gen3 Data Exploration
