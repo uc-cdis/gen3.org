@@ -13,7 +13,6 @@ g3Teaser:
     Description: Join us as we walk through Gen3’s services and demonstrate how researchers can bring data into Gen3 and get access to a data ecosystem with open-source tools to drive scientific discovery.
     Image: coming_soon.svg
     Link: https://www.eventbrite.com/e/gen3-webinar-come-and-learn-with-us-tickets-63399391286?aff=gen3 --->
-
 g3Previous:
   - Title: NCI DCFS Interoperability with Framework Services
     Date: June 9th, 2020 at 2 PM U.S. Central Time.
