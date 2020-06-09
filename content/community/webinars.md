@@ -13,16 +13,12 @@ g3Teaser:
     Description: Join us as we walk through Gen3’s services and demonstrate how researchers can bring data into Gen3 and get access to a data ecosystem with open-source tools to drive scientific discovery.
     Image: coming_soon.svg
     Link: https://www.eventbrite.com/e/gen3-webinar-come-and-learn-with-us-tickets-63399391286?aff=gen3 --->
-g3Upcoming:
-  - Title: NCI DCFS Interoperability with Framework Services
-    Date: June 9th, 2020 at 2 PM U.S. Central Time.
-    Description: |
-      Join us as we discuss Framework Services and how it enables interoperability across ecosystems. During this webinar we'll dive into the technical details of Gen3’s open-source implementation of Framework Services, including AuthN/AuthZ and standards such as GA4GH's Data Repository Service (DRS).
-      
-      Join Zoom Meeting https://zoom.us/j/9414330005?pwd=ejBMWUlIdkZKODFubVRWbnlOckMxUT09 (Meeting ID: 941 433 0005, Password: DCF)
-    Image: coming_soon.svg
 
 g3Previous:
+  - Title: NCI DCFS Interoperability with Framework Services
+    Date: June 9th, 2020 at 2 PM U.S. Central Time.
+    Description: Join us as we discuss Framework Services and how it enables interoperability across ecosystems. During this webinar we'll dive into the technical details of Gen3’s open-source implementation of Framework Services, including AuthN/AuthZ and standards such as GA4GH's Data Repository Service (DRS).
+    Image: coming_soon.svg
   - Title: Gen3 Data Exploration
     Date: August 8th, 2019
     Description: Join us as we walk through Gen3’s services and demonstrate how researchers can bring data into Gen3 and get access to a data ecosystem with open-source tools to drive scientific discovery. During this webinar we will demonstrate how to explore and analyze cancer cell line data in Gen3.
