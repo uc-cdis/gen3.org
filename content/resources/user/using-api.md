@@ -120,7 +120,7 @@ Updating the example template `details from experiment` sample query to call the
 * * *
 ## Browsing by List of Projects
 * * *
-The metadata submission portal https://gen3.datacommons.io/submission can be used to browse a individual project by node. Select a project by clicking 'Submit Data' on the right side and then either explore the nodes in the "Toggle view" by clicking on individual nodes, or, by clicking the "browse nodes" button to the left. From this screen queries can be made by node in the dropdown at the left.
+The metadata submission portal https://gen3.datacommons.io/submission can be used to browse an individual project by node. Select a project by clicking 'Submit Data' on the right side and then either explore the nodes in the "Toggle view" by clicking on individual nodes, or, by clicking the "browse nodes" button to the left. From this screen queries can be made by node in the dropdown at the left.
 
 <h4> Example: Find Projects and browse Nodes</h4>
 ![Browse by node](projects-nodes-view.png)
