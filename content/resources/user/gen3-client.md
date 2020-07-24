@@ -104,9 +104,9 @@ Windows:
 gen3-client configure --profile=demo --cred=C:\Users\demo\Downloads\demo-credentials.json --apiendpoint=https://nci-crdc-demo.datacommons.io/
 ```
 
-> __NOTE:__ For these user guides, https://data.mycommons.org is an example URL and will not be the actual URL of the data commons.
+> __NOTE:__ For these user guides, https://gen3.datacommons.io is an example URL and can be replaced with the URL of other data commons powered by Gen3.
 
-When successfully executed, this will create a configuration file, which contains all the API keys and urls associated with each commons profile configured, located in the user folder:
+When successfully executed, this will create a configuration file, which contains all the API keys and URLs associated with each commons profile configured, located in the user folder:
 
 ```
 Mac/Linux: /Users/demo/.gen3/config
