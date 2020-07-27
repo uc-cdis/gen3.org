@@ -10,7 +10,7 @@ menuname: userMenu
 * * *
 ## What Does the API Do?
 * * *
-The API is created programmatically based on the Gen3 commons data model. All of the work Gen3 data contributors do to prepare their metadata powers the API (see steps [4-6 in the Data Contribution section](submit-data.md)).
+The API is created programmatically based on the Gen3 commons data model. All of the work Gen3 data contributors do to prepare their metadata powers the API (see steps [4-6 in the Data Contribution section](/resources/user/submit-data.md)).
 
 With the API in place, users can submit queries to find metadata information across the Gen3 commons. The API can be queried programmatically or through provided tools, like the submission portal.
 
@@ -27,7 +27,7 @@ For users granted data access, the API key is provided on the Profile page after
 
 * * *
 
-![Profile Page](/img/profile-page.png)
+![Profile Page](API_key_profile_page.png)
 
 * * *
 
@@ -35,7 +35,7 @@ While displayed, click "copy" to copy the API key to the clipboard or "download"
 
 * * *
 
-![Copy Key](/img/copy-keys.png)
+![Copy Key](API_copy_keys.png)
 
 * * *
 

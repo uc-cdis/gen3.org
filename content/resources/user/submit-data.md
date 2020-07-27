@@ -9,7 +9,7 @@ menuname: userMenu
 # Submitting Data Files and Linking Metadata in a Gen3 Data Commons
 * * *
 
-The following guide details the steps a data contributor must take to submit a project to a Gen3 data commons.
+The following guide details the steps a data contributor must take to submit a project to a Gen3 data commons. Feel free to take a look at our webinars about our Gen3 data commons on our [YouTube channel](https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/videos).
 
 Data in a Gen3 data commons are either stored in variables that are exposed to the API for query (what we refer to as 'metadata') or are stored in files that must be downloaded prior to knowing their content (or 'data files'). For more information on the difference between data files and metadata exposed to the API, see the documentation on [data types in a Gen3 data commons](/resources/user/data-types).
 
@@ -116,7 +116,7 @@ You should receive the message "# files mapped successfully!" upon success.
 ## 4. Submit Additional Project Metadata
 * * *
 
-Once data files have been mapped to the appropriate data file node, the rest of the project's metadata (e.g., patient clinical information, sample processing methods, pipeline/workflow parameters, etc.) should be submitted to the appropriate nodes. These metadata are submitted in tab-separated value (TSV) files for each node in the project, which can be downloaded from the "Dictionary" page of the data commons website.
+Once data files have been mapped to the appropriate data file node, the rest of the project's metadata (e.g., patient clinical information, sample processing methods, pipeline/workflow parameters, etc.) should be submitted to the appropriate nodes. These metadata are submitted in [tab-separated value (TSV)](https://gen3.org/resources/user/template-tsvs/) files for each node in the project, which can be downloaded from the "Dictionary" page of the data commons website.
 
 It may be helpful to think of each TSV as a node in the graph of the data model. Column headers in the TSV are the properties stored in that node, and each row represents a "record" or "entity" in that node. When a TSV is successfully submitted, each row in that TSV becomes a single record in the node.
 
@@ -134,7 +134,7 @@ There are a number of properties that deserve special mention:
 
 Template TSVs are provided in each node's page in the data dictionary.
 
-![Template](Gen3_Dictionary_Subject_template.png)
+![Template](Gen3_Dictionary_Subject_template_2020.png)
 
 ### Determine Submission Order via Node Links
 * * *

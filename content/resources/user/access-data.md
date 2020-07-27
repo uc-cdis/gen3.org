@@ -11,7 +11,7 @@ menuname: userMenu
 
 * * *
 
-The [data in a Gen3 data commons](/resources/user/data-types) can be browsed and downloaded using tools either in the submission portal website or from the command-line.
+The [data in a Gen3 data commons](/resources/user/data-types) can be browsed and downloaded using tools either in the submission portal website or from the command-line. Feel free to take a look at our webinars about our Gen3 data commons on our [YouTube channel](https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/videos).
 
 ## Exploration Tool
 * * *
