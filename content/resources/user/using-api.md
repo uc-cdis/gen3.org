@@ -10,9 +10,9 @@ menuname: userMenu
 * * *
 ## What Does the API Do?
 * * *
-The API is created programmatically based on the Gen3 commons data model. All of the work Gen3 data contributors do to prepare their metadata powers the API (see steps [4-6 in the Data Contribution section](submit-data.md)).   
+The API is created programmatically based on the Gen3 commons data model. All of the work Gen3 data contributors do to prepare their metadata powers the API (see steps [4-6 in the Data Contribution section](submit-data.md)).
 
-With the API in place, users can submit queries to find metadata information across the Gen3 commons. The API can be queried programmatically or through provided tools, like the submission portal.  
+With the API in place, users can submit queries to find metadata information across the Gen3 commons. The API can be queried programmatically or through provided tools, like the submission portal.
 
 The Gen3 commons uses [GraphQL](http://graphql.org/) to manage the metadata. To learn the basics of writing queries in GraphQL, please visit: <http://graphql.org/learn>.
 
@@ -83,9 +83,9 @@ If an an error such as "You don't have access... " occurs, then the API key is m
 ## Queries in the Submission Portal: GraphiQL
 * * *
 
-Queries can directly run in the submission portal by clicking the "Query" magnifying glass or directly at: https://data.mycommons.org/graphql. The query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, and generally make it easier for Gen3 members to find information.
+Queries can directly run in the submission portal by clicking the "Query" magnifying glass or directly at: https://gen3.datacommons.io/query. The query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, and generally make it easier for Gen3 members to find information.
 
-> __NOTE:__ For these user guides, https://data.mycommons.org is an example URL and will not be the actual URL of the data commons.
+> __NOTE:__ For these user guides, https://gen3.datacommons.io is an example URL and can be replaced with the URL of other data commons powered by Gen3.
 
 ![GraphQL Query](gQL-query.gif)
 
@@ -101,12 +101,12 @@ For example, if there are 2,550 records returned, and the graphiQL query is timi
 (first:1000, offset:1000) 	# this will return records 1000-2000
 (first:1000, offset:2000) 	# this will return records 2000-2,550
 ```
-Updating the example template `details from experiment` sample query to call the first 1000, the call becomes:  
+Updating the example template `details from experiment` sample query to call the first 1000, the call becomes:
 
 ```
 {
 	"query":" query Test {
-		experiment (first:1000, submitter_id: "<INSERT submitter_id>") {  
+		experiment (first:1000, submitter_id: "<INSERT submitter_id>") {
 			experimental_intent
 			experimental_description
 			number_samples_per_experimental_group
@@ -118,20 +118,20 @@ Updating the example template `details from experiment` sample query to call the
 ```
 
 * * *
-## Browsing by Project Node    
+## Browsing by List of Projects
 * * *
-The metadata submission portal https://data.mycommons.org/ can be used to browse an individual submission by node. Select a project and then click the "browse nodes" button to the right. From this screen queries can be made by node in the dropdown at the left.
+The metadata submission portal https://gen3.datacommons.io/submission can be used to browse an individual project by node. Select a project by clicking 'Submit Data' on the right side and then either explore the nodes in the "Toggle view" by clicking on individual nodes, or, by clicking the "browse nodes" button to the left. From this screen queries can be made by node in the dropdown at the left.
 
-<h4> Example: Browse by Node </h4>
-![Browse by node](browse-by-node.png)
+<h4> Example: Find Projects and browse Nodes</h4>
+![Browse by node](projects-nodes-view.png)
 
-This feature can also download the tsv associated with the node, or if a user has "write" access to the this project, delete existing nodes.   
+This feature can also download the tsv associated with the node, or if a user has "write" access to the this project, delete existing nodes.
 
 * * *
 ## Graphing a Project
 * * *
 
-A user can review a graph of an individual project, by toggling between views of the completed nodes and the full graph.  
+A user can review a graph of an individual project, by toggling between views of the completed nodes and the full graph.
 
 <h4> Example:  Graphing a Project </h4>
 ![Graphing a project](graph-a-project.gif)
@@ -170,9 +170,9 @@ The API endpoint for downloading all the records in a single node of a project i
 {node} is the name of the node
 {json/tsv} is the format in which data will be downloaded, either json or tsv
  ```
-For example, submitting the following API request will download all the records in the 'sample' node of the project 'training-example' in an example data commons (data.mycommons.org) as a tab-separated values file (TSV):
+For example, submitting the following API request will download all the records in the 'sample' node of the project 'training-example' in an example data commons (https://gen3.datacommons.io) as a tab-separated values file (TSV):
 ```
- https://data.mycommons.org/api/v0/submission/training/example/export/?node_label=sample&format=tsv
+ https://gen3.datacommons.io/api/v0/submission/training/example/export/?node_label=sample&format=tsv
 ```
 
  The API endpoint for downloading a single record in a project is as follows:
@@ -189,7 +189,7 @@ For example, submitting the following API request will download all the records 
  For example, submitting the following API request will download the two records corresponding to the UUIDs (bae26d13-9231-44e7-b6da-8057b35ad829 and e2b5705f-cd0b-4f4b-bb37-0c3e3032b71d), which are in the 'read_group' node of the project 'training-example' in the example data commons. This downloads a 'read_group.tsv' file.
 
  ```
- https://data.mycommons.org/api/v0/submission/training/example/export?ids=bae26d13-9231-44e7-b6da-8057b35ad829,e2b5705f-cd0b-4f4b-bb37-0c3e3032b71d&format=tsv
+ https://gen3.datacommons.io/api/v0/submission/training/example/export?ids=bae26d13-9231-44e7-b6da-8057b35ad829,e2b5705f-cd0b-4f4b-bb37-0c3e3032b71d&format=tsv
 ```
 
  If the list of UUIDs contains ids from different nodes in a project, then the data returned will be an archive containing a separate tsv/json per node.
@@ -197,5 +197,5 @@ For example, submitting the following API request will download all the records 
  For example, if we add a third UUID to the previous comma-separated list of ids (c003a4b4-7d92-49d0-a412-375905328dca), which is the UUID of a record in the 'sample' node, then submitting the following request will download a 'tar.gz' archive containing a 'sample.tsv' and a 'read_group.tsv'.
 
  ```
- https://data.mycommons.org/api/v0/submission/training/example/export?ids=aae26d13-9231-44e7-b6da-8057b35ad829,d2b5705f-cd0b-4f4b-bb37-0c3e3032b71d,c003a4b4-7d92-49d0-a412-375905328dca&format=tsv
+ https://gen3.datacommons.io/api/v0/submission/training/example/export?ids=aae26d13-9231-44e7-b6da-8057b35ad829,d2b5705f-cd0b-4f4b-bb37-0c3e3032b71d,c003a4b4-7d92-49d0-a412-375905328dca&format=tsv
 ```

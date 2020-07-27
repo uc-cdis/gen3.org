@@ -15,9 +15,9 @@ The [data in a Gen3 data commons](/resources/user/data-types) can be browsed and
 
 ## Exploration Tool
 * * *
-One method of accessing metadata in a Gen3 data commons is using the data exploration tool in a web browser. This page can be reached by clicking "Exploration" in the top navigation bar or by navigating to the url: https://gen3.datacommons.io/explorer.
+One method of accessing metadata in a Gen3 data commons is using the data exploration tool in a web browser. This page can be reached by clicking "Exploration" in the top navigation bar or by navigating to the URL: https://gen3.datacommons.io/explorer.
 
-> __NOTE:__ For these user guides, https://data.mycommons.org is an example URL and will not be the actual URL of the data commons.
+> __NOTE:__ The part of the URL above https://gen3.datacommons.io can be replaced with the URL of other data commons powered by Gen3.
 
 ![Exploration](Gen3_Toolbar_exploration.png)
 
@@ -38,7 +38,7 @@ A spreadsheet containing available clinical, demographic, or experimental metada
 ## Querying Metadata Using the GraphiQL Interface
 * * *
 
-The metadata in a Gen3 commons can also be queried via the [graphQL query language](https://graphql.org/) using the graphiQL interface, which can be accessed by clicking "Query" in the top navigation bar or by navigating to the url: https://data.mycommons.org/query.
+The metadata in a Gen3 commons can also be queried via the [graphQL query language](https://graphql.org/) using the graphiQL interface, which can be accessed by clicking "Query" in the top navigation bar or by navigating to the URL: https://gen3.datacommons.io/query.
 
 ![Query](Gen3_Toolbar_query.png)
 

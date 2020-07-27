@@ -41,7 +41,7 @@ Do the following to create your first `core_metadata_collection` record:
 6. Click 'Upload submission json from form' and then 'Submit'
 7. Make note of the `submitter_id` of your `core_metadata_collection` record for step 3 below
 
->__Note:__ Minimally, `submitter_id` and `projects.code` are required properties. The project `code` is the name of your project without the "program-" prefix. For example, if your project url is https://data.mycommons.org/example-training, your project's `code` would be 'training', the `program` would be 'example', and your `project_id` would be the combination: 'example-training'.
+>__Note:__ Minimally, `submitter_id` and `projects.code` are required properties. The project `code` is the name of your project without the "program-" prefix. For example, if your project URL is https://gen3.datacommons.io/example-training, your project's `code` would be 'training', the `program` would be 'example', and your `project_id` would be the combination: 'example-training'.
 
 You should have received the message:
 
@@ -53,8 +53,8 @@ Successfully created entities: 1 of core_metadata_collection
 If you received any other message, then check the 'Details' to help determine the error.
 
 To view the records in the `core_metadata_collection` node in your project, you can go to:
-https://data.mycommons.org/example-training/search?node_type=core_metadata_collection
-(replacing the first part of that url with the url of your actual project).
+https://gen3.datacommons.io/example-training/search?node_type=core_metadata_collection
+(replacing the first part of that URL with the URL of your actual project).
 
 ## 2. Upload Data Files to Object Storage
 * * *
@@ -62,7 +62,7 @@ https://data.mycommons.org/example-training/search?node_type=core_metadata_colle
 Data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., are uploaded to object storage with the [gen3-client command-line tool](/resources/user/gen3-client).
 
 1. Download the latest [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases/latest) for your operating system.
-2. Configure a profile with credentials downloaded from your Profile:  
+2. Configure a profile with credentials downloaded from your Profile:
 
 	```
 	./gen3-client configure --profile=<profile_name> --cred=<credentials.json> --apiendpoint=<api_endpoint_url>
@@ -191,15 +191,15 @@ To submit a TSV:
 
 1. Login to the Windmill data portal for the commons.
 
-2. Click on "Data Submission" in the top navigation bar.  
+2. Click on "Data Submission" in the top navigation bar.
 
     ![Data Submission](Gen3_Toolbar_data_submission.png)
 
-3. Click on "Submit Data" by the project to submit metadata.  
+3. Click on "Submit Data" by the project to submit metadata.
 
     ![Submit Data](Gen3_Data_Submission_submit_data.png)
 
-4. Click on "Upload File".  
+4. Click on "Upload File".
 
     ![Upload and Submit](Gen3_Data_Submission_Use_Form.png)
 
@@ -240,9 +240,9 @@ For anything other than success, check the other fields for any information on t
 
 The "action" above can be used to identify if the node was newly created or updated. Updating a node is submitting to a node with the same `submitter_id` and overwriting the existing node entries. Other useful information includes the "id" for the record. This is the GUID for the record and is unique throughout the entirety of the data commons. The other "unique_key" provided is the tuple "project_id" and "submitter_id", which is to say the "submitter_id" combined with the "project_id" is a universal identifier for this record.
 
-To confirm that a data file is properly registered, enter the GUID of a data file record in the index API endpoint of the data commons: usually "https://data.mycommons.org/index/index/GUID", where "https://data.mycommons.org" is the URL of the Windmill data portal and GUID is the specific GUID of a registered data file. This should display a JSON response that contains the url that was registered. If the record was not registered successfully, it is likely an error message will occur. An error that says "access denied" might also occur if the user is not logged in or the session has timed out.
+To confirm that a data file is properly registered, enter the GUID of a data file record in the index API endpoint of the data commons: usually "https://gen3.datacommons.io/index/index/GUID", where "https://gen3.datacommons.io" is the URL of the Windmill data portal and GUID is the specific GUID of a registered data file. This should display a JSON response that contains the URL that was registered. If the record was not registered successfully, it is likely an error message will occur. An error that says "access denied" might also occur if the user is not logged in or the session has timed out.
 
-> __NOTE:__ For these user guides, https://data.mycommons.org is an example URL and will not be the actual URL of the data commons.
+> __NOTE:__ For these user guides, https://gen3.datacommons.io is an example URL and can be replaced with the URL from other data commons powered by Gen3.
 
 ### Troubleshooting and Finishing the Submission
 * * *
@@ -276,8 +276,8 @@ The easiest way to create the link between your data files' records and the reco
 <commons-url>/api/v0/submission/<program>/<project>/export/?node_label=<node>&format=tsv
 ```
 
-For example, the following link would download a single TSV containing all the `core_metadata_collection` records in the project "example-training" from the commons "data.mycommons.org":
+For example, the following link would download a single TSV containing all the `core_metadata_collection` records in the project "example-training" from the commons "https://gen3.datacommons.io":
 
-https://data.mycommons.org/api/v0/submission/example/training/export/?node_label=core_metadata_collection&format=tsv
+https://gen3.datacommons.io/api/v0/submission/example/training/export/?node_label=core_metadata_collection&format=tsv
 
 The links in the downloaded TSV can be updated by filling in the submitter_ids of the corresponding parent records, saving, and re-submitting the file to the data portal website using 'Upload File' as done in [step 4](#more-about-specifying-required-links).
