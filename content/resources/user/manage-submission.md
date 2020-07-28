@@ -13,7 +13,7 @@ Some elements of submitted datasets can be related to each other in terms of tim
 
 In this field, dates for events such as "Study Enrollment" or "Diagnosis" can be entered. For more information about the `index_date` field please go to the `case` node in the dictionary, https://gen3.datacommons.io/dd/case.
 
-> __NOTE:__ For these user guides, https://gen3.datacommons.io is an example URL and can be placed with the URL of other data commons powered by Gen3.
+> __NOTE:__ For these user guides, https://gen3.datacommons.io is an example URL and can be replaced with the URL of other data commons powered by Gen3.
 
 <h4> Examples of Submissions Using Multiple Date Times </h4>
 
