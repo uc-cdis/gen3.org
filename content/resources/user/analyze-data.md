@@ -8,7 +8,7 @@ menuname: userMenu
 {{% markdownwrapper %}}
 # Data Analysis in a Gen3 Data Commons
 
-How data is accessed in a Gen3 data commons is determined by the commons' sponsor(s), data contributor(s), and/or  operator(s). Some data commons have rules that data cannot be downloaded outside of a Virtual Private Cloud (VPC). In these cases, data analysts may need to access and configure a virtual machine (VM) in the VPC where all analyses will be done. Other data commons may be able to grant users permissions to download data files directly to their local computers, while others may choose to allow analysis only in the Gen3-provided Workspace.
+How data is accessed in a Gen3 data commons is determined by the commons' sponsor(s), data contributor(s), and/or  operator(s). Some data commons have rules that data cannot be downloaded outside of a Virtual Private Cloud (VPC). In these cases, data analysts may need to access and configure a virtual machine (VM) in the VPC where all analyses will be done. Other data commons may be able to grant users permissions to download data files directly to their local computers, while others may choose to allow analysis only in the Gen3-provided Workspace. Feel free to take a look at our webinars about data analysis on our [YouTube channel](https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/videos).
 
 * * *
 ## Using the Gen3 Workspace
@@ -20,19 +20,16 @@ An individual's Workspace includes a persistent drive in which analysis notebook
 
 To access the workspace, click "Workspace" in the top navigation bar of the data portal.
 
-![Data portal Workspace button](workspace_button.png)
+![Data portal Workspace button](workspace_button2020.png)
 
-Click "Start My Server" to start the Jupyter server in your Workspace:
+You will then be presented with Workspace options, which display different VM flavors with varying processor and memory specifications and different tools pre-installed.
 
-![Start Server](start_server.png)
+![Spawner Options](workspace_flavors2020.png)
 
-Or if a server is already running, click on "My Server" to access your files.
+After choosing a flavor, you will see your personal JupyterHub appear.
+Click “New” and choose your Notebook to start the Jupyter server in your Workspace:
 
-![Workspace home](my_server.png)
-
-You will then be presented with "Spawner Options", which display different VM flavors with varying processor and memory specifications and different tools pre-installed. After choosing a flavor and clicking the "Spawn" button, you will see your personal JupyterHub appear.
-
-![Spawner Options](spawner_options.png)
+![New Workspace](workspace_new_nb2020.png)
 
 The Jupyter Workspace supports interactive programming sessions in the Python and R languages. Code blocks are entered in cells, which can be executed individually or all at once. Code documentation and comments can also be entered in cells, and the cell type can be set to support Markdown. Results, including plots, tables, and graphics, can be generated in the workspace and downloaded as files.
 

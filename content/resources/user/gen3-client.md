@@ -51,7 +51,7 @@ No installation is necessary. Simply download the correct version for your opera
 
 Now you can execute the program by opening a terminal window and entering the command `gen3-client`.
 
->__Note:__ If your Mac OS X does not allow access, you need to manually allow it under System Preferences > Security & Privacy > General (click lock icon to unlock, enter administrator name and password).
+>__Note:__ If your Mac OS X does not allow access, you need to manually allow it under System Preferences > Security & Privacy > General (click the lock icon to unlock, enter administrator name and password).
 
 ### Windows Installation Instructions
 

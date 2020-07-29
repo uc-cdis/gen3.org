@@ -9,7 +9,7 @@ menuname: userMenu
 # Submitting Data Files and Linking Metadata in a Gen3 Data Commons
 * * *
 
-The following guide details the steps a data contributor must take to submit a project to a Gen3 data commons. Feel free to take a look at our webinars about our Gen3 data commons on our [YouTube channel](https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/videos).
+The following guide details the steps a data contributor must take to submit a project to a Gen3 data commons. Feel free to take a look at our webinars about data submission to our Gen3 data commons on our [YouTube channel](https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/videos).
 
 Data in a Gen3 data commons are either stored in variables that are exposed to the API for query (what we refer to as 'metadata') or are stored in files that must be downloaded prior to knowing their content (or 'data files'). For more information on the difference between data files and metadata exposed to the API, see the documentation on [data types in a Gen3 data commons](/resources/user/data-types).
 
