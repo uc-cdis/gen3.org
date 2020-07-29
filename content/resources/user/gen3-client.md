@@ -25,7 +25,7 @@ This guide has the following sections:
 6. [Generate a Metadata Submission TSV](#6-generate-a-metadata-tsv)
 7. [Upload Single File with GUID](#7-how-to-upload-a-single-data-file-using-a-guid)
 8. [Upload Multiple Files with Manifest](#8-how-to-upload-multiple-data-files-using-a-manifest)
-9. [Quick Start](#9-quick-start)
+9. [Quick Start for Experienced Users or Cheat Sheet](#9-quick-start-for-experienced-users-or-cheat-sheet)
 10. [Working from the Command-line](#10-working-from-the-command-line)
 
 * * *
@@ -610,7 +610,7 @@ Successfully uploaded file "c12ff17c-2fc0-475a-9c21-50c19950b082" to GUID c22ff1
 
 * * *
 
-## 9) Quick Start for Experienced Users - Cheat Sheet
+## 9) Quick Start for Experienced Users or Cheat Sheet
 
 * * *
 
