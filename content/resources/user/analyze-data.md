@@ -8,7 +8,16 @@ menuname: userMenu
 {{% markdownwrapper %}}
 # Data Analysis in a Gen3 Data Commons
 
-How data is accessed in a Gen3 data commons is determined by the commons' sponsor(s), data contributor(s), and/or  operator(s). Some data commons have rules that data cannot be downloaded outside of a Virtual Private Cloud (VPC). In these cases, data analysts may need to access and configure a virtual machine (VM) in the VPC where all analyses will be done. Other data commons may be able to grant users permissions to download data files directly to their local computers, while others may choose to allow analysis only in the Gen3-provided Workspace. Feel free to take a look at our webinars about data analysis on our [YouTube channel](https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/videos).
+How data is accessed in a Gen3 data commons is determined by the commons' sponsor(s), data contributor(s), and/or  operator(s). Some data commons have rules that data cannot be downloaded outside of a Virtual Private Cloud (VPC). In these cases, data analysts may need to access and configure a virtual machine (VM) in the VPC where all analyses will be done. Other data commons may be able to grant users permissions to download data files directly to their local computers, while others may choose to allow analysis only in the Gen3-provided Workspace.
+
+Data can be analyzed in the Gen3 Workspace or using the Gen3 SDK. For a general introduction to data analysis, feel free to take a look at our webinars on our [YouTube channel](https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/videos).
+
+* [Using the Gen3 Workspace](#using-the-gen3-workspace)
+* [Getting Files into the Gen3 Workspace](#getting-files-into-the-gen3-workspace)
+* [Running a Jupyter Server on a Virtual Machine (VM)](#running-a-jupyter-server-on-a-virtual-machine)
+* [Working with the proxy and whitelists](#working-with-the-proxy-and-whitelists)
+* [Using the Gen3 SDK](#using-the-gen3-sdk)
+
 
 * * *
 ## Using the Gen3 Workspace
@@ -53,7 +62,6 @@ You can manage active Notebook and terminal processes by clicking on "Running". 
 
 ![Manage Running Sessions](running.gif)
 
-* * *
 ## Getting Files into the Gen3 Workspace
 * * *
 In order to download data files directly from a Gen3 data commons into your workspace, install and use the [gen3-client](https://github.com/uc-cdis/cdis-data-client/releases/latest) in a terminal window from your Workspace.  Launch a terminal window by clicking on the "New" dropdown menu, then click on "Terminal".
@@ -100,28 +108,6 @@ jovyan@jupyter-user:~$ gen3-client download-manifest --manifest manifest.json --
   2 files downloaded.
 ```
 
-* * *
-## Using the Gen3 SDK
-* * *
-
-The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic python library and a sample analysis notebook to help jumpstart commons analyses. These can be found on [Github](https://github.com/uc-cdis/gen3sdk-python). The Gen3 community is encouraged to add to the functions library or improve the notebook.
-
-> __NOTE:__   As the Gen3 community updates repositories, you can keep them up to date using `git pull origin master`.
-
-To [install the Gen3 SDK](https://gen3sdk-python.readthedocs.io/en/latest/install.html), you can use the python installer 'pip'.
-
-Example:
-```
-# Install Gen3 SDK:
-pip install gen3
-
-# To clone and develop the source:
-git clone https://github.com/uc-cdis/gen3sdk-python.git
-```
-
-For more detailed information on how to use the Gen3 SDK, see the Gen3 SDK section of the [API documentation](/resources/user/using-api).
-
-* * *
 ## Running a Jupyter Server on a Virtual Machine (VM)
 * * *
 
@@ -199,3 +185,25 @@ https_proxy=https://cloud-proxy.internal.io:3128 aws s3 ls s3://gen3-data/ --pro
 <h4> Whitelists </h4>
 
 Additionally, to aid Gen3 Commons security, tool installation from outside sources is managed through a whitelist.   If you have problems installing a tool you need for your work, contact <Gen3-support@datacommons.io> and with a list of any sites you might wish to install tools from.    After passing a security review,  these can be added to the whitelist to facilitate access.
+
+
+
+## Using the Gen3 SDK
+* * *
+
+The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic python library and a sample analysis notebook to help jumpstart commons analyses. These can be found on [Github](https://github.com/uc-cdis/gen3sdk-python). The Gen3 community is encouraged to add to the functions library or improve the notebook.
+
+> __NOTE:__   As the Gen3 community updates repositories, you can keep them up to date using `git pull origin master`.
+
+To [install the Gen3 SDK](https://gen3sdk-python.readthedocs.io/en/latest/install.html), you can use the python installer 'pip'.
+
+Example:
+```
+# Install Gen3 SDK:
+pip install gen3
+
+# To clone and develop the source:
+git clone https://github.com/uc-cdis/gen3sdk-python.git
+```
+
+For more detailed information on how to use the Gen3 SDK, see the Gen3 SDK section of the [API documentation](/resources/user/using-api).
