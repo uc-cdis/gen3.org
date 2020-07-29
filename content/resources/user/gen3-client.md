@@ -51,6 +51,8 @@ No installation is necessary. Simply download the correct version for your opera
 
 Now you can execute the program by opening a terminal window and entering the command `gen3-client`.
 
+>__Note:__ If your Mac OS X does not allow access, you need to manually allow it under System Preferences > Security & Privacy > General (click lock icon to unlock, enter administrator name and password).
+
 ### Windows Installation Instructions
 
 1. [Download the Windows version of the gen3-client here](https://github.com/uc-cdis/cdis-data-client/releases/latest).
@@ -608,7 +610,7 @@ Successfully uploaded file "c12ff17c-2fc0-475a-9c21-50c19950b082" to GUID c22ff1
 
 * * *
 
-## 9) Quick Start
+## 9) Quick Start for Experienced Users - Cheat Sheet
 
 * * *
 
@@ -667,7 +669,7 @@ So, by adding the directory containing the gen3-client program to your PATH vari
 
 Most programs require some sort of user input to run properly. Some programs will prompt you for input after execution, while other programs are sent this input during execution as "flags" (AKA "arguments" or "options"). The gen3-client uses the latter method of sending user input as command arguments during program execution.
 
-For example, when configuring a profile with the client (details are in the following section), the user must specify the `configure` option and also specify the profile name, API endpoint, and credentials file by adding the flags `--profile`, `--apiendpoint` and `--cred` to the end of the command (see [configuring a profile section](#2-configure-a-profile-with-credentials) above for specific examples).
+For example, when configuring a profile with the client, the user must specify the `configure` option and also specify the profile name, API endpoint, and credentials file by adding the flags `--profile`, `--apiendpoint` and `--cred` to the end of the command (see [configuring a profile section](#2-configure-a-profile-with-credentials) above for specific examples).
 
 * * *
 * * *

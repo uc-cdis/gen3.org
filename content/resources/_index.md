@@ -29,8 +29,6 @@ g3Resources:
             link: /resources/user/gen3-client
           - name: Working with the API
             link: /resources/user/using-api
-          - name: Working with the Proxy and Whitelist
-            link: /resources/user/proxy-whitelist
           - name: Data Dictionary Viewer
             link: /resources/user/dictionary
           - name: Template Metadata TSVs

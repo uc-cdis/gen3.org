@@ -10,14 +10,14 @@ menuname: userMenu
 * * *
 ## What Does the API Do?
 * * *
-The API is created programmatically based on the Gen3 commons data model. All of the work Gen3 data contributors do to prepare their metadata powers the API (see steps [4-6 in the Data Contribution section](/resources/user/submit-data.md)).
+The API is created programmatically based on the Gen3 commons data model. All of the work Gen3 data contributors do to prepare their metadata powers the API (see steps [4-6 in the Data Contribution section](/resources/user/submit-data)).
 
 With the API in place, users can submit queries to find metadata information across the Gen3 commons. The API can be queried programmatically or through provided tools, like the submission portal.
 
 The Gen3 commons uses [GraphQL](http://graphql.org/) to manage the metadata. To learn the basics of writing queries in GraphQL, please visit: <http://graphql.org/learn>.
 
 * * *
-## Credentials to Query the API
+## Credentials to send API requests
 * * *
 The credentials that allow access to "raw" data in the object store and ssh keys to access VMs, also allow users to programmatically query or submit data to the API. This credential is used every time an API call is made.
 
@@ -127,11 +127,7 @@ The metadata submission portal https://gen3.datacommons.io/submission can be use
 
 This feature can also download the tsv associated with the node, or if a user has "write" access to the this project, delete existing nodes.
 
-* * *
-## Graphing a Project
-* * *
-
-A user can review a graph of an individual project, by toggling between views of the completed nodes and the full graph.
+A user can review a graph of an individual project, by toggling between views of the completed nodes and the full graph. The number you see underneath the node name, for example 'subject', reflects the number of records in each node.
 
 <h4> Example:  Graphing a Project </h4>
 ![Graphing a project](graph-a-project.gif)
