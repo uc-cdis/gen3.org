@@ -14,7 +14,7 @@ Data can be analyzed in the Gen3 Workspace or using the Gen3 SDK. For a general 
 
 * [Using the Gen3 Workspace](#using-the-gen3-workspace)
 * [Getting Files into the Gen3 Workspace](#getting-files-into-the-gen3-workspace)
-* [Running a Jupyter Server on a Virtual Machine (VM)](#running-a-jupyter-server-on-a-virtual-machine)
+* [Running a Jupyter Server on a Virtual Machine](#running-a-jupyter-server-on-a-virtual-machine)
 * [Working with the proxy and whitelists](#working-with-the-proxy-and-whitelists)
 * [Using the Gen3 SDK](#using-the-gen3-sdk)
 
@@ -108,10 +108,10 @@ jovyan@jupyter-user:~$ gen3-client download-manifest --manifest manifest.json --
   2 files downloaded.
 ```
 
-## Running a Jupyter Server on a Virtual Machine (VM)
+## Running a Jupyter Server on a Virtual Machine
 * * *
 
-1. Login to your 'analysis' VM.
+1. Login to your 'analysis' virtual machine (VM).
 
 	If accessing your VM through a head node, you can use a config file (~/.ssh/config) to create a "multiple hop" ssh tunnel to your VM:
 	```
