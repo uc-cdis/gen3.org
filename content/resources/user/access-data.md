@@ -52,17 +52,23 @@ For example, typing the name of a node, "sample", into the "Search Schema" searc
 The following example query returns the case ids for which there are blood samples in the data commons:
 ```
 	{
-	  sample(composition: "Peripheral Whole Blood") {
-	    submitter_id
-	    biospecimens {
-	      cases {
-	        id
-	      }
-	    }
-	  }
+		program {
+			name
+			projects {
+				project_id
+			}
+		}
+	}
+
 ```
 
 Queries can also be sent to the API programmatically using, for example, the python 'requests' package. Further details on how to send queries to the API are documented [here](/resources/user/using-api).
+
+
+
+
+
+
 
 
 # Downloading Data Files
@@ -82,3 +88,41 @@ __Note:__ If a commons restricts data download access to within a virtual privat
 ## Using a Data File Download Manifest with the Gen3-Client
 
 From within the Exploration tool, after applying the chosen filters to the list of study subjects or data files, they can be selected by checking the checkbox next to each case or file. Then, when the "Manifest" button is clicked, a file will be downloaded that contains all the GUIDs associated with the chosen cases or files. This manifest can then be used to [download the files using the gen3-client](/resources/user/gen3-client/#5-provide-a-manifest-file-for-bulk-download).
+
+
+
+
+
+## Browsing by List of Projects
+* * *
+The metadata submission portal https://gen3.datacommons.io/submission can be used to browse an individual project by node. Select a project by clicking 'Submit Data' on the right side and then either explore the nodes in the "Toggle view" by clicking on individual nodes, or, by clicking the "browse nodes" button to the left. From this screen queries can be made by node in the dropdown at the left.
+
+<h4> Example: Find Projects and browse Nodes</h4>
+![Browse by node](projects-nodes-view.png)
+
+This feature can also download the tsv associated with the node, or if a user has "write" access to the this project, delete existing nodes.
+
+A user can review a graph of an individual project, by toggling between views of the completed nodes and the full graph. The number you see underneath the node name, for example 'subject', reflects the number of records in each node.
+
+<h4> Example:  Graphing a Project </h4>
+![Graphing a project](graph-a-project.gif)
+
+
+
+## Using the Gen3 SDK
+* * *
+
+The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic software development kit (SDK) to help users interact with the Gen3 API, which can be found on [Github](https://github.com/uc-cdis/gen3sdk-python). The Gen3 community is encouraged to help improve the gen3sdk by adding functions to the library or developing Jupyter Notebooks that use it.
+
+> __NOTE:__ As the Gen3 community updates repositories, keep them up to date using `git pull origin master`.
+
+To [install the Gen3 SDK](https://gen3sdk-python.readthedocs.io/en/latest/install.html), use the python installer 'pip'.
+
+Example:
+```
+# Install Gen3 SDK:
+pip install gen3
+
+# To clone and develop the source:
+git clone https://github.com/uc-cdis/gen3sdk-python.git
+```
