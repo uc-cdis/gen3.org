@@ -25,7 +25,7 @@ This guide has the following sections:
 6. [Generate a Metadata Submission TSV](#6-generate-a-metadata-tsv)
 7. [Upload Single File with GUID](#7-how-to-upload-a-single-data-file-using-a-guid)
 8. [Upload Multiple Files with Manifest](#8-how-to-upload-multiple-data-files-using-a-manifest)
-9. [Quick Start](#9-quick-start)
+9. [Quick Start for Experienced Users or Cheat Sheet](#9-quick-start-for-experienced-users-or-cheat-sheet)
 10. [Working from the Command-line](#10-working-from-the-command-line)
 
 * * *
@@ -50,6 +50,8 @@ No installation is necessary. Simply download the correct version for your opera
 6. Run `source ~/.bash_profile` or restart your terminal.
 
 Now you can execute the program by opening a terminal window and entering the command `gen3-client`.
+
+>__Note:__ If your Mac OS X does not allow access, you need to manually allow it under System Preferences > Security & Privacy > General (click the lock icon to unlock, enter administrator name and password).
 
 ### Windows Installation Instructions
 
@@ -608,7 +610,7 @@ Successfully uploaded file "c12ff17c-2fc0-475a-9c21-50c19950b082" to GUID c22ff1
 
 * * *
 
-## 9) Quick Start
+## 9) Quick Start for Experienced Users or Cheat Sheet
 
 * * *
 
@@ -667,7 +669,7 @@ So, by adding the directory containing the gen3-client program to your PATH vari
 
 Most programs require some sort of user input to run properly. Some programs will prompt you for input after execution, while other programs are sent this input during execution as "flags" (AKA "arguments" or "options"). The gen3-client uses the latter method of sending user input as command arguments during program execution.
 
-For example, when configuring a profile with the client (details are in the following section), the user must specify the `configure` option and also specify the profile name, API endpoint, and credentials file by adding the flags `--profile`, `--apiendpoint` and `--cred` to the end of the command (see [configuring a profile section](#2-configure-a-profile-with-credentials) above for specific examples).
+For example, when configuring a profile with the client, the user must specify the `configure` option and also specify the profile name, API endpoint, and credentials file by adding the flags `--profile`, `--apiendpoint` and `--cred` to the end of the command (see [configuring a profile section](#2-configure-a-profile-with-credentials) above for specific examples).
 
 * * *
 * * *
