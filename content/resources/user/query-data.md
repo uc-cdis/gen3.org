@@ -14,7 +14,7 @@ The following guide provides details on how to send graphQL queries to retrieve 
 ## 1. Find files by querying 'datanode'
 ---
 ### 1a. Finding specific files
----
+
 * Metadata for specific files can be obtained by including arguments in "datanode" queries. The following are some commonly used arguments (not an exhaustive list):
     * `submitter_id: "a_submitter_id"`: get information for a specific submitter_id
     * `quick_search: "a_substring"`: get information for all files with partial matches in submitter_id

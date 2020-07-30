@@ -91,6 +91,7 @@ The following image displays the data dictionary viewer, the 'biospecimen' node 
 ### Why Do Gen3 Commons Use a Data Model?
 
 Having all participating members use the same data model:
+
 * Allows for standardized metadata elements across a commons.
 * Permits flexible and scaleable API generation based on data commons software that reads the data model schema.
 * Lets users query the commons API so that an ecosystem of applications can be built.

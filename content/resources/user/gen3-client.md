@@ -7,8 +7,6 @@ menuname: userMenu
 ---
 {{% markdownwrapper %}}
 
-* * *
-
 # Download and Upload Files Using the Gen3-client
 
 * * *
@@ -80,8 +78,6 @@ curl https://api.github.com/repos/uc-cdis/cdis-data-client/releases/latest | gre
 To check that your copy of the client is working and confirm the version, the tool can be run on the command-line in your terminal or command prompt by entering `gen3-client`. Typing this alone or `gen3-client help` will display the help menu. For help on a particular command, enter: `gen3-client <command> help`. Note that you must provide the full path of the tool in order for the commands to run, for example, `./gen3-client` while working from the directory containing the client. Alternatively, you can [add the location of the gen3-client executable to your shell's PATH environment variable](#10-working-from-the-command-line).
 
 
-* * *
-
 ## 2) Configure a Profile with Credentials
 
 * * *
@@ -140,7 +136,6 @@ You have access to the following project(s) at https://nci-crdc-demo.datacommons
 ```
 <!-- Need to add a link to documentation on what each privilege does -->
 
-* * *
 ## 3) Upload Data Files
 * * *
 ### gen3-client upload
@@ -433,8 +428,6 @@ Successfully deleted GUID 9bd009b6-e518-4fe5-9056-2b5cba163ca3
 
 ```
 
-* * *
-
 ## 4) Download a Single Data File Using a GUID
 
 * * *
@@ -467,8 +460,6 @@ Example Usage:
 gen3-client download-single --profile=demo --guid=00149bcf-e057-4ecc-b22d-53648ae0b35f --no-prompt --skip-completed
 ```
 
-* * *
-
 ## 5) Provide a Manifest File for Bulk Download
 
 * * *
@@ -496,8 +487,6 @@ Finished downloads/bc40b861-c56d-490f-b4a4-f34d3c54de5f 2959360 / 2959360 bytes 
 Finished downloads/24d0be10-d164-48ad-aafa-9fcaac682df9 2570240 / 2570240 bytes (100%)
 330 files downloaded.
 ```
-
-* * *
 
 ## 6) Generate a metadata TSV
 
@@ -540,8 +529,6 @@ rg-2	submitted_aligned_reads	project-name	SAR2	Sequencing Reads	BAM	Aligned Read
 ...
 ```
 
-* * *
-
 ## 7) How to Upload a Single Data File Using a GUID
 
 * * *
@@ -564,8 +551,6 @@ test.gif  3.64 MiB / 3.64 MiB [=================================================
 Successfully uploaded file "test.gif" to GUID b4642430-8c6e-465a-8e20-97c458439387.
 1 files uploaded.
 ```
-
-* * *
 
 ## 8) How to Upload Multiple Data Files Using a Manifest
 
@@ -608,8 +593,6 @@ Successfully uploaded file "c12ff17c-2fc0-475a-9c21-50c19950b082" to GUID c22ff1
 3 files uploaded.
 ```
 
-* * *
-
 ## 9) Quick Start for Experienced Users or Cheat Sheet
 
 * * *
@@ -638,8 +621,6 @@ gen3-client upload --profile=demo --upload-path=test.txt
 ```
 gen3-client download-single --profile=demo --guid=39b05d1f-f8a2-478c-a728-c16f6d0d8a7c --no-prompt
 ```
-
-* * *
 
 ## 10) Working from the Command-line
 
@@ -670,6 +651,3 @@ So, by adding the directory containing the gen3-client program to your PATH vari
 Most programs require some sort of user input to run properly. Some programs will prompt you for input after execution, while other programs are sent this input during execution as "flags" (AKA "arguments" or "options"). The gen3-client uses the latter method of sending user input as command arguments during program execution.
 
 For example, when configuring a profile with the client, the user must specify the `configure` option and also specify the profile name, API endpoint, and credentials file by adding the flags `--profile`, `--apiendpoint` and `--cred` to the end of the command (see [configuring a profile section](#2-configure-a-profile-with-credentials) above for specific examples).
-
-* * *
-* * *

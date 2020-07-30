@@ -16,7 +16,6 @@ With the API in place, users can submit queries to find metadata information acr
 
 The Gen3 commons uses [GraphQL](http://graphql.org/) to manage the metadata. To learn the basics of writing queries in GraphQL, please visit: <http://graphql.org/learn>.
 
-* * *
 ## Credentials to send API requests
 * * *
 The credentials that allow access to "raw" data in the object store and ssh keys to access VMs, also allow users to programmatically query or submit data to the API. This credential is used every time an API call is made.
@@ -25,19 +24,11 @@ Each API key is valid for a month and is used to receive a temporary access toke
 
 For users granted data access, the API key is provided on the Profile page after clicking the "Create API key" button.
 
-* * *
-
 ![Profile Page](API_key_profile_page.png)
-
-* * *
 
 While displayed, click "copy" to copy the API key to the clipboard or "download" to download a "credentials.json" file containing the id/key pair in json format.
 
-* * *
-
 ![Copy Key](API_copy_keys.png)
-
-* * *
 
 In python, the following command is sent, using the module "requests", to receive the access token:
 
@@ -78,8 +69,6 @@ u = requests.put('https://gen3.commons.io/api/v0/submission/project-id', data=ts
 
 If an an error such as "You don't have access... " occurs, then the API key is most likely out of date and a new access token will need to be made.
 
-* * *
-
 ## Queries in the Submission Portal: GraphiQL
 * * *
 
@@ -117,7 +106,6 @@ Updating the example template `details from experiment` sample query to call the
 }
 ```
 
-* * *
 ## Browsing by List of Projects
 * * *
 The metadata submission portal https://gen3.datacommons.io/submission can be used to browse an individual project by node. Select a project by clicking 'Submit Data' on the right side and then either explore the nodes in the "Toggle view" by clicking on individual nodes, or, by clicking the "browse nodes" button to the left. From this screen queries can be made by node in the dropdown at the left.
@@ -132,7 +120,6 @@ A user can review a graph of an individual project, by toggling between views of
 <h4> Example:  Graphing a Project </h4>
 ![Graphing a project](graph-a-project.gif)
 
-* * *
 ## Using the Gen3 SDK
 * * *
 
@@ -151,7 +138,6 @@ pip install gen3
 git clone https://github.com/uc-cdis/gen3sdk-python.git
 ```
 
-* * *
 # Querying and Downloading Metadata using the API
 * * *
 Users with read access to a project can download individual metadata records in the project or all records in a specified node of the project using the API.

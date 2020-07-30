@@ -21,6 +21,8 @@ The process of uploading a data project to a Gen3 data commons is simple:
 4. [Submit Additional Project Metadata](#4-submit-additional-project-metadata)
 5. [Link Data File Records to their Metadata Records](#5-link-files-to-their-metadata)
 
+* * *
+
 The following sections provide step-by-step instructions for this process:
 
 ## 1. Prepare Project in Submission Portal

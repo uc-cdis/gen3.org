@@ -6,7 +6,6 @@ layout: withtoc
 menuname: userMenu
 ---
 {{% markdownwrapper %}}
-* * *
 # Exploring Metadata and Downloading Data Files
 
 * * *
@@ -65,7 +64,7 @@ The following example query returns the case ids for which there are blood sampl
 
 Queries can also be sent to the API programmatically using, for example, the python 'requests' package. Further details on how to send queries to the API are documented [here](/resources/user/using-api).
 
-* * *
+
 # Downloading Data Files
 * * *
 The sponsor of a Gen3 data commons typically decides how users will access data files in object storage.
