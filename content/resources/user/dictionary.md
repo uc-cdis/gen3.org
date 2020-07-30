@@ -8,9 +8,12 @@ menuname: userMenu
 # The Data Dictionary in Gen3
 * * *
 
-Once access has been granted to the Windmill data submission portal, we recommend reviewing the commons' specific data dictionary by clicking "Dictionary" in the top navigation bar. This tool helps to understand the variable types, requirements, and node dependencies or links required for submission.
+Once access has been granted to the Windmill data submission portal, we recommend reviewing the commons' specific data dictionary by clicking "Dictionary" in the top navigation bar or by entering the URL https://gen3.datacommons.io/dd. Here you can find variable types, requirements, and node dependencies or links required for submission.
+
+> __NOTE:__ For these user guides, https://gen3.datacommons.io is an example URL and can be replaced with the URL of other data commons powered by Gen3.
 
 ![Gen3_Toolbar_Dictionary.png](Gen3_Toolbar_Dictionary.png)
+* * *
 
 The following sections describe:
 
@@ -87,11 +90,11 @@ The following image displays the data dictionary viewer, the 'biospecimen' node 
 
 ### Why Do Gen3 Commons Use a Data Model?
 
-* Having all participating members use the same data model:
-    * Allows for standardized metadata elements across a commons.
-    * Permits flexible and scaleable API generation based on data commons software that reads the data model schema.
-    * Lets users query the commons API so that an ecosystem of applications can be built.
-    * Helps automate the validation of submitted data.
+Having all participating members use the same data model:
+* Allows for standardized metadata elements across a commons.
+* Permits flexible and scaleable API generation based on data commons software that reads the data model schema.
+* Lets users query the commons API so that an ecosystem of applications can be built.
+* Helps automate the validation of submitted data.
 
 If a desired submission element is not currently described in the model, users will need to work with the commons to extend the data model. Provide the commons with a description of the requested data elements, and they will work with the sponsor or data modeling working group to review the request and find an appropriate home for the data elements.
 
