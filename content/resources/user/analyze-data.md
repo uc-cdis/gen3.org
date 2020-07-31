@@ -206,5 +206,3 @@ pip install gen3
 # To clone and develop the source:
 git clone https://github.com/uc-cdis/gen3sdk-python.git
 ```
-
-For more detailed information on how to use the Gen3 SDK, see the Gen3 SDK section of the [API documentation](/resources/user/using-api).

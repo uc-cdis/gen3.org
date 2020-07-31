@@ -9,6 +9,10 @@ menuname: userMenu
 # Querying Metadata in a Gen3 Data Commons
 * * *
 
+* [Queries in the Submission Portal: GraphiQL](#queries-in-the-submission-portal-graphiql)
+* [Find specific files by querying 'datanode'](#find-specific-files-by-quering-datanode)
+* * *
+
 ## Queries in the Submission Portal: GraphiQL
 * * *
 
@@ -50,11 +54,9 @@ Updating the example template `details from experiment` sample query to call the
 
 
 
-## 1. Find files by querying 'datanode'
+## Find specific files by querying 'datanode'
 ---
 The following guide provides details on how to send graphQL queries to retrieve data from a Gen3 Data Commons.
-
-### 1a. Finding specific files
 
 * Metadata for specific files can be obtained by including arguments in "datanode" queries. The following are some commonly used arguments (not an exhaustive list):
     * `submitter_id: "a_submitter_id"`: get information for a specific submitter_id

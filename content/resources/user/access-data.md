@@ -11,32 +11,40 @@ menuname: userMenu
 * * *
 
 The [data in a Gen3 data commons](/resources/user/dictionary) can be browsed and downloaded using tools either in the submission portal website or from the command-line. Feel free to take a look at our webinars about data acces on our Gen3 Data Commons[YouTube channel](https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/videos).
+After finding the metadata/structured data or data files of interest, they can be accessed, that is queried or downloaded, in multiple ways. How data is accessed in a Gen3 data commons is determined by the commons' sponsor(s), data contributor(s), and/or  operator(s).
 
-How data is accessed in a Gen3 data commons is determined by the commons' sponsor(s), data contributor(s), and/or  operator(s).
-
-Metadata/structured data and data files can be accessed, that is queried or downloaded, in multiple ways:
-
+* [Finding your File by Browsing the List of Projects](#finding-your-file-by-browsing-the-list-of-projects)
 * [Query](#)
-  * [Gen3 client](#)
-    * [Metadata/structured data](#)
-    * [Data files](#)
-  * [GraphiQL](#)
-    * [Metadata/structured data](#)
-  * [Python Gen3 SDK](#)
-    * [Metadata/structured data](#)
-    * [Data files](#)
-#  * [Workspace, JupyterHub](#)
+  * [GraphiQL](#) (metadata/structured data)
+  * [Gen3 client](#) (metadata/structured data, data files)
+  * [Gen3 SDK](#) (metadata/structured data, data files)
+  * [API](#) (metadata/structured data)
 * [Downloading Data Files](#downloading-data-files)
-  * [File Explorer](#)
-  * [API](#)
-  * [Gen3 client](#)
-  * [Python Gen3 SDK](#)
+  * [File Explorer](#) (metadata/structured data, data files)
+  * [Gen3 client](#) (metadata/structured data, data files)
+  * [Gen3 SDK](#) (metadata/structured data, data files)
+  * [API](#) (metadata/structured data)
 
 * * *
 
 
+## Finding your File by Browsing the List of Projects
+* The metadata submission portal https://gen3.datacommons.io/submission can be used to browse and find an individual project by node. Select a project by clicking 'Submit Data' on the right side and then either explore the nodes in the "Toggle view" by clicking on individual nodes, or, by clicking the "browse nodes" button to the left. From this screen queries can be made by node in the dropdown at the left.
 
-## Querying Metadata Using the GraphiQL Interface
+<h4> Example: Find Projects and browse Nodes</h4>
+![Browse by node](projects-nodes-view.png)
+
+* This feature can also download the tsv associated with the node, or if a user has "write" access to the this project, delete existing nodes.
+
+* A user can review a graph of an individual project, by toggling between views of the completed nodes and the full graph. The number you see underneath the node name, for example 'subject', reflects the number of records in each node.
+
+<h4> Example:  Graphing a Project </h4>
+![Graphing a project](graph-a-project.gif)
+
+
+## Query
+
+### Querying Metadata Using the GraphiQL Interface
 * * *
 
 The metadata in a Gen3 commons can also be queried via the [graphQL query language](https://graphql.org/) using the graphiQL interface, which can be accessed by clicking "Query" in the top navigation bar or by navigating to the URL: https://gen3.datacommons.io/query.
@@ -71,7 +79,13 @@ Queries can also be sent to the API programmatically using, for example, the pyt
 
 
 
-# Downloading Data Files
+### Querying Metadata Using the API
+* With the API in place, users can submit queries to find metadata information across the Gen3 commons. The API can be queried programmatically or through provided tools, like the submission portal. For more information, see [the following section in Using the API](/resources/user/using-api/#querying-and-downloading-metadata-using-the-api).
+
+
+
+
+## Downloading Data Files
 * * *
 The sponsor of a Gen3 data commons typically decides how users will access data files in object storage.
 
@@ -79,21 +93,16 @@ The sponsor of a Gen3 data commons typically decides how users will access data 
 
 * When more security is required, users may be required to download and analyze data files in a protected environment. Such environments include virtual machines (VM) in a virtual private cloud (VPC) or in the Gen3 Workspace, which is accessed by clicking on "Workspace" in the top navigation bar of the data commons website. For more information, see the [documentation on how to access and use the Gen3 Workspace](/resources/user/analyze-data).
 
-## Downloading a Data File Using the Exploration Tool
 
-Files can be browsed using the data exploration tool in a Gen3 data commons. Individual files can be downloaded by simply clicking on the filename and then clicking the download button.
 
-__Note:__ If a commons restricts data download access to within a virtual private cloud (VPC), then an "Access Denied" error will be displayed by the website.
-
-## Exploration Tool
-* * *
-One method of accessing metadata in a Gen3 data commons is using the data exploration tool in a web browser. This page can be reached by clicking "Exploration" in the top navigation bar or by navigating to the URL: https://gen3.datacommons.io/explorer.
+### Downloading a Data File Using the Exploration Tool
+* One method of accessing metadata in a Gen3 data commons is using the data exploration tool in a web browser. This page can be reached by clicking "Exploration" in the top navigation bar or by navigating to the URL: https://gen3.datacommons.io/explorer.
 
 > __NOTE:__ The part of the URL above https://gen3.datacommons.io can be replaced with the URL of other data commons powered by Gen3.
 
 ![Exploration](Gen3_Toolbar_exploration.png)
 
-The data exploration tool has a certain set of metadata properties that can be used as filters for selecting subsets of study subjects and data files.
+* The data exploration tool has a certain set of metadata properties that can be used as filters for selecting subsets of study subjects and data files.
 
 ![Facets](Gen3_facets.png)
 
@@ -103,10 +112,21 @@ The data exploration tool has a certain set of metadata properties that can be u
 Custom filters can also be added by clicking on the "add a custom filter" button. Begin typing the property you would like to add as a custom filter and then select it. You can then enter the values of that property to filter data on.
 -->
 
-A spreadsheet containing available clinical, demographic, or experimental metadata can be downloaded by clicking on the corresponding button once a cohort or group of files has been selected.
+* A spreadsheet containing available clinical, demographic, or experimental metadata can be downloaded by clicking on the corresponding button once a cohort or group of files has been selected.
 
 ![Selection and Download](Gen3_selection_and_download_highlight.png)
 
+* Individual files can be downloaded by simply clicking on the filename and then clicking the download button, or by finding the GUID of the respective file and entering the URL https://gen3.datacommons.io/files/GUID.
+
+__Note:__ If a commons restricts data download access to within a virtual private cloud (VPC), then an "Access Denied" error will be displayed by the website.
+
+
+
+
+### Using a Data File Download Manifest with the Gen3-Client
+* The gen3-client provides an easy-to-use, command-line interface for uploading and downloading data files to and from a Gen3 data commons from the terminal or command prompt, respectively. For a detailed description, see [this section](/resources/user/gen3-client/).
+
+* From within the Exploration tool, after applying the chosen filters to the list of study subjects or data files, they can be selected by checking the checkbox next to each case or file. Then, when the "Manifest" button is clicked, a file will be downloaded that contains all the GUIDs associated with the chosen cases or files. This manifest can then be used to [download the files using the gen3-client](/resources/user/gen3-client/#5-provide-a-manifest-file-for-bulk-download).
 
 
 
@@ -114,36 +134,8 @@ A spreadsheet containing available clinical, demographic, or experimental metada
 
 
 
-
-
-## Using a Data File Download Manifest with the Gen3-Client
-
-From within the Exploration tool, after applying the chosen filters to the list of study subjects or data files, they can be selected by checking the checkbox next to each case or file. Then, when the "Manifest" button is clicked, a file will be downloaded that contains all the GUIDs associated with the chosen cases or files. This manifest can then be used to [download the files using the gen3-client](/resources/user/gen3-client/#5-provide-a-manifest-file-for-bulk-download).
-
-
-
-
-
-## Browsing by List of Projects
-* * *
-The metadata submission portal https://gen3.datacommons.io/submission can be used to browse an individual project by node. Select a project by clicking 'Submit Data' on the right side and then either explore the nodes in the "Toggle view" by clicking on individual nodes, or, by clicking the "browse nodes" button to the left. From this screen queries can be made by node in the dropdown at the left.
-
-<h4> Example: Find Projects and browse Nodes</h4>
-![Browse by node](projects-nodes-view.png)
-
-This feature can also download the tsv associated with the node, or if a user has "write" access to the this project, delete existing nodes.
-
-A user can review a graph of an individual project, by toggling between views of the completed nodes and the full graph. The number you see underneath the node name, for example 'subject', reflects the number of records in each node.
-
-<h4> Example:  Graphing a Project </h4>
-![Graphing a project](graph-a-project.gif)
-
-
-
-## Using the Gen3 SDK
-* * *
-
-The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic software development kit (SDK) to help users interact with the Gen3 API, which can be found on [Github](https://github.com/uc-cdis/gen3sdk-python). The Gen3 community is encouraged to help improve the gen3sdk by adding functions to the library or developing Jupyter Notebooks that use it.
+### Downloading Files Using the Gen3 SDK
+* The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic software development kit (SDK) to help users interact with the Gen3 API, which can be found on [Github](https://github.com/uc-cdis/gen3sdk-python). The Gen3 community is encouraged to help improve the gen3sdk by adding functions to the library or developing Jupyter Notebooks that use it.
 
 > __NOTE:__ As the Gen3 community updates repositories, keep them up to date using `git pull origin master`.
 
@@ -157,3 +149,8 @@ pip install gen3
 # To clone and develop the source:
 git clone https://github.com/uc-cdis/gen3sdk-python.git
 ```
+
+
+
+### Downloading Metadata Using the API
+* Users with read access to a project can download individual metadata records in the project or all records in a specified node of the project using the API. For more information, see [the following section in Using the API](/resources/user/using-api/#querying-and-downloading-metadata-using-the-api).

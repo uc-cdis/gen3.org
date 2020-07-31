@@ -8,6 +8,13 @@ menuname: userMenu
 
 # Using the API
 * * *
+
+* [What Does the API Do](#what-does-the-api-do)
+* [Credentials to send API requests](#credentials-to-send-api-requests)
+* [Querying and Downloading Metadata using the API](#querying-and-downloading-metadata-using-the-api)
+* * *
+
+
 ## What Does the API Do?
 * * *
 The API is created programmatically based on the Gen3 commons data model. All of the work Gen3 data contributors do to prepare their metadata powers the API (see steps [4-6 in the Data Contribution section](/resources/user/submit-data)).
