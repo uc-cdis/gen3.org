@@ -11,7 +11,8 @@ menuname: userMenu
 
 * [Queries in the Submission Portal: GraphiQL](#queries-in-the-submission-portal-graphiql)
 * [Find specific files by querying 'datanode'](#find-specific-files-by-quering-datanode)
-* * *
+
+---
 
 ## Queries in the Submission Portal: GraphiQL
 * * *

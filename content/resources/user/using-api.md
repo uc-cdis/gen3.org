@@ -12,7 +12,8 @@ menuname: userMenu
 * [What Does the API Do](#what-does-the-api-do)
 * [Credentials to send API requests](#credentials-to-send-api-requests)
 * [Querying and Downloading Metadata using the API](#querying-and-downloading-metadata-using-the-api)
-* * *
+
+---
 
 
 ## What Does the API Do?

@@ -46,8 +46,7 @@ No installation is necessary. Simply download the correct version for your opera
 4. Open a terminal window.
 5. Add the directory containing the executable to your Path environment variable by entering this command in the terminal: `echo 'export PATH=$PATH:~/.gen3' >> ~/.bash_profile`.
 6. Run `source ~/.bash_profile` or restart your terminal.
-
-Now you can execute the program by opening a terminal window and entering the command `gen3-client`.
+7. Now you can execute the program by opening a terminal window and entering the command `gen3-client`.
 
 >__Note:__ If your Mac OS X does not allow access, you need to manually allow it under System Preferences > Security & Privacy > General (click the lock icon to unlock, enter administrator name and password).
 
