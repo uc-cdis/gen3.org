@@ -16,7 +16,7 @@ After finding the metadata/structured data or data files of interest, they can b
 
 * [Finding your File by Browsing the List of Projects](#finding-your-file-by-browsing-the-list-of-projects)
 * [Query](#query)
-  * [Querying Metadata Using the GraphiQL Interface](#querying-metadata-using-the-graphiqL-interface)
+  * [Querying Metadata Using the GraphiQL Interface](#querying-metadata-using-the-graphiql-interface)
   * [Querying Metadata Using Gen3 SDK](#querying-metadata-using-gen3-sdk)
   * [Querying Metadata Using the API](#querying-metadata-using-the-api)
 * [Downloading Data Files](#downloading-data-files)

@@ -10,7 +10,7 @@ menuname: userMenu
 * * *
 
 * [Queries in the Submission Portal: GraphiQL](#queries-in-the-submission-portal-graphiql)
-* [Find specific files by querying 'datanode'](#find-specific-files-by-quering-datanode)
+* [Find specific files by querying 'datanode'](#find-specific-files-by-quering-a-data-node)
 
 ---
 
@@ -55,7 +55,7 @@ Updating the example template `details from experiment` sample query to call the
 
 
 
-## Find specific files by querying 'datanode'
+## Find specific files by querying a data node
 ---
 The following guide provides details on how to send graphQL queries to retrieve data from a Gen3 Data Commons.
 
