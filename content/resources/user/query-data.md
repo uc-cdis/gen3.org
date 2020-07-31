@@ -50,13 +50,10 @@ Updating the example template `details from experiment` sample query to call the
 
 
 
-
-
-
-The following guide provides details on how to send graphQL queries to retrieve data from a Gen3 Data Commons.
-
 ## 1. Find files by querying 'datanode'
 ---
+The following guide provides details on how to send graphQL queries to retrieve data from a Gen3 Data Commons.
+
 ### 1a. Finding specific files
 
 * Metadata for specific files can be obtained by including arguments in "datanode" queries. The following are some commonly used arguments (not an exhaustive list):

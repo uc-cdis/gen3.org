@@ -7,6 +7,7 @@ menuname: userMenu
 ---
 {{% markdownwrapper %}}
 # Data Analysis in a Gen3 Data Commons
+* * *
 
 How data is accessed in a Gen3 data commons is determined by the commons' sponsor(s), data contributor(s), and/or  operator(s). Some data commons have rules that data cannot be downloaded outside of a Virtual Private Cloud (VPC). In these cases, data analysts may need to access and configure a virtual machine (VM) in the VPC where all analyses will be done. Other data commons may be able to grant users permissions to download data files directly to their local computers, while others may choose to allow analysis only in the Gen3-provided Workspace.
 

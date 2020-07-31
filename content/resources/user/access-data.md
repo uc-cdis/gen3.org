@@ -10,29 +10,31 @@ menuname: userMenu
 
 * * *
 
-The [data in a Gen3 data commons](/resources/user/data-types) can be browsed and downloaded using tools either in the submission portal website or from the command-line. Feel free to take a look at our webinars about our Gen3 data commons on our [YouTube channel](https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/videos).
+The [data in a Gen3 data commons](/resources/user/dictionary) can be browsed and downloaded using tools either in the submission portal website or from the command-line. Feel free to take a look at our webinars about data acces on our Gen3 Data Commons[YouTube channel](https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/videos).
 
-## Exploration Tool
+How data is accessed in a Gen3 data commons is determined by the commons' sponsor(s), data contributor(s), and/or  operator(s).
+
+Metadata/structured data and data files can be accessed, that is queried or downloaded, in multiple ways:
+
+* [Query](#)
+  * [Gen3 client](#)
+    * [Metadata/structured data](#)
+    * [Data files](#)
+  * [GraphiQL](#)
+    * [Metadata/structured data](#)
+  * [Python Gen3 SDK](#)
+    * [Metadata/structured data](#)
+    * [Data files](#)
+#  * [Workspace, JupyterHub](#)
+* [Downloading Data Files](#downloading-data-files)
+  * [File Explorer](#)
+  * [API](#)
+  * [Gen3 client](#)
+  * [Python Gen3 SDK](#)
+
 * * *
-One method of accessing metadata in a Gen3 data commons is using the data exploration tool in a web browser. This page can be reached by clicking "Exploration" in the top navigation bar or by navigating to the URL: https://gen3.datacommons.io/explorer.
 
-> __NOTE:__ The part of the URL above https://gen3.datacommons.io can be replaced with the URL of other data commons powered by Gen3.
 
-![Exploration](Gen3_Toolbar_exploration.png)
-
-The data exploration tool has a certain set of metadata properties that can be used as filters for selecting subsets of study subjects and data files.
-
-![Facets](Gen3_facets.png)
-
-> __NOTE:__ The properties used for filtering data are configurable and are chosen in collaboration with data commons sponsors, contributors, and analysts. Contact the data commons support team with suggestions for a new property to be added as a filter.
-
-<!--
-Custom filters can also be added by clicking on the "add a custom filter" button. Begin typing the property you would like to add as a custom filter and then select it. You can then enter the values of that property to filter data on.
--->
-
-A spreadsheet containing available clinical, demographic, or experimental metadata can be downloaded by clicking on the corresponding button once a cohort or group of files has been selected.
-
-![Selection and Download](Gen3_selection_and_download_highlight.png)
 
 ## Querying Metadata Using the GraphiQL Interface
 * * *
@@ -52,11 +54,9 @@ For example, typing the name of a node, "sample", into the "Search Schema" searc
 The following example query returns the case ids for which there are blood samples in the data commons:
 ```
 	{
-		program {
-			name
-			projects {
-				project_id
-			}
+		subject {
+			subject_id
+			submitter_id
 		}
 	}
 
@@ -84,6 +84,37 @@ The sponsor of a Gen3 data commons typically decides how users will access data 
 Files can be browsed using the data exploration tool in a Gen3 data commons. Individual files can be downloaded by simply clicking on the filename and then clicking the download button.
 
 __Note:__ If a commons restricts data download access to within a virtual private cloud (VPC), then an "Access Denied" error will be displayed by the website.
+
+## Exploration Tool
+* * *
+One method of accessing metadata in a Gen3 data commons is using the data exploration tool in a web browser. This page can be reached by clicking "Exploration" in the top navigation bar or by navigating to the URL: https://gen3.datacommons.io/explorer.
+
+> __NOTE:__ The part of the URL above https://gen3.datacommons.io can be replaced with the URL of other data commons powered by Gen3.
+
+![Exploration](Gen3_Toolbar_exploration.png)
+
+The data exploration tool has a certain set of metadata properties that can be used as filters for selecting subsets of study subjects and data files.
+
+![Facets](Gen3_facets.png)
+
+> __NOTE:__ The properties used for filtering data are configurable and are chosen in collaboration with data commons sponsors, contributors, and analysts. Contact the data commons support team with suggestions for a new property to be added as a filter.
+
+<!--
+Custom filters can also be added by clicking on the "add a custom filter" button. Begin typing the property you would like to add as a custom filter and then select it. You can then enter the values of that property to filter data on.
+-->
+
+A spreadsheet containing available clinical, demographic, or experimental metadata can be downloaded by clicking on the corresponding button once a cohort or group of files has been selected.
+
+![Selection and Download](Gen3_selection_and_download_highlight.png)
+
+
+
+
+
+
+
+
+
 
 ## Using a Data File Download Manifest with the Gen3-Client
 
