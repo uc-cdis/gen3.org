@@ -29,7 +29,7 @@ g3Resources:
             link: /resources/user/gen3-client
           - name: Working with the API
             link: /resources/user/using-api
-          - name: Data Dictionary Viewer
+          - name: Data Dictionary
             link: /resources/user/dictionary
           - name: Template Metadata TSVs
             link: /resources/user/template-tsvs

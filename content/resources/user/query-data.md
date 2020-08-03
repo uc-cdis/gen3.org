@@ -9,12 +9,56 @@ menuname: userMenu
 # Querying Metadata in a Gen3 Data Commons
 * * *
 
+* [Queries in the Submission Portal: GraphiQL](#queries-in-the-submission-portal-graphiql)
+* [Find specific files by querying 'datanode'](#find-specific-files-by-quering-a-data-node)
+
+---
+
+## Queries in the Submission Portal: GraphiQL
+* * *
+
+Queries can directly run in the submission portal by clicking the "Query" magnifying glass or directly at: https://gen3.datacommons.io/query. The query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, and generally make it easier for Gen3 members to find information.
+
+> __NOTE:__ For these user guides, https://gen3.datacommons.io is an example URL and can be replaced with the URL of other data commons powered by Gen3.
+
+![GraphQL Query](gQL-query.gif)
+
+### Pagination and Offsets
+Queries by defult return the first 10 entries. To return more entries, the query call can specify a larger number such as `(first:100)`.
+
+In the case that too many results are returned, a timeout error might occur. In that case, use [pagination](http://graphql.org/learn/pagination/) to break up the query.
+
+For example, if there are 2,550 records returned, and the graphiQL query is timing out with ```(first:3000)```, then break the query into multiple queries with offsets:
+
+```
+(first:1000, offset:0) 		# this will return records 0-1000
+(first:1000, offset:1000) 	# this will return records 1000-2000
+(first:1000, offset:2000) 	# this will return records 2000-2,550
+```
+Updating the example template `details from experiment` sample query to call the first 1000, the call becomes:
+
+```
+{
+  "query":" query Test {
+    experiment (first:1000, submitter_id: "<INSERT submitter_id>") {
+      experimental_intent
+      experimental_description
+      number_samples_per_experimental_group
+      type_of_sample
+      type_of_specimen
+    }
+  } "
+}
+```
+
+
+
+
+
+## Find specific files by querying a data node
+---
 The following guide provides details on how to send graphQL queries to retrieve data from a Gen3 Data Commons.
 
-## 1. Find files by querying 'datanode'
----
-### 1a. Finding specific files
----
 * Metadata for specific files can be obtained by including arguments in "datanode" queries. The following are some commonly used arguments (not an exhaustive list):
     * `submitter_id: "a_submitter_id"`: get information for a specific submitter_id
     * `quick_search: "a_substring"`: get information for all files with partial matches in submitter_id

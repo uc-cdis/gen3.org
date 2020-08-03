@@ -8,6 +8,14 @@ menuname: userMenu
 
 # Using the API
 * * *
+
+* [What Does the API Do](#what-does-the-api-do)
+* [Credentials to send API requests](#credentials-to-send-api-requests)
+* [Querying and Downloading Metadata using the API](#querying-and-downloading-metadata-using-the-api)
+
+---
+
+
 ## What Does the API Do?
 * * *
 The API is created programmatically based on the Gen3 commons data model. All of the work Gen3 data contributors do to prepare their metadata powers the API (see steps [4-6 in the Data Contribution section](/resources/user/submit-data)).
@@ -16,7 +24,6 @@ With the API in place, users can submit queries to find metadata information acr
 
 The Gen3 commons uses [GraphQL](http://graphql.org/) to manage the metadata. To learn the basics of writing queries in GraphQL, please visit: <http://graphql.org/learn>.
 
-* * *
 ## Credentials to send API requests
 * * *
 The credentials that allow access to "raw" data in the object store and ssh keys to access VMs, also allow users to programmatically query or submit data to the API. This credential is used every time an API call is made.
@@ -25,19 +32,11 @@ Each API key is valid for a month and is used to receive a temporary access toke
 
 For users granted data access, the API key is provided on the Profile page after clicking the "Create API key" button.
 
-* * *
-
 ![Profile Page](API_key_profile_page.png)
-
-* * *
 
 While displayed, click "copy" to copy the API key to the clipboard or "download" to download a "credentials.json" file containing the id/key pair in json format.
 
-* * *
-
 ![Copy Key](API_copy_keys.png)
-
-* * *
 
 In python, the following command is sent, using the module "requests", to receive the access token:
 
@@ -78,81 +77,11 @@ u = requests.put('https://gen3.commons.io/api/v0/submission/project-id', data=ts
 
 If an an error such as "You don't have access... " occurs, then the API key is most likely out of date and a new access token will need to be made.
 
-* * *
 
-## Queries in the Submission Portal: GraphiQL
-* * *
 
-Queries can directly run in the submission portal by clicking the "Query" magnifying glass or directly at: https://gen3.datacommons.io/query. The query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, and generally make it easier for Gen3 members to find information.
 
-> __NOTE:__ For these user guides, https://gen3.datacommons.io is an example URL and can be replaced with the URL of other data commons powered by Gen3.
 
-![GraphQL Query](gQL-query.gif)
-
-### Pagination and Offsets
-Queries by defult return the first 10 entries. To return more entries, the query call can specify a larger number such as `(first:100)`.
-
-In the case that too many results are returned, a timeout error might occur. In that case, use [pagination](http://graphql.org/learn/pagination/) to break up the query.
-
-For example, if there are 2,550 records returned, and the graphiQL query is timing out with ```(first:3000)```, then break the query into multiple queries with offsets:
-
-```
-(first:1000, offset:0) 		# this will return records 0-1000
-(first:1000, offset:1000) 	# this will return records 1000-2000
-(first:1000, offset:2000) 	# this will return records 2000-2,550
-```
-Updating the example template `details from experiment` sample query to call the first 1000, the call becomes:
-
-```
-{
-	"query":" query Test {
-		experiment (first:1000, submitter_id: "<INSERT submitter_id>") {
-			experimental_intent
-			experimental_description
-			number_samples_per_experimental_group
-			type_of_sample
-			type_of_specimen
-		}
-	} "
-}
-```
-
-* * *
-## Browsing by List of Projects
-* * *
-The metadata submission portal https://gen3.datacommons.io/submission can be used to browse an individual project by node. Select a project by clicking 'Submit Data' on the right side and then either explore the nodes in the "Toggle view" by clicking on individual nodes, or, by clicking the "browse nodes" button to the left. From this screen queries can be made by node in the dropdown at the left.
-
-<h4> Example: Find Projects and browse Nodes</h4>
-![Browse by node](projects-nodes-view.png)
-
-This feature can also download the tsv associated with the node, or if a user has "write" access to the this project, delete existing nodes.
-
-A user can review a graph of an individual project, by toggling between views of the completed nodes and the full graph. The number you see underneath the node name, for example 'subject', reflects the number of records in each node.
-
-<h4> Example:  Graphing a Project </h4>
-![Graphing a project](graph-a-project.gif)
-
-* * *
-## Using the Gen3 SDK
-* * *
-
-The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic software development kit (SDK) to help users interact with the Gen3 API, which can be found on [Github](https://github.com/uc-cdis/gen3sdk-python). The Gen3 community is encouraged to help improve the gen3sdk by adding functions to the library or developing Jupyter Notebooks that use it.
-
-> __NOTE:__ As the Gen3 community updates repositories, keep them up to date using `git pull origin master`.
-
-To [install the Gen3 SDK](https://gen3sdk-python.readthedocs.io/en/latest/install.html), use the python installer 'pip'.
-
-Example:
-```
-# Install Gen3 SDK:
-pip install gen3
-
-# To clone and develop the source:
-git clone https://github.com/uc-cdis/gen3sdk-python.git
-```
-
-* * *
-# Querying and Downloading Metadata using the API
+## Querying and Downloading Metadata using the API
 * * *
 Users with read access to a project can download individual metadata records in the project or all records in a specified node of the project using the API.
 
