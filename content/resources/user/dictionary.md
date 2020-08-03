@@ -8,9 +8,7 @@ menuname: userMenu
 # The Data Dictionary in Gen3
 * * *
 
-Once access has been granted to the Windmill data submission portal, we recommend reviewing the commons' specific data dictionary by clicking "Dictionary" in the top navigation bar or by entering the URL https://gen3.datacommons.io/dd. Here you can find variable types, requirements, and node dependencies or links required for submission.
-
-> __NOTE:__ For these user guides, https://gen3.datacommons.io is an example URL and can be replaced with the URL of other data commons powered by Gen3.
+We recommend data contributors and analysts familiarize themselves with the Gen3 data dictionary of their data commons by clicking “Dictionary” in the top navigation bar or by entering the URL https://gen3.datacommons.io/dd. Here one can find a graphical model that illustrates how a particular data commons organizes and describes its data.
 
 ![Gen3_Toolbar_Dictionary.png](Gen3_Toolbar_Dictionary.png)
 * * *
