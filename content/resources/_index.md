@@ -23,14 +23,12 @@ g3Resources:
             link: /resources/user/analyze-data
       - title: Appendices
         ul:
-          - name: Types of data in a Gen3 Data Commons
-            link: /resources/user/data-types
+          - name: Data Dictionary and types of data in a Gen3 Data Commons
+            link: /resources/user/dictionary
           - name: Using the gen3-client command-line tool
             link: /resources/user/gen3-client
           - name: Working with the API
             link: /resources/user/using-api
-          - name: Data Dictionary
-            link: /resources/user/dictionary
           - name: Template Metadata TSVs
             link: /resources/user/template-tsvs
           - name: Managing Submission Timepoints
