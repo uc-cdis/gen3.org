@@ -15,7 +15,7 @@ This query portal has been optimized to autocomplete fields based on content, in
 ***
 
 * [Graph Model](#graph-model)
-  * [Find specific files by querying a data node](#find-specific-files-by-quering-a-datanode)
+  * [Find specific files by querying a datanode](#find-specific-files-by-quering-a-datanode)
 * [Flat Model](#flat-model)
   * [Querying](#querying)
   * [Aggregations](#aggregations)
