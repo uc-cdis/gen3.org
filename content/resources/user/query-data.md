@@ -9,15 +9,18 @@ menuname: userMenu
 # Querying Metadata in the Gen3 Submission Portal using GraphiQL
 * * *
 
-The easiest way to query metadata in a Gen3 data commons is done by using the [graphQL query language](https://graphql.org/) with the graphiQL interface, which can be accessed by clicking "Query" in the top navigation bar or by navigating to the URL: https://gen3.datacommons.io/query. The URL https://gen3.datacommons.io can be replaced with the URL of other Gen3 data commons. This query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, pass variables, and generally make it easier for Gen3 members to find information. The "Docs" button will show documentation of the queryable nodes and properties. You can switch in the portal between *Graph Model* or *Flat Model* --each using endpoints that query different databases (Postgres and ElasticSearch). Both Flat and Graph API endpoints can be also queried in the command-line.
+The easiest way to query metadata in a Gen3 data commons is done by using the [graphQL query language](https://graphql.org/) with the graphiQL interface, which can be accessed by clicking "Query" in the top navigation bar or by navigating to the URL: https://gen3.datacommons.io/query. The URL https://gen3.datacommons.io can be replaced with the URL of other Gen3 data commons.
+
+This query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, pass variables, and generally make it easier for Gen3 members to find information. The "Docs" button will show documentation of the queryable nodes and properties. You can switch in the portal between *Graph Model* or *Flat Model* --each using endpoints that query different databases (Postgres and ElasticSearch). Both Flat and Graph API endpoints can be also queried in the command-line.
 ***
 
 * [Graph Model](#graph-model)
-  * [Find specific files by querying 'datanode'](#find-specific-files-by-quering-a-data-node)
+  * [Find specific files by querying a data node](#find-specific-files-by-quering-a-data-node)
 * [Flat Model](#flat-model)
-  * Querying
-  * Aggregations
-  * Filtering
+  * [Querying](#querying)
+  * [Aggregations](#aggregations)
+  * [Filtering](#filtering)
+
 ---
 
 ## Graph Model
@@ -162,13 +165,11 @@ For example, if there are 2,550 records returned, and the graphiQL query is timi
 
 ### Aggregations
 Aggregation query is wrapped within the `_aggregation` keyword. In total, five aggregations are feasible at the moment:
-
-1) Total Count Aggregation
-2) Text Aggregation
-3) Numeric Aggregation
-4) Nested Aggregation
-5) Sub-aggregation
-
+1) Total Count Aggregation,
+2) Text Aggregation,
+3) Numeric Aggregation,
+4) Nested Aggregation,
+5) Sub-aggregation.
 For more examples see the full description on our [Github repositories](https://github.com/uc-cdis/guppy/blob/master/doc/queries.md).
 
 Example for 1) Total Count Aggregation that includes a filter:
@@ -183,7 +184,7 @@ query ($filter: JSON) {
 ```
 
 ### Filtering
-You can filter your query. Currently, Guppy uses `JSON`-based syntax for filters. Filters can be text/string/number-based, combined, or nested. For more examples see the full description on our [Github repositories](https://github.com/uc-cdis/guppy/blob/master/doc/queries.md).
+Currently, Guppy uses `JSON`-based syntax for filters. Filters can be text/string/number-based, combined, or nested. For more examples see the full description on our [Github repositories](https://github.com/uc-cdis/guppy/blob/master/doc/queries.md).
 
 Example for a basic filter unit:
 ```
