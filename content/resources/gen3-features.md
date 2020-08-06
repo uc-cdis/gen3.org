@@ -27,8 +27,8 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
 * [Export structured data](../user/access-data/#exploration-tool) as a JSON, TSV or CSV file
 * Structured data is stored in Postgres databases
 * [Flattened data](../developer/flat-model-api/):
-    * Structured data can be flattened and stored in ElasticSearch by using our ETL tool
-    * [Explore](../user/access-data/) the ElasticSearch structured data using [Guppy](https://github.com/uc-cdis/guppy)
+    * Structured data can be flattened and stored in Elasticsearch by using our ETL tool
+    * [Explore](../user/access-data/) the Elasticsearch structured data using [Guppy](https://github.com/uc-cdis/guppy)
 * [Generate fake data](https://github.com/uc-cdis/data-simulator) specific to a dictionary for testing
 * Import and export using the Portable Format for Biomedical Data (PFB): *(Work in progress)*
     * Import and export a dictionary

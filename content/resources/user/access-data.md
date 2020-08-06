@@ -50,7 +50,7 @@ The easiest way to query metadata in a Gen3 commons is done by using the [graphQ
 
 ![Query](Gen3_Toolbar_query.png)
 
-You can switch between Graph Model or Flat Model --each using different databases (Postgres and ElasticSearch). The "Docs" button can be pressed to see documentation of the queryable nodes and properties.
+You can switch between Graph Model or Flat Model --each using different databases (Postgres and Elastisearch). The "Docs" button can be pressed to see documentation of the queryable nodes and properties.
 
 ![GraphQL Docs](Gen3_GraphiQL_docs2020.png)
 

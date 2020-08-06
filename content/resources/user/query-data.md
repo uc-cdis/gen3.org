@@ -6,59 +6,27 @@ layout: withtoc
 menuname: userMenu
 ---
 {{% markdownwrapper %}}
-# Querying Metadata in a Gen3 Data Commons
+# Querying Metadata in the Gen3 Submission Portal using GraphiQL
 * * *
 
-* [Queries in the Submission Portal: GraphiQL](#queries-in-the-submission-portal-graphiql)
-* [Find specific files by querying 'datanode'](#find-specific-files-by-quering-a-data-node)
+The easiest way to query metadata in a Gen3 data commons is done by using the [graphQL query language](https://graphql.org/) with the graphiQL interface, which can be accessed by clicking "Query" in the top navigation bar or by navigating to the URL: https://gen3.datacommons.io/query. The URL https://gen3.datacommons.io can be replaced with the URL of other Gen3 data commons.
 
+This query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, pass variables, and generally make it easier for Gen3 members to find information. The "Docs" button will show documentation of the queryable nodes and properties. You can switch in the portal between *Graph Model* or *Flat Model* --each using endpoints that query different databases (Postgres and ElasticSearch). Both Flat and Graph API endpoints can be also queried in the command-line.
+---
+* [Graph Model](#graph-model)
+  * [Find specific files by querying 'datanode'](#find-specific-files-by-quering-a-data-node)
+* [Flat Model](#flat-model)
+  * Querying
+  * Aggregations
+  * Filtering
 ---
 
-## Queries in the Submission Portal: GraphiQL
-* * *
+## Graph Model
+In the Graph Model, our microservice *Peregrine* converts GraphiQL queries and hits the PostgreSQL database.
 
-Queries can directly run in the submission portal by clicking the "Query" magnifying glass or directly at: https://gen3.datacommons.io/query. The query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, and generally make it easier for Gen3 members to find information.
+![GraphQL Query](simple-query.gif)
 
-> __NOTE:__ For these user guides, https://gen3.datacommons.io is an example URL and can be replaced with the URL of other data commons powered by Gen3.
-
-![GraphQL Query](gQL-query.gif)
-
-### Pagination and Offsets
-Queries by defult return the first 10 entries. To return more entries, the query call can specify a larger number such as `(first:100)`.
-
-In the case that too many results are returned, a timeout error might occur. In that case, use [pagination](http://graphql.org/learn/pagination/) to break up the query.
-
-For example, if there are 2,550 records returned, and the graphiQL query is timing out with ```(first:3000)```, then break the query into multiple queries with offsets:
-
-```
-(first:1000, offset:0) 		# this will return records 0-1000
-(first:1000, offset:1000) 	# this will return records 1000-2000
-(first:1000, offset:2000) 	# this will return records 2000-2,550
-```
-Updating the example template `details from experiment` sample query to call the first 1000, the call becomes:
-
-```
-{
-  "query":" query Test {
-    experiment (first:1000, submitter_id: "<INSERT submitter_id>") {
-      experimental_intent
-      experimental_description
-      number_samples_per_experimental_group
-      type_of_sample
-      type_of_specimen
-    }
-  } "
-}
-```
-
-
-
-
-
-## Find specific files by querying a data node
----
-The following guide provides details on how to send graphQL queries to retrieve data from a Gen3 Data Commons.
-
+### Find specific files by querying a data node
 * Metadata for specific files can be obtained by including arguments in "datanode" queries. The following are some commonly used arguments (not an exhaustive list):
     * `submitter_id: "a_submitter_id"`: get information for a specific submitter_id
     * `quick_search: "a_substring"`: get information for all files with partial matches in submitter_id
@@ -87,7 +55,7 @@ The following guide provides details on how to send graphQL queries to retrieve 
 }
 ```
 
-* Result: applying the `file_name` and `submitter_id` arguments returns only the files that match the provided string exactly, while the `quick_search` argument returns all files with a submitter_id that matches the sub-string, two in this case.
+* Result: applying the `file_name` and `submitter_id` arguments returns only the files that match the provided string exactly, while the `quick_search` argument returns all files with a submitter_id that matches the sub-string, two in this case:
 
 ```
 {
@@ -142,6 +110,105 @@ The following guide provides details on how to send graphQL queries to retrieve 
         "project_id": "OpenNeuro-ds000030"
       }
     ]
+  }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+## Flat Model
+In the Flat Model, our microservice *Guppy* converts GraphiQL queries and hits the Elasticsearch database. Here, queries support Aggregations for string (bin counts; number of records that each key has) and numeric (summary statistics such as minimum, maximum, sum, etc) fields.
+
+### Querying
+Guppy allows you to query the raw data with offset, the maximum number of rows, sorting, and filters. Queries by default return the first 10 entries. To return more entries, the query call can specify a larger number such as `(first: 100)`.
+
+Example:
+```
+{
+  subject(offset: 5, first: 100, sort: [
+    {
+      gender: "asc"
+    },
+    {
+      _aligned_reads_files_count: "desc"
+    }
+  ]) {
+    subject_id
+    gender
+    ethnicity
+    _aligned_reads_files_count
+  }
+}
+```
+
+In the case that too many results are returned, a timeout error might occur. In that case, use [pagination](http://graphql.org/learn/pagination/) to break up the query.
+
+For example, if there are 2,550 records returned, and the graphiQL query is timing out with ```(first:3000)```, then break the query into multiple queries with offsets:
+
+```
+(first:1000, offset:0) 		# this will return records 0-1000
+(first:1000, offset:1000) 	# this will return records 1000-2000
+(first:1000, offset:2000) 	# this will return records 2000-2,550
+```
+
+
+### Aggregations
+Aggregation query is wrapped within the `_aggregation` keyword. In total, five aggregations are feasible at the moment:
+
+1) Total Count Aggregation
+2) Text Aggregation
+3) Numeric Aggregation
+4) Nested Aggregation
+5) Sub-aggregation
+
+For more examples see the full description on our [Github repositories](https://github.com/uc-cdis/guppy/blob/master/doc/queries.md).
+
+Example for 1) Total Count Aggregation that includes a filter:
+```
+query ($filter: JSON) {
+ _aggregation  {
+   subject(filter: $filter) {
+     _totalCount
+   }
+ }
+}
+```
+
+### Filtering
+You can filter your query. Currently, Guppy uses `JSON`-based syntax for filters. Filters can be text/string/number-based, combined, or nested. For more examples see the full description on our [Github repositories](https://github.com/uc-cdis/guppy/blob/master/doc/queries.md).
+
+Example for a basic filter unit:
+```
+{
+  "filter": {
+    "=": {
+      "gender": "Female"
+    }
+  }
+}
+```
+
+
+Example query including a filter:
+```
+query ($filter: JSON) {
+  subject (filter: $filter, first: 20) {
+    gender
+    race
+    ethnicity
+    _matched {
+      field
+      highlights
+    }
   }
 }
 ```
