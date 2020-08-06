@@ -15,7 +15,8 @@ This query portal has been optimized to autocomplete fields based on content, in
 ***
 
 * [Graph Model](#graph-model)
-  * [Find specific files by querying a datanode](#find-specific-files-by-quering-a-datanode)
+  * [List all nodes of a particular node category](#list-all-nodes-of-a-particular-node-category)
+  * [Find specific files by querying a datanode](#find-specific-files-by-querying-a-datanode)
 * [Flat Model](#flat-model)
   * [Querying](#querying)
   * [Aggregations](#aggregations)
@@ -26,7 +27,18 @@ This query portal has been optimized to autocomplete fields based on content, in
 ## Graph Model
 In the Graph Model, our microservice *Peregrine* converts GraphiQL queries and hits the PostgreSQL database.
 
-![GraphQL Query](simple-query_2020.gif)
+![GraphQL Query](simple_query_2020.gif)
+
+
+### List all nodes of a particular node category
+```
+{
+  _node_type (category: "medical_history") {
+    category
+    id
+  }
+}
+```
 
 ### Find specific files by querying a datanode
 * Metadata for specific files can be obtained by including arguments in "datanode" queries. The following are some commonly used arguments (not an exhaustive list):
