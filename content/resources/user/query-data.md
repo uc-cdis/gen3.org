@@ -15,7 +15,7 @@ This query portal has been optimized to autocomplete fields based on content, in
 ***
 
 * [Graph Model](#graph-model)
-  * [Find specific files by querying a data node](#find-specific-files-by-quering-a-data-node)
+  * [Find specific files by querying a data node](#find-specific-files-by-quering-a-datanode)
 * [Flat Model](#flat-model)
   * [Querying](#querying)
   * [Aggregations](#aggregations)
@@ -26,9 +26,9 @@ This query portal has been optimized to autocomplete fields based on content, in
 ## Graph Model
 In the Graph Model, our microservice *Peregrine* converts GraphiQL queries and hits the PostgreSQL database.
 
-![GraphQL Query](simple-query.gif)
+![GraphQL Query](simple-query_2020.gif)
 
-### Find specific files by querying a data node
+### Find specific files by querying a datanode
 * Metadata for specific files can be obtained by including arguments in "datanode" queries. The following are some commonly used arguments (not an exhaustive list):
     * `submitter_id: "a_submitter_id"`: get information for a specific submitter_id
     * `quick_search: "a_substring"`: get information for all files with partial matches in submitter_id
@@ -128,7 +128,7 @@ In the Graph Model, our microservice *Peregrine* converts GraphiQL queries and h
 
 
 ## Flat Model
-In the Flat Model, our microservice *Guppy* converts GraphiQL queries and hits the Elasticsearch database. Here, queries support Aggregations for string (bin counts; number of records that each key has) and numeric (summary statistics such as minimum, maximum, sum, etc) fields.
+In the Flat Model, our microservice *Guppy* converts GraphiQL queries and hits the Elasticsearch database. Here, queries support Aggregations for string (bin counts; number of records that each key has) and numeric (summary statistics such as minimum, maximum, sum, etc) fields. For more details see the full description on our [Github repositories](https://github.com/uc-cdis/guppy/blob/master/doc/queries.md).
 
 ### Querying
 Guppy allows you to query the raw data with offset, the maximum number of rows, sorting, and filters. Queries by default return the first 10 entries. To return more entries, the query call can specify a larger number such as `(first: 100)`.
