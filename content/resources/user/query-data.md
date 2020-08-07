@@ -11,7 +11,7 @@ menuname: userMenu
 
 The easiest way to query metadata in a Gen3 data commons is done by using the [graphQL query language](https://graphql.org/) with the graphiQL interface, which can be accessed by clicking "Query" in the top navigation bar or by navigating to the URL: https://gen3.datacommons.io/query. The URL https://gen3.datacommons.io can be replaced with the URL of other Gen3 data commons.
 
-This query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, pass variables, and generally make it easier for Gen3 members to find information. The "Docs" button will show documentation of the queryable nodes and properties. You can switch in the portal between *Graph Model* or *Flat Model* --each using endpoints that query different databases (Postgres and ElasticSearch). Both Flat and Graph API endpoints can be also queried in the command-line.
+This query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, pass variables, and generally make it easier for users to find information. The "Docs" button will display documentation of the queryable nodes and properties. From the GraphiQL interface of the data portal, you can switch between *Graph Model* or *Flat Model* --each using endpoints that query different databases (Postgres and ElasticSearch, respectively). Notably, the same queries can be sent to both the flat and graph model API endpoints from the command-line.
 ***
 
 * [Graph Model](#graph-model)
