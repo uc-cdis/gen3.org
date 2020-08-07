@@ -60,7 +60,7 @@ field in the `fence_config.yaml` file, and the `hostname` field in the
 `peregrine.json` and `sheepdog.json` files.
 
 
-<h4>I'm trying to upload files with gen3-client, but received an error 
+<h4>I'm trying to upload files with gen3-client, but received an error
 `x509: certificate signed by unknown authority`.</h4>
 
 You can add self-signed certificate to your trusted certificates. Steps may
@@ -70,7 +70,7 @@ vary depending on Operating System you use.
 ## Cloud Automation
 
 
-<h4>I'm setting up a CSOC-free instance, what should I set for the 
+<h4>I'm setting up a CSOC-free instance, what should I set for the
 `config_folder`?</h4>
 
 The `config_folder` variable sets the location of your `user.yaml` file. If you
@@ -180,7 +180,7 @@ dictionary customization, variables' definition, and files formatting?</h4>
 
 Please refer documentation about [Creating New
 Dictionary](https://gen3.org/resources/operator/#3-creating-a-new-data-dictionary),
-[Data Types](https://gen3.org/resources/user/data-types/) and
+[Data Types](https://gen3.org/resources/user/dictionary/#understanding-data-representation-in-gen3) and
 [Templates](https://gen3.org/resources/user/template-tsvs/)
 
 
@@ -190,4 +190,3 @@ Dictionary](https://gen3.org/resources/operator/#3-creating-a-new-data-dictionar
 You can use our [dictionaryutils](https://github.com/uc-cdis/dictionaryutils)
 tool.  You can find an example on how to generate JSON in the
 [README](https://github.com/uc-cdis/dictionaryutils#use-dictionaryutils-to-dump-a-dictionary)
-
