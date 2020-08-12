@@ -7,12 +7,12 @@ g3Teaser:
   fig: /figs/webinar.svg
   title: Gen3 Webinars
   detail: The Gen3 webinars are focused on helping the community understand what Gen3 does, what the Data Commons Framework Services (DCFS) are, and how both can be used to aid in the construction and operation of data commons.
-<!--- g3Upcoming:
-  - Title: Gen3 Webinar - Come and Learn with us!
-    Date: August 8th, 2019 at 1 PM U.S. Central Time.
-    Description: Join us as we walk through Gen3’s services and demonstrate how researchers can bring data into Gen3 and get access to a data ecosystem with open-source tools to drive scientific discovery.
+g3Upcoming:
+  - Title: NCI DCFS Quality Assurance Processes
+    Date: August 24th, 2020 at 12:30 PM U.S. Central Time
+    Description: As part of building Framework Services, we want to provide reliable and scalable solutions to our users. Join our quality assurance team to discuss what is involved before a code or data release to ensure that DCFS provides a reliable, scalable and secure way to access both open and controlled datasets.
     Image: coming_soon.svg
-    Link: https://www.eventbrite.com/e/gen3-webinar-come-and-learn-with-us-tickets-63399391286?aff=gen3 --->
+<!---     Link: https://www.eventbrite.com/e/gen3-webinar-come-and-learn-with-us-tickets-63399391286?aff=gen3 --->
 g3Previous:
   - Title: NCI DCFS Interoperability with Framework Services
     Date: June 9th, 2020
