@@ -173,7 +173,7 @@ Example:
 }
 ```
 
-Queries like `(first: 0)` are not supported. To return more entries, the query call can specify a larger number such as `(first: 100)`. The maximum number of results returned is 10,000 (`max_result_window`). If you need to access more than that number, we suggest using the /guppy [download endpoint](https://github.com/uc-cdis/guppy/blob/master/doc/download.md).
+The maximum number of results returned is 10,000, which can be requested with the `(first: 10000)` argument. If you need to access more than that number, we suggest using the /guppy [download endpoint](https://github.com/uc-cdis/guppy/blob/master/doc/download.md).
 
 
 
