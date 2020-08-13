@@ -32,19 +32,19 @@ We welcome all comments, feature requests, and pull requests using GitHub issues
 ## 3. Creating a New Data Dictionary
 
 ### Core Dictionary
-We have created a basic data dictionary [DCF data dictionary](https://github.com/uc-cdis/dcfdictionary) to get you started.  You can use the DCF Data Dictionary as a starting point for creating your own data dictionary in your own commons.  It is a consensus of previously used data dictionaries and will make creating your own data dictionary more efficient.  The basic structure of this and all dictionaries includes the following node categories:
+We have created a basic data dictionary [DCF data dictionary](https://github.com/uc-cdis/dcfdictionary) to get you started.  You can use the DCF Data Dictionary as a starting point for creating your own data dictionary in your own commons. It is a consensus of previously used data dictionaries and will make creating your own data dictionary more efficient. The basic structure of this and all dictionaries includes the following node categories:
 ### Node Categories
 #### Administrative
-The Project, Study, and Subject nodes are administrative nodes that are required for any Gen3 data commons.  Administrative nodes store basic project and study information for their associated cases or subjects.  Also, the Subject node level is where the nodes start differentiationg between commons.  It can also be represented as Case depending on the use case.
+The Project, Study, and Subject nodes are administrative nodes that are required for any Gen3 data commons. Administrative nodes store basic project and study information for their associated cases or subjects.  Also, the Subject node level is where the nodes start differentiating between commons.  It can also be represented as Case depending on the use case.
 
 #### Clinical
-The Subject node links to the Demographic and Diagnosis clinical nodes. These nodes are Clinical nodes that are used to store clinical and medical history related data. The Demograpic node stores properties that represent the statistical characterization of human populations or segments of human populations (for example, characterization by year of birth, sex, and race). This node is typically used to store properties that do not change over time. The Diagnosis clinical node represents the investigation, analysis, and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms. It also pertains to the scientific determination of any kind and the concise results of such an investigation.
+The Subject node links to the Demographic and Diagnosis clinical nodes. These nodes are Clinical nodes that are used to store clinical and medical history related data. The Demographic node stores properties that represent the statistical characterization of human populations or segments of human populations (for example, characterization by year of birth, sex, and race). This node is typically used to store properties that do not change over time. The Diagnosis clinical node represents the investigation, analysis, and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms. It also pertains to the scientific determination of any kind and the concise results of such an investigation.
 
 #### Biospecimen
-The Biospecimen node category is associated with data related to biological specimens as it relates to testing, diagnostic, propagation, treatment or research purposes.  This node can contain one or more components including but not limited to cellular molecules, cells, tissues, organs, body fluids, embryos,and body excretory products.  It is composed of nodes such as Sample, Aliquot, and Read Group.  For example, in some commons Sample can represent an actual piece of tissue removed from a biological entity for testing, diagnostic, propagation, treatment or research purposes and an aliquot represents a nucleic acid extraction from this tissue.  The number of biospecimen nodes can be tuned for a particular commons depending on the desired level of granularity required.  Read group refers to sequencing read group and can be important for commons that require bioinformatics processing of sequencing data.
+The Biospecimen node category is associated with data related to biological specimens as it relates to testing, diagnostic, propagation, treatment or research purposes.  This node can contain one or more components including but not limited to cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory products.  It is composed of nodes such as Sample, Aliquot, and Read Group.  For example, in some commons Sample can represent an actual piece of tissue removed from a biological entity for testing, diagnostic, propagation, treatment or research purposes and an aliquot represents a nucleic acid extraction from this tissue.  The number of biospecimen nodes can be tuned for a particular commons depending on the desired level of granularity required.  Read group refers to sequencing read group and can be important for commons that require bioinformatics processing of sequencing data.
 
 #### Analysis
-The Analysis node category stores data that is associated with genomic pipeline analysis that is typical of next generation sequencing (NGS).  Example Analysis nodes include Genotyping Array Workfow which stores metadata for genotyping array worklow, the Proteomic Workflow node  which stores metadata for the protein mass spectrometry workflow, and the Aligned Workflow node which stores metadata for alignment pipeline used to align reads.
+The Analysis node category stores data that is associated with genomic pipeline analysis that is typical of next generation sequencing (NGS).  Example Analysis nodes include Genotyping Array Workflow which stores metadata for genotyping array workflow, the Proteomic Workflow node  which stores metadata for the protein mass spectrometry workflow, and the Aligned Workflow node which stores metadata for alignment pipeline used to align reads.
 
 #### Data File
 The Data File node category is used to store metadata related to data files that are stored in the cloud. It contains nodes such as Submitted Aligned Reads, Submitted Unaligned Reads, and Aligned Reads.  These nodes contains properties such as file_name, file_size, and data_format which describe information stored in the file.
@@ -104,7 +104,7 @@ Blood Pressure Reading:
 ### Best Practices
 
 #### Data Normalization
-When adding a new project or study into a new or an already existing data dictionary, it's important to follow the process of harmonization of data.  The harmonization process centers around updates or additions to the data dictionary, along with the possible need to harmonize the data. This process helps with the prevention of redundant properties, nodes, and allowable values that may already exist in a data dictionary.  It also involves the possibility of a data migration if the data dictionary changes affect the preexisting data (For example, the height property unit of measure change from meters to centimeters).  Before submitting new data to a commons or submitting updates to a data dictionary, check the current dictionary for properties, nodes, or enumerated values that already exist.  If there is a similar property, node, or enumberated value that exists, it's best practice to use the existing node, property, or enumerated value.  For example, if a candidate property named “infection agent” and a property named “infectious agent” already exist, then use “infectious agent.”
+When adding a new project or study into a new or an already existing data dictionary, it's important to follow the process of harmonization of data.  The harmonization process centers around updates or additions to the data dictionary, along with the possible need to harmonize the data. This process helps with the prevention of redundant properties, nodes, and allowable values that may already exist in a data dictionary.  It also involves the possibility of a data migration if the data dictionary changes affect the preexisting data (For example, the height property unit of measure change from meters to centimeters).  Before submitting new data to a commons or submitting updates to a data dictionary, check the current dictionary for properties, nodes, or enumerated values that already exist.  If there is a similar property, node, or enumerated value that exists, it's best practice to use the existing node, property, or enumerated value.  For example, if a candidate property named “infection agent” and a property named “infectious agent” already exist, then use “infectious agent.”
 
 #### Specificity vs. Generality
 
@@ -112,7 +112,7 @@ One of the goals when providing an external reference is to figure out the level
 
 #### Creating Valuable Data Descriptions
 
-It's important to create clear and concise descriptions for each property in a dictionary.  The descriptions should be understandable by someone who is not familiar with a particular domain.  When available, including the unit of measure in parenthesis at the end of the description would be helpful in cases where the unit of measure is not included elsewhere in the description. When a clear description is not readily available, it's recommended that an external vocabulary such as NCIt be used as they offer definitions for terms from a plethera of domains.
+It's important to create clear and concise descriptions for each property in a dictionary.  The descriptions should be understandable by someone who is not familiar with a particular domain.  When available, including the unit of measure in parenthesis at the end of the description would be helpful in cases where the unit of measure is not included elsewhere in the description. When a clear description is not readily available, it's recommended that an external vocabulary such as NCIt be used as they offer definitions for terms from a plethora of domains.
 
 #### Avoiding Data Loops
 
@@ -124,7 +124,7 @@ The following diagram is an example of a loop as R3 is redundant as it brings no
 
 ## 4. Dictionary Update Documentation
 
-When making updates to data dictionaries, it's important to document these changes for good record keeping purposes.  The documentation should be implemented in the release notes of the respective GitHub site.  All changes should be denoted from minor to major changes.  Common updates include enumerated value modifications, adding or removing properties or nodes, and updates to links that describe relationships and dependencies between nodes.  Every release is assoicated with a unique tag which differentiates dictionary versions.  The tags are incrementally changed based on how extensive an update (for example, for a minor update such as changing a property name version 3.3.2 would become 3.3.3).
+When making updates to data dictionaries, it's important to document these changes for good record keeping purposes.  The documentation should be implemented in the release notes of the respective GitHub site.  All changes should be denoted from minor to major changes.  Common updates include enumerated value modifications, adding or removing properties or nodes, and updates to links that describe relationships and dependencies between nodes.  Every release is associated with a unique tag which differentiates dictionary versions.  The tags are incrementally changed based on how extensive an update (for example, for a minor update such as changing a property name version 3.3.2 would become 3.3.3).
 
 ### Example Documentation
 
@@ -137,7 +137,7 @@ When making updates to data dictionaries, it's important to document these chang
 
       Add the following properties to the sample node:
       sample_name
-      sampe_time
+      sample_time
 
       Remove the following properties from the demographic node:
       sex

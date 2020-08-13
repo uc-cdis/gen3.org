@@ -9,6 +9,7 @@ menuname: developerMenu
 # Gen3 Flat Model
 
 The new flat model requires new GraphQL syntax. As it maps to the data in Elasticsearch, it requires few additional keywords to use in GraphQL query.
+This page shows a selection of various queries. You can find more queries and details on the *Guppy* query syntax on our [GitHub repositories](https://github.com/uc-cdis/guppy/blob/master/doc/queries.md).
 
 ## Querying
 
