@@ -129,6 +129,15 @@ In the Graph Model, our microservice *Peregrine* converts GraphiQL queries and h
 ```
 
 
+In the case that too many results are returned, a timeout error might occur. In that case, use [pagination](http://graphql.org/learn/pagination/) to break up the query.
+
+For example, if there are 2,550 records returned, and the graphiQL query is timing out with ```(first:3000)```, then break the query into multiple queries with offsets:
+
+```
+(first:1000, offset:0) 		# this will return records 0-1000
+(first:1000, offset:1000) 	# this will return records 1000-2000
+(first:1000, offset:2000) 	# this will return records 2000-2,550
+```
 
 
 
@@ -164,15 +173,8 @@ Example:
 }
 ```
 
-In the case that too many results are returned, a timeout error might occur. In that case, use [pagination](http://graphql.org/learn/pagination/) to break up the query.
+Queries like `(first: 0)` are not supported. To return more entries, the query call can specify a larger number such as `(first: 100)`. The maximum number of results returned is 10,000 (`max_result_window`). If you need to access more than that number, we suggest using the /guppy [download endpoint](https://github.com/uc-cdis/guppy/blob/master/doc/download.md).
 
-For example, if there are 2,550 records returned, and the graphiQL query is timing out with ```(first:3000)```, then break the query into multiple queries with offsets:
-
-```
-(first:1000, offset:0) 		# this will return records 0-1000
-(first:1000, offset:1000) 	# this will return records 1000-2000
-(first:1000, offset:2000) 	# this will return records 2000-2,550
-```
 
 
 ### Aggregations
