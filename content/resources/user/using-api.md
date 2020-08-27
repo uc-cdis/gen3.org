@@ -95,9 +95,9 @@ The API endpoint for downloading all the records in a single node of a project i
 {node} is the name (or 'node_id') of the node (e.g., 'subject'),
 {json/tsv} is the format in which data will be downloaded, either 'json' or 'tsv'.
  ```
-For example, submitting the following API request will download all the records in the 'sample' node of the project 'training-example' in an example data commons (https://gen3.datacommons.io) as a tab-separated values file (TSV):
+For example, submitting the following API request will download all the records in the 'sample' node of the project 'GEO-GSE63878' in [the demo data commons](https://gen3.datacommons.io) as a tab-separated values file (TSV):
 ```
- https://gen3.datacommons.io/api/v0/submission/training/example/export/?node_label=sample&format=tsv
+https://gen3.datacommons.io/api/v0/submission/GEO/GSE63878/export/?node_label=sample&format=tsv
 ```
 
  The API endpoint for downloading a single record in a project is as follows:
