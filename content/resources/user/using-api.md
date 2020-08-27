@@ -107,7 +107,7 @@ For example, submitting the following API request will download all the records 
 {commons-url} is the gen3 data commons url (for example, 'gen3.datacommons.io'),
 {program name} is the program node's property 'name' (for example, 'GEO'),
 {project code} is the project node's property 'code' (for example, 'GSE63878'),
-{ids} is a comma separated list of the UUIDs for the records to be downloaded (e.g., 'c9c135a-81c1-42e6-bab4-e8f5fac5a44f,3e54268c-b4a6-4cf8-bedc-1e9e49f9d6e9'),
+{ids} is a comma separated list of the UUIDs for the records to be downloaded (e.g., '180554c0-d0e1-41f2-b5b0-47655d7975ed,3e54268c-b4a6-4cf8-bedc-1e9e49f9d6e9'),
 {json/tsv} is the format in which data will be downloaded, either 'json' or 'tsv'.
  ```
 
