@@ -66,13 +66,13 @@ ql = requests.post('https://gen3.datacommons.io/api/v0/submission/graphql/', jso
 print(ql.text) # display the response
 
 # Data Download via API Endpoint Request:
-durl = 'https://gen3.datacommons.io/api/v0/submission/<program>/<project>/export?format=tsv&ids=' + ids[0:-1] # define the download url with the UUIDs of the records to download in "ids" list
+durl = 'https://gen3.datacommons.io/api/v0/submission/<program name>/<project code>/export?format=tsv&ids=' + ids[0:-1] # define the download url with the UUIDs of the records to download in "ids" list
 dl = requests.get(durl, headers=headers)
 print(dl.text) # display response
 
 # Data Upload via API Endpoint Request:
 headers['content-type']='text/tab-separated-values' # add the content-type to header
-u = requests.put('https://gen3.datacommons.io/api/v0/submission/<program>/<project>', data=tsv, headers=headers)
+u = requests.put('https://gen3.datacommons.io/api/v0/submission/<program name>/<project code>', data=tsv, headers=headers)
 ```
 
 If an an error such as "You don't have access... " occurs, then the API key is most likely out of date and a new access token will need to be made.
