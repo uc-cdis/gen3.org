@@ -72,7 +72,7 @@ print(dl.text) # display response
 
 # Data Upload via API Endpoint Request:
 headers['content-type']='text/tab-separated-values' # add the content-type to header
-u = requests.put('https://gen3.commons.io/api/v0/submission/project-id', data=tsv, headers=headers)
+u = requests.put('https://gen3.commons.io/api/v0/submission/<program>/<project>', data=tsv, headers=headers)
 ```
 
 If an an error such as "You don't have access... " occurs, then the API key is most likely out of date and a new access token will need to be made.
