@@ -87,13 +87,13 @@ Users with read access to a project can download individual metadata records in 
 
 The API endpoint for downloading all the records in a single node of a project is:
 ```
-{commons-url}/api/v0/submission/{program}/{project}/export/?node_label={node}&format={json/tsv}
+{commons-url}/api/v0/submission/{program name}/{project code}/export/?node_label={node}&format={json/tsv}
  Where:
-{commons-url} is the gen3 data commons url (for example, 'data.bloodpac.org'),
-{program} is the program name (for example, 'bpa'),
-{project} is the project name
-{node} is the name of the node
-{json/tsv} is the format in which data will be downloaded, either json or tsv
+{commons-url} is the gen3 data commons url (for example, 'gen3.datacommons.io'),
+{program name} is the program node's property 'name' (for example, 'GEO'),
+{project code} is the project node's property 'code' (for example, 'GSE63878'),
+{node} is the name (or 'node_id') of the node (e.g., 'subject'),
+{json/tsv} is the format in which data will be downloaded, either 'json' or 'tsv'.
  ```
 For example, submitting the following API request will download all the records in the 'sample' node of the project 'training-example' in an example data commons (https://gen3.datacommons.io) as a tab-separated values file (TSV):
 ```
@@ -102,25 +102,17 @@ For example, submitting the following API request will download all the records 
 
  The API endpoint for downloading a single record in a project is as follows:
 ```
-{commons-url}/api/v0/submission/{program}/{project}/export?ids={ids}&format={json/tsv}
+{commons-url}/api/v0/submission/{program name}/{project code}/export?ids={ids}&format={json/tsv}
  Where:
-{commons-url} is the gen3 data commons url (for example, 'data.bloodpac.org'),
-{program} is the program name (for example, 'bpa'),
-{project} is the project name
-{ids} is a comma separated list of the UUIDs for the records to be downloaded
-{json/tsv} is the format in which data will be downloaded, either json or tsv
+{commons-url} is the gen3 data commons url (for example, 'gen3.datacommons.io'),
+{program name} is the program node's property 'name' (for example, 'GEO'),
+{project code} is the project node's property 'code' (for example, 'GSE63878'),
+{ids} is a comma separated list of the UUIDs for the records to be downloaded (e.g., 'c9c135a-81c1-42e6-bab4-e8f5fac5a44f,3e54268c-b4a6-4cf8-bedc-1e9e49f9d6e9'),
+{json/tsv} is the format in which data will be downloaded, either 'json' or 'tsv'.
  ```
 
- For example, submitting the following API request will download the two records corresponding to the UUIDs (bae26d13-9231-44e7-b6da-8057b35ad829 and e2b5705f-cd0b-4f4b-bb37-0c3e3032b71d), which are in the 'read_group' node of the project 'training-example' in the example data commons. This downloads a 'read_group.tsv' file.
+ For example, submitting the following API request will download the two records corresponding to the UUIDs (the 'id' property) '180554c0-d0e1-41f2-b5b0-47655d7975ed' and '3e54268c-b4a6-4cf8-bedc-1e9e49f9d6e9', which are records in the 'subject' node of the project 'GEO-GSE63878' in the [demo data commons](gen3.datacommons.io). This downloads a 'subjects.tsv' file containing those two records.
 
  ```
- https://gen3.datacommons.io/api/v0/submission/training/example/export?ids=bae26d13-9231-44e7-b6da-8057b35ad829,e2b5705f-cd0b-4f4b-bb37-0c3e3032b71d&format=tsv
-```
-
- If the list of UUIDs contains ids from different nodes in a project, then the data returned will be an archive containing a separate tsv/json per node.
-
- For example, if we add a third UUID to the previous comma-separated list of ids (c003a4b4-7d92-49d0-a412-375905328dca), which is the UUID of a record in the 'sample' node, then submitting the following request will download a 'tar.gz' archive containing a 'sample.tsv' and a 'read_group.tsv'.
-
- ```
- https://gen3.datacommons.io/api/v0/submission/training/example/export?ids=aae26d13-9231-44e7-b6da-8057b35ad829,d2b5705f-cd0b-4f4b-bb37-0c3e3032b71d,c003a4b4-7d92-49d0-a412-375905328dca&format=tsv
+https://gen3.datacommons.io/api/v0/submission/GEO/GSE63878/export?ids=180554c0-d0e1-41f2-b5b0-47655d7975ed,3e54268c-b4a6-4cf8-bedc-1e9e49f9d6e9&format=tsv
 ```
