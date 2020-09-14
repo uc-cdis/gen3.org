@@ -292,7 +292,7 @@ It is possible to link data on Gen3 that is stored on other cloud services (Amaz
 
 - Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest **has** to contain the following properties at the minimum: <ins>md5</ins> checksum, file <ins>size</ins> in bytes, and the full bucket <ins>urls</ins>. The column heads in the example manifest below should be taken as a reference as the indexing process is case- and word-sensitive.
 
-![manifest](manifest_example.png)
+    ![manifest](manifest_example.png)
 
 >__NOTE:__ If you want to authorize the access to the files, you need to add consent groups in `authz` and `acl`. In other words, if you want a bucket to be tied to a project, you can index all the files with the project's `authz`.
 `authz` and `acl` are an Arborist resource or a Gen3 path following the Gen3 structure of programs and projects. The Gen3 resource path in the `authz` field must be able to map to user-permissions provided during an authorization sync (e.g. from dbGaP or a `user.yaml`). `acl` is only advised if you want to customize access to individual objects within a bucket, since IAM permissions will generally apply to all objects within a bucket. Please contact us if more information are required.
@@ -300,11 +300,11 @@ If the bucket contains too many files to download locally, [CTDIS-owned scripts]
 
 - The manifest needs to be indexed, which is done by uploading the TSV file using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#indexing-manifest) (not the gen3-client) or in the [user interface (UI)](https://gen3.datacommons.io/indexing). If the UI does not appear on your commons (after replacing the core url), please get in contact with us to set up the environment.
 
-![index_upload](index_upload.png)
+    ![index_upload](index_upload.png)
 
 - After indexing, download the manifest that includes now the GUIDs from either the UI or using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#download-manifest). Note that the GUID represents now the `object_id` property in the Gen3 data dictionary for the category `data_files`.
 
-![index_download](index_download.png)
+    ![index_download](index_download.png)
 
 <!---(If you are using cloud-automation, bullets 2 and 3 are done by a [Sower job](https://github.com/uc-cdis/sower-jobs/blob/master/README.md#manifest-indexing).)-->
 
@@ -343,6 +343,6 @@ More documentation about AWS CLI terminal commands can be found [here](https://a
 
 - After finding the path to files of interest in the bucket, calculating their size and md5sum, the manifest can be created. In our example, the access is open, so an asterisk can be inserted into the `acl` column. No specific access is given in `authz`.
 
-![manifest2](manifest_example_2.png)
+    ![manifest2](manifest_example_2.png)
 
 The resulting manifest can be downloaded and submission files for the `core_metadata_collection` node can be prepared.
