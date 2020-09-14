@@ -338,7 +338,7 @@ More documentation about AWS CLI terminal commands can be found [here](https://a
 
 ![manifest2](manifest_example_2.png)
 
-	The outcome of the indexed manifest will be then uploaded to the CMD node. [TBD]
+The outcome of the indexed manifest will be then uploaded to the CMD node. [TBD]
 
 
 
