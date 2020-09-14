@@ -353,7 +353,6 @@ After finding the path to file in the bucket, calculating size and md5sum, the m
 
 
 The outcome of the indexed manifest will be then uploaded to the CMD node.
-This manifest will be uploaded into /indexing and then downloaded. ...then create submission files for the file.
 
 
 
@@ -361,6 +360,4 @@ This manifest will be uploaded into /indexing and then downloaded. ...then creat
 
 
 
-```
-ssh -i ~/.ssh/my_key_pair_here.pem onekgenomes@ec2-23-20-189-94.compute-1.amazonaws.com
-```
+[//]: # ssh -i ~/.ssh/my_key_pair_here.pem onekgenomes@ec2-23-20-189-94.compute-1.amazonaws.com
