@@ -288,4 +288,4 @@ The links in the downloaded TSV can be updated by filling in the submitter_ids o
 
 
 ## 6. Linking Data from external Data Clouds to Gen3 Data Commons
-It is possible to link data on Gen3 that is stored on other cloud services (Amazon Web Services AWS, Google Cloud Storage GCS) by a process called DIIRM (*Data Ingestion, Integration, and Release Management*). If you have a bucket of files and want to link the data to Gen3 you can find [here step-by-step guide to do so](https://gen3.org/resources/user/sower).
+It is possible to link data on Gen3 that is stored on other cloud services (Amazon Web Services AWS, Google Cloud Storage GCS) by a process called DIIRM (*Data Ingestion, Integration, and Release Management*). If you have a bucket of files and want to link the data to Gen3 you can find [here step-by-step guide to do so](https://gen3.org/resources/user/submit-data/sower).
