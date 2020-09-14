@@ -290,7 +290,7 @@ The links in the downloaded TSV can be updated by filling in the submitter_ids o
 ## Linking Data from external Data Clouds to Gen3 Data Commons
 It is possible to link data on Gen3 that is stored on other cloud services (Amazon Web Services AWS, Google Cloud Storage GCS) by a process called DIIRM (*Data Ingestion, Integration, and Release Management*). If you have a bucket of files and want to link the data to Gen3 you can find below a step-by-step guide to do so. Before going forward, you need to 1) know the signed URL from the bucket and 2) make sure you have access to the external bucket.
 
-- Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest **has** to contain the following properties at the minimum: md5sum hash, file size in bytes, and the full bucket url.
+- Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest **has** to contain the following properties at the minimum: **md5**, file **size** in bytes, and the full bucket **urls**. The example manifest below should be taken as a reference as the indexing process is case- and word-sensitive.
 
 ![manifest](manifest_example.png)
 
@@ -341,11 +341,7 @@ More documentation about AWS CLI terminal commands can be found [here](https://a
 
 - After finding the path to files of interest in the bucket, calculating their size and md5sum, the manifest can be created. In our example, the access is open, so an asterisk can be inserted into the `acl` column. No specific access is given in `authz`.
 
-| size | md5                              | acl | urls                                                          | guid | authz |
-|------|----------------------------------|-----|---------------------------------------------------------------|------|-------|
-| 745  | 613ccfbc68287db60c663519dab6a4ff | *   | s3://1000genomes/sequence_indices/20091216_20100311.stats.csv |      |       |
-|      |                                  |     |                                                               |      |       |
-
+![manifest2](manifest_example_2.png)
 
 The outcome of the indexed manifest will be then uploaded to the CMD node.
 
