@@ -20,7 +20,7 @@ The process of uploading a data project to a Gen3 data commons is simple:
 3. [Map Uploaded Files to a Data File Node](#3-map-uploaded-files-to-a-data-file-node)
 4. [Submit Additional Project Metadata](#4-submit-additional-project-metadata)
 5. [Link Data File Records to their Metadata Records](#5-link-files-to-their-metadata)
-6. [Linking Data from external Data Clouds to Gen3 Data Commons](#6linking-data-from-external-data-clouds-to-gen3-data-commons)
+6. [Linking Data from external Data Clouds to Gen3 Data Commons](#6-linking-data-from-external-data-clouds-to-gen3-data-commons)
 
 * * *
 
