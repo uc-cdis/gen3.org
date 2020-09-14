@@ -20,7 +20,7 @@ The process of uploading a data project to a Gen3 data commons is simple:
 3. [Map Uploaded Files to a Data File Node](#3-map-uploaded-files-to-a-data-file-node)
 4. [Submit Additional Project Metadata](#4-submit-additional-project-metadata)
 5. [Link Data File Records to their Metadata Records](#5-link-files-to-their-metadata)
-6. [Linking-Data-from-external-Data-Clouds-to-Gen3-Data-Commons](#6linking-data-from-external-data-clouds-to-gen3-data-commons)
+6. [Linking Data from external Data Clouds to Gen3 Data Commons](#6linking-data-from-external-data-clouds-to-gen3-data-commons)
 
 * * *
 
@@ -288,24 +288,23 @@ The links in the downloaded TSV can be updated by filling in the submitter_ids o
 
 
 ## Linking Data from external Data Clouds to Gen3 Data Commons
-It is possible to link data on Gen3 that is stored on other cloud services (Amazon Web Services AWS, Google Cloud Storage GCS) by a process called DIIRM (*Data Ingestion, Integration, and Release Management*). If you have a bucket of files and want to link the data to Gen3 you can find below a step-by-step guide to do so. Before going forward, you need to 1) know the signed URL from the bucket and 2) make sure you have access to the external bucket.
+It is possible to link data on Gen3 that is stored on other cloud services (Amazon Web Services AWS, Google Cloud Storage GCS) by a process called DIIRM (*Data Ingestion, Integration, and Release Management*). If you have a bucket of files and want to link the data to Gen3 you can find below a step-by-step guide to do so. Before going forward, you need to a) know the signed URL from the bucket and b) make sure you have access to the external bucket.
 
-- Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest **has** to contain the following properties at the minimum: **md5**, file **size** in bytes, and the full bucket **urls**. The example manifest below should be taken as a reference as the indexing process is case- and word-sensitive.
+1. Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest **has** to contain the following properties at the minimum: __md5__, file __size__ in bytes, and the full bucket __urls__. The example manifest below should be taken as a reference as the indexing process is case- and word-sensitive.
 
 ![manifest](manifest_example.png)
 
-- In the manifest, providing the GUID is not mandatory as IndexD will index the files automatically.
-If you want to authorize the access to the files, you need to add consent groups in `authz` and `acl`. In other words, if you want a bucket to be tied to a project, you can index all the files with the project's `authz`.
+>__Note:__ If you want to authorize the access to the files, you need to add consent groups in `authz` and `acl`. In other words, if you want a bucket to be tied to a project, you can index all the files with the project's `authz`.
 `authz` and `acl` are an Arborist resource or a Gen3 path following the Gen3 structure of programs and projects. The Gen3 resource path in the `authz` field must be able to map to user-permissions provided during an authorization sync (e.g. from dbGaP or a `user.yaml`). `acl` is only advised if you want to customize access to individual objects within a bucket, since IAM permissions will generally apply to all objects within a bucket. Please contact us if more information are required.
 If the bucket contains too many files to download locally, [CTDIS-owned scripts](https://github.com/uc-cdis/cloud-automation/blob/master/doc/bucket-manifest.md) can generate an object manifest of an s3 bucket in cloud-automation.
 
-- The manifest needs to be indexed, which is done by uploading the TSV file using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#indexing-manifest) (not the gen3-client) or in the [user interface (UI)](https://gen3.datacommons.io/indexing). If the UI does not appear on your commons (after replacing the core url), please get in contact with us to set up the environment.
+2. The manifest needs to be indexed, which is done by uploading the TSV file using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#indexing-manifest) (not the gen3-client) or in the [user interface (UI)](https://gen3.datacommons.io/indexing). If the UI does not appear on your commons (after replacing the core url), please get in contact with us to set up the environment.
 
-- After indexing, download the manifest that includes now the GUIDs from either the UI or using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#download-manifest). Note that the GUID represents now the `object_id` property in the Gen3 data dictionary for the category `data_files`.
+3. After indexing, download the manifest that includes now the GUIDs from either the UI or using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#download-manifest). Note that the GUID represents now the `object_id` property in the Gen3 data dictionary for the category `data_files`.
 
 <!---(If you are using cloud-automation, bullets 2 and 3 are done by a [Sower job](https://github.com/uc-cdis/sower-jobs/blob/master/README.md#manifest-indexing).)-->
 
-- Once these files are indexed, you can create a submission file for the Gen3 graph model. You can now choose between two options.
+4. Once these files are indexed, you can create a submission file for the Gen3 graph model. You can now choose between two options.
 For the first option, you can link the new data by creating a `core_metadata_collection` entity, linking it to the data_file node, and submitting your data files directly to the data_file node. For the second option, you can create a structured chain of metadata according to the Gen3 graph model to obtain the link to the data_file node. Then, you can submit the files to the data_file node. Submission can be done either in Windmill or using the [Gen3 python SDK](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html).
 
 ### Quick example - 1000 Genomes
@@ -315,11 +314,7 @@ Here we present an example for the DIIRM process described above. The goal is to
 
 - Then, you need to launch your AWS instance in the browser. In the tab "Choose AMI", find `ami-fad40b93` under community AMIs, as described [here](https://www.internationalgenome.org/using-1000-genomes-data-amazon-web-service-cloud), select `t1.micro` (free tier), make sure your location is set to `N. Virginia, us-east-1` (top right corner in drop-down menu), and select the storage as paid for. Choose your keypair, and launch your instance.
 
-- Then, install the client [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html). After successful installation, AWS CLI needs to be [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html):
-```
-aws configure
-```
-- Where you need to insert the information from your keypair:
+- Then, install the client [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html). After successful installation, AWS CLI needs to be [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html). Insert the location and information from your keypair:
 ```
 $/usr/local/bin: aws configure
 AWS Access Key ID [*******************2]:
@@ -343,7 +338,7 @@ More documentation about AWS CLI terminal commands can be found [here](https://a
 
 ![manifest2](manifest_example_2.png)
 
-The outcome of the indexed manifest will be then uploaded to the CMD node.
+	The outcome of the indexed manifest will be then uploaded to the CMD node. [TBD]
 
 
 
