@@ -287,7 +287,6 @@ The links in the downloaded TSV can be updated by filling in the submitter_ids o
 
 
 ## Linking Data from external Data Clouds to Gen3 Data Commons
-
 It is possible to link data on Gen3 that is stored on other cloud services (Amazon Web Services AWS, Google Cloud Storage GCS) by a process called DIIRM (Data Ingestion, Integration, and Release Management). If you have a bucket of files and want to link the data to Gen3 you can find below a step-by-step guide to do so. Before going forward, you need to 1) know the signed URL from the bucket and 2) make sure you have access to the external bucket.
 
 1. Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest *has* to contain the following properties at the minimum: md5sum hash, file size in bytes, and the full bucket url. If the bucket contains too many files to download locally, [CTDIS-owned scripts](https://github.com/uc-cdis/cloud-automation/blob/master/doc/bucket-manifest.md) can generate an object manifest of an s3 bucket in cloud-automation.
@@ -311,13 +310,13 @@ If you want to authorize the access to the files, you need to add consent groups
 4. Once these files are indexed, you can create a submission file for the Gen3 graph model. You can now choose between two options.
 For the first option, you can link the new data by creating a `core_metadata_collection` entity, linking it to the data_file node, and submitting your data files directly to the data_file node. For the second option, you can create a structured chain of metadata according to the Gen3 graph model to obtain the link to the data_file node. Then, you can submit the files to the data_file node. Submission can be done either in Windmill or using the [Gen3 python SDK](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html).
 
-
+### Linking Data from external Data Clouds to Gen3 Data Commons - Example 1000 Genomes
 In this guide, we show the process described above by running an example using the publicly accessible data files in the 1000 Genomes Project bucket hosted by AWS.
 Example bucket: http://s3.amazonaws.com/1000genomes
 
 Login into AWS with your host institution or [create your own account](aws.amazon.com/ec2). Create your [keypair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html#create-a-key-pair) and save it under `~/.ssh`. Make sure to edit the resource in user credential policies under Identity and Access Management (IAM) in your EC2 instance. Insert the Amazon Resource Name (ARN) into the policies JSON, even if it's a public bucket. For this example, the ARNs are `arn:aws:s3:::1000genomes` and `arn:aws:s3:::1000genomes/*`.
-Then, you need to launch your AWS instance in the browser. In the tab "Choose AMI", find `ami-fad40b93` under community AMIs, as described [here](https://www.internationalgenome.org/using-1000-genomes-data-amazon-web-service-cloud), select `t1.micro` (free tier), make sure you are at us-east-1 (N. Virginia, top right corner in drop-down menu), and select the storage as paid for. Choose your keypair, and launch your instance.
 
+Then, you need to launch your AWS instance in the browser. In the tab "Choose AMI", find `ami-fad40b93` under community AMIs, as described [here](https://www.internationalgenome.org/using-1000-genomes-data-amazon-web-service-cloud), select `t1.micro` (free tier), make sure you are at us-east-1 (N. Virginia, top right corner in drop-down menu), and select the storage as paid for. Choose your keypair, and launch your instance.
 
 Then, find and install the client [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html). After successful installation, AWS needs to be [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) in the terminal
 ```
@@ -326,8 +325,8 @@ aws configure
 Where you need to insert the information from your keypair:
 ```
 10:47:36  /usr/local/bin: aws configure
-AWS Access Key ID [****************YH62]:
-AWS Secret Access Key [****************2d9H]:
+AWS Access Key ID [*******************2]:
+AWS Secret Access Key [*******************H]:
 Default region name [None]: us-east-1
 Default output format [None]:
 ```
@@ -361,13 +360,7 @@ This manifest will be uploaded into /indexing and then downloaded. ...then creat
 
 
 
------
-Then, you need to launch your AWS instance in the browser. In the tab "Choose AMI", find `ami-fad40b93` under community AMIs, select `t1.micro` (free tier), make sure you are at us-east-1 (N. Virginia, top right corner in drop-down menu), and select the storage as paid for. Choose your keypair, and launch your instance.
 
-
-In your terminal, enter the Public DNS following the example below. The public DNS for this instance can be found in the description of the instance.
 ```
 ssh -i ~/.ssh/my_key_pair_here.pem onekgenomes@ec2-23-20-189-94.compute-1.amazonaws.com
 ```
-Configure [AWS](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html), do the test commands as shown [here](https://www.internationalgenome.org/using-1000-genomes-data-amazon-web-service-cloud/).
------
