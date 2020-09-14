@@ -345,4 +345,4 @@ More documentation about AWS CLI terminal commands can be found [here](https://a
 
     ![manifest2](manifest_example_2.png)
 
-The resulting manifest can be downloaded and submission files for the `core_metadata_collection` node can be prepared.
+    The resulting manifest can be downloaded and submission files for the `core_metadata_collection` node can be prepared.
