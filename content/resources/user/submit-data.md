@@ -290,7 +290,7 @@ The links in the downloaded TSV can be updated by filling in the submitter_ids o
 ## 6. Linking Data from external Data Clouds to Gen3 Data Commons
 It is possible to link data on Gen3 that is stored on other cloud services (Amazon Web Services AWS, Google Cloud Storage GCS) by a process called DIIRM (*Data Ingestion, Integration, and Release Management*). If you have a bucket of files and want to link the data to Gen3 you can find below a step-by-step guide to do so. Before going forward, you need to a) know the signed URL from the bucket and b) make sure you have access to the external bucket.
 
-- Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest **has** to contain the following properties at the minimum: <ins>md5</ins>, file __size__ in bytes, and the full bucket __urls__. The column heads in the example manifest below should be taken as a reference as the indexing process is case- and word-sensitive.
+- Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest **has** to contain the following properties at the minimum: <ins>md5</ins> checksum, file <ins>size</ins> in bytes, and the full bucket <ins>urls</ins>. The column heads in the example manifest below should be taken as a reference as the indexing process is case- and word-sensitive.
 
 ![manifest](manifest_example.png)
 
