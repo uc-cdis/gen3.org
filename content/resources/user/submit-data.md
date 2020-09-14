@@ -288,14 +288,11 @@ The links in the downloaded TSV can be updated by filling in the submitter_ids o
 
 
 ## Linking Data from external Data Clouds to Gen3 Data Commons
-It is possible to link data on Gen3 that is stored on other cloud services (Amazon Web Services AWS, Google Cloud Storage GCS) by a process called DIIRM (Data Ingestion, Integration, and Release Management). If you have a bucket of files and want to link the data to Gen3 you can find below a step-by-step guide to do so. Before going forward, you need to 1) know the signed URL from the bucket and 2) make sure you have access to the external bucket.
+It is possible to link data on Gen3 that is stored on other cloud services (Amazon Web Services AWS, Google Cloud Storage GCS) by a process called DIIRM (*Data Ingestion, Integration, and Release Management*). If you have a bucket of files and want to link the data to Gen3 you can find below a step-by-step guide to do so. Before going forward, you need to 1) know the signed URL from the bucket and 2) make sure you have access to the external bucket.
 
-- Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest *has* to contain the following properties at the minimum: md5sum hash, file size in bytes, and the full bucket url.
+- Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest **has** to contain the following properties at the minimum: md5sum hash, file size in bytes, and the full bucket url.
 
-| size | md5 | acl | urls | guid | authz |
-|--|--|--|--|--|--|
-|  |  |  |  |  |  |
-|  |  |  |  |  |  |
+![manifest](manifest_example.png)
 
 - In the manifest, providing the GUID is not mandatory as IndexD will index the files automatically.
 If you want to authorize the access to the files, you need to add consent groups in `authz` and `acl`. In other words, if you want a bucket to be tied to a project, you can index all the files with the project's `authz`.
