@@ -314,15 +314,15 @@ For the first option, you can link the new data by creating a `core_metadata_col
 In this guide, we show the process described above by running an example using the publicly accessible data files in the 1000 Genomes Project bucket hosted by AWS.
 Example bucket: http://s3.amazonaws.com/1000genomes
 
-Login into AWS with your host institution or [create your own account](aws.amazon.com/ec2). Create your [keypair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html#create-a-key-pair) and save it under `~/.ssh`. Make sure to edit the resource in user credential policies under Identity and Access Management (IAM) in your EC2 instance. Insert the Amazon Resource Name (ARN) into the policies JSON, even if it's a public bucket. For this example, the ARNs are `arn:aws:s3:::1000genomes` and `arn:aws:s3:::1000genomes/*`.
+- Login into AWS with your host institution or [create your own account](aws.amazon.com/ec2). Create your [keypair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html#create-a-key-pair) and save it under `~/.ssh`. Make sure to edit the resource in user credential policies under Identity and Access Management (IAM) in your EC2 instance. Insert the Amazon Resource Name (ARN) into the policies JSON, even if it's a public bucket. For this example, the ARNs are `arn:aws:s3:::1000genomes` and `arn:aws:s3:::1000genomes/*`.
 
-Then, you need to launch your AWS instance in the browser. In the tab "Choose AMI", find `ami-fad40b93` under community AMIs, as described [here](https://www.internationalgenome.org/using-1000-genomes-data-amazon-web-service-cloud), select `t1.micro` (free tier), make sure you are at us-east-1 (N. Virginia, top right corner in drop-down menu), and select the storage as paid for. Choose your keypair, and launch your instance.
+- Then, you need to launch your AWS instance in the browser. In the tab "Choose AMI", find `ami-fad40b93` under community AMIs, as described [here](https://www.internationalgenome.org/using-1000-genomes-data-amazon-web-service-cloud), select `t1.micro` (free tier), make sure you are at us-east-1 (N. Virginia, top right corner in drop-down menu), and select the storage as paid for. Choose your keypair, and launch your instance.
 
-Then, find and install the client [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html). After successful installation, AWS needs to be [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) in the terminal
+- Then, find and install the client [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html). After successful installation, AWS needs to be [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) in the terminal
 ```
 aws configure
 ```
-Where you need to insert the information from your keypair:
+- Where you need to insert the information from your keypair:
 ```
 10:47:36  /usr/local/bin: aws configure
 AWS Access Key ID [*******************2]:
@@ -331,19 +331,19 @@ Default region name [None]: us-east-1
 Default output format [None]:
 ```
 
-To access the bucket structure and find files, run
+- To access the bucket structure and find files, run
 ```
 aws s3 ls s3//:bucketname
 ```
 
-To copy files to your local environment run
+- To copy files to your local environment run
 ```
 aws s3 cp s3://1000genomes/[path-to-file] [local-path]
 aws s3 cp s3://1000genomes/sequence_indices/20091216_20100311.stats.csv /usr/local/bin/sower_test/
 ```
 More documentation about AWS CLI terminal commands can be found [here](https://aws.amazon.com/cli/#file_commands_anchor).
 
-After finding the path to file in the bucket, calculating size and md5sum, the manifest can be created. In our example, the access is open, so an asterisk can be inserted into the `acl` column. No specific access is given in `authz`.
+- After finding the path to file in the bucket, calculating size and md5sum, the manifest can be created. In our example, the access is open, so an asterisk can be inserted into the `acl` column. No specific access is given in `authz`.
 
 | size | md5                              | acl | urls                                                          | guid | authz |
 |------|----------------------------------|-----|---------------------------------------------------------------|------|-------|
