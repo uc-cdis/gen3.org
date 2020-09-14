@@ -300,7 +300,11 @@ If the bucket contains too many files to download locally, [CTDIS-owned scripts]
 
 - The manifest needs to be indexed, which is done by uploading the TSV file using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#indexing-manifest) (not the gen3-client) or in the [user interface (UI)](https://gen3.datacommons.io/indexing). If the UI does not appear on your commons (after replacing the core url), please get in contact with us to set up the environment.
 
+![index_upload](index_upload.png)
+
 - After indexing, download the manifest that includes now the GUIDs from either the UI or using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#download-manifest). Note that the GUID represents now the `object_id` property in the Gen3 data dictionary for the category `data_files`.
+
+![index_download](index_download.png)
 
 <!---(If you are using cloud-automation, bullets 2 and 3 are done by a [Sower job](https://github.com/uc-cdis/sower-jobs/blob/master/README.md#manifest-indexing).)-->
 
@@ -312,9 +316,12 @@ Here we present an example for the DIIRM process described above. The goal is to
 
 - Login into AWS with your host institution ([UChicago](http://awslogin.uchicago.edu/)) or [create your own account](aws.amazon.com/ec2). Create your [keypair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html#create-a-key-pair) and save it under `~/.ssh`. Make sure to edit the resource in user credential policies under Identity and Access Management (IAM) in your EC2 instance. Insert the Amazon Resource Name (ARN) into the policies JSON, even if it's a public bucket. For this example, the ARNs are `arn:aws:s3:::1000genomes` and `arn:aws:s3:::1000genomes/*`.
 
-- Then, you need to launch your AWS instance in the browser. In the tab "Choose AMI", find `ami-fad40b93` under community AMIs, as described [here](https://www.internationalgenome.org/using-1000-genomes-data-amazon-web-service-cloud), select `t1.micro` (free tier), make sure your location is set to `N. Virginia, us-east-1` (top right corner in drop-down menu), and select the storage as paid for. Choose your keypair, and launch your instance.
+- If you want to use an AWS instance that contains all necessary software to run the tutorial created by 1000 Genomes, you need to launch your AWS instance in the browser. In the tab "Choose AMI", find `ami-fad40b93` under community AMIs, as described [here](https://www.internationalgenome.org/using-1000-genomes-data-amazon-web-service-cloud), select `t1.micro` (free tier), make sure your location is set to `N. Virginia, us-east-1` (top right corner in drop-down menu), and select the storage as paid for. Choose your keypair, and launch your instance. Find your public DNS in the description of the instance (begins with `ec`) and run:
+```
+ssh -i ~/.ssh/my_key_pair_here.pem onekgenomes@ec2-23-20-189-94.compute-1.amazonaws.com
+```
 
-- Then, install the client [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html). After successful installation, AWS CLI needs to be [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html). Insert the location and information from your keypair:
+- To look through the bucket and find the data files of interest, you first need to install the client [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html). After successful installation, AWS CLI needs to be [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html). Insert the location and information from your keypair:
 ```
 $/usr/local/bin: aws configure
 AWS Access Key ID [*******************2]:
@@ -338,12 +345,4 @@ More documentation about AWS CLI terminal commands can be found [here](https://a
 
 ![manifest2](manifest_example_2.png)
 
-The outcome of the indexed manifest will be then uploaded to the CMD node. [TBD]
-
-
-
-
-
-
-
-<!-- ssh -i ~/.ssh/my_key_pair_here.pem onekgenomes@ec2-23-20-189-94.compute-1.amazonaws.com -->
+The resulting manifest can be downloaded and submission files for the `core_metadata_collection` node can be prepared.
