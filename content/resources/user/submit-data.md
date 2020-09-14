@@ -293,9 +293,9 @@ It is possible to link data on Gen3 that is stored on other cloud services (Amaz
 - Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest *has* to contain the following properties at the minimum: md5sum hash, file size in bytes, and the full bucket url.
 
 | size | md5 | acl | urls | guid | authz |
-|------|-----|-----|------|------|-------|
-|      |     |     |      |      |       |
-|      |     |     |      |      |       |
+|--|--|--|--|--|--|
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
 
 - In the manifest, providing the GUID is not mandatory as IndexD will index the files automatically.
 If you want to authorize the access to the files, you need to add consent groups in `authz` and `acl`. In other words, if you want a bucket to be tied to a project, you can index all the files with the project's `authz`.
