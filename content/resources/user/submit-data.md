@@ -289,17 +289,15 @@ The links in the downloaded TSV can be updated by filling in the submitter_ids o
 ## Linking Data from external Data Clouds to Gen3 Data Commons
 It is possible to link data on Gen3 that is stored on other cloud services (Amazon Web Services AWS, Google Cloud Storage GCS) by a process called DIIRM (Data Ingestion, Integration, and Release Management). If you have a bucket of files and want to link the data to Gen3 you can find below a step-by-step guide to do so. Before going forward, you need to 1) know the signed URL from the bucket and 2) make sure you have access to the external bucket.
 
-1. Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest *has* to contain the following properties at the minimum: md5sum hash, file size in bytes, and the full bucket url. If the bucket contains too many files to download locally, [CTDIS-owned scripts](https://github.com/uc-cdis/cloud-automation/blob/master/doc/bucket-manifest.md) can generate an object manifest of an s3 bucket in cloud-automation.
-
+1. Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest *has* to contain the following properties at the minimum: md5sum hash, file size in bytes, and the full bucket url.
 | size | md5 | acl | urls | guid | authz |
 |------|-----|-----|------|------|-------|
 |      |     |     |      |      |       |
 |      |     |     |      |      |       |
-|      |     |     |      |      |       |
-
 In the manifest, providing the GUID is not mandatory as IndexD will index the files automatically.
 If you want to authorize the access to the files, you need to add consent groups in `authz` and `acl`.
 `authz` and `acl` are an Arborist resource or a Gen3 path following the Gen3 structure of programs and projects. In other words, you can index all the files with the project's `authz`, if you want a bucket to be tied to a project. The Gen3 resource path in the `authz` field must be able to map to user-permissions provided during an authorization sync (e.g. from dbGaP or a `user.yaml`). `acl` is only advised if you want to customize access to individual objects within a bucket, since IAM permissions will generally apply to all objects within a bucket. Please contact us if more information are required.
+If the bucket contains too many files to download locally, [CTDIS-owned scripts](https://github.com/uc-cdis/cloud-automation/blob/master/doc/bucket-manifest.md) can generate an object manifest of an s3 bucket in cloud-automation.
 
 2. The manifest needs to be indexed, which is done by uploading the TSV file using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#indexing-manifest) (not the gen3-client) or in the [user interface (UI)](https://gen3.datacommons.io/indexing). If the UI does not appear on your commons (after replacing the core url), please get in contact with us to set up the environment.
 
