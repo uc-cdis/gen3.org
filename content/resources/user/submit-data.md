@@ -290,7 +290,7 @@ The links in the downloaded TSV can be updated by filling in the submitter_ids o
 ## 6. Linking Data from external Data Clouds to Gen3 Data Commons
 It is possible to link data on Gen3 that is stored on other cloud services (Amazon Web Services AWS, Google Cloud Storage GCS) by a process called DIIRM (*Data Ingestion, Integration, and Release Management*). If you have a bucket of files and want to link the data to Gen3 you can find below a step-by-step guide to do so. Before going forward, you need to a) know the signed URL from the bucket and b) make sure you have access to the external bucket.
 
-1. Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest **has** to contain the following properties at the minimum: __md5__, file __size__ in bytes, and the full bucket __urls__. The column heads in the example manifest below should be taken as a reference as the indexing process is case- and word-sensitive.
+- Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest **has** to contain the following properties at the minimum: __md5__, file __size__ in bytes, and the full bucket __urls__. The column heads in the example manifest below should be taken as a reference as the indexing process is case- and word-sensitive.
 
 ![manifest](manifest_example.png)
 
@@ -298,13 +298,13 @@ It is possible to link data on Gen3 that is stored on other cloud services (Amaz
 `authz` and `acl` are an Arborist resource or a Gen3 path following the Gen3 structure of programs and projects. The Gen3 resource path in the `authz` field must be able to map to user-permissions provided during an authorization sync (e.g. from dbGaP or a `user.yaml`). `acl` is only advised if you want to customize access to individual objects within a bucket, since IAM permissions will generally apply to all objects within a bucket. Please contact us if more information are required.
 If the bucket contains too many files to download locally, [CTDIS-owned scripts](https://github.com/uc-cdis/cloud-automation/blob/master/doc/bucket-manifest.md) can generate an object manifest of an s3 bucket in cloud-automation.
 
-2. The manifest needs to be indexed, which is done by uploading the TSV file using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#indexing-manifest) (not the gen3-client) or in the [user interface (UI)](https://gen3.datacommons.io/indexing). If the UI does not appear on your commons (after replacing the core url), please get in contact with us to set up the environment.
+- The manifest needs to be indexed, which is done by uploading the TSV file using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#indexing-manifest) (not the gen3-client) or in the [user interface (UI)](https://gen3.datacommons.io/indexing). If the UI does not appear on your commons (after replacing the core url), please get in contact with us to set up the environment.
 
-3. After indexing, download the manifest that includes now the GUIDs from either the UI or using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#download-manifest). Note that the GUID represents now the `object_id` property in the Gen3 data dictionary for the category `data_files`.
+- After indexing, download the manifest that includes now the GUIDs from either the UI or using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#download-manifest). Note that the GUID represents now the `object_id` property in the Gen3 data dictionary for the category `data_files`.
 
 <!---(If you are using cloud-automation, bullets 2 and 3 are done by a [Sower job](https://github.com/uc-cdis/sower-jobs/blob/master/README.md#manifest-indexing).)-->
 
-4. Once these files are indexed, you can create a submission file for the Gen3 graph model. You can now choose between two options.
+- Once these files are indexed, you can create a submission file for the Gen3 graph model. You can now choose between two options.
 For the first option, you can link the new data by creating a `core_metadata_collection` entity, linking it to the data_file node, and submitting your data files directly to the data_file node. For the second option, you can create a structured chain of metadata according to the Gen3 graph model to obtain the link to the data_file node. Then, you can submit the files to the data_file node. Submission can be done either in Windmill or using the [Gen3 python SDK](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html).
 
 ### Practical example - 1000 Genomes
