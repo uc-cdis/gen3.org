@@ -290,11 +290,7 @@ The links in the downloaded TSV can be updated by filling in the submitter_ids o
 
 It is possible to link data on Gen3 that is stored on other cloud services (Amazon Web Services AWS, Google Cloud Storage GCS) by a process called DIIRM (Data Ingestion, Integration, and Release Management). If you have a bucket of files and want to link the data to Gen3 you can find below a step-by-step guide to do so. Before going forward, you need to 1) know the signed URL from the bucket and 2) make sure you have access to the external bucket.
 
-1. Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest *has* to contain the following properties at the minimum: md5sum hash, file size in bytes, and the full bucket url. If the bucket contains too many files to download locally, [CTDIS owned scripts](https://github.com/uc-cdis/cloud-automation/blob/master/doc/bucket-manifest.md) can generate an object manifest of an s3 bucket in cloud-automation.
-
-You can provide the GUID, otherwise IndexD will index the files for you.
-If you want to authorize the access to the files, you need to add consent groups in `authz` and `acl`.
-`authz` is an Arborist resource or a Gen3 path following the Gen3 structure of programs and projects. In other words, you can index all the files with the project's `authz`, if you want a bucket to be tied to a project. The Gen3 resource path in the `authz` field must be able to map to user-permissions provided during an authorization sync (e.g. from dbGaP or a `user.yaml`). `acl` is only advised if you want to customize access to individual objects within a bucket, since IAM permissions will generally apply to all objects within a bucket. Please contact us for more information.
+1. Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest *has* to contain the following properties at the minimum: md5sum hash, file size in bytes, and the full bucket url. If the bucket contains too many files to download locally, [CTDIS-owned scripts](https://github.com/uc-cdis/cloud-automation/blob/master/doc/bucket-manifest.md) can generate an object manifest of an s3 bucket in cloud-automation.
 
 | size | md5 | acl | urls | guid | authz |
 |------|-----|-----|------|------|-------|
@@ -302,45 +298,51 @@ If you want to authorize the access to the files, you need to add consent groups
 |      |     |     |      |      |       |
 |      |     |     |      |      |       |
 
-2. The manifest needs to be indexed, which is done by uploading the TSV file with the [user interface (UI)](https://gen3.datacommons.io/indexing) or by using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#indexing-manifest) (not the gen3-client). If the UI does not appear on your commons (after replacing the core url), please get in contact with us to set up the environment.
+In the manifest, providing the GUID is not mandatory as IndexD will index the files automatically.
+If you want to authorize the access to the files, you need to add consent groups in `authz` and `acl`.
+`authz` and `acl` are an Arborist resource or a Gen3 path following the Gen3 structure of programs and projects. In other words, you can index all the files with the project's `authz`, if you want a bucket to be tied to a project. The Gen3 resource path in the `authz` field must be able to map to user-permissions provided during an authorization sync (e.g. from dbGaP or a `user.yaml`). `acl` is only advised if you want to customize access to individual objects within a bucket, since IAM permissions will generally apply to all objects within a bucket. Please contact us if more information are required.
 
-3. Download the manifest that includes now the GUIDs from either the UI or by using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#download-manifest). Note that the GUID represents now the `object_id` property in the Gen3 data dictionary for the category `data_files`.
+2. The manifest needs to be indexed, which is done by uploading the TSV file using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#indexing-manifest) (not the gen3-client) or in the [user interface (UI)](https://gen3.datacommons.io/indexing). If the UI does not appear on your commons (after replacing the core url), please get in contact with us to set up the environment.
 
-(((If you are using cloud-automation, bullets 2 and 3 are done by a [Sower job](https://github.com/uc-cdis/sower-jobs/blob/master/README.md#manifest-indexing).)))
+3. After indexing, download the manifest that includes now the GUIDs from either the UI or using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#download-manifest). Note that the GUID represents now the `object_id` property in the Gen3 data dictionary for the category `data_files`.
 
-4. Once these files are indexed, you can create a submission file for the Gen3 graph model. You can now choose between two options. First, you can link the new data in Gen3, or second, you can create a structured chain of metadata in the graph model to obtain the link to the new data_file.
-For the first option, you can create a `core_metadata_collection` entity, link it to the data_file node, and submit your data files directly to the data_file node. For the second option, you can create the structured chain of metadata according yo the Gen3 graph model to obtain the link to the data_file node. Then, you can submit the files to the data_file node. Submission can be done either in Windmill or using the [Gen3 python SDK](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html).
+(If you are using cloud-automation, bullets 2 and 3 are done by a [Sower job](https://github.com/uc-cdis/sower-jobs/blob/master/README.md#manifest-indexing).)
 
-you can map them to clinical data nodes in the graph model b.
-
-
+4. Once these files are indexed, you can create a submission file for the Gen3 graph model. You can now choose between two options.
+For the first option, you can link the new data by creating a `core_metadata_collection` entity, linking it to the data_file node, and submitting your data files directly to the data_file node. For the second option, you can create a structured chain of metadata according to the Gen3 graph model to obtain the link to the data_file node. Then, you can submit the files to the data_file node. Submission can be done either in Windmill or using the [Gen3 python SDK](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html).
 
 
 In this guide, we show the process described above by running an example using the publicly accessible data files in the 1000 Genomes Project bucket hosted by AWS.
 Example bucket: http://s3.amazonaws.com/1000genomes
 
 Login into AWS with your host institution or [create your own account](aws.amazon.com/ec2). Create your [keypair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html#create-a-key-pair) and save it under `~/.ssh`. Make sure to edit the resource in user credential policies under Identity and Access Management (IAM) in your EC2 instance. Insert the Amazon Resource Name (ARN) into the policies JSON, even if it's a public bucket. For this example, the ARNs are `arn:aws:s3:::1000genomes` and `arn:aws:s3:::1000genomes/*`.
+Then, you need to launch your AWS instance in the browser. In the tab "Choose AMI", find `ami-fad40b93` under community AMIs, as described [here](https://www.internationalgenome.org/using-1000-genomes-data-amazon-web-service-cloud), select `t1.micro` (free tier), make sure you are at us-east-1 (N. Virginia, top right corner in drop-down menu), and select the storage as paid for. Choose your keypair, and launch your instance.
 
------
-Then, launch your AWS instance. In the tab "Choose AMI", find `ami-fad40b93` under community AMIs, select `t1.micro` (free tier), make sure you are at us-east-1 (N. Virginia, top right corner in drop-down menu), and select the storage as paid for. Choose your keypair, and launch your instance.
-In your terminal, enter the Public DNS following the example below. The public DNS for this instance can be found in the description of the instance.
+
+Then, find and install the client [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html). After successful installation, AWS needs to be [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) in the terminal
 ```
-ssh -i ~/.ssh/my_key_pair_here.pem onekgenomes@ec2-23-20-189-94.compute-1.amazonaws.com
+aws configure
 ```
-Configure [AWS](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html), do the test commands as shown [here](https://www.internationalgenome.org/using-1000-genomes-data-amazon-web-service-cloud/).
------
+Where you need to insert the information from your keypair:
+```
+10:47:36  /usr/local/bin: aws configure
+AWS Access Key ID [****************YH62]:
+AWS Secret Access Key [****************2d9H]:
+Default region name [None]: us-east-1
+Default output format [None]:
+```
 
-
-Get [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) and follow their installations instructions. To access the bucket structure and find files, run
+To access the bucket structure and find files, run
 ```
 aws s3 ls s3//:bucketname
 ```
+
 To copy files to your local environment run
 ```
 aws s3 cp s3://1000genomes/[path-to-file] [local-path]
 aws s3 cp s3://1000genomes/sequence_indices/20091216_20100311.stats.csv /usr/local/bin/sower_test/
 ```
-More documentation about AWS CLI commands can be found [here](https://aws.amazon.com/cli/#file_commands_anchor).
+More documentation about AWS CLI terminal commands can be found [here](https://aws.amazon.com/cli/#file_commands_anchor).
 
 After finding the path to file in the bucket, calculating size and md5sum, the manifest can be created. In our example, the access is open, so an asterisk can be inserted into the `acl` column. No specific access is given in `authz`.
 
@@ -351,4 +353,21 @@ After finding the path to file in the bucket, calculating size and md5sum, the m
 |      |                                  |     |                                                               |      |       |
 
 
+The outcome of the indexed manifest will be then uploaded to the CMD node.
 This manifest will be uploaded into /indexing and then downloaded. ...then create submission files for the file.
+
+
+
+
+
+
+-----
+Then, you need to launch your AWS instance in the browser. In the tab "Choose AMI", find `ami-fad40b93` under community AMIs, select `t1.micro` (free tier), make sure you are at us-east-1 (N. Virginia, top right corner in drop-down menu), and select the storage as paid for. Choose your keypair, and launch your instance.
+
+
+In your terminal, enter the Public DNS following the example below. The public DNS for this instance can be found in the description of the instance.
+```
+ssh -i ~/.ssh/my_key_pair_here.pem onekgenomes@ec2-23-20-189-94.compute-1.amazonaws.com
+```
+Configure [AWS](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html), do the test commands as shown [here](https://www.internationalgenome.org/using-1000-genomes-data-amazon-web-service-cloud/).
+-----
