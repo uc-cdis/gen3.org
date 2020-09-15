@@ -13,7 +13,7 @@ It is possible to link data on Gen3 that is stored on other cloud services (Amaz
 
 - Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest **has** to contain the following properties at the minimum: <ins>md5</ins> checksum, file <ins>size</ins> in bytes, and the full bucket <ins>urls</ins>. The column heads in the example manifest below should be taken as a reference as the indexing process is case- and word-sensitive.
 
-    ![manifest](content/resources/user/submit-data/manifest_example.png)
+    ![manifest](http://alpha.gen3.org/resources/user/submit-data/manifest_example.png)
 
 >__NOTE:__ If you want to authorize the access to the files, you need to add consent groups in `authz` and `acl`. In other words, if you want a bucket to be tied to a project, you can index all the files with the project's `authz`.
 `authz` and `acl` are an Arborist resource or a Gen3 path following the Gen3 structure of programs and projects. The Gen3 resource path in the `authz` field must be able to map to user-permissions provided during an authorization sync (e.g. from dbGaP or a `user.yaml`). `acl` is only advised if you want to customize access to individual objects within a bucket, since IAM permissions will generally apply to all objects within a bucket. Please contact us if more information are required.
