@@ -21,11 +21,11 @@ If the bucket contains too many files to download locally, [CTDIS-owned scripts]
 
 - The manifest needs to be indexed, which is done by uploading the TSV file using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#indexing-manifest) (not the gen3-client) or in the [user interface (UI)](https://gen3.datacommons.io/indexing). If the UI does not appear on your commons (after replacing the core url), please get in contact with us to set up the environment.
 
-    ![index_upload](index_upload.png)
+    ![index_upload](http://alpha.gen3.org/resources/user/submit-data/index_upload.png)
 
 - After indexing, download the manifest that includes now the GUIDs from either the UI or using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#download-manifest). Note that the GUID represents now the `object_id` property in the Gen3 data dictionary for the category `data_files`.
 
-    ![index_download](index_download.png)
+    ![index_download](http://alpha.gen3.org/resources/user/submit-data/index_download.png)
 
 <!---(If you are using cloud-automation, bullets 2 and 3 are done by a [Sower job](https://github.com/uc-cdis/sower-jobs/blob/master/README.md#manifest-indexing).)-->
 
@@ -64,6 +64,6 @@ More documentation about AWS CLI terminal commands can be found [here](https://a
 
 - After finding the path to files of interest in the bucket, calculating their size and md5sum, the manifest can be created. In our example, the access is open, so an asterisk can be inserted into the `acl` column. No specific access is given in `authz`.
 
-    ![manifest2](manifest_example_2.png)
+    ![manifest2](http://alpha.gen3.org/resources/user/submit-data/manifest_example_2.png)
 
     The resulting manifest can be downloaded and submission files for the `core_metadata_collection` node can be prepared.
