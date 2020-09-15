@@ -14,18 +14,25 @@ It is possible to link data on Gen3 that is stored on other cloud services (Amaz
 - Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest **has** to contain the following properties at the minimum: <ins>md5</ins> checksum, file <ins>size</ins> in bytes, and the full bucket <ins>urls</ins>. The column heads in the example manifest below should be taken as a reference as the indexing process is case- and word-sensitive.
 
     ![manifest](http://alpha.gen3.org/resources/user/submit-data/manifest_example.png)
+    ```
+    GUID	url	size	md5	acl
+     	s3://test/test.csv	745	613ccfbc68287db60c663519dab6a4ff	['*']
+    ```
 
->__NOTE:__ If you want to authorize the access to the files, you need to add consent groups in `authz` and `acl`. In other words, if you want a bucket to be tied to a project, you can index all the files with the project's `authz`.
-`authz` and `acl` are an Arborist resource or a Gen3 path following the Gen3 structure of programs and projects. The Gen3 resource path in the `authz` field must be able to map to user-permissions provided during an authorization sync (e.g. from dbGaP or a `user.yaml`). `acl` is only advised if you want to customize access to individual objects within a bucket, since IAM permissions will generally apply to all objects within a bucket. Please contact us if more information are required.
+>__NOTE:__ If you want to authorize the access to the files and want a bucket to be tied to a project, you need to change `acl` and/or insert a column with `authz` as column head to add consent groups and index all the files with the project's `authz`.
+`authz` and `acl` are an Arborist resource or a Gen3 path following the Gen3 structure of programs and projects. The Gen3 resource path in the `authz` field must be able to map to user-permissions provided during an authorization sync (e.g. from dbGaP or a `user.yaml`). `acl` is only advised if you want to customize access to individual objects within a bucket, since Identity and Access Management (IAM) permissions will generally apply to all objects within a bucket. Please contact us if more information are required.
 If the bucket contains too many files to download locally, [CTDIS-owned scripts](https://github.com/uc-cdis/cloud-automation/blob/master/doc/bucket-manifest.md) can generate an object manifest of an s3 bucket in cloud-automation.
 
-- The manifest needs to be indexed, which is done by uploading the TSV file using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#indexing-manifest) (not the gen3-client) or in the [user interface (UI)](https://gen3.datacommons.io/indexing). If the UI does not appear on your commons (after replacing the core url), please get in contact with us to set up the environment.
+- The manifest needs to be indexed, which is done by uploading the TSV file using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#indexing-manifest) (not the gen3-client) or in the [user interface (UI)](https://gen3.datacommons.io/indexing). If the UI does not appear on the commons of your interest (after replacing the core url), please get in contact with us to set up the environment. In the UI, you can select and upload the manifest:
 
     ![index_upload](http://alpha.gen3.org/resources/user/submit-data/index_upload.png)
+    Please do not navigate away from this page until the indexing operation is complete.
 
-- After indexing, download the manifest that includes now the GUIDs from either the UI or using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#download-manifest). Note that the GUID represents now the `object_id` property in the Gen3 data dictionary for the category `data_files`.
+- After indexing, download the manifest that includes now the GUIDs from either the UI or using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#download-manifest). Select 'Download Manifest' after the indexing operation has finished:
 
-    ![index_download](http://alpha.gen3.org/resources/user/submit-data/index_download.png)
+    ![index_download](http://alpha.gen3.org/resources/user/submit-data/manifest_download.png)
+    Note that the GUID represents now the `object_id` property in the Gen3 data dictionary for the category `data_files`.
+
 
 <!---(If you are using cloud-automation, bullets 2 and 3 are done by a [Sower job](https://github.com/uc-cdis/sower-jobs/blob/master/README.md#manifest-indexing).)-->
 
@@ -62,8 +69,18 @@ aws s3 cp s3://1000genomes/sequence_indices/20091216_20100311.stats.csv /usr/loc
 ```
 More documentation about AWS CLI terminal commands can be found [here](https://aws.amazon.com/cli/#file_commands_anchor).
 
-- After finding the path to files of interest in the bucket, calculating their size and md5sum, the manifest can be created. In our example, the access is open, so an asterisk can be inserted into the `acl` column. No specific access is given in `authz`.
+- After finding the path to files of interest in the bucket, calculating their size and md5sum, the manifest can be created. In our example, the access is open, so an asterisk can be inserted into the `acl` column.
 
     ![manifest2](http://alpha.gen3.org/resources/user/submit-data/manifest_example_2.png)
+    ```
+    GUID	url	size	md5	acl
+     	s3://1000genomes/sequence_indices/20091216_20100311.stats.csv	745	613ccfbc68287db60c663519dab6a4ff	['*']
+    ```
+- The resulting manifest including the GUID can be downloaded as `.log` after clicking "Download Manifest":
+```
+guid	urls	size	md5	acl
+c146a966-7617-4f2f-b628-57a5f11de879	s3://1000genomes/sequence_indices/20091216_20100311.stats.csv	745	613ccfbc68287db60c663519dab6a4ff	['*']
 
-    The resulting manifest can be downloaded and submission files for the `core_metadata_collection` node can be prepared.
+```
+
+    and submission files for the `core_metadata_collection` node can be prepared.
