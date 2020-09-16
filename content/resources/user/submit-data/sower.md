@@ -9,7 +9,7 @@ menuname: userMenu
 # Linking Data from external Data Clouds to Gen3 Data Commons
 ***
 
-It is possible to link data on Gen3 that is stored on other cloud services (Amazon Web Services AWS, Google Cloud Storage GCS) by a process called DIIRM (*Data Ingestion, Integration, and Release Management*). If you have a bucket of files and want to link the data to Gen3 you can find below a step-by-step guide to do so. Before going forward, you need to a) know the signed URL from the bucket and b) make sure you have access to the external bucket.
+It is possible to link data on Gen3 that is stored on other cloud services (Amazon Web Services AWS, Google Cloud Storage GCS) by a process called DIIRM (*Data Ingestion, Integration, and Release Management*). In other words, if you have a bucket of files and want to link the data to Gen3 you can find below a step-by-step guide to do so. Before going forward, you need to make sure you have access to the external bucket.
 
 - Create a manifest as a TSV file that contains all files that exist in the respective bucket. This manifest **has** to contain the following properties at the minimum: <ins>md5</ins> checksum, file <ins>size</ins> in bytes, and the full bucket <ins>urls</ins>. The column heads in the example manifest below should be taken as a reference as the indexing process is case- and word-sensitive.
 
@@ -19,7 +19,7 @@ It is possible to link data on Gen3 that is stored on other cloud services (Amaz
     ```
 
 >__NOTE:__ If you want to authorize the access to the files and want a bucket to be tied to a project, you need to change `acl` and/or insert a column with `authz` as column head to add consent groups and index all the files with the project's `authz`.
-`authz` and `acl` are an Arborist resource or a Gen3 path following the Gen3 structure of programs and projects. The Gen3 resource path in the `authz` field must be able to map to user-permissions provided during an authorization sync (e.g. from dbGaP or a `user.yaml`). `acl` is only advised if you want to customize access to individual objects within a bucket, since Identity and Access Management (IAM) permissions will generally apply to all objects within a bucket. Please contact us if more information are required.
+`authz` and `acl` are an Arborist resource or a Gen3 path following the Gen3 structure of programs and projects. The Gen3 resource path in the `authz` field must be able to map to user-permissions provided during an authorization sync (e.g. from dbGaP or a `user.yaml`). `acl` is only advised if you want to customize access to individual objects within a bucket, since Identity and Access Management (IAM)([getting started](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) and [best IAM practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)) permissions will generally apply to all objects within a bucket. Please contact us if more information are required.
 For calculating the md5 and size of the files, they need to be accessible locally. If the bucket contains too many files to download locally, *CTDIS-owned* and *pay model-specific* scripts for [GCS](https://github.com/uc-cdis/cloud-automation/blob/master/doc/gcp-bucket-manifest.md) and [AWS](https://github.com/uc-cdis/cloud-automation/blob/master/doc/bucket-manifest.md) can generate an object manifest of an s3 bucket in cloud-automation.
 
 - The manifest needs to be indexed, which is done by uploading the TSV file using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#indexing-manifest) or in the [user interface (UI)](https://gen3.datacommons.io/indexing). If the UI does not appear on the commons of your interest (after replacing the core url of the commons in the link), please get in contact with us to set up the environment. In the UI, you can select and index the manifest by clicking "Index Files":
@@ -27,7 +27,7 @@ For calculating the md5 and size of the files, they need to be accessible locall
     ![index_upload](http://alpha.gen3.org/resources/user/submit-data/index_upload.png)
 
     Please do not navigate away from this page until the indexing operation is complete.
-    Users in the Gen3-Community provided [repos](https://github.com/jacquayj/gen3-s3indexer-extramural)(disclaimer: CTDS is not responsible for the content and opinions on the third-party repos) for indexing large pre-existing s3 buckets.
+    Users in the Gen3-Community provided [repos](https://github.com/jacquayj/gen3-s3indexer-extramural) (disclaimer: CTDS is not responsible for the content and opinions on the third-party repos) for indexing large pre-existing s3 buckets.
 
 - After indexing, download the manifest that includes now the GUIDs from either the UI or using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#download-manifest). Select 'Download Manifest' after the indexing operation has finished:
 
@@ -86,4 +86,29 @@ ssh -i ~/.ssh/my_key_pair_here.pem onekgenomes@ec2-23-20-189-94.compute-1.amazon
     c146a966-7617-4f2f-b628-57a5f11de879	s3://1000genomes/sequence_indices/20091216_20100311.stats.csv	745	613ccfbc68287db60c663519dab6a4ff	['*']
     ```
 
-- The submission files for the metadata can be now prepared for the `core_metadata_collection` node following the instructions described in the [data submission](https://gen3.org/resources/user/submit-data/#4-submit-additional-project-metadata). Metadata can be then submitted in Windmill or using the Gen3 SDK.
+- The submission files for the metadata can be now prepared following the instructions described in the [data submission](https://gen3.org/resources/user/submit-data/#4-submit-additional-project-metadata) or briefly described below. Metadata can be submitted either in Windmill or using the Gen3 SDK. For this example we will use Windmill and show the steps as described as option 1 above, since it demonstrates the ability to link to a file node that is deep within the graph model.
+
+- For the quick metadata file upload that links to the core_metadata_collection, download the `template.tsv` for the `core_metadata_collection` node in the [data dictionary](https://gen3.datacommons.io/DD). Fill in the required (*) columns, according to the data dictionary. The `core_metadata_collection.tsv` should contain `type`, `submitter_id`, and `projects.code`:
+
+    ```
+    type	submitter_id	projects.code
+    core_metadata_collection	xritterdemo1testsower	test
+    ```
+    Submit and upload this file. A green message should appear after successful upload:
+    `Succeeded: 200
+    Submitted chunk 1 of 1`
+
+    >__NOTE:__  the `id` is created on the backend. To find it, download the `core_metadata_collection.tsv` under Submit Data --> Submit Data to your project --> Core Metadata Collection --> Download All as `tsv`.
+
+- Next, download the `template.tsv` for the `data_file` node of your choice in the [data dictionary](https://gen3.datacommons.io/DD). In this example, we use the `Variant Cell File (VDF)` data_file node.
+Fill in the required (*) columns, according to the data dictionary. The following 3 entries have to be correct for a successful upload: the `project_id` is the dash-separated combination of program and the project’s code; the `object_id` is the GUID from the indexing operation; the `core_metadata_collections.submitter_id` is the `submitter_id` from above and will create the link to the core_metadata_collection. In our example, the data_file node `vcf.tsv` shows:
+
+    ```
+    *type	project_id	*submitter_id	core_metadata_collections.submitter_id	*data_category	*data_format	*data_type	*file_name	*file_size	*md5sum	object_id
+    variant_call_file	DEV-test	xritterdemo1testsower_vcf	xritterdemo1testsower	Combined Nucleotide Variation	VCF	Annotated Somatic Mutation	20091216_20100311.stats	745	613ccfbc68287db60c663519dab6a4ff	c146a966-7617-4f2f-b628-57a5f11de879
+    ```
+    Submit and upload this file. A green message should appear after successful upload:
+    `Succeeded: 200
+    Submitted chunk 1 of 1`
+
+    The End.
