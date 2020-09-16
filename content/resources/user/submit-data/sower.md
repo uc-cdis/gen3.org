@@ -25,15 +25,15 @@ It is possible to link data on Gen3 that is stored on other cloud services (Amaz
     ```
 
 >__NOTE:__ If you want to authorize the access to the files and want a bucket to be tied to a project, you need to change `acl` and/or insert a column with `authz` as column head to add consent groups and index all the files with the project's `authz`.
-`authz` and `acl` are an Arborist resource or a Gen3 path following the Gen3 structure of programs and projects. The Gen3 resource path in the `authz` field must be able to map to user-permissions provided during an authorization sync (e.g. from dbGaP or a `user.yaml`). `acl` is only advised if you want to customize access to individual objects within a bucket, since Identity and Access Management (IAM)([getting started](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) and [best IAM practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)) permissions will generally apply to all objects within a bucket. Please contact us if more information are required.
-For calculating the md5 and size of the files, they need to be accessible locally. If the bucket contains too many files to download locally, *CTDIS-owned* and *pay model-specific* scripts for [GCS](https://github.com/uc-cdis/cloud-automation/blob/master/doc/gcp-bucket-manifest.md) and [AWS](https://github.com/uc-cdis/cloud-automation/blob/master/doc/bucket-manifest.md) can generate an object manifest of an s3 bucket in cloud-automation.
+`authz` and `acl` are an Arborist resource or a Gen3 path following the Gen3 structure of programs and projects. The Gen3 resource path in the `authz` field must be able to map to user-permissions provided during an authorization sync (e.g. from dbGaP or a `user.yaml`). `acl` is only advised if you want to customize access to individual objects within a bucket, since Identity and Access Management (IAM; [getting started](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) and [best IAM practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)) permissions will generally apply to all objects within a bucket. Please contact us if more information are required.
+For calculating the md5 and file_size, they need to be accessible locally. If the bucket contains too many files to download locally, *CTDIS-owned* and *pay model-specific* scripts for [GCS](https://github.com/uc-cdis/cloud-automation/blob/master/doc/gcp-bucket-manifest.md) and [AWS](https://github.com/uc-cdis/cloud-automation/blob/master/doc/bucket-manifest.md) can generate an object manifest of an s3 bucket in cloud-automation.
 
 - The manifest needs to be indexed, which is done by uploading the TSV file using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#indexing-manifest) or in the [user interface (UI)](https://gen3.datacommons.io/indexing). If the UI does not appear on the commons of your interest (after replacing the core url of the commons in the link), please get in contact with us to set up the environment. In the UI, you can select and index the manifest by clicking "Index Files":
 
     ![index_upload](http://alpha.gen3.org/resources/user/submit-data/index_upload.png)
 
     Please do not navigate away from this page until the indexing operation is complete.
-    Users in the Gen3-Community provided [repos](https://github.com/jacquayj/gen3-s3indexer-extramural) (disclaimer: CTDS is not responsible for the content and opinions on the third-party repos) for indexing large pre-existing s3 buckets.
+    Users in the Gen3-Community provided [repos](https://github.com/jacquayj/gen3-s3indexer-extramural) for indexing large pre-existing s3 buckets (disclaimer: CTDS is not responsible for the content and opinions on the third-party repos).
 
 - After indexing, download the manifest that includes now the GUIDs from either the UI or using the [Gen3 python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md#download-manifest). Select 'Download Manifest' after the indexing operation has finished:
 
@@ -45,7 +45,7 @@ For calculating the md5 and size of the files, they need to be accessible locall
 <!---(If you are using cloud-automation, bullets 2 and 3 are done by a [Sower job](https://github.com/uc-cdis/sower-jobs/blob/master/README.md#manifest-indexing).)-->
 
 - Once these files are indexed, you can create a submission file for the Gen3 graph model. You can now choose between two options.
-For the first option, you can link the new data by creating a `core_metadata_collection` entity, linking it to the `data_file` node, and submitting your data files directly to the `data_file` node. For the second option, you can create a structured chain of metadata according to the Gen3 graph model to obtain the link to the `data_file` node. Then, you can submit the files to the `data_file` node. Submission can be done either in Windmill or using the [Gen3 python SDK](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html). Submission can also be done with just `file_size` and `md5sum` and Windmill should be able to look through the indexd records and link the entity to the indexd record. If you want the files also to be stored in the Gen3 commons bucket, you will need the [gen3 client](https://gen3.org/resources/user/gen3-client/#3-upload-data-files) to upload the files.
+For the first option, you can link the new data by creating a `core_metadata_collection` entity, linking it to the `data_file` node, and submitting your data files directly to the `data_file` node. For the second option, you can create a structured chain of metadata according to the Gen3 graph model to obtain the link to the `data_file` node. Then, you can submit the files to the `data_file` node. Submission can be done either in Windmill or using the [Gen3 python SDK](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html). Submission can also be done with just file_size and md5s and Windmill should be able to look through the indexd records and link the entity to the indexd record. If you want the files also to be stored in the Gen3 commons bucket, you will need the [gen3 client](https://gen3.org/resources/user/gen3-client/#3-upload-data-files) to upload the files.
 
 
 ## 2. Practical example with 1000 Genomes
@@ -79,7 +79,7 @@ ssh -i ~/.ssh/my_key_pair_here.pem onekgenomes@ec2-23-20-189-94.compute-1.amazon
     ```
     More documentation about AWS CLI terminal commands can be found [here](https://aws.amazon.com/cli/#file_commands_anchor).
 
-- After finding the path to files of interest in the bucket, calculating their size and md5sum, the manifest can be created. In our example, the access is open, so an asterisk can be inserted into the `acl` column:
+- After finding the path to files of interest in the bucket, calculating their size and md5, the manifest can be created. In our example, the access is open, so an asterisk can be inserted into the `acl` column:
 
     ```
     GUID	url	size	md5	acl
@@ -106,7 +106,7 @@ ssh -i ~/.ssh/my_key_pair_here.pem onekgenomes@ec2-23-20-189-94.compute-1.amazon
     `Succeeded: 200
     Submitted chunk 1 of 1`
 
-    >__NOTE:__  the `id` is created on the backend. To find it, download the `core_metadata_collection.tsv` under Submit Data --> Submit Data to your project --> Core Metadata Collection --> Download All as `tsv`.
+    >__NOTE:__  the `id` is created on the backend. To find it, download the core_metadata_collection.tsv under Submit Data --> Submit Data to your project --> Core Metadata Collection --> Download All as TSV.
 
 - Next, download the template.tsv for the `data_file` node of your choice in the [data dictionary](https://gen3.datacommons.io/DD), colored in green. In this example, we use the `Variant Cell File (VDF)` data_file node.
 Fill in the required (*) columns, according to the data dictionary. The following 3 entries have to be correct for a successful upload: the `project_id` is the dash-separated combination of program and the project’s code; the `object_id` is the GUID from the indexing operation; the `core_metadata_collections.submitter_id` is the `submitter_id` from above and will create the link to the `core_metadata_collection` node. In our example, the `data_file` node vcf.tsv shows:
