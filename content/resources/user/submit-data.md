@@ -20,7 +20,6 @@ The process of uploading a data project to a Gen3 data commons is simple:
 3. [Map Uploaded Files to a Data File Node](#3-map-uploaded-files-to-a-data-file-node)
 4. [Submit Additional Project Metadata](#4-submit-additional-project-metadata)
 5. [Link Data File Records to their Metadata Records](#5-link-files-to-their-metadata)
-6. [Linking Data from external Data Clouds to Gen3 Data Commons](#6-linking-data-from-external-data-clouds-to-gen3-data-commons)
 
 * * *
 
@@ -63,6 +62,8 @@ https://gen3.datacommons.io/example-training/search?node_type=core_metadata_coll
 * * *
 
 Data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., are uploaded to object storage with the [gen3-client command-line tool](/resources/user/gen3-client).
+
+ >__Note:__ if your data files are already located in cloud storage, such as an AWS or GCS bucket, please see [this page](https://gen3.org/resources/user/submit-data/sower) on how to make these files available in a Gen3 data commons.
 
 1. Download the latest [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases/latest) for your operating system.
 2. Configure a profile with credentials downloaded from your Profile:
@@ -245,7 +246,7 @@ The "action" above can be used to identify if the node was newly created or upda
 
 To confirm that a data file is properly registered, enter the GUID of a data file record in the index API endpoint of the data commons: usually "https://gen3.datacommons.io/index/index/GUID", where "https://gen3.datacommons.io" is the URL of the Windmill data portal and GUID is the specific GUID of a registered data file. This should display a JSON response that contains the URL that was registered. If the record was not registered successfully, it is likely an error message will occur. An error that says "access denied" might also occur if the user is not logged in or the session has timed out.
 
-> __NOTE:__ For these user guides, https://gen3.datacommons.io is an example URL and can be replaced with the URL from other data commons powered by Gen3.
+> __Note:__ For these user guides, https://gen3.datacommons.io is an example URL and can be replaced with the URL from other data commons powered by Gen3.
 
 ### Troubleshooting and Finishing the Submission
 * * *
@@ -284,8 +285,3 @@ For example, the following link would download a single TSV containing all the `
 https://gen3.datacommons.io/api/v0/submission/example/training/export/?node_label=core_metadata_collection&format=tsv
 
 The links in the downloaded TSV can be updated by filling in the submitter_ids of the corresponding parent records, saving, and re-submitting the file to the data portal website using 'Upload File' as done in [step 4](#more-about-specifying-required-links).
-
-
-
-## 6. Linking Data from external Data Clouds to Gen3 Data Commons
-It is possible to link data on Gen3 that is stored on other cloud services (Amazon Web Services AWS, Google Cloud Storage GCS) by a process called DIIRM (*Data Ingestion, Integration, and Release Management*). If you have a bucket of files and want to link the data to Gen3 you can find [here a step-by-step guide for this purpose](https://gen3.org/resources/user/submit-data/sower).
