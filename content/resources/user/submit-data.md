@@ -63,6 +63,8 @@ https://gen3.datacommons.io/example-training/search?node_type=core_metadata_coll
 
 Data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., are uploaded to object storage with the [gen3-client command-line tool](/resources/user/gen3-client).
 
+ >__Note:__ if your data files are already located in cloud storage, such as an AWS or GCS bucket, please see [this page](https://gen3.org/resources/user/submit-data/sower) on how to make these files available in a Gen3 data commons.
+
 1. Download the latest [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases/latest) for your operating system.
 2. Configure a profile with credentials downloaded from your Profile:
 
@@ -244,7 +246,7 @@ The "action" above can be used to identify if the node was newly created or upda
 
 To confirm that a data file is properly registered, enter the GUID of a data file record in the index API endpoint of the data commons: usually "https://gen3.datacommons.io/index/index/GUID", where "https://gen3.datacommons.io" is the URL of the Windmill data portal and GUID is the specific GUID of a registered data file. This should display a JSON response that contains the URL that was registered. If the record was not registered successfully, it is likely an error message will occur. An error that says "access denied" might also occur if the user is not logged in or the session has timed out.
 
-> __NOTE:__ For these user guides, https://gen3.datacommons.io is an example URL and can be replaced with the URL from other data commons powered by Gen3.
+> __Note:__ For these user guides, https://gen3.datacommons.io is an example URL and can be replaced with the URL from other data commons powered by Gen3.
 
 ### Troubleshooting and Finishing the Submission
 * * *
