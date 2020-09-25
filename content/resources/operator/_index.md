@@ -256,7 +256,7 @@ _Cons_
 * Neither user’s organization does not take responsibility for activating/deactivating users based on affiliation.
 
 
-### Programs and Projects
+### 6. Programs and Projects
 In a Gen3 Data Commons, programs and projects are two administrative nodes in the graph database that serve as the most upstream nodes. A program must be created first, followed by a project. Any subsequent data submission and data access, along with control of access to data, is done through the project scope.
 
 Before you create a program and a project or submit any data, you need to grant yourself permissions. First, you will need to grant yourself access to **create** a program and second, you need to grant yourself access to *see* the program. You can **create** the program before or after having access to *see* it.
