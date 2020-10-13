@@ -36,9 +36,11 @@ The column headers of a TSV are the properties of a node, and the rows in TSVs a
 
 	Links are a special kind of property. Every node besides the root node `program` requires a link to it's "parent node".  The link is specified by "<parent-node-backref>.submitter_id". The "backref" of the parent node is usually the plural form of the parent node (e.g., "subjects.submitter_id" for a link to a "subject" record; if unsure, the backref will be in the template TSV downloadable from the data dictionary viewer).
 
-	Note that you can also specify links with the UUID (or the `id` property). So, you could alternatively specify your links: `studies.id`, the value of which would be the `id` (UUID) of your study instead of the `submitter_id`. When creating links, you can use `submitter_id`, `id`, or both, but only one is required.
+	> Note: that you can alternatively specify links with the `id` property using the TSV column header `studies.id`. The value in this column would be the `id` (UUID) of your study instead of the `submitter_id`. When creating links, you can use `submitter_id`, `id`, or both, but only one is required. Most users prefer using a parent record's `submitter_id` to specify links because they're typically more human-readable than an `id`, which is a random 128-bit UUID.
 
-	Some child-parent node relationships are one-to-many or many-to-many (i.e., "-to-many" relationships), meaning that one child record can have multiple parent records in the same parent node. For example, if a single `subject` belonged to three `studies`, then the `subject` TSV would specify the three links by submitting a comma-separated list of the parent submitter_ids: `study_1,study_2,study_3`. Comma-separated lists are how "array" values, like links, are generally formatted in a TSV.
+	Some child-parent node relationships are one-to-many or many-to-many (i.e., "-to-many" relationships), meaning that one child record can have multiple parent records in the same parent node. For example, if a single `subject` belonged to three `studies`, then the `subject` TSV would specify the three links by submitting a comma-separated list of the parent submitter_ids: `study_1,study_2,study_3`.
+
+    > Note: Comma-separated lists are generally how "array" variables (properties that take lists as their value), like links, are formatted in a TSV.
 
     If submitting multiple links in JSON format, the three parent studies would look like this:
 
