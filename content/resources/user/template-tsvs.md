@@ -36,9 +36,25 @@ The column headers of a TSV are the properties of a node, and the rows in TSVs a
 
 	Links are a special kind of property. Every node besides the root node `program` requires a link to it's "parent node".  The link is specified by "<parent-node-backref>.submitter_id". The "backref" of the parent node is usually the plural form of the parent node (e.g., "subjects.submitter_id" for a link to a "subject" record; if unsure, the backref will be in the template TSV downloadable from the data dictionary viewer).
 
-	Note that you can also specify links with the UUID (or the `id` property). So you could also make your links: `studies.id`, the value of which would be the `id` (UUID) of your study instead of the `submitter_id`.
+	Note that you can also specify links with the UUID (or the `id` property). So, you could alternatively specify your links: `studies.id`, the value of which would be the `id` (UUID) of your study instead of the `submitter_id`. When creating links, you can use `submitter_id`, `id`, or both, but only one is required.
 
-	Some child-parent node relationships are one-to-many or many-to-many (i.e., "-to-many" relationships), meaning that one child record can have multiple parent records. For example, if a single `subject` belonged to two 'studies', then the `subject` TSV would specify the two links with the headers: `studies.submitter_id#1` and `studies.submitter_id#2`.  If there was a third study, it would be `studies.submitter_id#3`. The values of those links are the `submitter_id` properties of the `study` records.
+	Some child-parent node relationships are one-to-many or many-to-many (i.e., "-to-many" relationships), meaning that one child record can have multiple parent records in the same parent node. For example, if a single `subject` belonged to three `studies`, then the `subject` TSV would specify the three links by submitting a comma-separated list of the parent submitter_ids: `study_1,study_2,study_3`. Comma-separated lists are how "array" values, like links, are generally formatted in a TSV.
+
+    If submitting multiple links in JSON format, the three parent studies would look like this:
+
+```
+  "studies": [
+    {
+      "submitter_id": "study_1"
+    },
+    {
+      "submitter_id": "study_2"
+    },
+    {
+      "submitter_id": "study_3"
+    }
+  ],
+```
 
 * program
 
@@ -54,7 +70,7 @@ The column headers of a TSV are the properties of a node, and the rows in TSVs a
 
 Here are some sample TSV file templates for example nodes in a Gen3 data dictionary.
 
-Look at the "Dictionary" section, for the Gen3 data commons, to find the complete list of nodes and their template TSVs.
+Look at the "Dictionary" section of a [Gen3 data commons](gen3.datacommons.io/dd) to find the complete list of nodes and download template TSVs for that data commons' data model.
 
 [study.tsv](study.tsv)
 
