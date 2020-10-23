@@ -9,13 +9,12 @@ menuname: userMenu
 # Data Analysis in a Gen3 Data Commons
 * * *
 
-How data is accessed in a Gen3 data commons is determined by the commons' sponsor(s), data contributor(s), and/or  operator(s). Some data commons have rules that data cannot be downloaded outside of a Virtual Private Cloud (VPC). In these cases, data analysts may need to access and configure a virtual machine (VM) in the VPC where all analyses will be done. Other data commons may be able to grant users permissions to download data files directly to their local computers, while others may choose to allow analysis only in the Gen3-provided Workspace.
+How data is accessed in a Gen3 data commons is determined by the commons' sponsor(s), data contributor(s), and/or  operator(s). Some data commons may be able to grant users permissions to download data files directly to their local computers, while others may choose to allow analysis only in the Gen3-provided Workspace. Other data commons may have rules that data cannot be downloaded outside of a Virtual Private Cloud (VPC). In these cases, data analysts may need to access and configure a virtual machine (VM) in the VPC where all analyses will be done. Please contact with <Gen3-support@datacommons.io> to receive further instructions.
 
 Data can be analyzed in the Gen3 Workspace or using the Gen3 SDK. For a general introduction to data analysis, feel free to take a look at our webinars on our [YouTube channel](https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/videos).
 
 * [Using the Gen3 Workspace](#using-the-gen3-workspace)
 * [Getting Files into the Gen3 Workspace](#getting-files-into-the-gen3-workspace)
-* [Running a Jupyter Server on a Virtual Machine](#running-a-jupyter-server-on-a-virtual-machine)
 * [Working with the proxy and whitelists](#working-with-the-proxy-and-whitelists)
 * [Using the Gen3 SDK](#using-the-gen3-sdk)
 
@@ -109,62 +108,6 @@ jovyan@jupyter-user:~$ gen3-client download-manifest --manifest manifest.json --
   2 files downloaded.
 ```
 
-## Running a Jupyter Server on a Virtual Machine
-* * *
-
-1. Login to your 'analysis' virtual machine (VM).
-
-	If accessing your VM through a head node, you can use a config file (~/.ssh/config) to create a "multiple hop" ssh tunnel to your VM:
-	```
-	Host headnode
-		Hostname 12.345.678.90
-		User bob
-		IdentityFile ~/.ssh/id_rsa
-		ForwardAgent yes
-
-	Host analysis
-		Hostname 171.60.63.71
-		User ubuntu
-		ProxyCommand ssh -q -AXY headnode -W %h:%p
-	```
-2. After logging in to your 'analysis' VM, startup a jupyter notebook server from the command-line.
-
-	Example:
-	```
-	jupyter notebook --no-browser --port=8889
-	```
-
-	> __NOTE:__   You can stop a Juptyer server at anytime via `ctrl + c`
-
-3. Port forwarding to your VM.
-
-	Next you will want to set up a connection so that you can access the notebook being served from the VM to a browser in your local machine.
-
-	Setup the connection on a terminal session from your local machine, not in the VM.
-
-	Example:
-	```
-	ssh -N -L localhost:8888:localhost:8889 analysis
-	```
-
-	> NOTE:   In the example above, "analysis" is the name of the ssh shortcut that was [setup back in step 2](/user-guide/data-access/#2-ssh-to-virtual-machine-config).
-
-4. Access the notebook via your browser.
-
-	In your preferred browser enter http://localhost:8888/;   then from the VM terminal session, copy and paste the token from the notebook server into the requested spot in your browser.
-
- 	Example:   Run Server, port forward, access notebook in browser</h5>
-	![Jupyter notebook example](jupyter.gif)
-
-
-5. Shutting Down your Server.
-
-	When done working on the Jupyter server, we encourage users to shut down the Jupyter server via `ctrl + c` in the VM.  This does not have to be done every time, but should be done when the Jupyter server is not in use.
-
-6. VM Termination.
-
-	At this point in the Gen3 commons development, you should contact support@datacommons.io when the active VM is no longer needed. Active VMs accrue hourly charges, currently paid for by grants, so it is important to not waste valuable resources.
-
 ## Working with the proxy and whitelists
 * * *
 
@@ -192,7 +135,9 @@ Additionally, to aid Gen3 Commons security, tool installation from outside sourc
 ## Using the Gen3 SDK
 * * *
 
-The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic python library and a sample analysis notebook to help jumpstart commons analyses. These can be found on [Github](https://github.com/uc-cdis/gen3sdk-python). The Gen3 community is encouraged to add to the functions library or improve the notebook.
+The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic python library and a sample analysis notebook to help jumpstart commons analyses. The SDK entails functions that do basic API requests for the user and authenticates.
+
+The complete SDK documentation can be found on [Github](https://github.com/uc-cdis/gen3sdk-python) or on the [API documentation page](https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html). The Gen3 community is encouraged to add to the functions library or improve the notebook.
 
 > __NOTE:__   As the Gen3 community updates repositories, you can keep them up to date using `git pull origin master`.
 
