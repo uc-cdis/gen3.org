@@ -155,7 +155,7 @@ git pull origin master
 ```
 
 ### Examples
-1) Start interacting with the data commons using the authentication class _Gen3Auth_
+1. Start interacting with the data commons using the authentication class _Gen3Auth_
 ```
 import gen3
 from gen3.auth import Gen3Auth
@@ -164,9 +164,9 @@ creds = "/user/directory/credentials.json"
 auth = Gen3Auth(endpoint, creds)
 ```
 
-2) The class _Gen3Submission_ is used to list programs/projects and export structured metadata from a node.
+2. The class _Gen3Submission_ is used to list programs/projects and export structured metadata from a node.
 
-a) All available programs in the data commons will be shown with `get_programs`. The following commands
+a) All available programs in the data commons will be shown with `get_programs`. The following commands:
 
 ```
 from gen3.submission import Gen3Submission
@@ -176,14 +176,14 @@ sub.get_programs()
 
 will return:
 
-```
+`
 {'links': ['/v0/submission/OpenNeuro',
   '/v0/submission/GEO',
   '/v0/submission/OpenAccess',
   '/v0/submission/DEV']}
-```
+`
 
-b) All projects under a particular program ("OpenAccess") will be shown with `get_projects`. The following commands
+b) All projects under a particular program ("OpenAccess") will be shown with `get_projects`. The following commands:
 
 ```
 from gen3.submission import Gen3Submission
@@ -197,7 +197,7 @@ will return
 {'links': ['/v0/submission/OpenAccess/CCLE']}
 ```
 
-c) All structured metadata stored under one node of a project can be exported as a tsv file with `export_node`. The following commands
+c) All structured metadata stored under one node of a project can be exported as a tsv file with `export_node`. The following commands:
 
 ```
 from gen3.submission import Gen3Submission
@@ -217,21 +217,21 @@ Output written to file: OpenAccess_CCLE_aligned_reads_file.tsv
 ```
 
 
-3) The class _Gen3Index_ is used to show all metadata associated with a given id
+3. The class _Gen3Index_ is used to show all metadata associated with a given id.
 
-	Guids can be found on the Exploration page (https://gen3.datacommons.io/explorer) under the `Files` tab. The following commands
+Guids can be found on the Exploration page (https://gen3.datacommons.io/explorer) under the `Files` tab. The following commands:
 
-	```
-	from gen3.index import Gen3Index
-	ind = Gen3Index(endpoint, auth)
-	record1 = ind.get_record("92183610-735e-4e43-afd6-7b15c91f6d10")
-	print(record1)
-	```
+```
+from gen3.index import Gen3Index
+ind = Gen3Index(endpoint, auth)
+record1 = ind.get_record("92183610-735e-4e43-afd6-7b15c91f6d10")
+print(record1)
+```
 
-	will return:
+will return:
 
-	```
-	{'acl': ['*'], 'authz': ['/programs/OpenAccess/projects/CCLE'], 'baseid': 'e9bd6198-300c-40c8-97a1-82dfea8494e4', 'created_date': '2020-03-13T16:08:53.743421', 'did': '92183610-735e-4e43-afd6-7b15c91f6d10', 'file_name': None, 'form': 'object', 'hashes': {'md5': 'cbccc3cd451e09cf7f7a89a7387b716b'}, 'metadata': {}, 'rev': '13077495', 'size': 15411918474, 'updated_date': '2020-03-13T16:08:53.743427', 'uploader': None, 'urls': ['https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97'], 'urls_metadata': {'https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97': {}}, 'version': None}
-	```
+```
+{'acl': ['*'], 'authz': ['/programs/OpenAccess/projects/CCLE'], 'baseid': 'e9bd6198-300c-40c8-97a1-82dfea8494e4', 'created_date': '2020-03-13T16:08:53.743421', 'did': '92183610-735e-4e43-afd6-7b15c91f6d10', 'file_name': None, 'form': 'object', 'hashes': {'md5': 'cbccc3cd451e09cf7f7a89a7387b716b'}, 'metadata': {}, 'rev': '13077495', 'size': 15411918474, 'updated_date': '2020-03-13T16:08:53.743427', 'uploader': None, 'urls': ['https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97'], 'urls_metadata': {'https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97': {}}, 'version': None}
+```
 
 4) **Gen3Jobs**
