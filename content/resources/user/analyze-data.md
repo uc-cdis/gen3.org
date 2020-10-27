@@ -164,9 +164,9 @@ creds = "/user/directory/credentials.json"
 auth = Gen3Auth(endpoint, creds)
 ```
 
-2) The class _Gen3Submission_ is used to list programs/projects and export structured metadata from a node.
+2) Functions in the most commonly used class _Gen3Submission_ can be used to list programs/projects and export structured metadata from a node.
 
-2.1 All available programs in the data commons will be shown with `get_programs`. The following commands:
+2.1) All available programs in the data commons will be shown with the function `get_programs`. The following commands:
 
 ```
 from gen3.submission import Gen3Submission
@@ -174,14 +174,12 @@ sub = Gen3Submission(endpoint, auth)
 sub.get_programs()
 ```
 
-will return:
-
-`{'links': ['/v0/submission/OpenNeuro',
+will return: `{'links': ['/v0/submission/OpenNeuro',
   '/v0/submission/GEO',
   '/v0/submission/OpenAccess',
   '/v0/submission/DEV']}`
 
-2.2 All projects under a particular program ("OpenAccess") will be shown with `get_projects`. The following commands:
+2.2) All projects under a particular program ("OpenAccess") will be shown with the function `get_projects`. The following commands:
 
 ```
 from gen3.submission import Gen3Submission
@@ -189,13 +187,9 @@ sub = Gen3Submission(endpoint, auth)
 sub.get_projects("OpenAccess")
 ```
 
-will return
+will return "CCLE" as the project under the program: `{'links': ['/v0/submission/OpenAccess/CCLE']}`
 
-```
-{'links': ['/v0/submission/OpenAccess/CCLE']}
-```
-
-2.3 All structured metadata stored under one node of a project can be exported as a tsv file with `export_node`. The following commands:
+2.3) All structured metadata stored under one node of a project can be exported as a tsv file with the function `export_node`. The following commands:
 
 ```
 from gen3.submission import Gen3Submission
@@ -208,16 +202,10 @@ filename = "OpenAccess_CCLE_aligned_reads_file.tsv"
 sub.export_node(program, project, node_type, fileformat, filename)
 ```
 
-will return:
-
-```
-Output written to file: OpenAccess_CCLE_aligned_reads_file.tsv
-```
+will return: `Output written to file: OpenAccess_CCLE_aligned_reads_file.tsv`
 
 
-3) The class _Gen3Index_ is used to show all metadata associated with a given id.
-
-Guids can be found on the Exploration page (https://gen3.datacommons.io/explorer) under the `Files` tab. The following commands:
+3) The function `get_record` in the class _Gen3Index_ is used to show all metadata associated with a given id by interacting with Gen3's Indexd service. Guids can be found on the Exploration page (https://gen3.datacommons.io/explorer) under the `Files` tab. The following commands:
 
 ```
 from gen3.index import Gen3Index
@@ -226,10 +214,4 @@ record1 = ind.get_record("92183610-735e-4e43-afd6-7b15c91f6d10")
 print(record1)
 ```
 
-will return:
-
-```
-{'acl': ['*'], 'authz': ['/programs/OpenAccess/projects/CCLE'], 'baseid': 'e9bd6198-300c-40c8-97a1-82dfea8494e4', 'created_date': '2020-03-13T16:08:53.743421', 'did': '92183610-735e-4e43-afd6-7b15c91f6d10', 'file_name': None, 'form': 'object', 'hashes': {'md5': 'cbccc3cd451e09cf7f7a89a7387b716b'}, 'metadata': {}, 'rev': '13077495', 'size': 15411918474, 'updated_date': '2020-03-13T16:08:53.743427', 'uploader': None, 'urls': ['https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97'], 'urls_metadata': {'https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97': {}}, 'version': None}
-```
-
-4) **Gen3Jobs**
+will return: `{'acl': ['*'], 'authz': ['/programs/OpenAccess/projects/CCLE'], 'baseid': 'e9bd6198-300c-40c8-97a1-82dfea8494e4', 'created_date': '2020-03-13T16:08:53.743421', 'did': '92183610-735e-4e43-afd6-7b15c91f6d10', 'file_name': None, 'form': 'object', 'hashes': {'md5': 'cbccc3cd451e09cf7f7a89a7387b716b'}, 'metadata': {}, 'rev': '13077495', 'size': 15411918474, 'updated_date': '2020-03-13T16:08:53.743427', 'uploader': None, 'urls': ['https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97'], 'urls_metadata': {'https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97': {}}, 'version': None}`
