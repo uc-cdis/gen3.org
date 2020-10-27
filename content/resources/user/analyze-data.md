@@ -13,14 +13,14 @@ How data is accessed in a Gen3 data commons is determined by the commons' sponso
 
 Data can be analyzed in the Gen3 Workspace or using the Gen3 SDK. For a general introduction to data analysis, feel free to take a look at our webinars on our [YouTube channel](https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/videos).
 
-* [Using the Gen3 Workspace](#using-the-gen3-workspace)
-* [Getting Files into the Gen3 Workspace](#getting-files-into-the-gen3-workspace)
-* [Working with the proxy and whitelists](#working-with-the-proxy-and-whitelists)
-* [Using the Gen3 SDK](#using-the-gen3-sdk)
+* [1. Using the Gen3 Workspace](#1-using-the-gen3-workspace)
+* [2. Getting Files into the Gen3 Workspace](#2-getting-files-into-the-gen3-workspace)
+* [3. Working with the proxy and whitelists](#w3-orking-with-the-proxy-and-whitelists)
+* [4. Using the Gen3 SDK](#4-using-the-gen3-sdk)
 
 
 * * *
-## Using the Gen3 Workspace
+## 1. Using the Gen3 Workspace
 * * *
 
 The software stack that powers Gen3 data commons' features a built-in "Workspace" where users can access a Jupyter Hub for data exploration and analysis. Jupyter Hub allows the creation of Python and R Jupyter notebooks and execution of scripts from the command-line in a Linux terminal.
@@ -62,7 +62,7 @@ You can manage active Notebook and terminal processes by clicking on "Running". 
 
 ![Manage Running Sessions](running.gif)
 
-## Getting Files into the Gen3 Workspace
+## 2. Getting Files into the Gen3 Workspace
 * * *
 In order to download data files directly from a Gen3 data commons into your workspace, install and use the [gen3-client](https://github.com/uc-cdis/cdis-data-client/releases/latest) in a terminal window from your Workspace.  Launch a terminal window by clicking on the "New" dropdown menu, then click on "Terminal".
 
@@ -108,7 +108,7 @@ jovyan@jupyter-user:~$ gen3-client download-manifest --manifest manifest.json --
   2 files downloaded.
 ```
 
-## Working with the proxy and whitelists
+## 3. Working with the proxy and whitelists
 * * *
 
 <h4> Working with the Proxy </h4>
@@ -132,22 +132,107 @@ Additionally, to aid Gen3 Commons security, tool installation from outside sourc
 
 
 
-## Using the Gen3 SDK
+## 4. Using the Gen3 SDK
 * * *
 
-The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic python library and a sample analysis notebook to help jumpstart commons analyses. The SDK entails functions that do basic API requests for the user and authenticates.
+The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic python library and a sample analysis notebook to help jumpstart commons analyses. In summary, the SDK entails classes that do basic API requests for the user and authenticates, such as 1) **Gen3Auth**, which contains an authorization wrapper to support JWT-based authentication, 2) **Gen3Submission**, which is the client for interacting with the Gen3's submission service including GraphQL queries, and 3) **Gen3Index**, which is the client for interacting with the Gen3's Indexd service for GUID brokering and resolution.
 
 The complete SDK documentation can be found on [Github](https://github.com/uc-cdis/gen3sdk-python) or on the [API documentation page](https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html). The Gen3 community is encouraged to add to the functions library or improve the notebook.
 
-> __NOTE:__   As the Gen3 community updates repositories, you can keep them up to date using `git pull origin master`.
+To [install the Gen3 SDK](https://gen3sdk-python.readthedocs.io/en/latest/install.html), you can use the python installer 'pip':
 
-To [install the Gen3 SDK](https://gen3sdk-python.readthedocs.io/en/latest/install.html), you can use the python installer 'pip'.
-
-Example:
 ```
 # Install Gen3 SDK:
 pip install gen3
 
 # To clone and develop the source:
 git clone https://github.com/uc-cdis/gen3sdk-python.git
+
+# As the Gen3 community updates repositories, you can keep them up to date using:
+git pull origin master
+
 ```
+
+
+Below we list a selection of commonly used SDK classes/functions to interact with a Gen3 data commons:
+
+1) Start interacting with the data commons using the authentication class **Gen3Auth**
+```
+import gen3
+from gen3.auth import Gen3Auth
+endpoint = "https://gen3.datacommons.io/"
+creds = "/user/directory/credentials.json"
+auth = Gen3Auth(endpoint, creds)
+```
+
+2) The class **Gen3Submission** is used to list programs/projects and export structured metadata from a node. Below are three common examples listed.
+
+a) Show all available programs in the data commons with `get_programs`:
+
+```
+from gen3.submission import Gen3Submission
+sub = Gen3Submission(endpoint, auth)
+sub.get_programs()
+```
+
+will return:
+
+```
+{'links': ['/v0/submission/OpenNeuro',
+  '/v0/submission/GEO',
+  '/v0/submission/OpenAccess',
+  '/v0/submission/DEV']}
+```
+
+b) Show all projects under a particular program ("OpenAccess") with `get_projects`:
+
+```
+from gen3.submission import Gen3Submission
+sub = Gen3Submission(endpoint, auth)
+sub.get_projects("OpenAccess")
+```
+
+will return
+
+```
+{'links': ['/v0/submission/OpenAccess/CCLE']}
+```
+
+c) Export all structured metadata stored under one node of a project as a tsv file with `export_node`:
+
+```
+from gen3.submission import Gen3Submission
+sub = Gen3Submission(endpoint, auth)
+program = "OpenAccess"
+project = "CCLE"
+node_type = "aligned_reads_file"
+fileformat = "tsv"
+filename = "OpenAccess_CCLE_aligned_reads_file.tsv"
+sub.export_node(program, project, node_type, fileformat, filename)
+```
+
+will return:
+
+```
+Output written to file: OpenAccess_CCLE_aligned_reads_file.tsv
+```
+
+
+3) Show all the metadata associated with a given id using the class **Gen3Index**
+
+Guids can be found on the Exploration page (https://gen3.datacommons.io/explorer) under the `Files` tab.
+
+```
+from gen3.index import Gen3Index
+ind = Gen3Index(endpoint, auth)
+record1 = ind.get_record("92183610-735e-4e43-afd6-7b15c91f6d10")
+print(record1)
+```
+
+will return:
+
+```
+{'acl': ['*'], 'authz': ['/programs/OpenAccess/projects/CCLE'], 'baseid': 'e9bd6198-300c-40c8-97a1-82dfea8494e4', 'created_date': '2020-03-13T16:08:53.743421', 'did': '92183610-735e-4e43-afd6-7b15c91f6d10', 'file_name': None, 'form': 'object', 'hashes': {'md5': 'cbccc3cd451e09cf7f7a89a7387b716b'}, 'metadata': {}, 'rev': '13077495', 'size': 15411918474, 'updated_date': '2020-03-13T16:08:53.743427', 'uploader': None, 'urls': ['https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97'], 'urls_metadata': {'https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97': {}}, 'version': None}
+```
+
+4) **Gen3Jobs**
