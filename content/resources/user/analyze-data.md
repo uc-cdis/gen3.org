@@ -156,13 +156,13 @@ git pull origin master
 
 ### Examples
 1. Start interacting with the data commons using the authentication class _Gen3Auth_
-```
-import gen3
-from gen3.auth import Gen3Auth
-endpoint = "https://gen3.datacommons.io/"
-creds = "/user/directory/credentials.json"
-auth = Gen3Auth(endpoint, creds)
-```
+		```
+		import gen3
+		from gen3.auth import Gen3Auth
+		endpoint = "https://gen3.datacommons.io/"
+		creds = "/user/directory/credentials.json"
+		auth = Gen3Auth(endpoint, creds)
+		```
 
 2. The class _Gen3Submission_ is used to list programs/projects and export structured metadata from a node.
 
@@ -233,5 +233,3 @@ will return:
 ```
 {'acl': ['*'], 'authz': ['/programs/OpenAccess/projects/CCLE'], 'baseid': 'e9bd6198-300c-40c8-97a1-82dfea8494e4', 'created_date': '2020-03-13T16:08:53.743421', 'did': '92183610-735e-4e43-afd6-7b15c91f6d10', 'file_name': None, 'form': 'object', 'hashes': {'md5': 'cbccc3cd451e09cf7f7a89a7387b716b'}, 'metadata': {}, 'rev': '13077495', 'size': 15411918474, 'updated_date': '2020-03-13T16:08:53.743427', 'uploader': None, 'urls': ['https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97'], 'urls_metadata': {'https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97': {}}, 'version': None}
 ```
-
-4) **Gen3Jobs**
