@@ -15,7 +15,7 @@ Data can be analyzed in the Gen3 Workspace or using the Gen3 SDK. For a general 
 
 * [1. Using the Gen3 Workspace](#1-using-the-gen3-workspace)
 * [2. Getting Files into the Gen3 Workspace](#2-getting-files-into-the-gen3-workspace)
-* [3. Working with the proxy and whitelists](#w3-orking-with-the-proxy-and-whitelists)
+* [3. Working with the proxy and whitelists](#3-orking-with-the-proxy-and-whitelists)
 * [4. Using the Gen3 SDK](#4-using-the-gen3-sdk)
 
 
@@ -135,10 +135,11 @@ Additionally, to aid Gen3 Commons security, tool installation from outside sourc
 ## 4. Using the Gen3 SDK
 * * *
 
-The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic python library and a sample analysis notebook to help jumpstart commons analyses. In summary, the SDK entails classes that do basic API requests for the user and authenticates, such as 1) **Gen3Auth**, which contains an authorization wrapper to support JWT-based authentication, 2) **Gen3Submission**, which is the client for interacting with the Gen3's submission service including GraphQL queries, and 3) **Gen3Index**, which is the client for interacting with the Gen3's Indexd service for GUID brokering and resolution.
+The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic python library and a sample analysis notebook to help jumpstart commons analyses. In short, the SDK entails classes that do basic API requests for the user and authenticates, such as 1) *Gen3Auth*, which contains an authorization wrapper to support JWT-based authentication, 2) *Gen3Submission*, which interacts with the Gen3's submission service including GraphQL queries, and 3) *Gen3Index*, which interacts with the Gen3's Indexd service for GUID brokering and resolution. Below we show how to get started and a selection of commonly used SDK classes/functions to interact with a Gen3 data commons.
 
-The complete SDK documentation can be found on [Github](https://github.com/uc-cdis/gen3sdk-python) or on the [API documentation page](https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html). The Gen3 community is encouraged to add to the functions library or improve the notebook.
+> __NOTE:__ The complete SDK documentation can be found on [Github](https://github.com/uc-cdis/gen3sdk-python) or on the [API documentation page](https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html). The Gen3 community is encouraged to add to the functions library or improve the notebook.
 
+### How to get started
 To [install the Gen3 SDK](https://gen3sdk-python.readthedocs.io/en/latest/install.html), you can use the python installer 'pip':
 
 ```
@@ -153,10 +154,8 @@ git pull origin master
 
 ```
 
-
-Below we list a selection of commonly used SDK classes/functions to interact with a Gen3 data commons:
-
-1) Start interacting with the data commons using the authentication class **Gen3Auth**
+### Examples
+1) Start interacting with the data commons using the authentication class _Gen3Auth_
 ```
 import gen3
 from gen3.auth import Gen3Auth
@@ -165,9 +164,9 @@ creds = "/user/directory/credentials.json"
 auth = Gen3Auth(endpoint, creds)
 ```
 
-2) The class **Gen3Submission** is used to list programs/projects and export structured metadata from a node. Below are three common examples listed.
+2) The class _Gen3Submission_ is used to list programs/projects and export structured metadata from a node.
 
-a) Show all available programs in the data commons with `get_programs`:
+a) All available programs in the data commons will be shown with `get_programs`. The following commands
 
 ```
 from gen3.submission import Gen3Submission
@@ -184,7 +183,7 @@ will return:
   '/v0/submission/DEV']}
 ```
 
-b) Show all projects under a particular program ("OpenAccess") with `get_projects`:
+b) All projects under a particular program ("OpenAccess") will be shown with `get_projects`. The following commands
 
 ```
 from gen3.submission import Gen3Submission
@@ -198,7 +197,7 @@ will return
 {'links': ['/v0/submission/OpenAccess/CCLE']}
 ```
 
-c) Export all structured metadata stored under one node of a project as a tsv file with `export_node`:
+c) All structured metadata stored under one node of a project can be exported as a tsv file with `export_node`. The following commands
 
 ```
 from gen3.submission import Gen3Submission
@@ -218,21 +217,21 @@ Output written to file: OpenAccess_CCLE_aligned_reads_file.tsv
 ```
 
 
-3) Show all the metadata associated with a given id using the class **Gen3Index**
+3) The class _Gen3Index_ is used to show all metadata associated with a given id
 
-Guids can be found on the Exploration page (https://gen3.datacommons.io/explorer) under the `Files` tab.
+	Guids can be found on the Exploration page (https://gen3.datacommons.io/explorer) under the `Files` tab. The following commands
 
-```
-from gen3.index import Gen3Index
-ind = Gen3Index(endpoint, auth)
-record1 = ind.get_record("92183610-735e-4e43-afd6-7b15c91f6d10")
-print(record1)
-```
+	```
+	from gen3.index import Gen3Index
+	ind = Gen3Index(endpoint, auth)
+	record1 = ind.get_record("92183610-735e-4e43-afd6-7b15c91f6d10")
+	print(record1)
+	```
 
-will return:
+	will return:
 
-```
-{'acl': ['*'], 'authz': ['/programs/OpenAccess/projects/CCLE'], 'baseid': 'e9bd6198-300c-40c8-97a1-82dfea8494e4', 'created_date': '2020-03-13T16:08:53.743421', 'did': '92183610-735e-4e43-afd6-7b15c91f6d10', 'file_name': None, 'form': 'object', 'hashes': {'md5': 'cbccc3cd451e09cf7f7a89a7387b716b'}, 'metadata': {}, 'rev': '13077495', 'size': 15411918474, 'updated_date': '2020-03-13T16:08:53.743427', 'uploader': None, 'urls': ['https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97'], 'urls_metadata': {'https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97': {}}, 'version': None}
-```
+	```
+	{'acl': ['*'], 'authz': ['/programs/OpenAccess/projects/CCLE'], 'baseid': 'e9bd6198-300c-40c8-97a1-82dfea8494e4', 'created_date': '2020-03-13T16:08:53.743421', 'did': '92183610-735e-4e43-afd6-7b15c91f6d10', 'file_name': None, 'form': 'object', 'hashes': {'md5': 'cbccc3cd451e09cf7f7a89a7387b716b'}, 'metadata': {}, 'rev': '13077495', 'size': 15411918474, 'updated_date': '2020-03-13T16:08:53.743427', 'uploader': None, 'urls': ['https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97'], 'urls_metadata': {'https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97': {}}, 'version': None}
+	```
 
 4) **Gen3Jobs**
