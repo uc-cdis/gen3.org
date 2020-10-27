@@ -205,7 +205,7 @@ sub.export_node(program, project, node_type, fileformat, filename)
 will return: `Output written to file: OpenAccess_CCLE_aligned_reads_file.tsv`
 
 
-3) The function `get_record` in the class _Gen3Index_ is used to show all metadata associated with a given id by interacting with Gen3's Indexd service. Guids can be found on the Exploration page (https://gen3.datacommons.io/explorer) under the `Files` tab. The following commands:
+3) The function `get_record` in the class _Gen3Index_ is used to show all metadata associated with a given id by interacting with Gen3's Indexd service. Guids can be found on the [Exploration page](https://gen3.datacommons.io/explorer) under the `Files` tab. The following commands:
 
 ```
 from gen3.index import Gen3Index
