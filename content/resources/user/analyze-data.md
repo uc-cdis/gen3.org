@@ -155,7 +155,7 @@ git pull origin master
 ```
 
 ### Examples
-1. Start interacting with the data commons using the authentication class _Gen3Auth_
+1) Start interacting with the data commons using the authentication class _Gen3Auth_
 ```
 import gen3
 from gen3.auth import Gen3Auth
@@ -164,60 +164,58 @@ creds = "/user/directory/credentials.json"
 auth = Gen3Auth(endpoint, creds)
 ```
 
-2. The class _Gen3Submission_ is used to list programs/projects and export structured metadata from a node.
+2) The class _Gen3Submission_ is used to list programs/projects and export structured metadata from a node.
 
-		2.1 All available programs in the data commons will be shown with `get_programs`. The following commands:
+2.1 All available programs in the data commons will be shown with `get_programs`. The following commands:
 
-		```
-		from gen3.submission import Gen3Submission
-		sub = Gen3Submission(endpoint, auth)
-		sub.get_programs()
-		```
+```
+from gen3.submission import Gen3Submission
+sub = Gen3Submission(endpoint, auth)
+sub.get_programs()
+```
 
-		will return:
+will return:
 
-		`
-		{'links': ['/v0/submission/OpenNeuro',
-		'/v0/submission/GEO',
-		'/v0/submission/OpenAccess',
-		'/v0/submission/DEV']}
-		`
+`{'links': ['/v0/submission/OpenNeuro',
+  '/v0/submission/GEO',
+  '/v0/submission/OpenAccess',
+  '/v0/submission/DEV']}`
 
-		b) All projects under a particular program ("OpenAccess") will be shown with `get_projects`. The following commands:
+2.2 All projects under a particular program ("OpenAccess") will be shown with `get_projects`. The following commands:
 
-		```
-		from gen3.submission import Gen3Submission
-		sub = Gen3Submission(endpoint, auth)
-		sub.get_projects("OpenAccess")
-		```
+```
+from gen3.submission import Gen3Submission
+sub = Gen3Submission(endpoint, auth)
+sub.get_projects("OpenAccess")
+```
 
-		will return
+will return
 
-		```
-		{'links': ['/v0/submission/OpenAccess/CCLE']}
-		```
+```
+{'links': ['/v0/submission/OpenAccess/CCLE']}
+```
 
-		c) All structured metadata stored under one node of a project can be exported as a tsv file with `export_node`. The following commands:
+2.3 All structured metadata stored under one node of a project can be exported as a tsv file with `export_node`. The following commands:
 
-		```
-		from gen3.submission import Gen3Submission
-		sub = Gen3Submission(endpoint, auth)
-		program = "OpenAccess"
-		project = "CCLE"
-		node_type = "aligned_reads_file"
-		fileformat = "tsv"
-		filename = "OpenAccess_CCLE_aligned_reads_file.tsv"
-		sub.export_node(program, project, node_type, fileformat, filename)
-		```
+```
+from gen3.submission import Gen3Submission
+sub = Gen3Submission(endpoint, auth)
+program = "OpenAccess"
+project = "CCLE"
+node_type = "aligned_reads_file"
+fileformat = "tsv"
+filename = "OpenAccess_CCLE_aligned_reads_file.tsv"
+sub.export_node(program, project, node_type, fileformat, filename)
+```
 
-		will return:
+will return:
 
-		```
-		Output written to file: OpenAccess_CCLE_aligned_reads_file.tsv
-		```
+```
+Output written to file: OpenAccess_CCLE_aligned_reads_file.tsv
+```
 
 
-3. The class _Gen3Index_ is used to show all metadata associated with a given id.
+3) The class _Gen3Index_ is used to show all metadata associated with a given id.
 
 Guids can be found on the Exploration page (https://gen3.datacommons.io/explorer) under the `Files` tab. The following commands:
 
