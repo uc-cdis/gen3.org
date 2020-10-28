@@ -46,7 +46,7 @@ After editing a Jupyter notebook, it can be saved in the Workspace to revisit la
 
 ![Upload Save Download Notebook](upload_save_download.gif)
 
-The following clip illustrates downloading the credentials.json from the "Identity" page in the data portal, then uploading that file to the Jupyter Workspace and reading it in a Python notebook named "Gen3_authentication.ipynb":
+The following clip illustrates downloading the credentials.json from the "/Identity" page in the data portal, then uploading that file to the Jupyter Workspace and reading it in a Python notebook named ["Gen3_authentication.ipynb"](Gen3_authentication.ipynb):
 
 ![Python Notebook](authentication.gif)
 
@@ -61,6 +61,11 @@ Terminal sessions can also be started in the Workspace and used to download othe
 You can manage active Notebook and terminal processes by clicking on "Running". Clicking "Shutdown" will terminate the terminal session or close the Jupyter notebook. Be sure to save your notebooks before terminating them.
 
 ![Manage Running Sessions](running.gif)
+
+
+
+
+
 
 ## 2. Getting Files into the Gen3 Workspace
 * * *
@@ -155,7 +160,8 @@ git pull origin master
 ```
 
 ### Examples
-1) Start interacting with the data commons using the authentication class _Gen3Auth_
+1) Start interacting with the data commons using the authentication class _Gen3Auth_. You can also download this python notebook ["Gen3_authentication.ipynb"](Gen3_authentication.ipynb), upload it into the workspace https://gen3.datacommons.io/workspace, and run it.
+
 ```
 import gen3
 from gen3.auth import Gen3Auth
@@ -187,7 +193,7 @@ sub = Gen3Submission(endpoint, auth)
 sub.get_projects("OpenAccess")
 ```
 
-will return "CCLE" as the project under the program: `{'links': ['/v0/submission/OpenAccess/CCLE']}`
+will return "CCLE" as the project under the program "OpenAccess": `{'links': ['/v0/submission/OpenAccess/CCLE']}`
 
 2.3) All structured metadata stored under one node of a project can be exported as a tsv file with the function `export_node`. The following commands:
 
