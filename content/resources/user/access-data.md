@@ -73,11 +73,9 @@ More detailed information on how to query specific data can be found [here](/res
 
 
 ### Querying Metadata Using Gen3 SDK
-The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic software development kit (SDK) to help users interact with the Gen3 API, which can be found on [Github](https://github.com/uc-cdis/gen3sdk-python). The complete documentation can be found on GitHub and on the [API documentation page](https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html).
+The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic software development kit (SDK) to help users interact with the Gen3 API, which can be found on [Github](https://github.com/uc-cdis/gen3sdk-python). The complete documentation can be found either on GitHub or on the [API documentation page](https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html).
 
 It is possible to execute a GraphQL query against a data commons using the functions `query` or `get_graphql_schema` in the __Gen3Submission__ class shown [here](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html). More SDK examples and how to get started with the SDK can be also found in the [analyze-data section](http://www.gen3.org/resources/user/analyze-data/#4-using-the-gen3-sdk).
-
->__Note__: It is possible to dynamically retrieve a GUID for a row in the manifest file provided. However, this is limited by indexd's ability to scale to the queries you want to run.
 
 ### Querying Metadata Using the API
 With the API in place, users can submit queries to find metadata information across the Gen3 commons. The API can be queried programmatically using, for example, the python 'requests' package, or through provided tools, like the submission portal. Further details on how to send queries to the API are documented [here](/resources/user/using-api/#querying-and-downloading-metadata-using-the-api).
@@ -133,9 +131,9 @@ From within the Exploration tool, after applying the chosen filters to the list 
 
 
 ### Downloading Metadata Using the Gen3 SDK
-The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic software development kit (SDK) to help users interact with the Gen3 API, which can be found on [Github](https://github.com/uc-cdis/gen3sdk-python). The complete documentation can be found on GitHub and on the [API documentation page](https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html).
+The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic software development kit (SDK) to help users interact with the Gen3 API, which can be found on [Github](https://github.com/uc-cdis/gen3sdk-python). The complete documentation can be found either on GitHub or on the [API documentation page](https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html).
 
-It is possible to export all records in a single node type of a project or export a single record into a json file using the functions `export_node` and `export_record`, respectively, in the __Gen3Submission__ class reported [here](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html). More SDK examples and how to get started with the SDK can be also found in the [analyze-data section](http://www.gen3.org/resources/user/analyze-data/#4-using-the-gen3-sdk).
+It is possible to export all records in a single node type of a project or export a single record into a .JSON file using the functions `export_node` and `export_record`, respectively, in the __Gen3Submission__ class reported [here](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html). More SDK examples and how to get started with the SDK can be also found in the [analyze-data section](http://www.gen3.org/resources/user/analyze-data/#4-using-the-gen3-sdk).
 
 
 ### Downloading Metadata Using the API
