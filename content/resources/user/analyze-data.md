@@ -17,6 +17,7 @@ Data can be analyzed in the Gen3 Workspace or using the Gen3 SDK. For a general 
 * [2. Getting Files into the Gen3 Workspace](#2-getting-files-into-the-gen3-workspace)
 * [3. Working with the proxy and whitelists](#3-orking-with-the-proxy-and-whitelists)
 * [4. Using the Gen3 SDK](#4-using-the-gen3-sdk)
+* [5. Jupyter Notebook Demos](#5-jupyter-notebook-demos)
 
 
 * * *
@@ -46,7 +47,7 @@ After editing a Jupyter notebook, it can be saved in the Workspace to revisit la
 
 ![Upload Save Download Notebook](upload_save_download.gif)
 
-The following clip illustrates downloading the credentials.json from the "/Identity" page in the data portal, then uploading that file to the Jupyter Workspace and reading it in a Python notebook named ["Gen3_authentication.ipynb"](Gen3_authentication.ipynb):
+The following clip illustrates downloading the credentials.json from the "/Identity" page in the data portal, then uploading that file to the Jupyter Workspace and reading it in a Python notebook named ["Gen3_authentication notebook"](#5-jupyter-notebook-demos):
 
 ![Python Notebook](authentication.gif)
 
@@ -140,7 +141,7 @@ Additionally, to aid Gen3 Commons security, tool installation from outside sourc
 ## 4. Using the Gen3 SDK
 * * *
 
-The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic python library and a sample analysis notebook to help jumpstart commons analyses. In short, the SDK entails classes that do basic API requests for the user and authenticates, such as 1) *Gen3Auth*, which contains an authorization wrapper to support JWT-based authentication, 2) *Gen3Submission*, which interacts with the Gen3's submission service including GraphQL queries, and 3) *Gen3Index*, which interacts with the Gen3's Indexd service for GUID brokering and resolution. Below we show how to get started and a selection of commonly used SDK classes/functions to interact with a Gen3 data commons.
+The bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic python library, which in short, entails classes that do basic API requests for the user and authenticates: 1) *Gen3Auth*, which contains an authorization wrapper to support JWT-based authentication, 2) *Gen3Submission*, which interacts with the Gen3's submission service including GraphQL queries, and 3) *Gen3Index*, which interacts with the Gen3's Indexd service for GUID brokering and resolution. Below we show how to get started and a selection of commonly used SDK classes/functions to interact with a Gen3 data commons. In [section 5](#5-jupyter-notebook-demos) we list jupyter notebooks that use the SDK to help jumpstart analyses on a Gen3 data commons.
 
 > __NOTE:__ The complete SDK documentation can be found on [Github](https://github.com/uc-cdis/gen3sdk-python) or on the [API documentation page](https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html). The Gen3 community is encouraged to add to the functions library or improve the notebook.
 
@@ -160,7 +161,7 @@ git pull origin master
 ```
 
 ### Examples
-1) Start interacting with the data commons using the authentication class _Gen3Auth_. You can also download this python notebook ["Gen3_authentication.ipynb"](Gen3_authentication.ipynb), upload it into the workspace https://gen3.datacommons.io/workspace, and run it.
+1) Start interacting with the data commons using the authentication class _Gen3Auth_. You can also download this python notebook ["Gen3_authentication.ipynb"](#5-jupyter-notebook-demos), upload it into the workspace https://gen3.datacommons.io/workspace, and run it.
 
 ```
 import gen3
@@ -221,3 +222,19 @@ print(record1)
 ```
 
 will return: `{'acl': ['*'], 'authz': ['/programs/OpenAccess/projects/CCLE'], 'baseid': 'e9bd6198-300c-40c8-97a1-82dfea8494e4', 'created_date': '2020-03-13T16:08:53.743421', 'did': '92183610-735e-4e43-afd6-7b15c91f6d10', 'file_name': None, 'form': 'object', 'hashes': {'md5': 'cbccc3cd451e09cf7f7a89a7387b716b'}, 'metadata': {}, 'rev': '13077495', 'size': 15411918474, 'updated_date': '2020-03-13T16:08:53.743427', 'uploader': None, 'urls': ['https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97'], 'urls_metadata': {'https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97': {}}, 'version': None}`
+
+
+
+
+## 5. Jupyter Notebook Demos
+***
+Below we list a few jupyter notebooks which show how to get started on how to use the SDK to interact with the Gen3 data commons and how to analyze datasets on X different Gen3 data commons
+
+1. How to get started using the Gen3 SDK with the ["Gen3_authentication notebook"](Gen3_authentication.ipynb)
+This jupyter python3 notebook is written to be run in the workspace of the gen3.datacommons.io.
+
+2. How to get started, download node files from the datacommons, show/select data, and plot with this [notebook](notebook2_canine.ipynb).
+This jupyter python3 notebook is written for the workspace of the [canine datacommons](https://caninedc.org/workspace).
+
+3.
+This jupyter python3 notebook is written for the workspace [sandbox datacommons](gen3.datacommons.io).
