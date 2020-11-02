@@ -228,13 +228,10 @@ will return: `{'acl': ['*'], 'authz': ['/programs/OpenAccess/projects/CCLE'], 'b
 
 ## 5. Jupyter Notebook Demos
 ***
-Below we list a few jupyter notebooks which show how to get started with the SDK and how to analyze datasets that are stored on Gen3 data commons. When done working on the Jupyter server, we strongly encourage users to shut down the Jupyter server via `ctrl + c` in the VM or use the 'quit' button in the workspace.
+Below we list jupyter notebooks which show how to get started with the SDK and how to analyze datasets that are stored on Gen3 data commons. When done working on the Jupyter server, we strongly encourage users to shut down the Jupyter server via `ctrl + c` in the VM or use the 'quit' button in the workspace.
 
-1. How to get started using the Gen3 SDK with the ["Gen3_authentication notebook"](Gen3_authentication.ipynb)
+1. How to get started using the Gen3 SDK with the ["Gen3_authentication notebook"](Gen3_authentication.ipynb).
 This jupyter python3 notebook should be run in the workspace of the [gen3.datacommons.io](gen3.datacommons.io.).
 
 2. Download node files, show/select data, and plot with this [notebook](notebook2_canine.ipynb).
 This jupyter python3 notebook should be run in the workspace of the [canine datacommons](https://caninedc.org/workspace).
-
-3.
-This jupyter python3 notebook can be run in the workspace [sandbox datacommons](gen3.datacommons.io).
