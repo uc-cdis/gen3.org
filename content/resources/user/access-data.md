@@ -35,9 +35,9 @@ The exploration page has one or several tabs at the top, which each represent a 
 
 Each of these main tabs will have filters on the left-hand side, which can be used to filter the data displayed in the table. There may be an optional button on each tab to download the flattened metadata table as a JSON file. This button should download the table in its filtered state. To remove a filter, click "clear" on individual facets, and you can remove all filters by reloading the page.
 
-> Note: The main tabs in the Exploration Page, the available filters, and the properties listed in the data table are entirely customizable, and will be different for various Gen3 data commons.
+> Note: The main tabs in the Exploration Page, the available filters, and the properties listed in the data table are entirely customizable and will be different for various Gen3 data commons.
 
-If the table is a list of files, there should be a button for downloading a JSON file that serves as a manifest to use with the [gen3-client](/resources/user/gen3-client/) for [downloading multiple files](/resources/user/gen3-client/#5-provide-a-manifest-file-for-bulk-download). Otherwise, to download a file listed in the table, simply click on the GUID (globally unique identifier, or object_id), which should open a page with a download button.
+If the table is a list of files, there should be a button for downloading a JSON file that serves as a manifest to use with the [gen3-client](/resources/user/gen3-client/) for [downloading multiple files](/resources/user/gen3-client/#5-provide-a-manifest-file-for-bulk-download). Otherwise, to download single a file listed in the table, simply click on the GUID (globally unique identifier, or object_id), which should open a page with a download button.
 
 > Note: Some data commons have security measures in place that limit what environments users can access data files. For example, users may be required to download and analyze data files in a protected environment, such as a virtual machines (VM) in a virtual private cloud (VPC) or in the built-in Gen3 Workspace, which is accessed by clicking on "Workspace" in the top navigation bar of the data commons website. For more information on the Workspace, see the [documentation on how to access and use the Gen3 Workspace](/resources/user/analyze-data).
 
@@ -88,7 +88,7 @@ The beauty of a Gen3 data commons is that all the functionality of the data comm
 Users can submit queries to the Gen3 APIs to access structured data across the projects in the data commons. Queries can be sent using, for example, the Python "requests" package or similar functions in other programming languages. Further details on how to send queries to the API are documented [here](/resources/user/using-api/#querying-and-downloading-metadata-using-the-api).
 
 ### Exporting Metadata Programmatically
-Users with "read" access to a project can export entire structured metadata records by sending requests to the API. Single records can be exported or all records in a specific node of a project can be retrieved. For more information, see [the documentation on uising the API](/resources/user/using-api/#querying-and-downloading-metadata-using-the-api).
+Users with "read" access to a project can export entire structured metadata records by sending requests to the API. Single records can be exported or all records in a specific node of a project can be retrieved. For more information, see [the documentation on using the API](/resources/user/using-api/#querying-and-downloading-metadata-using-the-api).
 
 ### The Gen3 SDK
 To make sending requests to the Gen3 APIs easier, the bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic Python SDK (software development kit) to help users interact with the Gen3 APIs.
