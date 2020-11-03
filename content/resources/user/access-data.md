@@ -16,7 +16,7 @@ The data in a Gen3 data commons can be browsed and downloaded using several diff
   * [Exploration Page](#exploration-page)
   * [Browsing the List of Projects](#browsing-the-list-of-projects)
   * [Querying Structured Data](#querying-structured-data)
-* [Accessing Data Using the API](#access-data-using-the-api)
+* [Access Data Using the API](#access-data-using-the-api)
   * [Querying Metadata Programmatically](#querying-metadata-programmatically)
   * [Exporting Metadata Programmatically](#querying-metadata-programmatically)
   * [The Gen3 SDK](#the-gen3-sdk)
@@ -81,7 +81,7 @@ The following example query returns the subject and submitter ids in the subject
 More detailed information on how to query specific data can be found [here](/resources/user/query-the-data/).
 
 
-## Accessing Data Using the API
+## Access Data Using the API
 The beauty of a Gen3 data commons is that all the functionality of the data commons website is available by sending requests to the open APIs of the data commons. Detailed API specifications of the Gen3 services can be browsed in [the developer documentation](/resources/developer/microservice).
 
 ### Querying Metadata Programmatically
