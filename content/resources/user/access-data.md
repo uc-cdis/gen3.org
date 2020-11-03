@@ -29,6 +29,8 @@ The Gen3 software stack offers a data portal service that creates a website with
 ### Exploration Page
 The primary tool for exploring data within a Gen3 data commons is the Exploration Page, which offers faceted search of data across projects, for example, https://gen3.datacommons.io/explorer. This page can be accessed from the /explorer endpoint or the top navigation bar, by clicking on the "Exploration" icon.
 
+![Exploration](Gen3_Toolbar_exploration.png)
+
 The exploration page has one or several tabs at the top, which each represent a flattened ElasticSearch document of structured metadata records across all the projects in the data commons, which is displayed as a table towards the bottom center of the page. For example, there may be a "Subjects" tab for building patient cohorts, which displays a table of all the records and associated metadata in the subject node, like medical history and demographics. Most commons also have one or more "File" tabs for filtering all the files in a data commons based on things like the file format, data type, or other linked contextual variables, like linked patient demographics or medical history.
 
 Each of these main tabs will have filters on the left-hand side, which can be used to filter the data displayed in the table. There may be an optional button on each tab to download the flattened metadata table as a JSON file. This button should download the table in its filtered state. To remove a filter, click "clear" on individual facets, and you can remove all filters by reloading the page.
