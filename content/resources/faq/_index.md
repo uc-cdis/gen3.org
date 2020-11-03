@@ -15,7 +15,7 @@ menuname: faqMenu
 <h4>I installed Compose Services, how do I create a program and a project?</h4>
 
 Please refer to corresponding
-[Gen3 Documentation](https://gen3.org/resources/operator/#5-programs-and-projects)
+[Gen3 Documentation](https://gen3.org/resources/operator/#6-programs-and-projects)
 to create your first program and project.
 
 
