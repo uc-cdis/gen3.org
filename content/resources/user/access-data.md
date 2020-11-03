@@ -46,7 +46,7 @@ A graphical model of the structured data in individual data projects of a data c
 
 > Note: Users who are authorized to submit data may see a "Submit Data" button instead of "Browse Data", and will also be able to upload or create structured data in the project on this page.
 
-<h4> Example: VProjects and Browse Data by Node</h4>
+<h4> Example: Browse Data in Individual Projects</h4>
 ![Browse by node](projects-nodes-view.png)
 
 In the graphical model of a data project, the number you see underneath the node name, for example 'subject', reflects the number of records in that node of the project. The "Toggle View" button is used to show or hide nodes in the data model that the project has no records for.
