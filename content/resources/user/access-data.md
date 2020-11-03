@@ -22,7 +22,7 @@ After finding the metadata/structured data or data files of interest, they can b
 * [Downloading Data Files](#downloading-data-files)
   * [Downloading a Data File Using the Exploration Tool](#downloading-a-data-file-using-the-exploration-tool)
   * [Using a Data File Download Manifest with the Gen3-Client](#using-a-data-file-download-manifest-with-the-gen3-client)
-  * [Downloading Metadata Using the Gen3 SDK](#downloading-files-using-the-gen3-sdk)
+  * [Downloading Metadata Using the Gen3 SDK](#downloading-metadata-using-the-gen3-sdk)
   * [Downloading Metadata Using the API](#downloading-metadata-using-the-api)
 
 * * *
