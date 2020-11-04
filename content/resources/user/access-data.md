@@ -10,7 +10,13 @@ menuname: userMenu
 
 * * *
 
-The data in a Gen3 data commons can be browsed and downloaded using several different methods. The following sections provide details on how to explore and access data from within the data commons website and from the command-line by sending requests to the Gen3 open APIs.
+The data in a Gen3 data commons can be browsed and downloaded using several different methods. The following general documentation will cover some standard methods of data access in a Gen3 data commons. Ultimately, however, the methods of data access offered in a Gen3 data commons is determined by agreements made between the data commons' sponsors and data contributors.
+
+Various levels of data access can be configured in a Gen3 data commons using the Fence and Arborist services. If open access data is hosted, a data commons can be configured to allow anonymous access to data, which means users can explore data without logging in. This is the case for the [Open Access Data Commons](https://gen3.datacommons.io/explorer).
+
+In cases where data is controlled access, typically external users will receive instructions on how to access data and may be required to sign a DUA (Data Use Agreement) legal document.
+
+The following sections provide details on how to explore and access data from within the data commons website and from the command-line by sending requests to the Gen3 open APIs.
 
 * [The Data Commons Website](#the-data-commons-website)
   * [Exploration Page](#exploration-page)

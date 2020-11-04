@@ -9,34 +9,25 @@ menuname: userMenu
 # Data Analysis in a Gen3 Data Commons
 * * *
 
-How data is accessed in a Gen3 data commons is determined by the commons' sponsor(s), data contributor(s), and/or  operator(s). Some data commons may be able to grant users permissions to download data files directly to their local computers, while others may choose to allow analysis only in the Gen3-provided Workspace. Other data commons may have rules that data cannot be downloaded outside of a Virtual Private Cloud (VPC). In these cases, data analysts may need to access and configure a virtual machine (VM) in the VPC where all analyses will be done.
+The Gen3 platform for creating data commons co-locates data management with analysis workspaces, apps and tools. Workspaces are highly customizable by the operators of a Gen3 data commons and offer a variety of VM images (virtual machines) pre-configured with tools for specific analysis tasks. Custom applications for executing bioinformatics workflows or exploratory analyses may be integrated in the navigation bar as well. The following documentation primarily covers exploratory data analysis in the standard Gen3 Workspace, which can be accessed by clicking the "Workspace" icon in the top navigation bar or navigating to the /workspace endpoint.
 
-Data can be analyzed in the Gen3 Workspace or using the Gen3 SDK. For a general introduction to data analysis in Gen3, take a look at the webinars on the [Gen3 YouTube channel](https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/videos).
-
-* [1. Using the Gen3 Workspace](#1-using-the-gen3-workspace)
+* [1. Launch Workspace](#1-launch-workspace)
 * [2. Getting Files into the Gen3 Workspace](#2-getting-files-into-the-gen3-workspace)
 * [3. Working with the proxy and whitelists](#3-orking-with-the-proxy-and-whitelists)
 * [4. Using the Gen3 SDK](#4-using-the-gen3-sdk)
 * [5. Jupyter Notebook Demos](#5-jupyter-notebook-demos)
 
-
 * * *
-## 1. Using the Gen3 Workspace
+## 1. Launch Workspace
 * * *
 
-The Gen3 software stack features a built-in workspace where users can access analysis tools for data exploration and analysis like JupyterHub. To access the workspace, click "Workspace" in the top navigation bar of the data portal.
-
-![Data portal Workspace button](workspace_button2020.png)
-
-Once connected to a workspace VM, a user's personal, persistant drive (the directory "pd") is mounted. All data, notebooks, scripts, data files, etc., that needs to persist in the cloud after workspace termination should be saved in the "pd" drive. When logging out of a workspace, this personal drive is unmounted, and when logging back in, the drive is again mounted to the new workspace VM, making the  files and analyses saved under the "pd" drive accessible.
-
-
-Now choose the workspace VM flavor of your choice from the options displayed. Data commons may offer a single option or a variety of VM flavors with varying processor and memory specifications and different pre-installed tools.
+Click on the "Workspace" icon or navigate to the [/workspace](https://gen3.datacommons.io/workspace) endpoint to see a list of pre-configured virtual machine (VM) images offered by the data commons and click the "Launch" button to spin-up a VM.
 
 ![Spawner Options](workspace_flavors2020.png)
 
-Once the chosen VM flavor launches, JupyterHub should appear.
-Jupyter notebooks and other analysis-related files like scripts can be uploaded to JupyterHub by clicking the "upload" button. Alternatively, a new notebook can be created by clicking “New” and then choosing the type of notebook, for example, "Python 3".
+Once connected to a workspace VM, the persistent drive named "/pd" can be seen in the Files tab of either JupyterHub or RStudio. All data, notebooks, or scripts that need to persist in the cloud after workspace termination should be saved in this "pd" drive. When logging out of a workspace, this personal drive is unmounted but saved, so that when launching a new workspace VM, the drive can be mounted again to make the saved work accessible.
+
+Jupyter notebooks and other analysis-related files like scripts can be uploaded to JupyterHub by clicking the "upload" button. Make sure to save files to the "/pd" directory if they need to remain accessible after logging out. Alternatively, a new notebook can be created by clicking “New” and then choosing the type of notebook, for example, "Python 3" or "R".
 
 ![New Workspace](workspace_new_nb2020.png)
 
