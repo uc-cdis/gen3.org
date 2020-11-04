@@ -129,9 +129,9 @@ Additionally, to aid Gen3 Commons security, the installation of tools from outsi
 To make programmatic interaction with Gen3 data commons easier, the bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has developed the Gen3 Python SDK, which is a Python library containing functions for sending standard requests to the Gen3 APIs. The code is open-source and available on [GitHub](https://github.com/uc-cdis/gen3sdk-python) along with [documentation for using it](https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html).
 
 The SDK includes the following classes of functions:
-1) *Gen3Auth*, which contains an authorization wrapper to support JWT-based authentication,
-2) *Gen3Submission*, which interacts with the Gen3's submission service including GraphQL queries,
-3) *Gen3Index*, which interacts with the Gen3's Indexd service for GUID brokering and resolution.
+1. *Gen3Auth*, which contains an authorization wrapper to support JWT-based authentication,
+2. *Gen3Submission*, which interacts with the Gen3's submission service including GraphQL queries,
+3. *Gen3Index*, which interacts with the Gen3's Indexd service for GUID brokering and resolution.
 
 Below is a selection of commonly used functions along with [notebooks demonstrating their use](#5-jupyter-notebook-demos).
 

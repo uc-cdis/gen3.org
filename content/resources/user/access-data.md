@@ -45,6 +45,8 @@ Each of these main tabs will have filters on the left-hand side, which can be us
 
 If the table is a list of files, there should be a button for downloading a JSON file that serves as a manifest to use with the [gen3-client](/resources/user/gen3-client/) for [downloading multiple files](/resources/user/gen3-client/#5-provide-a-manifest-file-for-bulk-download). Otherwise, to download single a file listed in the table, simply click on the GUID (globally unique identifier, or object_id), which should open a page with a download button.
 
+![Exploring the Explorer](explorer_gif_2020.gif)
+
 > Note: Some data commons have security measures in place that limit what environments users can access data files. For example, users may be required to download and analyze data files in a protected environment, such as a virtual machines (VM) in a virtual private cloud (VPC) or in the built-in Gen3 Workspace, which is accessed by clicking on "Workspace" in the top navigation bar of the data commons website. For more information on the Workspace, see the [documentation on how to access and use the Gen3 Workspace](/resources/user/analyze-data).
 
 ### Browsing the List of Projects
