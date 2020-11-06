@@ -189,17 +189,15 @@ In the above example, if "case_2" was enrolled in both "study-01" and "study-02"
 
 ### Begin Metadata TSV Submissions
 
-From the Windmill data portal, click on "Data Submission" and then click "Submit Data" beside the project for which the metadata TSVs are being submitted.
-
-To submit a TSV:
+To submit a TSV in the Windmill data portal:
 
 1. Login to the Windmill data portal for the commons.
 
-2. Click on "Data Submission" in the top navigation bar.
+2. Click on "Submit Data" in the top navigation bar.
 
     ![Data Submission](Gen3_Toolbar_data_submission.png)
 
-3. Click on "Submit Data" by the project to submit metadata.
+3. Click on "Submit Data" beside the project of interest to submit metadata.
 
     ![Submit Data](Gen3_Data_Submission_submit_data.png)
 

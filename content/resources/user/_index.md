@@ -7,7 +7,7 @@ layout: withtoc
 menuname: userMenu
 ---
 
-## Welcome to the Generic Gen3 Data Commons Documentation
+## Welcome to the General Gen3 Data Commons Documentation
 * * *
 
 <h3>Overview</h3>
@@ -46,6 +46,12 @@ Other secure and compliant Gen3 member systems (including cloud-based systems) c
 <h3> Diagram of the System Architecture </h3>
 ![Gen3 Architecture](index/framework.png)
 
+## Online Resources
+* * *
+
+* [The Gen3 YouTube channel](https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/videos)
+* [The Gen3 Forum](https://forums.gen3.org/)
+* [CTDS GitHub Organization](https://github.com/uc-cdis/)
 
 ## Contact CTDS Staff
 * * *
@@ -65,6 +71,6 @@ Other secure and compliant Gen3 member systems (including cloud-based systems) c
 
 * Email:
 	* General Inquiries: <cdis@uchicago.edu>.
-	* Technical Support: <support@opensciencedatacloud.org> and <support@datacommons.io>.
+	* Technical Support: <support@datacommons.io> and <support@opensciencedatacloud.org>.
 
 * * *

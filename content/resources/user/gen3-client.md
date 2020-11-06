@@ -332,7 +332,7 @@ TOTAL                   | 2
 
 ### Local Submission History
 
-The application will keep track of which local files have already been submitted to avoid potential duplication in submissions. This information is kept in a JSON file in the "logs" directory under the same user folder as where the `config` file lives, for example:
+The application will keep track of which local files have already been submitted to avoid potential duplication in submissions. This information is kept in a .JSON file in the "logs" directory under the same user folder as where the `config` file lives, for example:
 
 ```
 Mac/Linux: /Users/demo/.gen3/logs/<your_config_name>_succeeded_log.json
