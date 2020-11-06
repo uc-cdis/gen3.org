@@ -62,7 +62,7 @@ From the command line, download the latest [Linux version of the gen3-client](ht
 
 Example:
 ```
-wget https://github.com/uc-cdis/cdis-data-client/releases/download/2020.10/dataclient_linux.zip
+wget https://github.com/uc-cdis/cdis-data-client/releases/download/2020.11/dataclient_linux.zip
 unzip dataclient_linux.zip
 PATH=$PATH:~/
 ```
@@ -153,7 +153,7 @@ git pull origin master
 ```
 
 ### Examples
-1) Most requests sent to a Gen3 data commons API will require an authorization token to be sent in the request's header. The SDK class _Gen3Auth_ is used for authentication purposes, and has functions for generating these access tokens. The notebook ["Gen3_authentication.ipynb"](#5-jupyter-notebook-demos), can be uploaded to a workspace and run to demonstrate how to initialize an instance of the Gen3Auth class.
+1) Most requests sent to a Gen3 data commons API will require an authorization token to be sent in the request's header. The SDK class _Gen3Auth_ is used for authentication purposes, and has functions for generating these access tokens. The notebook ["Gen3_authentication.ipynb"](#5-jupyter-notebook-demos) can be uploaded to a workspace and run to demonstrate how to initialize an instance of the Gen3Auth class.
 
 ```
 import gen3
