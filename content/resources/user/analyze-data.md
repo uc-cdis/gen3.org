@@ -99,7 +99,6 @@ pheno_63878_2.txt  78.53 KiB / 78.53 KiB [======================================
 2020/11/12 20:06:44 1 files downloaded.
 
 jovyan@jupyter-user:~$ mkdir files
-jovyan@jupyter-user:~$ cd files
 
 jovyan@jupyter-user:~$ gen3-client download-multiple --profile=demo --manifest=file-manifest-demo.json --skip-completed
 2020/11/12 22:18:13 Reading manifest...
@@ -116,6 +115,7 @@ GSM1558810_Sample18_3.CEL.gz  4.16 MiB / 4.16 MiB [=============================
 GSM1558854_Sample40_3.CEL.gz  4.20 MiB / 4.20 MiB [====================....
 2020/11/12 22:18:55 98 files downloaded.
 
+jovyan@jupyter-user:~$  mv *.gz files
 ```
 
 ## 3. Working with the proxy and whitelists
