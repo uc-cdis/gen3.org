@@ -18,7 +18,7 @@ menuname: userMenu
 
 ## What Does the API Do?
 * * *
-The API is created programmatically based on the Gen3 commons data model. All of the work Gen3 data contributors do to prepare their metadata powers the API (see steps [4-6 in the Data Contribution section](/resources/user/submit-data)).
+The API is created programmatically based on the Gen3 commons data model. All of the work Gen3 data contributors do to prepare their metadata powers the API (see steps [4-5 in the Data Contribution section](/resources/user/submit-data)).
 
 With the API in place, users can submit queries to find metadata information across the Gen3 commons. The API can be queried programmatically or through provided tools, like the submission portal.
 
@@ -41,8 +41,11 @@ While displayed, click "copy" to copy the API key to the clipboard or "download"
 In python, the following command is sent, using the module "requests", to receive the access token:
 
 ```
-# Save the copied credentials.json from the website into a variable "key":
-key =  { "api_key": "<actual-key>", "key_id": "<a-key-uuid>" }
+# Save the copied credentials.json from the website and paste it into a variable "key":
+key =  {
+    "api_key": "<actual-key>",
+    "key_id": "<a-key-uuid>"
+    }
 
 # Import the "requests" python module:
 import requests
