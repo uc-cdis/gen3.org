@@ -18,11 +18,17 @@ menuname: userMenu
 
 ## What Does the API Do?
 * * *
-The API is created programmatically based on the Gen3 commons data model. All of the work Gen3 data contributors do to prepare their metadata powers the API (see steps [4-5 in the Data Contribution section](/resources/user/submit-data)).
+The **application programming interface** (API) can be a set of code, rules, functions, and URLs that allow apps, software, servers or more generally speaking, systems, to communicate with each other. The communication between APIs consists of requests and (data) responses, usally in .JSON format.
 
-With the API in place, users can submit queries to find metadata information across the Gen3 commons. The API can be queried programmatically or through provided tools, like the submission portal.
+The beauty of a Gen3 data commons is that all the functionality of the data commons website is available by sending requests to the open APIs of the data commons. Typical requests at Gen3 include querying, [uploading](/resources/user/submit-data) or downloading data, which leads to communication between Gen3 microservices such as the data portal **Windmill** or the metadata submission service **Sheepdog** via open APIs.
 
-The Gen3 commons uses [GraphQL](http://graphql.org/) to manage the metadata. To learn the basics of writing queries in GraphQL, please visit: <http://graphql.org/learn>.
+>__Note:__ The Gen3 commons uses [GraphQL](http://graphql.org/) as the langauge for querying metadata across Gen3 Data Commons. To learn the basics of writing queries in GraphQL, please visit: <http://graphql.org/learn>.
+
+Gen3 features a variety of API endpoints that differ in how they access the resource and in their allowed interactions (i.e. GET, POST, or DELETE). Available GET endpoints under the /submission endpoint include for example `/api/v0/submission/<program>/<project>/_dictionary`, which will get the dictionary schema for entities of a project. Another GET endpoint under the /graphql endpoint is `/api/v0/submission/graphql/getschema`, which will get the data dictionary schema in .JSON format.
+Further API specifications of the Gen3 mirocroservices can be browsed in [the developer documentation](/resources/developer/microservice) and API requests documentation of a Gen3 microservice directed towards more advanced users can be found usally on swagger (e.g. [Sheepdog](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/sheepdog/master/openapi/swagger.yml#/), [Peregrine](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/peregrine/master/openapis/swagger.yaml).
+
+Sending API requests can be done in any programming language, but below we show examples in Python for demonstration purposes. Note that the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic SDK not only in [Python](https://github.com/uc-cdis/gen3sdk-python) but also in [R](https://github.com/uc-cdis/gen3sdk-R) to help users interact with the Gen3 APIs.
+
 
 ## Credentials to send API requests
 * * *
