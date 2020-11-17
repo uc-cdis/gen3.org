@@ -22,12 +22,13 @@ The **application programming interface** (API) can be a set of code, rules, fun
 
 The beauty of a Gen3 data commons is that all the functionality of the data commons website is available by sending requests to the open APIs of the data commons. Typical requests at Gen3 include querying, [uploading](/resources/user/submit-data) or downloading data, which leads to communication between Gen3 microservices such as the data portal **Windmill** or the metadata submission service **Sheepdog** via open APIs.
 
->__Note:__ The Gen3 commons uses [GraphQL](http://graphql.org/) as the langauge for querying metadata across Gen3 Data Commons. To learn the basics of writing queries in GraphQL, please visit: <http://graphql.org/learn>.
+>__Note:__ The Gen3 commons uses GraphQL as the language for querying metadata across Gen3 Data Commons. To learn the basics of writing queries in GraphQL, please visit: <http://graphql.org/learn>.
 
-Gen3 features a variety of API endpoints that differ in how they access the resource and in their allowed interactions (i.e. GET, POST, or DELETE). Available GET endpoints under the /submission endpoint include for example `/api/v0/submission/<program>/<project>/_dictionary`, which will get the dictionary schema for entities of a project. Another GET endpoint under the /graphql endpoint is `/api/v0/submission/graphql/getschema`, which will get the data dictionary schema in .JSON format.
-Further API specifications of the Gen3 mirocroservices can be browsed in [the developer documentation](/resources/developer/microservice) and API requests documentation of a Gen3 microservice directed towards more advanced users can be found usally on swagger (e.g. [Sheepdog](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/sheepdog/master/openapi/swagger.yml#/), [Peregrine](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/peregrine/master/openapis/swagger.yaml).
+Gen3 features a variety of API endpoints such as `/submission` or `/graphql`, which differ in how they access the ressource and contain each a subset of REST (Representational State Transfer) APIs for networked applications. REST APIs are restricted in their interactions via HTTP request methods such as GET, POST, PATCH, PUT, or DELETE. The GET request retrieves data in read-only mode, POST sends data and creates a new resource, PATCH updates/modifies a resource, PUT updates/replaces a resource, and DELETE deletes a resource. At Gen3, the GET endpoint `/api/v0/submission/<program>/<project>/_dictionary` will for example get the dictionary schema for entities of a project, or `/api/v0/submission/graphql/getschema` will get the data dictionary schema in .JSON format.
 
-Sending API requests can be done in any programming language, but below we show examples in Python for demonstration purposes. Note that the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic SDK not only in [Python](https://github.com/uc-cdis/gen3sdk-python) but also in [R](https://github.com/uc-cdis/gen3sdk-R) to help users interact with the Gen3 APIs.
+Further API specifications of the Gen3 mirocroservices can be browsed in [the developer documentation](/resources/developer/microservice) and (REST) API requests documentation of a Gen3 microservice can be found on swagger (e.g. [Sheepdog](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/sheepdog/master/openapi/swagger.yml#/), [Peregrine](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/peregrine/master/openapis/swagger.yaml)).
+
+Sending API requests can be done in any programming language (e.g. Python, Java, R). The Center for Translational Data Science (CTDS) at University of Chicago has put together a basic SDK in [Python](https://github.com/uc-cdis/gen3sdk-python) and [R](https://github.com/uc-cdis/gen3sdk-R) to help users interact with the Gen3 APIs. Below, we list examples in how to send API requests at Gen3 using Python for demonstration purposes.
 
 
 ## Credentials to send API requests
@@ -44,7 +45,7 @@ While displayed, click "copy" to copy the API key to the clipboard or "download"
 
 ![Copy Key](API_copy_keys.png)
 
-In python, the following command is sent, using the module "requests", to receive the access token:
+In Python, the following command is sent, using the module "requests", to receive the access token:
 
 ```
 # Save the copied credentials.json from the website and paste it into a variable "key":
@@ -53,7 +54,7 @@ key =  {
     "key_id": "<a-key-uuid>"
     }
 
-# Import the "requests" python module:
+# Import the "requests" Python module:
 import requests
 
 # Pass the API key to the Gen3 API using "requests.post" to receive the access token:
