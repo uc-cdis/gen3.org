@@ -48,7 +48,7 @@ While displayed, click "copy" to copy the API key to the clipboard or "download"
 In Python, the following command is sent, using the module "requests", to receive the access token:
 
 ```
-# Save the copied credentials.json from the website and paste it into a variable "key":
+# Save the copied credentials.json from the website and paste the api_key and key_id into a variable "key":
 key =  {
     "api_key": "<actual-key>",
     "key_id": "<a-key-uuid>"
@@ -82,7 +82,7 @@ print(dl.text) # display response
 
 # Data Upload via API Endpoint Request:
 headers['content-type']='text/tab-separated-values' # add the content-type to header
-u = requests.put('https://gen3.datacommons.io/api/v0/submission/<program name>/<project code>', data=tsv, headers=headers)
+u = requests.put('https://gen3.datacommons.io/api/v0/submission/<program name>/<project code>', data="tsv", headers=headers)
 ```
 
 If an an error such as "You don't have access... " occurs, then the API key is most likely out of date and a new access token will need to be made.
@@ -125,4 +125,18 @@ https://gen3.datacommons.io/api/v0/submission/GEO/GSE63878/export/?node_label=sa
 
  ```
 https://gen3.datacommons.io/api/v0/submission/GEO/GSE63878/export?ids=180554c0-d0e1-41f2-b5b0-47655d7975ed,3e54268c-b4a6-4cf8-bedc-1e9e49f9d6e9&format=tsv
+```
+
+
+The API endpoint for querying the metadata associated with the given UUID is as follows:
+```
+{commons-url}/index/{GUID}
+ Where:
+{commons-url} is the gen3 data commons url (for example, 'gen3.datacommons.io'),
+{GUID} is the globally unique identifier (for example, 'ce214f52-1a98-4a6f-bda1-2bb2731cfd61')
+```
+The following request will show the metadata of the indexed record in .JSON format. Thus, a browser that includes a .JSON viewer (e.g. Firefox) or a manually installed plug-in can show the .JSON in pretty-print.
+
+```
+https://gen3.datacommons.io/index/47c46ead-f6f5-4cc9-86b9-2354cafe8c64
 ```
