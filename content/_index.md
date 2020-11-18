@@ -9,7 +9,7 @@ g3Teaser:
   detail: A data commons is a cloud-based software platform for managing, analyzing, harmonizing, and sharing large datasets. Gen3 is an open source platform for developing data commons. Data commons accelerate and democratize the process of scientific discovery, especially over large or complex datasets.
   button1:
     caption: Experience Demo
-    link: https://caninedc.org/
+    link: https://gen3.datacommons.io
     target: _blank
   button2:
     caption: Get Started
@@ -61,7 +61,7 @@ g3User:
   detail: Federal agencies, not-for-profits, and consortiums with members spanning the globe use Gen3 and its framework services to support their research communities, access and index their data, and facilitate scientific discoveries that impact the world.
   button:
     caption: Experience Sandbox
-    link: https://caninedc.org/
+    link: https://gen3.datacommons.io
     target: _blank
   fig: figs/app-mockup.png
 g3Commons:
