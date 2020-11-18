@@ -9,7 +9,7 @@ menuname: userMenu
 # Querying Metadata in the Gen3 Submission Portal using GraphiQL
 * * *
 
-The easiest way to query metadata in a Gen3 data commons is done by using the [graphQL query language](https://graphql.org/) with the graphiQL interface, which can be accessed by clicking "Query" in the top navigation bar or by navigating to the URL: https://gen3.datacommons.io/query. The URL https://gen3.datacommons.io can be replaced with the URL of other Gen3 data commons.
+The easiest way to query metadata in a Gen3 data commons is done by using the [graphQL query language](https://graphql.org/) with the GraphiQL interface, which can be accessed by clicking "Query" in the top navigation bar or by navigating to the URL: https://gen3.datacommons.io/query. The URL https://gen3.datacommons.io can be replaced with the URL of other Gen3 data commons.
 
 This query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, pass variables, and generally make it easier for users to find information. The "Docs" button will display documentation of the queryable nodes and properties. From the GraphiQL interface of the data portal, you can switch between *Graph Model* or *Flat Model* --each using endpoints that query different databases (Postgres and ElasticSearch, respectively). Notably, the same queries can be sent to both the flat and graph model API endpoints from the command-line.
 ***
@@ -49,7 +49,7 @@ In the Graph Model, our microservice *Peregrine* converts GraphiQL queries and h
     * `quick_search: "sub-70080"` will return files with the substring "sub-70080" in the submitter_id.
     * `file_name: "sub-70080_T1w.nii.gz"` will return only files with that exact filename.
     * `submitter_id: "OpenNeuro-ds000030_sub-70080_T1w.nii_6ff0"` will return only the file with that exact submitter_id, which must be unique within a node.
-* The following example query can be pasted into the graphiQL interface at https://gen3.datacommons.io/query (be sure to click "Switch to Graph Model"). Note that in this example, there are three individual "datanode" queries that are sent simultaneously and assigned labels ("match_file_name", "match_quick_search", and "match_submitter_id"):
+* The following example query can be pasted into the GraphiQL interface at https://gen3.datacommons.io/query (be sure to click "Switch to Graph Model"). Note that in this example, there are three individual "datanode" queries that are sent simultaneously and assigned labels ("match_file_name", "match_quick_search", and "match_submitter_id"):
 
 ```
 
@@ -131,7 +131,7 @@ In the Graph Model, our microservice *Peregrine* converts GraphiQL queries and h
 
 In the case that too many results are returned, a timeout error might occur. In that case, use [pagination](http://graphql.org/learn/pagination/) to break up the query.
 
-For example, if there are 2,550 records returned, and the graphiQL query is timing out with ```(first:3000)```, then break the query into multiple queries with offsets:
+For example, if there are 2,550 records returned, and the GraphiQL query is timing out with ```(first:3000)```, then break the query into multiple queries with offsets:
 
 ```
 (first:1000, offset:0) 		# this will return records 0-1000

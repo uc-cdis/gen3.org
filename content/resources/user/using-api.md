@@ -18,13 +18,13 @@ menuname: userMenu
 
 ## What Does the API Do?
 * * *
-The **application programming interface** (API) can be a set of code, rules, functions, and URLs that allow apps, software, servers or more generally speaking, systems, to communicate with each other. The communication between APIs consists of requests and (data) responses, usally in .JSON format.
+The **application programming interface** (API) can be a set of code, rules, functions, and URLs that allow apps, software, servers or more generally speaking, systems, to communicate with each other. The communication between APIs consists of requests and (data) responses, usually in .JSON format.
 
 The beauty of a Gen3 data commons is that all the functionality of the data commons website is available by sending requests to the open APIs of the data commons. Typical requests at Gen3 include querying, [uploading](/resources/user/submit-data) or downloading data, which leads to communication between Gen3 microservices such as the data portal **Windmill** or the metadata submission service **Sheepdog** via open APIs.
 
 >__Note:__ The Gen3 commons uses GraphQL as the language for querying metadata across Gen3 Data Commons. To learn the basics of writing queries in GraphQL, please visit: <http://graphql.org/learn>.
 
-Gen3 features a variety of API endpoints such as `/submission`, `/index`, or `/graphql`, which differ in how they access the ressource and contain each a subset of REST (Representational State Transfer) APIs for networked applications. REST APIs are restricted in their interactions via HTTP request methods such as GET, POST, PATCH, PUT, or DELETE. The GET request retrieves data in read-only mode, POST sends data and creates a new resource, PATCH updates/modifies a resource, PUT updates/replaces a resource, and DELETE deletes a resource. At Gen3, the GET endpoint `/api/v0/submission/<program>/<project>/_dictionary` will for example get the dictionary schema for entities of a project, or `/api/v0/submission/graphql/getschema` will get the data dictionary schema in .JSON format.
+Gen3 features a variety of API endpoints such as `/submission`, `/index`, or `/graphql`, which differ in how they access the resource and contain each a subset of REST (Representational State Transfer) APIs for networked applications. REST APIs are restricted in their interactions via HTTP request methods such as GET, POST, PATCH, PUT, or DELETE. The GET request retrieves data in read-only mode, POST sends data and creates a new resource, PATCH updates/modifies a resource, PUT updates/replaces a resource, and DELETE deletes a resource. At Gen3, the GET endpoint `/api/v0/submission/<program>/<project>/_dictionary` will for example get the dictionary schema for entities of a project, or `/api/v0/submission/graphql/getschema` will get the data dictionary schema in .JSON format.
 
 Further API specifications of the Gen3 mirocroservices can be browsed in [the developer documentation](/resources/developer/microservice) and (REST) API requests documentation of a Gen3 microservice can be found on swagger (e.g. [Sheepdog](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/sheepdog/master/openapi/swagger.yml#/), [Peregrine](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/peregrine/master/openapis/swagger.yaml)).
 
@@ -96,7 +96,7 @@ u.text # should display the API response
 
 ```
 
-If an an error such as "You don't have access... " occurs, then the API key is most likely out of date and a new access token will need to be made. Further errors could occur if the uploaded file is not correctly formated for the Gen3 data model.
+If an an error such as "You don't have access... " occurs, then the API key is most likely out of date and a new access token will need to be made. Further errors could occur if the uploaded file is not correctly formatted for the Gen3 data model.
 
 
 

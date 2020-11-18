@@ -64,7 +64,7 @@ In the graphical model of a data project, the number you see underneath the node
 
 
 ### Querying Structured Data
-The structured data in a Gen3 data commons can be queried by using the [graphQL query language](https://graphql.org/) within the graphiQL interface for building queries, which can be accessed by clicking the "Query" button in the top navigation bar or by navigating to the /query endpoint, for example, https://gen3.datacommons.io/query.
+The structured data in a Gen3 data commons can be queried by using the [graphQL query language](https://graphql.org/) within the GraphiQL interface for building queries, which can be accessed by clicking the "Query" button in the top navigation bar or by navigating to the /query endpoint, for example, https://gen3.datacommons.io/query.
 
 ![Query](Gen3_Toolbar_query.png)
 
