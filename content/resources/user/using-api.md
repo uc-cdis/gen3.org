@@ -81,7 +81,7 @@ dl = requests.get(durl, headers=headers)
 print(dl.text) # display response
 
 # Data Upload via API Endpoint Request:
-tsv_file = '/cmd-test.tsv' # loading the tsv file
+tsv_file = '/cmd-test.tsv' # loading the tsv file that contains text string and tab-separated values
 tsv = ''
 count = 0
 with open(tsv_file, 'r') as file:
@@ -96,7 +96,7 @@ u.text # should display the API response
 
 ```
 
-If an an error such as "You don't have access... " occurs, then the API key is most likely out of date and a new access token will need to be made. Further error could occur if the uploaded file is not correctly formated for the Gen3 data model.
+If an an error such as "You don't have access... " occurs, then the API key is most likely out of date and a new access token will need to be made. Further errors could occur if the uploaded file is not correctly formated for the Gen3 data model.
 
 
 
