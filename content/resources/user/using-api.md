@@ -81,11 +81,22 @@ dl = requests.get(durl, headers=headers)
 print(dl.text) # display response
 
 # Data Upload via API Endpoint Request:
-headers['content-type']='text/tab-separated-values' # add the content-type to header
-u = requests.put('https://gen3.datacommons.io/api/v0/submission/<program name>/<project code>', data="tsv", headers=headers)
+tsv_file = '/cmd-test.tsv' # loading the tsv file
+tsv = ''
+count = 0
+with open(tsv_file, 'r') as file:
+    for line in file:
+        if count == 0:
+            header = line
+        tsv = tsv + line + "\r"
+        count += 1
+program_name,project_code = <program_name>, <project_code>
+u = requests.put('https://gen3.datacommons.io/api/v0/submission/{}/{}'.format(program_name,project_code), data=tsv, headers=headers)
+u.text # should display the API response
+
 ```
 
-If an an error such as "You don't have access... " occurs, then the API key is most likely out of date and a new access token will need to be made.
+If an an error such as "You don't have access... " occurs, then the API key is most likely out of date and a new access token will need to be made. Further error could occur if the uploaded file is not correctly formated for the Gen3 data model.
 
 
 
