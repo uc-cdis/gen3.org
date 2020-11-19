@@ -186,6 +186,8 @@ In the above example, if "case_2" was enrolled in both "study-01" and "study-02"
 | 3 | case_3 | study-01 | |
 | 4 | case_4 | study-01 | |
 
+> __NOTE:__ It is also possible to submit multiple submitter_ids as a comma-separated list in the header`nodes.submitter_id`. Using the example above, the entry in `studies.submitter_id` will be "study-01, study-02".
+
 
 ### Begin Metadata TSV Submissions
 
