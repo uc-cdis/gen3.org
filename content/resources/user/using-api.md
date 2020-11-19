@@ -96,7 +96,7 @@ u.text # should display the API response
 
 ```
 
-If an an error such as "You don't have access... " occurs, then the API key is most likely out of date and a new access token will need to be made. Further errors could occur if the uploaded file is not correctly formatted for the Gen3 data model.
+If an an error such as "You don't have access... " occurs, then either you do not have access, or the API key is out of date and a new access token will need to be made. Further errors could occur if the uploaded file is not correctly formatted for the Gen3 data model.
 
 
 
