@@ -59,7 +59,7 @@ Workspaces are the compute component of a data commons. Workspaces allow users t
 
 ### Lightweight Workspaces
 
-JuypterHub is a service which allows for multiple Jupyter notebooks to be run by multiple users on a central server. The isolation of the user notebooks depends on the spawner used, and in this case relys on the isolated provided between Kubernetes pods. The Gen3 JuypterHub service is based on [Zero to JuypterHub](https://github.com/jupyterhub/zero-to-jupyterhub-k8s) and [Kubeflow](https://github.com/kubeflow).
+JupyterHub is a service which allows for multiple Jupyter notebooks to be run by multiple users on a central server. The isolation of the user notebooks depends on the spawner used, and in this case relys on the isolated provided between Kubernetes pods. The Gen3 JuypterHub service is based on [Zero to JupyterHub](https://github.com/jupyterhub/zero-to-jupyterhub-k8s) and [Kubeflow](https://github.com/kubeflow).
 
 The following diagram shows the authorization flow for the JupyterHub instances. We utilize the Revproxy and Fence acting as an API gateway for these workspaces. JupyterHub is configured with the [remote user auth plugin](https://github.com/occ-data/jhub_remote_user_authenticator) so that users are authed based on the `REMOTE_USER` header.
 
