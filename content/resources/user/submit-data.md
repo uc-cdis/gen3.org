@@ -152,7 +152,7 @@ Often the study participants are recorded in the `case` or `subject` node, and s
 ### More about Specifying Required Links
 * * *
 
-At least one link is required for every record in a TSV, and sometimes multiple links could be specified. The links are specified in a TSV with the variable header `<nodes>.submitter_id`, where <nodes\> the back-reference of the upstream node record is linking to. The value of this link variable is the specific `submitter_id` of the parent record. TSV or JSON templates that list all the possible link headers can be downloaded from the Data Dictionary Viewer on the data commons' website.
+At least one link is required for every record in a TSV, and sometimes multiple links could be specified. The links are specified in a TSV with the variable header `<nodes>.submitter_id`, where <nodes\> the back-reference of the upstream node record is linking to. The value of this link variable is the specific `submitter_id` of the parent record. TSV or JSON templates that list all the possible link headers can be downloaded from the Data Dictionary Viewer on the data commons' website. Properties that represent these links such as “subjects.submitter_id” or “studies.submitter_id” are array variables and can take either a single submitter_id or a comma-separated list of `submitter_id`s in the case that a single record links to multiple records in its parent node.
 
 For example, there are four cases in two studies in one `project`. The `study` node was made with two study `submitter_id`s: "study-01" and "study-02". The "case.tsv" file uploaded to describe the study participants enrolled will have a corresponding study.
 
@@ -175,9 +175,12 @@ In this example cases 1, 2, and 4 all belong to "study-01", but case 2 belongs t
 * * *
 
 Links can be one-to-one, many-to-one, one-to-many, and many-to-many. Since a single study participant can be enrolled in multiple studies, and a single study will have multiple cases enrolled in it, this link is "many-to-many". On the other hand, since a single study cannot be linked to multiple projects, but a single project can have many studies linked to it, the study -> project link is "many-to-one".
+Properties that represent links, like “subjects.submitter_id” or “studies.submitter_id” are array variables and can take either a single submitter_id or a comma-separated list of submitter_ids in the case that a single record links to multiple records in its parent node.
+Using the example above, the entry in the `studies.submitter_id` can be "study-01, study-02".
 
+
+Deprecated version:
 In the above example, if "case_2" was enrolled in both "study-01" and "study-02", then there would be two columns to specify these links in the case.tsv file: "studies.submitter_id#1" and "studies.submitter_id#2". The values would be "study-01" for one of them and "study-02" for the other.
-
 
 | case | submitter_id | studies.submitter_id#1 | studies.submitter_id#2 |
 | --- | --- | --- | --- |
@@ -185,8 +188,6 @@ In the above example, if "case_2" was enrolled in both "study-01" and "study-02"
 | 2 | case_2 | study-01 | study-02 |
 | 3 | case_3 | study-01 | |
 | 4 | case_4 | study-01 | |
-
-> __NOTE:__ It is also possible to submit multiple submitter_ids as a comma-separated list in the header`nodes.submitter_id`. Using the example above, the entry in `studies.submitter_id` will be "study-01, study-02".
 
 
 ### Begin Metadata TSV Submissions
