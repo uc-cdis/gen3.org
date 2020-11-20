@@ -179,7 +179,8 @@ Properties that represent links, like “subjects.submitter_id” or “studies.
 Using the example above, the entry in the `studies.submitter_id` can be "study-01, study-02".
 
 
-Deprecated version:
+#### Deprecated version:
+
 In the above example, if "case_2" was enrolled in both "study-01" and "study-02", then there would be two columns to specify these links in the case.tsv file: "studies.submitter_id#1" and "studies.submitter_id#2". The values would be "study-01" for one of them and "study-02" for the other.
 
 | case | submitter_id | studies.submitter_id#1 | studies.submitter_id#2 |
