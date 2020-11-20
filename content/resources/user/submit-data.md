@@ -175,8 +175,7 @@ In this example cases 1, 2, and 4 all belong to "study-01", but case 2 belongs t
 * * *
 
 Links can be one-to-one, many-to-one, one-to-many, and many-to-many. Since a single study participant can be enrolled in multiple studies, and a single study will have multiple cases enrolled in it, this link is "many-to-many". On the other hand, since a single study cannot be linked to multiple projects, but a single project can have many studies linked to it, the study -> project link is "many-to-one".
-Properties that represent links, like “subjects.submitter_id” or “studies.submitter_id” are array variables and can take either a single submitter_id or a comma-separated list of submitter_ids in the case that a single record links to multiple records in its parent node.
-Using the example above, the entry in the `studies.submitter_id` can be "study-01, study-02".
+Properties that represent links, like “subjects.submitter_id” or “studies.submitter_id” are array variables and can take either a single submitter_id or a comma-separated list of submitter_ids in the case that a single record links to multiple records in its parent node. Using the example above, the entry in the `studies.submitter_id` can be "study-01, study-02".
 
 
 #### Deprecated version:
