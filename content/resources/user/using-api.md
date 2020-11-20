@@ -26,7 +26,7 @@ The beauty of a Gen3 data commons is that all the functionality of the data comm
 
 Gen3 features a variety of API endpoints such as `/submission`, `/index`, or `/graphql`, which differ in how they access the resource and contain each a subset of REST (Representational State Transfer) APIs for networked applications. REST APIs are restricted in their interactions via HTTP request methods such as GET, POST, PATCH, PUT, or DELETE. The GET request retrieves data in read-only mode, POST sends data and creates a new resource, PATCH updates/modifies a resource, PUT updates/replaces a resource, and DELETE deletes a resource. At Gen3, the GET endpoint `/api/v0/submission/<program>/<project>/_dictionary` will for example get the dictionary schema for entities of a project, or `/api/v0/submission/graphql/getschema` will get the data dictionary schema in .JSON format.
 
-Further API specifications of the Gen3 mirocroservices can be browsed in [the developer documentation](/resources/developer/microservice) and (REST) API requests documentation of a Gen3 microservice can be found on swagger (e.g. [Sheepdog](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/sheepdog/master/openapi/swagger.yml#/), [Peregrine](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/peregrine/master/openapis/swagger.yaml)).
+Further API specifications of the Gen3 microservices can be browsed in [the developer documentation](/resources/developer/microservice) and the (REST) API Swagger documentation for each Gen3 microservice can be found in the microservice's documentation on GitHub (e.g. [Sheepdog](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/sheepdog/master/openapi/swagger.yml#/), [Peregrine](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/peregrine/master/openapis/swagger.yaml)).
 
 Sending API requests can be done in any programming language (e.g. Python, Java, R). The Center for Translational Data Science (CTDS) at University of Chicago has put together a basic SDK in [Python](https://github.com/uc-cdis/gen3sdk-python) and [R](https://github.com/uc-cdis/gen3sdk-R) to help users interact with the Gen3 APIs. Below, we list examples in how to send API requests at Gen3 using Python for demonstration purposes.
 
@@ -96,7 +96,7 @@ u.text # should display the API response
 
 ```
 
-If an an error such as "You don't have access... " occurs, then the API key is most likely out of date and a new access token will need to be made. Further errors could occur if the uploaded file is not correctly formatted for the Gen3 data model.
+If an an error such as "You don't have access... " occurs, then either you do not have access, or the API key is out of date and a new access token will need to be made. Further errors could occur if the uploaded file is not correctly formatted for the Gen3 data model.
 
 
 
