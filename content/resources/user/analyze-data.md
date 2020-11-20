@@ -72,13 +72,15 @@ Other required files, like the `credentials.json` file which contains API keys n
 
 Example:
 ```
-jovyan@jupyter-user:~$ wget https://github.com/uc-cdis/cdis-data-client/releases/download/0.3.0/dataclient_linux.zip
-Resolving github-production-release-asset-2e65be.s3.amazonaws.com
+jovyan@jupyter-user:~$ wget https://github.com/uc-cdis/cdis-data-client/releases/download/2020.11/dataclient_linux.zip
+--2020-11-12 19:33:45-- Resolving github-production-release-asset-2e65be.s3.amazonaws.com
 Connecting to github-production-release-asset-2e65be.s3.amazonaws.com
 HTTP request sent, awaiting response... 200 OK
-Length: 3886413 (3.7M) [application/octet-stream]
+Length: 7445539 (7.1M) [application/octet-stream]
 Saving to: ‘dataclient_linux.zip’
-dataclient_linux.zip           100%[===================================================>]   3.71M  20.6MB/s    in 0.2s
+dataclient_linux.zip            100%[=====================================================>]   7.10M  --.-KB/s    in 0.05s
+2020-11-12 19:33:45 (143 MB/s) - ‘dataclient_linux.zip’ saved [7445539/7445539]
+
 
 jovyan@jupyter-user:~$ unzip dataclient_linux.zip
 Archive:  dataclient_linux.zip
@@ -86,18 +88,34 @@ Archive:  dataclient_linux.zip
 
 jovyan@jupyter-user:~$ PATH=$PATH:~/
 
-jovyan@jupyter-user:~$ gen3-client configure --profile bob --cred credentials.json
-  API endpoint: https://data.gen3.org
+jovyan@jupyter-user:~$ gen3-client configure --apiendpoint=https://gen3.datacommons.io --profile=demo --cred=credentials.json
+2020/11/12 19:43:51 Profile 'demo' has been configured successfully.
 
-jovyan@jupyter-user:~$ gen3-client download --profile bob --guid d4a40383-802d-4639-9b8b-e82c900f2c66 --file=results.txt
-  Successfully downloaded results.txt
+jovyan@jupyter-user:~$ gen3-client download-single --profile=demo --guid=6e312ac3-874d-4cad-b84b-474aa0209d49 --no-prompt --skip-completed
+2020/11/12 20:06:43 Preparing file info for each file, please wait...
+ 1 / 1 [===========================================================================================================] 100.00% 0s
+2020/11/12 20:06:43 File info prepared successfully
+pheno_63878_2.txt  78.53 KiB / 78.53 KiB [============================================================================] 100.00%
+2020/11/12 20:06:44 1 files downloaded.
 
 jovyan@jupyter-user:~$ mkdir files
 
-jovyan@jupyter-user:~$ gen3-client download-manifest --manifest manifest.json --download-path files--profile bob
-  Finished files/a30531c6-9caa-4356-a95f-5f4d6a012913 6721797 / 6721797 bytes (100%)
-  Finished files/5737b1de-22f0-45ce-a3b8-cfacc66c7ec0 6716095 / 6716095 bytes (100%)
-  2 files downloaded.
+jovyan@jupyter-user:~$ gen3-client download-multiple --profile=demo --manifest=file-manifest-demo.json --skip-completed
+2020/11/12 22:18:13 Reading manifest...
+ 18.17 KiB / 18.17 KiB [====================================================================] 100.00% 0s
+2020/11/12 22:18:18 Total number of GUIDs: 98
+2020/11/12 22:18:18 Preparing file info for each file, please wait...
+ 98 / 98 [==================================================================================] 100.00% 3s
+2020/11/12 22:18:21 File info prepared successfully
+GSM1558792_Sample9_3.CEL.gz  4.04 MiB / 4.04 MiB [=============================================] 100.00%
+GSM1558835_Sample31_1.CEL.gz  4.18 MiB / 4.18 MiB [============================================] 100.00%
+GSM1558866_Sample46_3.CEL.gz  4.02 MiB / 4.02 MiB [============================================] 100.00%
+GSM1558804_Sample15_3.CEL.gz  4.19 MiB / 4.19 MiB [============================================] 100.00%
+GSM1558810_Sample18_3.CEL.gz  4.16 MiB / 4.16 MiB [============================================] 100.00%
+GSM1558854_Sample40_3.CEL.gz  4.20 MiB / 4.20 MiB [====================....
+2020/11/12 22:18:55 98 files downloaded.
+
+jovyan@jupyter-user:~$  mv *.gz files
 ```
 
 ## 3. Working with the proxy and whitelists

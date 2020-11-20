@@ -396,7 +396,7 @@ When files are successfully uploaded by the gen3-client, the software service in
     rev: "9e1436a6",
     size: 21,
     updated_date: "2019-11-19T22:00:41.196528",
-    uploader: "cgmeyer@uchicago.edu",
+    uploader: "my-email@uchicago.edu",
   - urls: [
       "s3://ncicrdcdemo-data-bucket/5bcd2a59-8225-44a1-9562-f74c324d8dec/test.txt"
     ],
@@ -411,11 +411,12 @@ When files are successfully uploaded by the gen3-client, the software service in
 
 Files that have been successfully uploaded now have a GUID associated with them, and there is also an associated record in the indexd database. However, in order for the files to show up in the data portal, the files have to be registered in the PostgreSQL database. In other words, indexd records exist for the files, but sheepdog records (that is, structured metadata in the graph model) don't exist yet. Thus, the files aren't yet associated with any particular program, project, or node. To create the structured data records for the files via the sheepdog service, Windmill offers a "Map My Files" UI, which can be reviewed [here](/resources/user/submit-data/#3-map-uploaded-files-to-a-data-file-node).
 
+
 ### Removing unwanted uploaded files
 
 Before the files are mapped to a project's node in the data model, the files can be deleted both from indexd and from the cloud location by sending a delete request to the fence endpoint `/user/data/`. For example, to delete the file we checked in the index above, we'd send a delete API request to this URL: https://nci-crdc-demo.datacommons.io/user/data/5bcd2a59-8225-44a1-9562-f74c324d8dec
 
-For example, running [this script](https://github.com/cgmeyer/gen3sdk-python/blob/master/expansion/delete_uploaded_files.py) will delete all the user's unmapped files from indexd and from the storage location using the fence endpoint:
+For example, running [this script](https://github.com/uc-cdis/planx-bioinfo-tools/blob/master/submission_tool/delete_unmapped_files.py) will delete all the user's unmapped files from indexd and from the storage location using the fence endpoint:
 ```
 ~> python delete_uploaded_files.py -a https://nci-crdc-demo.datacommons.io/ -u user@datacommons.org -c ~/Downloads/demo-credentials.json
 Found the following guids for uploader user@datacommons.io: ['3d275025-8b7b-4f84-9165-72a8a174d642', '5bcd2a59-8225-44a1-9562-f74c324d8dec', '6cf194f1-c68e-4976-8ca4-a0ce9701a9f3', '956890a9-b8a7-4abd-b8f7-dd0020aaf562', '9bd009b6-e518-4fe5-9056-2b5cba163ca3']
@@ -426,6 +427,7 @@ Successfully deleted GUID 956890a9-b8a7-4abd-b8f7-dd0020aaf562
 Successfully deleted GUID 9bd009b6-e518-4fe5-9056-2b5cba163ca3
 
 ```
+
 
 ## 4) Download a Single Data File Using a GUID
 
