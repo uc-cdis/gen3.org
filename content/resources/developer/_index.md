@@ -65,7 +65,7 @@ Workspaces are the compute component of a data commons. Workspaces allow users t
 
 ### Lightweight Workspaces
 
-JuypterHub is a service which allows for multiple Jupyter notebooks to be run by multiple users on a central server. The isolation of the user notebooks depends on the spawner used, and in this case relies on the isolation provided between Kubernetes pods. The Gen3 JuypterHub service is based on [Zero to JuypterHub](https://github.com/jupyterhub/zero-to-jupyterhub-k8s) and [Kubeflow](https://github.com/kubeflow).
+JupyterHub is a service which allows for multiple Jupyter notebooks to be run by multiple users on a central server. The isolation of the user notebooks depends on the spawner used, and in this case relies on the isolation provided between Kubernetes pods. The Gen3 JupyterHub service is based on [Zero to JupyterHub](https://github.com/jupyterhub/zero-to-jupyterhub-k8s) and [Kubeflow](https://github.com/kubeflow).
 
 The following diagram shows the authorization flow for the JupyterHub instances. We utilize the Revproxy and Fence acting as an API gateway for these workspaces. JupyterHub is configured with the [remote user auth plugin](https://github.com/occ-data/jhub_remote_user_authenticator) so that users are authed based on the `REMOTE_USER` header.
 
@@ -77,11 +77,11 @@ JupyterHub is deployed into the default namespace for the commons, but user pods
 
 Notebook servers are configured with persistent storage mounted into `/home/jovyan/pd` for users to store scripts and configurations which they wish to persist past notebook shutdown. In the future we would like to change this to have the storage for the user in the notebook backed by the cloud object storage (S3 or GCS) to improve scalability and the ability to load data into the containers for users.
 
-Currently, we support user selectable notebook containers and resource allocations from a prepopulated list. [Earth science](https://github.com/occ-data/containers/tree/master/jupyter-geo) and [Bioinformatics](https://github.com/occ-data/containers/tree/master/jupyter) notebooks are available with popular libraries preconfigured. 
+Currently, we support user selectable notebook containers and resource allocations from a prepopulated list. [Earth science](https://github.com/occ-data/containers/tree/master/jupyter-geo) and [Bioinformatics](https://github.com/occ-data/containers/tree/master/jupyter) notebooks are available with popular libraries preconfigured.
 
-We also configure a [prepuller daemonset](https://github.com/uc-cdis/cloud-automation/blob/master/kube/services/jupyterhub/jupyterhub-prepuller.yaml) on K8s to pull the docker images for common user notebooks to each node in the cluster. This significantly speeds up launch time as these images can be many GB in size. 
+We also configure a [prepuller daemonset](https://github.com/uc-cdis/cloud-automation/blob/master/kube/services/jupyterhub/jupyterhub-prepuller.yaml) on K8s to pull the docker images for common user notebooks to each node in the cluster. This significantly speeds up launch time as these images can be many GB in size.
 
 
 ### Full Workspaces
 
-Full workspaces, i.e. workflow systems that run analysis pipelines at scale over data, are still to be implemented into Gen3. 
+Full workspaces, i.e. workflow systems that run analysis pipelines at scale over data, are still to be implemented into Gen3.
