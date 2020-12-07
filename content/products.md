@@ -32,6 +32,10 @@ g3DataFeature:
     title: API
     fig: /figs/features/api.svg
     detail: All of the Gen3 services support powerful APIs which allow them to interact with each other and external users. These APIs enable extensible application development for future services and users.
+  f7:
+    title: Data Commons Framework Services
+    fig: /figs/DCF.svg
+    detail: Data commons framework services (DCFS) facilitate interoperating of multiple new, existing, and future resources towards translational data science goals. DCFS can include a narrow middle Gen3 architecture with other services to curate, submit, analyze, and visualize data or include all Gen3 services.
 g3Entrance:
   e1:
     title: Learn about Gen3's microservices
