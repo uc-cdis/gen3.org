@@ -56,6 +56,7 @@ You can manage active notebooks and terminal processes by clicking on "Running".
 
 ## 2. Getting Files into the Gen3 Workspace
 * * *
+In order to download data files directly from a Gen3 data commons into your workspace, install and use the [gen3-client](https://github.com/uc-cdis/cdis-data-client/releases/latest) in a terminal window from your Workspace.  Launch a terminal window by clicking on the "New" dropdown menu, then click on "Terminal".
 
 From the command line, download the latest [Linux version of the gen3-client](https://github.com/uc-cdis/cdis-data-client/releases/latest) using the `wget` command. Next, unzip the archive and add it to your path:
 
