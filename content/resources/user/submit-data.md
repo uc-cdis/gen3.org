@@ -249,7 +249,6 @@ To confirm that a data file is properly registered, enter the GUID of a data fil
 
 > __Note:__ Gen3 users can also submit metadata using the Gen3 SDK, which is a Python library containing functions for sending standard requests to the Gen3 APIs. For example, the function `submit_file` from the **Gen3Submission** class will submit data in a spreadsheet file containing multiple records in rows to a Gen3 Commons. The code is open-source and available on [GitHub](https://github.com/uc-cdis/gen3sdk-python) along with [documentation for using it](https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html). Furthermore, [this section](https://gen3.org/resources/user/analyze-data/#4-using-the-gen3-sdk) describes steps on how to get started.
 
-
 ### Troubleshooting and Finishing the Submission
 * * *
 
