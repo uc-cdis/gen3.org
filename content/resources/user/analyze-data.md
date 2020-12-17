@@ -56,7 +56,6 @@ You can manage active notebooks and terminal processes by clicking on "Running".
 
 ## 2. Getting Files into the Gen3 Workspace
 * * *
-In order to download data files directly from a Gen3 data commons into your workspace, install and use the [gen3-client](https://github.com/uc-cdis/cdis-data-client/releases/latest) in a terminal window from your Workspace.  Launch a terminal window by clicking on the "New" dropdown menu, then click on "Terminal".
 
 From the command line, download the latest [Linux version of the gen3-client](https://github.com/uc-cdis/cdis-data-client/releases/latest) using the `wget` command. Next, unzip the archive and add it to your path:
 
@@ -243,3 +242,5 @@ This Jupyter Notebook should be run in the workspace of the [gen3.datacommons.io
 
 2. Download node files, show/select data, and plot with this [notebook](notebook2_canine.ipynb).
 This Jupyter Notebook should be run in the workspace of the [canine datacommons](https://caninedc.org/workspace).
+
+3. Download data files and metadata using the gen3-client and the Gen3 SDK, respectively, and bring them into the workspace. Run gene expression analysis and statistical analysis on the data files and metadata, respectively, and plot the outcome in different scenarios. This Jupyter [Data Analysis Notebook](notebook3_gen3datacommonsio.ipynb) should be run in the workspace of the [gen3.datacommons.io](gen3.datacommons.io.).
