@@ -243,3 +243,5 @@ This Jupyter Notebook should be run in the workspace of the [gen3.datacommons.io
 
 2. Download node files, show/select data, and plot with this [notebook](notebook2_canine.ipynb).
 This Jupyter Notebook should be run in the workspace of the [canine datacommons](https://caninedc.org/workspace).
+
+3. Download data files and metadata using the gen3-client and the Gen3 SDK, respectively, and bring them into the workspace. Run gene expression analysis and statistical analysis on the data files and metadata, respectively, and plot the outcome in different scenarios. This Jupyter [Data Analysis Notebook](notebook3_gen3datacommonsio.ipynb) should be run in the workspace of the [gen3.datacommons.io](gen3.datacommons.io.).
