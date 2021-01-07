@@ -22,7 +22,7 @@ g3Starts:
   s3:
     name: Access Metadata & Data
     fig: /figs/features/search.svg
-    detail: Gen3 includes a portal service for providing a web-based graphical user interface for interacting with a Gen3 data commons within a standard web-browser. The portal is an interactive website that allows users to explore, submit, download and analyze data. The data portal utilizes the public APIs offered by the data commons as a demonstration of the power of Gen3.
+    detail: Gen3 includes a portal service for providing a web-based graphical user interface for interacting with a Gen3 data commons within a standard web-browser. The portal is an interactive website that allows users to explore, submit, download, and analyze data. The data portal utilizes the public APIs offered by the data commons as a demonstration of the power of Gen3.
     button:
       caption: Data Access
       link: /resources/user/access-data

@@ -72,17 +72,17 @@ g3Commons:
     link: https://proteomic.datacommons.cancer.gov/pdc/
 g3Intro:
   title: Introduction to Gen3
-  detail: The Gen3 Data Platform is an open-source (with an Apache License) data platform for developing and operating cloud-based data commons, workspaces, and an ecosystem of interconnected, cloud-based data resources, applications and notebooks. A functioning data ecosystem empowers researchers in the same field to share and combine datasets for reanalysis and reuse, as new tools and hypotheses are developed.  The Gen3 Data Platform consists of Gen3 Framework Services, Gen3 Data Commons and Gen3 Workspaces.
+  detail: The Gen3 Data Platform is an open-source data platform with an Apache License for developing and operating cloud-based data commons, workspaces, and an ecosystem of interconnected, cloud-based data resources, applications, and notebooks. A functioning data ecosystem empowers researchers in the same field to share and combine datasets for reanalysis and reuse, as new tools and hypotheses are developed. The Gen3 Data Platform consists of Gen3 Framework Services, Gen3 Data Commons and Gen3 Workspaces.
   fig: figs/productkv.svg
 g3FrameworkServices:
   title: Gen3 Framework Services
   para1: The Gen3 Framework Services are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via an attribute-based access control (ABAC) policy engine.
 g3DataCommons:
   title: Gen3 Data Commons
-  para1: Gen3 Data Commons are cyberinfrastructure that co-locates data analysis, exploration and visualization tools with data management services for import and export of structured information like clinical, phenotypic, or biospecimen data, and data objects, like genomics data files or medical images. Gen3 Data Commons are a kind of data resource that is interoperable with other nodes in a data ecosystem by utilizing the Gen3 Framework Services for authentication, authorization, data object indexing and metadata services.
+  para1: Gen3 Data Commons are cyberinfrastructure that co-locates data analysis, exploration and visualization tools with data management services for import and export of structured information like clinical, phenotypic, or biospecimen data, and data objects, like genomics data files or medical images. Gen3 Data Commons are capable of interoperation with other resources in a data ecosystem by utilizing the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services.
 g3Workspaces:
   title: Gen3 Workspaces
-  para1: Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources, including Gen3 Data Commons, and also use the Gen3 Framework Services for user authentication and authorization and data object indexing and metadata services. Gen3 Workspaces support Jupyter notebooks, RStudio notebooks, and other custom applications that can access data through Gen3 open APIs.
+  para1: Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources, including Gen3 Data Commons, and also use the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services. Gen3 Workspaces support Jupyter notebooks, RStudio notebooks, and other custom applications that can access data through Gen3 open APIs.
 g3DataFeature:
   title: Gen3 Features
   f1:
