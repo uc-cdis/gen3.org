@@ -11,14 +11,14 @@ menuname: userMenu
 
 The Gen3 platform for creating data commons co-locates data management with analysis workspaces, apps and tools. Workspaces are highly customizable by the operators of a Gen3 data commons and offer a variety of VM images (virtual machines) pre-configured with tools for specific analysis tasks. Custom applications for executing bioinformatics workflows or exploratory analyses may be integrated in the navigation bar as well. The following documentation primarily covers exploratory data analysis in the standard Gen3 Workspace, which can be accessed by clicking the "Workspace" icon in the top navigation bar or navigating to the /workspace endpoint.
 
-* [1. Launch Workspace](#1-launch-workspace)
-* [2. Getting Files into the Gen3 Workspace](#2-getting-files-into-the-gen3-workspace)
-* [3. Working with the proxy and whitelists](#3-orking-with-the-proxy-and-whitelists)
-* [4. Using the Gen3 SDK](#4-using-the-gen3-sdk)
-* [5. Jupyter Notebook Demos](#5-jupyter-notebook-demos)
+* [Launch Workspace](#launch-workspace)
+* [Getting Data Files into the Gen3 Workspace](#getting-data-files-into-the-gen3-workspace)
+* [Working with the proxy and whitelists](#working-with-the-proxy-and-whitelists)
+* [Using the Gen3 SDK](#using-the-gen3-sdk)
+* [Jupyter Notebook Demos](#jupyter-notebook-demos)
 
 * * *
-## 1. Launch Workspace
+## Launch Workspace
 * * *
 
 Click on the "Workspace" icon or navigate to the [/workspace](https://gen3.datacommons.io/workspace) endpoint to see a list of pre-configured virtual machine (VM) images offered by the data commons and click the "Launch" button to spin-up a VM.
@@ -54,7 +54,7 @@ You can manage active notebooks and terminal processes by clicking on "Running".
 ![Manage Running Sessions](running.gif)
 
 
-## 2. Getting Files into the Gen3 Workspace
+## Getting Data Files into the Gen3 Workspace
 * * *
 In order to download data files directly from a Gen3 data commons into your workspace, install and use the [gen3-client](https://github.com/uc-cdis/cdis-data-client/releases/latest) in a terminal window from your Workspace.  Launch a terminal window by clicking on the "New" dropdown menu, then click on "Terminal".
 
@@ -118,7 +118,7 @@ GSM1558854_Sample40_3.CEL.gz  4.20 MiB / 4.20 MiB [====================....
 jovyan@jupyter-user:~$  mv *.gz files
 ```
 
-## 3. Working with the proxy and whitelists
+## Working with the proxy and whitelists
 * * *
 
 <h4> Working with the Proxy </h4>
@@ -141,7 +141,7 @@ https_proxy=https://cloud-proxy.internal.io:3128 aws s3 ls s3://gen3-data/ --pro
 Additionally, to aid Gen3 Commons security, the installation of tools from outside resources is managed through a whitelist. If you have problems installing a tool you need for your work, contact <support@datacommons.io> and with a list of any sites you might wish to install tools from. After passing a security review, these can be added to the whitelist to facilitate access.
 
 
-## 4. Using the Gen3 SDK
+## Using the Gen3 SDK
 * * *
 
 To make programmatic interaction with Gen3 data commons easier, the bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has developed the Gen3 Python SDK, which is a Python library containing functions for sending standard requests to the Gen3 APIs. The code is open-source and available on [GitHub](https://github.com/uc-cdis/gen3sdk-python) along with [documentation for using it](https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html).
@@ -234,7 +234,7 @@ print(record1)
 will return: `{'acl': ['*'], 'authz': ['/programs/OpenAccess/projects/CCLE'], 'baseid': 'e9bd6198-300c-40c8-97a1-82dfea8494e4', 'created_date': '2020-03-13T16:08:53.743421', 'did': '92183610-735e-4e43-afd6-7b15c91f6d10', 'file_name': None, 'form': 'object', 'hashes': {'md5': 'cbccc3cd451e09cf7f7a89a7387b716b'}, 'metadata': {}, 'rev': '13077495', 'size': 15411918474, 'updated_date': '2020-03-13T16:08:53.743427', 'uploader': None, 'urls': ['https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97'], 'urls_metadata': {'https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97': {}}, 'version': None}`
 
 
-## 5. Jupyter Notebook Demos
+## Jupyter Notebook Demos
 ***
 Below is a list of tutorial Jupyter Notebooks that demonstrate various SDK functions that may be helpful for the analysis of data in a Gen3 workspace. When finished, please, shut down the workspace server by clicking the "Terminate Workspace" button.
 

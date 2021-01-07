@@ -18,11 +18,11 @@ This guide has the following sections:
 1. [Installation Instructions](#1-installation-instructions)
 2. [Configure a Profile](#2-configure-a-profile-with-credentials)
 3. [Upload Data Files](#3-upload-data-files)
-4. [Download Files](#4-download-a-single-data-file-using-a-guid)
-5. [Multiple File Download with Manifest](#5-provide-a-manifest-file-for-bulk-download)
+4. [Download Single Data File](#4-download-a-single-data-file-using-a-guid)
+5. [Download Multiple Data Files with Manifest](#5-download-multiple-data-files-with-manifest)
 6. [Generate a Metadata Submission TSV](#6-generate-a-metadata-tsv)
-7. [Upload Single File with GUID](#7-how-to-upload-a-single-data-file-using-a-guid)
-8. [Upload Multiple Files with Manifest](#8-how-to-upload-multiple-data-files-using-a-manifest)
+7. [Upload Single File with GUID](#7-upload-a-single-data-file-using-a-guid)
+8. [Upload Multiple Data Files with Manifest](#8-upload-multiple-data-files-with-manifest)
 9. [Quick Start for Experienced Users or Cheat Sheet](#9-quick-start-for-experienced-users-or-cheat-sheet)
 10. [Working from the Command-line](#10-working-from-the-command-line)
 
@@ -461,7 +461,7 @@ Example Usage:
 gen3-client download-single --profile=demo --guid=00149bcf-e057-4ecc-b22d-53648ae0b35f --no-prompt --skip-completed
 ```
 
-## 5) Provide a Manifest File for Bulk Download
+## 5) Download Multiple Data Files with Manifest
 
 * * *
 
@@ -530,7 +530,7 @@ rg-2	submitted_aligned_reads	project-name	SAR2	Sequencing Reads	BAM	Aligned Read
 ...
 ```
 
-## 7) How to Upload a Single Data File Using a GUID
+## 7) Upload a Single Data File Using a GUID
 
 * * *
 
@@ -553,7 +553,7 @@ Successfully uploaded file "test.gif" to GUID b4642430-8c6e-465a-8e20-97c4584393
 1 files uploaded.
 ```
 
-## 8) How to Upload Multiple Data Files Using a Manifest
+## 8) Upload Multiple Data Files With Manifest
 
 * * *
 
