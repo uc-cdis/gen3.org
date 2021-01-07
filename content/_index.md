@@ -253,11 +253,6 @@ g3Entrance:
         <p class="introduction g3-space__margin-sm-top-bottom">
           {{< param "g3User.detail" >}}
         </p>
-        <div class="g3-mb-text__center">
-          <a class="g3-button g3-button--primary" href="{{< param "g3User.button.link" >}}" target="{{< param "g3User.button.target" >}}">
-            {{< param "g3User.button.caption" >}}
-          </a>
-        </div>
       </div>
     </div>
     <div class="g3-col__55 g3-space__padding-md">
