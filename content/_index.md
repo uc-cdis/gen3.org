@@ -72,7 +72,7 @@ g3Commons:
     link: https://proteomic.datacommons.cancer.gov/pdc/
 g3Intro:
   title: Introduction to Gen3
-  detail: The Gen3 Data Platform is an open-source (with an Apache License) data platform for developing and operating cloud-based data commons, workspaces, and an ecosystem of interconnected, cloud-based data resources, applications and notebooks. A functioning data ecosystem empowers researchers in the same field to share and combine datasets for reanalysis and reuse as new tools and hypotheses are developed.  The Gen3 Data Platform consists of Gen3 Framework Services, Gen3 Data Commons and Gen3 Workspaces.
+  detail: The Gen3 Data Platform is an open-source (with an Apache License) data platform for developing and operating cloud-based data commons, workspaces, and an ecosystem of interconnected, cloud-based data resources, applications and notebooks. A functioning data ecosystem empowers researchers in the same field to share and combine datasets for reanalysis and reuse, as new tools and hypotheses are developed.  The Gen3 Data Platform consists of Gen3 Framework Services, Gen3 Data Commons and Gen3 Workspaces.
   fig: figs/productkv.svg
 g3FrameworkServices:
   title: Gen3 Framework Services
@@ -87,7 +87,8 @@ g3DataCommons:
   para3: Gen3 Data Commons are a kind of data resource that is interoperable with other nodes in a data ecosystem by utilizing the Gen3 Framework Services for authentication, authorization, data object indexing and metadata services.
 g3Workspaces:
   title: Gen3 Workspaces
-  para1: A Gen3 workspace can access data from one or more data resources, including Gen3 Data Commons, and also uses the Gen3 Framework Services for user authentication and authorization and data object indexing and metadata services. Gen3 Workspaces support Jupyter notebooks, RStudio notebooks, and other applications that can access data through Gen3 open APIs.
+  para1: A Gen3 workspace can access data from one or more data resources, including Gen3 Data Commons, and also uses the Gen3 Framework Services for user authentication and authorization and data object indexing and metadata services.
+  para2: Gen3 Workspaces support Jupyter notebooks, RStudio notebooks, and other applications that can access data through Gen3 open APIs.
 g3DataFeature:
   title: Gen3 Features
   f1:
@@ -294,21 +295,40 @@ g3Entrance:
     </p>
     <img class="g3-img__center g3-img" src="{{< param "g3Intro.fig" >}}"/>
     <div class="g3-space__padding-md-top-bottom g3-mini-wrapper">
-      <h3 class="g3-text__center">{{< param "g3DataAccess.title" >}}</h3>
+      <h3 class="g3-text__center">{{< param "g3FrameworkServices.title" >}}</h3>
       <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3DataAccess.para1" >}}
+        {{< param "g3FrameworkServices.para1" >}}
       </p>
-      <img class="g3-img__center g3-img__full-width" src="{{< param "g3DataAccess.para2Fig" >}}" />
       <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3DataAccess.para2" >}}
+        {{< param "g3FrameworkServices.para2" >}}
       </p>
-      <img class="g3-img__center g3-img__full-width" src="{{< param "g3DataAccess.para3Fig" >}}" />
       <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3DataAccess.para3" >}}
+        {{< param "g3FrameworkServices.para3" >}}
+      </p>
+      <p class="introduction g3-text__center g3-space__margin-sm-top">
+        {{< param "g3FrameworkServices.para4" >}}
+      </p>
+      <h3 class="g3-text__center">{{< param "g3DataCommons.title" >}}</h3>
+      <p class="introduction g3-text__center g3-space__margin-sm-top">
+        {{< param "g3DataCommons.para1" >}}
+      </p>
+      <p class="introduction g3-text__center g3-space__margin-sm-top">
+        {{< param "g3DataCommons.para2" >}}
+      </p>
+      <p class="introduction g3-text__center g3-space__margin-sm-top">
+        {{< param "g3DataCommons.para3" >}}
+      </p>
+      <h3 class="g3-text__center">{{< param "g3Workspaces.title" >}}</h3>
+      <p class="introduction g3-text__center g3-space__margin-sm-top">
+        {{< param "g3Workspaces.para1" >}}
+      </p>
+      <p class="introduction g3-text__center g3-space__margin-sm-top">
+        {{< param "g3Workspaces.para2" >}}
       </p>
     </div>
   </div>
 </section>
+
 
 <section>
   <div class="g3-space__padding-md-top g3-space__padding-md-bottom g3-space__margin-lg-bottom g3-bg__solight">
