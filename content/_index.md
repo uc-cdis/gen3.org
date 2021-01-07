@@ -27,7 +27,7 @@ g3Feature:
     detail: Gen3 comes with some basic tools like faceted search for the creation of virtual cohorts and workspaces for the analysis of data in a secure cloud environment. Custom tools can also be easily developed that run over Gen3's open APIs, and these tools can be offered by developers in a marketplace or shared in open repositories to hasten hypothesis-driven discoveries.
   f4:
     title: Provide Flexible Tools for Data Ingestion
-    detail: The Gen3 platform exposes open APIs that support ingestion of virtually any data format, including both large data objects, such as BAM files, CRAM files, and image files, as well as structured data, including clinical and phenotype data. Structured data submissions can be forced to conform to a specific data model, or data resources can be configured to ingest self-described data objects that include their own data model into a data lake.
+    detail: The Gen3 platform exposes open APIs that support ingestion of virtually any data format, including both large data objects, such as BAM files, CRAM files, and image files, as well as metadata, including clinical and phenotype data. Metadata submissions can be forced to conform to a specific data model, or data resources can be configured to ingest self-described data objects that include their own data model into a data lake.
 g3Roles:
   title: Gen3 helps you as...
   r1:
