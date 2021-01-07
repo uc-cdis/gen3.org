@@ -58,7 +58,7 @@ g3User:
   quote: “From the perspective of setting up a basic Gen3 ecosystem with all the services running, it was a breeze and the Github docs are pretty awesome.”
   by: Amit, Cloud Solutions Architect with Leidos
   title: Who's using Gen3?
-  detail: Gen3 has been used to build over 15 data commons by different organizations and is a key component of the emerging translational medicine data ecosystem. Currently, several NIH Institutes and Centers have projects utilizing Gen3, including NCI, NHLBI, the Common Fund, NHGRI, NIDDK, and NIDA. At least two public-private partnerships have also used the Gen3 platform to create data commons. All these data resources are built using a common set of software services called the Gen3 Data Commons Framework Services (DCFS), so that the various data commons can interoperate creating a large-scale data ecosystem.
+  detail: Gen3 has been used to build over 15 data commons by different organizations and is a key component of the emerging translational medicine data ecosystem. Currently, several NIH Institutes and Centers have projects utilizing Gen3, including NCI, NHLBI, the Common Fund, NHGRI, NIDDK, and NIDA. At least two public-private partnerships have also used the Gen3 platform to create data commons. All these data resources are built using a common set of software services called the Gen3 Framework Services, so that the various data commons can interoperate creating a large-scale data ecosystem.
   fig: figs/app-mockup.png
 g3Commons:
   c1:
