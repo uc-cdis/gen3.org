@@ -77,18 +77,12 @@ g3Intro:
 g3FrameworkServices:
   title: Gen3 Framework Services
   para1: The Gen3 Framework Services are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via an attribute-based access control (ABAC) policy engine.
-  para2: The Gen3 data indexing service (Indexd) assigns persistent digital IDs to data objects and returns the location of the data object in one or more public or private clouds. Indexd is compatible with the GA4GH DRS standard and is cloud-agnostic, meaning data objects can be stored in a variety of locations and even move physical locations while maintaining a single, persistent digital ID.
-  para3: Gen3 utilizes OpenID Connect for providing authentication services along with a flexible ABAC policy engine for providing tailored user authorization, depending on a data resource's specific needs. Currently supported identity providers include Google and Shibboleth via NIH iTrust, InCommon Federation, and eduGAIN. Additionally, Gen3 can interoperate with NIH dbGaP to obtain authorization information and is involved in the NIH Research Authorization Service (RAS) pilot to support RAS as an identity and authorization provider.
-  para4: The Gen3 Framework Services include logging, security, and compliance services so that Gen3 Data Commons and Gen3 Workspaces can be operated at the FISMA Moderate security compliance level.
 g3DataCommons:
   title: Gen3 Data Commons
-  para1: Gen3 Data Commons are cyberinfrastructure that co-locates data analysis, exploration and visualization tools with data management services for import and export of structured information like clinical, phenotypic, or biospecimen data, and data objects, like genomics data files or medical images. Typically, a data model is utilized to standardize the structure of metadata input and output, although a commons may also support multiple data models by allowing submission of structured data packaged along with a custom data model, for example, Avro-based data-serialization formats like the Portable Format for Biomedical data or PFB.
-  para2: When using Gen3 to build a data commons, the platform auto-generates a data submission and exploration portal that enables the use of its features within a standard web-browser. Fully-integrated analysis workspaces can be also be included, although data can be exported to virtually any cloud-based analysis platform that allows programmatic access via Gen3 open APIs.
-  para3: Gen3 Data Commons are a kind of data resource that is interoperable with other nodes in a data ecosystem by utilizing the Gen3 Framework Services for authentication, authorization, data object indexing and metadata services.
+  para1: Gen3 Data Commons are cyberinfrastructure that co-locates data analysis, exploration and visualization tools with data management services for import and export of structured information like clinical, phenotypic, or biospecimen data, and data objects, like genomics data files or medical images. Gen3 Data Commons are a kind of data resource that is interoperable with other nodes in a data ecosystem by utilizing the Gen3 Framework Services for authentication, authorization, data object indexing and metadata services.
 g3Workspaces:
   title: Gen3 Workspaces
-  para1: A Gen3 workspace can access data from one or more data resources, including Gen3 Data Commons, and also uses the Gen3 Framework Services for user authentication and authorization and data object indexing and metadata services.
-  para2: Gen3 Workspaces support Jupyter notebooks, RStudio notebooks, and other applications that can access data through Gen3 open APIs.
+  para1: Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources, including Gen3 Data Commons, and also use the Gen3 Framework Services for user authentication and authorization and data object indexing and metadata services. Gen3 Workspaces support Jupyter notebooks, RStudio notebooks, and other custom applications that can access data through Gen3 open APIs.
 g3DataFeature:
   title: Gen3 Features
   f1:
@@ -299,31 +293,15 @@ g3Entrance:
       <p class="introduction g3-text__center g3-space__margin-sm-top">
         {{< param "g3FrameworkServices.para1" >}}
       </p>
-      <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3FrameworkServices.para2" >}}
-      </p>
-      <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3FrameworkServices.para3" >}}
-      </p>
-      <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3FrameworkServices.para4" >}}
-      </p>
+      <br>
       <h3 class="g3-text__center">{{< param "g3DataCommons.title" >}}</h3>
       <p class="introduction g3-text__center g3-space__margin-sm-top">
         {{< param "g3DataCommons.para1" >}}
       </p>
-      <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3DataCommons.para2" >}}
-      </p>
-      <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3DataCommons.para3" >}}
-      </p>
+      <br>
       <h3 class="g3-text__center">{{< param "g3Workspaces.title" >}}</h3>
       <p class="introduction g3-text__center g3-space__margin-sm-top">
         {{< param "g3Workspaces.para1" >}}
-      </p>
-      <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3Workspaces.para2" >}}
       </p>
     </div>
   </div>
