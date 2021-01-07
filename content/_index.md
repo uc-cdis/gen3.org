@@ -101,13 +101,13 @@ g3DataFeature:
     detail: Engage Gen3’s broad user community. Ask a question, answer a question, request a new feature, or see if anyone else has approached a similar technical or scientific problem during their experience with Gen3.
   f4:
     title: Customizable Options for Data Queries
-    detail: Gen3’s user interface includes data exploration tools you can customize for your users to help them find data they need and receive it in a format they can use. Users can interactively build and send their own custom queries using Gen3's query services or use the built-in graphical user interface for data exploration, which features faceted search for building patient cohorts or selecting subsets of data files for analysis. Data resources can decide whether the data is able to leave the cloud or not and can develop custom apps to visualize or analyze specific data types using Gen3's open APIs.
+    detail: Gen3 makes data exploration easy for users that prefer a graphical interface by providing a built-in faceted search tool for building patient cohorts or selecting subsets of data files for analysis. Alternatively, users can build and send their own custom queries to pinpoint data their interested in.
   f5:
     title: Security & Compliance
-    detail: Gen3 can be deployed with various levels of security and compliance, and Gen3 makes security easy by including built-in tools for supporting FISMA moderate systems. Deploy your data commons or build out the data ecosystem with the controls needed for your data and your user community.
+    detail: Gen3 can be deployed with various levels of security and compliance and was designed to make security easy by including tools for supporting a FISMA moderate environment. Gen3 supports optional tiered access, enabling users to see only summary information for data they don't have access to.
   f6:
     title: Control Data Access—Or Not
-    detail: You can leave your data open to the Internet or control access at deeper levels within your own data use ontology, from the core data to the data objects.
+    detail: You can leave your data open to the Internet or control access at deeper levels within your own data use ontology, from the core data to the data objects. Utilizing an ABAC policy engine, Gen3 lets you easily create data and service access policies and assign them to user groups.
 g3Contributor:
   title: Contributor
   fig: figs/ctds-logo.png
