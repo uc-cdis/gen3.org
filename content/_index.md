@@ -307,9 +307,6 @@ g3Entrance:
         {{< param "g3DataAccess.para3" >}}
       </p>
     </div>
-    <div class="g3-text__center g3-space__margin-sm-top">
-      <a class="g3-button g3-button--primary" href="{{< param "g3Intro.button.link" >}}">{{< param "g3Intro.button.caption" >}}</a>
-    </div>
   </div>
 </section>
 
