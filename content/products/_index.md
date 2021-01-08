@@ -6,8 +6,9 @@ date: 2021-01-08
 g3Teaser:
   fig: /figs/productkv.svg
   title: Gen3 Products
-  detail: The Gen3 platform consists of a collection of open source software services for building and managing cloud-based data resources, namely, interoperable nodes in a data ecosystem, data commons, and analysis workspaces. Each of the Gen3 services is designed to accomplish a specific function in a data ecosystem, and that is achieved by providing a publicly-accessible application programming interface (API) that users, applications, and other services can send requests to.
-  para1: This page organizes and presents the Gen3 software services in terms of the different types of data resources mentioned above.
+  detail: The Gen3 platform consists of a collection of open source software services for building and managing cloud-based data resources, namely, interoperable nodes in a data ecosystem, data commons, and analysis workspaces.
+  para1: Each of the Gen3 services is designed to accomplish a specific function in a data ecosystem, and that is achieved by providing a publicly-accessible application programming interface (API) that users, applications, and other services can send requests to.
+  para2: This page organizes and presents the Gen3 software services in terms of the different types of data resources mentioned above.
 g3DataFeature:
   f1:
     title: Gen3 Framework Services
@@ -85,6 +86,10 @@ g3Entrance:
         <br>
         <p class="g3-space__margin-sm-bottom introduction">
           {{< param "g3Teaser.para1" >}}
+        </p>
+        <br>
+        <p class="g3-space__margin-sm-bottom introduction">
+          {{< param "g3Teaser.para2" >}}
         </p>
       </div>
     </div>
