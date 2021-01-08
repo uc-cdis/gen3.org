@@ -5,14 +5,15 @@ linktitle: products
 date: 2021-01-08
 g3Teaser:
   fig: /figs/productkv.svg
-  title: Gen3 Features
-  detail: Gen3 is an open source software with Apache 2.0 or similar licenses, collocating compute and storage in a data commons. It is agnostic to the data type and the storage location, needing, minimally, a data model, data, a secure landing page for the portal, and research goals.
+  title: Gen3 Products
+  detail: The Gen3 platform consists of a collection of open source software services for building and managing cloud-based data resources, namely, interoperable nodes in a data ecosystem, data commons, and analysis workspaces. Each of the Gen3 services is designed to accomplish a specific function in a data ecosystem, and that is achieved by providing a publicly-accessible application programming interface (API) that users, applications, and other services can send requests to.
+  para1: This page organizes and presents the Gen3 software services in terms of the different types of data resources mentioned above.
 g3DataFeature:
   f1:
     title: Framework Services
-    subtitle: Backend etc etc
+    subtitle: User authentication with data object and metadata indexing.
     button:
-      link: /products/framework-service
+      link: /products/framework-services
     contents:
       c1:
         name: Object Index
@@ -80,6 +81,10 @@ g3Entrance:
         </h1>
         <p class="g3-space__margin-sm-bottom introduction">
           {{< param "g3Teaser.detail" >}}
+        </p>
+        <br>
+        <p class="g3-space__margin-sm-bottom introduction">
+          {{< param "g3Teaser.para1" >}}
         </p>
       </div>
     </div>
