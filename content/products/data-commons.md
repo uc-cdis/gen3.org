@@ -5,20 +5,20 @@ linktitle: /products/data-commons
 date: 2021-01-08
 g3Teaser:
   title: Data Commons
-  detail: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  detail: Gen3 Data Commons are cyberinfrastructure that co-locates data analysis, exploration and visualization tools with data management services for import and export of structured information like clinical, phenotypic, or biospecimen data, and data objects, like genomics data files or medical images. Gen3 Data Commons are capable of interoperation with other resources in a data ecosystem by utilizing the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services.
 g3Feature:
   f1:
     title: Data Search
     fig: /figs/features/search.svg
-    detail: Gen3 features a friendly GraphQL API for searching and discovering data. The GraphQL API enables faceted and precise searching through the flexible data model. Search capabilities enable quick and easy creation of virtual cohorts that can be exported to a manifest for data download.
+    detail: Gen3 data commons offer several methods for finding and querying stored data. The data portal boasts a built-in data exploration GUI, featuring faceted search for quick and easy creation of virtual patient cohorts and data object subsets. There is also a GraphiQL query building interface, which allows users to create and send custom queries to the Gen3 databases. The open APIs that power these built-in user interfaces in the data portal can also be sent custom query requests, enabling programmatic data search and custom app development.
   f2:
-    title: Data Submission
+    title: Data Management
     fig: /figs/features/submit-data.svg
-    detail: Gen3 supports data submission including clinical attributes, phenotypic information, and data files. The submissions are validated against the data dictionary to ensure all required fields are present and have appropriate data values.
+    detail: Gen3 data commons support complete data management functionality, including data access control, ingestion, export, and quality control. Data access is controlled through an attribute-based access control (ABAC) policy engine. Data object indexing and associating objects with metadata is possible both within the web-based portal and from the command line by sending requests to the data submission API. Data quality is controlled through implementing a data model against which submissions are validated to ensure all required fields are present and have appropriate values.
   f3:
     title: Data Portal
     fig: /figs/features/portal.svg
-    detail: Gen3 includes a data portal as a default application over a commons. The portal is an interactive website that allows users to explore, submit, and download data. The data portal utilizes the public APIs offered by the data commons as a demonstration to the power of Gen3.
+    detail: Gen3 data commons include a data portal as a default application over a commons. The portal is an interactive website, accessible through standard web-browsers, that allows users to explore, submit, download, and analyze data. The data portal utilizes the open Gen3 APIs to offer a graphical user interface for the basic functionality of a Gen3 data commons.
 ---
 
 <section class="g3-bg__yellow">
