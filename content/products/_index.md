@@ -10,13 +10,13 @@ g3Teaser:
   para1: This page organizes and presents the Gen3 software services in terms of the different types of data resources mentioned above.
 g3DataFeature:
   f1:
-    title: Framework Services
+    title: Gen3 Framework Services
     subtitle: User authentication with data object and metadata indexing.
     button:
       link: /products/framework-services
     contents:
       c1:
-        name: Object Index
+        name: Object Indexing
         fig: /figs/features/index.svg
       c2:
         name: AuthN/AuthZ
@@ -25,8 +25,8 @@ g3DataFeature:
         name: Metadata Service
         fig: /figs/features/mds.svg
   f2:
-    title: Data Commons
-    subtitle: Interface etc etc
+    title: Gen3 Data Commons
+    subtitle: Data management with web portal and integrated workspaces.
     button:
       link: /products/data-commons
     contents:
@@ -40,8 +40,8 @@ g3DataFeature:
         name: Data Submission
         fig: /figs/features/submit-data.svg
   f3:
-    title: Workspaces
-    subtitle: Current with future being...
+    title: Gen3 Workspaces
+    subtitle: Secure, cloud-based analysis environments.
     button:
       link: /products/workspace
     contents:
@@ -49,21 +49,21 @@ g3DataFeature:
         name: RStudio
         fig: /figs/features/rstudio.svg
       c2:
-        name: Jupyter
+        name: Jupyter Notebooks
         fig: /figs/features/jupyter.svg
       c3:
-        name: Visualization Apps
+        name: Custom Apps
         fig: /figs/features/visualization.svg
 g3Entrance:
   e1:
-    title: Learn about Gen3's microservices
-    detail: Look at the code repositories from GitHub
+    title: Learn about Gen3's software services
+    detail: Visit the code repositories in GitHub
     button:
       caption: Learn
       link: https://github.com/uc-cdis
   e2:
     title: Get Started Easily
-    detail: Follow the documentation to setup Gen3 from docker images.
+    detail: View tutorials on using Gen3, including setup and configuration.
     button:
       caption: Easy Start
       link: /get-started
