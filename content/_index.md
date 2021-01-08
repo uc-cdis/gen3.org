@@ -5,8 +5,8 @@ linktitle: about
 date: 2018-09-04T22:16:21-05:00
 g3Teaser:
   fig: figs/kv.svg
-  title: Gen3 is how data commons are made.
-  detail: A data commons is a cloud-based software platform for managing, analyzing, harmonizing, and sharing large datasets. Gen3 is an open source platform for developing data commons. Data commons accelerate and democratize the process of scientific discovery, especially over large or complex datasets.
+  title: The Gen3 platform supports healthy data ecosystems and builds data commons.
+  detail: The Gen3 platform consists of open-source software services that support the emergence of healthy data ecosystems by enabling the interoperation and creation of cloud-based data resources, including data commons and analysis workspaces. Gen3 aims to accelerate and democratize the process of scientific discovery by making it easy to manage, analyze, harmonize, and share large and complex datasets in the cloud.
   button1:
     caption: Experience Demo
     link: https://gen3.datacommons.io
@@ -18,22 +18,22 @@ g3Teaser:
 g3Feature:
   f1:
     title: Host, Manage, and Share your Data
-    detail: Gen3 enables you to receive, manage, and share data which is valuable to researchers, developers and health organizations. With Gen3, you can receive data, quality control data, generate globally unique IDs, share datasets with authorized individuals or any authenticated individual, and compute over that data.
+    detail: Gen3 empowers you to manage, share, and collaboratively analyze data that is valuable to researchers, developers and health organizations. With Gen3, you can receive and quality control data, generate globally unique IDs for data objects, finely control user access to datasets with attribute-based authorization control, and compute over that data in secure analysis workspaces. Gen3 data commons typically use public clouds, such as Amazon’s AWS and Google’s GCP, but can also be used over private clouds and hybrid clouds.
   f2:
     title: Customize Your Gen3 Experience
-    detail: Multiple Gen3 data commons can work together to create an interoperable ecosystem. Gen3 can be used to power APIs for a “thin middle” of framework services. These framework services provide the foundation on which you and your community can develop new tools for sharing and analyzing data with your group, collaborators, or the broader Gen3 community.
+    detail: The Gen3 services are modular, and data resources can choose which features to include. Each service exposes open APIs that empower interoperation of the data nodes that comprise a healthy data ecosystem. A minimal set of framework services provide the foundation on which the research community can develop new tools for sharing and analyzing data across data resources in the cloud.
   f3:
     title: Facilitate Translational Data Science
-    detail: Use Gen3’s built in tools to find your virtual cohort, and analyze the cohort in notebooks within a cloud environment to hasten your hypotheses testing and discoveries.
+    detail: Gen3 comes with some basic tools like faceted search for the creation of virtual cohorts and workspaces for the analysis of data in a secure cloud environment. Custom tools can also be easily developed that run over Gen3's open APIs, and these tools can be offered by developers in a marketplace or shared in open repositories to hasten hypothesis-driven discoveries.
   f4:
-    title: Scale Your Large Dataset with Any File Types
-    detail: Gen3 APIs enable support for importing data from a variety of platforms including from common clinical to genomic data platforms. Since Gen3 is a growing community, you could repurpose another person’s tools with your data, data commons, or data ecosystem.
+    title: Provide Flexible Tools for Data Ingestion
+    detail: The Gen3 platform exposes open APIs that support ingestion of virtually any data format, including both large data objects, such as BAM files, CRAM files, and image files, as well as metadata, including clinical and phenotype data. Metadata submissions can be forced to conform to a specific data model, or data resources can be configured to ingest self-described data objects that include their own data model into a data lake.
 g3Roles:
   title: Gen3 helps you as...
   r1:
     name: Bioinformaticians
     fig: /figs/roles/icon-bio.svg
-    detail: Organized data allows you to focus on creating unique pipelines and analyses for your projects.
+    detail: Data resources using Gen3 provide open APIs for accessing organized data with persistent digital identifiers to allow you to focus on creating unique pipelines or deep learning algorithms for your analyses.
     button:
       caption: Pipeline Library
       target: _blank
@@ -41,7 +41,7 @@ g3Roles:
   r2:
     name: Researchers
     fig: /figs/roles/icon-research.svg
-    detail: Use our smart dashboard to explore and find data from multiple sources to meet the needs of your research.
+    detail: Use our smart dashboard to explore and find data from multiple sources to meet the needs of your research. Collaborate with others in your field to combine data for powerful, cross-project meta-analyses.
     button:
       caption: Gen3 User Guide
       target: _self
@@ -49,7 +49,7 @@ g3Roles:
   r3:
     name: Developers
     fig: /figs/roles/icon-devs.svg
-    detail: Integrate Gen3 APIs into your services and utilize our open-source software libraries so you can focus on your tools.
+    detail: Integrate Gen3 open APIs into your services and applications, and leverage our open-source software libraries to expedite development of your own tools. Develop custom apps that can be marketed to a variety of data resources that utilize a common set of framework services and APIs.
     button:
       caption: Gen3 Developer
       target: _self
@@ -58,11 +58,7 @@ g3User:
   quote: “From the perspective of setting up a basic Gen3 ecosystem with all the services running, it was a breeze and the Github docs are pretty awesome.”
   by: Amit, Cloud Solutions Architect with Leidos
   title: Who's using Gen3?
-  detail: Federal agencies, not-for-profits, and consortiums with members spanning the globe use Gen3 and its framework services to support their research communities, access and index their data, and facilitate scientific discoveries that impact the world.
-  button:
-    caption: Experience Sandbox
-    link: https://gen3.datacommons.io
-    target: _blank
+  detail: Gen3 has been used to build over 15 data commons by different organizations and is a key component of the emerging translational medicine data ecosystem. Currently, several NIH Institutes and Centers have projects utilizing Gen3, including NCI, NHLBI, the Common Fund, NHGRI, NIDDK, and NIDA. At least two public-private partnerships have also used the Gen3 platform to create data commons. All these data resources are built using a common set of software services called the Gen3 Framework Services, so that the various data commons can interoperate creating a large-scale data ecosystem.
   fig: figs/app-mockup.png
 g3Commons:
   c1:
@@ -73,43 +69,40 @@ g3Commons:
     link: https://www.bloodpac.org/
   c3:
     fig: figs/commons/pdc.png
-    link: /
-  c4:
-    fig: figs/commons/braincommons.png
-    link: https://www.braincommons.org/
+    link: https://proteomic.datacommons.cancer.gov/pdc/
 g3Intro:
   title: Introduction to Gen3
-  detail: Gen3 is an open source software with Apache 2.0 or similar licenses, colocating compute and storage in a data commons. It is agnostic to the data type and the storage location, requiring  minimally, a data model, data, a secure landing page for the portal, and research goals.
+  detail: The Gen3 Data Platform is an open-source data platform with an Apache License for developing and operating cloud-based data commons, workspaces, and an ecosystem of interconnected, cloud-based data resources, applications, and notebooks. A functioning data ecosystem empowers researchers in the same field to share and combine datasets for reanalysis and reuse, as new tools and hypotheses are developed. The Gen3 Data Platform consists of Gen3 Framework Services, Gen3 Data Commons and Gen3 Workspaces.
   fig: figs/productkv.svg
-  button:
-    caption: Technical Overview
-    link: resources/user
-g3DataAccess:
-  title: Data Access Control on Gen3
-  para1: Gen3 manages data access via internal access control lists stored in a database. It is capable of pulling authorization information from multiple lists, as well as syncing with external sources such as dbGaP. Gen3 supports both users and groups defined in these access control lists - a user that is associated with a group will inherit that group’s permissions.
-  para2: Data is either stored in S3/Google buckets or in our graph database. Only users with "read-storage" and "write-storage" permissions will be able to access stored object data (files) within these buckets, and users with "read" and "write" permissions will be able to access data (clinical data and data that describes a file) in the graph database. These policies prevent public access. Gen3 is also capable of issuing presigned urls for authorized users to directly access objects within buckets, and both the generation of these presigned urls as well as the object downloads themselves are logged.
-  para2Fig: img/figs/data-access-diagram.png
-  para3: Gen3 also has an Attribute Based Access Control (ABAC) engine. It can be used to define data access controls and permissions on a more granular level, and can determine if a user is able to access a specific piece of data. Data in our graph database is modeled as a hierarchy that starts with Programs and Projects. A Program is the root of the tree, and represents an overall group for the data. A Program will have Projects underneath it that consist of any subgroups. Projects can then have many subgroups, and so on. Permissions are generally given on the Program level, but with the ABAC engine, Gen3 can provide more specific authorization that applies to nodes further down the tree.
-  para3Fig: img/figs/data-model-diagram.png
+g3FrameworkServices:
+  title: Gen3 Framework Services
+  para1: The Gen3 Framework Services are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via an attribute-based access control (ABAC) policy engine.
+g3DataCommons:
+  title: Gen3 Data Commons
+  para1: Gen3 Data Commons are cyberinfrastructure that co-locates data analysis, exploration and visualization tools with data management services for import and export of structured information like clinical, phenotypic, or biospecimen data, and data objects, like genomics data files or medical images. Gen3 Data Commons are capable of interoperation with other resources in a data ecosystem by utilizing the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services.
+g3Workspaces:
+  title: Gen3 Workspaces
+  para1: Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources, including Gen3 Data Commons, and also use the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services. Gen3 Workspaces support Jupyter notebooks, RStudio notebooks, and other custom applications that can access data through Gen3 open APIs.
 g3DataFeature:
+  title: Gen3 Features
   f1:
     title: Easy Data Submission
-    detail: Use one of the microservices or community tools to submit data objects and metadata to a Gen3 Commons. Or develop your own tools specific to your user community.
+    detail: Use one of the Gen3 services or community tools to submit data objects and metadata to a Gen3 Commons. Or develop your own tools specific to your user community.
   f2:
     title: Easily Find Your Data in an Ecosystem
     detail: Gen3 will automatically index your data and provide globally unique identifiers (GUIDs). GUIDs can also be resolved at dataguids.org to find out where a data object lives within your data ecosystem.
   f3:
     title: Open-Source Community
-    detail: Engage Gen3’s broad user community. Ask a question, answer a question, request a new feature, or see if anyone else has approached a technical or scientific problem like yours in their Gen3 data commons.
+    detail: Engage Gen3’s broad user community. Ask a question, answer a question, request a new feature, or see if anyone else has approached a similar technical or scientific problem during their experience with Gen3.
   f4:
     title: Customizable Options for Data Queries
-    detail: Gen3’s UI includes a data exploration tool you can customize for your data. You can choose the queries or faceted searches your user community wants; decide whether the data is able to leave the cloud or not; or develop your own apps over Gen3 APIs.
+    detail: Gen3 makes data exploration easy for users that prefer a graphical interface by providing a built-in faceted search tool for building patient cohorts or selecting subsets of data files for analysis. Alternatively, users can build and send their own custom queries to pinpoint data their interested in.
   f5:
     title: Security & Compliance
-    detail: Gen3 can be deployed with various levels of security and compliance. Deploy your data commons or ecosystem with the controls needed for your data and your user community.
+    detail: Gen3 can be deployed with various levels of security and compliance and was designed to make security easy by including tools for supporting a FISMA moderate environment. Gen3 supports optional tiered access, enabling users to see only summary information for data they don't have access to.
   f6:
     title: Control Data Access—Or Not
-    detail: You can leave your data open to the Internet or control access at deeper levels within your own data use ontology, from the core data to the data objects.
+    detail: You can leave your data open to the Internet or control access at deeper levels within your own data use ontology, from the core data to the data objects. Utilizing an ABAC policy engine, Gen3 lets you easily create data and service access policies and assign them to user groups.
 g3Contributor:
   title: Contributor
   fig: figs/ctds-logo.png
@@ -118,15 +111,15 @@ g3Contributor:
 g3Entrance:
   e1:
     title: Join the Discussion
-    detail: Ask questions, report issues, discuss Gen3, or reach out for advice.
+    detail: Ask questions, request features, or reach out for advice on Gen3's discussion forum.
     button:
-      caption: Community
+      caption: Community Forum
       link: https://forums.gen3.org/
   e2:
     title: Get Started Easily
     detail: Follow the documentation to setup Gen3 easily to benefit your research.
     button:
-      caption: Easy Start
+      caption: Quick Start
       link: /get-started
 
 ---
@@ -255,11 +248,6 @@ g3Entrance:
         <p class="introduction g3-space__margin-sm-top-bottom">
           {{< param "g3User.detail" >}}
         </p>
-        <div class="g3-mb-text__center">
-          <a class="g3-button g3-button--primary" href="{{< param "g3User.button.link" >}}" target="{{< param "g3User.button.target" >}}">
-            {{< param "g3User.button.caption" >}}
-          </a>
-        </div>
       </div>
     </div>
     <div class="g3-col__55 g3-space__padding-md">
@@ -301,24 +289,24 @@ g3Entrance:
     </p>
     <img class="g3-img__center g3-img" src="{{< param "g3Intro.fig" >}}"/>
     <div class="g3-space__padding-md-top-bottom g3-mini-wrapper">
-      <h3 class="g3-text__center">{{< param "g3DataAccess.title" >}}</h3>
+      <h3 class="g3-text__center">{{< param "g3FrameworkServices.title" >}}</h3>
       <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3DataAccess.para1" >}}
+        {{< param "g3FrameworkServices.para1" >}}
       </p>
-      <img class="g3-img__center g3-img__full-width" src="{{< param "g3DataAccess.para2Fig" >}}" />
+      <br>
+      <h3 class="g3-text__center">{{< param "g3DataCommons.title" >}}</h3>
       <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3DataAccess.para2" >}}
+        {{< param "g3DataCommons.para1" >}}
       </p>
-      <img class="g3-img__center g3-img__full-width" src="{{< param "g3DataAccess.para3Fig" >}}" />
+      <br>
+      <h3 class="g3-text__center">{{< param "g3Workspaces.title" >}}</h3>
       <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3DataAccess.para3" >}}
+        {{< param "g3Workspaces.para1" >}}
       </p>
-    </div>
-    <div class="g3-text__center g3-space__margin-sm-top">
-      <a class="g3-button g3-button--primary" href="{{< param "g3Intro.button.link" >}}">{{< param "g3Intro.button.caption" >}}</a>
     </div>
   </div>
 </section>
+
 
 <section>
   <div class="g3-space__padding-md-top g3-space__padding-md-bottom g3-space__margin-lg-bottom g3-bg__solight">
