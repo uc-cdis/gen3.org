@@ -1,7 +1,7 @@
 ---
 identifier: products/framework-services
 title: Gen3 - Products - Framework Services
-linktitle: products/framework-services
+linktitle: /products/framework-services
 date: 2021-01-08
 g3Teaser:
   title: Framework Services
