@@ -22,7 +22,7 @@ g3DataFeature:
         fig: /figs/features/auth.svg
       c3:
         name: Metadata Service
-        fig: /figs/features/api.svg
+        fig: /figs/features/mds.svg
   f2:
     title: Data Commons
     subtitle: Interface etc etc
