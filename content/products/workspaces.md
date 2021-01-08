@@ -1,7 +1,7 @@
 ---
-identifier: products/workspace
+identifier: products/workspaces
 title: Gen3 - Products - Workspaces
-linktitle: /products/workspace
+linktitle: /products/workspaces
 date: 2021-01-08
 g3Teaser:
   title: Workspaces
