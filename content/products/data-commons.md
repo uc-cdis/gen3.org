@@ -1,24 +1,24 @@
 ---
-identifier: products/framework-service
-title: Gen3 - Products - Framework Services
-linktitle: products/framework-service
+identifier: products/data-commons
+title: Gen3 - Products - Data Commons
+linktitle: /products/data-commons
 date: 2021-01-08
 g3Teaser:
-  title: Framework Services
+  title: Data Commons
   detail: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 g3Feature:
   f1:
-    title: Object Index
-    fig: /figs/features/index.svg
-    detail: Gen3 provides permanent data GUIDs (globally unique IDs) for data objects. The service tracks the physical locations and hash of every asset (file) in the data commons object store. The Gen3 platform includes landing pages which support FAIR descriptions of the data objects.
+    title: Data Search
+    fig: /figs/features/search.svg
+    detail: Gen3 features a friendly GraphQL API for searching and discovering data. The GraphQL API enables faceted and precise searching through the flexible data model. Search capabilities enable quick and easy creation of virtual cohorts that can be exported to a manifest for data download.
   f2:
-    title: AuthN/AuthZ
-    fig: /figs/features/auth.svg
-    detail: Gen3 utilizes OpenID Connect for providing AuthN services with AuthZ specified on a per commons basis. Currently supported identity providers include Google and Shibboleth, supporting providers such as NIH iTrust, InCommon Federation, and eduGAIN.
+    title: Data Submission
+    fig: /figs/features/submit-data.svg
+    detail: Gen3 supports data submission including clinical attributes, phenotypic information, and data files. The submissions are validated against the data dictionary to ensure all required fields are present and have appropriate data values.
   f3:
-    title: Metadata Service
-    fig: /figs/features/api.svg
-    detail: Gen3 utilizes OpenID Connect for providing AuthN services with AuthZ specified on a per commons basis. Currently supported identity providers include Google and Shibboleth, supporting providers such as NIH iTrust, InCommon Federation, and eduGAIN.
+    title: Data Portal
+    fig: /figs/features/portal.svg
+    detail: Gen3 includes a data portal as a default application over a commons. The portal is an interactive website that allows users to explore, submit, and download data. The data portal utilizes the public APIs offered by the data commons as a demonstration to the power of Gen3.
 ---
 
 <section class="g3-bg__yellow">

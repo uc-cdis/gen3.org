@@ -2,7 +2,7 @@
 identifier: products
 title: Gen3 - Products
 linktitle: products
-date: 2018-09-04T22:16:21-05:00
+date: 2021-01-08
 g3Teaser:
   fig: /figs/productkv.svg
   title: Gen3 Features
@@ -12,7 +12,7 @@ g3DataFeature:
     title: Framework Services
     subtitle: Backend etc etc
     button:
-      link: /product-details/framework-service
+      link: /products/framework-service
     contents:
       c1:
         name: Object Index

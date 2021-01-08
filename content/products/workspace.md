@@ -1,24 +1,24 @@
 ---
-identifier: products/framework-service
-title: Gen3 - Products - Framework Services
-linktitle: products/framework-service
+identifier: products/workspace
+title: Gen3 - Products - Workspaces
+linktitle: /products/workspace
 date: 2021-01-08
 g3Teaser:
-  title: Framework Services
+  title: Workspaces
   detail: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 g3Feature:
   f1:
-    title: Object Index
-    fig: /figs/features/index.svg
-    detail: Gen3 provides permanent data GUIDs (globally unique IDs) for data objects. The service tracks the physical locations and hash of every asset (file) in the data commons object store. The Gen3 platform includes landing pages which support FAIR descriptions of the data objects.
+    title: RStudio
+    fig: /figs/features/rstudio.svg
+    detail: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
   f2:
-    title: AuthN/AuthZ
-    fig: /figs/features/auth.svg
-    detail: Gen3 utilizes OpenID Connect for providing AuthN services with AuthZ specified on a per commons basis. Currently supported identity providers include Google and Shibboleth, supporting providers such as NIH iTrust, InCommon Federation, and eduGAIN.
+    title: Jupyter Notebooks
+    fig: /figs/features/jupyter.svg
+    detail: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
   f3:
-    title: Metadata Service
-    fig: /figs/features/api.svg
-    detail: Gen3 utilizes OpenID Connect for providing AuthN services with AuthZ specified on a per commons basis. Currently supported identity providers include Google and Shibboleth, supporting providers such as NIH iTrust, InCommon Federation, and eduGAIN.
+    title: Visualization Apps
+    fig: /figs/features/visualization.svg
+    detail: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
 ---
 
 <section class="g3-bg__yellow">
