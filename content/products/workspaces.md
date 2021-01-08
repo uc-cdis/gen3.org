@@ -6,8 +6,8 @@ date: 2021-01-08
 g3Teaser:
   title: Workspaces
   detail: Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources, including Gen3 Data Commons. Workspaces are often fully integrated with a specific data commons, and coming soon are workspaces as stand-alone analysis environments with a user pay model.
-  para1: Gen3 Workspaces use the Gen3 Framework Services for user authentication and authorization and for retrieving data objects and metadata from data resources, like Gen3 Data Commons.
-  para2: By default Gen3 Workspaces include Jupyter notebooks and RStudio. Workspaces can be further configured to offer a variety of analysis environment "flavors", pre-loaded with various custom applications. Virtually any application can be integrated into a Gen3 Workspace, like analysis workflows, data processing pipelines, or data visualization apps.
+  para1: Gen3 Workspaces utilize the Gen3 Framework Services for user authentication and authorization and for retrieving data objects and metadata from data resources, like Gen3 Data Commons.
+  para2: By default Gen3 Workspaces include Jupyter notebooks and RStudio. Workspaces can be further customized to offer a variety of analysis environment "flavors", pre-loaded with various applications. Virtually any application can be integrated into a Gen3 Workspace, like analysis workflows, data processing pipelines, or data visualization apps.
 g3Feature:
   f1:
     title: RStudio
@@ -20,7 +20,7 @@ g3Feature:
   f3:
     title: Custom Applications
     fig: /figs/features/visualization.svg
-    detail: When a user logs into a Gen3 Workspace, they have the option to spin up on of a variety of docker images pre-loaded with tools for various analysis functions. Virtually any custom application that can be loaded onto a virtual machine (VM) image can be integrated into a Gen3 Workspace, including analysis workflows, processing pipelines, and visualization apps.
+    detail: When users log into a Gen3 Workspace, they have the option to spin up a variety of analysis environments with different processing power and pre-loaded with different tools for various analysis tasks. Virtually any custom application that can be loaded into a docker image can be integrated into a Gen3 Workspace environment, including analysis workflows, processing pipelines, and visualization apps.
 ---
 
 <section class="g3-bg__yellow">

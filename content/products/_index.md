@@ -44,7 +44,7 @@ g3DataFeature:
     title: Gen3 Workspaces
     subtitle: Secure, cloud-based analysis environments.
     button:
-      link: /products/workspace
+      link: /products/workspaces
     contents:
       c1:
         name: RStudio
