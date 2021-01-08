@@ -4,21 +4,22 @@ title: Gen3 - Products - Framework Services
 linktitle: /products/framework-services
 date: 2021-01-08
 g3Teaser:
-  title: Framework Services
-  detail: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  title: Gen3 Framework Services
+  detail: The Gen3 Framework Services are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via an attribute-based access control (ABAC) policy engine.
+  para1: Data resources using the Gen3 Framework Services get the minimal backend functionality necessary for managing data and controlling user access to it. Specifically, the services included in the Gen3 Framework Services are those for data object indexing, storing and associating metadata with data objects, and user authentication and authorization.
 g3Feature:
   f1:
-    title: Object Index
+    title: Object Indexing
     fig: /figs/features/index.svg
-    detail: Gen3 provides permanent data GUIDs (globally unique IDs) for data objects. The service tracks the physical locations and hash of every asset (file) in the data commons object store. The Gen3 platform includes landing pages which support FAIR descriptions of the data objects.
+    detail: The Gen3 data object indexing service mints permanent digital IDs, called data GUIDs (globally unique IDs), for data objects. The service tracks the physical locations and hash of every asset (file) in the data commons object store. The Gen3 platform includes landing pages which support FAIR descriptions of the data objects.
   f2:
-    title: AuthN/AuthZ
+    title: User Authentication and Authorization
     fig: /figs/features/auth.svg
-    detail: Gen3 utilizes OpenID Connect for providing AuthN services with AuthZ specified on a per commons basis. Currently supported identity providers include Google and Shibboleth, supporting providers such as NIH iTrust, InCommon Federation, and eduGAIN.
+    detail: The Gen3 Framework Services include software services for user authentication and fine-grained authorization to services, metadata, and data objects via an attribute-based access control (ABAC) policy engine. Gen3 utilizes OpenID Connect for providing AuthN services with AuthZ specified on a per commons basis. Currently supported identity providers include Google and Shibboleth, supporting providers such as NIH iTrust, InCommon Federation, and eduGAIN.
   f3:
     title: Metadata Service
     fig: /figs/features/mds.svg
-    detail: Gen3 utilizes OpenID Connect for providing AuthN services with AuthZ specified on a per commons basis. Currently supported identity providers include Google and Shibboleth, supporting providers such as NIH iTrust, InCommon Federation, and eduGAIN.
+    detail: The Gen3 metadata service provides support for arbitrary JSON blobs attached to globally unique identifiers (GUIDs). This provides a simple and flexible way to add additional, non-schema-enforced metadata into the system without the need for a fully-fledged, harmonized data model.
 ---
 
 <section class="g3-bg__yellow">
@@ -48,6 +49,10 @@ g3Feature:
         </h3>
         <p class="g3-space__margin-sm-bottom">
           {{< param "g3Feature.f1.detail" >}}
+        </p>
+        <br>
+        <p class="g3-space__margin-sm-bottom">
+          {{< param "g3Feature.f1.para1" >}}
         </p>
       </div>
     </div>

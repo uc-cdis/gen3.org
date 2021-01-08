@@ -4,8 +4,9 @@ title: Gen3 - Products - Data Commons
 linktitle: /products/data-commons
 date: 2021-01-08
 g3Teaser:
-  title: Data Commons
-  detail: Gen3 Data Commons are cyberinfrastructure that co-locates data analysis, exploration and visualization tools with data management services for import and export of structured information like clinical, phenotypic, or biospecimen data, and data objects, like genomics data files or medical images. Gen3 Data Commons are capable of interoperation with other resources in a data ecosystem by utilizing the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services.
+  title: Gen3 Data Commons
+  detail: Gen3 Data Commons are cyberinfrastructure that co-locates data analysis, exploration and visualization tools with data management services for import and export of structured information like clinical, phenotypic, or biospecimen data, and data objects, like genomics data files or medical images.
+  para1: Gen3 Data Commons are capable of interoperation with other resources in a data ecosystem by utilizing the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services.
 g3Feature:
   f1:
     title: Data Search
@@ -30,6 +31,10 @@ g3Feature:
         </h1>
         <p class="g3-space__margin-sm-bottom introduction">
           {{< param "g3Teaser.detail" >}}
+        </p>
+        <br>
+        <p class="g3-space__margin-sm-bottom introduction">
+          {{< param "g3Teaser.para1" >}}
         </p>
       </div>
     </div>
