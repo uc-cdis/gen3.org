@@ -42,7 +42,7 @@ g3DataFeature:
         fig: /figs/features/submit-data.svg
   f3:
     title: Gen3 Workspaces
-    subtitle: Secure, cloud-based analysis environments.
+    subtitle: Secure, cloud-based data analysis environments.
     button:
       link: /products/workspaces
     contents:
