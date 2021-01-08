@@ -57,7 +57,7 @@ g3DataFeature:
         fig: /figs/features/visualization.svg
 g3Entrance:
   e1:
-    title: Learn about Gen3's software services
+    title: View the Gen3 Codebase
     detail: Visit the code repositories in GitHub
     button:
       caption: Learn
