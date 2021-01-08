@@ -82,7 +82,7 @@ g3DataCommons:
   para1: Gen3 Data Commons are cyberinfrastructure that co-locates data analysis, exploration and visualization tools with data management services for import and export of structured information like clinical, phenotypic, or biospecimen data, and data objects, like genomics data files or medical images. Gen3 Data Commons are capable of interoperation with other resources in a data ecosystem by utilizing the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services.
 g3Workspaces:
   title: Gen3 Workspaces
-  para1: Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources, including Gen3 Data Commons, and also use the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services. Gen3 Workspaces support Jupyter notebooks, RStudio notebooks, and other custom applications that can access data through Gen3 open APIs.
+  para1: Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources, including Gen3 Data Commons. Gen3 Workspaces use the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services. Gen3 Workspaces support Jupyter notebooks, RStudio notebooks, and other custom applications that can access data through Gen3 open APIs.
 g3DataFeature:
   title: Gen3 Features
   f1:
