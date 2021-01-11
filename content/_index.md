@@ -72,7 +72,7 @@ g3Commons:
     link: https://proteomic.datacommons.cancer.gov/pdc/
 g3Intro:
   title: Introduction to Gen3
-  detail: The Gen3 Data Platform is an open-source data platform with an Apache License for developing and operating cloud-based data commons, workspaces, and an ecosystem of interconnected, cloud-based data resources, applications, and notebooks. A functioning data ecosystem empowers researchers in the same field to share and combine datasets for reanalysis and reuse, as new tools and hypotheses are developed. The Gen3 Data Platform consists of Gen3 Framework Services, Gen3 Data Commons and Gen3 Workspaces.
+  detail: The Gen3 Data Platform is an open-source data platform with an Apache License for developing and operating cloud-based data commons, workspaces, and an ecosystem of interconnected, cloud-based data resources, applications, and notebooks. A functioning data ecosystem empowers researchers in the same field to share and combine datasets for reanalysis and reuse, as new tools and hypotheses are developed. The Gen3 Data Platform consists of Gen3 Framework Services, Gen3 Data Commons, and Gen3 Workspaces.
   fig: figs/productkv.svg
 g3FrameworkServices:
   title: Gen3 Framework Services
