@@ -5,7 +5,7 @@ linktitle: about
 date: 2018-09-04T22:16:21-05:00
 g3Teaser:
   fig: figs/kv.svg
-  title: The Gen3 platform supports healthy data ecosystems and builds data commons.
+  title: Gen3 is a data platform for building data commons and data ecosystems.
   detail: The Gen3 platform consists of open-source software services that support the emergence of healthy data ecosystems by enabling the interoperation and creation of cloud-based data resources, including data commons and analysis workspaces. Gen3 aims to accelerate and democratize the process of scientific discovery by making it easy to manage, analyze, harmonize, and share large and complex datasets in the cloud.
   button1:
     caption: Experience Demo
@@ -83,6 +83,9 @@ g3DataCommons:
 g3Workspaces:
   title: Gen3 Workspaces
   para1: Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources, including Gen3 Data Commons. Gen3 Workspaces use the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services. Gen3 Workspaces support Jupyter notebooks, RStudio notebooks, and other custom applications that can access data through Gen3 open APIs.
+g3Ecosystems:
+  title: Gen3 Data Ecosystems
+  para1: The Gen3 platform builds data ecosystems by helping organizations develop and operate multiple, interoperable data resources, including Gen3 Data Commons and other data resources powered by the Gen3 Framework Services. Gen3 Data Ecosystems consist of multiple data commons, data repositories, and knowledge bases, along with an ecosystem of workspaces, notebooks and other applications that run over the open APIs powered by Gen3 services.
 g3DataFeature:
   title: Gen3 Features
   f1:
