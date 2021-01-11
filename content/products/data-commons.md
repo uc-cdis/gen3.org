@@ -44,10 +44,10 @@ g3Feature:
 <section>
   <div class="g3-space__margin-lg-bottom g3-inner-wrapper">
     <div class="g3-flex-content g3-space__margin-md-top-bottom g3-space__margin-sm-left-right">
-      <div class="g3-col__35 g3-flex-content g3-flex-content_center">
-        <img src="{{< param "g3Feature.f1.fig" >}}" />
+      <div class="g3-col__35 g3-flex-content g3-flex-content_center g3-flex-content_flex-start">
+        <img class="g3-col__70" src="{{< param "g3Feature.f1.fig" >}}" />
       </div>
-      <div class="g3-col__65 g3-flex-content g3-flex-content__col">
+      <div class="g3-col__65 g3-flex-content g3-flex-content__col g3-flex-content__col-center ">
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Feature.f1.title" >}}
         </h3>
@@ -57,7 +57,7 @@ g3Feature:
       </div>
     </div>
     <div class="g3-flex-content g3-space__margin-md-top-bottom g3-space__margin-sm-left-right">
-      <div class="g3-col__65 g3-flex-content g3-flex-content__col">
+      <div class="g3-col__65 g3-flex-content g3-flex-content__col g3-flex-content__col-center ">
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Feature.f2.title" >}}
         </h3>
@@ -65,15 +65,15 @@ g3Feature:
           {{< param "g3Feature.f2.detail" >}}
         </p>
       </div>
-      <div class="g3-col__35 g3-flex-content g3-flex-content_center">
-        <img src="{{< param "g3Feature.f2.fig" >}}" />
+      <div class="g3-col__35 g3-flex-content g3-flex-content_center g3-flex-content_flex-start g3-flex-content__reverse">
+        <img class="g3-col__70" src="{{< param "g3Feature.f2.fig" >}}" />
       </div>
     </div>
     <div class="g3-flex-content g3-space__margin-md-top-bottom g3-space__margin-sm-left-right">
-      <div class="g3-col__35 g3-flex-content g3-flex-content_center">
-        <img src="{{< param "g3Feature.f3.fig" >}}" />
+      <div class="g3-col__35 g3-flex-content g3-flex-content_center g3-flex-content_flex-start">
+        <img class="g3-col__70" src="{{< param "g3Feature.f3.fig" >}}" />
       </div>
-      <div class="g3-col__65 g3-flex-content g3-flex-content__col">
+      <div class="g3-col__65 g3-flex-content g3-flex-content__col g3-flex-content__col-center ">
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Feature.f3.title" >}}
         </h3>

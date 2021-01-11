@@ -129,7 +129,7 @@ g3Entrance:
 
 <section class="g3-bg__solight">
   <div class="g3-outer-wrapper g3-flex-content g3-flex-content__reverse">
-    <div class="g3-col__55 g3-flex-content g3-mb-space__padding-lg-top">
+    <div class="g3-col__55 g3-flex-content g3-mb-space__padding-lg-top g3-space__padding-md-left">
       <img class="g3-img__max-full-width" src="{{< param "g3Teaser.fig" >}}"/>
     </div>
     <div class="g3-space__padding-lg-top g3-space__padding-lg-bottom g3-col__45">
@@ -194,7 +194,7 @@ g3Entrance:
 <section class="g3-bg__solight">
   <div class="g3-inner-wrapper g3-space__padding-md-top g3-space__padding-lg-bottom g3-mb-space__padding-lg-top g3-mb-space__padding-lg-bottom">
     <div class="g3-table-row">
-      <div class="g3-col__33 g3-text__center g3-space__margin-sm-left-right">
+      <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
         <img class="g3-space__margin-sm-bottom" src="{{< param "g3Roles.r1.fig" >}}"/>
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Roles.r1.name" >}}
@@ -206,7 +206,7 @@ g3Entrance:
           {{< param "g3Roles.r1.button.caption" >}}
         </a>
       </div>
-      <div class="g3-col__33 g3-text__center g3-space__margin-sm-left-right">
+      <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
         <img class="g3-space__margin-sm-bottom" src="{{< param "g3Roles.r2.fig" >}}"/>
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Roles.r2.name" >}}
@@ -218,7 +218,7 @@ g3Entrance:
           {{< param "g3Roles.r2.button.caption" >}}
         </a>
       </div>
-      <div class="g3-col__33 g3-text__center g3-space__margin-sm-left-right">
+      <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
         <img class="g3-space__margin-sm-bottom" src="{{< param "g3Roles.r3.fig" >}}"/>
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Roles.r3.name" >}}

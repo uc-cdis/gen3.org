@@ -105,19 +105,19 @@ g3Entrance:
           {{< param "g3DataFeature.f1.subTitle" >}}
         </p>
         <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
-        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center">
+        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
           <img class="g3-row__10vh" src="{{< param "g3DataFeature.f1.contents.c1.fig" >}}" />
           <p class="introduction">
             {{< param "g3DataFeature.f1.contents.c1.name" >}}
           </p>
         </div>
-        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center">
+        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
           <img class="g3-row__10vh" src="{{< param "g3DataFeature.f1.contents.c2.fig" >}}" />
           <p class="introduction">
             {{< param "g3DataFeature.f1.contents.c2.name" >}}
           </p>
         </div>
-        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center">
+        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
           <img class="g3-row__10vh" src="{{< param "g3DataFeature.f1.contents.c3.fig" >}}" />
           <p class="introduction">
             {{< param "g3DataFeature.f1.contents.c3.name" >}}
@@ -135,19 +135,19 @@ g3Entrance:
           {{< param "g3DataFeature.f2.subTitle" >}}
         </p>
         <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
-        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center">
+        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
           <img class="g3-row__10vh" src="{{< param "g3DataFeature.f2.contents.c1.fig" >}}" />
           <p class="introduction">
             {{< param "g3DataFeature.f2.contents.c1.name" >}}
           </p>
         </div>
-        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center">
+        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
           <img class="g3-row__10vh" src="{{< param "g3DataFeature.f2.contents.c2.fig" >}}" />
           <p class="introduction">
             {{< param "g3DataFeature.f2.contents.c2.name" >}}
           </p>
         </div>
-        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center">
+        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
           <img class="g3-row__10vh" src="{{< param "g3DataFeature.f2.contents.c3.fig" >}}" />
           <p class="introduction">
             {{< param "g3DataFeature.f2.contents.c3.name" >}}
@@ -165,19 +165,19 @@ g3Entrance:
           {{< param "g3DataFeature.f3.subTitle" >}}
         </p>
         <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
-        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center">
+        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
           <img class="g3-row__10vh" src="{{< param "g3DataFeature.f3.contents.c1.fig" >}}" />
           <p class="introduction">
             {{< param "g3DataFeature.f3.contents.c1.name" >}}
           </p>
         </div>
-        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center">
+        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
           <img class="g3-row__10vh" src="{{< param "g3DataFeature.f3.contents.c2.fig" >}}" />
           <p class="introduction">
             {{< param "g3DataFeature.f3.contents.c2.name" >}}
           </p>
         </div>
-        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center">
+        <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
           <img class="g3-row__10vh" src="{{< param "g3DataFeature.f3.contents.c3.fig" >}}" />
           <p class="introduction">
             {{< param "g3DataFeature.f3.contents.c3.name" >}}
