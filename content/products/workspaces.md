@@ -7,7 +7,7 @@ g3Teaser:
   title: Workspaces
   detail: Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources, including Gen3 Data Commons. Workspaces are often fully integrated with a specific data commons, and coming soon are workspaces as stand-alone analysis environments with a user pay model.
   para1: Gen3 Workspaces utilize the Gen3 Framework Services for user authentication and authorization and for retrieving data objects and metadata from data resources, like Gen3 Data Commons.
-  para2: By default Gen3 Workspaces include Jupyter notebooks and RStudio. Workspaces can be further customized to offer a variety of analysis environment "flavors", pre-loaded with various applications. Virtually any application can be integrated into a Gen3 Workspace, like analysis workflows, data processing pipelines, or data visualization apps.
+  para2: By default Gen3 Workspaces include Jupyter notebooks and RStudio but can be configured to host virtually any application, including analysis workflows, data processing pipelines, or data visualization apps.
 g3Feature:
   f1:
     title: RStudio
