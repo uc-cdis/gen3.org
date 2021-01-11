@@ -5,7 +5,7 @@ linktitle: /products/framework-services
 date: 2021-01-08
 g3Teaser:
   title: Gen3 Framework Services
-  detail: The Gen3 Framework Services are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via an attribute-based access control (ABAC) policy engine.
+  detail: The Gen3 Framework Services are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via a robust and flexible access control policy engine.
   para1: Data resources using the Gen3 Framework Services get the minimal backend functionality necessary for managing data and controlling user access to it. Specifically, the services included in the Gen3 Framework Services are those for data object indexing, storing and associating metadata with data objects, and user authentication and authorization.
 g3Feature:
   f1:
@@ -15,7 +15,7 @@ g3Feature:
   f2:
     title: User Authentication and Authorization
     fig: /figs/features/auth.svg
-    detail: The Gen3 Framework Services include software services for user authentication and fine-grained authorization to services, metadata, and data objects via an attribute-based access control (ABAC) policy engine. Gen3 utilizes OpenID Connect for providing AuthN services with AuthZ specified on a per commons basis. Currently supported identity providers include Google and Shibboleth, supporting providers such as NIH iTrust, InCommon Federation, and eduGAIN.
+    detail: The Gen3 Framework Services include software services for user authentication and fine-grained authorization to services, metadata, and data objects via a flexible access control policy engine. Gen3 utilizes OpenID Connect for providing AuthN services with AuthZ specified on a per commons basis. Currently supported identity providers include Google and Shibboleth, supporting providers such as NIH iTrust, InCommon Federation, and eduGAIN.
   f3:
     title: Metadata Service
     fig: /figs/features/mds.svg

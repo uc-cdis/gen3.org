@@ -18,7 +18,7 @@ g3Teaser:
 g3Feature:
   f1:
     title: Host, Manage, and Share your Data
-    detail: Gen3 empowers you to manage, share, and collaboratively analyze data that is valuable to researchers, developers and health organizations. With Gen3, you can receive and quality control data, generate globally unique IDs for data objects, finely control user access to datasets with attribute-based authorization control, and compute over that data in secure analysis workspaces. Gen3 data commons typically use public clouds, such as Amazon’s AWS and Google’s GCP, but can also be used over private clouds and hybrid clouds.
+    detail: Gen3 empowers you to manage, share, and collaboratively analyze data that is valuable to researchers, developers and health organizations. With Gen3, you can receive and quality control data, generate globally unique IDs for data objects, finely control user access to datasets via a flexible access control policy engine, and compute over that data in secure analysis workspaces. Gen3 data commons typically use public clouds, such as Amazon’s AWS and Google’s GCP, but can also be used over private clouds and hybrid clouds.
   f2:
     title: Customize Your Gen3 Experience
     detail: The Gen3 services are modular, and data resources can choose which features to include. Each service exposes open APIs that empower interoperation of the data nodes that comprise a healthy data ecosystem. A minimal set of framework services provide the foundation on which the research community can develop new tools for sharing and analyzing data across data resources in the cloud.
@@ -76,7 +76,7 @@ g3Intro:
   fig: figs/productkv.svg
 g3FrameworkServices:
   title: Gen3 Framework Services
-  para1: The Gen3 Framework Services are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via an attribute-based access control (ABAC) policy engine.
+  para1: The Gen3 Framework Services are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via a flexible access control policy engine.
 g3DataCommons:
   title: Gen3 Data Commons
   para1: Gen3 Data Commons are cyberinfrastructure that co-locates data analysis, exploration and visualization tools with data management services for import and export of structured information like clinical, phenotypic, or biospecimen data, and data objects, like genomics data files or medical images. Gen3 Data Commons are capable of interoperation with other resources in a data ecosystem by utilizing the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services.
@@ -105,7 +105,7 @@ g3DataFeature:
     detail: Gen3 can be deployed with various levels of security and compliance and was designed to make security easy by including tools for supporting a FISMA moderate environment. Gen3 supports optional tiered access, enabling users to see only summary information for data they don't have access to.
   f6:
     title: Control Data Access—Or Not
-    detail: You can leave your data open to the Internet or control access at deeper levels within your own data use ontology, from the core data to the data objects. Utilizing an ABAC policy engine, Gen3 lets you easily create data and service access policies and assign them to user groups.
+    detail: You can leave your data open to the Internet or control access at deeper levels within your own data use ontology, from the core data to the data objects. Utilizing a flexible policy engine, Gen3 lets you easily create data and service access policies and assign them to user groups.
 g3Contributor:
   title: Contributor
   fig: figs/ctds-logo.png
