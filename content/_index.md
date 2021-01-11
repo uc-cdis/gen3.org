@@ -259,31 +259,6 @@ g3Entrance:
   </div>
 </section>
 
-<section class="g3-bg__solight">
-  <div class="g3-inner-wrapper g3-flex-content g3-space__padding-sm-top g3-space__padding-sm-bottom">
-    <div class="g3-col__25">
-      <a href="{{< param "g3Commons.c1.link" >}}">
-        <img class="g3-img__center" style="max-height: 52px; max-width: 100%;" src="{{< param "g3Commons.c1.fig" >}}" />
-      </a>
-    </div>
-    <div class="g3-col__25">
-      <a href="{{< param "g3Commons.c2.link" >}}">
-        <img class="g3-img__center" style="max-height: 52px; max-width: 100%;" src="{{< param "g3Commons.c2.fig" >}}" />
-      </a>
-    </div>
-    <div class="g3-col__25">
-      <a href="{{< param "g3Commons.c3.link" >}}">
-        <img class="g3-img__center" style="max-height: 52px; max-width: 100%;" src="{{< param "g3Commons.c3.fig" >}}" />
-      </a>
-    </div>
-    <div class="g3-col__25">
-      <a href="{{< param "g3Commons.c4.link" >}}">
-        <img class="g3-img__center" style="max-height: 52px; max-width: 100%;" src="{{< param "g3Commons.c4.fig" >}}" />
-      </a>
-    </div>
-  </div>
-</section>
-
 <section>
   <div class="g3-inner-wrapper g3-space__padding-lg-top g3-space__padding-lg-bottom">
     <h2 class="g3-text__center">{{< param "g3Intro.title" >}}</h2>
@@ -303,6 +278,11 @@ g3Entrance:
       </p>
       <br>
       <h3 class="g3-text__center">{{< param "g3Workspaces.title" >}}</h3>
+      <p class="introduction g3-text__center g3-space__margin-sm-top">
+        {{< param "g3Workspaces.para1" >}}
+      </p>
+      <br>
+      <h3 class="g3-text__center">{{< param "g3Ecosystems.title" >}}</h3>
       <p class="introduction g3-text__center g3-space__margin-sm-top">
         {{< param "g3Workspaces.para1" >}}
       </p>
