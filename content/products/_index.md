@@ -12,7 +12,7 @@ g3Teaser:
 g3DataFeature:
   f0:
     title: Gen3 Data Ecosystems
-    subtitle: Some text about Gen3 Data Ecosystems
+    subtitle: Data ecosystems consist of an interconnected network of data resources that are integrated by utilizing a common set of software services called the Gen3 Framework Services. These services support the emergence of data ecosystems by empowering data resources to interoperate through providing common protocols for user authentication and authorization, data indexing, and metadata services.
     button:
       link: /products/data-ecosystems
   f1:
