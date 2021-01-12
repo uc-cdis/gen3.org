@@ -14,7 +14,6 @@ g3Teaser:
   button2:
     caption: Get Started
     link: /get-started
-    target: _self
 g3Feature:
   f1:
     title: Host, Manage, and Share your Data
@@ -136,7 +135,7 @@ g3Entrance:
         </p>
         <div class="g3-button-groups g3-mb-space__padding-lg-bottom">
           <a class="g3-button g3-button--primary" target="{{< param "g3Teaser.button1.target" >}}" href="{{< param "g3Teaser.button1.link" >}}">{{< param "g3Teaser.button1.caption" >}}</a>
-          <a class="g3-button g3-button--secondary" target="{{< param "g3Teaser.button2.target" >}}" href="{{< param "g3Teaser.button2.link" >}}">{{< param "g3Teaser.button2.caption" >}}</a>
+          <a class="g3-button g3-button--secondary" href="{{< param "g3Teaser.button2.link" >}}">{{< param "g3Teaser.button2.caption" >}}</a>
         </div>
       </div>
     </div>
@@ -208,7 +207,7 @@ g3Entrance:
         <p class="g3-space__margin-sm-bottom">
           {{< param "g3Roles.r2.detail" >}}
         </p>
-        <a class="g3-button g3-button--secondary g3-align__bottom" href="{{< param "g3Roles.r2.button.link" >}}" target="{{< param "g3Roles.r2.button.target" >}}">
+        <a class="g3-button g3-button--secondary g3-align__bottom" href="{{< param "g3Roles.r2.button.link" >}}">
           {{< param "g3Roles.r2.button.caption" >}}
         </a>
       </div>
@@ -220,7 +219,7 @@ g3Entrance:
         <p class="g3-space__margin-sm-bottom">
           {{< param "g3Roles.r3.detail" >}}
         </p>
-        <a class="g3-button g3-button--secondary g3-align__bottom" href="{{< param "g3Roles.r3.button.link" >}}" target="{{< param "g3Roles.r3.button.target" >}}">
+        <a class="g3-button g3-button--secondary g3-align__bottom" href="{{< param "g3Roles.r3.button.link" >}}">
           {{< param "g3Roles.r3.button.caption" >}}
         </a>
       </div>
@@ -245,7 +244,7 @@ g3Entrance:
         <p class="introduction g3-space__margin-sm-top-bottom">
           {{< param "g3User.detail" >}}
         </p>
-        <a class="g3-button g3-button--secondary" href="{{< param "g3User.button.link" >}}" target="{{< param "g3User.button.target" >}}">
+        <a class="g3-button g3-button--secondary" href="{{< param "g3User.button.link" >}}">
           {{< param "g3User.button.caption" >}}
         </a>
       </div>
