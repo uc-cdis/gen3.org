@@ -60,16 +60,10 @@ g3User:
   title: Who's using Gen3?
   detail: Gen3 has been used to build over 15 data commons by different organizations and is a key component of the emerging translational medicine data ecosystem. Currently, several NIH Institutes and Centers have projects utilizing Gen3, including NCI, NHLBI, the Common Fund, NHGRI, NIDDK, and NIDA. At least two public-private partnerships have also used the Gen3 platform to create data commons. All these data resources are built using a common set of software services called the Gen3 Framework Services, so that the various data commons can interoperate creating a large-scale data ecosystem.
   fig: figs/app-mockup.png
-g3Commons:
-  c1:
-    fig: figs/commons/kid-first.svg
-    link: https://kidsfirstdrc.org/
-  c2:
-    fig: figs/commons/blood-pac.png
-    link: https://www.bloodpac.org/
-  c3:
-    fig: figs/commons/pdc.png
-    link: https://proteomic.datacommons.cancer.gov/pdc/
+  button:
+    caption: Powered by Gen3
+    target: _self
+    link: /powered-by-gen3
 g3Intro:
   title: Introduction to Gen3
   detail: The Gen3 Data Platform is an open-source data platform with an Apache License for developing and operating cloud-based data commons, workspaces, and an ecosystem of interconnected, cloud-based data resources, applications, and notebooks. A functioning data ecosystem empowers researchers in the same field to share and combine datasets for reanalysis and reuse, as new tools and hypotheses are developed. The Gen3 Data Platform consists of Gen3 Framework Services, Gen3 Data Commons, and Gen3 Workspaces.
@@ -251,9 +245,12 @@ g3Entrance:
         <p class="introduction g3-space__margin-sm-top-bottom">
           {{< param "g3User.detail" >}}
         </p>
+        <a class="g3-button g3-button--secondary" href="{{< param "g3User.button.link" >}}" target="{{< param "g3User.button.target" >}}">
+          {{< param "g3User.button.caption" >}}
+        </a>
       </div>
     </div>
-    <div class="g3-col__55 g3-space__padding-md">
+    <div class="g3-col__55 g3-space__padding-md-left g3-space__padding-md-right g3-space__margin-lg-top g3-space__margin-lg-bottom">
       <img class="g3-img__center g3-img__full-width" src="{{< param "g3User.fig" >}}" />
     </div>
   </div>
