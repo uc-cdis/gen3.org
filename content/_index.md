@@ -5,7 +5,7 @@ linktitle: about
 date: 2018-09-04T22:16:21-05:00
 g3Teaser:
   fig: figs/kv.svg
-  title: The Gen3 platform supports healthy data ecosystems and builds data commons.
+  title: Gen3 is a data platform for building data commons and data ecosystems.
   detail: The Gen3 platform consists of open-source software services that support the emergence of healthy data ecosystems by enabling the interoperation and creation of cloud-based data resources, including data commons and analysis workspaces. Gen3 aims to accelerate and democratize the process of scientific discovery by making it easy to manage, analyze, harmonize, and share large and complex datasets in the cloud.
   button1:
     caption: Experience Demo
@@ -14,11 +14,10 @@ g3Teaser:
   button2:
     caption: Get Started
     link: /get-started
-    target: _self
 g3Feature:
   f1:
     title: Host, Manage, and Share your Data
-    detail: Gen3 empowers you to manage, share, and collaboratively analyze data that is valuable to researchers, developers and health organizations. With Gen3, you can receive and quality control data, generate globally unique IDs for data objects, finely control user access to datasets with attribute-based authorization control, and compute over that data in secure analysis workspaces. Gen3 data commons typically use public clouds, such as Amazon’s AWS and Google’s GCP, but can also be used over private clouds and hybrid clouds.
+    detail: Gen3 empowers you to manage, share, and collaboratively analyze data that is valuable to researchers, developers and health organizations. With Gen3, you can receive and quality control data, generate globally unique IDs for data objects, finely control user access to datasets via a flexible access control policy engine, and compute over that data in secure analysis workspaces. Gen3 data commons typically use public clouds, such as Amazon’s AWS and Google’s GCP, but can also be used over private clouds and hybrid clouds.
   f2:
     title: Customize Your Gen3 Experience
     detail: The Gen3 services are modular, and data resources can choose which features to include. Each service exposes open APIs that empower interoperation of the data nodes that comprise a healthy data ecosystem. A minimal set of framework services provide the foundation on which the research community can develop new tools for sharing and analyzing data across data resources in the cloud.
@@ -60,29 +59,26 @@ g3User:
   title: Who's using Gen3?
   detail: Gen3 has been used to build over 15 data commons by different organizations and is a key component of the emerging translational medicine data ecosystem. Currently, several NIH Institutes and Centers have projects utilizing Gen3, including NCI, NHLBI, the Common Fund, NHGRI, NIDDK, and NIDA. At least two public-private partnerships have also used the Gen3 platform to create data commons. All these data resources are built using a common set of software services called the Gen3 Framework Services, so that the various data commons can interoperate creating a large-scale data ecosystem.
   fig: figs/app-mockup.png
-g3Commons:
-  c1:
-    fig: figs/commons/kid-first.svg
-    link: https://kidsfirstdrc.org/
-  c2:
-    fig: figs/commons/blood-pac.png
-    link: https://www.bloodpac.org/
-  c3:
-    fig: figs/commons/pdc.png
-    link: https://proteomic.datacommons.cancer.gov/pdc/
+  button:
+    caption: Powered by Gen3
+    target: _self
+    link: /powered-by-gen3
 g3Intro:
   title: Introduction to Gen3
-  detail: The Gen3 Data Platform is an open-source data platform with an Apache License for developing and operating cloud-based data commons, workspaces, and an ecosystem of interconnected, cloud-based data resources, applications, and notebooks. A functioning data ecosystem empowers researchers in the same field to share and combine datasets for reanalysis and reuse, as new tools and hypotheses are developed. The Gen3 Data Platform consists of Gen3 Framework Services, Gen3 Data Commons and Gen3 Workspaces.
+  detail: The Gen3 Data Platform is an open-source data platform with an Apache License for developing and operating cloud-based data commons, workspaces, and an ecosystem of interconnected, cloud-based data resources, applications, and notebooks. A functioning data ecosystem empowers researchers in the same field to share and combine datasets for reanalysis and reuse, as new tools and hypotheses are developed. The Gen3 Data Platform consists of Gen3 Framework Services, Gen3 Data Commons, and Gen3 Workspaces.
   fig: figs/productkv.svg
 g3FrameworkServices:
   title: Gen3 Framework Services
-  para1: The Gen3 Framework Services are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via an attribute-based access control (ABAC) policy engine.
+  para1: The Gen3 Framework Services are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via a flexible access control policy engine.
 g3DataCommons:
   title: Gen3 Data Commons
   para1: Gen3 Data Commons are cyberinfrastructure that co-locates data analysis, exploration and visualization tools with data management services for import and export of structured information like clinical, phenotypic, or biospecimen data, and data objects, like genomics data files or medical images. Gen3 Data Commons are capable of interoperation with other resources in a data ecosystem by utilizing the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services.
 g3Workspaces:
   title: Gen3 Workspaces
-  para1: Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources, including Gen3 Data Commons, and also use the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services. Gen3 Workspaces support Jupyter notebooks, RStudio notebooks, and other custom applications that can access data through Gen3 open APIs.
+  para1: Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources, including Gen3 Data Commons. Gen3 Workspaces use the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services. Gen3 Workspaces support Jupyter notebooks, RStudio notebooks, and other custom applications that can access data through Gen3 open APIs.
+g3Ecosystems:
+  title: Gen3 Data Ecosystems
+  para1: The Gen3 platform builds data ecosystems by helping organizations develop and operate multiple, interoperable data resources, including Gen3 Data Commons and other data resources powered by the Gen3 Framework Services. Gen3 Data Ecosystems consist of multiple data commons, data repositories, and knowledge bases, along with an ecosystem of workspaces, notebooks and other applications that run over the open APIs powered by Gen3 services.
 g3DataFeature:
   title: Gen3 Features
   f1:
@@ -102,7 +98,7 @@ g3DataFeature:
     detail: Gen3 can be deployed with various levels of security and compliance and was designed to make security easy by including tools for supporting a FISMA moderate environment. Gen3 supports optional tiered access, enabling users to see only summary information for data they don't have access to.
   f6:
     title: Control Data Access—Or Not
-    detail: You can leave your data open to the Internet or control access at deeper levels within your own data use ontology, from the core data to the data objects. Utilizing an ABAC policy engine, Gen3 lets you easily create data and service access policies and assign them to user groups.
+    detail: You can leave your data open to the Internet or control access at deeper levels within your own data use ontology, from the core data to the data objects. Utilizing a flexible policy engine, Gen3 lets you easily create data and service access policies and assign them to user groups.
 g3Contributor:
   title: Contributor
   fig: figs/ctds-logo.png
@@ -126,7 +122,7 @@ g3Entrance:
 
 <section class="g3-bg__solight">
   <div class="g3-outer-wrapper g3-flex-content g3-flex-content__reverse">
-    <div class="g3-col__55 g3-flex-content g3-mb-space__padding-lg-top">
+    <div class="g3-col__55 g3-flex-content g3-mb-space__padding-lg-top g3-space__padding-md-left">
       <img class="g3-img__max-full-width" src="{{< param "g3Teaser.fig" >}}"/>
     </div>
     <div class="g3-space__padding-lg-top g3-space__padding-lg-bottom g3-col__45">
@@ -139,7 +135,7 @@ g3Entrance:
         </p>
         <div class="g3-button-groups g3-mb-space__padding-lg-bottom">
           <a class="g3-button g3-button--primary" target="{{< param "g3Teaser.button1.target" >}}" href="{{< param "g3Teaser.button1.link" >}}">{{< param "g3Teaser.button1.caption" >}}</a>
-          <a class="g3-button g3-button--secondary" target="{{< param "g3Teaser.button2.target" >}}" href="{{< param "g3Teaser.button2.link" >}}">{{< param "g3Teaser.button2.caption" >}}</a>
+          <a class="g3-button g3-button--secondary" href="{{< param "g3Teaser.button2.link" >}}">{{< param "g3Teaser.button2.caption" >}}</a>
         </div>
       </div>
     </div>
@@ -191,7 +187,7 @@ g3Entrance:
 <section class="g3-bg__solight">
   <div class="g3-inner-wrapper g3-space__padding-md-top g3-space__padding-lg-bottom g3-mb-space__padding-lg-top g3-mb-space__padding-lg-bottom">
     <div class="g3-table-row">
-      <div class="g3-col__33 g3-text__center g3-space__margin-sm-left-right">
+      <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
         <img class="g3-space__margin-sm-bottom" src="{{< param "g3Roles.r1.fig" >}}"/>
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Roles.r1.name" >}}
@@ -203,7 +199,7 @@ g3Entrance:
           {{< param "g3Roles.r1.button.caption" >}}
         </a>
       </div>
-      <div class="g3-col__33 g3-text__center g3-space__margin-sm-left-right">
+      <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
         <img class="g3-space__margin-sm-bottom" src="{{< param "g3Roles.r2.fig" >}}"/>
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Roles.r2.name" >}}
@@ -211,11 +207,11 @@ g3Entrance:
         <p class="g3-space__margin-sm-bottom">
           {{< param "g3Roles.r2.detail" >}}
         </p>
-        <a class="g3-button g3-button--secondary g3-align__bottom" href="{{< param "g3Roles.r2.button.link" >}}" target="{{< param "g3Roles.r2.button.target" >}}">
+        <a class="g3-button g3-button--secondary g3-align__bottom" href="{{< param "g3Roles.r2.button.link" >}}">
           {{< param "g3Roles.r2.button.caption" >}}
         </a>
       </div>
-      <div class="g3-col__33 g3-text__center g3-space__margin-sm-left-right">
+      <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
         <img class="g3-space__margin-sm-bottom" src="{{< param "g3Roles.r3.fig" >}}"/>
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Roles.r3.name" >}}
@@ -223,7 +219,7 @@ g3Entrance:
         <p class="g3-space__margin-sm-bottom">
           {{< param "g3Roles.r3.detail" >}}
         </p>
-        <a class="g3-button g3-button--secondary g3-align__bottom" href="{{< param "g3Roles.r3.button.link" >}}" target="{{< param "g3Roles.r3.button.target" >}}">
+        <a class="g3-button g3-button--secondary g3-align__bottom" href="{{< param "g3Roles.r3.button.link" >}}">
           {{< param "g3Roles.r3.button.caption" >}}
         </a>
       </div>
@@ -248,35 +244,13 @@ g3Entrance:
         <p class="introduction g3-space__margin-sm-top-bottom">
           {{< param "g3User.detail" >}}
         </p>
+        <a class="g3-button g3-button--secondary" href="{{< param "g3User.button.link" >}}">
+          {{< param "g3User.button.caption" >}}
+        </a>
       </div>
     </div>
-    <div class="g3-col__55 g3-space__padding-md">
+    <div class="g3-col__55 g3-space__padding-md-left g3-space__padding-md-right g3-space__margin-lg-top g3-space__margin-lg-bottom">
       <img class="g3-img__center g3-img__full-width" src="{{< param "g3User.fig" >}}" />
-    </div>
-  </div>
-</section>
-
-<section class="g3-bg__solight">
-  <div class="g3-inner-wrapper g3-flex-content g3-space__padding-sm-top g3-space__padding-sm-bottom">
-    <div class="g3-col__25">
-      <a href="{{< param "g3Commons.c1.link" >}}">
-        <img class="g3-img__center" style="max-height: 52px; max-width: 100%;" src="{{< param "g3Commons.c1.fig" >}}" />
-      </a>
-    </div>
-    <div class="g3-col__25">
-      <a href="{{< param "g3Commons.c2.link" >}}">
-        <img class="g3-img__center" style="max-height: 52px; max-width: 100%;" src="{{< param "g3Commons.c2.fig" >}}" />
-      </a>
-    </div>
-    <div class="g3-col__25">
-      <a href="{{< param "g3Commons.c3.link" >}}">
-        <img class="g3-img__center" style="max-height: 52px; max-width: 100%;" src="{{< param "g3Commons.c3.fig" >}}" />
-      </a>
-    </div>
-    <div class="g3-col__25">
-      <a href="{{< param "g3Commons.c4.link" >}}">
-        <img class="g3-img__center" style="max-height: 52px; max-width: 100%;" src="{{< param "g3Commons.c4.fig" >}}" />
-      </a>
     </div>
   </div>
 </section>
@@ -300,6 +274,11 @@ g3Entrance:
       </p>
       <br>
       <h3 class="g3-text__center">{{< param "g3Workspaces.title" >}}</h3>
+      <p class="introduction g3-text__center g3-space__margin-sm-top">
+        {{< param "g3Workspaces.para1" >}}
+      </p>
+      <br>
+      <h3 class="g3-text__center">{{< param "g3Ecosystems.title" >}}</h3>
       <p class="introduction g3-text__center g3-space__margin-sm-top">
         {{< param "g3Workspaces.para1" >}}
       </p>

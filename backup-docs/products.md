@@ -5,10 +5,10 @@ linktitle: products
 date: 2018-09-04T22:16:21-05:00
 g3Teaser:
   fig: /figs/productkv.svg
-  title: Gen3 Features
-  detail: Gen3 is an open source software with Apache 2.0 or similar licenses, colocating compute and storage in a data commons. It is agnostic to the data type and the storage location, needing, minimally, a data model, data, a secure landing page for the portal, and research goals.
+  title: Gen3 Products
+  detail: The Gen3 platform consists of a collection of open source software services for building and managing cloud-based data resources like interoperable nodes in a data ecosystem, data commons, and analysis workspaces. Each of the Gen3 services is designed to accomplish a specific function in a data ecosystem, and that is achieved by providing a publicly-accessible application programming interface (API) that users, applications, and other services can send requests to.
 g3DataFeature:
-  f1: 
+  f1:
     title: Data Submission
     fig: /figs/features/submit-data.svg
     detail: Gen3 supports data submission including clinical attributes, phenotypic information, and data files. The submissions are validated against the data dictionary to ensure all required fields are present and have appropriate data values.
@@ -16,7 +16,7 @@ g3DataFeature:
     title: Object Index
     fig: /figs/features/index.svg
     detail: Gen3 provides permanent data GUIDs (globally unique IDs) for data objects. The service tracks the physical locations and hash of every asset (file) in the data commons object store. The Gen3 platform includes landing pages which support FAIR descriptions of the data objects.
-  f3: 
+  f3:
     title: Data Search
     fig: /figs/features/search.svg
     detail: Gen3 features a friendly GraphQL API for searching and discovering data. The GraphQL API enables faceted and precise searching through the flexible data model. Search capabilities enable quick and easy creation of virtual cohorts that can be exported to a manifest for data download.
@@ -24,7 +24,7 @@ g3DataFeature:
     title: AuthN/AuthZ
     fig: /figs/features/auth.svg
     detail: Gen3 utilizes OpenID Connect for providing authentication services with authorization specified on a per commons basis. Currently supported identity providers include Google and Shibboleth via NIH iTrust, InCommon Federation, and eduGAIN.
-  f5: 
+  f5:
     title: Data Portal
     fig: /figs/features/portal.svg
     detail: Gen3 includes a data portal as a default application over a commons. The portal is an interactive website that allows users to explore, submit, and download data. The data portal utilizes the public APIs offered by the data commons as a demonstration to the power of Gen3.
