@@ -280,7 +280,7 @@ g3Entrance:
       <br>
       <h3 class="g3-text__center">{{< param "g3Ecosystems.title" >}}</h3>
       <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3Workspaces.para1" >}}
+        {{< param "g3Ecosystems.para1" >}}
       </p>
     </div>
   </div>
