@@ -154,7 +154,7 @@ g3Entrance:
       </div>
     </div>
   </div>
-  <div class="g3-inner-wrapper g3-flex-content g3-space__padding-lg-top g3-space__padding-md-bottom">
+  <div class="g3-inner-wrapper g3-flex-content g3-space__padding-lg-bottom">
     <div class="g3-col__50">
       <div class="g3-space__margin-sm-left g3-space__margin-sm-right">
         <h3>{{< param "g3Feature.f5.title" >}}</h3>
