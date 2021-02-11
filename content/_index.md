@@ -91,7 +91,7 @@ g3Entrance:
     title: Find us on GitHub
     detail: Explore Gen3 Framework Services software stack on GitHub.
     button:
-      caption: Quick Start
+      caption: GitHub
       link: https://github.com/uc-cdis
 
 ---
@@ -152,6 +152,7 @@ g3Entrance:
           {{< param "g3Feature.f4.detail" >}}
         </p>
       </div>
+  <div class="g3-inner-wrapper g3-flex-content g3-space__padding-lg-top g3-space__padding-md-bottom">
     <div class="g3-col__50">
       <div class="g3-space__margin-sm-left g3-space__margin-sm-right">
         <h3>{{< param "g3Feature.f5.title" >}}</h3>
@@ -162,12 +163,20 @@ g3Entrance:
     </div>
     <div class="g3-col__50">
       <div class="g3-space__margin-sm-left g3-space__margin-sm-right">
-        <h3>{{< param "g3Feature.f5.title" >}}</h3>
+        <h3>{{< param "g3Feature.f6.title" >}}</h3>
         <p class="g3-space__margin-sm-top">
           {{< param "g3Feature.f6.detail" >}}
         </p>
       </div>
+    </div>
   </div>
+  </div>
+</section>
+
+<section>
+  <h4 class="g3-text__center g3-minimum-wrapper g3-space__padding-lg-top">
+    {{< param "g3User.quote" >}}
+  </h4>
 </section>
 
 <h2 class="g3-text__center g3-space__margin-sm-bottom">
@@ -241,87 +250,6 @@ g3Entrance:
     </div>
     <div class="g3-col__55 g3-space__padding-md-left g3-space__padding-md-right g3-space__margin-lg-top g3-space__margin-lg-bottom">
       <img class="g3-img__center g3-img__full-width" src="{{< param "g3User.fig" >}}" />
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="g3-inner-wrapper g3-space__padding-lg-top g3-space__padding-lg-bottom">
-    <h2 class="g3-text__center">{{< param "g3Intro.title" >}}</h2>
-    <p class="introduction g3-mini-wrapper g3-text__center g3-space__margin-sm-top g3-space__padding-md-bottom">
-      {{< param "g3Intro.detail" >}}
-    </p>
-    <img class="g3-img__center g3-img" src="{{< param "g3Intro.fig" >}}"/>
-    <div class="g3-space__padding-md-top-bottom g3-mini-wrapper">
-      <h3 class="g3-text__center">{{< param "g3FrameworkServices.title" >}}</h3>
-      <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3FrameworkServices.para1" >}}
-      </p>
-      <br>
-      <h3 class="g3-text__center">{{< param "g3DataCommons.title" >}}</h3>
-      <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3DataCommons.para1" >}}
-      </p>
-      <br>
-      <h3 class="g3-text__center">{{< param "g3Workspaces.title" >}}</h3>
-      <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3Workspaces.para1" >}}
-      </p>
-      <br>
-      <h3 class="g3-text__center">{{< param "g3Ecosystems.title" >}}</h3>
-      <p class="introduction g3-text__center g3-space__margin-sm-top">
-        {{< param "g3Ecosystems.para1" >}}
-      </p>
-    </div>
-  </div>
-</section>
-
-
-<section>
-  <div class="g3-space__padding-md-top g3-space__padding-md-bottom g3-space__margin-lg-bottom g3-bg__solight">
-    <div class="g3-inner-wrapper">
-      <div class="g3-flex-content g3-space__margin-md-top-bottom">
-        <div class="g3-space__margin-sm-left-right g3-col__50">
-          <h3>{{< param "g3DataFeature.f1.title" >}}</h3>
-          <p>
-            {{< param "g3DataFeature.f1.detail" >}}
-          </p>
-        </div>
-        <div class="g3-space__margin-sm-left-right g3-col__50">
-          <h3>{{< param "g3DataFeature.f2.title" >}}</h3>
-          <p>
-            {{< param "g3DataFeature.f2.detail" >}}
-          </p>
-        </div>
-      </div>
-      <div class="g3-flex-content g3-space__margin-md-top-bottom">
-        <div class="g3-space__margin-sm-left-right g3-col__50">
-          <h3>{{< param "g3DataFeature.f3.title" >}}</h3>
-          <p>
-            {{< param "g3DataFeature.f3.detail" >}}
-          </p>
-        </div>
-        <div class="g3-space__margin-sm-left-right g3-col__50">
-          <h3>{{< param "g3DataFeature.f4.title" >}}</h3>
-          <p>
-            {{< param "g3DataFeature.f4.detail" >}}
-          </p>
-        </div>
-      </div>
-      <div class="g3-flex-content g3-space__margin-md-top-bottom">
-        <div class="g3-space__margin-sm-left-right g3-col__50">
-          <h3>{{< param "g3DataFeature.f5.title" >}}</h3>
-          <p>
-            {{< param "g3DataFeature.f5.detail" >}}
-          </p>
-        </div>
-        <div class="g3-space__margin-sm-left-right g3-col__50">
-          <h3>{{< param "g3DataFeature.f6.title" >}}</h3>
-          <p>
-            {{< param "g3DataFeature.f6.detail" >}}
-          </p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
