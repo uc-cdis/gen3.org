@@ -180,9 +180,11 @@ g3Entrance:
   </h4>
 </section>
 
+<section>
 <h2 class="g3-text__center g3-space__margin-sm-bottom">
   {{< param "g3Roles.title" >}}
 </h2>
+</section>
 
 <section class="g3-bg__solight">
   <div class="g3-inner-wrapper g3-space__padding-md-top g3-space__padding-lg-bottom g3-mb-space__padding-lg-top g3-mb-space__padding-lg-bottom">
