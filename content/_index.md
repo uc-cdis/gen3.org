@@ -152,7 +152,21 @@ g3Entrance:
           {{< param "g3Feature.f4.detail" >}}
         </p>
       </div>
+    <div class="g3-col__50">
+      <div class="g3-space__margin-sm-left g3-space__margin-sm-right">
+        <h3>{{< param "g3Feature.f5.title" >}}</h3>
+        <p class="g3-space__margin-sm-top">
+          {{< param "g3Feature.f5.detail" >}}
+        </p>
+      </div>
     </div>
+    <div class="g3-col__50">
+      <div class="g3-space__margin-sm-left g3-space__margin-sm-right">
+        <h3>{{< param "g3Feature.f5.title" >}}</h3>
+        <p class="g3-space__margin-sm-top">
+          {{< param "g3Feature.f6.detail" >}}
+        </p>
+      </div>
   </div>
 </section>
 
