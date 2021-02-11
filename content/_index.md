@@ -83,13 +83,13 @@ g3Contributor:
 g3Entrance:
   e1:
     title: Resources
-    detail: Find the Gen3 documentation and engage with the Gen3 community.
+    detail: Dive into the Gen3 documentation and engage with the Gen3 community.
     button:
       caption: Gen3 Resources
       link: /resources
   e2:
     title: Find us on GitHub
-    detail: Explore Gen3 Framework Services software stack on GitHub.
+    detail: Explore the Gen3 Framework Services software stack on GitHub.
     button:
       caption: GitHub
       link: https://github.com/uc-cdis
@@ -152,6 +152,8 @@ g3Entrance:
           {{< param "g3Feature.f4.detail" >}}
         </p>
       </div>
+    </div>
+  </div>
   <div class="g3-inner-wrapper g3-flex-content g3-space__padding-lg-top g3-space__padding-md-bottom">
     <div class="g3-col__50">
       <div class="g3-space__margin-sm-left g3-space__margin-sm-right">
@@ -169,7 +171,6 @@ g3Entrance:
         </p>
       </div>
     </div>
-  </div>
   </div>
 </section>
 
@@ -253,6 +254,8 @@ g3Entrance:
     </div>
   </div>
 </section>
+
+</p>
 
 <section class="g3-space__margin-lg-bottom g3-text__center">
   <h2>{{< param "g3Contributor.title" >}}</h2>
