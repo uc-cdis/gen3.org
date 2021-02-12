@@ -77,6 +77,9 @@ g3User:
     target: _self
     link: /powered-by-gen3
 
+g3Roles2:
+  title2: In good company...
+
 g3Commons:
   c1:
     title: ACCOuNT Data Commons
@@ -318,6 +321,13 @@ g3Entrance:
 </section>
 
 <section>
+<h2 class="g3-text__center g3-space__margin-md-bottom g3-space__margin-md-top">
+  {{< param "g3Roles2.title2" >}}
+</h2>
+</section>
+
+
+<section>
   <div class="g3-space__margin-lg-bottom g3-inner-wrapper g3-space__margin-md-top-bottom">
     <div class="slider">
       <div class="slide-track">
@@ -467,7 +477,7 @@ g3Entrance:
 </section>
 
 <section>
-  <h4 class="g3-text__center g3-minimum-wrapper">
+  <h4 class="g3-text__center g3-minimum-wrapper g3-space__padding-md-top">
     {{< param "g3User.quote" >}}
   </h4>
   <p class="g3-text__center g3-minimum-wrapper g3-space__margin-sm-top g3-space__padding-lg-bottom">
@@ -475,7 +485,7 @@ g3Entrance:
   </p>
 </section>
 
-<section class="g3-space__margin-lg-bottom g3-text__center">
+<section class="g3-space__margin-lg-bottom g3-text__center ">
   <h2>{{< param "g3Contributor.title" >}}</h2>
   <div class="g3-mini-wrapper g3-space__margin-sm-top">
     <a href="{{< param "g3Contributor.link" >}}" target="{{< param "g3Contributor.target" >}}">
