@@ -65,7 +65,6 @@ g3User1:
   quote1: “Facilitate and pioneer translational data science to accelerate discovery in biology, medicine, and the environment.”
   by1: Robert L. Grossmann, Founder of the Center of Translational Data Science, University of Chicago
 
-
 g3User:
   quote: “From the perspective of setting up a basic Gen3 ecosystem with all the services running, it was a breeze and the Github docs are pretty awesome.”
   by: Amit, Cloud Solutions Architect with Leidos
@@ -77,8 +76,7 @@ g3User:
     target: _self
     link: /powered-by-gen3
 
-g3Roles2:
-  title2: In good company...
+g3Company: In good company...
 
 g3Commons:
   c1:
@@ -137,8 +135,6 @@ g3Commons:
     title: Veterans Precision Oncology Data Commons
     fig: /figs/commons/vpodc.png
     link: https://vpodc.org
-
-
 
 g3Contributor:
   title: Contributor
@@ -238,13 +234,12 @@ g3Entrance:
       </div>
     </div>
   </div>
-
 </section>
 
 <section>
-<h2 class="g3-text__center g3-space__margin-sm-bottom">
-  {{< param "g3Roles.title" >}}
-</h2>
+  <h2 class="g3-text__center g3-space__margin-sm-bottom">
+    {{< param "g3Roles.title" >}}
+  </h2>
 </section>
 
 <section class="g3-bg__solight">
@@ -290,7 +285,6 @@ g3Entrance:
   </div>
 </section>
 
-
 <section>
   <h4 class="g3-text__center g3-minimum-wrapper g3-space__padding-lg-top">
     {{< param "g3User1.quote1" >}}
@@ -299,7 +293,6 @@ g3Entrance:
     - {{< param "g3User1.by1" >}}
   </p>
 </section>
-
 
 <section class="g3-bg__mint">
   <div class="g3-outer-wrapper g3-flex-content g3-mb-space__padding-lg-bottom g3-mb-space__padding-lg-top">
@@ -321,11 +314,10 @@ g3Entrance:
 </section>
 
 <section>
-<h2 class="g3-text__center g3-space__margin-md-bottom g3-space__margin-md-top">
-  {{< param "g3Roles2.title2" >}}
-</h2>
+  <h2 class="g3-text__center g3-space__margin-md-bottom g3-space__margin-md-top">
+    {{< param "g3Company" >}}
+  </h2>
 </section>
-
 
 <section>
   <div class="g3-space__margin-lg-bottom g3-inner-wrapper g3-space__margin-md-top-bottom">
