@@ -181,6 +181,8 @@ g3Entrance:
 </section>
 
 <section>
+
+<section>
   <div class="g3-inner-wrapper g3-flex-content g3-space__padding-lg-top g3-space__padding-md-bottom">
     <div class="g3-col__50">
       <div class="g3-space__margin-sm-left g3-space__margin-sm-right">
@@ -317,85 +319,84 @@ g3Entrance:
   </div>
 </section>
 
-
 <section>
-  <div class="g3-space__margin-lg-bottom g3-inner-wrapper">
-    <div class="g3-flex-content g3-flex-content_wrap g3-space__margin-md-top-bottom">
-      <div class="g3-common-card">
-        <a target="_blank" href="{{< param "g3Commons.c1.link" >}}" title="{{< param "g3Commons.c1.title" >}}">
-          <img class="g3-row__8vh" src="{{< param "g3Commons.c1.fig" >}}" />
-        </a>
-      </div>
-      <div class="g3-common-card">
-        <a target="_blank" href="{{< param "g3Commons.c2.link" >}}" title="{{< param "g3Commons.c2.title" >}}">
-          <img class="g3-row__8vh" src="{{< param "g3Commons.c2.fig" >}}" />
-        </a>
-      </div>
-      <div class="g3-common-card">
-        <a target="_blank" href="{{< param "g3Commons.c3.link" >}}" title="{{< param "g3Commons.c3.title" >}}">
-          <img class="g3-row__8vh" src="{{< param "g3Commons.c3.fig" >}}" />
-        </a>
-      </div>
-      <div class="g3-common-card">
-        <a target="_blank" href="{{< param "g3Commons.c4.link" >}}" title="{{< param "g3Commons.c4.title" >}}">
-          <img class="g3-row__8vh" src="{{< param "g3Commons.c4.fig" >}}" />
-        </a>
-      </div>
-      <div class="g3-common-card">
-        <a target="_blank" href="{{< param "g3Commons.c5.link" >}}" title="{{< param "g3Commons.c5.title" >}}">
-          <img class="g3-row__8vh" src="{{< param "g3Commons.c5.fig" >}}" />
-        </a>
-      </div>
-      <div class="g3-common-card">
-        <a target="_blank" href="{{< param "g3Commons.c6.link" >}}" title="{{< param "g3Commons.c6.title" >}}">
-          <img class="g3-row__8vh" src="{{< param "g3Commons.c6.fig" >}}" />
-        </a>
-      </div>
-      <div class="g3-common-card">
-        <a target="_blank" href="{{< param "g3Commons.c7.link" >}}" title="{{< param "g3Commons.c7.title" >}}">
-          <img class="g3-row__8vh" src="{{< param "g3Commons.c7.fig" >}}" />
-        </a>
-      </div>
-      <div class="g3-common-card">
-        <a target="_blank" href="{{< param "g3Commons.c8.link" >}}" title="{{< param "g3Commons.c8.title" >}}">
-          <img class="g3-row__8vh" src="{{< param "g3Commons.c8.fig" >}}" />
-        </a>
-      </div>
-      <div class="g3-common-card">
-        <a target="_blank" href="{{< param "g3Commons.c9.link" >}}" title="{{< param "g3Commons.c9.title" >}}">
-          <img class="g3-row__8vh" src="{{< param "g3Commons.c9.fig" >}}" />
-        </a>
-      </div>
-      <div class="g3-common-card">
-        <a target="_blank" href="{{< param "g3Commons.c10.link" >}}" title="{{< param "g3Commons.c10.title" >}}">
-          <img class="g3-row__8vh" src="{{< param "g3Commons.c10.fig" >}}" />
-        </a>
-      </div>
-      <div class="g3-common-card">
-        <a target="_blank" href="{{< param "g3Commons.c11.link" >}}" title="{{< param "g3Commons.c11.title" >}}">
-          <img class="g3-row__8vh" src="{{< param "g3Commons.c11.fig" >}}" />
-        </a>
-      </div>
-      <div class="g3-common-card">
-        <a target="_blank" href="{{< param "g3Commons.c12.link" >}}" title="{{< param "g3Commons.c12.title" >}}">
-          <img class="g3-row__8vh" src="{{< param "g3Commons.c12.fig" >}}" />
-        </a>
-      </div>
-      <div class="g3-common-card">
-        <a target="_blank" href="{{< param "g3Commons.c13.link" >}}" title="{{< param "g3Commons.c13.title" >}}">
-          <img class="g3-row__8vh" src="{{< param "g3Commons.c13.fig" >}}" />
-        </a>
-      </div>
-      <div class="g3-common-card">
-        <a target="_blank" href="{{< param "g3Commons.c14.link" >}}" title="{{< param "g3Commons.c14.title" >}}">
-          <img class="g3-row__8vh" src="{{< param "g3Commons.c14.fig" >}}" />
-        </a>
+  <div class="g3-space__margin-lg-bottom g3-inner-wrapper g3-space__margin-md-top-bottom">
+    <div class="slider">
+      <div class="slide-track">
+        <div class="g3-common-card">
+          <a target="_blank" href="{{< param "g3Commons.c1.link" >}}" title="{{< param "g3Commons.c1.title" >}}">
+            <img class="g3-row__8vh" src="{{< param "g3Commons.c1.fig" >}}" />
+          </a>
+        </div>
+        <div class="g3-common-card">
+          <a target="_blank" href="{{< param "g3Commons.c2.link" >}}" title="{{< param "g3Commons.c2.title" >}}">
+            <img class="g3-row__8vh" src="{{< param "g3Commons.c2.fig" >}}" />
+          </a>
+        </div>
+        <div class="g3-common-card">
+          <a target="_blank" href="{{< param "g3Commons.c3.link" >}}" title="{{< param "g3Commons.c3.title" >}}">
+            <img class="g3-row__8vh" src="{{< param "g3Commons.c3.fig" >}}" />
+          </a>
+        </div>
+        <div class="g3-common-card">
+          <a target="_blank" href="{{< param "g3Commons.c4.link" >}}" title="{{< param "g3Commons.c4.title" >}}">
+            <img class="g3-row__8vh" src="{{< param "g3Commons.c4.fig" >}}" />
+          </a>
+        </div>
+        <div class="g3-common-card">
+          <a target="_blank" href="{{< param "g3Commons.c5.link" >}}" title="{{< param "g3Commons.c5.title" >}}">
+            <img class="g3-row__8vh" src="{{< param "g3Commons.c5.fig" >}}" />
+          </a>
+        </div>
+        <div class="g3-common-card">
+          <a target="_blank" href="{{< param "g3Commons.c6.link" >}}" title="{{< param "g3Commons.c6.title" >}}">
+            <img class="g3-row__8vh" src="{{< param "g3Commons.c6.fig" >}}" />
+          </a>
+        </div>
+        <div class="g3-common-card">
+          <a target="_blank" href="{{< param "g3Commons.c7.link" >}}" title="{{< param "g3Commons.c7.title" >}}">
+            <img class="g3-row__8vh" src="{{< param "g3Commons.c7.fig" >}}" />
+          </a>
+        </div>
+        <div class="g3-common-card">
+          <a target="_blank" href="{{< param "g3Commons.c8.link" >}}" title="{{< param "g3Commons.c8.title" >}}">
+            <img class="g3-row__8vh" src="{{< param "g3Commons.c8.fig" >}}" />
+          </a>
+        </div>
+        <div class="g3-common-card">
+          <a target="_blank" href="{{< param "g3Commons.c9.link" >}}" title="{{< param "g3Commons.c9.title" >}}">
+            <img class="g3-row__8vh" src="{{< param "g3Commons.c9.fig" >}}" />
+          </a>
+        </div>
+        <div class="g3-common-card">
+          <a target="_blank" href="{{< param "g3Commons.c10.link" >}}" title="{{< param "g3Commons.c10.title" >}}">
+            <img class="g3-row__8vh" src="{{< param "g3Commons.c10.fig" >}}" />
+          </a>
+        </div>
+        <div class="g3-common-card">
+          <a target="_blank" href="{{< param "g3Commons.c11.link" >}}" title="{{< param "g3Commons.c11.title" >}}">
+            <img class="g3-row__8vh" src="{{< param "g3Commons.c11.fig" >}}" />
+          </a>
+        </div>
+        <div class="g3-common-card">
+          <a target="_blank" href="{{< param "g3Commons.c12.link" >}}" title="{{< param "g3Commons.c12.title" >}}">
+            <img class="g3-row__8vh" src="{{< param "g3Commons.c12.fig" >}}" />
+          </a>
+        </div>
+        <div class="g3-common-card">
+          <a target="_blank" href="{{< param "g3Commons.c13.link" >}}" title="{{< param "g3Commons.c13.title" >}}">
+            <img class="g3-row__8vh" src="{{< param "g3Commons.c13.fig" >}}" />
+          </a>
+        </div>
+        <div class="g3-common-card">
+          <a target="_blank" href="{{< param "g3Commons.c14.link" >}}" title="{{< param "g3Commons.c14.title" >}}">
+            <img class="g3-row__8vh" src="{{< param "g3Commons.c14.fig" >}}" />
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-
 
 <section>
   <h4 class="g3-text__center g3-minimum-wrapper">
@@ -406,7 +407,6 @@ g3Entrance:
   </p>
 </section>
 
-
 <section class="g3-space__margin-lg-bottom g3-text__center">
   <h2>{{< param "g3Contributor.title" >}}</h2>
   <div class="g3-mini-wrapper g3-space__margin-sm-top">
@@ -415,9 +415,6 @@ g3Entrance:
     </a>
   </div>
 </section>
-
-
-s
 
 <section>
   <div class="g3-inner-wrapper g3-flex-content g3-space__margin-md-bottom">
