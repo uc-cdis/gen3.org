@@ -323,142 +323,142 @@ g3Entrance:
       <div class="slide-track">
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c1.link" >}}" title="{{< param "g3Commons.c1.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c1.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c1.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c2.link" >}}" title="{{< param "g3Commons.c2.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c2.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c2.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c3.link" >}}" title="{{< param "g3Commons.c3.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c3.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c3.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c4.link" >}}" title="{{< param "g3Commons.c4.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c4.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c4.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c5.link" >}}" title="{{< param "g3Commons.c5.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c5.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c5.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c6.link" >}}" title="{{< param "g3Commons.c6.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c6.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c6.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c7.link" >}}" title="{{< param "g3Commons.c7.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c7.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c7.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c8.link" >}}" title="{{< param "g3Commons.c8.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c8.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c8.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c9.link" >}}" title="{{< param "g3Commons.c9.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c9.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c9.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c10.link" >}}" title="{{< param "g3Commons.c10.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c10.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c10.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c11.link" >}}" title="{{< param "g3Commons.c11.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c11.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c11.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c12.link" >}}" title="{{< param "g3Commons.c12.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c12.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c12.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c13.link" >}}" title="{{< param "g3Commons.c13.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c13.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c13.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c14.link" >}}" title="{{< param "g3Commons.c14.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c14.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c14.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c1.link" >}}" title="{{< param "g3Commons.c1.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c1.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c1.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c2.link" >}}" title="{{< param "g3Commons.c2.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c2.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c2.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c3.link" >}}" title="{{< param "g3Commons.c3.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c3.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c3.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c4.link" >}}" title="{{< param "g3Commons.c4.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c4.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c4.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c5.link" >}}" title="{{< param "g3Commons.c5.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c5.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c5.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c6.link" >}}" title="{{< param "g3Commons.c6.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c6.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c6.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c7.link" >}}" title="{{< param "g3Commons.c7.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c7.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c7.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c8.link" >}}" title="{{< param "g3Commons.c8.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c8.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c8.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c9.link" >}}" title="{{< param "g3Commons.c9.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c9.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c9.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c10.link" >}}" title="{{< param "g3Commons.c10.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c10.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c10.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c11.link" >}}" title="{{< param "g3Commons.c11.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c11.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c11.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c12.link" >}}" title="{{< param "g3Commons.c12.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c12.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c12.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c13.link" >}}" title="{{< param "g3Commons.c13.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c13.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c13.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c14.link" >}}" title="{{< param "g3Commons.c14.title" >}}">
-            <img class="g3-row__100px" src="{{< param "g3Commons.c14.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c14.fig" >}}" />
           </a>
         </div>
       </div>
