@@ -181,8 +181,6 @@ g3Entrance:
 </section>
 
 <section>
-
-<section>
   <div class="g3-inner-wrapper g3-flex-content g3-space__padding-lg-top g3-space__padding-md-bottom">
     <div class="g3-col__50">
       <div class="g3-space__margin-sm-left g3-space__margin-sm-right">
