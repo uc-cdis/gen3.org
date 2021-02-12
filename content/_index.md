@@ -131,7 +131,7 @@ g3Commons:
     link: https://accessclinicaldata.niaid.nih.gov
   c13:
     title: BioData CATALYST
-    fig: /figs/commons/stage.png
+    fig: /figs/commons/bdcat.png
     link: https://gen3.biodatacatalyst.nhlbi.nih.gov
   c14:
     title: Veterans Precision Oncology Data Commons
@@ -329,8 +329,8 @@ g3Entrance:
 
 <section>
   <div class="g3-space__margin-lg-bottom g3-inner-wrapper g3-space__margin-md-top-bottom">
-    <div class="slider">
-      <div class="slide-track">
+    <div class="g3-slider">
+      <div class="g3-slide-track">
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c1.link" >}}" title="{{< param "g3Commons.c1.title" >}}">
             <img class="g3-row__50px" src="{{< param "g3Commons.c1.fig" >}}" />
