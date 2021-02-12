@@ -61,9 +61,9 @@ g3Roles:
       target: _self
       link: /resources/developer
 
-g3User1:
-  quote1: “Facilitate and pioneer translational data science to accelerate discovery in biology, medicine, and the environment.”
-  by1: Robert L. Grossmann, Founder of the Center of Translational Data Science, University of Chicago
+g3RLG:
+  quote: “Facilitate and pioneer translational data science to accelerate discovery in biology, medicine, and the environment.”
+  by: Robert L. Grossmann, Founder of the Center of Translational Data Science, University of Chicago
 
 g3User:
   quote: “From the perspective of setting up a basic Gen3 ecosystem with all the services running, it was a breeze and the Github docs are pretty awesome.”
@@ -236,16 +236,13 @@ g3Entrance:
   </div>
 </section>
 
-<section>
-  <h2 class="g3-text__center g3-space__margin-sm-bottom">
-    {{< param "g3Roles.title" >}}
-  </h2>
-</section>
-
 <section class="g3-bg__solight">
   <div class="g3-inner-wrapper g3-space__padding-md-top g3-space__padding-lg-bottom g3-mb-space__padding-lg-top g3-mb-space__padding-lg-bottom">
+    <h2 class="g3-text__center g3-space__padding-md-bottom">
+    {{< param "g3Roles.title" >}}
+  </h2>
     <div class="g3-table-row">
-      <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
+      <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right g3-mb-space__padding-lg-top">
         <img class="g3-space__margin-sm-bottom" src="{{< param "g3Roles.r1.fig" >}}"/>
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Roles.r1.name" >}}
@@ -287,10 +284,10 @@ g3Entrance:
 
 <section>
   <h4 class="g3-text__center g3-minimum-wrapper g3-space__padding-lg-top">
-    {{< param "g3User1.quote1" >}}
+    {{< param "g3RLG.quote" >}}
   </h4>
   <p class="g3-text__center g3-minimum-wrapper g3-space__margin-sm-top g3-space__padding-lg-bottom">
-    - {{< param "g3User1.by1" >}}
+    - {{< param "g3RLG.by" >}}
   </p>
 </section>
 
