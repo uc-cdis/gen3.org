@@ -2,7 +2,7 @@
 
 A handy note to keep tracking the width of each logo images used in the carousel.
 
-For now we need to manually work out some numbers for <https://github.com/uc-cdis/gen3.org/blob/testcolorssubitems/assets/sass/slider.scss#L16-L17> and <https://github.com/uc-cdis/gen3.org/blob/testcolorssubitems/assets/sass/slider.scss#L54-L55> after changing any logo in the carousel to make the animation looks right.
+For now we need to manually work out some numbers for <https://github.com/uc-cdis/gen3.org/blob/master/assets/sass/slider.scss#L16-L17> and <https://github.com/uc-cdis/gen3.org/blob/master/assets/sass/slider.scss#L54-L55> after changing any logo in the carousel to make the animation looks right.
 
 Currently these numbers mentioned in above links are calculated on assumption that each logo is 50px in height and has L/R padding of 40px on each side.
 
