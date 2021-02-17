@@ -284,7 +284,7 @@ g3Entrance:
 </section>
 
 <section>
-  <h3 class="g3-text__center g3-minimum-wrapper g3-space__padding-lg-top g3-space__margin-lg-bottom">
+  <h4 class="g3-text__center g3-minimum-wrapper g3-space__padding-lg-top g3-space__margin-lg-bottom">
     {{< param "g3RLG.quote" >}}
   </h4>
 </section>
