@@ -20,19 +20,21 @@ g3Feature:
     detail: Gen3 empowers you to host, manage, and share data with researchers, developers, and health organizations. The Gen3 platform supports ingestion of virtual any data format, including both large objects and clinical and phenotype metadata. With Gen3, you can receive and quality control data by a customizable data model and generate globally unique IDs for data objects.
   f2:
     title: Explore, Export, and Analyze Data in Workspaces
-    detail: Explore data on our dashboards using built-in faceted search tools, send custom queries, create and export subject-level data cohorts, or collaboratively analyze the selected data in a secure cloud environment.
+    detail: Explore data on our Data Commons using built-in faceted search tools, send custom queries, create and export subject-level data cohorts, or collaboratively analyze the selected data in a secure cloud environment.
   f3:
     title: Security & Tiered Data Access
     detail: With Gen3, you can finely control user access to datasets via a flexible access control policy engine and compute over that data in secure analysis workspaces. Gen3 supports optional tiered access, enabling users to see only summary information for data they don't have access to.
   f4:
-    title: Customize or Develop Your Gen3 Experience
-    detail: The Gen3 services are modular and data resources can choose which features to include. The Gen3 framework services expose powerful Application Programming Interfaces (APIs) that empower interoperation of a healthy data ecosystem and can provide the foundation for developing new tools for sharing and analyzing data across resources in the cloud.
-  f5:
     title: Open-Source Community
     detail: We believe in open-source software drives better software development. Engage with our Gen3’s user community, develop new features, ask a question to our Support Team, or discuss with other scholars about similar technical or scientific questions during their experience with Gen3.
-  f6:
-    title: Powerful APIs
+  f5:
+    title: Powerful and open APIs
     detail: Each service exposes open Application Programing Interfaces (APIs) for data submission, indexing data objects, associating metadata with the data objects, sending custom query requests, or enabling programmatic data search and custom app development.
+  f6:
+    title: Customize or Develop Your Gen3 Experience
+    detail: The Gen3 services are modular and data resources can choose which features to include. The Gen3 framework services expose powerful APIs that empower interoperation of a healthy data ecosystem and can provide the foundation for developing new tools for sharing and analyzing data across resources in the cloud.
+
+
 
 g3Roles:
   title: Gen3 helps you as...
@@ -62,8 +64,7 @@ g3Roles:
       link: /resources/developer
 
 g3RLG:
-  quote: “Facilitate and pioneer translational data science to accelerate discovery in biology, medicine, and the environment.”
-  by: Robert L. Grossmann, Founder of the Center of Translational Data Science, University of Chicago
+  quote: Our vision is a world in which researchers have ready access to the data needed and the tools required to make data-driven discoveries that increase our scientific knowledge and improve the quality of life.
 
 g3User:
   quote: “From the perspective of setting up a basic Gen3 ecosystem with all the services running, it was a breeze and the Github docs are pretty awesome.”
@@ -283,12 +284,9 @@ g3Entrance:
 </section>
 
 <section>
-  <h4 class="g3-text__center g3-minimum-wrapper g3-space__padding-lg-top">
+  <h3 class="g3-text__center g3-minimum-wrapper g3-space__padding-lg-top g3-space__margin-lg-bottom">
     {{< param "g3RLG.quote" >}}
   </h4>
-  <p class="g3-text__center g3-minimum-wrapper g3-space__margin-sm-top g3-space__padding-lg-bottom">
-    - {{< param "g3RLG.by" >}}
-  </p>
 </section>
 
 <section class="g3-bg__mint">
