@@ -127,6 +127,7 @@ The available types are [jsonschema types](https://cswr.github.io/JsonSchema/spe
 - array; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/415bf61707ba55a6772423c461da3f16eef9c451/gdcdictionary/schemas/expression_result.yaml#L150)
 - regex patterns (including strings, integers, and numbers to modify the format); [example](https://github.com/uc-cdis/openaccess_dictionary/blob/415bf61707ba55a6772423c461da3f16eef9c451/gdcdictionary/schemas/_definitions.yaml#L103)
 - null; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/415bf61707ba55a6772423c461da3f16eef9c451/gdcdictionary/schemas/_definitions.yaml#L80)
+- object; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/415bf61707ba55a6772423c461da3f16eef9c451/gdcdictionary/schemas/_definitions.yaml#L47)
 
 #### Avoiding Data Loops
 
