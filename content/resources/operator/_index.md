@@ -70,8 +70,7 @@ Once users have obtained the baseline dictionary, users can make updates to it. 
 #### Referencing external data standards
 Gen3 is expanding the information in data dictionaries by including references to controlled vocabularies such as the National Cancer Institute Thesaurus (NCIt).  This will help with the comparison of studies and projects across data commons and provide researchers with proper references.  The NCIt is being used for many of the schemas as it's inclusive of several different domains (for example, clinical, drug, etc.).  It also has an abundance of non-domain related terms such as nominal (for example, gender, race) and ordinal (for example, left, right, first, last) along with other useful categories of terms.  The benefit of this effort is that it will facilitate cross data commons comparison.  For instance, if tuberculosis is a term associated with multiple studies, a search of that term will provide insight into each of the studies.  It will also help with the prevention of adding multiple terms for properties that mean the same thing.  The example below demonstrates a cross study comparison using YAML files (Gen3 uses YAML files to help organize data dictionaries.  The files are used by internal systems to help manage the data dictionaries.)  The two files both relate to blood pressure finding, but each has a different term name.  The external reference helps with harmonization efforts by helping identify terms that have the same meaning.
 
-```JSON
-
+```
 Dictionary 1:
 Blood Pressure Measurement:
     description: Measurement of blood pressure
@@ -112,7 +111,19 @@ One of the goals when providing an external reference is to figure out the level
 
 #### Creating Valuable Data Descriptions
 
-It's important to create clear and concise descriptions for each property in a dictionary.  The descriptions should be understandable by someone who is not familiar with a particular domain.  When available, including the unit of measure in parenthesis at the end of the description would be helpful in cases where the unit of measure is not included elsewhere in the description. When a clear description is not readily available, it's recommended that an external vocabulary such as NCIt be used as they offer definitions for terms from a plethora of domains.
+It's important to create clear and concise descriptions for each property in a dictionary. The descriptions should be understandable by someone who is not familiar with a particular domain. When available, including the unit of measure in parenthesis at the end of the description would be helpful in cases where the unit of measure is not included elsewhere in the description. When a clear description is not readily available, it's recommended that an external vocabulary such as NCIt be used as they offer definitions for terms from a plethora of domains.
+
+#### Selecting the Property Type
+
+The Gen3 model allows for a selection of property types that can be used to specify or limit values submitted for each property.
+Currently, the following types are available:
+- string; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/drug.yaml#L274)
+- boolean; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/drug.yaml#L79)
+- number; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/drug.yaml#L354)
+- integer; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/drug.yaml#L418)
+- enum; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/drug.yaml#L401)
+- array; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/expression_result.yaml#L150)
+- regex patterns (including strings, integers, and numbers to modify the format); [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/_definitions.yaml#L103)
 
 #### Avoiding Data Loops
 
