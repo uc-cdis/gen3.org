@@ -118,7 +118,7 @@ It's important to create clear and concise descriptions for each property in a d
 #### Selecting the Property Type
 
 The Gen3 model allows for a selection of property types that can be used to specify or limit values submitted for each property.
-The available types follow the [jsonschema basic types](https://cswr.github.io/JsonSchema/spec/basic_types/):
+The available types are [jsonschema types](https://cswr.github.io/JsonSchema/spec/introduction/):
 - string; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/drug.yaml#L274)
 - boolean; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/drug.yaml#L79)
 - number; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/drug.yaml#L354); can be float, long, or double as shown [here](https://json-schema.org/understanding-json-schema/reference/numeric.html).
