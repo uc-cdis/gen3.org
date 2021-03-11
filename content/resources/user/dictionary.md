@@ -82,7 +82,9 @@ For example:
 
 Each node in the data dictionary is linked in a logical manner to other nodes, which facilitates generating a visual overview, or graphical model, of a project.
 
-The following image displays the data dictionary viewer, the 'biospecimen' node entry in the dictionary, and an example graphical model of a project:
+Properties can be assigned different types, depending on the value of the data that will be submitted to them. The following types are available: string, boolean, number, integer, enum, null, array, and regex patterns. More information on the property value types can be found [here](https://gen3.org/resources/operator/).
+
+The following image displays the data dictionary in Table View, the 'Medical History' node entry in the dictionary with the list of properties, and an example graphical model of a project:
 
 ![data-model.png](data-model.png)
 
