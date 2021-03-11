@@ -378,7 +378,8 @@ snakeviz profile
 will open the profiling results in an interactive viewer in a browser.
 
 For a Flask app, there is a specific way to generate profiling results.
-```python
+```
+python
 from werkzeug.contrib.profiler import ProfilerMiddleware
 app.wsgi_app = ProfilerMiddleware(app.wsgi_app, f, profile_dir='profile')
 ```
@@ -403,7 +404,8 @@ Go binaries can be containerized into Docker images with very small sizes (1s or
 
 Take the `Dockerfile` from [arborist][] (at the time of writing) as an example:
 
-```dockerfile
+```
+dockerfile
 FROM golang:1.10 as build
 
 RUN mkdir -p /go/src/github.com/uc-cdis/arborist
