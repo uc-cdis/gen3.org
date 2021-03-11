@@ -67,6 +67,8 @@ Gen3 provides the ability to store longitudinal data. A clinical node that is no
 ### Modifying a Data Dictionary
 Once users have obtained the baseline dictionary, users can make updates to it.  To create a data dictionary tailored to a particular project, the user can modify the baseline dictionary using a program which automatically updates the dictionary given TSV input which specifies the desired changes to the dictionary. The updates are based on instructions that are included in a TSV file such as update a property, delete a node, etc.  Instructions for implementing the script can be found [here](https://github.com/uc-cdis/planx-bioinfo-tools/tree/master/dictionary_tools). For those that are interested in making edits directly to a YAML file, we are also in the process of automating this process.
 
+> Note: The Gen3 dictionary is stored in JSON format following the [jsonschema](https://cswr.github.io/JsonSchema/spec/basic_types/). The backend (Sheepdog) stores properties in the database as jsonb files.
+
 #### Referencing external data standards
 Gen3 is expanding the information in data dictionaries by including references to controlled vocabularies such as the National Cancer Institute Thesaurus (NCIt).  This will help with the comparison of studies and projects across data commons and provide researchers with proper references.  The NCIt is being used for many of the schemas as it's inclusive of several different domains (for example, clinical, drug, etc.).  It also has an abundance of non-domain related terms such as nominal (for example, gender, race) and ordinal (for example, left, right, first, last) along with other useful categories of terms.  The benefit of this effort is that it will facilitate cross data commons comparison.  For instance, if tuberculosis is a term associated with multiple studies, a search of that term will provide insight into each of the studies.  It will also help with the prevention of adding multiple terms for properties that mean the same thing.  The example below demonstrates a cross study comparison using YAML files (Gen3 uses YAML files to help organize data dictionaries.  The files are used by internal systems to help manage the data dictionaries.)  The two files both relate to blood pressure finding, but each has a different term name.  The external reference helps with harmonization efforts by helping identify terms that have the same meaning.
 
@@ -116,10 +118,10 @@ It's important to create clear and concise descriptions for each property in a d
 #### Selecting the Property Type
 
 The Gen3 model allows for a selection of property types that can be used to specify or limit values submitted for each property.
-Currently, the following types are available:
+The available types follow the [jsonschema basic types](https://cswr.github.io/JsonSchema/spec/basic_types/):
 - string; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/drug.yaml#L274)
 - boolean; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/drug.yaml#L79)
-- number; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/drug.yaml#L354)
+- number; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/drug.yaml#L354); can be float, long, or double as shown [here](https://json-schema.org/understanding-json-schema/reference/numeric.html).
 - integer; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/drug.yaml#L418)
 - enum; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/drug.yaml#L401)
 - array; [example](https://github.com/uc-cdis/openaccess_dictionary/blob/master/gdcdictionary/schemas/expression_result.yaml#L150)
