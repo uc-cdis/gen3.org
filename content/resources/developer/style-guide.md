@@ -29,7 +29,8 @@ README).
   specifically is required, in which case use `if _ is None` or `if _ is not
   None`. Examples:
 
-```python
+```
+python
 # Good
 if not my_list:
 # Bad
@@ -63,7 +64,8 @@ if my_boolean == True:
 
 Handle exceptional cases first where possible, and leave the "normal" flow of
 operation at the lowest level of indentation. For example:
-```python
+```
+python
 # Good
 def check_string(string):
     if string == "unexpected":
@@ -92,7 +94,8 @@ This function redirects the user to the login page.
 
 Docstrings for trivial helper functions/methods should be one line with no
 spaces around the quotation marks:
-```python
+```
+python
 def is_even(n):
     """Return a boolean indicating whether the input is even."""
     return n % 2 == 0
@@ -102,7 +105,8 @@ concise summary on a new line after the opening quotes, followed by a blank
 line, followed by further details, including sections for arguments, return
 value, etc. in the [Google Python docstring style][google-python-docstrings].
 (See the reference at that link for more detailed examples/specification.)
-```python
+```
+python
 def foo(bar):
     """
     Foo this bar.
@@ -127,7 +131,8 @@ def foo(bar):
 * Lines should wrap at 80 characters long.
 * There should be a blank line before and after section headings:
 
-```markdown
+```
+markdown
 # Foo
 
 Some foo.
