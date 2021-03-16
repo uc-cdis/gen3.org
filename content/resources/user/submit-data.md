@@ -217,7 +217,8 @@ A message should appear that indicates either success (green, "succeeded: 200") 
 
 For anything other than success, check the other fields for any information on the error with the submission. The most descriptive information will be found in the individual entity transaction logs. Each line in the TSV will have its own output with the following attributes:
 
-```JSON
+```
+JSON
 {
 	"action": "update/create",
 	"errors": [
