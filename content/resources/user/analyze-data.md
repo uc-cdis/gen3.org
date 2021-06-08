@@ -63,10 +63,7 @@ Bringing in files into the Gen3 Workspace can be achieved via the UI (directly f
 
 ### Exporting Files from the Exploration Tab to the Workspace
 The Exploration page allows to search through data and create cohorts, which can be exported to the Workspace.
-After a cohort has been selected, the data can be exported to a Workspace by clicking "Export to Workspace". Do not navigate away from the browser after clicking the button. Allow up to 5 minutes to export your files. A popup window will appear confirming that exporting a "manifest" to the workspace has been successful. Find the data or data files in the folder "data" on your persistent drive "/pd". Please note, that the workspace mounts up to 5 different manifests while the workspace is running, but shows only the latest exported manifest after
-only one manifest will be mounted to workspace
-when the workspace is running when you export the manifest, you can export 5. but if you spins up a new workspace, only the most recent one
- it seems like it only mounts the latest, and will mount more, up to 5, if you export more while it’s running
+After a cohort has been selected, the data can be exported to a Workspace by clicking "Export to Workspace". Do not navigate away from the browser after clicking the button. Allow up to 5 minutes to export your files. A popup window will appear confirming that exporting a "manifest" to the workspace has been successful. Find the data or data files in the folder "data" on your persistent drive "/pd". Please note, that the workspace mounts up to 5 different manifests while the workspace is running, but shows only the latest exported manifest in a newly launched workspace.
 
 ![Export Files to the Workspace](export_to_workspace.png)
 
