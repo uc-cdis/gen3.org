@@ -178,7 +178,7 @@ pip install gen3
 # To clone and develop the source:
 git clone https://github.com/uc-cdis/gen3sdk-python.git
 
-# Use the `!` magic command to clone and install the python SDK in the workspace:
+# Use the `!` magic command to clone and develop the python SDK in the workspace:
 !git clone https://github.com/uc-cdis/gen3sdk-python.git
 
 # As the Gen3 community updates repositories, keep them up to date using:
