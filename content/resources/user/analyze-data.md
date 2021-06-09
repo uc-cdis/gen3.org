@@ -14,7 +14,7 @@ The Gen3 platform for creating data commons co-locates data management with anal
 * [1. Launch Workspace](#1-launch-workspace)
 * [2. Getting Files into the Gen3 Workspace](#2-getting-files-into-the-gen3-workspace)
 * [3. Working with the proxy and whitelists](#3-orking-with-the-proxy-and-whitelists)
-* [4. Using the Gen3 SDK](#4-using-the-gen3-sdk)
+* [4. Using the Gen3 Python SDK](#4-using-the-gen3-python-sdk)
 * [5. Jupyter Notebook Demos](#5-jupyter-notebook-demos)
 
 * * *
@@ -154,7 +154,7 @@ https_proxy=https://cloud-proxy.internal.io:3128 aws s3 ls s3://gen3-data/ --pro
 Additionally, to aid Gen3 Commons security, the installation of tools from outside resources is managed through a whitelist. If you have problems installing a tool you need for your work, contact <support@datacommons.io> and with a list of any sites you might wish to install tools from. After passing a security review, these can be added to the whitelist to facilitate access.
 
 
-## 4. Using the Gen3 SDK
+## 4. Using the Gen3 Python SDK
 * * *
 
 To make programmatic interaction with Gen3 data commons easier, the bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has developed the Gen3 Python SDK, which is a Python library containing functions for sending standard requests to the Gen3 APIs. The code is open-source and available on [GitHub](https://github.com/uc-cdis/gen3sdk-python) along with [documentation for using it](https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html).
@@ -178,6 +178,9 @@ pip install gen3
 # To clone and develop the source:
 git clone https://github.com/uc-cdis/gen3sdk-python.git
 
+# Use the `!` magic command to clone and install the python SDK in the workspace:
+!git clone https://github.com/uc-cdis/gen3sdk-python.git
+
 # As the Gen3 community updates repositories, keep them up to date using:
 git pull origin master
 
@@ -186,19 +189,15 @@ git pull origin master
 ### Examples
 1.) Most requests sent to a Gen3 data commons API will require an authorization token to be sent in the request's header. The SDK class _Gen3Auth_ is used for authentication purposes, and has functions for generating these access tokens. Users do need to authenticate when using the SDK from the terminal, but do not need to authenticate once being logged in and working in the workspace of a Data Commons.
 
-From the terminal run the following:
+From the python shell run the following:
 
 ```
-git clone https://github.com/uc-cdis/gen3sdk-python.git
 import gen3
 from gen3.auth import Gen3Auth
 endpoint = "https://gen3.datacommons.io/"
 creds = "/user/directory/credentials.json"
 auth = Gen3Auth(endpoint, creds)
 ```
-
-> Note: Use the following command (including the `!` magic command) to install the python SDK in the workspace: `!git clone https://github.com/uc-cdis/gen3sdk-python.git`.
-
 
 2.) The structured data in a Gen3 data commons can be created, deleted, queried and exported using functions in the _Gen3Submission_ class.
 
