@@ -19,8 +19,8 @@ This guide has the following sections:
 2. [Configure a Profile](#2-configure-a-profile-with-credentials)
 3. [Upload Data Files](#3-upload-data-files)
 4. [Download Files](#4-download-a-single-data-file-using-a-guid)
-5. [Multiple File Download with Manifest](#5-provide-a-manifest-file-for-bulk-download)
-6. [Generate a Metadata Submission TSV](#6-generate-a-metadata-tsv)
+5. [Multiple File Download with Manifest](#5-multiple-file-download-with-manifest)
+6. [Generate a Metadata Submission TSV](#6-generate-a-metadata-submission-tsv)
 7. [Upload Single File with GUID](#7-how-to-upload-a-single-data-file-using-a-guid)
 8. [Upload Multiple Files with Manifest](#8-how-to-upload-multiple-data-files-using-a-manifest)
 9. [Quick Start for Experienced Users or Cheat Sheet](#9-quick-start-for-experienced-users-or-cheat-sheet)
@@ -461,7 +461,7 @@ Example Usage:
 gen3-client download-single --profile=demo --guid=00149bcf-e057-4ecc-b22d-53648ae0b35f --no-prompt --skip-completed
 ```
 
-## 5) Provide a Manifest File for Bulk Download
+## 5) Multiple File Download with Manifest
 
 * * *
 
@@ -489,7 +489,7 @@ Finished downloads/24d0be10-d164-48ad-aafa-9fcaac682df9 2570240 / 2570240 bytes 
 330 files downloaded.
 ```
 
-## 6) Generate a metadata TSV
+## 6) Generate a metadata submission TSV
 
 * * *
 

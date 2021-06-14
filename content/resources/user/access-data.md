@@ -22,7 +22,7 @@ The following sections provide details on how to explore and access data from wi
   * [Exploration Page](#exploration-page)
   * [Browsing the List of Projects](#browsing-the-list-of-projects)
   * [Querying Structured Data](#querying-structured-data)
-* [Access Data Using the API](#access-data-using-the-api)
+* [Access Data using the API](#access-data-using-the-api)
   * [Querying Metadata Programmatically](#querying-metadata-programmatically)
   * [Exporting Metadata Programmatically](#querying-metadata-programmatically)
   * [The Gen3 SDK](#the-gen3-sdk)
@@ -89,7 +89,7 @@ The following example query returns the subject and submitter ids in the subject
 More detailed information on how to query specific data can be found [here](/resources/user/query-the-data/).
 
 
-## Access Data Using the API
+## Access Data using the API
 The beauty of a Gen3 data commons is that all the functionality of the data commons website is available by sending requests to the open APIs of the data commons. Detailed API specifications of the Gen3 services can be browsed in [the developer documentation](/resources/developer/microservice).
 
 ### Querying Metadata Programmatically
@@ -103,10 +103,10 @@ To make sending requests to the Gen3 APIs easier, the bioinformatics team at the
 
 The SDK is essentially a collection of Python wrapper functions for sending requests to the API. It is open source and can be found on [Github](https://github.com/uc-cdis/gen3sdk-python). Thorough documentation for the SDK can be found in the GitHub repository [documentation page](https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html).
 
-#### Sending Queries Using the SDK
+#### Sending Queries using the SDK
 The [__Gen3Submission__ class](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html) of the Python SDK has functions for [sending queries to the API](https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/submission.py#L289) and also for [retrieving the graphQL schema](https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/submission.py#L327) of the data commons. Queries can be used to pinpoint specific data of interest by providing query arguments that act as filters on records in the database and providing lists of properties to retrieve for those records. If all the structured data in a record or node is desired, as opposed to only specific properties, then see the export functions below.
 
-#### Exporting Structured Data Using the SDK
+#### Exporting Structured Data using the SDK
 Entire structured data records can be exported as a JSON or TSV file using the [__Gen3Submission__ Python SDK class](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html). The [`export_record`](https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/submission.py#L223) function will export a single structured metadata record in a specific node of a specific project, whereas the [`export_node`](https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/submission.py#L255) function will export all the structured metadata records in a specified node of a specific project.
 
 More SDK examples and how to get started with the SDK can be also found in the [analyze-data section](/resources/user/analyze-data/#4-using-the-gen3-sdk).

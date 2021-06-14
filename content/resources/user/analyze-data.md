@@ -13,7 +13,7 @@ The Gen3 platform for creating data commons co-locates data management with anal
 
 * [1. Launch Workspace](#1-launch-workspace)
 * [2. Getting Files into the Gen3 Workspace](#2-getting-files-into-the-gen3-workspace)
-* [3. Working with the proxy and whitelists](#3-orking-with-the-proxy-and-whitelists)
+* [3. Working with the proxy and whitelists](#3-working-with-the-proxy-and-whitelists)
 * [4. Using the Gen3 Python SDK](#4-using-the-gen3-python-sdk)
 * [5. Jupyter Notebook Demos](#5-jupyter-notebook-demos)
 
