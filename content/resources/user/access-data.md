@@ -1,12 +1,12 @@
 ---
-title: "Access Data"
+title: "Access and Explore Metadata and Data Files"
 date: 2018-09-12T23:08:34-05:00
 linktitle: /resources/user
 layout: withtoc
 menuname: userMenu
 ---
 {{% markdownwrapper %}}
-# Exploring Metadata and Downloading Data Files
+# Accessing and Exploring Metadata and Downloading Data Files
 
 * * *
 

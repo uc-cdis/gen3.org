@@ -17,7 +17,7 @@ g3Resources:
         ul:
           - name: How to contribute a data project to a Gen3 Data Commons
             link: /resources/user/submit-data
-          - name: How to access data in a Gen3 Data Commons
+          - name: How to access and explore metadata and data files in a Gen3 Data Commons
             link: /resources/user/access-data
           - name: How to analyze data in the Jupyter Workspace
             link: /resources/user/analyze-data
