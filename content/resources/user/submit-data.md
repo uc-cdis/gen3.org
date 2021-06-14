@@ -37,9 +37,15 @@ Do the following to create your first `core_metadata_collection` record:
 
 1. Go to your data commons' submission portal website
 2. Click on 'Submit Data'
-3. Find your project in the List of Projects and click 'Submit Data'
+3. Find your project in the list of Projects and click 'Submit Data'
 4. Click 'Use Form Submission' and choose `core_metadata_collection` from the dropdown list (or [edit and upload this TSV](gen3_core_metadata_collection_template.tsv) by clicking 'Upload File' then 'Submit')
-5. Fill in the required information (see Note below)
+
+    ![node_dropdown.png](node_dropdown.png)
+
+    ![cmc_form.png](cmc_form.png)
+
+
+5. Fill in the required information (see note below)
 6. Click 'Upload submission json from form' and then 'Submit'
 7. Make note of the `submitter_id` of your `core_metadata_collection` record for step 3 below
 

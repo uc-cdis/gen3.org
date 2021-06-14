@@ -14,7 +14,7 @@ The Gen3 platform for creating data commons co-locates data management with anal
 * [1. Launch Workspace](#1-launch-workspace)
 * [2. Getting Files into the Gen3 Workspace](#2-getting-files-into-the-gen3-workspace)
 * [3. Working with the proxy and whitelists](#3-orking-with-the-proxy-and-whitelists)
-* [4. Using the Gen3 SDK](#4-using-the-gen3-sdk)
+* [4. Using the Gen3 Python SDK](#4-using-the-gen3-python-sdk)
 * [5. Jupyter Notebook Demos](#5-jupyter-notebook-demos)
 
 * * *
@@ -27,7 +27,11 @@ Click on the "Workspace" icon or navigate to the [/workspace](https://gen3.datac
 
 Once connected to a workspace VM, the persistent drive named "/pd" can be seen in the Files tab of either JupyterHub or RStudio. All data, notebooks, or scripts that need to persist in the cloud after workspace termination should be saved in this "pd" drive. When logging out of a workspace, this personal drive is unmounted but saved, so that when launching a new workspace VM, the drive can be mounted again to make the saved work accessible.
 
-Jupyter notebooks and other analysis-related files like scripts can be uploaded to JupyterHub by clicking the "upload" button. Make sure to save files to the "/pd" directory if they need to remain accessible after logging out. Alternatively, a new notebook can be created by clicking “New” and then choosing the type of notebook, for example, "Python 3" or "R".
+Jupyter notebooks and other analysis-related files like scripts can be uploaded to JupyterHub by clicking the "upload" button. Make sure to save files to the "/pd" directory if they need to remain accessible after logging out.
+
+![Upload Workspace](notebook_upload.png)
+
+Alternatively, a new notebook can be created by clicking “New” and then choosing the type of notebook, for example, "Python 3" or "R".
 
 ![New Workspace](workspace_new_nb2020.png)
 
@@ -35,13 +39,9 @@ JupyterHub supports interactive programming sessions in the Python and R languag
 
 After editing a Jupyter Notebook, it can be saved in the workspace by clicking the "Save" icon or by clicking "File" and then clicking "Save and Checkpoint". Notebooks and files can also be downloaded from the server to a local computer by clicking "File" then "Download as".
 
-![Upload Save Download Notebook](upload_save_download.gif)
+![Upload Save Download Notebook](notebook_download.png)
 
-The following clip illustrates downloading the credentials.json from the "/identity" page in the data portal, then uploading that file to JupyterHub and reading it in a Jupyter Notebook named ["Gen3_authentication notebook"](#5-jupyter-notebook-demos).
-
-![Python Notebook](authentication.gif)
-
-The next clip demonstrates creating a new Jupyter Notebook in the R language.
+The following clip demonstrates creating a new Jupyter Notebook in the R language.
 
 ![Python Notebook](R_jupyter_notebook_workspace.gif)
 
@@ -49,14 +49,27 @@ Terminal sessions can also be started in the Workspace and used to download othe
 
 ![Terminal Session](terminal_session.gif)
 
-You can manage active notebooks and terminal processes by clicking on "Running". Click "Shutdown" to close the terminal session or Jupyter Notebook. Be sure to save your notebooks before terminating them, and again, ensure any notebooks to be accessed later are saved in the "pd" directory.
+You can manage active notebooks and terminal processes by clicking on the tab "Running". Click "Shutdown" to close the terminal session or Jupyter Notebook. Be sure to save your notebooks before terminating them, and again, ensure any notebooks to be accessed later are saved in the "pd" directory.
 
 ![Manage Running Sessions](running.gif)
 
 
 ## 2. Getting Files into the Gen3 Workspace
 * * *
-In order to download data files directly from a Gen3 data commons into your workspace, install and use the [gen3-client](https://github.com/uc-cdis/cdis-data-client/releases/latest) in a terminal window from your Workspace.  Launch a terminal window by clicking on the "New" dropdown menu, then click on "Terminal".
+
+Bringing in files into the Gen3 Workspace can be achieved via the UI (directly from the Exploration page) or programmatically. Find below a description of both methods.
+
+> Note: Not every PlanX Data Commons has the function in the UI enabled and users are advised to follow available commons-specific documentation.
+
+### Exporting Files from the Exploration Tab to the Workspace
+The Exploration page allows to search through data and create cohorts, which can be exported to the Workspace.
+After a cohort has been selected, the data can be exported to a Workspace by clicking "Export to Workspace". Do not navigate away from the browser after clicking the button. Allow up to 5 minutes to export your files. A popup window will appear confirming that exporting a "manifest" to the workspace has been successful. Find the data or data files in the folder "data" on your persistent drive "/pd". Please note, that the workspace mounts up to 5 different manifests while the workspace is running, but shows only the latest exported manifest in a newly launched workspace.
+
+![Export Files to the Workspace](export_to_workspace.png)
+
+
+### Getting Files into the Workspace programmatically
+In order to download data files directly and programmatically from a Gen3 data commons into your workspace, install and use the [gen3-client](https://github.com/uc-cdis/cdis-data-client/releases/latest) in a terminal window from your Workspace.  Launch a terminal window by clicking on the "New" dropdown menu, then click on "Terminal".
 
 From the command line, download the latest [Linux version of the gen3-client](https://github.com/uc-cdis/cdis-data-client/releases/latest) using the `wget` command. Next, unzip the archive and add it to your path:
 
@@ -141,7 +154,7 @@ https_proxy=https://cloud-proxy.internal.io:3128 aws s3 ls s3://gen3-data/ --pro
 Additionally, to aid Gen3 Commons security, the installation of tools from outside resources is managed through a whitelist. If you have problems installing a tool you need for your work, contact <support@datacommons.io> and with a list of any sites you might wish to install tools from. After passing a security review, these can be added to the whitelist to facilitate access.
 
 
-## 4. Using the Gen3 SDK
+## 4. Using the Gen3 Python SDK
 * * *
 
 To make programmatic interaction with Gen3 data commons easier, the bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has developed the Gen3 Python SDK, which is a Python library containing functions for sending standard requests to the Gen3 APIs. The code is open-source and available on [GitHub](https://github.com/uc-cdis/gen3sdk-python) along with [documentation for using it](https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html).
@@ -165,13 +178,18 @@ pip install gen3
 # To clone and develop the source:
 git clone https://github.com/uc-cdis/gen3sdk-python.git
 
+# Use the `!` magic command to clone and develop the python SDK in the workspace:
+!git clone https://github.com/uc-cdis/gen3sdk-python.git
+
 # As the Gen3 community updates repositories, keep them up to date using:
 git pull origin master
 
 ```
 
 ### Examples
-1) Most requests sent to a Gen3 data commons API will require an authorization token to be sent in the request's header. The SDK class _Gen3Auth_ is used for authentication purposes, and has functions for generating these access tokens. The notebook ["Gen3_authentication.ipynb"](#5-jupyter-notebook-demos) can be uploaded to a workspace and run to demonstrate how to initialize an instance of the Gen3Auth class.
+1.) Most requests sent to a Gen3 data commons API will require an authorization token to be sent in the request's header. The SDK class _Gen3Auth_ is used for authentication purposes, and has functions for generating these access tokens. Users do need to authenticate when using the SDK from the terminal, but do not need to authenticate once being logged in and working in the workspace of a Data Commons.
+
+From the python shell run the following:
 
 ```
 import gen3
@@ -181,11 +199,12 @@ creds = "/user/directory/credentials.json"
 auth = Gen3Auth(endpoint, creds)
 ```
 
-2) The structured data in a Gen3 data commons can be created, deleted, queried and exported using functions in the _Gen3Submission_ class.
+2.) The structured data in a Gen3 data commons can be created, deleted, queried and exported using functions in the _Gen3Submission_ class.
 
 2.1) All available programs in the data commons will be shown with the function `get_programs`. The following commands:
 
 ```
+import gen3
 from gen3.submission import Gen3Submission
 sub = Gen3Submission(endpoint, auth)
 sub.get_programs()
@@ -222,7 +241,7 @@ sub.export_node(program, project, node_type, fileformat, filename)
 will return: `Output written to file: OpenAccess_CCLE_aligned_reads_file.tsv`
 
 
-3) The function `get_record` in the class _Gen3Index_ is used to show all metadata associated with a given id by interacting with Gen3's Indexd service. Guids can be found on the [Exploration page](https://gen3.datacommons.io/explorer) under the `Files` tab. The following commands:
+3.) The function `get_record` in the class _Gen3Index_ is used to show all metadata associated with a given id by interacting with Gen3's Indexd service. Guids can be found on the [Exploration page](https://gen3.datacommons.io/explorer) under the `Files` tab. The following commands:
 
 ```
 from gen3.index import Gen3Index
@@ -236,12 +255,10 @@ will return: `{'acl': ['*'], 'authz': ['/programs/OpenAccess/projects/CCLE'], 'b
 
 ## 5. Jupyter Notebook Demos
 ***
-Below is a list of tutorial Jupyter Notebooks that demonstrate various SDK functions that may be helpful for the analysis of data in a Gen3 workspace. When finished, please, shut down the workspace server by clicking the "Terminate Workspace" button.
+Below are three tutorial Jupyter Notebooks that demonstrate various SDK functions that may be helpful for the analysis of data in a Gen3 workspace. When finished, please, shut down the workspace server by clicking the "Terminate Workspace" button.
 
-1. How to get started using the Gen3 SDK with the ["Gen3_authentication notebook"](Gen3_authentication.ipynb).
-This Jupyter Notebook should be run in the workspace of the [gen3.datacommons.io](gen3.datacommons.io.).
+1. Find this notebook ["Gen3_authentication notebook"](Gen3_authentication.html) to help guide you how to authenticate from the terminal or from the workspace (download also as [.ipynb file](Gen3_authentication.ipynb)). Note that users do need to authenticate when using the SDK from the terminal, but do not need to authenticate once being logged in and working in the workspace of a Data Commons.
 
-2. Download node files, show/select data, and plot with this [notebook](notebook2_canine.ipynb).
-This Jupyter Notebook should be run in the workspace of the [canine datacommons](https://caninedc.org/workspace).
+2. Download node files, show/select data, and plot with this [notebook](notebook2_canine.html) using data hosted on the [Canine Data Commons](https://caninedc.org). Users can upload this notebook as an [.ipynb file](notebook2_canine.ipynb) to the workspace of the Canine Data Commons to start their analysis. Note, that bringing in files into the workspace as explained in this notebook can be also achieved on selected Data Commons by clicking the "Export to Workspace" button on the Exploration Page; please also note, that once files are exported from the Exploration page, users do not need to authenticate anymore in the workspace.
 
-3. Download data files and metadata using the gen3-client and the Gen3 SDK, respectively, and bring them into the workspace. Run gene expression analysis and statistical analysis on the data files and metadata, respectively, and plot the outcome in different scenarios. This Jupyter [Data Analysis Notebook](notebook3_gen3datacommonsio.ipynb) should be run in the workspace of the [gen3.datacommons.io](gen3.datacommons.io.).
+3. Download data files and metadata using the gen3-client and the Gen3 SDK, respectively, and bring them into the workspace. Run gene expression analysis and statistical analysis on the data files and metadata, respectively, and plot the outcome in different scenarios. This Jupyter [Data Analysis Notebook](notebook3_gen3datacommonsio.html) uses data hosted on the generic Data Commons [gen3.datacommons.io](gen3.datacommons.io). Upload this notebook as an [.ipynb file](notebook3_gen3datacommonsio.ipynb) to the workspace of the Generic Data Commons and start your analysis.  Note, that bringing in files into the workspace as explained in this notebook can be also achieved on selected Data Commons by clicking the "Export to Workspace" button on the Exploration Page; please also note, that once files are exported from the Exploration page, users do not need to authenticate anymore in the workspace.
