@@ -1,5 +1,5 @@
 ---
-title: "Access and Explore Metadata and Data Files"
+title: "Access Data"
 date: 2018-09-12T23:08:34-05:00
 linktitle: /resources/user
 layout: withtoc
