@@ -321,7 +321,7 @@ This section guides you through how to set up a granular access to files.
       new_authz="/programs/controlled/projects/TEST1/sources/DEMO"
 
 
-      endpoint="https://chicagoland.pandemicresponsecommons.org"
+      endpoint="https://url.commons.org" #commons URL
       auth=Gen3Auth(endpoint, refresh_file="credentials.json") #your creds
 
       index = Gen3Index(endpoint,auth)
@@ -337,9 +337,9 @@ This section guides you through how to set up a granular access to files.
 
 **c) Edit the user.yaml**
 
-The user.yaml [example](https://github.com/uc-cdis/commons-users/blob/master/users/covid19/user.yaml) will require changes to three sections to make these files with new authz fields accessible:
+The user.yaml will require changes to three sections to make these files with new authz fields accessible:
 
-1. Policies; [example](https://github.com/uc-cdis/commons-users/blob/master/users/covid19/user.yaml#L196-L201). This notes the resource path and the permissions (role_id) you will give to the id.
+1. Policies. This notes the resource path and the permissions (role_id) you will give to the id.
 ```
 - id: 'controlled-TEST_DEMO_downloader'
 role_ids:
@@ -349,7 +349,7 @@ resource_paths:
 - '/programs/controlled/projects/TEST1/sources/DEMO
 ```
 
-2. Resources; [example](https://github.com/uc-cdis/commons-users/blob/master/users/covid19/user.yaml#L328-L340). The list structure of the resources as seen in your resource path, for example `/programs/controlled/projects/TEST1/sources/DEMO`:
+2. Resources. The list structure of the resources as seen in your resource path, for example `/programs/controlled/projects/TEST1/sources/DEMO`:
 ```
 - name: controlled
   subresources:
@@ -366,7 +366,7 @@ resource_paths:
            - name: name4
 ```
 
-3. Users; [example](https://github.com/uc-cdis/commons-users/blob/master/users/covid19/user.yaml#L483). The user profile and the id that is assigned to them, which allows for the permissions set in the policies:
+3. Users. The user profile and the id that is assigned to them, which allows for the permissions set in the policies:
 ```
   user@gmail.edu:
 	policies:
