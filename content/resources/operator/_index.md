@@ -307,7 +307,7 @@ This section guides you through how to set up a granular access to files.
 
 **b) Update the “authz” field using the Gen3 Python SDK**
 
-1. Download the gen3 python SDK [here](https://github.com/uc-cdis/gen3sdk-python), as this will allow you to make changes to the indexd records. Run `pip install gen3`.
+1. Download the Gen3 Python SDK [here](https://github.com/uc-cdis/gen3sdk-python), as this will allow you to make changes to the indexd records. Run `pip install gen3`.
 2. Programatically change the authz of the indexd record:
    - With the list of GUIDs for a specific institution and your credentials that you downloaded from the profile page on the commons, you will run the following Python script that will make edits to the indexd database. In this example Python script, the changes to the authz field are being made to the program and project `controlled-TEST1`. In this instance, the new authz field is going to have a `sources` resource called `DEMO`. The endpoint is the common’s url and the auth function will call your credentials files.
 
