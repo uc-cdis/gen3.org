@@ -287,3 +287,93 @@ To create a program, visit the URL where your Gen3 Commons is hosted and append 
 To create a project, visit the URL where your Gen3 Commons is hosted and append the name of the program you want to create the project under. For example, if you are running the Docker Compose setup locally and would like to create a project under the program "Program1", the URL you will visit will be `localhost/Program1`. You will see the same options to use form submission or upload a file. This time, search for "project" in the drop-down list and then fill in the fields. As an example, you can use "P1" as "code", "phs1" as "dbgap_accession_number", and "project1" as "name". If you use different entries, make a note of the dbgap_accession_number for later. Click 'Upload submission json from form' and then 'Submit'. Again, a green message indicates success while a grey message indicates failure, and more details can be viewed by clicking on the "DETAILS" button. You can control in the `/datadictionary` whether the program and project have been correctly stored.
 
 After that, you're ready to start submitting data for that project! Please note that Data Submission refers to metadata regarding the file(s) (Image, Sequencing files, etc.) that are to be uploaded. Please refer to the [Gen3 website](https://gen3.org/resources/user/submit-data/) for additional details.
+
+
+## 7. How to Upload and Control File Access via authz
+This section guides you through how to set up a granular access to files.
+
+**a) Upload data files**
+
+1. [Download the gen3-client](https://github.com/uc-cdis/cdis-data-client/releases)
+2. [Configure the gen3-client to your commons](https://gen3.org/resources/user/gen3-client/#2-configure-a-profile-with-credentials)
+3. [Upload the multiple files to your commons](https://gen3.org/resources/user/gen3-client/#3-upload-data-files)
+4. [Create a Core Metadata Collection node entry](https://gen3.org/resources/user/submit-data/#1-prepare-project-in-submission-portal)
+5. [Map files to the project](https://gen3.org/resources/user/submit-data/#3-map-uploaded-files-to-a-data-file-node)
+6. Download the tsv file for the reference_file node:
+   - [Go to the project page by clicking on the `submit data` button for the project](https://gen3.org/resources/user/submit-data/#begin-metadata-tsv-submissions)
+   - [Click on the reference_file node in the graph model to bring up the node page](https://gen3.org/resources/user/submit-data/#learning-more-about-the-existing-submission)
+   - Download the entire node via the `Download All` button, selecting the tsv option.
+7. Obtain the GUIDs from the downloaded reference file node. The GUIDs are found under the `object_id` column and there will be one for each data file entry in the graph model.
+
+**b) Update the “authz” field using the Gen3 Python SDK**
+
+1. Download the Gen3 Python SDK [here](https://github.com/uc-cdis/gen3sdk-python), as this will allow you to make changes to the indexd records. Run `pip install gen3`.
+2. Programatically change the authz of the indexd record:
+   - With the list of GUIDs for a specific institution and your credentials that you downloaded from the profile page on the commons, you will run the following Python script that will make edits to the indexd database. In this example Python script, the changes to the authz field are being made to the program and project `controlled-TEST1`. In this instance, the new authz field is going to have a `sources` resource called `DEMO`. The endpoint is the common’s url and the auth function will call your credentials files.
+
+    ```
+      import gen3
+      from gen3.auth import Gen3Auth
+      from gen3.index import Gen3Index
+
+      guids=["guid1",”guid2”,”guid3”...”guidN”]
+
+      new_authz="/programs/controlled/projects/TEST1/sources/DEMO"
+
+
+      endpoint="https://url.commons.org" #commons URL
+      auth=Gen3Auth(endpoint, refresh_file="credentials.json") #your creds
+
+      index = Gen3Index(endpoint,auth)
+
+      for guid in guids:
+          index.update_record(guid=guid, authz=[new_authz])
+          print(guid + " has been updated to the following authz: " + new_authz)
+
+    ```
+3. Make connections in the reference_file node to attach the reference_file entries to the projects.code:
+    - The files at this time are only connected to the `core_metadata_collection` node, and they will need to be linked to the rest of the graph model. In the tsv, populate the `projects.code` column with the projects.code value, in this example, it would be `TEST1`. Save this tsv and re-upload the file into the project. [See here for more info.](https://gen3.org/resources/user/submit-data/#begin-metadata-tsv-submissions)
+
+
+**c) Edit the user.yaml**
+
+The user.yaml will require changes to three sections to make these files with new authz fields accessible:
+
+1. Policies. This notes the resource path and the permissions (role_id) you will give to the id.
+```
+- id: 'controlled-TEST_DEMO_downloader'
+role_ids:
+- 'reader'
+- 'storage_reader'
+resource_paths:
+- '/programs/controlled/projects/TEST1/sources/DEMO
+```
+
+2. Resources. The list structure of the resources as seen in your resource path, for example `/programs/controlled/projects/TEST1/sources/DEMO`:
+```
+- name: controlled
+  subresources:
+     - name: projects
+    	subresources:
+    	- name: TEST1
+      	  subresources:
+      	  - name: sources
+           subresources:
+           - name: name1
+           - name: DEMO
+           - name: name2
+           - name: name3
+           - name: name4
+```
+
+3. Users. The user profile and the id that is assigned to them, which allows for the permissions set in the policies:
+```
+  user@gmail.edu:
+	policies:
+	- controlled-TEST1_reader
+	- controlled-TEST1_name1_downloader
+	- controlled-TEST1_DEMO_downloader
+	- controlled-TEST1_name2_downloader
+	- controlled-TEST1_name3_downloader
+	- controlled-TEST1_name4_downloader
+```
