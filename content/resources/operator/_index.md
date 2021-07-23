@@ -290,7 +290,7 @@ After that, you're ready to start submitting data for that project! Please note 
 
 
 ## 7. How to Upload and Control File Access via authz
-This section guides you through how to set up a granular access to files.
+This section guides you through how to set up a granular access to data files by editing programs/projects. Note, that this does not apply to graph metadata. 
 
 **a) Upload data files**
 
@@ -309,7 +309,7 @@ This section guides you through how to set up a granular access to files.
 
 1. Download the Gen3 Python SDK [here](https://github.com/uc-cdis/gen3sdk-python), as this will allow you to make changes to the indexd records. Run `pip install gen3`.
 2. Programatically change the authz of the indexd record:
-   - With the list of GUIDs for a specific institution and your credentials that you downloaded from the profile page on the commons, you will run the following Python script that will make edits to the indexd database. In this example Python script, the changes to the authz field are being made to the program and project `controlled-TEST1`. In this instance, the new authz field is going to have a `sources` resource called `DEMO`. The endpoint is the common’s url and the auth function will call your credentials files.
+   - With the list of GUIDs for a specific institution and your credentials that you downloaded from the profile page on the commons, you will run the following Python script that will make edits to the indexd database. In this example Python script, the changes to the authz field are being made to the program and project `my_program-TEST1`. In this instance, the new authz field is going to have a `sources` resource called `DEMO`. The endpoint is the common’s url and the auth function will call your credentials files.
 
     ```
       import gen3
@@ -318,7 +318,7 @@ This section guides you through how to set up a granular access to files.
 
       guids=["guid1",”guid2”,”guid3”...”guidN”]
 
-      new_authz="/programs/controlled/projects/TEST1/sources/DEMO"
+      new_authz="/programs/my_program/projects/TEST1/sources/DEMO"
 
 
       endpoint="https://url.commons.org" #commons URL
@@ -341,17 +341,18 @@ The user.yaml will require changes to three sections to make these files with ne
 
 1. Policies. This notes the resource path and the permissions (role_id) you will give to the id.
 ```
-- id: 'controlled-TEST_DEMO_downloader'
+- id: 'my_program-TEST_DEMO_downloader'
 role_ids:
 - 'reader'
 - 'storage_reader'
 resource_paths:
-- '/programs/controlled/projects/TEST1/sources/DEMO
+- '/programs/my_program/projects/TEST1/sources/DEMO
 ```
 
-2. Resources. The list structure of the resources as seen in your resource path, for example `/programs/controlled/projects/TEST1/sources/DEMO`:
+2. Resources. The list structure of the resources as seen in your resource path, for example `/programs/my_program/projects/TEST1/sources/DEMO`:
 ```
-- name: controlled
+resources:
+- name: my_program
   subresources:
      - name: projects
     	subresources:
@@ -370,10 +371,10 @@ resource_paths:
 ```
   user@gmail.edu:
 	policies:
-	- controlled-TEST1_reader
-	- controlled-TEST1_name1_downloader
-	- controlled-TEST1_DEMO_downloader
-	- controlled-TEST1_name2_downloader
-	- controlled-TEST1_name3_downloader
-	- controlled-TEST1_name4_downloader
+	- my_program-TEST1_reader
+	- my_program-TEST1_name1_downloader
+	- my_program-TEST1_DEMO_downloader
+	- my_program-TEST1_name2_downloader
+	- my_program-TEST1_name3_downloader
+	- my_program-TEST1_name4_downloader
 ```
