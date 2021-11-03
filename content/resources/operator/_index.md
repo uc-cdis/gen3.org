@@ -381,7 +381,7 @@ resources:
 
 ## 8. ETL and Data Explorer Configurations
 
-ETL stands for “extract, transform, load” and refers to the process of moving data from the PostgreSQL database (graph model) to the ElasticSearch database (flat model), which is carried out by the Gen3 Framework Service [Tube](https://github.com/uc-cdis/tube).
+ETL stands for “extract, transform, load”. In Gen3, it refers to the process of moving data from the PostgreSQL database (graph model) to the ElasticSearch database (flat model), which is carried out by the Gen3 Framework Service [Tube](https://github.com/uc-cdis/tube).
 
 Newly ingested data to the Sheepdog Service can be queried immediately via [Peregrine](https://github.com/uc-cdis/peregrine), but not on the Data Explorer, which is powered by [Guppy](https://github.com/uc-cdis/guppy) on the backend.  During the ETL process, Tube will populate ElasticSearch indices and Guppy makes the ElasticSearch indices available for queries for the Data Explorer.
 
