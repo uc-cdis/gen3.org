@@ -271,7 +271,7 @@ _Cons_
 * Neither user’s organization does not take responsibility for activating/deactivating users based on affiliation.
 
 
-### 6. Programs and Projects
+## 6. Programs and Projects
 In a Gen3 Data Commons, programs and projects are two administrative nodes in the graph database that serve as the most upstream nodes. A program must be created first, followed by a project. Any subsequent data submission and data access, along with control of access to data, is done through the project scope.
 
 Before you create a program and a project or submit any data, you need to grant yourself permissions. First, you will need to grant yourself access to **create** a program and second, you need to grant yourself access to *see* the program. You can **create** the program before or after having access to *see* it.
@@ -290,7 +290,7 @@ After that, you're ready to start submitting data for that project! Please note 
 
 
 ## 7. How to Upload and Control File Access via authz
-This section guides you through how to set up a granular access to data files by editing programs/projects. Note, that this does not apply to graph metadata. 
+This section guides you through how to set up a granular access to data files by editing programs/projects. Note, that this does not apply to graph metadata.
 
 **a) Upload data files**
 
@@ -378,3 +378,15 @@ resources:
 	- my_program-TEST1_name3_downloader
 	- my_program-TEST1_name4_downloader
 ```
+
+## 8. ETL and Data Explorer Configurations
+
+ETL stands for “extract, transform, load” and refers to the process of moving data from the PostgreSQL database (graph model) to the ElasticSearch database (flat model), which is carried out by the Gen3 Framework Service [Tube](https://github.com/uc-cdis/tube).
+
+Newly ingested data to the Sheepdog Service can be queried immediately via [Peregrine](https://github.com/uc-cdis/peregrine), but not on the Data Explorer, which is powered by [Guppy](https://github.com/uc-cdis/guppy) on the backend.  During the ETL process, Tube will populate ElasticSearch indices and Guppy makes the ElasticSearch indices available for queries for the Data Explorer.
+
+In practice, Guppy/Tube need to be configured to the ElasticSearch indices in the manifest.json (both in the [versions block](https://github.com/uc-cdis/cdis-manifest/blob/6bc0dc84bec2af7d7971d2a4342319b225728969/gen3.datacommons.io/manifest.json#L23) and the [guppy block for the indices](https://github.com/uc-cdis/guppy#configurations)) and the [ETLmapping.yaml file](https://github.com/uc-cdis/tube/blob/master/docs/configuration_file.md) has to be configured to list those indices.
+Note that configuring the ETLmapping.yaml is dependent on what users want to display on the Explorer page (i.e. File & Data tab) and needs to match to the Data Dictionary. The ETLmapping.yaml can be validated against the Data Dictionary as described [here](https://github.com/uc-cdis/gen3utils#etlmappingyaml-validation).
+After configuring ETLmapping.yaml, indices need to be created, cleaned, or/and re-populated using commands as described [here](https://github.com/uc-cdis/cloud-automation/tree/master/kube/services/tube) or [here](https://github.com/uc-cdis/tube).
+
+In the next step, the [gitops.json](https://github.com/uc-cdis/data-portal/blob/master/docs/portal_config.md) needs to be configured to display and populate the indices of interest in the Data Explorer. Remember that only the properties occurring in the ETLmapping.yaml can be brought into the gitops.json. The gitops.json can be [tested locally](https://github.com/uc-cdis/data-portal#local-development-and-devhtml) and [validated against the Data Dictionary](https://github.com/uc-cdis/gen3utils#portal-configuration-gitopsjson-validation).
