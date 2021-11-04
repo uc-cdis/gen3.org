@@ -9,25 +9,35 @@ menuname: operatorMenu
 
 # Running a Gen3 Data Commons
 
-## 1. Compose Services ![Compose Services](img/compose-services.svg)
+## 1. Compose Services
 
-Compose Services allow you to quickly run a Gen3 commons on a single computer or in a single VM in a matter of minutes.
+![Compose Services](img/compose-services.svg)
+
+[Gen3 Compose Services](https://github.com/uc-cdis/compose-services) allow you to quickly run a Gen3 commons on a single computer or in a single VM in a matter of minutes using Docker Compose.
 
 This option is suitable for those that wish to run a small data commons, experiment with the technology, or even do local development on the Gen3 services.
 
 We recommend you start here for your first experience running the Gen3 platform. Using Compose Services will not make the full suite of automation and logging for Gen3 data commons available. If you intend to create a bigger data commons or deploy a data commons in a production environment, we strongly recommend you use [Cloud Automation](#2-cloud-automation).
 
-[Gen3 Compose Services](https://github.com/uc-cdis/compose-services)
+[Explore Gen3 Compose Services here.](https://github.com/uc-cdis/compose-services)
 
-## 2. Cloud Automation ![Cloud Automation](img/cloud-automation.svg)
 
-Cloud automation is how we deploy Gen3 data commons in production environments on Amazon Web Services, Google Cloud Platform, Microsoft Azure, and OpenStack environments. Cloud automation is fully featured supporting integrated logging, security, and compliance steps. With cloud automation, we utilize Kubernetes to orchestrate our services into a scalable environment that can be run in a cost efficient manner for many tens to thousands of users.
+
+
+
+## 2. Cloud Automation
+
+![Cloud Automation](img/cloud-automation.svg)
+
+[Gen3 Cloud Automation](https://github.com/uc-cdis/cloud-automation/blob/master/doc/csoc-free-commons-steps.md) is how we deploy Gen3 data commons in production environments on Amazon Web Services, Google Cloud Platform, Microsoft Azure, and OpenStack environments. Cloud Automation is fully featured supporting integrated logging, security, and compliance steps. With cloud Automation, we utilize Kubernetes to orchestrate our services into a scalable environment that can be run in a cost efficient manner for many tens to thousands of users.
 
 Cloud automation utilizes Terraform for repeatable infrastructure deployments onto the public clouds. Additionally, we have custom Gen3 specific tooling to help automate various steps in the Kubernetes deployment process such as rolling pod versions, and scaling up.
 
 We welcome all comments, feature requests, and pull requests using GitHub issues or the [Gen3 community](https://forums.gen3.org).
 
-[Gen3 Cloud Automation](https://github.com/uc-cdis/cloud-automation/blob/master/doc/csoc-free-commons-steps.md)
+[Explore Gen3 Cloud Automation here.](https://github.com/uc-cdis/cloud-automation/blob/master/doc/csoc-free-commons-steps.md)
+
+
 
 ## 3. Creating a New Data Dictionary
 

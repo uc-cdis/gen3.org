@@ -33,18 +33,20 @@ We believe that rapid innovation is most effectively achieved through an open in
 For more information visit: [CTDS Guiding Principles](https://cdis.uchicago.edu/guiding-principles).
 
 <h3>Support</h3>
+
 Operation of the Gen3 commons is supported by generous grants from Amazon Web Services' [Grants for Research Credit Program](https://aws.amazon.com/research-credits/) and Microsoft Azure's [Research Grant Program](https://www.microsoft.com/en-us/research/academic-program/microsoft-azure-for-research/).
 
 
 ## The Data Commons Architecture
 * * *
 
-User access to the Gen3 data commons runs through a Virtual Private Cloud (VPC).   Access to data and analysis tools through a VPC allows for balance of usability and security.   All access is through a monitored head node.  Data is not directly accessed from the Internet.
+User access to the Gen3 data commons runs through a Virtual Private Cloud (VPC). Access to data and analysis tools through a VPC allows for balance of usability and security. All access is through a monitored head node. Data is not directly accessed from the Internet.
 
 Other secure and compliant Gen3 member systems (including cloud-based systems) can access Gen3 data through the API.
 
 <h3> Diagram of the System Architecture </h3>
-![Gen3 Architecture](index/framework.png)
+
+![Gen3 Architecture](img/architecture.png)
 
 ## Online Resources
 * * *
