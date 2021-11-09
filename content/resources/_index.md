@@ -45,8 +45,18 @@ g3Resources:
     lists:
       - title: Technical Introduction
         ul:
-          - name: How to Setup Gen3
+          - name: How to Setup Gen3 using Compose Services or Cloud Automation
             link: /resources/operator
+          - name: Creating a New Data Dictionary
+            link: /resources/operator/#3-creating-a-new-data-dictionary
+          - name: Authentication Methods
+            link: /resources/operator/#5-authentication-methods
+          - name: Create Programs and Projects
+            link: /resources/operator/#6-programs-and-projects
+          - name: Control File Access via authz
+            link: /resources/operator/#7-how-to-upload-and-control-file-access-via-authz
+          - name: ETL and Data Explorer Configurations
+            link: /resources/operator/#8-etl-and-data-explorer-configurations
   r3:
     name: Developer
     fig: /figs/roles/icon-devs.svg
