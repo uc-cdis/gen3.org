@@ -502,7 +502,6 @@ Finished downloads/24d0be10-d164-48ad-aafa-9fcaac682df9 2570240 / 2570240 bytes 
 
 :warning: **This command is deprecated in gen3-client version 1.0.0 and beyond.** :warning:
 
-
 In order to register data files in a Gen3 data commons, the filenames, md5sums, and file_size in bytes, must be submitted as metadata. The gen3-client can help collect the values of these three properties using the `gen3-client generate-tsv` command.
 
 > __NOTE:__ For most data uploaders, using the `gen3-client upload` command followed by mapping files in Windmill is the preferred method for uploading files. See [this section](/resources/user/submit-data) of the documentation for details.
