@@ -428,7 +428,7 @@ Customize the text that appears on the [Login Page](https://gen3.datacommons.io/
 
 ### Landing Page Data Commons - Information on Commons
 
-Customize the name of the Data Commons, the info text, and the button below that  appear on the top left side of the [Landing Page](https://gen3.datacommons.io/login).
+Customize the name of the Data Commons, the info text, and the button below that  appear on the top left side of the Landing Page after logging in.
 
 ![landingpage_info](img/landingpage_info.png)
 
@@ -437,7 +437,7 @@ Customize the name of the Data Commons, the info text, and the button below that
 
 ### Landing Page Data Commons - Summary Statistics
 
-Customize the summary statistics that appear on the top right side of the [Landing Page](https://gen3.datacommons.io/login). The attributes are graphQL fields, which must be in the dictionary, configured in the etlMapping.yaml, and populated with data on the backend.
+Customize the summary statistics that appear on the top right side of the Landing Page after logging in. The attributes are graphQL fields, which must be in the dictionary, configured in the etlMapping.yaml, and populated with data on the backend.
 
 ![landingpage_counts](img/landingpage_counts.png)
 
@@ -447,7 +447,7 @@ Customize the summary statistics that appear on the top right side of the [Landi
 
 ### Landing Page Data Commons - Cards
 
-Customize the cards that appear on the bottom of the [Landing Page](https://gen3.datacommons.io/login).
+Customize the cards that appear on the bottom of the Landing Page after logging in.
 
 ![landingpage_cards](img/landingpage_cards.png)
 
@@ -501,10 +501,19 @@ Customize the logos in the Footer.
 - [Review the code to edit the source, link, and name of logos in the footer of a Data Commons](https://github.com/uc-cdis/cdis-manifest/blob/551f0963e60f6000ae8b9987592495406a031c81/gen3.datacommons.io/portal/gitops.json#L156-L168).
 
 
-### Data Commons Resource Browser
+### Data Commons Notebook Browser
 
-Customize the page to preview Jupyter Notebooks by adding images, titles, descriptions, and links to the Jupyter Notebook.
+Customize the [Notebook Browser](https://chicagoland.pandemicresponsecommons.org/resource-browser) page to preview Jupyter Notebooks by adding images, titles, descriptions, and links to the Jupyter Notebook.
 
 ![notebookbrowser](img/notebookbrowser.png)
 
 - [Review the code to edit the title (top; notebooks), description (top; notebooks), link, and imageURL (preview image)](https://github.com/uc-cdis/cdis-manifest/blob/0e5a08eed8b417a721a6324f820abe8ea4ef4e17/chicagoland.pandemicresponsecommons.org/portal/gitops.json#L1097-L1175).
+
+### Data Commons Discovery Page
+
+Customize and enable the [Discovery Page](https://gen3.datacommons.io/discovery) by editing the table items, advanced search fields, tags, and study page fields (i.e. page that opens up upon clicking on a study). The Discovery Page is powered by the [Metadata Service](https://github.com/uc-cdis/metadata-service) on the backend. Tools such as the [Python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/cli/discovery.py) can be used to upload and edit metadata to the Metadata Service.
+
+![discovery](img/discovery.png)
+
+- [Review the code to enable the Discovery Page](https://github.com/uc-cdis/cdis-manifest/blob/551f0963e60f6000ae8b9987592495406a031c81/gen3.datacommons.io/portal/gitops.json#L173).
+- [Review the code to edit the Discovery Page](https://github.com/uc-cdis/cdis-manifest/blob/551f0963e60f6000ae8b9987592495406a031c81/gen3.datacommons.io/portal/gitops.json#L175-L297).
