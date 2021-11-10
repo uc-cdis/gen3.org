@@ -401,9 +401,9 @@ After configuring etlMapping.yaml, indices need to be created, cleaned, or/and r
 
 In the next step, the [gitops.json](https://github.com/uc-cdis/data-portal/blob/master/docs/portal_config.md) needs to be configured to display and populate the indices of interest in the Data Explorer. Remember that only the properties occurring in the etlMapping.yaml can be brought into the gitops.json. The gitops.json can be [tested locally](https://github.com/uc-cdis/data-portal#local-development-and-devhtml) and [validated against the Data Dictionary and etlMapping.yaml file](https://github.com/uc-cdis/gen3utils#portal-configuration-gitopsjson-validation). Finally, after new indices are introduced, Guppy needs to be rolled using the command `gen3 roll guppy`. A comprehensive list of commands is given [here](https://github.com/uc-cdis/cloud-automation/blob/master/doc/README.md).
 
-## 9. Data Explorer Configurations Examples
+## 9. Gen3 Portal Configurations Examples
 
-Below we show examples of how to customize the Gen3 Data Portal.
+Below we show a few examples of how to customize the Gen3 Data Portal.
 
 For more technical background, see [portal configurations on GitHub](https://github.com/uc-cdis/data-portal/blob/master/docs/portal_config.md).
 
