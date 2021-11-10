@@ -106,11 +106,18 @@ gen3-client configure --profile=demo --cred=C:\Users\demo\Downloads\demo-credent
 When successfully executed, this will create a configuration file, which contains all the API keys and URLs associated with each commons profile configured, located in the user folder:
 
 ```
+Version 1.0.0+
+Mac/Linux: /Users/demo/.gen3/gen3_client_config.ini
+Windows: C:\Users\demo\.gen3\gen3_client_config.ini
+```
+
+```
+Other older version
 Mac/Linux: /Users/demo/.gen3/config
 Windows: C:\Users\demo\.gen3\config
 ```
 
-> __NOTE:__ These keys must be treated like important passwords; never share the contents of the `credentials.json` or gen3-client `config` file!
+> __NOTE:__ These keys must be treated like important passwords; never share the contents of the `credentials.json` and gen3-client `gen3_client_config.ini` or `config` file!
 
 You should receive an error if you enter an incorrect API endpoint for your credentials. For example:
 ```
