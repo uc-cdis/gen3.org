@@ -20,7 +20,7 @@ This guide has the following sections:
 3. [Upload Data Files](#3-upload-data-files)
 4. [Download Files](#4-download-a-single-data-file-using-a-guid)
 5. [Multiple File Download with Manifest](#5-multiple-file-download-with-manifest)
-6. [Generate a Metadata Submission TSV](#6-generate-a-metadata-submission-tsv)
+6. [Generate a Metadata Submission TSV (Deprecated)](#6-generate-a-metadata-submission-tsv-deprecated)
 7. [Upload Single File with GUID](#7-how-to-upload-a-single-data-file-using-a-guid)
 8. [Upload Multiple Files with Manifest](#8-how-to-upload-multiple-data-files-using-a-manifest)
 9. [Quick Start for Experienced Users or Cheat Sheet](#9-quick-start-for-experienced-users-or-cheat-sheet)
@@ -28,7 +28,7 @@ This guide has the following sections:
 
 * * *
 
-## 1) Installation Instructions
+## 1. Installation Instructions
 
 * * *
 
@@ -77,7 +77,7 @@ curl https://api.github.com/repos/uc-cdis/cdis-data-client/releases/latest | gre
 To check that your copy of the client is working and confirm the version, the tool can be run on the command-line in your terminal or command prompt by entering `gen3-client`. Typing this alone or `gen3-client help` will display the help menu. For help on a particular command, enter: `gen3-client <command> help`. Note that you must provide the full path of the tool in order for the commands to run, for example, `./gen3-client` while working from the directory containing the client. Alternatively, you can [add the location of the gen3-client executable to your shell's PATH environment variable](#10-working-from-the-command-line).
 
 
-## 2) Configure a Profile with Credentials
+## 2. Configure a Profile with Credentials
 
 * * *
 
@@ -106,11 +106,18 @@ gen3-client configure --profile=demo --cred=C:\Users\demo\Downloads\demo-credent
 When successfully executed, this will create a configuration file, which contains all the API keys and URLs associated with each commons profile configured, located in the user folder:
 
 ```
+Version 1.0.0+
+Mac/Linux: /Users/demo/.gen3/gen3_client_config.ini
+Windows: C:\Users\demo\.gen3\gen3_client_config.ini
+```
+
+```
+Other older version
 Mac/Linux: /Users/demo/.gen3/config
 Windows: C:\Users\demo\.gen3\config
 ```
 
-> __NOTE:__ These keys must be treated like important passwords; never share the contents of the `credentials.json` or gen3-client `config` file!
+> __NOTE:__ These keys must be treated like important passwords; never share the contents of the `credentials.json` and gen3-client `gen3_client_config.ini` or `config` file!
 
 You should receive an error if you enter an incorrect API endpoint for your credentials. For example:
 ```
@@ -135,7 +142,7 @@ You have access to the following project(s) at https://nci-crdc-demo.datacommons
 ```
 <!-- Need to add a link to documentation on what each privilege does -->
 
-## 3) Upload Data Files
+## 3. Upload Data Files
 * * *
 ### gen3-client upload
 * * *
@@ -429,7 +436,7 @@ Successfully deleted GUID 9bd009b6-e518-4fe5-9056-2b5cba163ca3
 ```
 
 
-## 4) Download a Single Data File Using a GUID
+## 4. Download a Single Data File Using a GUID
 
 * * *
 
@@ -461,7 +468,7 @@ Example Usage:
 gen3-client download-single --profile=demo --guid=00149bcf-e057-4ecc-b22d-53648ae0b35f --no-prompt --skip-completed
 ```
 
-## 5) Multiple File Download with Manifest
+## 5. Multiple File Download with Manifest
 
 * * *
 
@@ -489,9 +496,11 @@ Finished downloads/24d0be10-d164-48ad-aafa-9fcaac682df9 2570240 / 2570240 bytes 
 330 files downloaded.
 ```
 
-## 6) Generate a metadata submission TSV
+## 6. Generate a metadata submission TSV (Deprecated)
 
 * * *
+
+:warning: **This command is deprecated in gen3-client version 1.0.0 and beyond.** :warning:
 
 In order to register data files in a Gen3 data commons, the filenames, md5sums, and file_size in bytes, must be submitted as metadata. The gen3-client can help collect the values of these three properties using the `gen3-client generate-tsv` command.
 
@@ -530,7 +539,7 @@ rg-2	submitted_aligned_reads	project-name	SAR2	Sequencing Reads	BAM	Aligned Read
 ...
 ```
 
-## 7) How to Upload a Single Data File Using a GUID
+## 7. How to Upload a Single Data File Using a GUID
 
 * * *
 
@@ -553,7 +562,7 @@ Successfully uploaded file "test.gif" to GUID b4642430-8c6e-465a-8e20-97c4584393
 1 files uploaded.
 ```
 
-## 8) How to Upload Multiple Data Files Using a Manifest
+## 8. How to Upload Multiple Data Files Using a Manifest
 
 * * *
 
@@ -594,7 +603,7 @@ Successfully uploaded file "c12ff17c-2fc0-475a-9c21-50c19950b082" to GUID c22ff1
 3 files uploaded.
 ```
 
-## 9) Quick Start for Experienced Users or Cheat Sheet
+## 9. Quick Start for Experienced Users or Cheat Sheet
 
 * * *
 
@@ -623,7 +632,7 @@ gen3-client upload --profile=demo --upload-path=test.txt
 gen3-client download-single --profile=demo --guid=39b05d1f-f8a2-478c-a728-c16f6d0d8a7c --no-prompt
 ```
 
-## 10) Working from the Command-line
+## 10. Working from the Command-line
 
 * * *
 
