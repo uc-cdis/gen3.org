@@ -20,7 +20,7 @@ This guide has the following sections:
 3. [Upload Data Files](#3-upload-data-files)
 4. [Download Files](#4-download-a-single-data-file-using-a-guid)
 5. [Multiple File Download with Manifest](#5-multiple-file-download-with-manifest)
-6. [Generate a Metadata Submission TSV](#6-generate-a-metadata-submission-tsv)
+6. [Generate a Metadata Submission TSV (Deprecated)](#6-generate-a-metadata-submission-tsv)
 7. [Upload Single File with GUID](#7-how-to-upload-a-single-data-file-using-a-guid)
 8. [Upload Multiple Files with Manifest](#8-how-to-upload-multiple-data-files-using-a-manifest)
 9. [Quick Start for Experienced Users or Cheat Sheet](#9-quick-start-for-experienced-users-or-cheat-sheet)
@@ -489,9 +489,11 @@ Finished downloads/24d0be10-d164-48ad-aafa-9fcaac682df9 2570240 / 2570240 bytes 
 330 files downloaded.
 ```
 
-## 6) Generate a metadata submission TSV
+## 6) Generate a metadata submission TSV (Deprecated)
 
 * * *
+
+:warning: **This command is deprecated in gen3-client version 1.0.0 and beyond.** :warning:
 
 In order to register data files in a Gen3 data commons, the filenames, md5sums, and file_size in bytes, must be submitted as metadata. The gen3-client can help collect the values of these three properties using the `gen3-client generate-tsv` command.
 
