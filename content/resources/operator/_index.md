@@ -400,3 +400,111 @@ Note that configuring the etlMapping.yaml is dependent on what users want to dis
 After configuring etlMapping.yaml, indices need to be created, cleaned, or/and re-populated using the `gen3 gitops configmaps` command to read the new etlMapping.yaml, and the `gen3 job run etl` command to run the ETL. Note, that new indices need to be added to both files etlMapping.yaml and manifest.json.
 
 In the next step, the [gitops.json](https://github.com/uc-cdis/data-portal/blob/master/docs/portal_config.md) needs to be configured to display and populate the indices of interest in the Data Explorer. Remember that only the properties occurring in the etlMapping.yaml can be brought into the gitops.json. The gitops.json can be [tested locally](https://github.com/uc-cdis/data-portal#local-development-and-devhtml) and [validated against the Data Dictionary and etlMapping.yaml file](https://github.com/uc-cdis/gen3utils#portal-configuration-gitopsjson-validation). Finally, after new indices are introduced, Guppy needs to be rolled using the command `gen3 roll guppy`. A comprehensive list of commands is given [here](https://github.com/uc-cdis/cloud-automation/blob/master/doc/README.md).
+
+## 9. Data Explorer Configurations Examples
+
+Below we show examples of how to customize the Gen3 Data Portal.
+
+For more technical background, see [portal configurations on GitHub](https://github.com/uc-cdis/data-portal/blob/master/docs/portal_config.md).
+
+### Login Page - Helix Image
+
+Customize the image that appears on the [Login Page](https://gen3.datacommons.io/login) with a vector graphic (eg. *.svg) of your choice.
+
+![Helix](img/helix.png)
+
+- [Review the code to save the image](https://github.com/uc-cdis/cdis-manifest/blob/456e1a3b5b3cc5dc23b83e1f96c0770a2007162a/gen3.datacommons.io/portal/gitops-sponsors/gene_bgy.svg).
+- [Review code to include the path-to-image in gitops.json](https://github.com/uc-cdis/cdis-manifest/blob/456e1a3b5b3cc5dc23b83e1f96c0770a2007162a/gen3.datacommons.io/portal/gitops.json#L130).
+
+
+### Login Page - Information on Login and Commons
+
+Customize the text that appears on the [Login Page](https://gen3.datacommons.io/login) by specifying title, description, subtitle, contact, or email.
+
+![Login](img/login.png)
+
+- [Review the code to edit title, subtitle, text, contact, and email](https://github.com/uc-cdis/cdis-manifest/blob/456e1a3b5b3cc5dc23b83e1f96c0770a2007162a/gen3.datacommons.io/portal/gitops.json#L124-L129).
+
+
+### Landing Page Data Commons - Information on Commons
+
+Customize the name of the Data Commons, the info text, and the button below that  appear on the top left side of the [Landing Page](https://gen3.datacommons.io/login).
+
+![landingpage_info](img/landingpage_info.png)
+
+- [Review the code to edit heading, text, and link](https://github.com/uc-cdis/cdis-manifest/blob/456e1a3b5b3cc5dc23b83e1f96c0770a2007162a/gen3.datacommons.io/portal/gitops.json#L39-L44).
+
+
+### Landing Page Data Commons - Summary Statistics
+
+Customize the summary statistics that appear on the top right side of the [Landing Page](https://gen3.datacommons.io/login). The attributes are graphQL fields, which must be in the dictionary, configured in the etlMapping.yaml, and populated with data on the backend.
+
+![landingpage_counts](img/landingpage_counts.png)
+
+- [Review the code to edit graphQL queries](https://github.com/uc-cdis/cdis-manifest/blob/456e1a3b5b3cc5dc23b83e1f96c0770a2007162a/gen3.datacommons.io/portal/gitops.json#L3-L36).
+- [Review the code to edit the graphQl queries after being logged in](https://github.com/uc-cdis/cdis-manifest/blob/4a922a04456423fea5d1e59c5431cedb460280d0/data.midrc.org/portal/gitops.json#L98-L113).
+
+
+### Landing Page Data Commons - Cards
+
+Customize the cards that appear on the bottom of the [Landing Page](https://gen3.datacommons.io/login).
+
+![landingpage_cards](img/landingpage_cards.png)
+
+- [Review the code to edit name, icons, body, link, and label of the cards](https://github.com/uc-cdis/cdis-manifest/blob/456e1a3b5b3cc5dc23b83e1f96c0770a2007162a/gen3.datacommons.io/portal/gitops.json#L46-L75).
+- Adding a new icon requires saving the icon in [this repository](https://github.com/uc-cdis/data-portal/tree/master/src/img/icons) and [in this file](https://github.com/uc-cdis/data-portal/blob/67f2b83227b9c3b48143bd2938cad160fc225394/src/img/icons/index.jsx).
+
+
+### Data Commons Navigation Items
+
+Customize the icons, link, and names that appear on the Data Commons navigation bar.
+The "tooltip" shows text upon hovering over the icon.
+
+![navigationbar](img/navigationbar.png)
+
+- [Review the code to edit icon, link, color, tooltip, and name of the navigation items](https://github.com/uc-cdis/cdis-manifest/blob/551f0963e60f6000ae8b9987592495406a031c81/gen3.datacommons.io/portal/gitops.json#L84-L134).
+- Adding a new icon requires saving the icon in [this repository](https://github.com/uc-cdis/data-portal/tree/master/src/img/icons) and [in this file](https://github.com/uc-cdis/data-portal/blob/67f2b83227b9c3b48143bd2938cad160fc225394/src/img/icons/index.jsx).
+
+### Data Commons Title
+
+Customize the title that appears in the top left corner.
+
+![name-commons](img/name-commons.png)
+
+- [Review the code to edit the title of the Data Commons](https://github.com/uc-cdis/cdis-manifest/blob/a68f8df12173e4b9d06dcdf3fad2cc1643a73f89/gen3.theanvil.io/portal/gitops.json#L71-L72).
+
+
+### Data Commons Top Bar
+
+Customize the top bar that appears in the top right corner.
+
+![topbar](img/topbar.png)
+
+- [Review the code to edit the top bar (link, name, icon, dropdown) of the Data Commons](https://github.com/uc-cdis/cdis-manifest/blob/4a922a04456423fea5d1e59c5431cedb460280d0/data.midrc.org/portal/gitops.json#L146-L171).
+
+
+### Data Commons Color Theme
+
+Customize the color theme for buttons, top navigation bar, and any types of charts on the Exploration and Landing Page.
+
+![9colors](img/9colors.png)
+
+- [Review the code to edit the 9 colors of a Data Commons](https://github.com/uc-cdis/cdis-manifest/blob/4a922a04456423fea5d1e59c5431cedb460280d0/data.midrc.org/portal/gitops.json#L146-L171).
+
+
+### Data Commons Footer Logo
+
+Customize the logos in the Footer.
+
+![footer](img/footer.png)
+
+- [Review the code to edit the source, link, and name of logos in the footer of a Data Commons](https://github.com/uc-cdis/cdis-manifest/blob/551f0963e60f6000ae8b9987592495406a031c81/gen3.datacommons.io/portal/gitops.json#L156-L168).
+
+
+### Data Commons Resource Browser
+
+Customize the page to preview Jupyter Notebooks by adding images, titles, descriptions, and links to the Jupyter Notebook.
+
+![notebookbrowser](img/notebookbrowser.png)
+
+- [Review the code to edit the title (top; notebooks), description (top; notebooks), link, and imageURL (preview image)](https://github.com/uc-cdis/cdis-manifest/blob/0e5a08eed8b417a721a6324f820abe8ea4ef4e17/chicagoland.pandemicresponsecommons.org/portal/gitops.json#L1097-L1175).

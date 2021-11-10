@@ -57,6 +57,8 @@ g3Resources:
             link: /resources/operator/#7-how-to-upload-and-control-file-access-via-authz
           - name: ETL and Data Explorer Configurations
             link: /resources/operator/#8-etl-and-data-explorer-configurations
+          - name: Data Explorer Configurations Examples
+            link: /resources/operator/#9-data-explorer-configurations-examples
   r3:
     name: Developer
     fig: /figs/roles/icon-devs.svg
