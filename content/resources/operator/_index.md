@@ -9,6 +9,21 @@ menuname: operatorMenu
 
 # Running a Gen3 Data Commons
 
+Find below resources on how to stand up a Gen3 Data Commons.
+
+1. Use [Compose Services](#1-compose-services) to create a Gen3 Data Commons sandbox
+2. Use [Cloud Automation](#2-cloud-automation) to deploy a Gen3 Data Commons in production environments on cloud frameworks
+3. Read more about [creating a Data Dictionary](#3-creating-a-new-data-dictionary) and [updating it](http://localhost:1313/resources/operator/#4-dictionary-update-documentation)
+4. Explore available [Authentication Methods](#5-authentication-methods)
+5. Read about how to [create programs and projects](#6-programs-and-projects)
+6. Learn [how to upload and control file access via authZ](#7-how-to-upload-and-control-file-access-via-authz)
+7. Learn how Gen3 uses [ETL and the Data Portal for the Data Explorer](#8-etl-and-data-explorer-configurations)
+8. Explore examples on [how to configure a Gen3 Data Portal](#9-gen3-portal-configurations-examples)
+
+Check out more resources:
+* [Technical aspects of maintaining a Gen3 Data Commons](https://github.com/uc-cdis/compose-services/blob/master/docs/using_the_commons.md)
+* [Contributions from the Gen3 Community](https://github.com/uc-cdis/compose-services/blob/master/docs/useful_links.md)
+
 ## 1. Compose Services
 
 ![Compose Services](img/compose-services.svg)
@@ -19,7 +34,7 @@ This option is suitable for those that wish to run a small data commons, experim
 
 We recommend you start here for your first experience running the Gen3 platform. Using Compose Services will not make the full suite of automation and logging for Gen3 data commons available. If you intend to create a bigger data commons or deploy a data commons in a production environment, we strongly recommend you use [Cloud Automation](#2-cloud-automation).
 
-[Explore Gen3 Compose Services here.](https://github.com/uc-cdis/compose-services)
+Explore a [step-by-step guide how to deploy Gen3 Compose Services here.](https://github.com/uc-cdis/compose-services)
 
 
 
@@ -299,7 +314,7 @@ To create a project, visit the URL where your Gen3 Commons is hosted and append 
 After that, you're ready to start submitting data for that project! Please note that Data Submission refers to metadata regarding the file(s) (Image, Sequencing files, etc.) that are to be uploaded. Please refer to the [Gen3 website](https://gen3.org/resources/user/submit-data/) for additional details.
 
 
-## 7. How to Upload and Control File Access via authz
+## 7. How to Upload and Control File Access via authZ
 This section guides you through how to set up a granular access to data files by editing programs/projects. Note, that this does not apply to graph metadata.
 
 **a) Upload data files**

@@ -24,7 +24,7 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
 * Structured [data submission](../user/submit-data/) (create, update, delete records) in JSON, TSV or CSV:
     * Submission page of Windmill
     * Gen3 SDK (Python, R)
-* [Export structured data](../user/access-data/#exploration-tool) as a JSON, TSV or CSV file
+* [Export structured data](../user/access-data/#access-data-using-the-api) as a JSON, TSV or CSV file
 * Structured data is stored in Postgres databases
 * [Flattened data](../developer/flat-model-api/):
     * Structured data can be flattened and stored in Elasticsearch by using our ETL tool
@@ -43,25 +43,29 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
     * Get the most recent version of a file
     * Index data files that are stored outside of the Commons
 * [GUID resolver](https://dataguids.org/)
-* [Data download](../user/access-data/#downloading-data-files):
+* Data download:
     * [Gen3 Client](../user/gen3-client/)
-    * Files page of Windmill
+    * [Files page of Windmill](../user/access-data/#access-data-from-the-data-commons-website)
 * Core metadata endpoint to get information about a data file
+* [Metadata Service](https://github.com/uc-cdis/metadata-service)
 
 ## Data exploration and analysis
 
-* GraphQL endpoint and UI to [explore structured data](../user/access-data/#querying-metadata-using-the-graphiql-interface) via [Peregrine](https://github.com/uc-cdis/peregrine) (graph data)
-* GraphQL endpoint and UI to explore [flattened data](../user/access-data/#querying-metadata-using-the-graphiql-interface) via [Guppy](https://github.com/uc-cdis/guppy) (in ElasticSearch)
-* [Explorer page](../user/access-data/#exploration-tool) of [Windmill](https://github.com/uc-cdis/data-portal)
+* GraphQL endpoint and UI to [explore structured data](../developer/flat-model-api/) via [Peregrine](https://github.com/uc-cdis/peregrine) (graph data)
+* GraphQL endpoint and UI to explore [flattened data](../developer/flat-model-api/) via [Guppy](https://github.com/uc-cdis/guppy) (in ElasticSearch)
+* [Explorer page](../user/access-data//#access-data-from-the-data-commons-website) of [Windmill](https://github.com/uc-cdis/data-portal)
     * Filters to select a cohort
     * Charts and visualizations: count, pie charts, bar charts, stacked bar charts, heatmaps
     * Download clinical data for the selected cohort
     * Download a manifest for the selected cohort
     * Export the selected cohort to Workspace/PFB/Terra
-* [Workspaces](../user/analyze-data/)
+* [Workspaces](../user/analyze-data/) using [Hatchery](https://github.com/uc-cdis/hatchery), [Workspace Token Service](https://github.com/uc-cdis/workspace-token-service), and [Manifest Service](https://github.com/uc-cdis/manifestservice)
     * Jupyter notebooks (Python, R)
     * RStudio
+    * Publish Notebooks as .html version on the [Resource Browser](https://github.com/uc-cdis/data-portal/blob/master/docs/resource_browser.md). See [here](https://chicagoland.pandemicresponsecommons.org/resource-browser) for an example.
+* Discover Datasets at a high-level on the [Discovery Page](https://github.com/uc-cdis/data-portal/blob/master/docs/portal_config.md). See [here](https://gen3.datacommons.io/discovery) for an example.
 * Run complex CWL analysis workflows *(Work in progress)*
+
 
 ## Access management and security
 
@@ -77,7 +81,7 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
 
 ## Automation
 
-* An open source collection of tools to [simplify and automate the creation and management](../operator/#2-cloud-automation-cloud-automation-img-cloud-automation-svg) of a Gen3 Commons
-* Use [docker-compose](../operator/#1-compose-services-compose-services-img-compose-services-svg) to create a Gen3 Commons sandbox
+* An open source collection of tools to [simplify and automate the creation and management](../operator/#2-cloud-automation) of a Gen3 Data Commons
+* Use [Compose Services](../operator/#1-compose-services) to create a Gen3 Data Commons sandbox
 * Kubernetes [job dispatcher](https://github.com/uc-cdis/ssjdispatcher)
     * Automatically index new files in a bucket
