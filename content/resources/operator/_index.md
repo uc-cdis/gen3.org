@@ -9,7 +9,7 @@ menuname: operatorMenu
 
 # Running a Gen3 Data Commons
 
-Find below resources on how setup and run your own Gen3 Data Commons.
+Find below resources on how to stand up a Gen3 Data Commons.
 
 1. Use [Compose Services](#1-compose-services) to create a Gen3 Data Commons sandbox
 2. Use [Cloud Automation](#2-cloud-automation) to deploy a Gen3 Data Commons in production environments on cloud frameworks
