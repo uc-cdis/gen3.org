@@ -511,7 +511,7 @@ Customize the [Notebook Browser](https://chicagoland.pandemicresponsecommons.org
 
 ### Data Commons Discovery Page
 
-Customize and enable the [Discovery Page](https://gen3.datacommons.io/discovery) by editing the table items, advanced search fields, tags, and study page fields (i.e. page that opens up upon clicking on a study). The Discovery Page is powered by the [Metadata Service](https://github.com/uc-cdis/metadata-service) on the backend. Tools such as the [Python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/cli/discovery.py) can be used to upload and edit metadata to the Metadata Service.
+Customize and enable the [Discovery Page](https://gen3.datacommons.io/discovery) by editing the table items, advanced search fields, tags, and study page fields (i.e. page that opens up upon clicking on a study). The Discovery Page is powered by the [Metadata Service](https://github.com/uc-cdis/metadata-service) on the backend. Tools such as the [Python SDK](https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/cli/discovery.py) can be used to upload and edit metadata.
 
 ![discovery](img/discovery.png)
 
