@@ -58,7 +58,7 @@ g3Resources:
           - name: ETL and Data Explorer Configurations
             link: /resources/operator/#8-etl-and-data-explorer-configurations
           - name: Gen3 Portal Configurations Examples
-            link: /resources/operator/#9-data-explorer-configurations-examples
+            link: /resources/operator/#9-gen3-portal-configurations-examples
   r3:
     name: Developer
     fig: /figs/roles/icon-devs.svg
