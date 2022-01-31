@@ -18,7 +18,7 @@ In cases where data is controlled access, typically external users will receive 
 
 The following sections provide details on how to explore and access data from within the data commons website and from the command-line by sending requests to the Gen3 open APIs.
 
-* [Access Data from the Data Commons Website](#the-data-commons-website)
+* [Access Data from the Data Commons Website](#access-data-from-the-data-commons-website)
   * [Exploration Page](#exploration-page)
   * [Browsing the List of Projects](#browsing-the-list-of-projects)
   * [Querying Structured Data](#querying-structured-data)
