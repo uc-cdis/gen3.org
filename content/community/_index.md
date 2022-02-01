@@ -5,16 +5,16 @@ linktitle: community
 date: 2021-01-14
 g3Teaser:
   fig: /figs/productkv.svg
-  title: Gen3 Products
-  detail: The Gen3 platform consists of a collection of open source software services for building and managing cloud-based data resources, namely, interoperable nodes in a data ecosystem, data commons, and analysis workspaces.
-  para1: Each of the Gen3 services is designed to accomplish a specific function in a data ecosystem, and that is achieved by providing a publicly-accessible application programming interface (API) that users, applications, and other services can send requests to.
-  para2: This page organizes and presents the Gen3 software services in terms of the different types of data resources mentioned above.
+  title: Gen3 Community
+  detail: Welcome to the Gen3 Community! Learn from our Community members and engage in technical discussions. Find resources below to discover helpful information on the Gen3 Data Platform Community that strives to accelerate data-driven discoveries.
+  # para1: Each of the Gen3 services is designed to accomplish a specific function in a data ecosystem, and that is achieved by providing a publicly-accessible application programming interface (API) that users, applications, and other services can send requests to.
+  # para2: This page organizes and presents the Gen3 software services in terms of the different types of data resources mentioned above.
 g3DataFeature:
   f0:
-    title: Gen3 Data Ecosystems
-    subtitle: Data ecosystems consist of an interconnected network of data resources that are integrated by utilizing a common set of software services called the Gen3 Framework Services. These services support the emergence of data ecosystems by empowering data resources to interoperate through providing common protocols for user authentication and authorization, data indexing, and metadata services.
+    title: Gen3 Code of Conduct
+    subtitle: The Gen3 Community values respect and professionalism. Our purpose is to share knowledge and make everyone feel safe and included.
     button:
-      link: /products/data-ecosystems
+      link: https://forums.gen3.org/t/faq-guidelines/5
   f1:
     title: Gen3 Framework Services
     subtitle: User authentication with data object and metadata indexing.
@@ -62,11 +62,11 @@ g3DataFeature:
         fig: /figs/features/visualization.svg
 g3Entrance:
   e1:
-    title: View the Gen3 Codebase
-    detail: Visit the code repositories in GitHub
+    title: Frequently Asked Questions
+    detail: Review the most common questions and answers
     button:
-      caption: Learn
-      link: https://github.com/uc-cdis
+      caption: FAQ
+      link: https://gen3.org/resources/faq/
   e2:
     title: Get Started Easily
     detail: View tutorials on using Gen3, including setup and configuration.
@@ -110,7 +110,7 @@ g3Entrance:
           {{< param "g3DataFeature.f0.subTitle" >}}
         </p>
         <a class="g3-button g3-button--tertiary g3-flex-content_alien-self-flex-end" href="{{< param "g3DataFeature.f0.button.link" >}}" ">
-            Learn More
+            Read further
         </a>
       </div>
       <div class="g3-flex-content g3-space__margin-md-top-bottom">
