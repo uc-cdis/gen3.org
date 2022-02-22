@@ -47,7 +47,7 @@ g3DataFeature:
     #     fig: /figs/features/submit-data.svg
   f3:
     title: Gen3 Projects
-    subtitle: Gen3 is ever changing. Check out our current projects supported by our software stack.
+    subtitle: Gen3 is ever changing. Check out our current projects.
     button:
       link: https://stats.gen3.org
     # contents:
@@ -63,6 +63,21 @@ g3DataFeature:
   f4:
     title: Gen3 Forum
     subtitle: Discuss use and development of the Gen3 software suite. Find different topics and answers for beginner and advanced stages.
+    button:
+      link: https://forums.gen3.org
+  f5:
+    title: Gen3 Videos
+    subtitle: Dig deep into our videos and webinars to see Gen3 configurations and operations.
+    button:
+      link: https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/featured
+  f6:
+    title: Open Source
+    subtitle: Visit CTDS on GitHub or submit an open Pull Request to the code base.
+    button:
+      link: https://gen3.org/resources/developer/dev-introduction/pull-requests-prs
+  f7:
+    title: Gen3 Publications
+    subtitle: Follow the discoveries being made by Gen3 researchers.
     button:
       link: https://forums.gen3.org
 g3Entrance:
@@ -125,27 +140,9 @@ g3Entrance:
             {{< param "g3DataFeature.f1.subTitle" >}}
           </p>
           <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
-          <!-- <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
-            <img class="g3-row__10vh" src="{{< param "g3DataFeature.f1.contents.c1.fig" >}}" />
-            <p class="introduction">
-              {{< param "g3DataFeature.f1.contents.c1.name" >}}
-            </p>
-          </div>
-          <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
-            <img class="g3-row__10vh" src="{{< param "g3DataFeature.f1.contents.c2.fig" >}}" />
-            <p class="introduction">
-              {{< param "g3DataFeature.f1.contents.c2.name" >}}
-            </p>
-          </div>
-          <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
-            <img class="g3-row__10vh" src="{{< param "g3DataFeature.f1.contents.c3.fig" >}}" />
-            <p class="introduction">
-              {{< param "g3DataFeature.f1.contents.c3.name" >}}
-            </p>
-          </div> -->
           <div class="g3-flex-content g3-flex-content_center">
             <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f1.button.link" >}}" ">
-              Sign up!
+              Sign up
             </a>
           </div>
         </div>
@@ -155,24 +152,6 @@ g3Entrance:
             {{< param "g3DataFeature.f2.subTitle" >}}
           </p>
           <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
-          <!-- <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
-            <img class="g3-row__10vh" src="{{< param "g3DataFeature.f2.contents.c1.fig" >}}" />
-            <p class="introduction">
-              {{< param "g3DataFeature.f2.contents.c1.name" >}}
-            </p>
-          </div>
-          <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
-            <img class="g3-row__10vh" src="{{< param "g3DataFeature.f2.contents.c2.fig" >}}" />
-            <p class="introduction">
-              {{< param "g3DataFeature.f2.contents.c2.name" >}}
-            </p>
-          </div>
-          <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
-            <img class="g3-row__10vh" src="{{< param "g3DataFeature.f2.contents.c3.fig" >}}" />
-            <p class="introduction">
-              {{< param "g3DataFeature.f2.contents.c3.name" >}}
-            </p>
-          </div> -->
           <div class="g3-flex-content g3-flex-content_center">
             <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f2.button.link" >}}" ">
               Get Help!
@@ -185,24 +164,6 @@ g3Entrance:
             {{< param "g3DataFeature.f3.subTitle" >}}
           </p>
           <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
-          <!-- <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
-            <img class="g3-row__10vh" src="{{< param "g3DataFeature.f3.contents.c1.fig" >}}" />
-            <p class="introduction">
-              {{< param "g3DataFeature.f3.contents.c1.name" >}}
-            </p>
-          </div>
-          <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
-            <img class="g3-row__10vh" src="{{< param "g3DataFeature.f3.contents.c2.fig" >}}" />
-            <p class="introduction">
-              {{< param "g3DataFeature.f3.contents.c2.name" >}}
-            </p>
-          </div>
-          <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
-            <img class="g3-row__10vh" src="{{< param "g3DataFeature.f3.contents.c3.fig" >}}" />
-            <p class="introduction">
-              {{< param "g3DataFeature.f3.contents.c3.name" >}}
-            </p>
-          </div> -->
           <div class="g3-flex-content g3-flex-content_center">
             <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f3.button.link" >}}" ">
               Learn More
@@ -221,6 +182,42 @@ g3Entrance:
             Explore
         </a>
       </div>
+      <div class="g3-flex-content g3-space__margin-md-top-bottom">
+        <div class="g3-space__margin-sm-left-right g3-col__33 g3-box">
+          <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f5.title" >}}</h3>
+          <p>
+            {{< param "g3DataFeature.f5.subTitle" >}}
+          </p>
+          <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
+          <div class="g3-flex-content g3-flex-content_center">
+            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f1.button.link" >}}" ">
+              Watch
+            </a>
+          </div>
+        </div>
+        <div class="g3-space__margin-sm-left-right g3-col__33 g3-box">
+          <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f6.title" >}}</h3>
+          <p>
+            {{< param "g3DataFeature.f6.subTitle" >}}
+          </p>
+          <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
+          <div class="g3-flex-content g3-flex-content_center">
+            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f2.button.link" >}}" ">
+              Contribute
+            </a>
+          </div>
+        </div>
+        <div class="g3-space__margin-sm-left-right g3-col__33 g3-box">
+          <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f7.title" >}}</h3>
+          <p>
+            {{< param "g3DataFeature.f7.subTitle" >}}
+          </p>
+          <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
+          <div class="g3-flex-content g3-flex-content_center">
+            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f3.button.link" >}}" ">
+              Read
+            </a>
+          </div>
     </div>
   </div>
 </section>
