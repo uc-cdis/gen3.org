@@ -1,14 +1,12 @@
 ---
 identifier: community
-title: Gen3 - Community
+title: Gen3 - Resources
 linktitle: community
 date: 2021-01-14
 g3Teaser:
-  # fig: /figs/productkv.svg
+  fig: /figs/community.png
   title: Gen3 Community
   detail: Welcome to the Gen3 Community! Learn from our Community members and engage in technical discussions. Find resources below to discover helpful information on the Gen3 Data Platform Community that strives to accelerate data-driven discoveries.
-  # para1: Each of the Gen3 services is designed to accomplish a specific function in a data ecosystem, and that is achieved by providing a publicly-accessible application programming interface (API) that users, applications, and other services can send requests to.
-  # para2: This page organizes and presents the Gen3 software services in terms of the different types of data resources mentioned above.
 g3DataFeature:
   f0:
     title: Gen3 Code of Conduct
@@ -32,7 +30,7 @@ g3DataFeature:
       link: https://stats.gen3.org
   f4:
     title: Gen3 Forum
-    subtitle: Discuss use and development of the Gen3 software suite. Find different topics and answers for beginner through advanced stages.
+    subtitle: Discuss use and development of the Gen3 software suite. Find different topics and answers for beginner and advanced stages.
     button:
       link: https://forums.gen3.org
   f5:
@@ -68,6 +66,7 @@ g3Entrance:
 <section class="g3-bg__mint">
   <div class="g3-outer-wrapper g3-flex-content g3-flex-content__reverse">
     <div class="g3-col__50 g3-flex-content">
+      <img class="g3-img__full-width" src="{{< param "g3Teaser.fig" >}}"/>
     </div>
     <div class="g3-space__padding-lg-top g3-col__50">
       <div class="g3-space__wrapper-gap-left">
