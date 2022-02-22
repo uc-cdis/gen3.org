@@ -1,6 +1,6 @@
 ---
 identifier: community
-title: Gen3 - Resources
+title: Gen3 - Community
 linktitle: community
 date: 2021-01-14
 g3Teaser:
