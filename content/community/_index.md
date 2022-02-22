@@ -100,7 +100,7 @@ g3Entrance:
     <div class="g3-col__50 g3-flex-content">
       <img class="g3-img__full-width" src="{{< param "g3Teaser.fig" >}}"/>
     </div>
-    <div class="g3-space__padding-lg-top g3-space__padding-lg-bottom g3-col__50">
+    <div class="g3-space__padding-lg-top g3-col__50">
       <div class="g3-space__wrapper-gap-left">
         <h1 class="g3-space__margin-sm-bottom">
           {{< param "g3Teaser.title" >}}
