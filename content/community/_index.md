@@ -4,7 +4,7 @@ title: Gen3 - Resources
 linktitle: community
 date: 2021-01-14
 g3Teaser:
-  fig: /figs/productkv.svg
+  # fig: /figs/productkv.svg
   title: Gen3 Community
   detail: Welcome to the Gen3 Community! Learn from our Community members and engage in technical discussions. Find resources below to discover helpful information on the Gen3 Data Platform Community that strives to accelerate data-driven discoveries.
   # para1: Each of the Gen3 services is designed to accomplish a specific function in a data ecosystem, and that is achieved by providing a publicly-accessible application programming interface (API) that users, applications, and other services can send requests to.
@@ -16,50 +16,55 @@ g3DataFeature:
     button:
       link: https://forums.gen3.org/t/faq-guidelines/5
   f1:
-    title: Gen3 Framework Services
-    subtitle: User authentication with data object and metadata indexing.
+    title: Join our Slack!
+    subtitle: This is where we gather to ask questions and learn from others' experiences.
     button:
-      link: /products/framework-services
-    contents:
-      c1:
-        name: Object Indexing
-        fig: /figs/features/index.svg
-      c2:
-        name: AuthN/AuthZ
-        fig: /figs/features/auth.svg
-      c3:
-        name: Metadata Service
-        fig: /figs/features/mds.svg
+      link: https://docs.google.com/forms/d/e/1FAIpQLSczyhhOXeCK9FdVtpQpelOHYnRj1EAq1rwwnm9q6cPAe5a7ug/viewform
+    # contents:
+    #   c1:
+    #     name: Object Indexing
+    #     fig: /figs/features/index.svg
+    #   c2:
+    #     name: AuthN/AuthZ
+    #     fig: /figs/features/auth.svg
+    #   c3:
+    #     name: Metadata Service
+    #     fig: /figs/features/mds.svg
   f2:
-    title: Gen3 Data Commons
-    subtitle: Data management with web portal and integrated workspaces.
+    title: Help Desk
+    subtitle: For assistance with urgent or project specific questions, please contact our help desk.
     button:
-      link: /products/data-commons
-    contents:
-      c1:
-        name: Data Portal
-        fig: /figs/features/portal.svg
-      c2:
-        name: Data Search
-        fig: /figs/features/search.svg
-      c3:
-        name: Data Submission
-        fig: /figs/features/submit-data.svg
+      link: https://gen3.org/resources/user/#contact-ctds-staff
+    # contents:
+    #   c1:
+    #     name: Data Portal
+    #     fig: /figs/features/portal.svg
+    #   c2:
+    #     name: Data Search
+    #     fig: /figs/features/search.svg
+    #   c3:
+    #     name: Data Submission
+    #     fig: /figs/features/submit-data.svg
   f3:
-    title: Gen3 Workspaces
-    subtitle: Secure, cloud-based data analysis environments.
+    title: Gen3 Projects
+    subtitle: Gen3 is ever changing. Check out our current projects supported by our software stack.
     button:
-      link: /products/workspaces
-    contents:
-      c1:
-        name: RStudio
-        fig: /figs/features/rstudio.svg
-      c2:
-        name: Jupyter Notebooks
-        fig: /figs/features/jupyter.svg
-      c3:
-        name: Custom Apps
-        fig: /figs/features/visualization.svg
+      link: https://stats.gen3.org
+    # contents:
+    #   c1:
+    #     name: RStudio
+    #     fig: /figs/features/rstudio.svg
+    #   c2:
+    #     name: Jupyter Notebooks
+    #     fig: /figs/features/jupyter.svg
+    #   c3:
+    #     name: Custom Apps
+    #     fig: /figs/features/visualization.svg
+  f4:
+    title: Gen3 Forum
+    subtitle: Discuss use and development of the Gen3 software suite. Find different topics and answers for beginner and advanced stages.
+    button:
+      link: https://forums.gen3.org
 g3Entrance:
   e1:
     title: Frequently Asked Questions
@@ -77,7 +82,7 @@ g3Entrance:
 
 <section class="g3-bg__mint">
   <div class="g3-outer-wrapper g3-flex-content g3-flex-content__reverse">
-    <div class="g3-col__50 g3-flex-content g3-space__padding-md-top g3-mb-space__padding-lg-top">
+    <div class="g3-col__50 g3-flex-content">
       <img class="g3-img__full-width" src="{{< param "g3Teaser.fig" >}}"/>
     </div>
     <div class="g3-space__padding-lg-top g3-space__padding-lg-bottom g3-col__50">
@@ -120,7 +125,7 @@ g3Entrance:
             {{< param "g3DataFeature.f1.subTitle" >}}
           </p>
           <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
-          <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
+          <!-- <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
             <img class="g3-row__10vh" src="{{< param "g3DataFeature.f1.contents.c1.fig" >}}" />
             <p class="introduction">
               {{< param "g3DataFeature.f1.contents.c1.name" >}}
@@ -137,10 +142,10 @@ g3Entrance:
             <p class="introduction">
               {{< param "g3DataFeature.f1.contents.c3.name" >}}
             </p>
-          </div>
+          </div> -->
           <div class="g3-flex-content g3-flex-content_center">
             <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f1.button.link" >}}" ">
-              Learn More
+              Sign up!
             </a>
           </div>
         </div>
@@ -150,7 +155,7 @@ g3Entrance:
             {{< param "g3DataFeature.f2.subTitle" >}}
           </p>
           <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
-          <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
+          <!-- <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
             <img class="g3-row__10vh" src="{{< param "g3DataFeature.f2.contents.c1.fig" >}}" />
             <p class="introduction">
               {{< param "g3DataFeature.f2.contents.c1.name" >}}
@@ -167,10 +172,10 @@ g3Entrance:
             <p class="introduction">
               {{< param "g3DataFeature.f2.contents.c3.name" >}}
             </p>
-          </div>
+          </div> -->
           <div class="g3-flex-content g3-flex-content_center">
             <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f2.button.link" >}}" ">
-              Learn More
+              Get Help!
             </a>
           </div>
         </div>
@@ -180,7 +185,7 @@ g3Entrance:
             {{< param "g3DataFeature.f3.subTitle" >}}
           </p>
           <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
-          <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
+          <!-- <div class="g3-space__margin-md-top-bottom g3-flex-content g3-flex-content_center g3-flex-content_space-between">
             <img class="g3-row__10vh" src="{{< param "g3DataFeature.f3.contents.c1.fig" >}}" />
             <p class="introduction">
               {{< param "g3DataFeature.f3.contents.c1.name" >}}
@@ -197,13 +202,24 @@ g3Entrance:
             <p class="introduction">
               {{< param "g3DataFeature.f3.contents.c3.name" >}}
             </p>
-          </div>
+          </div> -->
           <div class="g3-flex-content g3-flex-content_center">
             <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f3.button.link" >}}" ">
               Learn More
             </a>
           </div>
         </div>
+      </div>
+      <div class="g3-flex-content g3-flex-content__col">
+      <div class="g3-flex-content g3-flex-content__col">
+      <div class="g3-flex-content g3-flex-content__col g3-space__margin-sm-left-right g3-box">
+        <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f4.title" >}}</h3>
+        <p>
+          {{< param "g3DataFeature.f4.subTitle" >}}
+        </p>
+        <a class="g3-button g3-button--tertiary g3-flex-content_alien-self-flex-end" href="{{< param "g3DataFeature.f4.button.link" >}}" ">
+            Explore
+        </a>
       </div>
     </div>
   </div>
