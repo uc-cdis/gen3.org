@@ -20,46 +20,16 @@ g3DataFeature:
     subtitle: This is where we gather to ask questions and learn from others' experiences.
     button:
       link: https://docs.google.com/forms/d/e/1FAIpQLSczyhhOXeCK9FdVtpQpelOHYnRj1EAq1rwwnm9q6cPAe5a7ug/viewform
-    # contents:
-    #   c1:
-    #     name: Object Indexing
-    #     fig: /figs/features/index.svg
-    #   c2:
-    #     name: AuthN/AuthZ
-    #     fig: /figs/features/auth.svg
-    #   c3:
-    #     name: Metadata Service
-    #     fig: /figs/features/mds.svg
   f2:
     title: Help Desk
     subtitle: For assistance with urgent or project specific questions, please contact our help desk.
     button:
       link: https://gen3.org/resources/user/#contact-ctds-staff
-    # contents:
-    #   c1:
-    #     name: Data Portal
-    #     fig: /figs/features/portal.svg
-    #   c2:
-    #     name: Data Search
-    #     fig: /figs/features/search.svg
-    #   c3:
-    #     name: Data Submission
-    #     fig: /figs/features/submit-data.svg
   f3:
     title: Gen3 Projects
     subtitle: Gen3 is ever changing. Check out our current projects.
     button:
       link: https://stats.gen3.org
-    # contents:
-    #   c1:
-    #     name: RStudio
-    #     fig: /figs/features/rstudio.svg
-    #   c2:
-    #     name: Jupyter Notebooks
-    #     fig: /figs/features/jupyter.svg
-    #   c3:
-    #     name: Custom Apps
-    #     fig: /figs/features/visualization.svg
   f4:
     title: Gen3 Forum
     subtitle: Discuss use and development of the Gen3 software suite. Find different topics and answers for beginner through advanced stages.
