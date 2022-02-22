@@ -79,7 +79,7 @@ g3DataFeature:
     title: Gen3 Publications
     subtitle: Follow the discoveries being made by Gen3 researchers.
     button:
-      link: https://forums.gen3.org
+      link: https://ctds.uchicago.edu/publications
 g3Entrance:
   e1:
     title: Frequently Asked Questions
@@ -190,7 +190,7 @@ g3Entrance:
           </p>
           <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
           <div class="g3-flex-content g3-flex-content_center">
-            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f1.button.link" >}}" ">
+            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f5.button.link" >}}" ">
               Watch
             </a>
           </div>
@@ -202,7 +202,7 @@ g3Entrance:
           </p>
           <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
           <div class="g3-flex-content g3-flex-content_center">
-            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f2.button.link" >}}" ">
+            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f6.button.link" >}}" ">
               Contribute
             </a>
           </div>
@@ -214,7 +214,7 @@ g3Entrance:
           </p>
           <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
           <div class="g3-flex-content g3-flex-content_center">
-            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f3.button.link" >}}" ">
+            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f7.button.link" >}}" ">
               Read
             </a>
           </div>
