@@ -62,7 +62,7 @@ g3DataFeature:
     #     fig: /figs/features/visualization.svg
   f4:
     title: Gen3 Forum
-    subtitle: Discuss use and development of the Gen3 software suite. Find different topics and answers for beginner and advanced stages.
+    subtitle: Discuss use and development of the Gen3 software suite. Find different topics and answers for beginner through advanced stages.
     button:
       link: https://forums.gen3.org
   f5:
@@ -98,7 +98,6 @@ g3Entrance:
 <section class="g3-bg__mint">
   <div class="g3-outer-wrapper g3-flex-content g3-flex-content__reverse">
     <div class="g3-col__50 g3-flex-content">
-      <img class="g3-img__full-width" src="{{< param "g3Teaser.fig" >}}"/>
     </div>
     <div class="g3-space__padding-lg-top g3-col__50">
       <div class="g3-space__wrapper-gap-left">
