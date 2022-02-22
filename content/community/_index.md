@@ -30,7 +30,7 @@ g3DataFeature:
       link: https://stats.gen3.org
   f4:
     title: Gen3 Forum
-    subtitle: Discuss use and development of the Gen3 software suite. Find different topics and answers for beginner and advanced stages.
+    subtitle: Discuss use and development of the Gen3 software suite. Find different topics and answers for beginner through advanced stages.
     button:
       link: https://forums.gen3.org
   f5:
