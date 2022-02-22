@@ -1,6 +1,6 @@
 ---
 identifier: community
-title: Gen3 - Resources
+title: Gen3 - Community
 linktitle: community
 date: 2021-01-14
 g3Teaser:
@@ -74,7 +74,7 @@ g3DataFeature:
     title: Open Source
     subtitle: Visit CTDS on GitHub or submit an open Pull Request to the code base.
     button:
-      link: https://gen3.org/resources/developer/dev-introduction/pull-requests-prs
+      link: https://gen3.org/resources/developer/dev-introduction/#pull-requests-prs
   f7:
     title: Gen3 Publications
     subtitle: Follow the discoveries being made by Gen3 researchers.
