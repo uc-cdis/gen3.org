@@ -21,4 +21,4 @@ RUN sed -i "s|{BASE_URL}|${BASE_URL}|g" config.yaml \
 FROM nginx
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=builder /gen3.org/public /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d
