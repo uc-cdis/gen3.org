@@ -36,7 +36,7 @@ g3Upcoming:
 
 <section class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
     <div class="g3-inner-wrapper">
-        <h2>First Gen3 Community Forum</h2>
+        <h2>Upcoming Events</h2>
     </div>
 </section>
 
