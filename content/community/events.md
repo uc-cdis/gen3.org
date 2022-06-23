@@ -40,4 +40,4 @@ g3Upcoming:
     </div>
 </section>
 
-{{< webinar "g3Upcoming" >}}
+{{< events "g3Upcoming" >}}
