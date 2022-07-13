@@ -14,6 +14,7 @@ g3Upcoming:
     Description: The key goal of this meeting is to kick start the AU/US/NZ international user community, which consists of developers, operators, sponsors, and other stakeholders who want to exchange ideas on the code and shape of Gen3. The virtual community forum is co-hosted by the University of Chicago and the University of Melbourne. The forum will meet for three days, three hours each day, and will include presentations from various Gen3 operators, developers, and breakout sessions to craft ideas for new features.
     Image: /figs/gen3_new_logo.png
     Link: https://www.eventbrite.com/e/gen3-community-forum-2022-tickets-367673931627?aff=gen3
+    Link: /community/events/gen3forum_202210
 ---
 
 <section class="g3-bg__mint">
