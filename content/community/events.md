@@ -10,12 +10,13 @@ g3Teaser:
 
 g3Upcoming:
   - Title: First Gen3 Community Forum
-    Date: Oct 10-12, 2022 US; Oct 11-13, 2022 Australia
+    Date: Oct 10-12, 2022 US; Oct 11-13, 2022 AUS
     Description:  The Gen3 Community Forum consists of those developing and operating Gen3 data commons and data meshes, and other stakeholders involved with the Gen3 community.  The aims of the launch event are to jump start a community that will: Share information about how to set up and operate a Gen3 data commons; Build a community of Gen3 developers and operators; Engage with the Gen3 core team; Help develop and refine a Gen3 development roadmap. The virtual community forum is co-hosted by the University of Chicago and the Australian BioCommons.
     Image: /figs/gen3_new_logo.png
     Link: https://www.eventbrite.com/e/gen3-community-forum-2022-tickets-367673931627?aff=gen3
-    LocalLink: /community/events/gen3forum_202210
-
+    button:
+      caption: Data Contribution
+      link: /community/events/gen3forum_202210
 ---
 
 <section class="g3-bg__mint">
