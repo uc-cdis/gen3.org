@@ -6,7 +6,7 @@ date: 2022-06-22T22:16:21-05:00
 g3Teaser:
   fig: /figs/webinar.svg
   title: Gen3 Community Events
-  detail: The Gen3 team at University of Chicago hosts events in partnership with the community of developers, operators, and sponsors of Gen3 data resources that aim to share information about how to set up new commons, build a community that can help each other, and create clear paths for support from the Gen3 team.
+  detail: The Gen3 team at University of Chicago hosts events in partnership with the community of developers, operators, and sponsors of Gen3 data resources. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 team.
 
 g3Upcoming:
   - Title: Gen3 Community Forum 2022
