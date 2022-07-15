@@ -9,11 +9,14 @@ g3Teaser:
   detail: The Gen3 team at University of Chicago hosts events in partnership with the community of developers, operators, and sponsors of Gen3 data resources that aim to share information about how to set up new commons, build a community that can help each other, and create clear paths for support from the Gen3 team.
 
 g3Upcoming:
-  - Title: First Gen3 Community Forum
-    Date: Aug 1-3, 2022 US; Aug 2-4, 2022 Australia
-    Description: The key goal of this meeting is to kick start the AU/US/NZ international user community, which consists of developers, operators, sponsors, and other stakeholders who want to exchange ideas on the code and shape of Gen3. The virtual community forum is co-hosted by the University of Chicago and the University of Melbourne. The forum will meet for three days, three hours each day, and will include presentations from various Gen3 operators, developers, and breakout sessions to craft ideas for new features.
+  - Title: Gen3 Community Forum 2022
+    Date: Oct 10-12, 2022 US; Oct 11-13, 2022 AUS
+    Description:  The Gen3 Community Forum consists of those developing and operating Gen3 data commons and data meshes, those considering developing Gen3 data commons and meshes, and other stakeholders involved with the Gen3 community. The four aims of the Forum are: to share knowledge about Gen3, its architecture, and the Gen3 roadmaps and priorities; to strengthen the connection between the Gen3 core team and those developing, operating and using Gen3 platforms; to design a set of ongoing community engagement activities; and to discuss and agree on key shared development priorities between the Gen3 core team and the Gen3 community. The virtual community forum is co-hosted by the University of Chicago and the Australian BioCommons.
     Image: /figs/gen3_new_logo.png
-    Link: https://www.eventbrite.com/e/gen3-community-forum-2022-tickets-367673931627?aff=gen3
+    Link: https://www.eventbrite.com/e/gen3-community-forum-2022-tickets-384218496867
+    LocalLink:  /community/events/gen3forum_202210
+    LocalLink2: /community/events/gen3forum_2022_agenda
+
 ---
 
 <section class="g3-bg__mint">
