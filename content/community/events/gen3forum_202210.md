@@ -8,11 +8,12 @@ layout: single
 
 {{% markdownwrapper %}}
 <br>
-<center>
+
 ### Gen3 User Forum Agenda {Draft}
 ### October 10-12, 2022 (US)/October 11-13 (AU/NZ)
 
 <br>
+
 The forum will meet for three days, three hours each day, and will include presentations from various Gen3 operators, developers, and breakout sessions to craft ideas for new features.
 <ul>
    <li> US (Chicago CDT) 4pm - 7pm daily
@@ -22,7 +23,6 @@ The forum will meet for three days, three hours each day, and will include prese
 
 
 ### Day 1
-<br>
 
 <table border=1 cellspacing="0" width="600">
   <tr>
@@ -43,8 +43,7 @@ The forum will meet for three days, three hours each day, and will include prese
     <td>6:30-7:00pm CDT </td> <td> Gen3 Roadmap Discussion </td>
   </tr>
 </table>
-</center>
-<br><br>
+
 
 ### Day 2
 
@@ -63,10 +62,11 @@ The forum will meet for three days, three hours each day, and will include prese
     <td> 5:00-7:00pm CDT </td> <td> Community Presentations </td>
   </tr>
 </table>
-<br>
+
+
 ### Day 3
 
-<table border=1 cellspacing="0" width="600">
+<table border=1 cellspacing="0" width="700">
   <tr>
     <th> Time </th>
     <th> Topic </th>
