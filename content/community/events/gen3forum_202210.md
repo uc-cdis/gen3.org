@@ -10,22 +10,25 @@ layout: single
 
 ### Gen3 User Forum
 ### October 10-12, 2022 (US)/October 11-13 (AU/NZ)
-* * *
+
+<br>
 The forum will meet for three days, three hours each day, and will include presentations from various Gen3 operators, developers, and breakout sessions to craft ideas for new features.
 <ul>
-   <li> US (Chicago CDT) 4pm - 7pm daily TBD
-   <li> AU (AEST) 7am - 10am daily TBD </li>
+   <li> US (Chicago CDT) 4pm - 7pm daily
+   <li> AU (AEST) 7am - 10am daily  </li>
    <li> <a href:   >View in your local time</a>! </li>
 </ul>
-
+<br>
 
 ### Day 1
-| Time | Topic |
+| :Time | Topic: |
 | ---------- | --------------------------------- |
 | 4:00-5:00pm CDT | Tour of Gen3 Data Commons and Meshes |
 | 5:00-6:00pm CDT | Tour of Gen3 Workspaces and Applications |
 | 6:00-6:30pm CDT | Gen3 Roadmap |
 | 6:30-7:00pm CDT | Gen3 Roadmap Discussion|
+
+<br><br>
 
 ### Day 2
 | Time | Topic |
@@ -34,6 +37,7 @@ The forum will meet for three days, three hours each day, and will include prese
 | 4:30-5:00pm CDT | Q&A with Discussion |
 | 5:00-7:00pm CDT | Community Presentations |
 
+<br><br>
 ### Day 3
 | Time | Topic |
 | ---------------- | --------------------------------- |
