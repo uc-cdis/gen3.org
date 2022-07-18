@@ -21,10 +21,11 @@ The forum will meet for three days, three hours each day, and will include prese
    <li> <a href:   >View in your local time</a>! </li>
 </ul>
 
+<br>
 
 ### Day 1
 
-<table border=1 cellspacing="0" width="600">
+<table border=1 cellspacing="0" width="700">
   <tr>
     <th> Time </th>
     <th> Topic </th>
@@ -44,10 +45,11 @@ The forum will meet for three days, three hours each day, and will include prese
   </tr>
 </table>
 
+<br>
 
 ### Day 2
 
-<table border=1 cellspacing="0" width="600">
+<table border=1 cellspacing="0" width="700">
   <tr>
     <th> Time </th>
     <th> Topic </th>
@@ -63,6 +65,7 @@ The forum will meet for three days, three hours each day, and will include prese
   </tr>
 </table>
 
+<br>
 
 ### Day 3
 
