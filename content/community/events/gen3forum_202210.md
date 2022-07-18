@@ -7,7 +7,8 @@ layout: single
 ---
 
 {{% markdownwrapper %}}
-
+<br>
+<center>
 ### Gen3 User Forum Agenda {Draft}
 ### October 10-12, 2022 (US)/October 11-13 (AU/NZ)
 
@@ -23,14 +24,6 @@ The forum will meet for three days, three hours each day, and will include prese
 ### Day 1
 <br>
 
-| Time | Topic |
-| ---------- | --------------------------------- |
-| 4:00-5:00pm CDT | Tour of Gen3 Data Commons and Meshes |
-| 5:00-6:00pm CDT | Tour of Gen3 Workspaces and Applications |
-| 6:00-6:30pm CDT | Gen3 Roadmap |
-| 6:30-7:00pm CDT | Gen3 Roadmap Discussion|
-
-<center>
 <table border=1 cellspacing="0" width="600">
   <tr>
     <th> Time </th>
@@ -54,18 +47,43 @@ The forum will meet for three days, three hours each day, and will include prese
 <br><br>
 
 ### Day 2
-| Time | Topic |
-| ---------------- | --------------------------------- |
-| 4:00-4:30pm CDT | Gen3 Community |
-| 4:30-5:00pm CDT | Q&A with Discussion |
-| 5:00-7:00pm CDT | Community Presentations |
 
-<br><br>
+<table border=1 cellspacing="0" width="600">
+  <tr>
+    <th> Time </th>
+    <th> Topic </th>
+  </tr>
+  <tr>
+    <td> 4:00-4:30pm CDT </td> <td> Gen3 Community </td>
+  </tr>
+  <tr>
+     <td> 4:30-5:00pm CDT </td>  <td> Q&A with Discussion </td>
+  </tr>
+  <tr>
+    <td> 5:00-7:00pm CDT </td> <td> Community Presentations </td>
+  </tr>
+</table>
+<br>
 ### Day 3
-| Time | Topic |
-| ---------------- | --------------------------------- |
-| 4:00-4:15pm CDT | Introduction to Gen3 Feature Breakout Sessions |
-| 4:15-5:15pm CDT | Breakout Sessions |
-| 5:15-6:00pm CDT | Reports from Breakout Sessions |
-| 6:00-6:15pm CDT | Overview of Future Community Development Structure |
-| 6:15-7:00pm CDT | Discussion of Future Community Development <ul><li> Community Manager </li> <li> Management of prioritized feature description documents </li> <li> Monthly calls </li> <li> Slack community channel </li> <li> Newsletter </li> </ul>
+
+<table border=1 cellspacing="0" width="600">
+  <tr>
+    <th> Time </th>
+    <th> Topic </th>
+  </tr>
+   <tr>
+      <td> 4:00-4:15pm CDT </td> <td> Introduction to Gen3 Feature Breakout Sessions </td>
+   </tr>
+     <td> 4:15-5:15pm CDT </td> <td>  Breakout Sessions </td>
+  </tr>
+   <tr>
+    <td> 5:15-6:00pm CDT </td> <td>  Reports from Breakout Sessions </td>
+  </tr>
+  <tr>
+    <td> 6:00-6:15pm CDT </td> <td> Overview of Future Community Development Structure </td>
+  </tr>
+  <tr>
+   <td> 6:15-7:00pm CDT </td>
+   <td> Discussion of Future Community Development <ul><li> Community Manager </li> <li> Management of prioritized feature description documents </li> <li> Monthly calls </li> <li> Slack community channel </li> <li> Newsletter </li> </ul> </td>
+  </tr>
+</table>
