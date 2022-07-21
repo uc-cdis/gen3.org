@@ -18,8 +18,8 @@ layout: single
 The forum will meet for three days, three hours each day, and will include presentations from various Gen3 operators, developers, and breakout sessions to craft ideas for new features.
 <ul>
    <li> US (Chicago CDT) 4pm - 7pm daily
-   <li> AU (AEST) 7am - 10am daily  </li>
-   <li> <a href: https://www.timeanddate.com/worldclock/fixedtime.html?msg=Gen3+Community+Forum+%28virtual%29&iso=20221010T16&p1=64&ah=3 >View in your local time</a>! </li>
+   <li> AU (ADST) 8am - 11am daily  </li>
+   <li> <a href:https://www.timeanddate.com/worldclock/fixedtime.html?msg=Gen3+Community+Forum+%28virtual%29&iso=20221010T16&p1=64&ah=3>View in your local time</a>! </li>
 </ul>
 
 <br>
