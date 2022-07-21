@@ -19,7 +19,7 @@ The forum will meet for three days, three hours each day, and will include prese
 <ul>
    <li> US (Chicago CDT) 4pm - 7pm daily
    <li> AU (ADST) 8am - 11am daily  </li>
-   <li> <a href:https://www.timeanddate.com/worldclock/fixedtime.html?msg=Gen3+Community+Forum+%28virtual%29&iso=20221010T16&p1=64&ah=3>View in your local time</a>! </li>
+   <li> <a href=https://www.timeanddate.com/worldclock/fixedtime.html?msg=Gen3+Community+Forum+%28virtual%29&iso=20221010T16&p1=64&ah=3>View in your local time</a>! </li>
 </ul>
 
 <br>
