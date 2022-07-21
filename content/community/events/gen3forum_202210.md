@@ -1,6 +1,6 @@
 ---
 identifier: events/gen3forum_202210
-title: Gen3 User Forum Agenda October 10-12, 2022
+title: Gen3 Community Forum Agenda October 10-12, 2022
 date: 2022-07-14
 linktitle: /community/events/gen3forum_2022210
 layout: single
@@ -10,7 +10,7 @@ layout: single
 
 <br>
 
-### Gen3 User Forum Agenda {Draft}
+### Gen3 Community Forum Agenda {Draft}
 ### October 10-12, 2022 (US)/October 11-13 (AU/NZ)
 
 <br>
