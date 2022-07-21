@@ -7,12 +7,8 @@ layout: baseof
 ---
 
 
-{{% markdownwrapper %}}
-iframe {
-    left: 50px;
-    position: absolute;
-    width: 100%;
-}
+{{% agenda %}}
+
 <br>
 
 ### Gen3 User Forum Agenda {Draft}
