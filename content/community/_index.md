@@ -48,6 +48,11 @@ g3DataFeature:
     subtitle: Follow the discoveries being made by Gen3 researchers.
     button:
       link: https://ctds.uchicago.edu/publications
+  f8:
+    title: Gen3 Community Events
+    subtitle: View information about and register for upcoming Gen3 developer community events.
+    button:
+      link: https://gen3.org/community/events/
 g3Entrance:
   e1:
     title: Frequently Asked Questions
@@ -148,6 +153,15 @@ g3Entrance:
         </p>
         <a class="g3-button g3-button--tertiary g3-flex-content_alien-self-flex-end" href="{{< param "g3DataFeature.f4.button.link" >}}" ">
             Explore
+        </a>
+      </div>
+      <div class="g3-flex-content g3-flex-content__col g3-space__margin-sm-left-right g3-box">
+        <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f8.title" >}}</h3>
+        <p>
+          {{< param "g3DataFeature.f8.subTitle" >}}
+        </p>
+        <a class="g3-button g3-button--tertiary g3-flex-content_alien-self-flex-end" href="{{< param "g3DataFeature.f8.button.link" >}}" ">
+            Explore Events
         </a>
       </div>
       <div class="g3-flex-content g3-space__margin-md-top-bottom">
