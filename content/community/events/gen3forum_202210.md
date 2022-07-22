@@ -28,21 +28,21 @@ The forum will meet for three days, three hours each day, and will include prese
 
 <table border=1 cellspacing="0" width="700">
   <tr>
-    <th> Time </th>
-    <th> Topic </th>
+   <th> Time </th>
+   <th> Topic </th>
   </tr>
   <tr>
-    <td> 4:00-5:00pm CDT </td>
-    <td> Tour of Gen3 Data Commons and Meshes </td>
+   <td> 4:00-5:00pm CDT </td>
+   <td> Tour of Gen3 Data Commons and Meshes </td>
   </tr>
   <tr>
-    <td> 5:00-6:00pm CDT  </td> <td> Tour of Gen3 Workspaces and Applications </td>
+   <td> 5:00-6:00pm CDT  </td> <td> Tour of Gen3 Workspaces and Applications </td>
   </tr>
   <tr>
-    <td> 6:00-6:30pm CDT </td> <td> Gen3 Roadmap </td>
+   <td> 6:00-6:30pm CDT </td> <td> Gen3 Roadmap </td>
   </tr>
   <tr>
-    <td>6:30-7:00pm CDT </td> <td> Gen3 Roadmap Discussion </td>
+   <td>6:30-7:00pm CDT </td> <td> Gen3 Roadmap Discussion </td>
   </tr>
 </table>
 
@@ -52,17 +52,17 @@ The forum will meet for three days, three hours each day, and will include prese
 
 <table border=1 cellspacing="0" width="700">
   <tr>
-    <th> Time </th>
-    <th> Topic </th>
+   <th> Time </th>
+   <th> Topic </th>
   </tr>
   <tr>
-    <td> 4:00-4:30pm CDT </td> <td> Gen3 Community </td>
+   <td> 4:00-4:30pm CDT </td> <td> Gen3 Community </td>
   </tr>
   <tr>
-    <td> 4:30-5:00pm CDT </td>  <td> Q&A with Discussion </td>
+   <td> 4:30-5:00pm CDT </td>  <td> Q&A with Discussion </td>
   </tr>
   <tr>
-    <td> 5:00-7:00pm CDT </td> <td> Community Presentations </td>
+   <td> 5:00-7:00pm CDT </td> <td> Community Presentations </td>
   </tr>
 </table>
 
@@ -72,23 +72,23 @@ The forum will meet for three days, three hours each day, and will include prese
 
 <table border=1 cellspacing="0" width="700">
   <tr>
-    <th> Time </th>
-    <th> Topic </th>
+   <th> Time </th>
+   <th> Topic </th>
   </tr>
   <tr>
-    <td> 4:00-4:15pm CDT </td> <td> Introduction to Gen3 Feature Breakout Sessions </td>
+   <td> 4:00-4:15pm CDT </td> <td> Introduction to Gen3 Feature Breakout Sessions </td>
   </tr>
   <tr>
-    <td> 4:15-5:15pm CDT </td> <td>  Breakout Sessions </td>
+   <td> 4:15-5:15pm CDT </td> <td>  Breakout Sessions </td>
   </tr>
   <tr>
-    <td> 5:15-6:00pm CDT </td> <td>  Reports from Breakout Sessions </td>
+   <td> 5:15-6:00pm CDT </td> <td>  Reports from Breakout Sessions </td>
   </tr>
   <tr>
-    <td> 6:00-6:15pm CDT </td> <td> Overview of Future Community Development Structure </td>
+   <td> 6:00-6:15pm CDT </td> <td> Overview of Future Community Development Structure </td>
   </tr>
   <tr>
-    <td> 6:15-7:00pm CDT </td>
-    <td> Discussion of Future Community Development <ul> <li> Community Manager </li> <li> Management of prioritized feature description documents </li> <li> Monthly calls </li> <li> Slack community channel </li> <li> Newsletter </li> </ul> </td>
+   <td> 6:15-7:00pm CDT </td>
+   <td> Discussion of Future Community Development <ul> <li> Community Manager </li> <li> Management of prioritized feature description documents </li> <li> Monthly calls </li> <li> Slack community channel </li> <li> Newsletter </li> </ul> </td>
   </tr>
 </table>
