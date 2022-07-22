@@ -17,9 +17,9 @@ layout: single
 
 The forum will meet for three days, three hours each day, and will include presentations from various Gen3 operators, developers, and breakout sessions to craft ideas for new features.
 <ul>
-   <li> US (Chicago CDT) 4pm - 7pm daily </li>
-   <li> AU (ADST) 8am - 11am daily  </li>
-   <li> <a href=https://www.timeanddate.com/worldclock/fixedtime.html?msg=Gen3+Community+Forum+%28virtual%29&iso=20221010T16&p1=64&ah=3>View in your local time</a>! </li>
+  <li> US (Chicago CDT) 4pm - 7pm daily </li>
+  <li> AU (ADST) 8am - 11am daily  </li>
+  <li> <a href=https://www.timeanddate.com/worldclock/fixedtime.html?msg=Gen3+Community+Forum+%28virtual%29&iso=20221010T16&p1=64&ah=3>View in your local time</a>! </li>
 </ul>
 
 <br>
@@ -59,7 +59,7 @@ The forum will meet for three days, three hours each day, and will include prese
     <td> 4:00-4:30pm CDT </td> <td> Gen3 Community </td>
   </tr>
   <tr>
-     <td> 4:30-5:00pm CDT </td>  <td> Q&A with Discussion </td>
+    <td> 4:30-5:00pm CDT </td>  <td> Q&A with Discussion </td>
   </tr>
   <tr>
     <td> 5:00-7:00pm CDT </td> <td> Community Presentations </td>
@@ -76,10 +76,10 @@ The forum will meet for three days, three hours each day, and will include prese
     <th> Topic </th>
   </tr>
   <tr>
-      <td> 4:00-4:15pm CDT </td> <td> Introduction to Gen3 Feature Breakout Sessions </td>
+    <td> 4:00-4:15pm CDT </td> <td> Introduction to Gen3 Feature Breakout Sessions </td>
   </tr>
   <tr>
-     <td> 4:15-5:15pm CDT </td> <td>  Breakout Sessions </td>
+    <td> 4:15-5:15pm CDT </td> <td>  Breakout Sessions </td>
   </tr>
   <tr>
     <td> 5:15-6:00pm CDT </td> <td>  Reports from Breakout Sessions </td>
@@ -88,7 +88,7 @@ The forum will meet for three days, three hours each day, and will include prese
     <td> 6:00-6:15pm CDT </td> <td> Overview of Future Community Development Structure </td>
   </tr>
   <tr>
-   <td> 6:15-7:00pm CDT </td>
-   <td> Discussion of Future Community Development <ul> <li> Community Manager </li> <li> Management of prioritized feature description documents </li> <li> Monthly calls </li> <li> Slack community channel </li> <li> Newsletter </li> </ul> </td>
+    <td> 6:15-7:00pm CDT </td>
+    <td> Discussion of Future Community Development <ul> <li> Community Manager </li> <li> Management of prioritized feature description documents </li> <li> Monthly calls </li> <li> Slack community channel </li> <li> Newsletter </li> </ul> </td>
   </tr>
 </table>
