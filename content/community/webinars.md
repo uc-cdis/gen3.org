@@ -14,6 +14,11 @@ g3Teaser:
     Image: coming_soon.svg
     Link: https://www.eventbrite.com/e/gen3-webinar-come-and-learn-with-us-tickets-63399391286?aff=gen3 --->
 g3Previous:
+  - Title: NCI DCFS Metadata API
+    Date:  August 15, 2022
+    Description:  As a part of becoming compliant with FAIR2-FAIR4, Gen3 has deployed metadata services and the metadata API to facilitate the process.  Join us as we discuss DCF Framework services and the Gen3 Metadata API.
+    Youtube: I2ABLmYBO8s
+    Slides: Webinar_20220815.pdf
   - Title: NCI DCFS Quality Assurance Processes
     Date: August 24th, 2020
     Description: As part of building Framework Services, we want to provide reliable and scalable solutions to our users. Join our quality assurance team to discuss what is involved before a code or data release to ensure that DCFS provides a reliable, scalable and secure way to access both open and controlled datasets.
