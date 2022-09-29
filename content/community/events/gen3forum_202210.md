@@ -34,9 +34,14 @@ The forum will meet for three days, three hours each day, and will include prese
   <tr>
    <td> 4:00-5:00pm CDT </td>
    <td> Tour of Gen3 Data Commons and Meshes </td>
+   <table>
+      <tr> <td> Phil Schumm <br> Statistician Manager, Director, Research Computing Group, & Assistant Director, Biostat Lab</td> IBDGC Commons </td>
+      </tr>
+      <tr> <td> Pieter Miekel <br> </td> <td> NESI </td> </tr>
+  </table>
   </tr>
   <tr>
-   <td> 5:00-6:00pm CDT  </td> <td> Tour of Gen3 Workspaces and Applications </td>
+   <td> 5:00-6:00pm CDT  </td> <td> Tour of Gen3 Workspaces and Applications <table><tr></td>
   </tr>
   <tr>
    <td> 6:00-6:30pm CDT </td> <td> Gen3 Roadmap </td>

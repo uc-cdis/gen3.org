@@ -15,7 +15,7 @@ g3Upcoming:
     Image: /figs/gen3_new_logo.png
     Link: https://www.eventbrite.com/e/gen3-community-forum-2022-tickets-384218496867
     LocalLink:  /community/events/gen3forum_202210
-    LocalLink2: /community/events/gen3forum_2022_agenda
+    LocalLink2: /community/events/Gen3workshop
 
 ---
 
