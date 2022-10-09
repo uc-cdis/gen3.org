@@ -51,7 +51,7 @@ The forum will meet for three days, three hours each day, and will include prese
           <i> Marion Shadbolt, Human Genomics Data Specialist Australian BioData Commons</i>
       <hr>
        <a href='https://ibdgc.datacommons.io/NIDDK'>IBD Genetics Consortium Data Commons</a> <br>
-       <i>Phil Schumm <br> Statistician Manager, Director, Research Computing Group <br> & Assistant Director, Biostat Lab
+       <i>Phil Schumm <br> Statistician Manager, Director, Research Computing Group <br> Assistant Director, Biostat Lab
        </i>
        </td>
    </tr>
