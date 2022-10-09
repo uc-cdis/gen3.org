@@ -32,14 +32,14 @@ The forum will meet for three days, three hours each day, and will include prese
    <th> Topic </th>
   </tr>
   <tr>
-     <td> 4:00-4:05pm CDT </td>
+     <td> <h4> 4:00-4:05pm CDT </h4> </td>
      <td> <h4> Welcome to the Inaugural Community Forum</h4> </td>
   </tr>
   <tr>
-   <td> 4:05-5:00pm CDT </td>
+   <td> <h4> 4:05-5:00pm CDT </h4> </td>
    <td> <h4>Video Tour of Gen3 Data Commons and Meshes</h4> <hr>
         <a href=https://commons.cri.uchicago.edu/pcdc/>Pediatric Cancer Data Commons</a> <br>
-        <i>Sam Volchenboum, Principal Investigator & Pediantric Oncologist</i>
+        <i>Sam Volchenboum, Principal Investigator & Pediantric Oncologist, University of Chicago</i>
         <hr>
         <a href="https://ellrottlab.org/">Kyle Ellrott Lab, Oregon Health & Science University</a><br>
         <i>Brian Walsh, Senior Research Sotware Engineer, Oregon Health & Science University</i>
@@ -147,11 +147,11 @@ The forum will meet for three days, three hours each day, and will include prese
    <td> 4:15-5:15pm CDT </td>
    <td>  <h4>Breakout Sessions </h4> </hr>
         <ol>
-          <li>Standards + integration</li>
-          <li>Standing up a Gen3 instance (getting started, documentation, how-tos, help, etc.)</li>
-          <li> Improving communications and processes around bug and issue tracking </li>
-          <li> Requesting/implementing a Gen3 feature update </li>
-          <li> Joint Roadmap planning </li>
+         <li> Status of Gen3 support for GA4GH standards; importance of data GUIDS; and, discussion of prioritizing support for other standards, e.g. RDA </li>
+         <li> Standing up a Gen3 instance (getting started, documentation, how-tos, help, etc.) </li>
+         <li> Improving processes around community prioritization bug and issue tracking </li>
+         <li> How the community can best request and priortize new Gen3 features </li>
+         <li> Gen3 Community joint roadmap planning (6-18 month roadmap) </li>
         </ol>
    </td>
    </tr>
