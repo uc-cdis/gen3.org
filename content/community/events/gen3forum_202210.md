@@ -41,13 +41,13 @@ The forum will meet for three days, three hours each day, and will include prese
         <a href=https://commons.cri.uchicago.edu/pcdc/>Pediatric Cancer Data Commons</a> <br>
         <i>Sam Volchenboum, Principal Investigator & Pediantric Oncologist</i>
         <hr>
-        <a href="https://ellrottlab.org/">Kyle Ellrott Lab, Oregton Health & Science University</a><br>
+        <a href="https://ellrottlab.org/">Kyle Ellrott Lab, Oregon Health & Science University</a><br>
         <i>Brian Walsh, Senior Research Sotware Engineer, Oregon Health & Science University</i>
         <hr>
         <a href="https://healdata.org>HEAL Data Commons</a> <br>
         <i> Aarti Venkat, Faculty in Department of Medicine and Scientific Lead for CTDS at the University of Chicago</i>
         <hr>
-        <a href="https://data.acdc.ozheart.org/">Australian CardiOvascular Disease Data Commons</a> <br>
+        <a href="https://data.acdc.ozheart.org/">Australian Cardiovascular Disease Data Commons</a> <br>
           <i> Marion Shadbolt, Human Genomics Data Specialist Australian BioData Commons</i>
       <hr>
        <a href='https://ibdgc.datacommons.io/NIDDK'>IBD Genetics Consortium Data Commons</a> <br>
