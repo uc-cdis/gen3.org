@@ -45,20 +45,20 @@ The forum will meet for three days, three hours each day, and will include prese
         <i>Brian Walsh, Senior Research Sotware Engineer, Oregon Health & Science University</i>
         <hr>
         <a href="https://healdata.org>HEAL Data Commons</a> <br>
-        <i> Aarti Venkat, Faculty in Department of Medicine and the Scientific Lead for CTDS at the University of Chicago</i>
+        <i> Aarti Venkat, Faculty in Department of Medicine and Scientific Lead for CTDS at the University of Chicago</i>
         <hr>
         <a href="https://data.acdc.ozheart.org/">Australian CardiOvascular Disease Data Commons</a> <br>
           <i> Marion Shadbolt, Human Genomics Data Specialist Australian BioData Commons</i>
       <hr>
-       <a href='https://ibdgc.datacommons.io/NIDDK'>IBD Genetics Consortium Data Commons</a>
+       <a href='https://ibdgc.datacommons.io/NIDDK'>IBD Genetics Consortium Data Commons</a> <br>
        <i>Phil Schumm <br> Statistician Manager, Director, Research Computing Group <br> & Assistant Director, Biostat Lab
        </i>
        </td>
    </tr>
   <tr>
    <td> 5:00-6:00pm CDT  </td> <td> <h4>Video Tour of Gen3 Workspaces and Applications</h4> <hr>
-    Two projects from Aotearoa - AGDR & Rakeiora Pathfinder
-    <a href="https://repo.data.nesi.org.nz/">Aotearoa Genomic Data Repository"</a>
+    Two projects from Aotearoa - AGDR & Rakeiora Pathfinder <br>
+    <a href="https://repo.data.nesi.org.nz/">Aotearoa Genomic Data Repository"</a> <br>
     <i> Jun Huh, Title, New Zealand eScience Infrastructure (NeSI) </i>
     <hr>
        OCC Automatic Governance Process for Gen3 Data Commons <br>
@@ -114,7 +114,7 @@ The forum will meet for three days, three hours each day, and will include prese
        <hr>
        Linking Data Commons
        <a href="https://brh.data-commons.org/">Biomedical Research Hub</a> <br>
-       <i> Aarti Venkat, XXXXXXXXXXX </i>
+       <i> Aarti Venkat,Faculty in Department of Medicine and Scientific Lead for CTDS at the University of Chicago </i>
        <hr>
       How a consortium can leverage use of a data commons <br>
       <a href="https://data.bloodpac.org/">BloodPAC Data Commons</a> <br>
