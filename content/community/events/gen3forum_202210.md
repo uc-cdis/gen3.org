@@ -11,7 +11,7 @@ layout: single
 <br>
 
 ## Gen3 Community Forum Agenda
-##-  October 10-12, 2022 (US)/October 11-13 (AU/NZ)
+## October 10-12, 2022 (US)/October 11-13 (AU/NZ)
 
 <br>
 
