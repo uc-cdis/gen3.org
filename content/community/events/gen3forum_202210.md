@@ -32,55 +32,59 @@ The forum will meet for three days, three hours each day, and will include prese
    <th> Topic </th>
   </tr>
   <tr>
-   <td> 4:00-5:00pm CDT </td>
-   <td> <H2>Video Tour of Gen3 Data Commons and Meshes</H2> <hr>
-        <h3><a href=https://commons.cri.uchicago.edu/pcdc/>Pediatric Cancer Data Commons</a></h3> <br>
+     <td> 4:00-4:05pm CDT /<td>
+     <td> <h4 Welcome to the Inaugural Community Forum</h4> </td>
+  </tr>
+  <tr>
+   <td> 4:05-5:00pm CDT </td>
+   <td> <H3>Video Tour of Gen3 Data Commons and Meshes</H3> <hr>
+        <a href=https://commons.cri.uchicago.edu/pcdc/>Pediatric Cancer Data Commons</a> <br>
         <i>Sam Volchenboum, Principal Investigator & Pediantric Oncologist</i>
         <hr>
-        <a href="https://ellrottlab.org/">Kyle Ellrott Lab</a><br>
+        <a href="https://ellrottlab.org/">Kyle Ellrott Lab, Oregton Health & Science University</a><br>
         <i>Brian Walsh, Senior Research Sotware Engineer, Oregon Health & Science University</i>
         <hr>
+        <a href=healdata.org>HEAL Data Commons</a> <br>
+        <i> Aarti Venkat, </i>
 
-
-   </td>
- </tr>
-   <tr>
-       <td></td>
-       <td> <a href='https://ibdgc.datacommons.io/NIDDK'>IBD Genetics Consortium Data Commons</a> <hr>
+        <hr>
+        <a href="">Australian Cardivascular Disease Commons</a> <br>
+            <i> Pieter Miekel <br> Australian BioData Commons</i>
+            NOTE:  Get this from NOTES
+            <hr>
+       <a href='https://ibdgc.datacommons.io/NIDDK'>IBD Genetics Consortium Data Commons</a> <hr>
        <i>Phil Schumm <br> Statistician Manager, Director, Research Computing Group, & Assistant Director, Biostat Lab
-       </i> </td>
-   </tr>
-   <tr>
-     <td></td>
-     <td>Australian Cardivascular Disease Commons <hr>
-         <i> Pieter Miekel <br> Australian BioData Commons </i></td>
+       </i>
+       </td>
    </tr>
   <tr>
-   <td> 5:00-6:00pm CDT  </td> <td> Video Tour of Gen3 Workspaces and Applications <hr>
-  NZ Data Commons
-  <a href""<NZ></a> <br>
-  Note:  get this info from email <hr>
+   <td> 5:00-6:00pm CDT  </td> <td> <h4>Video Tour of Gen3 Workspaces and Applications</h4> <hr>
+    NZ Data Commons
+    <a href""<NZ></a> <br>
+    Note:  get this info from email
+    <hr>
        OCC Automatic Governance Process for Gen3 Data Commons <br>
        <a href="occ-data.org">Open Commons Consortium</a><br>
-       <i>Urvi Sheth, Software Engineer, OCC</i>   <hr>
+       <i>Urvi Sheth, Software Engineer, OCC</i>
+   <hr>
        MIDRC DICOM Viewer Integration <br>
        <a href="https://data.midrc.org/">MIDRC Data Commons</a><br>
        <i>Chris Meyer, TITLE, Center for Translational Data Science</i>
-       <hr>
+  <hr>
        Veterans Administration Data Commons with OMOP & GWAS <br>
        <a href=https://va.data-commons.org/>VA Data Commons</a> <br>
        <i> Kyle Hernandez, Manager of Bioinformatics, Center for Translational Data Science </i>
-       <hr>
+  <hr>
        Jupyter Notebook over JCOIN <br>
        <a href=https://jcoin.datacommons.io/<JCOIN Data Commons</a> <br>
        <i> Phil Schumm <br> Statistician Manager, Director, Research Computing Group, & Assistant Director, Biostat Lab, Department of Public Health Sciences University of Chicago </i>
        </td>
   </tr>
   <tr>
-   <td> 6:00-6:30pm CDT </td> <td> Gen3 Roadmap <br> Robert Grossman, <br> Frederick H. Rawson Distinguished Service Professor of Medicine and Computer Science and the Jim and Karen Frank Director of the Center for Translational Data Science (CTDS) at the University of Chicago </td>
+   <td> 6:00-6:30pm CDT </td> <td> <h3>Gen3 Roadmap</h3> <br> Robert Grossman, <br> Frederick H. Rawson Distinguished Service Professor of Medicine and Computer Science and the Jim and Karen Frank Director of the Center for Translational Data Science (CTDS) at the University of Chicago </td>
   </tr>
   <tr>
-   <td>6:30-7:00pm CDT </td> <td> Gen3 Roadmap Discussion </td>
+   <td>6:30-7:00pm CDT </td> <td> <h3>Gen3 Roadmap Discussion</h3> </td>
   </tr>
 </table>
 
@@ -88,19 +92,42 @@ The forum will meet for three days, three hours each day, and will include prese
 
 #### Day 2
 
-<table border=1 cellspacing="0" width="700">
+<table border=1 cellspacing="0" width="1000">
   <tr>
    <th> Time </th>
    <th> Topic </th>
   </tr>
   <tr>
-   <td> 4:00-4:30pm CDT </td> <td> Gen3 Community </td>
+   <td> 4:00-5:00pm CDT </td>
+   <td> Gen3 Community Panel Discussion <br>
+           Steven Manos, Moderator <br>
+           Associat Director Cyberinfrastructure - Australian BioCommons & co-organiser of the Gen3 Community Forum
+           <hr>
+           Panelists:  <br>
+           Claire Rye <br> Data services Product Manager, New Zealand eScience Infrastructure <br><br>
+           Lauren Leiman <br> Exec Director of BloodPAC <br><br>
+           Casey Frankenberger - Rush University Medical Center <br><br>
+           Chris Meyer - Manager of User Services, CTDS/Gen3<br<br>
+           Robert Grossman
+    </td>
   </tr>
   <tr>
-   <td> 4:30-5:00pm CDT </td>  <td> Q&A with Discussion </td>
-  </tr>
-  <tr>
-   <td> 5:00-7:00pm CDT </td> <td> Community Presentations </td>
+   <td> 5:00-7:00 pm CDT </td>
+   <td><h3> Gen3 Community Presentations</h3>
+       <hr>
+       Linking Data Commons
+       <a href="https://brh.data-commons.org/">Biomedical Research Hub> <br>
+       <i> Aarti Venkat, XXXXXXXXXXX </i>
+       <hr>
+      How a consortium can leverage use of a data commons <br>
+      <a href="https://data.bloodpac.org/">BloodPAC Data Commons</a> <br>
+      <i>Lauren Leiman <br> Exec Director of BloodPAC<i>
+      <hr>
+      Gen3 within an academic medial center <br>
+      <a href="">Rush University Medical Center</a>
+      NOTE:  get that URL <br>
+      <i> Casey Frankeberger, Vice President of Business Development, C2i Genomics, Former Chief Research Informatics Officer, Rush University Medical Center</i>
+   </td>
   </tr>
 </table>
 
@@ -108,25 +135,31 @@ The forum will meet for three days, three hours each day, and will include prese
 
 #### Day 3
 
-<table border=1 cellspacing="0" width="700">
+<table border=1 cellspacing="0" width="1000">
   <tr>
    <th> Time </th>
    <th> Topic </th>
   </tr>
-  <tr>
-   <td> 4:00-4:15pm CDT </td> <td> Introduction to Gen3 Feature Breakout Sessions </td>
+   <td> 4:00-4:15pm CDT </td> <td><h3> Introduction to Gen3 Feature Breakout Sessions</h3> </td>
   </tr>
   <tr>
-   <td> 4:15-5:15pm CDT </td> <td>  Breakout Sessions </td>
+   <td> 4:15-5:15pm CDT </td>
+   <td>  Breakout Sessions
+        <ol>
+          <li>Standards + integration</li>
+          <li>Standing up a Gen3 instance (getting started, documentation, how-tos, help, etc.)</li>
+          <li> Improving communications and processes around bug and issue tracking </li>
+          <li> Requesting/implementing a Gen3 feature update </li>
+          <li> Joint Roadmap planning </li>
+        </ol>
+   </td>
+   </tr>
+   <tr>
+     <td> 6:15-6:55pm </td>
+     <td> <h3> Overview of Furture Community Development & Discussion </h3> </td>
   </tr>
   <tr>
-   <td> 5:15-6:00pm CDT </td> <td>  Reports from Breakout Sessions </td>
-  </tr>
-  <tr>
-   <td> 6:00-6:15pm CDT </td> <td> Overview of Future Community Development Structure </td>
-  </tr>
-  <tr>
-   <td> 6:15-7:00pm CDT </td>
-   <td> Discussion of Future Community Development <ul> <li> Community Manager </li> <li> Management of prioritized feature description documents </li> <li> Monthly calls </li> <li> Slack community channel </li> <li> Newsletter </li> </ul> </td>
+     <td> 6:55-7:00pm </td>
+     <td> Day3 Recap and End of Forum </td>
   </tr>
 </table>
