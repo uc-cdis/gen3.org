@@ -32,12 +32,12 @@ The forum will meet for three days, three hours each day, and will include prese
    <th> Topic </th>
   </tr>
   <tr>
-     <td> 4:00-4:05pm CDT /<td>
+     <td> 4:00-4:05pm CDT </td>
      <td> <h4> Welcome to the Inaugural Community Forum</h4> </td>
   </tr>
   <tr>
    <td> 4:05-5:00pm CDT </td>
-   <td> <H3>Video Tour of Gen3 Data Commons and Meshes</H3> <hr>
+   <td> <h4>Video Tour of Gen3 Data Commons and Meshes</h4> <hr>
         <a href=https://commons.cri.uchicago.edu/pcdc/>Pediatric Cancer Data Commons</a> <br>
         <i>Sam Volchenboum, Principal Investigator & Pediantric Oncologist</i>
         <hr>
@@ -45,13 +45,11 @@ The forum will meet for three days, three hours each day, and will include prese
         <i>Brian Walsh, Senior Research Sotware Engineer, Oregon Health & Science University</i>
         <hr>
         <a href="https://healdata.org>HEAL Data Commons</a> <br>
-        <i> Aarti Venkat, </i>
-
+        <i> Aarti Venkat, Faculty in Department of Medicine and the Scientific Lead for CTDS at the University of Chicago</i>
         <hr>
-        <a href="">Australian Cardivascular Disease Commons</a> <br>
-            <i> Pieter Miekel <br> Australian BioData Commons</i>
-            NOTE:  Get this from NOTES
-            <hr>
+        <a href="https://data.acdc.ozheart.org/">Australian CardiOvascular Disease Data Commons</a> <br>
+          <i> Marion Shadbolt, Human Genomics Data Specialist Australian BioData Commons</i>
+      <hr>
        <a href='https://ibdgc.datacommons.io/NIDDK'>IBD Genetics Consortium Data Commons</a> <hr>
        <i>Phil Schumm <br> Statistician Manager, Director, Research Computing Group <br> & Assistant Director, Biostat Lab
        </i>
@@ -59,9 +57,9 @@ The forum will meet for three days, three hours each day, and will include prese
    </tr>
   <tr>
    <td> 5:00-6:00pm CDT  </td> <td> <h4>Video Tour of Gen3 Workspaces and Applications</h4> <hr>
-    NZ Data Commons
-    <a href""<NZ></a> <br>
-    Note:  get this info from email
+    Two projects from Aotearoa - AGDR & Rakeiora Pathfinder
+    <a href="https://repo.data.nesi.org.nz/"Aotearoa Genomic Data Repository"</a>
+    <i> Jun Huh, Title, New Zealand eScience Infrastructure (NeSI) </i>
     <hr>
        OCC Automatic Governance Process for Gen3 Data Commons <br>
        <a href="occ-data.org">Open Commons Consortium</a><br>
@@ -101,13 +99,13 @@ The forum will meet for three days, three hours each day, and will include prese
    <td> 4:00-5:00pm CDT </td>
    <td> <h4> Gen3 Community Panel Discussion </h4> <br>
            Steven Manos, Moderator <br>
-           Associate Director Cyberinfrastructure - Australian BioCommons & co-organiser of the Gen3 Community Forum
+           Associate Director Cyberinfrastructure - Australian BioCommons & co-organiser of the Gen3 Community Forum <br>
            <br>
            Claire Rye Data services Product Manager, New Zealand eScience Infrastructure <br>
            Lauren Leiman Executive Director of BloodPAC <br>
            Casey Frankenberger - Rush University Medical Center <br>
            Chris Meyer - Manager of User Services, CTDS/Gen3<br>
-           Robert Grossman - Director, CTDS/Gen3
+           Robert Grossman - Director, CTDS/Gen3 <br>
     </td>
   </tr>
   <tr>
@@ -129,7 +127,7 @@ The forum will meet for three days, three hours each day, and will include prese
    </td>
   </tr>
   <tr>
-    <h4> <td> 6:45-7:00pm </td>
+    <h4> <td> 6:45-7:00pm CDT </td>
     <td> Day 2 Recap </td> </h4>
   </tr>
 </table>
@@ -147,7 +145,7 @@ The forum will meet for three days, three hours each day, and will include prese
   </tr>
   <tr>
    <td> 4:15-5:15pm CDT </td>
-   <td>  Breakout Sessions
+   <td>  <h4>Breakout Sessions </h4> </hr>
         <ol>
           <li>Standards + integration</li>
           <li>Standing up a Gen3 instance (getting started, documentation, how-tos, help, etc.)</li>
@@ -158,11 +156,11 @@ The forum will meet for three days, three hours each day, and will include prese
    </td>
    </tr>
    <tr>
-     <td> 6:15-6:55pm </td>
-     <td> <h3> Overview of Future Community Development & Discussion </h3> </td>
+     <td> 6:15-6:55pm CDT </td>
+     <td> <h4> Overview of Future Community Development & Discussion </h4> </td>
   </tr>
   <tr>
-     <td> 6:55-7:00pm </td>
-     <td> Day3 Recap and End of Forum </td>
+     <td> 6:55-7:00pm CDT </td>
+     <td> <h4> Day3 Recap and End of Forum </h4> </td>
   </tr>
 </table>
