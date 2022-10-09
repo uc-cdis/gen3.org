@@ -33,11 +33,15 @@ The forum will meet for three days, three hours each day, and will include prese
   </tr>
   <tr>
    <td> 4:00-5:00pm CDT </td>
-   <td> Tour of Gen3 Data Commons and Meshes </td>
-   <tr>
-    <td> 4:00-5:00pm CDT </td>
-    <td> Tour of Gen3 Data Commons and Meshes </td>
-   </tr>
+   <td> Video Tour of Gen3 Data Commons and Meshes <hr>
+        <a href=https://commons.cri.uchicago.edu/pcdc/>Pediatric Cancer Data Commons</a> <br>
+        <i>Sam Volchenboum, Principal Investigator & Pediantric Oncologist</i>
+        <hr>
+        <a href="">HTAN</a><br>
+        <i>Brian Walsh, Senior Research Sotware Engineer</i>
+
+   </td>
+ </tr>
    <tr>
        <td></td>
        <td> <a href='https://ibdgc.datacommons.io/NIDDK'>IBD Genetics Consortium Data Commons</a> <hr>
