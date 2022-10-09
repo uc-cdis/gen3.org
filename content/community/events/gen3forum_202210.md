@@ -11,7 +11,7 @@ layout: single
 <br>
 
 ## Gen3 Community Forum Agenda
-## October 10-12, 2022 (US)/October 11-13 (AU/NZ)
+##-  October 10-12, 2022 (US)/October 11-13 (AU/NZ)
 
 <br>
 
@@ -101,8 +101,8 @@ The forum will meet for three days, three hours each day, and will include prese
            Steven Manos, Moderator <br>
            Associate Director Cyberinfrastructure - Australian BioCommons & co-organiser of the Gen3 Community Forum <br>
            <br>
-           Claire Rye Data services Product Manager, New Zealand eScience Infrastructure <br>
-           Lauren Leiman Executive Director of BloodPAC <br>
+           Claire Rye - Data services Product Manager, New Zealand eScience Infrastructure <br>
+           Lauren Leiman  - Executive Director of BloodPAC <br>
            Casey Frankenberger - Rush University Medical Center <br>
            Chris Meyer - Manager of User Services, CTDS/Gen3<br>
            Robert Grossman - Director, CTDS/Gen3 <br>
