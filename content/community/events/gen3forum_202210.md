@@ -26,19 +26,21 @@ The forum will meet for three days, three hours each day, and will include prese
 
 #### Day 1
 
-<table border=1 cellspacing="0" width="700">
+<table border=1 cellspacing="0" width="1000">
   <tr>
    <th> Time </th>
    <th> Topic </th>
   </tr>
   <tr>
    <td> 4:00-5:00pm CDT </td>
-   <td> Video Tour of Gen3 Data Commons and Meshes <hr>
-        <a href=https://commons.cri.uchicago.edu/pcdc/>Pediatric Cancer Data Commons</a> <br>
+   <td> <H2>Video Tour of Gen3 Data Commons and Meshes</H2> <hr>
+        <h3><a href=https://commons.cri.uchicago.edu/pcdc/>Pediatric Cancer Data Commons</a></h3> <br>
         <i>Sam Volchenboum, Principal Investigator & Pediantric Oncologist</i>
         <hr>
-        <a href="">HTAN</a><br>
-        <i>Brian Walsh, Senior Research Sotware Engineer</i>
+        <a href="https://ellrottlab.org/">Kyle Ellrott Lab</a><br>
+        <i>Brian Walsh, Senior Research Sotware Engineer, Oregon Health & Science University</i>
+        <hr>
+
 
    </td>
  </tr>
@@ -54,10 +56,28 @@ The forum will meet for three days, three hours each day, and will include prese
          <i> Pieter Miekel <br> Australian BioData Commons </i></td>
    </tr>
   <tr>
-   <td> 5:00-6:00pm CDT  </td> <td> Tour of Gen3 Workspaces and Applications <table><tr></td>
+   <td> 5:00-6:00pm CDT  </td> <td> Video Tour of Gen3 Workspaces and Applications <hr>
+  NZ Data Commons
+  <a href""<NZ></a> <br>
+  Note:  get this info from email <hr>
+       OCC Automatic Governance Process for Gen3 Data Commons <br>
+       <a href="occ-data.org">Open Commons Consortium</a><br>
+       <i>Urvi Sheth, Software Engineer, OCC</i>   <hr>
+       MIDRC DICOM Viewer Integration <br>
+       <a href="https://data.midrc.org/">MIDRC Data Commons</a><br>
+       <i>Chris Meyer, TITLE, Center for Translational Data Science</i>
+       <hr>
+       Veterans Administration Data Commons with OMOP & GWAS <br>
+       <a href=https://va.data-commons.org/>VA Data Commons</a> <br>
+       <i> Kyle Hernandez, Manager of Bioinformatics, Center for Translational Data Science </i>
+       <hr>
+       Jupyter Notebook over JCOIN <br>
+       <a href=https://jcoin.datacommons.io/<JCOIN Data Commons</a> <br>
+       <i> Phil Schumm <br> Statistician Manager, Director, Research Computing Group, & Assistant Director, Biostat Lab, Department of Public Health Sciences University of Chicago </i>
+       </td>
   </tr>
   <tr>
-   <td> 6:00-6:30pm CDT </td> <td> Gen3 Roadmap </td>
+   <td> 6:00-6:30pm CDT </td> <td> Gen3 Roadmap <br> Robert Grossman, <br> Frederick H. Rawson Distinguished Service Professor of Medicine and Computer Science and the Jim and Karen Frank Director of the Center for Translational Data Science (CTDS) at the University of Chicago </td>
   </tr>
   <tr>
    <td>6:30-7:00pm CDT </td> <td> Gen3 Roadmap Discussion </td>
