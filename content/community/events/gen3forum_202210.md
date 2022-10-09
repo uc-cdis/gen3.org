@@ -50,7 +50,7 @@ The forum will meet for three days, three hours each day, and will include prese
         <a href="https://data.acdc.ozheart.org/">Australian CardiOvascular Disease Data Commons</a> <br>
           <i> Marion Shadbolt, Human Genomics Data Specialist Australian BioData Commons</i>
       <hr>
-       <a href='https://ibdgc.datacommons.io/NIDDK'>IBD Genetics Consortium Data Commons</a> <hr>
+       <a href='https://ibdgc.datacommons.io/NIDDK'>IBD Genetics Consortium Data Commons</a>
        <i>Phil Schumm <br> Statistician Manager, Director, Research Computing Group <br> & Assistant Director, Biostat Lab
        </i>
        </td>
@@ -58,7 +58,7 @@ The forum will meet for three days, three hours each day, and will include prese
   <tr>
    <td> 5:00-6:00pm CDT  </td> <td> <h4>Video Tour of Gen3 Workspaces and Applications</h4> <hr>
     Two projects from Aotearoa - AGDR & Rakeiora Pathfinder
-    <a href="https://repo.data.nesi.org.nz/"Aotearoa Genomic Data Repository"</a>
+    <a href="https://repo.data.nesi.org.nz/">Aotearoa Genomic Data Repository"</a>
     <i> Jun Huh, Title, New Zealand eScience Infrastructure (NeSI) </i>
     <hr>
        OCC Automatic Governance Process for Gen3 Data Commons <br>
@@ -74,7 +74,7 @@ The forum will meet for three days, three hours each day, and will include prese
        <i> Kyle Hernandez, Manager of Bioinformatics, Center for Translational Data Science </i>
   <hr>
        Jupyter Notebook over JCOIN <br>
-       <a href=https://jcoin.datacommons.io/<JCOIN Data Commons</a> <br>
+       <a href=https://jcoin.datacommons.io/>JCOIN Data Commons</a> <br>
        <i> Phil Schumm <br> Statistician Manager, Director, Research Computing Group, & Assistant Director, Biostat Lab, Department of Public Health Sciences University of Chicago </i>
        </td>
   </tr>
