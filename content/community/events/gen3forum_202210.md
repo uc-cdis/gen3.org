@@ -34,12 +34,21 @@ The forum will meet for three days, three hours each day, and will include prese
   <tr>
    <td> 4:00-5:00pm CDT </td>
    <td> Tour of Gen3 Data Commons and Meshes </td>
-   <table>
-      <tr> <td> Phil Schumm <br> Statistician Manager, Director, Research Computing Group, & Assistant Director, Biostat Lab</td> IBDGC Commons </td>
-      </tr>
-      <tr> <td> Pieter Miekel <br> </td> <td> NESI </td> </tr>
-  </table>
-  </tr>
+   <tr>
+    <td> 4:00-5:00pm CDT </td>
+    <td> Tour of Gen3 Data Commons and Meshes </td>
+   </tr>
+   <tr>
+       <td></td>
+       <td> <a href='https://ibdgc.datacommons.io/NIDDK'>IBD Genetics Consortium Data Commons</a> <hr>
+       <i>Phil Schumm <br> Statistician Manager, Director, Research Computing Group, & Assistant Director, Biostat Lab
+       </i> </td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>Australian Cardivascular Disease Commons <hr>
+         <i> Pieter Miekel <br> Australian BioData Commons </i></td>
+   </tr>
   <tr>
    <td> 5:00-6:00pm CDT  </td> <td> Tour of Gen3 Workspaces and Applications <table><tr></td>
   </tr>
