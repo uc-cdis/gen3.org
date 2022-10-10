@@ -53,13 +53,16 @@ The forum will meet for three days, three hours each day, and will include prese
        <a href='https://ibdgc.datacommons.io/NIDDK'>IBD Genetics Consortium Data Commons</a> <br>
        <i>Phil Schumm <br> Statistician Manager, Director, Research Computing Group <br> Assistant Director, Biostat Lab
        </i>
+       <hr>
+       <a href="https://brh.data-commons.org/">Biomedical Research Hub</a> <br>
+       <i>Chris Meyer, Manager of User Solutions and Scientific Support, CTDS/Gen3, University of Chicago </i>
        </td>
    </tr>
   <tr>
    <td> 5:00-6:00pm CDT  </td> <td> <h4>Video Tour of Gen3 Workspaces and Applications</h4> <hr>
     Two projects from Aotearoa - AGDR & Rakeiora Pathfinder <br>
     <a href="https://repo.data.nesi.org.nz/">Aotearoa Genomic Data Repository"</a> <br>
-    <i> Jun Huh, Title, New Zealand eScience Infrastructure (NeSI) </i>
+    <i> Jun Huh, Product Manager, New Zealand eScience Infrastructure (NeSI) </i>
     <hr>
        OCC Automatic Governance Process for Gen3 Data Commons <br>
        <a href="occ-data.org">Open Commons Consortium</a><br>
@@ -77,6 +80,10 @@ The forum will meet for three days, three hours each day, and will include prese
        <a href=https://jcoin.datacommons.io/>JCOIN Data Commons</a> <br>
        <i> Phil Schumm <br> Statistician Manager, Director, Research Computing Group, & Assistant Director, Biostat Lab, Department of Public Health Sciences University of Chicago </i>
        </td>
+  <hr>
+      Developing a Clinical Translation Platform <br>
+      <a href="https://abi-12-labours-app.herokuapp.com/about">12 Labours Project</a> <br>
+      <i>Thiranja Prasad Babarenda Gamage, Research Fellow, Auckland Bioengineering Institute </i>
   </tr>
   <tr>
    <td> 6:00-6:30pm CDT </td> <td> <h4>Gen3 Roadmap</h4> <br> Robert Grossman, <br> Frederick H. Rawson Distinguished Service Professor of Medicine and Computer Science <br> and the Jim and Karen Frank Director of the Center for Translational Data Science (CTDS) at the University of Chicago </td>
@@ -104,7 +111,7 @@ The forum will meet for three days, three hours each day, and will include prese
            Claire Rye - Data services Product Manager, New Zealand eScience Infrastructure <br>
            Lauren Leiman  - Executive Director of BloodPAC <br>
            Casey Frankenberger - Rush University Medical Center <br>
-           Chris Meyer - Manager of User Services, CTDS/Gen3<br>
+           Chris Meyer - Manager of User Solutions and Scientific Support, CTDS/Gen3<br>
            Robert Grossman - Director, CTDS/Gen3 <br>
     </td>
   </tr>
