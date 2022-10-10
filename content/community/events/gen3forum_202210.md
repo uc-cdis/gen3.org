@@ -53,9 +53,6 @@ The forum will meet for three days, three hours each day, and will include prese
        <a href='https://ibdgc.datacommons.io/NIDDK'>IBD Genetics Consortium Data Commons</a> <br>
        <i>Phil Schumm <br> Statistician Manager, Director, Research Computing Group <br> Assistant Director, Biostat Lab
        </i>
-       <hr>
-        <a href="https://healdata.org/landing/">HEAL Data Platform</a> <br>
-        <i> Aarti Venkat,Faculty in Department of Medicine and Scientific Lead for CTDS at the University of Chicago</i>
        </td>
    </tr>
   <tr>
