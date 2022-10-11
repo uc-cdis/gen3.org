@@ -83,11 +83,11 @@ The forum will meet for three days, three hours each day, and will include prese
        Jupyter Notebook over JCOIN <br>
        <a href=https://jcoin.datacommons.io/>JCOIN Data Commons</a> <br>
        <i> Phil Schumm <br> Statistician Manager, Director, Research Computing Group, & Assistant Director, Biostat Lab, Department of Public Health Sciences University of Chicago </i>
-       </td>
     <hr>
       Developing a Clinical Translation Platform <br>
       <a href="https://abi-12-labours-app.herokuapp.com/about">12 Labours Project</a> <br>
       <i>Thiranja Prasad Babarenda Gamage, Research Fellow, Auckland Bioengineering Institute </i>
+      </td>
   </tr>
   <tr>
       <td> 6:05-6:15pm CDT </td>
@@ -134,9 +134,9 @@ The forum will meet for three days, three hours each day, and will include prese
    <td> 5:10-6:30pm CDT </td>
    <td><h4> Gen3 Community Presentations</h4>
        <hr>
-       Linking Data Commons
+       Linking Data Commons <br>
        <a href="https://brh.data-commons.org/">Biomedical Research Hub</a> <br>
-       <i> Aarti Venkat,Faculty in Department of Medicine and Scientific Lead for CTDS at the University of Chicago </i>
+       <i> Aarti Venkat, Faculty in Department of Medicine and Scientific Lead for CTDS, University of Chicago </i>
        <hr>
       How a consortium can leverage use of a data commons <br>
       <a href="https://data.bloodpac.org/">BloodPAC Data Commons</a> <br>
@@ -144,7 +144,7 @@ The forum will meet for three days, three hours each day, and will include prese
       <hr>
       Gen3 within an academic medial center <br>
       <a href="https://www.rush.edu/">Rush University Medical Center</a> <br>
-      <i> Casey Frankeberger, Vice President of Business Development, C2i Genomics, Former Chief Research Informatics Officer, Rush University Medical Center</i>
+      <i> Casey Frankeberger, Vice President of Business Development, C2i Genomics,<br> Former Chief Research Informatics Officer, Rush University Medical Center</i>
    </td>
   </tr>
   <tr>
