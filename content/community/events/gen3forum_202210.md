@@ -181,7 +181,7 @@ The forum will meet for three days, three hours each day, and will include prese
       <td> <h4> BREAK </h4> </td>
    </tr>
    <tr>
-     <td> 5:20-6:10pm CDT </td>
+     <td> 5:25-6:10pm CDT </td>
      <td> <h4> Reports from Breakout Sessions </h4> </td>
   </tr>
    <tr>
