@@ -32,11 +32,11 @@ The forum will meet for three days, three hours each day, and will include prese
    <th> Topic </th>
   </tr>
   <tr>
-     <td> <h4> 4:00-4:05pm CDT </h4> </td>
+     <td> 4:00-4:05pm CDT  </td>
      <td> <h4> Welcome to the Inaugural Community Forum</h4> </td>
   </tr>
   <tr>
-   <td> <h4> 4:05-5:00pm CDT </h4> </td>
+   <td> 4:05-5:00pm CDT  </td>
    <td> <h4>Video Tour of Gen3 Data Commons and Meshes</h4> <hr>
         <a href="https://portal.pedscommons.org/">Pediatric Cancer Data Commons</a> <br>
         <i>Sam Volchenboum, Principal Investigator & Pediatric Oncologist, University of Chicago</i>
@@ -127,7 +127,7 @@ The forum will meet for three days, three hours each day, and will include prese
     </td>
   </tr>
   <tr>
-     <td> 5:00-5:10 </td>
+     <td> 5:00-5:10pm CDT </td>
      <td> <h4> BREAK </h4> </td>
   </tr>
   <tr>
