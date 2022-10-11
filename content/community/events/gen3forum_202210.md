@@ -162,7 +162,7 @@ The forum will meet for three days, three hours each day, and will include prese
    <th> Time </th>
    <th> Topic </th>
   </tr>
-   <td> <h4>4:00-4:15pm CDT </h4> </td> <td><h4> Introduction to Gen3 Breakout Sessions</h4> </td>
+   <td> <h4></h4>4:00-4:15pm CDT </td> <td><h4> Introduction to Gen3 Breakout Sessions</h4> </td>
   </tr>
   <tr>
    <td> 4:15-5:15pm CDT </td>
