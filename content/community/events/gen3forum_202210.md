@@ -157,7 +157,7 @@ The forum will meet for three days, three hours each day, and will include prese
 
 #### Day 3
 
-<table border=1 cellspacing="0" width="100%">
+<table border=1 cellspacing="0" width="80%">
   <tr>
    <th> Time </th>
    <th> Topic </th>
