@@ -38,13 +38,13 @@ The forum will meet for three days, three hours each day, and will include prese
   <tr>
    <td> <h4> 4:05-5:00pm CDT </h4> </td>
    <td> <h4>Video Tour of Gen3 Data Commons and Meshes</h4> <hr>
-        <a href=https://commons.cri.uchicago.edu/pcdc/>Pediatric Cancer Data Commons</a> <br>
-        <i>Sam Volchenboum, Principal Investigator & Pediantric Oncologist, University of Chicago</i>
+        <a href="https://portal.pedscommons.org/">Pediatric Cancer Data Commons</a> <br>
+        <i>Sam Volchenboum, Principal Investigator & Pediatric Oncologist, University of Chicago</i>
         <hr>
         <a href="https://ellrottlab.org/">Kyle Ellrott Lab, Oregon Health & Science University</a><br>
         <i>Brian Walsh, Senior Research Sotware Engineer, Oregon Health & Science University</i>
         <hr>
-        <a href="https://healdata.org>HEAL Data Commons</a> <br>
+        <a href="https://healdata.org">HEAL Data Commons</a> <br>
         <i> Aarti Venkat, Faculty in Department of Medicine and Scientific Lead for CTDS at the University of Chicago</i>
         <hr>
         <a href="https://data.acdc.ozheart.org/">Australian Cardiovascular Disease Data Commons</a> <br>
@@ -73,7 +73,7 @@ The forum will meet for three days, three hours each day, and will include prese
        <i>Chris Meyer, Manager of User Solutions and Scientific Support, CTDS/Gen3, University of Chicago</i>
     <hr>
        OCC Automatic Governance Process for Gen3 Data Commons <br>
-       <a href="occ-data.org">Open Commons Consortium</a><br>
+       <a href="http://occ-data.org">Open Commons Consortium</a><br>
        <i>Urvi Sheth, Software Engineer, OCC</i>
     <hr>
        Veterans Administration Data Commons with OMOP & GWAS <br>
