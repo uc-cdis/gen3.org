@@ -140,7 +140,7 @@ The forum will meet for three days, three hours each day, and will include prese
        <hr>
       How a consortium can leverage use of a data commons <br>
       <a href="https://data.bloodpac.org/">BloodPAC Data Commons</a> <br>
-      <i>Lauren Leiman <br> Exec Director of BloodPAC<i>
+      <i>Lauren Leiman <br> Exec Director of BloodPAC</i>
       <hr>
       Gen3 within an academic medial center <br>
       <a href="https://www.rush.edu/">Rush University Medical Center</a> <br>
