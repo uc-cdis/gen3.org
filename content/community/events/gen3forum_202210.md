@@ -26,25 +26,25 @@ The forum will meet for three days, three hours each day, and will include prese
 
 #### Day 1
 
-<table border=1 cellspacing="0" width="1000">
+<table border=1 cellspacing="0" width="80%">
   <tr>
    <th> Time </th>
    <th> Topic </th>
   </tr>
   <tr>
-     <td> <h4> 4:00-4:05pm CDT </h4> </td>
+     <td> 4:00-4:05pm CDT  </td>
      <td> <h4> Welcome to the Inaugural Community Forum</h4> </td>
   </tr>
   <tr>
-   <td> <h4> 4:05-5:00pm CDT </h4> </td>
+   <td> 4:05-5:00pm CDT  </td>
    <td> <h4>Video Tour of Gen3 Data Commons and Meshes</h4> <hr>
-        <a href=https://commons.cri.uchicago.edu/pcdc/>Pediatric Cancer Data Commons</a> <br>
-        <i>Sam Volchenboum, Principal Investigator & Pediantric Oncologist, University of Chicago</i>
+        <a href="https://portal.pedscommons.org/">Pediatric Cancer Data Commons</a> <br>
+        <i>Sam Volchenboum, Principal Investigator & Pediatric Oncologist, University of Chicago</i>
         <hr>
         <a href="https://ellrottlab.org/">Kyle Ellrott Lab, Oregon Health & Science University</a><br>
         <i>Brian Walsh, Senior Research Sotware Engineer, Oregon Health & Science University</i>
         <hr>
-        <a href="https://healdata.org>HEAL Data Commons</a> <br>
+        <a href="https://healdata.org">HEAL Data Commons</a> <br>
         <i> Aarti Venkat, Faculty in Department of Medicine and Scientific Lead for CTDS at the University of Chicago</i>
         <hr>
         <a href="https://data.acdc.ozheart.org/">Australian Cardiovascular Disease Data Commons</a> <br>
@@ -53,36 +53,54 @@ The forum will meet for three days, three hours each day, and will include prese
        <a href='https://ibdgc.datacommons.io/NIDDK'>IBD Genetics Consortium Data Commons</a> <br>
        <i>Phil Schumm <br> Statistician Manager, Director, Research Computing Group <br> Assistant Director, Biostat Lab
        </i>
+       <hr>
+       <a href="https://brh.data-commons.org/">Biomedical Research Hub</a> <br>
+       <i>Chris Meyer, Manager of User Solutions and Scientific Support, CTDS/Gen3, University of Chicago </i>
        </td>
    </tr>
   <tr>
-   <td> 5:00-6:00pm CDT  </td> <td> <h4>Video Tour of Gen3 Workspaces and Applications</h4> <hr>
-    Two projects from Aotearoa - AGDR & Rakeiora Pathfinder <br>
-    <a href="https://repo.data.nesi.org.nz/">Aotearoa Genomic Data Repository"</a> <br>
-    <i> Jun Huh, Title, New Zealand eScience Infrastructure (NeSI) </i>
+      <td> 5:00-5:10pm CDT </td>
+      <td> <h4> BREAK </hr> </td>
+  </tr>
+  <tr>
+   <td> 5:10-6:05pm CDT  </td> <td> <h4>Video Tour of Gen3 Workspaces and Applications</h4> <hr>
+       Two projects from Aotearoa - AGDR & Rakeiora Pathfinder <br>
+       <a href="https://repo.data.nesi.org.nz/">Aotearoa Genomic Data Repository"</a> <br>
+       <i> Jun Huh, Product Manager, New Zealand eScience Infrastructure (NeSI) </i>
     <hr>
-       OCC Automatic Governance Process for Gen3 Data Commons <br>
-       <a href="occ-data.org">Open Commons Consortium</a><br>
-       <i>Urvi Sheth, Software Engineer, OCC</i>
-   <hr>
        MIDRC DICOM Viewer Integration <br>
        <a href="https://data.midrc.org/">MIDRC Data Commons</a><br>
-       <i>Chris Meyer, TITLE, Center for Translational Data Science</i>
-  <hr>
+       <i>Chris Meyer, Manager of User Solutions and Scientific Support, CTDS/Gen3, University of Chicago</i>
+    <hr>
+       OCC Automatic Governance Process for Gen3 Data Commons <br>
+       <a href="http://occ-data.org">Open Commons Consortium</a><br>
+       <i>Urvi Sheth, Software Engineer, OCC</i>
+    <hr>
        Veterans Administration Data Commons with OMOP & GWAS <br>
        <a href=https://va.data-commons.org/>VA Data Commons</a> <br>
        <i> Kyle Hernandez, Manager of Bioinformatics, Center for Translational Data Science </i>
-  <hr>
+    <hr>
        Jupyter Notebook over JCOIN <br>
        <a href=https://jcoin.datacommons.io/>JCOIN Data Commons</a> <br>
        <i> Phil Schumm <br> Statistician Manager, Director, Research Computing Group, & Assistant Director, Biostat Lab, Department of Public Health Sciences University of Chicago </i>
-       </td>
+    <hr>
+      Developing a Clinical Translation Platform <br>
+      <a href="https://abi-12-labours-app.herokuapp.com/about">12 Labours Project</a> <br>
+      <i>Thiranja Prasad Babarenda Gamage, Research Fellow, Auckland Bioengineering Institute </i>
+      </td>
   </tr>
   <tr>
-   <td> 6:00-6:30pm CDT </td> <td> <h4>Gen3 Roadmap</h4> <br> Robert Grossman, <br> Frederick H. Rawson Distinguished Service Professor of Medicine and Computer Science <br> and the Jim and Karen Frank Director of the Center for Translational Data Science (CTDS) at the University of Chicago </td>
+      <td> 6:05-6:15pm CDT </td>
+      <td> <h4> BREAK </hr> </td>
   </tr>
   <tr>
-   <td>6:30-7:00pm CDT </td> <td> <h4>Gen3 Roadmap Discussion</h4> </td>
+   <td> 6:15-6:35pm CDT </td> <td> <h4>Gen3 Roadmap</h4> <br> Robert Grossman, <br> Frederick H. Rawson Distinguished Service Professor of Medicine and Computer Science <br> and the Jim and Karen Frank Director of the Center for Translational Data Science (CTDS) at the University of Chicago </td>
+  </tr>
+  <tr>
+   <td>6:35-6:55pm CDT </td> <td> <h4>Gen3 Roadmap Discussion</h4> </td>
+  </tr>
+  <tr>
+    <td>6:55-7:05pm CDT </td> <td> <h4> Day 1 Recap </hr> </td>
   </tr>
 </table>
 
@@ -90,7 +108,7 @@ The forum will meet for three days, three hours each day, and will include prese
 
 #### Day 2
 
-<table border=1 cellspacing="0" width="1000">
+<table border=1 cellspacing="0" width="80%">
   <tr>
    <th> Time </th>
    <th> Topic </th>
@@ -103,27 +121,30 @@ The forum will meet for three days, three hours each day, and will include prese
            <br>
            Claire Rye - Data services Product Manager, New Zealand eScience Infrastructure <br>
            Lauren Leiman  - Executive Director of BloodPAC <br>
-           Casey Frankenberger - Rush University Medical Center <br>
-           Chris Meyer - Manager of User Services, CTDS/Gen3<br>
+           Casey Frankenberger - Former Chief Research Informatics Officer, Rush University Medical Center <br>
+           Chris Meyer - Manager of User Solutions and Scientific Support, CTDS/Gen3<br>
            Robert Grossman - Director, CTDS/Gen3 <br>
     </td>
   </tr>
   <tr>
-   <td> 5:00-6:45pm CDT </td>
+     <td> 5:00-5:10pm CDT </td>
+     <td> <h4> BREAK </h4> </td>
+  </tr>
+  <tr>
+   <td> 5:10-6:30pm CDT </td>
    <td><h4> Gen3 Community Presentations</h4>
        <hr>
-       Linking Data Commons
+       Linking Data Commons <br>
        <a href="https://brh.data-commons.org/">Biomedical Research Hub</a> <br>
-       <i> Aarti Venkat,Faculty in Department of Medicine and Scientific Lead for CTDS at the University of Chicago </i>
+       <i> Aarti Venkat, Faculty in Department of Medicine and Scientific Lead for CTDS, University of Chicago </i>
        <hr>
       How a consortium can leverage use of a data commons <br>
       <a href="https://data.bloodpac.org/">BloodPAC Data Commons</a> <br>
-      <i>Lauren Leiman <br> Exec Director of BloodPAC<i>
+      <i>Lauren Leiman <br> Exec Director of BloodPAC</i>
       <hr>
       Gen3 within an academic medial center <br>
-      <a href="">Rush University Medical Center</a>
-      NOTE:  get that URL <br>
-      <i> Casey Frankeberger, Vice President of Business Development, C2i Genomics, Former Chief Research Informatics Officer, Rush University Medical Center</i>
+      <a href="https://www.rush.edu/">Rush University Medical Center</a> <br>
+      <i> Casey Frankeberger, Vice President of Business Development, C2i Genomics,<br> Former Chief Research Informatics Officer, Rush University Medical Center</i>
    </td>
   </tr>
   <tr>
@@ -136,12 +157,12 @@ The forum will meet for three days, three hours each day, and will include prese
 
 #### Day 3
 
-<table border=1 cellspacing="0" width="1000">
+<table border=1 cellspacing="0" width="80%">
   <tr>
    <th> Time </th>
    <th> Topic </th>
   </tr>
-   <td> 4:00-4:15pm CDT </td> <td><h4> Introduction to Gen3 Feature Breakout Sessions</h4> </td>
+   <td> <h4></h4>4:00-4:15pm CDT </td> <td><h4> Introduction to Gen3 Breakout Sessions</h4> </td>
   </tr>
   <tr>
    <td> 4:15-5:15pm CDT </td>
@@ -155,6 +176,14 @@ The forum will meet for three days, three hours each day, and will include prese
         </ol>
    </td>
    </tr>
+   <tr>
+      <td> 5:15-5:25pm CDT </td>
+      <td> <h4> BREAK </h4> </td>
+   </tr>
+   <tr>
+     <td> 5:25-6:10pm CDT </td>
+     <td> <h4> Reports from Breakout Sessions </h4> </td>
+  </tr>
    <tr>
      <td> 6:15-6:55pm CDT </td>
      <td> <h4> Overview of Future Community Development & Discussion </h4> </td>
