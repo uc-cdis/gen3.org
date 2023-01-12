@@ -11,7 +11,7 @@ menuname: operatorMenu
 
 Find below resources on how to stand up a Gen3 Data Commons.
 
-1. Use [Compose Services](#1-compose-services) to create a Gen3 Data Commons sandbox
+1. Use [Gen3 on Helm](#1-gen3-on-helm) to create a Gen3 Data Commons sandbox
 2. Use [Cloud Automation](#2-cloud-automation) to deploy a Gen3 Data Commons in production environments on cloud frameworks
 3. Read more about [creating a Data Dictionary](#3-creating-a-new-data-dictionary) and [updating it](http://localhost:1313/resources/operator/#4-dictionary-update-documentation)
 4. Explore available [Authentication Methods](#5-authentication-methods)
@@ -24,20 +24,14 @@ Check out more resources:
 * [Technical aspects of maintaining a Gen3 Data Commons](https://github.com/uc-cdis/compose-services/blob/master/docs/using_the_commons.md)
 * [Contributions from the Gen3 Community](https://github.com/uc-cdis/compose-services/blob/master/docs/useful_links.md)
 
-## 1. Compose Services
+## 1. Gen3 on Helm
+![Gen3 on Helm](img/compose-services.svg)
 
-![Compose Services](img/compose-services.svg)
+[Gen3 on Helm](https://github.com/uc-cdis/gen3-helm) is the new preferred way to run a Gen3 commons on a single laptop, desktop, or VM. Using Helm, a package manager for Kubernetes, Gen3 can be installed against any cluster, including a local one such as Minikube or Rancher Desktop.
 
-[Gen3 Compose Services](https://github.com/uc-cdis/compose-services) allow you to quickly run a Gen3 commons on a single computer or in a single VM in a matter of minutes using Docker Compose.
+This option is suitable for those that wish to experiment with Gen3, develop against it on their machines, or other non-production uses. At this time, the Helm deployment is not considered production-ready.
 
-This option is suitable for those that wish to run a small data commons, experiment with the technology, or even do local development on the Gen3 services.
-
-We recommend you start here for your first experience running the Gen3 platform. Using Compose Services will not make the full suite of automation and logging for Gen3 data commons available. If you intend to create a bigger data commons or deploy a data commons in a production environment, we strongly recommend you use [Cloud Automation](#2-cloud-automation).
-
-Explore a [step-by-step guide how to deploy Gen3 Compose Services here.](https://github.com/uc-cdis/compose-services)
-
-
-
+If you are ready to get started, you can follow our guide [here](https://github.com/uc-cdis/gen3-helm/blob/doc/gen3Setup/gen3ForDevs/gen3HelmForDevelopers.md)
 
 
 ## 2. Cloud Automation
