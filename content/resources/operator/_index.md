@@ -11,7 +11,7 @@ menuname: operatorMenu
 
 Find below resources on how to stand up a Gen3 Data Commons.
 
-1. Use [Compose Services](#1-compose-services) to create a Gen3 Data Commons sandbox
+1. Use [Gen3 on Helm](#1-gen3-on-helm) to create a Gen3 Data Commons sandbox
 2. Use [Cloud Automation](#2-cloud-automation) to deploy a Gen3 Data Commons in production environments on cloud frameworks
 3. Read more about [creating a Data Dictionary](#3-creating-a-new-data-dictionary) and [updating it](http://localhost:1313/resources/operator/#4-dictionary-update-documentation)
 4. Explore available [Authentication Methods](#5-authentication-methods)
