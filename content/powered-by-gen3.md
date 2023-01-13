@@ -15,53 +15,74 @@ g3Commons:
     fig: /figs/commons/anvil.png
     link: https://gen3.theanvil.io
   c3:
-    title: BloodPAC Data Commons
-    fig: /figs/commons/bloodpac.png
-    link: https://data.bloodpac.org
-  c4:
-    title: Canine Data Commons
-    fig: /figs/commons/canine.png
-    link: https://caninedc.org
-  c5:
-    title: Chicagoland COVID-19 Commons
-    fig: /figs/commons/covid19.png
-    link: https://chicagoland.pandemicresponsecommons.org
-  c6:
-    title: NCI-CRDC
-    fig: /figs/commons/crdc.png
-    link: https://nci-crdc.datacommons.io
-  c7:
-    title: OCC Environmental Data Commons
-    fig: /figs/commons/edc.png
-    link: https://portal.occ-data.org
-  c8:
-    title: GenoMEL Data Commons
-    fig: /figs/commons/genomel.png
-    link: https://genomel.bionimbus.org
-  c9:
-    title: NIDDK IBD Genetics Consortium Data Commons
-    fig: /figs/commons/ibdgc.png
-    link: https://ibdgc.datacommons.io
-  c10:
-    title: Kids-First
-    fig: /figs/commons/kf.png
-    link: https://data.kidsfirstdrc.org
-  c11:
-    title: The Medical Imaging and Data Resource Center Commons
-    fig: /figs/commons/midrc.png
-    link: https://data.midrc.org
-  c12:
-    title: AccessClinicalTrails@NIAID
-    fig: /figs/commons/nct.png
-    link: https://accessclinicaldata.niaid.nih.gov
-  c13:
     title: BioData CATALYST
     fig: /figs/commons/stage.png
     link: https://gen3.biodatacatalyst.nhlbi.nih.gov
+  c4:
+    title: Biomedical Research GitHub
+    fig: /figs/commons/brh.png
+    link: https://brh.data-commons.org/
+  c5:
+    title: BloodPAC Data Commons
+    fig: /figs/commons/bloodpac.png
+    link: https://data.bloodpac.org
+  c6:
+    title: Canine Data Commons
+    fig: /figs/commons/canine.png
+    link: https://caninedc.org
+  c7:
+    title: Chicagoland COVID-19 Commons
+    fig: /figs/commons/covid19.png
+    link: https://chicagoland.pandemicresponsecommons.org
+  c8:
+    title: NCI-CRDC
+    fig: /figs/commons/crdc.png
+    link: https://nci-crdc.datacommons.io
+  c9:
+    title: OCC Environmental Data Commons
+    fig: /figs/commons/edc.png
+    link: https://portal.occ-data.org
+  c10:
+    title: GenoMEL Data Commons
+    fig: /figs/commons/genomel.png
+    link: https://genomel.bionimbus.org
+  c11:
+    title: NIH Heal Initiative
+    fig: /figs/commons/heal.png
+    link:  https://healdata.org
+  c12:
+    title: NIDDK IBD Genetics Consortium Data Commons
+    fig: /figs/commons/ibdgc.png
+    link: https://ibdgc.datacommons.io
+  c13:
+    title: ICGC PCAWG and DREAM Challenge data
+    fig:  /figs/commons/icgc.png
+    link: https://icgc.bionimbus.org/
   c14:
+    title: Justice Community Opioid Innovation Network
+    fig: /figs/commons/jcoin.png
+    link: https://jcoin.datacommons.io
+  c15:
+    title: Kids-First
+    fig: /figs/commons/kf.png
+    link: https://data.kidsfirstdrc.org
+  c16:
+    title: The Medical Imaging and Data Resource Center Commons
+    fig: /figs/commons/midrc.png
+    link: https://data.midrc.org
+  c17:
+    title: AccessClinicalTrails@NIAID
+    fig: /figs/commons/nct.png
+    link: https://accessclinicaldata.niaid.nih.gov
+  c18:
+    title: Veterans Affairs Data Commons
+    fig: /figs/commons/va.png
+    link: https://va.data-commons.org/
+  c19:
     title: Veterans Precision Oncology Data Commons
     fig: /figs/commons/vpodc.png
     link: https://vpodc.org
+
 ---
 
 <section class="g3-bg__solight">
@@ -141,6 +162,31 @@ g3Commons:
       <div class="g3-common-card">
         <a target="_blank" href="{{< param "g3Commons.c14.link" >}}" title="{{< param "g3Commons.c14.title" >}}">
           <img class="g3-row__8vh" src="{{< param "g3Commons.c14.fig" >}}" />
+        </a>
+      </div>
+      <div class="g3-common-card">
+        <a target="_blank" href="{{< param "g3Commons.c15.link" >}}" title="{{< param "g3Commons.c15.title" >}}">
+          <img class="g3-row__8vh" src="{{< param "g3Commons.c15.fig" >}}" />
+        </a>
+      </div>
+      <div class="g3-common-card">
+        <a target="_blank" href="{{< param "g3Commons.c16.link" >}}" title="{{< param "g3Commons.c16.title" >}}">
+          <img class="g3-row__8vh" src="{{< param "g3Commons.c16.fig" >}}" />
+        </a>
+      </div>
+      <div class="g3-common-card">
+        <a target="_blank" href="{{< param "g3Commons.c17.link" >}}" title="{{< param "g3Commons.c17.title" >}}">
+          <img class="g3-row__8vh" src="{{< param "g3Commons.c17.fig" >}}" />
+        </a>
+      </div>
+      <div class="g3-common-card">
+        <a target="_blank" href="{{< param "g3Commons.c18.link" >}}" title="{{< param "g3Commons.c18.title" >}}">
+          <img class="g3-row__8vh" src="{{< param "g3Commons.c18.fig" >}}" />
+        </a>
+      </div>
+      <div class="g3-common-card">
+        <a target="_blank" href="{{< param "g3Commons.c19.link" >}}" title="{{< param "g3Commons.c19.title" >}}">
+          <img class="g3-row__8vh" src="{{< param "g3Commons.c19.fig" >}}" />
         </a>
       </div>
     </div>
