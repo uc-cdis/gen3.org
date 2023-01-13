@@ -59,7 +59,7 @@ g3Commons:
     fig:  /figs/commons/icgc.png
     link: https://icgc.bionimbus.org/
   c14:
-      title: Justice Community Opioid Innovation Network (JCOIN)
+      title: Justice Community Opioid Innovation Network
       fig: /figs/commons/jcoin.png
       link: https://jcoin.datacommons.io
  c15:
