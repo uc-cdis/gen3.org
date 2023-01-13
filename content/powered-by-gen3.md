@@ -19,9 +19,9 @@ g3Commons:
     fig: /figs/commons/stage.png
     link: https://gen3.biodatacatalyst.nhlbi.nih.gov
   c4:
-    title:  Biomedical Research GitHub
-    fig:  /figs/commons/brh.png
-    link:  https://brh.data-commons.org/
+    title: Biomedical Research GitHub
+    fig: /figs/commons/brh.png
+    link: https://brh.data-commons.org/
   c5:
     title: BloodPAC Data Commons
     fig: /figs/commons/bloodpac.png
@@ -59,14 +59,14 @@ g3Commons:
     fig:  /figs/commons/icgc.png
     link: https://icgc.bionimbus.org/
   c14:
-      title: Justice Community Opioid Innovation Network
-      fig: /figs/commons/jcoin.png
-      link: https://jcoin.datacommons.io
- c15:
+    title: Justice Community Opioid Innovation Network
+    fig: /figs/commons/jcoin.png
+    link: https://jcoin.datacommons.io
+  c15:
     title: Kids-First
     fig: /figs/commons/kf.png
     link: https://data.kidsfirstdrc.org
- c16:
+  c16:
     title: The Medical Imaging and Data Resource Center Commons
     fig: /figs/commons/midrc.png
     link: https://data.midrc.org
