@@ -139,7 +139,7 @@ g3Commons:
 
 g3Contributor:
   title: Contributor
-  fig: figs/ctds-logo.png
+  fig: figs/UChicago_CTDS_Horizontal_Color RGB.png
   target: _blank
   link: https://ctds.uchicago.edu/
 g3Entrance:
