@@ -18,7 +18,7 @@ layout: single
 <ul>
   <li><a href="https://youtu.be/sUkCFlP5Qz8">Day 1 Video</a></li>
   <li><a href="https://youtu.be/XprBapBORmM">Day 2 Video</a></li>
-  <li><a href="https://youtu.be/jYCKC1R_evE">Day 3 Video</a> </li>
+  <li><a href="https://youtu.be/jYCKC1R_evE">Day 3 Video</a><a href="/community/events/gen3forum_202210_day3_slides.pdf">/ Day 3 Slides</a> </li>
 </ul>
 <br>
 
