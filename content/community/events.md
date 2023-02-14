@@ -24,7 +24,7 @@ g3Past:
         Image_kickoff: /figs/community_forum_2022.png
         Link: https://www.eventbrite.com/e/gen3-community-forum-2022-tickets-384218496867
         LocalLink1old:  https://www.youtube.com/playlist?list=PLZtKC_lqcLhKfSthym1ZKcDKf1n0wLzuH
-        LocalLink2old: /community/events/gen3forum_202210
+        LocalLink2old: /community/events/gen3forum_202210_post
 
 ---
 
