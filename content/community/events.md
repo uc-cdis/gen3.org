@@ -9,9 +9,9 @@ g3Teaser:
   detail: The Gen3 team at University of Chicago hosts events in partnership with the community of developers, operators, and sponsors of Gen3 data resources. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 team.
 
 g3Upcoming:
-  - Title: How to Set Up a Gen3 Data Commons
+  - Title: How to Set Up a Gen3 Data Commons Using Helm Charts
     Date: March 1, 2023; 3:30-5:00 pm CST
-    Description:  "We will take you through the current best practices for setting up and configuring your own Gen3 Data Commons by using Helm Charts.
+    Description:  "We will take you through the current best practices for setting up and configuring your own Gen3 Data Commons in multiple clouds by using Helm Charts.
 Helm is a tool that streamlines installing and managing Kubernetes applications, which is a system for automating deployment, scaling, and management of containerized applications. The use of Helm will greatly simplify standing up, configuring, and maintaining your own Gen3 Data Commons."
     Image: /figs/gen3_new_logo.png
     HelmzoomLink: https://uchicagomedicine.zoom.us/meeting/register/tJ0tc-qvrDgtG9N0jRgBCCwIpQDzK-0LsX__
