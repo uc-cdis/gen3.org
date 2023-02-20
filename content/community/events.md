@@ -10,7 +10,7 @@ g3Teaser:
 
 g3Upcoming:
   - Title: How to Set Up a Gen3 Data Commons Using Helm Charts
-    Date: March 1, 2023; 3:30-5:00 pm CST
+    Date: March 1, 2023, 3:30-5:00 pm CST; March 2, 2023, 8:30-10:00 am AEST
     Description:  "We will take you through the current best practices for setting up and configuring your own Gen3 Data Commons in multiple clouds by using Helm Charts.
 Helm is a tool that streamlines installing and managing Kubernetes applications, which is a system for automating deployment, scaling, and management of containerized applications. The use of Helm will greatly simplify standing up, configuring, and maintaining your own Gen3 Data Commons.  
 
