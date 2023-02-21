@@ -6,10 +6,10 @@ date: 2021-01-12
 g3Teaser:
   title: Powered by Gen3
 g3Commons:
-  c1:
-    title: ACCOuNT Data Commons
-    fig: /figs/commons/acct.png
-    link: https://acct.bionimbus.org
+#  c1:
+#    title: ACCOuNT Data Commons
+#    fig: /figs/commons/acct.png
+#    link: https://acct.bionimbus.org
   c2:
     title: AnVIL
     fig: /figs/commons/anvil.png
@@ -94,11 +94,12 @@ g3Commons:
 <section>
   <div class="g3-space__margin-lg-bottom g3-inner-wrapper">
     <div class="g3-flex-content g3-flex-content_wrap g3-space__margin-md-top-bottom">
-      <div class="g3-common-card">
+<!--      <div class="g3-common-card">
         <a target="_blank" href="{{< param "g3Commons.c1.link" >}}" title="{{< param "g3Commons.c1.title" >}}">
           <img class="g3-row__8vh" src="{{< param "g3Commons.c1.fig" >}}" />
         </a>
       </div>
+-->
       <div class="g3-common-card">
         <a target="_blank" href="{{< param "g3Commons.c2.link" >}}" title="{{< param "g3Commons.c2.title" >}}">
           <img class="g3-row__8vh" src="{{< param "g3Commons.c2.fig" >}}" />
