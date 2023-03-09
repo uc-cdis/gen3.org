@@ -9,6 +9,23 @@ g3Teaser:
   detail: The Gen3 team at University of Chicago hosts events in partnership with the community of developers, operators, and sponsors of Gen3 data resources. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 team.
 
 g3Upcoming:
+- Title: Gen3 Forum Office Hours - Helm Charts
+  Date: April 5, 2023, 4:00-5:00 pm CST; April 6, 2023, 7:00-8:00 am AEST
+  Description:  "Join us for an informal session where a platform engineer from the Center for Translational Data Science (CTDS) will be on hand to answer your questions about using Helm Charts for setting up a Gen3 Data Commons."
+  Image: /figs/gen3_new_logo.png
+  Register: https://uchicago.zoom.us/meeting/register/tJwkcuyrqTgpHNRTi-I6i1N6BQ_y7rWeGf5h
+
+- Title: How to Build a Data Mesh Using Gen3
+  Date: May 1, 2023, 3:30-5:00 pm CST; May 2, 2023, 6:30-8:00 am AEST
+  Description:  "Data meshes or ecosystems consist of an interconnected network of data resources (e.g. data commons, repositories, or knowledgebases) that are integrated by utilizing a common set of software services. Each component data resource may have many of its own systems and separate governance, but they are all connected via framework or mesh services such as authentication and authorization, data indexing, and metadata services. In this Gen3 community event we will describe Gen3 Mesh Services and when building a mesh may be appropriate for your project."
+  Image: /figs/gen3_new_logo.png
+  Register: https://uchicago.zoom.us/meeting/register/tJwuceyqrzkpGdXKxpnsLYyKLLaqf1ZXYHzr
+
+
+
+
+
+
 
 g3Past:
 
