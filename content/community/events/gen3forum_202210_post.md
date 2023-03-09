@@ -16,7 +16,7 @@ layout: single
 <br>
 
 <ul>
-  <li><a href="https://youtu.be/sUkCFlP5Qz8">Day 1 Video</a></li>
+  <li><a href="https://youtu.be/Z9YbOQ3feBw">Day 1 Video</a></li>
   <li><a href="https://youtu.be/XprBapBORmM">Day 2 Video</a></li>
   <li><a href="https://youtu.be/jYCKC1R_evE">Day 3 Video</a><a href="/community/events/gen3forum_202210_day3_slides.pdf">/ Day 3 Slides</a> </li>
 </ul>
@@ -38,28 +38,28 @@ layout: single
    <td> <h4>Video Tour of Gen3 Data Commons and Meshes</h4> <hr>
         <a href="https://portal.pedscommons.org/">Pediatric Cancer Data Commons</a> <br>
         <i>Sam Volchenboum, Principal Investigator & Pediatric Oncologist, University of Chicago</i><br>
-        <a href="https://youtu.be/sUkCFlP5Qz8?t=309">&#x1F3A5;</a>
+        <a href="https://youtu.be/Z9YbOQ3feBw?t=312">&#x1F3A5;</a>
         <hr>
         <a href="https://ellrottlab.org/">Kyle Ellrott Lab, Oregon Health & Science University</a><br>
         <i>Brian Walsh, Senior Research Sotware Engineer, Oregon Health & Science University</i><br>
-          <a href="https://youtu.be/sUkCFlP5Qz8?t=706">&#x1F3A5;</a>
+          <a href="https://youtu.be/Z9YbOQ3feBw?t=694">&#x1F3A5;</a>
         <hr>
         <a href="https://healdata.org">HEAL Data Commons</a> <br>
         <i> Aarti Venkat, Faculty in Department of Medicine and Scientific Lead for CTDS at the University of Chicago</i><br>
-          <a href="https://youtu.be/sUkCFlP5Qz8?t=1109">&#x1F3A5;</a>
+          <a href="https://youtu.be/Z9YbOQ3feBw?t=1087">&#x1F3A5;</a>
         <hr>
         <a href="https://data.acdc.ozheart.org/">Australian Cardiovascular Disease Data Commons</a> <br>
           <i> Marion Shadbolt, Human Genomics Data Specialist Australian BioData Commons</i><br>
-            <a href="https://youtu.be/sUkCFlP5Qz8?t=1590">&#x1F3A5;</a>
+            <a href="https://youtu.be/Z9YbOQ3feBw?t=1574">&#x1F3A5;</a>
       <hr>
        <a href='https://ibdgc.datacommons.io/NIDDK'>IBD Genetics Consortium Data Commons</a> <br>
        <i>Phil Schumm <br> Statistician Manager, Director, Research Computing Group <br> Assistant Director, Biostat Lab
        </i><br>
-         <a href="https://youtu.be/sUkCFlP5Qz8?t=2299">&#x1F3A5;</a>
+         <a href="https://youtu.be/Z9YbOQ3feBw?t=2265">&#x1F3A5;</a>
        <hr>
        <a href="https://brh.data-commons.org/">Biomedical Research Hub</a> <br>
        <i>Chris Meyer, Manager of User Solutions and Scientific Support, CTDS/Gen3, University of Chicago </i><br>
-         <a href="https://youtu.be/sUkCFlP5Qz8?t=2794">&#x1F3A5;</a>
+         <a href="https://youtu.be/Z9YbOQ3feBw?t=2779">&#x1F3A5;</a>
        </td>
    </tr>
   <tr>
@@ -69,34 +69,34 @@ layout: single
   <tr>
    <td> 5:10-6:05pm CDT  </td> <td> <h4>Video Tour of Gen3 Workspaces and Applications</h4> <hr>
        Two projects from Aotearoa - AGDR & Rakeiora Pathfinder <br>
-       <a href="https://repo.data.nesi.org.nz/">Aotearoa Genomic Data Repository"</a> <br>
+       <a href="https://repo.data.nesi.org.nz/">Aotearoa Genomic Data Repository</a> <br>
        <i> Jun Huh, Product Manager, New Zealand eScience Infrastructure (NeSI) </i><br>
-         <a href="https://youtu.be/sUkCFlP5Qz8?t=3295">&#x1F3A5;</a>
+         <a </a>
     <hr>
        MIDRC DICOM Viewer Integration <br>
        <a href="https://data.midrc.org/">MIDRC Data Commons</a><br>
        <i>Chris Meyer, Manager of User Solutions and Scientific Support, CTDS/Gen3, University of Chicago</i><br>
-         <a href="https://youtu.be/sUkCFlP5Qz8?t=3799">&#x1F3A5;</a>
+         <a href="https://youtu.be/Z9YbOQ3feBw?t=3255">&#x1F3A5;</a>
     <hr>
        OCC Automatic Governance Process for Gen3 Data Commons <br>
        <a href="http://occ-data.org">Open Commons Consortium</a><br>
        <i>Urvi Sheth, Software Engineer, OCC</i><br>
-         <a href="https://youtu.be/sUkCFlP5Qz8?t=4135">&#x1F3A5;</a>
+         <a href="https://youtu.be/Z9YbOQ3feBw?t=3588">&#x1F3A5;</a>
     <hr>
        Veterans Administration Data Commons with OMOP & GWAS <br>
        <a href=https://va.data-commons.org/>VA Data Commons</a> <br>
        <i> Kyle Hernandez, Manager of Bioinformatics, Center for Translational Data Science </i><br>
-         <a href="https://youtu.be/sUkCFlP5Qz8?t=4656">&#x1F3A5;</a>
+         <a href="https://youtu.be/Z9YbOQ3feBw?t=4126">&#x1F3A5;</a>
     <hr>
        Jupyter Notebook over JCOIN <br>
        <a href=https://jcoin.datacommons.io/>JCOIN Data Commons</a> <br>
        <i> Phil Schumm <br> Statistician Manager, Director, Research Computing Group, & Assistant Director, Biostat Lab, Department of Public Health Sciences University of Chicago </i><br>
-       <a href="https://youtu.be/sUkCFlP5Qz8?t=5092">&#x1F3A5;</a>
+       <a href="https://youtu.be/Z9YbOQ3feBw?t=4584">&#x1F3A5;</a>
     <hr>
       Developing a Clinical Translation Platform <br>
       <a href="https://abi-12-labours-app.herokuapp.com/about">12 Labours Project</a> <br>
       <i>Thiranja Prasad Babarenda Gamage, Research Fellow, Auckland Bioengineering Institute </i><br>
-      <a href="https://youtu.be/sUkCFlP5Qz8?t=5624">&#x1F3A5;</a>
+      <a href="https://youtu.be/Z9YbOQ3feBw?t=5120">&#x1F3A5;</a>
       </td>
   </tr>
   <tr>
@@ -105,15 +105,15 @@ layout: single
   </tr>
   <tr>
    <td> 6:15-6:35pm CDT </td> <td> <h4>Gen3 Roadmap</h4> <br> Robert Grossman, <br> Frederick H. Rawson Distinguished Service Professor of Medicine and Computer Science <br> and the Jim and Karen Frank Director of the Center for Translational Data Science (CTDS) at the University of Chicago <br>
-   <a href="https://youtu.be/sUkCFlP5Qz8?t=6253">&#x1F3A5;</a>
+   <a href="https://youtu.be/Z9YbOQ3feBw?t=5744">&#x1F3A5;</a>
   </tr></td>
   <tr>
    <td>6:35-6:55pm CDT </td> <td> <h4>Gen3 Roadmap Discussion</h4><br>
-   <a href="https://youtu.be/sUkCFlP5Qz8?t=7107">&#x1F3A5;</a> </td>
+   <a href="https://youtu.be/Z9YbOQ3feBw?t=6615">&#x1F3A5;</a> </td>
   </tr>
   <tr>
     <td>6:55-7:05pm CDT </td> <td> <h4> Day 1 Recap </hr><br>
-    <a href="https://youtu.be/sUkCFlP5Qz8?t=8735">&#x1F3A5;</a> </td>
+    <a href="https://youtu.be/Z9YbOQ3feBw?t=8194">&#x1F3A5;</a> </td>
   </tr>
 </table>
 
