@@ -21,9 +21,9 @@ g3Past:
 - Title: Gen3 Community Forum 2022
   Date: Oct 10-12, 2022 US; Oct 11-13, 2022 AU
   Description:  "The Gen3 Community Forum consists of those developing and operating Gen3 data commons and data meshes, those considering developing Gen3 data commons and meshes, and other stakeholders involved with the Gen3 community. The four aims of the Forum are: to share knowledge about Gen3, its architecture, and the Gen3 roadmaps and priorities; to strengthen the connection between the Gen3 core team and those developing, operating and using Gen3 platforms; to design a set of ongoing community engagement activities; and to discuss and agree on key shared development priorities between the Gen3 core team and the Gen3 community. The virtual community forum is co-hosted by the University of Chicago and the Australian BioCommons."
+  Playlist: https://www.youtube.com/playlist?list=PLZtKC_lqcLhKfSthym1ZKcDKf1n0wLzuH
   Image: /figs/community_forum_2022.png
-  LocalLink:  https://www.youtube.com/playlist?list=PLZtKC_lqcLhKfSthym1ZKcDKf1n0wLzuH
-  LocalLink2: /community/events/gen3forum_202210_post
+  Agenda: /community/events/gen3forum_202210_post
 
 
 ---
@@ -53,7 +53,7 @@ g3Past:
     </div>
 </section>
 
-{{< webinar "g3Upcoming" >}}
+{{< events "g3Upcoming" >}}
 
 <section class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
     <div class="g3-inner-wrapper">
@@ -61,4 +61,4 @@ g3Past:
     </div>
 </section>
 
-{{< webinar "g3past" >}}
+{{< events "g3past" >}}
