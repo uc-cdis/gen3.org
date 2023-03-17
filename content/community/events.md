@@ -6,8 +6,8 @@ date: 2022-06-22T22:16:21-05:00
 g3Teaser:
   fig: /figs/webinar.svg
   title: Gen3 Community Events
-  detail: The Gen3 team at University of Chicago hosts events in partnership with the community of developers, operators, and sponsors of Gen3 data resources. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 team.
-
+  detail: About every other month, there is a virtual Gen3 Forum for the community of Gen3 developers, operators, sponsors and users of Gen3 data platforms. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 core development team.
+  
 g3Upcoming:
 - Title: Gen3 Forum Office Hours - Helm Charts
   Date: April 5, 2023, 4:00-5:00 pm CST; April 6, 2023, 7:00-8:00 am AEST
