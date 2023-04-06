@@ -7,13 +7,8 @@ g3Teaser:
   fig: /figs/webinar.svg
   title: Gen3 Community Events
   detail: About every other month, there is a virtual Gen3 Forum for the community of Gen3 developers, operators, sponsors and users of Gen3 data platforms. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 core development team.
-  
+
 g3Upcoming:
-- Title: Gen3 Forum Office Hours - Helm Charts
-  Date: April 5, 2023, 4:00-5:00 pm CST; April 6, 2023, 7:00-8:00 am AEST
-  Description:  "Join us for an informal session where a platform engineer from the Center for Translational Data Science (CTDS) will be on hand to answer your questions about using Helm Charts for setting up a Gen3 Data Commons."
-  Image: /figs/gen3_new_logo.png
-  Register: https://uchicago.zoom.us/meeting/register/tJwkcuyrqTgpHNRTi-I6i1N6BQ_y7rWeGf5h
 
 - Title: How to Build a Data Mesh Using Gen3
   Date: May 1, 2023, 3:30-5:00 pm CST; May 2, 2023, 6:30-8:00 am AEST
@@ -24,10 +19,14 @@ g3Upcoming:
 
 
 
-
-
-
 g3Past:
+
+- Title: Gen3 Forum Office Hours - Helm Charts
+  Date: April 5, 2023, 4:00-5:00 pm CST; April 6, 2023, 7:00-8:00 am AEST
+  Description:  "Join us for an informal session where a platform engineer from the Center for Translational Data Science (CTDS) will be on hand to answer your questions about using Helm Charts for setting up a Gen3 Data Commons."
+  Youtube: y8ZFiQYzkg8
+  Slides:
+
 
 - Title: How to Set Up a Gen3 Data Commons Using Helm Charts
   Date: March 1, 2023, 3:30-5:00 pm CST; March 2, 2023, 8:30-10:00 am AEST
