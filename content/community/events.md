@@ -10,16 +10,18 @@ g3Teaser:
 
 g3Upcoming:
 
-- Title: How to Build a Data Mesh Using Gen3
-  Date: May 1, 2023, 3:30-5:00 pm CST; May 2, 2023, 6:30-8:00 am AEST
-  Description:  "Data meshes or ecosystems consist of an interconnected network of data resources (e.g. data commons, repositories, or knowledgebases) that are integrated by utilizing a common set of software services. Each component data resource may have many of its own systems and separate governance, but they are all connected via framework or mesh services such as authentication and authorization, data indexing, and metadata services. In this Gen3 community event we'll describe the Gen3 Mesh Services, and you will hear from a few projects and applications that are utilizing the Gen3 mesh functionality. As always we will leave plenty of time for questions and discussion."
-  Image: /figs/gen3_new_logo.png
-  Register: https://uchicago.zoom.us/meeting/register/tJwuceyqrzkpGdXKxpnsLYyKLLaqf1ZXYHzr
+
 
 
 
 
 g3Past:
+
+- Title: How to Build a Data Mesh Using Gen3
+  Date: May 1, 2023, 3:30-5:00 pm CST; May 2, 2023, 6:30-8:00 am AEST
+  Description:  "Data meshes or ecosystems consist of an interconnected network of data resources (e.g. data commons, repositories, or knowledgebases) that are integrated by utilizing a common set of software services. Each component data resource may have many of its own systems and separate governance, but they are all connected via framework or mesh services such as authentication and authorization, data indexing, and metadata services. In this Gen3 community event we'll describe the Gen3 Mesh Services, and you will hear from a few projects and applications that are utilizing the Gen3 mesh functionality. As always we will leave plenty of time for questions and discussion."
+  Youtube: K5ld3V5AslE
+  Slides: Gen3 Forum May 1 2023 - Data Meshes.pdf
 
 - Title: Gen3 Forum Office Hours - Helm Charts
   Date: April 5, 2023, 4:00-5:00 pm CST; April 6, 2023, 7:00-8:00 am AEST
