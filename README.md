@@ -9,7 +9,7 @@ The Gen3.org website for describing the Gen3 platform.
 brew install hugo
 # Build site and start Hugo server locally
 hugo server -D -b localhost
-```
+``` 
 
 ## Dockerfile
 
