@@ -11,10 +11,10 @@ g3Teaser:
 g3Upcoming:
 - Title: Data Modeling in Gen3 Data Commons
   Date: July 6, 2023, 3:30-5:00 pm CDT; July 7, 2023, 6:30-8:00 am AEST
-  Description: Gen3 supports a flexible graph-based data model, which can be customized for a wide variety of projects and use cases.  At this community event we will hear from several data commons operators on how they have created their dictionaries and about any tools or processes they use for updating and configuring them.  
-  Agenda2: /community/events/gen3forum_20230706
-  Image: /figs/OADC_model.png
+  Description:  Additional details coming soon
+  Image: /figs/gen3_new_logo.png
   Register: https://uchicago.zoom.us/meeting/register/tJIucuytpz8qHdUEbRhdcOZFWD5XnC68iebE
+
 
 
 g3Past:
