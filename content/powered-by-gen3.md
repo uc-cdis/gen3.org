@@ -119,10 +119,10 @@ g3Commons:
             -->
          <div class="g3-common-card">
             <a target="_blank" href="{{< param "g3Commons.c2.link" >}}" title="{{< param "g3Commons.c2.title" >}}">
-            <img class="g3-row__50px src="{{< param "g3Commons.c2.fig" >}}" />
+            <img class="g3-row__50px" src="{{< param "g3Commons.c2.fig" >}}" />
             </a>
          </div>
-         <div class="g3-common-card">
+          <div class="g3-common-card">
             <a target="_blank" href="{{< param "g3Commons.c3.link" >}}" title="{{< param "g3Commons.c3.title" >}}">
             <img class="g3-row__50px" src="{{< param "g3Commons.c3.fig" >}}" />
             </a>
