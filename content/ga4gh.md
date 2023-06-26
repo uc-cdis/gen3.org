@@ -6,7 +6,7 @@ date: 2023-06-20
 g3Teaser:
   title: GA4GH Standards
   fig: /figs/ga4gh.svg
-  detail: GA4GH is the foremost standards setting body in the world for Genomics and Health. Gen3 aims to follow GA4GH standards whenever possible in order to improve our interoperability with other systems and to simplify the use of a Gen3 Data Commons.  Gen3 is a GA4GH driver project through our close relationship with a sister project - the NCI Genomic Data Commons.  Some of the areas where we are active are highlighted below.
+  detail: GA4GH is the foremost standards setting body in the world for Genomics and Health. Gen3 aims to follow GA4GH standards whenever possible in order to improve our interoperability with other systems and to simplify the use of a Gen3 Data Commons.  Gen3 is a GA4GH driver project in multiple ways: first, through its use by the Data Commons Framework Services project, which underpins interoperability within the Cancer Research Data Commons and second, through our close relationship with a sister project - the NCI Genomic Data Commons.  Some of the areas where we are active are highlighted below.
 g3Feature:
   f1:
     title: Data Repository Service (DRS)
