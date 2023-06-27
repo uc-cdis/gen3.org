@@ -6,17 +6,17 @@ date: 2023-06-20
 g3Teaser:
   title: GA4GH Standards
   fig: /figs/ga4gh.svg
-  detail: GA4GH is the foremost standards setting body in the world for Genomics and Health. Gen3 aims to follow GA4GH standards whenever possible in order to improve our interoperability with other systems and to simplify the use of a Gen3 Data Commons. Gen3 is a GA4GH driver project in multiple ways  first, through its use by the Data Commons Framework Services project, which underpins interoperability within the Cancer Research Data Commons and second, through our close relationship with a sister project - the NCI Genomic Data Commons.  Some of the areas where we are active are highlighted below.
+  detail: Text entered in html below
 g3Feature:
   f1:
     title: Data Repository Service (DRS)
-    detail: The Data Repository Service (DRS) API provides a generic interface to data repositories so data consumers, including workflow systems, can access data in a single, standard way regardless of where it is stored and how it is managed. The DRS standard is incorporated into our fence and IndexD services.
+    detail: See html below
   f2:
-    title: Passports
-    detail: The passports specification provides a data model for encoding information about the researcher, along with their acquired data access permissions, in a way that cannot be tampered with and enables data access between platforms. Once a platform has issued a visa to your passport you can use that passport to bring your data to yet another platform.  Our Fence service supports RAS, which is an NIH implementation of Passports
+    title: Passports and Visas
+    detail: See html below
   f3:
     title: Data Connect
-    detail: Data Connect is a standard for discovery and search of biomedical data.  It shares metadata about an identifier. The Gen3 Metadata Service (MDS) is very close to this standard and will be fully compatible soon.
+    detail: See html below
   f4:
     title: Task Execution Service (TES)
     detail: The Task Execution Service (TES) API is a standardized schema and API for describing and executing batch execution tasks.  Gen3 is working to incorporate this standard into our own workflow execution service.
@@ -34,7 +34,7 @@ g3Feature:
           {{< param "g3Teaser.title" >}}
         </h1>
         <p class="g3-space__margin-sm-bottom introduction g3-space__margin-sm-right">
-          GA4GH is the foremost standards setting body in the world for Genomics and Health. Gen3 aims to follow GA4GH standards whenever possible in order to improve our interoperability with other systems and to simplify the use of a Gen3 Data Commons. Gen3 is a GA4GH driver project in multiple ways:  first, through its use by the Data Commons Framework Services project, which underpins interoperability within the Cancer Research Data Commons and second, through our close relationship with a sister project - the NCI Genomic Data Commons.  Some of the areas where we are active are highlighted below.
+          GA4GH is an international standards setting body for Genomics and Health. Gen3 aims to follow GA4GH standards whenever possible in order to improve our interoperability with other systems and to simplify the use of a Gen3 Data Commons. Gen3 works closely with GA4GH in multiple ways:  first, through its use by the Data Commons Framework Services project, which underpins interoperability within the Cancer Research Data Commons (a GA4GH driver project) and second, through our close relationship with a sister project - the NCI Genomic Data Commons (also a GA4GH driver project).  Some of the areas where we are active are highlighted below.
         </p>
       </div>
     </div>
@@ -51,7 +51,7 @@ g3Feature:
       <div class="g3-space__margin-sm-left">
         <h3>{{< param "g3Feature.f1.title" >}}</h3>
         <p class="g3-space__margin-sm-top">
-          {{< param "g3Feature.f1.detail" >}}
+          The <a href="https://www.ga4gh.org/product/data-repository-service-drs/">Data Repository Service (DRS)</a> API provides a generic interface to data repositories so data consumers, including workflow systems, can access data in a single, standard way regardless of where it is stored and how it is managed. The DRS standard is incorporated into our fence and IndexD services.
         </p>
       </div>
     </div>
@@ -59,7 +59,7 @@ g3Feature:
       <div class="g3-space__margin-sm-left">
         <h3>{{< param "g3Feature.f2.title" >}}</h3>
         <p class="g3-space__margin-sm-top">
-          {{< param "g3Feature.f2.detail" >}}
+          The <a href="https://www.ga4gh.org/product/ga4gh-passports/">Passports</a> specification provides a data model for encoding information about the researcher, along with their acquired data access permissions, in a way that cannot be tampered with and enables data access between platforms. Once a platform has issued a visa to your passport you can use that passport to bring your data to yet another platform.  Our Fence service supports RAS, which is an NIH implementation of Passports
         </p>
       </div>
     </div>
@@ -69,7 +69,7 @@ g3Feature:
       <div class="g3-space__margin-sm-left">
         <h3>{{< param "g3Feature.f3.title" >}}</h3>
         <p class="g3-space__margin-sm-top">
-          {{< param "g3Feature.f3.detail" >}}
+          <a href="https://www.ga4gh.org/product/data-connect/">Data Connect</a> is a standard for discovery and search of biomedical data.  It shares metadata about an identifier. The Gen3 Metadata Service (MDS) is very close to this standard and will be fully compatible soon.
         </p>
       </div>
     </div>
@@ -77,7 +77,7 @@ g3Feature:
       <div class="g3-space__margin-sm-left">
         <h3>{{< param "g3Feature.f4.title" >}}</h3>
         <p class="g3-space__margin-sm-top">
-          {{< param "g3Feature.f4.detail" >}}
+          The <a href="https://www.ga4gh.org/product/task-execution-service-tes/">Task Execution Service (TES)</a> API is a standardized schema and API for describing and executing batch execution tasks.  Gen3 is working to incorporate this standard into our own workflow execution service.
         </p>
       </div>
     </div>
