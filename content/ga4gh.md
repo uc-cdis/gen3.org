@@ -25,7 +25,7 @@ g3Feature:
 
 <section class="g3-bg__white">
   <div class="g3-outer-wrapper g3-flex-content g3-flex-content__reverse">
-    <div class="g3-col__65 g3-flex-content_alien-self-flex-end g3-mb-space__padding-lg-bottom g3-space__margin-lg-top-bottom g3-mini-wrapper">
+    <div class="g3-col__50 g3-flex-content_alien-self-flex-end g3-space__padding-md-bottom g3-space__margin-lg-top-bottom g3-space__wrapper-gap-right">
     <a href="https://www.ga4gh.org/"> <img class="g3-img__bottom_pad" src="{{< param "g3Teaser.fig" >}}" > </a>
     </div>
     <div class="g3-space__padding-lg-top g3-space__padding-lg-bottom g3-col__45">
