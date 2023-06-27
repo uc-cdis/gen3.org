@@ -19,7 +19,7 @@ g3Feature:
     detail: See html below
   f4:
     title: Task Execution Service (TES)
-    detail: The Task Execution Service (TES) API is a standardized schema and API for describing and executing batch execution tasks.  Gen3 is working to incorporate this standard into our own workflow execution service.
+    detail: See html below
 
 ---
 
