@@ -70,7 +70,8 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
     * Publish Notebooks as .html version on the [Resource Browser](https://github.com/uc-cdis/data-portal/blob/master/docs/resource_browser.md). See [here](https://chicagoland.pandemicresponsecommons.org/resource-browser) for an example.
 * Discover Datasets at a high-level on the [Discovery Page](https://github.com/uc-cdis/data-portal/blob/master/docs/portal_config.md). See [here](https://gen3.datacommons.io/discovery) for an example.
 * Run complex CWL analysis workflows *(Work in progress)*
-
+    * Import and export a dictionary
+    * Import and export structured data
 
 ## Access management and security
 
