@@ -4,15 +4,14 @@ title: Gen3 Features
 linktitle: /resources/gen3-features
 layout: withtoc
 menuname: featuresMenu
-date: 2019-12-04T10:57:21-05:00
+date: 2023-06-280T15:20:00-6:00
 ---
-
 
 # A list of Gen3 features
 
 Gen3 is an open-source platform that enables the standing-up of data commons for managing, analyzing, and sharing research data. Below you can find an exhaustive list of Gen3 features.
 
-## Dictionary and structured data
+## Dictionary
 
 * Explore the graph in the [dictionary page](../user/dictionary/) of [Windmill](https://github.com/uc-cdis/data-portal):
     * Search keywords
@@ -21,6 +20,9 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
 * Explore [project graphs and nodes](../user/dictionary/#understanding-the-gen3-data-dictionary-and-model) in [Windmill](https://github.com/uc-cdis/data-portal):
     * Visualize graph model
     * Browse/download data for each node
+
+## Metadata
+
 * Structured [data submission](../user/submit-data/) (create, update, delete records) in JSON, TSV or CSV:
     * Submission page of Windmill
     * Gen3 SDK (Python, R)
@@ -33,6 +35,9 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
 * Import and export using the Portable Format for Biomedical Data (PFB): *(Work in progress)*
     * Import and export a dictionary
     * Import and export structured data
+* Setup [Metadata Services (MDS)](https://github.com/uc-cdis/metadata-service#metadata-service) and programmatically access semi-structured metadata using the [endpoint](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/metadata-service/master/docs/openapi.yaml)
+* Use [Aggregated Metadata Services (AggMDS)](https://github.com/uc-cdis/metadata-service/blob/master/docs/config_agg_mds.md) in the ETL process to pull, cleanup and normalize metadata across multiple commons.
+* [Cross-Commons Subject Linking feature (also known as a Crosswalk)](https://github.com/uc-cdis/gen3sdk-python/blob/master/docs/howto/crosswalk.md)
 
 ## Data files
 
@@ -47,7 +52,7 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
     * [Gen3 Client](../user/gen3-client/)
     * [Files page of Windmill](../user/access-data/#access-data-from-the-data-commons-website)
 * Core metadata endpoint to get information about a data file
-* [Metadata Service](https://github.com/uc-cdis/metadata-service)
+
 
 ## Data exploration and analysis
 
