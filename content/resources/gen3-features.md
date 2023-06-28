@@ -35,7 +35,7 @@ Gen3 is an open-source platform that enables the standing-up of data commons for
 * Import and export using the Portable Format for Biomedical Data (PFB): *(Work in progress)*
     * Import and export a dictionary
     * Import and export structured data
-* Setup [Metadata Services (MDS)](https://github.com/uc-cdis/metadata-service#metadata-service) and programmatically access semi-structured metadata using the [endpoint](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/metadata-service/master/docs/openapi.yaml)
+* [Enable Metadata Services (MDS)](https://github.com/uc-cdis/metadata-service#metadata-service) and programmatically access semi-structured metadata using the [endpoint](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/metadata-service/master/docs/openapi.yaml)
 * Use [Aggregated Metadata Services (AggMDS)](https://github.com/uc-cdis/metadata-service/blob/master/docs/config_agg_mds.md) in the ETL process to pull, cleanup and normalize metadata across multiple commons.
 * [Cross-Commons Subject Linking feature (also known as a Crosswalk)](https://github.com/uc-cdis/gen3sdk-python/blob/master/docs/howto/crosswalk.md)
 
