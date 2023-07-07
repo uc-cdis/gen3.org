@@ -9,15 +9,18 @@ g3Teaser:
   detail: About every other month, there is a virtual Gen3 Forum for the community of Gen3 developers, operators, sponsors and users of Gen3 data platforms. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 core development team.
 
 g3Upcoming:
+
+
+
+g3Past:
+
 - Title: Data Modeling in Gen3 Data Commons
   Date: July 6, 2023, 3:30-5:00 pm CDT; July 7, 2023, 6:30-8:00 am AEST
   Description: Gen3 supports a flexible graph-based data model, which can be customized for a wide variety of projects and use cases.  At this community event we will hear from several data commons operators on how they have created their dictionaries and about any tools or processes they use for updating and configuring them.  
   Agenda2: /community/events/gen3forum_20230706
-  Image: /figs/OADC_model.png
-  Register: https://uchicago.zoom.us/meeting/register/tJIucuytpz8qHdUEbRhdcOZFWD5XnC68iebE
+  Youtube: xjFUYa4C_hw
+  Slides:  Gen3 Forum July 6 2023 - Data Models.pdf
 
-
-g3Past:
 
 - Title: How to Build a Data Mesh Using Gen3
   Date: May 1, 2023, 3:30-5:00 pm CST; May 2, 2023, 6:30-8:00 am AEST
