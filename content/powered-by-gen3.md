@@ -5,11 +5,12 @@ linktitle: powered-by-gen3
 date: 2021-01-12
 g3Teaser:
   title: Powered by Gen3
+  detail:  Please reach out to support@datacommons.io if you would like to see your Gen3 data commons appear on this list.
 g3Commons:
-#  c1:
-#    title: ACCOuNT Data Commons
-#    fig: /figs/commons/acct.png
-#    link: https://acct.bionimbus.org
+  #  c1:
+  #    title: ACCOuNT Data Commons
+  #    fig: /figs/commons/acct.png
+  #    link: https://acct.bionimbus.org
   c2:
     title: AnVIL
     fig: /figs/commons/anvil.png
@@ -98,6 +99,10 @@ g3Commons:
     title: Pediatric Cancer Data Commons
     fig: /figs/commons/pcdc.png
     link: https://portal.pedscommons.org/
+  c24:
+    title: ARDaC AlcHepNet Research Data Commons
+    fig: /figs/commons/ARDaC.png
+    link: https://dev.ardac.org/
 ---
 
 
@@ -236,5 +241,15 @@ g3Commons:
          <img class="g3-row__50px" src="{{< param "g3Commons.c23.fig" >}}" />
          </a>
       </div>
+      <div class="g3-common-card">
+         <a target="_blank" href="{{< param "g3Commons.c24.link" >}}" title="{{< param "g3Commons.c24.title" >}}">
+         <img class="g3-row__50px" src="{{< param "g3Commons.c24.fig" >}}" />
+         </a>
+      </div>
    </div>
 </section>         
+<section class="g3-bg__white">
+   <h3 class="g3-text__center g3-space__padding-md-left g3-space__padding-md-top-bottom">
+      {{< param "g3Teaser.detail" >}}
+   </h3>
+</section>
