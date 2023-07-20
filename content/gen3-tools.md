@@ -22,6 +22,27 @@ g3Starts:
     button:
       caption: GitHub
       link: https://github.com/AustralianBioCommons/gen3schemadev
+  s3:
+    name: gen3utils
+    fig: /figs/UChicago_CTDS_Vertical_Color RGB.svg
+    detail: Utilities for Gen3 management including validation tools. Created by the Center for Translational Data Science at the University of Chicago.
+    button:
+      caption: GitHub
+      link: https://github.com/uc-cdis/gen3utils
+  s4:
+    name: PFB Python SDK
+    fig: /figs/UChicago_CTDS_Vertical_Color RGB.svg
+    detail: Python SDK to create, explore and modify PFB (Portable Format for Biomedical Data) files. Created by the Center for Translational Data Science at the University of Chicago.
+    button:
+      caption: GitHub
+      link: https://github.com/uc-cdis/pypfb
+  s5:
+    name: UMCCR Data Dictionary
+    fig: /figs/melbourne.svg
+    detail: Gen3 dictionary tools (Docker image) for conversion, visualization, testing, and validation to allow for iterative development of schema locally.  Created by the Genomics Platform Group and the University of Melbourne.
+    button:
+      caption: GitHub
+      link: https://github.com/umccr/umccr-dictionary
 
 
 
@@ -36,7 +57,7 @@ g3Starts:
    </h3>
 </section>
 <section>
-  <div class="g3-inner-wrapper g3-space__padding-md-top g3-space__padding-lg-bottom g3-mb-space__padding-lg-top g3-mb-space__padding-lg-bottom">
+  <div class="g3-inner-wrapper g3-space__padding-md-top g3-mb-space__padding-lg-top g3-mb-space__padding-lg-bottom">
     <div class="g3-table g3-space__margin-lg-bottom g3-mb-space__margin-lg-bottom">
       <div class="g3-col__50 g3-text__center g3-space__padding-sm-left-right">
         <img class="g3-row__10vh g3-space__margin-sm-bottom" src="{{< param "g3Starts.s1.fig" >}}"/>
@@ -64,6 +85,57 @@ g3Starts:
           </a>
         </div>
     </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="g3-inner-wrapper g3-space__padding-md-top g3-mb-space__padding-lg-top g3-mb-space__padding-lg-bottom">
+    <div class="g3-table g3-space__margin-lg-bottom g3-mb-space__margin-lg-bottom">
+      <div class="g3-col__50 g3-text__center g3-space__padding-sm-left-right">
+        <img class="g3-row__10vh g3-space__margin-sm-bottom" src="{{< param "g3Starts.s3.fig" >}}"/>
+        <h3 class="g3-space__margin-sm-bottom">
+          {{< param "g3Starts.s3.name" >}}
+        </h3>
+        <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
+          {{< param "g3Starts.s3.detail" >}}
+        </p>
+        <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s3.button.link" >}}">
+          {{< param "g3Starts.s3.button.caption" >}}
+        </a>
+      </div>
+      <div class="g3-col__50 g3-text__center g3-space__padding-sm-left-right">
+        <img class="g3-row__10vh g3-space__margin-sm-bottom" src="{{< param "g3Starts.s4.fig" >}}"/>
+        <h3 class="g3-space__margin-sm-bottom">
+          {{< param "g3Starts.s4.name" >}}
+        </h3>
+        <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
+          {{< param "g3Starts.s4.detail" >}}
+        </p>
+        <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s4.button.link" >}}">
+          {{< param "g3Starts.s4.button.caption" >}}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="g3-inner-wrapper g3-space__padding-md-top g3-space__padding-lg-bottom g3-mb-space__padding-lg-bottom">
+    <div class="g3-table g3-space__margin-lg-bottom g3-mb-space__margin-lg-bottom">
+      <div class="g3-col__50 g3-text__center g3-space__padding-sm-left-right">
+        <img class="g3-row__10vh g3-space__margin-sm-bottom" src="{{< param "g3Starts.s5.fig" >}}"/>
+        <h3 class="g3-space__margin-sm-bottom">
+          {{< param "g3Starts.s5.name" >}}
+        </h3>
+        <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
+          {{< param "g3Starts.s5.detail" >}}
+        </p>
+        <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s5.button.link" >}}">
+          {{< param "g3Starts.s5.button.caption" >}}
+        </a>
+      </div>
+      <div class="g3-col__50 g3-text__center g3-space__padding-sm-left-right">
+      </div>
     </div>
   </div>
 </section>
