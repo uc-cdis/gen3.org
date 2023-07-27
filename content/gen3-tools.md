@@ -39,7 +39,7 @@ g3Starts:
   s5:
     name: UMCCR Data Dictionary
     fig: /figs/melbourne.svg
-    detail: Gen3 dictionary tools (Docker image) for conversion, visualization, testing, and validation to allow for iterative development of schema locally.  Created by the Genomics Platform Group and the University of Melbourne.
+    detail: Gen3 dictionary tools (Docker images) for conversion, visualization, testing and validation to allow for iterative development of Gen3 data dictionary schema locally. Created by the Genomics Platform Group at University of Melbourne Centre for Cancer Research (UMCCR).
     button:
       caption: GitHub
       link: https://github.com/umccr/umccr-dictionary
