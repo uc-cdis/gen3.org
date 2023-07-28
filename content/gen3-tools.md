@@ -16,34 +16,34 @@ g3Starts:
       caption: GitHub
       link: https://github.com/uc-cdis/gen3sdk-python
   s2:
-    name: gen3schemadev
-    fig: /figs/Australian-Biocommons-Logo-Horizontal-144dpi-Transparent.png
-    detail: A python tool that uses Google Sheets for simple, automated and efficient dictionary development.  The Gen3 schema mapping library enables an automated workflow to edit, test, validate and publish Gen3 Data Dictionaries, using a google sheet as input.  Created by the Australian BioCommons.
-    button:
-      caption: GitHub
-      link: https://github.com/AustralianBioCommons/gen3schemadev
-  s3:
     name: gen3utils
     fig: /figs/UChicago_CTDS_Vertical_Color RGB.svg
     detail: Utilities for Gen3 management including validation tools. Created by the Center for Translational Data Science at the University of Chicago.
     button:
       caption: GitHub
       link: https://github.com/uc-cdis/gen3utils
-  s4:
-    name: PFB Python SDK
-    fig: /figs/UChicago_CTDS_Vertical_Color RGB.svg
-    detail: Python SDK to create, explore and modify PFB (Portable Format for Biomedical Data) files. Created by the Center for Translational Data Science at the University of Chicago.
+  s3:
+    name: gen3schemadev
+    fig: /figs/Australian-Biocommons-Logo-Horizontal-144dpi-Transparent.png
+    detail: A python tool that uses Google Sheets for simple, automated and efficient dictionary development.  The Gen3 schema mapping library enables an automated workflow to edit, test, validate and publish Gen3 Data Dictionaries, using a google sheet as input.  Created by the Australian BioCommons.
     button:
       caption: GitHub
-      link: https://github.com/uc-cdis/pypfb
-  s5:
+      link: https://github.com/AustralianBioCommons/gen3schemadev
+
+  s4:
     name: UMCCR Data Dictionary
     fig: /figs/melbourne.svg
     detail: Gen3 dictionary tools (Docker images) for conversion, visualization, testing and validation to allow for iterative development of Gen3 data dictionary schema locally. Created by the Genomics Platform Group at University of Melbourne Centre for Cancer Research (UMCCR).
     button:
       caption: GitHub
       link: https://github.com/umccr/umccr-dictionary
-
+  s5:
+    name: dictionary-visualizer
+    fig: /figs/BioTeam-Logo_2021.svg
+    detail: Stand alone data dictionary viewer for Gen3 Data Commons. Created by BioTeam.
+    button:
+      caption: GitHub
+      link: https://github.com/bioteam/dictionary-visualizer
 
 
 ---
@@ -80,7 +80,7 @@ g3Starts:
           <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
             {{< param "g3Starts.s2.detail" >}}
           </p>
-          <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s1.button.link" >}}">
+          <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s2.button.link" >}}">
             {{< param "g3Starts.s2.button.caption" >}}
           </a>
         </div>
@@ -127,7 +127,7 @@ g3Starts:
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Starts.s5.name" >}}
         </h3>
-        <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
+        <p class="g3-space__margin-sm-bottom g3-text__center">
           {{< param "g3Starts.s5.detail" >}}
         </p>
         <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s5.button.link" >}}">
