@@ -5,7 +5,7 @@ linktitle: gen3-tools
 date: 2023-07-11
 g3Teaser:
   title: Gen3 Tools
-  detail: Gen3 community members have created tools that facilitate interactions with a Gen3 Data Commons. These tools may be of use to users or operators.
+  detail: Gen3 community members have created tools that facilitate interactions with a Gen3 Data Commons. These tools may be of use to both Gen3 users or operators.  Any questions about their use should be directed to the maintainers of the particular tool.
 g3Starts:
   title: Get Started
   s1:
@@ -18,7 +18,7 @@ g3Starts:
   s2:
     name: gen3utils
     fig: /figs/UChicago_CTDS_Vertical_Color RGB.svg
-    detail: Utilities for Gen3 management including validation tools. Created by the Center for Translational Data Science at the University of Chicago.
+    detail: Utilities for Gen3 management including validation tools. Created by the Center for Translational Data Science at the University of Chicago.                                                       
     button:
       caption: GitHub
       link: https://github.com/uc-cdis/gen3utils
@@ -29,7 +29,6 @@ g3Starts:
     button:
       caption: GitHub
       link: https://github.com/AustralianBioCommons/gen3schemadev
-
   s4:
     name: UMCCR Data Dictionary
     fig: /figs/melbourne.svg
@@ -37,13 +36,6 @@ g3Starts:
     button:
       caption: GitHub
       link: https://github.com/umccr/umccr-dictionary
-  s5:
-    name: dictionary-visualizer
-    fig: /figs/BioTeam-Logo_2021.svg
-    detail: Stand alone data dictionary viewer for Gen3 Data Commons. Created by BioTeam.
-    button:
-      caption: GitHub
-      link: https://github.com/bioteam/dictionary-visualizer
 
 
 ---
@@ -52,9 +44,9 @@ g3Starts:
    <h1 class="g3-text__center g3-space__padding-md-top-bottom">
       {{< param "g3Teaser.title" >}}
    </h1>
-   <h3 class="g3-text__center g3-space__padding-md-left g3-space__padding-md-bottom">
+   <h4 class="g3-text__center g3-space__padding-md-left g3-space__padding-md-bottom">
       {{< param "g3Teaser.detail" >}}
-   </h3>
+   </h4>
 </section>
 <section>
   <div class="g3-inner-wrapper g3-space__padding-md-top g3-mb-space__padding-lg-top g3-mb-space__padding-lg-bottom">
@@ -78,7 +70,7 @@ g3Starts:
             {{< param "g3Starts.s2.name" >}}
           </h3>
           <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
-            {{< param "g3Starts.s2.detail" >}}
+            {{< param "g3Starts.s2.detail" >}} <br>       <br> <br>               
           </p>
           <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s2.button.link" >}}">
             {{< param "g3Starts.s2.button.caption" >}}
@@ -115,26 +107,6 @@ g3Starts:
         <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s4.button.link" >}}">
           {{< param "g3Starts.s4.button.caption" >}}
         </a>
-      </div>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="g3-inner-wrapper g3-space__padding-md-top g3-space__padding-lg-bottom g3-mb-space__padding-lg-bottom">
-    <div class="g3-table g3-space__margin-lg-bottom g3-mb-space__margin-lg-bottom">
-      <div class="g3-col__50 g3-text__center g3-space__padding-sm-left-right">
-        <img class="g3-row__10vh g3-space__margin-sm-bottom" src="{{< param "g3Starts.s5.fig" >}}"/>
-        <h3 class="g3-space__margin-sm-bottom">
-          {{< param "g3Starts.s5.name" >}}
-        </h3>
-        <p class="g3-space__margin-sm-bottom g3-text__center">
-          {{< param "g3Starts.s5.detail" >}}
-        </p>
-        <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s5.button.link" >}}">
-          {{< param "g3Starts.s5.button.caption" >}}
-        </a>
-      </div>
-      <div class="g3-col__50 g3-text__center g3-space__padding-sm-left-right">
       </div>
     </div>
   </div>

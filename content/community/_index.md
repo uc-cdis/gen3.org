@@ -47,7 +47,7 @@ g3DataFeature:
     title: Gen3 Publications
     subtitle: Follow the discoveries being made by Gen3 researchers.
     button:
-      link: https://ctds.uchicago.edu/publications
+      link: https://ctds.uchicago.edu/research
   f8:
     title: Gen3 Community Events
     subtitle: View information about and register for upcoming Gen3 developer community events.
