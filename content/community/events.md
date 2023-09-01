@@ -13,6 +13,7 @@ g3Upcoming:
   Date: September 6, 2023, 3:30-5:00 pm CDT; September 7, 2023, 6:30-8:00 am AEST
   Description: Gen3 is designed to enable secure and compliant data sharing and analysis for researchers around the world. However, security and compliance can be a complex topic and so we will focus our next event on security best practices.  The event will also include experiences from other Gen3 operators on setting up and maintaining a Gen3 Data Commons from a security perspective.
   Image: /figs/gen3_new_logo.png
+  Agenda2: /community/events/gen3forum_20230906
   Register: https://uchicago.zoom.us/meeting/register/tJwlce6hrjMoHdLlr5QUPoYt_CrOz9cpuygV
 
 
