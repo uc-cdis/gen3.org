@@ -9,15 +9,18 @@ g3Teaser:
   detail: About every other month, there is a virtual Gen3 Forum for the community of Gen3 developers, operators, sponsors and users of Gen3 data platforms. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 core development team.
 
 g3Upcoming:
-- Title: Security and Compliance
-  Date: September 6, 2023, 3:30-5:00 pm CDT; September 7, 2023, 6:30-8:00 am AEST
-  Description: Gen3 is designed to enable secure and compliant data sharing and analysis for researchers around the world. However, security and compliance can be a complex topic and so we will focus our next event on security best practices.  The event will also include experiences from other Gen3 operators on setting up and maintaining a Gen3 Data Commons from a security perspective.
-  Image: /figs/gen3_new_logo.png
-  Agenda2: /community/events/gen3forum_20230906
-  Register: https://uchicago.zoom.us/meeting/register/tJwlce6hrjMoHdLlr5QUPoYt_CrOz9cpuygV
+
 
 
 g3Past:
+
+- Title: Security and Compliance
+  Date: September 6, 2023, 3:30-5:00 pm CDT; September 7, 2023, 6:30-8:00 am AEST
+  Description: Gen3 is designed to enable secure and compliant data sharing and analysis for researchers around the world. However, security and compliance can be a complex topic and so we will focus our next event on security best practices.  The event will also include experiences from other Gen3 operators on setting up and maintaining a Gen3 Data Commons from a security perspective.
+  Youtube: 7liOXTPcBP4
+  Agenda2: /community/events/gen3forum_20230906
+  Slides:  Gen3 Forum September 6 2023 - Security and Compliance.pdf
+
 
 - Title: Data Modeling in Gen3 Data Commons
   Date: July 6, 2023, 3:30-5:00 pm CDT; July 7, 2023, 6:30-8:00 am AEST
