@@ -10,11 +10,10 @@ g3Teaser:
 
 g3Upcoming:
 
-- Title: Gen3 Frontend Framework and Roadmap
+- Title: Gen3 Frontend Framework
   Date: November 1, 2023, 3:30-5:00 pm CDT; November 2, 2023, 7:30-9:00 am AEDT
-  Description: We will introduce the soon to be released Gen3 Frontend Framework, which is a replacement for the current Data Portal.  The goals of the new system are to address the current frontend’s limitations and improve the development of custom content and applications, performance, deployment, and maintenance.  Craig Barnes, CTDS Visualization Manager, will speak about the upcoming release.
-  Description2: Robert Grossman, CTDS Director, will also speak about the Gen3 product roadmap for the coming year.
-  Image: /figs/FF_Explorer.png
+  Description: We will introduce the soon-to-be-released Gen3 Frontend Framework, which is a replacement for the current Data Portal.  Improvements to the frontend will include simplifying the creation of custom content and integration of 3rd party apps as well as improving upon the performance, deployment, and maintenance of the existing system.  Craig Barnes, CTDS Visualization Manager, will speak about the upcoming release.
+  Image: /figs/FF_HomePage.png
   Register: https://uchicago.zoom.us/meeting/register/tJwkcuyuqj4vEtQ2YnehoXSU1qMBvxAlcXdB
 
 g3Past:
