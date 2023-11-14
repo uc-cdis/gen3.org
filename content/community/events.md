@@ -9,6 +9,11 @@ g3Teaser:
   detail: About every other month, there is a virtual Gen3 Forum for the community of Gen3 developers, operators, sponsors and users of Gen3 data platforms. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 core development team.
 
 g3Upcoming:
+- Title: Gen3 Development Roadmap
+  Date: January 24, 3:30-5:00 pm CT; January 25, 2023, 8:30-10:00 am AEDT
+  Description: We will introduce the 2024 Gen3 Development Roadmap, which will include known sponsor priorities and other products plans.  The first portion of the meeting will include a presentation by Robert Grossman, Director of CTDS.  The second portion will include an organized panel discussion by the steering committee on the relative priorities of the items.  Attendee participation to add new items or to help prioritize existing items is appreciated!
+  Image: /figs/gen3_new_logo.png
+  Register: https://uchicago.zoom.us/meeting/register/tJUuf-2rrzouGN2C8ty22yKrYrMDHkmKU24c
 
 
 
