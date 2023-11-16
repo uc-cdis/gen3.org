@@ -233,7 +233,7 @@ Madduri, Ravi, et al. "Reproducible big data science: A case study in continuous
 
   <div class="g3-space__margin-sm-left g3-space__margin-md-top">
     <h2> 2018</h2>
-        <p class="g3-space__margin-sm-bottom g3-space__margin-sm-top">
+        <p class="g3-space__margin-lg-bottom g3-space__margin-sm-top">
         Grossman, Robert L. "Progress towards cancer data ecosystems." Cancer journal (Sudbury, Mass.) 24.3 (2018): 122.
         </p>
     </div>
