@@ -17,7 +17,7 @@ g3Teaser:
           {{< param "g3Teaser.title" >}}
         </h1>
         <p class="g3-space__margin-sm-bottom introduction g3-space__margin-sm-right">
-The Gen3 data platform is used as the basis for many data repositories and enables research on large and diverse datasets.  The list below includes papers that discuss data commons or meshes that leverage Gen3 or discuss analyses that were performed on or made possible by a Gen3 system.  If you see we are missing your paper please let us know!
+The Gen3 data platform is used as the basis for many data repositories and enables research on large and diverse datasets.  The list below includes papers that discuss data commons or meshes that leverage Gen3 or discuss analyses that were performed on or made possible by a Gen3 system.  If you see we are missing your paper please let us know by submitting  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfyN389fJx6T_pA-P67hrStrBXxH6BA2oc0ERlMjCvQoVmAtQ/viewform">this form</a>.
         </p>
       </div>
     </div>
