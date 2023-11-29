@@ -11,7 +11,7 @@ g3Teaser:
 g3Upcoming:
 - Title: Gen3 Development Roadmap
   Date: January 24, 3:30-5:00 pm CT; January 25, 2023, 8:30-10:00 am AEDT
-  Description: We will introduce the 2024 Gen3 Development Roadmap, which will include known sponsor priorities and other products plans.  The first portion of the meeting will include a presentation by Robert Grossman, Director of CTDS.  The second portion will include an organized panel discussion by the steering committee on the relative priorities of the items.  Attendee participation to add new items or to help prioritize existing items is appreciated!
+  Description: We will introduce the 2024 Gen3 Development Roadmap, which will include known current priorities.  The first portion of the meeting will include a presentation by Robert Grossman, Director of CTDS.  The second portion will include an organized panel discussion by the Gen3 steering committee on the roadmap.  Please attend to provide your feedback and help prioritize roadmap items.
   Image: /figs/gen3_new_logo.png
   Register: https://uchicago.zoom.us/meeting/register/tJUuf-2rrzouGN2C8ty22yKrYrMDHkmKU24c
 
@@ -63,6 +63,6 @@ g3past:
         <h2>See Past Gen3 Events</h2>
     </div>
     <div class="g3-inner-wrapper g3-space__margin-sm-top-bottom g3-space__padding-md-left">
-        <strong><a href="https://gen3.org/community/events_archived">See Gen3 Events Archive</a></strong>
+        <strong><a href="/community/events_archived">See Gen3 Events Archive</a></strong>
     </div>
 </section>
