@@ -60,9 +60,5 @@ g3past:
 
 <section class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
     <div class="g3-inner-wrapper">
-        <h2>See Past Gen3 Events</h2>
-    </div>
-    <div class="g3-inner-wrapper g3-space__margin-sm-top-bottom g3-space__padding-md-left">
-        <strong><a href="/community/events_archived">See Gen3 Events Archive</a></strong>
-    </div>
+        <a href="/community/events_archived"><h2>See Gen3 Events Archive</h2></a>
 </section>
