@@ -18,6 +18,23 @@ g3Upcoming:
 
 
 g3past:
+- Title: Gen3 Frontend Framework
+  Date: November 1, 2023, 3:30-5:00 pm CDT; November 2, 2023, 7:30-9:00 am AEDT
+  Description: We will introduce the soon-to-be-released Gen3 Frontend Framework, which is a replacement for the current Data Portal.  Improvements to the frontend will include simplifying the creation of custom content and integration of 3rd party apps as well as improving upon the performance, deployment, and maintenance of the existing system.  Craig Barnes, CTDS Visualization Manager, will speak about the upcoming release.
+  Youtube: 1zJfHCr4_dc
+  Slides:  Gen3 Forum Nov 1 2023 - Frontend Framework.pdf
+- Title: Security and Compliance
+  Date: September 6, 2023, 3:30-5:00 pm CDT; September 7, 2023, 6:30-8:00 am AEST
+  Description: Gen3 is designed to enable secure and compliant data sharing and analysis for researchers around the world. However, security and compliance can be a complex topic and so we will focus our next event on security best practices.  The event will also include experiences from other Gen3 operators on setting up and maintaining a Gen3 Data Commons from a security perspective.
+  Youtube: 7liOXTPcBP4
+  Agenda2: /community/events/gen3forum_20230906
+  Slides:  Gen3 Forum September 6 2023 - Security and Compliance.pdf
+- Title: Data Modeling in Gen3 Data Commons
+  Date: July 6, 2023, 3:30-5:00 pm CDT; July 7, 2023, 6:30-8:00 am AEST
+  Description: Gen3 supports a flexible graph-based data model, which can be customized for a wide variety of projects and use cases.  At this community event we will hear from several data commons operators on how they have created their dictionaries and about any tools or processes they use for updating and configuring them.  
+  Agenda2: /community/events/gen3forum_20230706
+  Youtube: xjFUYa4C_hw
+  Slides:  Gen3 Forum July 6 2023 - Data Models.pdf
 
 
 ---
@@ -51,7 +68,7 @@ g3past:
 
 <section class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
     <div class="g3-inner-wrapper">
-        <h2>Previous 2024 Gen3 Events</h2>
+        <h2>Recent Gen3 Events</h2>
     </div>
 </section>
 
