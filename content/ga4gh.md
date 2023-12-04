@@ -34,7 +34,7 @@ g3Feature:
           {{< param "g3Teaser.title" >}}
         </h1>
         <p class="g3-space__margin-sm-bottom introduction g3-space__margin-sm-right">
-          GA4GH is an international standards setting body for Genomics and Health. Gen3 aims to follow GA4GH standards whenever possible in order to improve our interoperability with other systems and to simplify the use of a Gen3 Data Commons. Gen3 works closely with GA4GH in multiple ways:  first, through its use by the Data Commons Framework Services project, which underpins interoperability within the Cancer Research Data Commons (a GA4GH driver project) and second, through our close relationship with a sister project - the NCI Genomic Data Commons (also a GA4GH driver project).  Some of the areas where we are active are highlighted below.
+          GA4GH is an international standards setting body for Genomics and Health. Gen3 aims to follow GA4GH standards whenever possible in order to improve our interoperability with other systems and to simplify the use of a Gen3 Data Commons. Gen3 works closely with GA4GH via two driver projects:  first, the Data Commons Framework Services project, which underpins interoperability within the Cancer Research Data Commons and second, through the Biomedical Research Hub, which as a data fabric, enables access to multiple independent data commons containing biomedical data.  Some of the areas where we are most active are highlighted below.
         </p>
       </div>
     </div>
