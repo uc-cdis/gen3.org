@@ -24,12 +24,15 @@ The Gen3 data platform is used as the basis for many data repositories and enabl
   </div>
 
 </section>
-
 <section class="g3-outer-wrapper">
 <div class="g3-space__margin-sm-left">
   <h2> 2023</h2>
   <p class="g3-space__margin-sm-bottom">
 Adams, Clare IM, et al. "Environmental DNA metabarcoding describes biodiversity across marine gradients." ICES Journal of Marine Science 80.4 (2023): 953-971. <a href="https://academic.oup.com/icesjms/article/80/4/953/7058017">View Article</a>
+  </p>
+  <p class="g3-space__margin-sm-bottom">
+  Adams, Meredith CB, et al. "NIH HEAL Clinical Data Elements (CDE) implementation: NIH HEAL Initiative IMPOWR network IDEA-CC." Pain Medicine (2023): pnad018.
+ <a href="https://academic.oup.com/painmedicine/article/24/7/743/7043983">View Article</a>
   </p>
   <p class="g3-space__margin-sm-bottom g3-space__margin-sm-top">
 Ahalt, Stan, et al. "Building a collaborative cloud platform to accelerate heart, lung, blood, and sleep research." Journal of the American Medical Informatics Association 30.7 (2023): 1293-1300. <a href="https://academic.oup.com/jamia/article/30/7/1293/7165700?login=false">View Article</a>
@@ -271,9 +274,6 @@ Tee, H. S., et al. "Tools for successful proliferation: diverse strategies of nu
 </div>
 
 
-
-
-
   <div class="g3-space__margin-sm-left g3-space__margin-md-top">
     <h2> 2019</h2>
     <p class="g3-space__margin-sm-bottom g3-space__margin-sm-top">
@@ -303,14 +303,15 @@ Wellenreuther, Maren, et al. "Domestication and temperature modulate gene expres
   </div>
 
 
+<div class="g3-space__margin-sm-left g3-space__margin-md-top">
+  <h2>2018</h2>
+    <p class="g3-space__margin-sm-bottom">
+    Grossman, Robert L. "Progress towards cancer data ecosystems." Cancer journal (Sudbury, Mass.) 24.3 (2018): 122. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5988431/">View Article</a>
+      </p>
+  </div>
 
 
-  <div class="g3-space__margin-sm-left g3-space__margin-md-top">
-    <h2> 2018</h2>
-        <p class="g3-space__margin-lg-bottom g3-space__margin-sm-top">
-      Grossman, Robert L. "Progress towards cancer data ecosystems." Cancer journal (Sudbury, Mass.) 24.3 (2018): 122. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5988431/">View Article</a>
-        </p>
-    </div>
+
 
 
   <div class="g3-space__margin-sm-left g3-space__margin-md-top">
