@@ -80,65 +80,102 @@ g3User:
 g3Company: In good company...
 
 g3Commons:
-  c1:
-    title: ACCOuNT Data Commons
-    fig: /figs/commons/acct.png
-    link: https://acct.bionimbus.org
+
   c2:
     title: AnVIL
     fig: /figs/commons/anvil.png
     link: https://gen3.theanvil.io
   c3:
+    title: BioData CATALYST
+    fig: /figs/commons/stage.png
+    link: https://gen3.biodatacatalyst.nhlbi.nih.gov
+  c4:
+    title: Biomedical Research GitHub
+    fig: /figs/commons/brh.png
+    link: https://brh.data-commons.org/
+  c5:
     title: BloodPAC Data Commons
     fig: /figs/commons/bloodpac.png
     link: https://data.bloodpac.org
-  c4:
+  c6:
     title: Canine Data Commons
     fig: /figs/commons/canine.png
     link: https://caninedc.org
-  c5:
+  c7:
     title: Chicagoland COVID-19 Commons
     fig: /figs/commons/covid19.png
     link: https://chicagoland.pandemicresponsecommons.org
-  c6:
+  c8:
     title: NCI-CRDC
     fig: /figs/commons/crdc.png
     link: https://nci-crdc.datacommons.io
-  c7:
+  c9:
     title: OCC Environmental Data Commons
     fig: /figs/commons/edc.png
     link: https://portal.occ-data.org
-  c8:
+  c10:
     title: GenoMEL Data Commons
     fig: /figs/commons/genomel.png
     link: https://genomel.bionimbus.org
-  c9:
+  c11:
+    title: NIH Heal Initiative
+    fig: /figs/commons/heal.png
+    link:  https://healdata.org
+  c12:
     title: NIDDK IBD Genetics Consortium Data Commons
     fig: /figs/commons/ibdgc.png
     link: https://ibdgc.datacommons.io
-  c10:
+  c13:
+    title: ICGC PCAWG and DREAM Challenge data
+    fig:  /figs/commons/icgc.png
+    link: https://icgc.bionimbus.org/
+  c14:
+    title: Justice Community Opioid Innovation Network
+    fig: /figs/commons/jcoin.png
+    link: https://jcoin.datacommons.io
+  c15:
     title: Kids-First
     fig: /figs/commons/kf.png
     link: https://data.kidsfirstdrc.org
-  c11:
+  c16:
     title: The Medical Imaging and Data Resource Center Commons
     fig: /figs/commons/midrc.png
     link: https://data.midrc.org
-  c12:
+  c17:
     title: AccessClinicalTrails@NIAID
     fig: /figs/commons/nct.png
     link: https://accessclinicaldata.niaid.nih.gov
-  c13:
-    title: BioData CATALYST
-    fig: /figs/commons/bdcat.png
-    link: https://gen3.biodatacatalyst.nhlbi.nih.gov
-  c14:
+  c18:
+    title: Veterans Affairs Data Commons
+    fig: /figs/commons/va.png
+    link: https://va.data-commons.org/
+  c19:
     title: Veterans Precision Oncology Data Commons
     fig: /figs/commons/vpodc.png
     link: https://vpodc.org
+  c20:
+    title: Australian Cardiovascular Disease Data Commons
+    fig: /figs/commons/Aus_Cardio_Data_Commons.png
+    link: https://data.acdc.ozheart.org/
+  c21:
+    title: Genomics Aotearoa
+    fig: /figs/commons/genomics_aotearoa.png
+    link: https://data.agdr.org.nz/
+  c22:
+    title: National Institute of Environmental Health Sciences
+    fig: /figs/commons/NIEHS.png
+    link: https://www.niehs.nih.gov/
+  c23:
+    title: Pediatric Cancer Data Commons
+    fig: /figs/commons/pcdc.png
+    link: https://portal.pedscommons.org/
+  c24:
+    title: ARDaC AlcHepNet Research Data Commons
+    fig: /figs/commons/ARDaC.png
+    link: https://dev.ardac.org/
 
 g3Contributor:
-  title: Contributor
+  title: Maintainer
   fig: figs/UChicago_CTDS_Horizontal_Color RGB.png
   target: _blank
   link: https://ctds.uchicago.edu/
@@ -319,11 +356,6 @@ g3Entrance:
     <div class="g3-slider">
       <div class="g3-slide-track">
         <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c1.link" >}}" title="{{< param "g3Commons.c1.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c1.fig" >}}" />
-          </a>
-        </div>
-        <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c2.link" >}}" title="{{< param "g3Commons.c2.title" >}}">
             <img class="g3-row__50px" src="{{< param "g3Commons.c2.fig" >}}" />
           </a>
@@ -389,73 +421,53 @@ g3Entrance:
           </a>
         </div>
         <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c1.link" >}}" title="{{< param "g3Commons.c1.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c1.fig" >}}" />
+          <a target="_blank" href="{{< param "g3Commons.c15.link" >}}" title="{{< param "g3Commons.c15.title" >}}">
+            <img class="g3-row__50px" src="{{< param "g3Commons.c15.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c2.link" >}}" title="{{< param "g3Commons.c2.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c2.fig" >}}" />
+          <a target="_blank" href="{{< param "g3Commons.c16.link" >}}" title="{{< param "g3Commons.c16.title" >}}">
+            <img class="g3-row__50px" src="{{< param "g3Commons.c16.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c3.link" >}}" title="{{< param "g3Commons.c3.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c3.fig" >}}" />
+          <a target="_blank" href="{{< param "g3Commons.c17.link" >}}" title="{{< param "g3Commons.c17.title" >}}">
+            <img class="g3-row__50px" src="{{< param "g3Commons.c17.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c4.link" >}}" title="{{< param "g3Commons.c4.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c4.fig" >}}" />
+          <a target="_blank" href="{{< param "g3Commons.c18.link" >}}" title="{{< param "g3Commons.c18.title" >}}">
+            <img class="g3-row__50px" src="{{< param "g3Commons.c18.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c5.link" >}}" title="{{< param "g3Commons.c5.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c5.fig" >}}" />
+          <a target="_blank" href="{{< param "g3Commons.c19.link" >}}" title="{{< param "g3Commons.c19.title" >}}">
+            <img class="g3-row__50px" src="{{< param "g3Commons.c19.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c6.link" >}}" title="{{< param "g3Commons.c6.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c6.fig" >}}" />
+          <a target="_blank" href="{{< param "g3Commons.c20.link" >}}" title="{{< param "g3Commons.c20.title" >}}">
+            <img class="g3-row__50px" src="{{< param "g3Commons.c20.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c7.link" >}}" title="{{< param "g3Commons.c7.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c7.fig" >}}" />
+          <a target="_blank" href="{{< param "g3Commons.c21.link" >}}" title="{{< param "g3Commons.c21.title" >}}">
+            <img class="g3-row__50px" src="{{< param "g3Commons.c21.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c8.link" >}}" title="{{< param "g3Commons.c8.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c8.fig" >}}" />
+          <a target="_blank" href="{{< param "g3Commons.c22.link" >}}" title="{{< param "g3Commons.c22.title" >}}">
+            <img class="g3-row__50px" src="{{< param "g3Commons.c22.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c9.link" >}}" title="{{< param "g3Commons.c9.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c9.fig" >}}" />
+          <a target="_blank" href="{{< param "g3Commons.c23.link" >}}" title="{{< param "g3Commons.c23.title" >}}">
+            <img class="g3-row__50px" src="{{< param "g3Commons.c23.fig" >}}" />
           </a>
         </div>
         <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c10.link" >}}" title="{{< param "g3Commons.c10.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c10.fig" >}}" />
-          </a>
-        </div>
-        <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c11.link" >}}" title="{{< param "g3Commons.c11.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c11.fig" >}}" />
-          </a>
-        </div>
-        <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c12.link" >}}" title="{{< param "g3Commons.c12.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c12.fig" >}}" />
-          </a>
-        </div>
-        <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c13.link" >}}" title="{{< param "g3Commons.c13.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c13.fig" >}}" />
-          </a>
-        </div>
-        <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c14.link" >}}" title="{{< param "g3Commons.c14.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c14.fig" >}}" />
+          <a target="_blank" href="{{< param "g3Commons.c24.link" >}}" title="{{< param "g3Commons.c24.title" >}}">
+            <img class="g3-row__50px" src="{{< param "g3Commons.c24.fig" >}}" />
           </a>
         </div>
       </div>
