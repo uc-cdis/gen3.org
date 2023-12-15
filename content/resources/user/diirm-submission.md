@@ -81,7 +81,8 @@ Example of a bucket mapping file
 | s3://nih-nhlbi-topmed-released-phs000974-c2 | phs000974.c2 |
 | gs://nih-nhlbi-topmed-released-phs000974-c2 | phs000974.c2 |
 
-The preffered option for this file is a file level mapping file that contains additional columns (up to 6).
+\
+The preferred option for this file is a file level mapping file that contains additional columns (up to 6).
 | File_name | File_size | md5sum | bucket_urls | acl | authz |
 | --- | --- | --- | --- | --- | --- |
 | examplefile.txt | 123456 | sample_md5 | s3://nih-nhlbi-topmed-released-phs001416-c1/example-bucket/examplefile.txt gs://nih-nhlbi-topmed-released-phs001416-c1/example-bucket/examplefile.txt | [phs001416,c1] | [phs001416.c1] |
@@ -89,6 +90,7 @@ The preffered option for this file is a file level mapping file that contains ad
 | examplefile.txt | 123456 | sample_md5 | s3://nih-nhlbi-topmed-released-phs001416-c2/example-bucket/examplefile.txt gs://nih-nhlbi-topmed-released-phs001416-c2/example-bucket/examplefile.txt | [phs001416,c2] | [phs001416.c2] |
 | otherexamplefile.txt | 123456 | different_md5 | s3://nih-nhlbi-topmed-released-phs001416-c2/example-bucket/otherexamplefile.txt gs://nih-nhlbi-topmed-released-phs001416-c2/example-bucket/otherexamplefile.txt | [phs001416,c2] | [phs001416.c2] |
 
+\
 Gen3 expects a bucket mapping file, which (at a minimum) must include the names of all the buckets and an indication as to which cloud they’re in.   In the situation where Gen3 must support cloud-specific data access methods, Gen3 also requires the authz column (which should contain the granular access control which would represent access to the entire bucket).
 
 
@@ -104,7 +106,7 @@ Sample code from sdk
 
 
 
-Gen3 offers an [Indexing sdk toolkit](https://uc-cdis.github.io/gen3sdk-python/_build/html/tools/indexing.html) to build, validate and map all files into a Gen3 datacommons.
+Gen3 offers an [Indexing sdk toolkit](https://uc-cdis.github.io/gen3sdk-python/_build/html/tools/indexing.html#module-gen3.tools.indexing.index_manifest) to build, validate and map all files into a Gen3 datacommons.
 
 This file should offer meta data as well as bucket mapping.
 
@@ -113,4 +115,4 @@ This file should offer meta data as well as bucket mapping.
 | examplefile.txt | 123456 | sample_md5 | s3://example-bucket/examplefile.txt gs://example-bucket/examplefile.txt | [phs000001,c1] |
 
 * * *
-To continue your data submission return to the main [Gen3 - Data Contribution](https://gen3.org/resources/user/submit-data/#4-submit-additional-project-metadata) page.\n
+To continue your data submission return to the main [Gen3 - Data Contribution](/resources/user/submit-data/#4-submit-additional-project-metadata) page.

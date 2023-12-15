@@ -15,16 +15,16 @@ Data in a Gen3 data commons are either stored in variables that are exposed to t
 
 The process of uploading a data project to a Gen3 data commons is flexible and simple. A combination of either of the following two methods can be combined as they follow the same main idea:
 
-1. [Data Upload, Index, Ingest Methods](#1-data-upload-methods)
-	1. [Graphical User Interface to upload files to Object Storage](https://gen3.org/resources/user/gui-submission)
-		1. [Prepare Project in Submission Portal](https://gen3.org/resources/user/gui-submission#1-prepare-project-in-submission-portal)
-		2. [Upload files to Object Storage with Gen3 GUI](https://gen3.org/resources/user/gui-submission#2-upload-data-files-to-object-storage)
-		3. [Map Uploaded Files to a Data File Node](https://gen3.org/resources/user/gui-submission#3-map-uploaded-files-to-a-data-file-node)
-	2. [Scriptable semi-automated Data Ingestion, Indexing Release Management (DIIRM) tool](https://gen3.org/resources/user/diirm-submission)
-		1. [Prepare Project with Gen3 sdk tools](https://gen3.org/resources/user/diirm-submission#1-prepare-project-sdk)
-		2. [Upload files to Object Storage with Cloud Resource Command Line Interface](https://gen3.org/resources/user/diirm-submission#2-upload-data-files-to-object-storage-CLI-tools)
-		2. [Create file Indexing Manifest](https://gen3.org/resources/user/Gen3-DIIRM-submission#3-Gen3-Indexd-sdk-creation-tools)
-		3. [Submit file Indexing Manifest to Indexd](https://gen3.org/resources/user/Gen3-DIIRM-submission#4-Gen3-Indexd-sdk-submission-tools)
+1. [Data Upload, Index, Ingest Methods](##1-data-upload-methods)
+	1. [Graphical User Interface to upload files to Object Storage](/resources/user/gui-submission)
+		1. [Prepare Project in Submission Portal](/resources/user/gui-submission#1-prepare-project-in-submission-portal)
+		2. [Upload files to Object Storage with Gen3 GUI](/resources/user/gui-submission#2-upload-data-files-to-object-storage)
+		3. [Map Uploaded Files to a Data File Node](/resources/user/gui-submission#3-map-uploaded-files-to-a-data-file-node)
+	2. [Scriptable semi-automated Data Ingestion, Indexing Release Management (DIIRM) tool](/resources/user/diirm-submission)
+		1. [Prepare Project with Gen3 sdk tools](/resources/user/diirm-submission#1-prepare-project-sdk)
+		2. [Upload files to Object Storage with Cloud Resource Command Line Interface](/resources/user/diirm-submission#2-upload-data-files-to-object-storage-CLI-tools)
+		2. [Create file Indexing Manifest](/resources/user/Gen3-DIIRM-submission#3-Gen3-Indexd-sdk-creation-tools)
+		3. [Submit file Indexing Manifest to Indexd](/resources/user/Gen3-DIIRM-submission#4-Gen3-Indexd-sdk-submission-tools)
 2. [Submit Additional Project Metadata](#2-submit-additional-project-metadata)
 3. [Link Data File Records to their Metadata Records](#3-link-files-to-their-metadata)
 

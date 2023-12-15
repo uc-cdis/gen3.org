@@ -57,7 +57,7 @@ https://gen3.datacommons.io/example-training/search?node_type=core_metadata_coll
 
 Data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., are uploaded to object storage with the [gen3-client command-line tool](/resources/user/gen3-client).
 
- >__Note:__ if your data files are already located in cloud storage, such as an AWS or GCS bucket, please see [this page](https://gen3.org/resources/user/submit-data/sower) on how to make these files available in a Gen3 data commons.
+ >__Note:__ if your data files are already located in cloud storage, such as an AWS or GCS bucket, please see [this page](/resources/user/submit-data/sower) on how to make these files available in a Gen3 data commons.
 
 1. Download the latest [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases/latest) for your operating system.
 2. Configure a profile with credentials downloaded from your Profile:
@@ -113,4 +113,4 @@ You should receive the message "# files mapped successfully!" upon success.
 
 * * *
 
-To continue your data submission return to the main [Gen3 - Data Contribution](https://gen3.org/resources/user/submit-data/#4-submit-additional-project-metadata) page.\n
+To continue your data submission return to the main [Gen3 - Data Contribution](/resources/user/submit-data/#4-submit-additional-project-metadata) page.
