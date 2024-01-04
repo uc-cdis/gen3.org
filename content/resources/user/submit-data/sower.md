@@ -6,6 +6,8 @@ layout: withtoc
 menuname: userMenu
 ---
 
+{{% markdownwrapper %}}
+
 # Linking Data from external Data Clouds to Gen3 Data Commons
 ***
 
@@ -22,3 +24,5 @@ Data files that are stored on other cloud services, such as Amazon Web Services 
     > __Note:__ Users in the Gen3-Community have published [repos](https://github.com/jacquayj/gen3-s3indexer-extramural) that index large pre-existing s3 buckets (disclaimer: CTDS is not responsible for the content and opinions on the third-party repos).
 
 4. If applicable, submission files can be prepared for the Gen3 graph model as described on the [data submission page](https://gen3.org/resources/user/submit-data/#4-submit-additional-project-metadata) or briefly described here. You can choose between two options: a) create a `core_metadata_collection` entity, link it to the `data_file` node, and submit your data files directly to the `data_file` node. b) Create a structured chain of metadata according to the Gen3 graph model to obtain the link to the `data_file` node. Then, you can submit the files to the `data_file` node.
+
+{{% /markdownwrapper %}}

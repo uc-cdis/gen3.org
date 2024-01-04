@@ -5,7 +5,8 @@ linktitle: /resources/user
 layout: withtoc
 menuname: userMenu
 ---
-{{% markdownwrapper /%}}
+{{% markdownwrapper %}}
+
 # Submitting Data Files and Linking Metadata in a Gen3 Data Commons
 * * *
 
@@ -293,3 +294,5 @@ For example, the following link would download a single TSV containing all the `
 https://gen3.datacommons.io/api/v0/submission/example/training/export/?node_label=core_metadata_collection&format=tsv
 
 The links in the downloaded TSV can be updated by filling in the submitter_ids of the corresponding parent records, saving, and re-submitting the file to the data portal website using 'Upload File' as done in [step 4](#more-about-specifying-required-links).
+
+{{% /markdownwrapper %}}

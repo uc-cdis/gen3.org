@@ -6,6 +6,8 @@ layout: withtoc
 menuname: userMenu
 ---
 
+{{% markdownwrapper %}}
+
 # Accessing and Exploring Metadata and Downloading Data Files
 
 * * *
@@ -112,3 +114,5 @@ The [__Gen3Submission__ class](https://uc-cdis.github.io/gen3sdk-python/_build/h
 Entire structured data records can be exported as a JSON or TSV file using the [__Gen3Submission__ Python SDK class](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html). The [`export_record`](https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/submission.py#L223) function will export a single structured metadata record in a specific node of a specific project, whereas the [`export_node`](https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/submission.py#L255) function will export all the structured metadata records in a specified node of a specific project.
 
 More SDK examples and how to get started with the SDK can be also found in the [analyze-data section](/resources/user/analyze-data/#4-using-the-gen3-sdk).
+
+{{% /markdownwrapper %}}

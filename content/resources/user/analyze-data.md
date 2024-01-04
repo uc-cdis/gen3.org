@@ -6,6 +6,8 @@ layout: withtoc
 menuname: userMenu
 ---
 
+{{% markdownwrapper %}}
+
 # Data Analysis in a Gen3 Data Commons
 * * *
 
@@ -264,3 +266,5 @@ Below are three tutorial Jupyter Notebooks that demonstrate various SDK function
 3. Download data files and metadata using the gen3-client and the Gen3 SDK, respectively, and bring them into the workspace. Run gene expression analysis and statistical analysis on the data files and metadata, respectively, and plot the outcome in different scenarios. This Jupyter [Data Analysis Notebook](notebook3_gen3datacommonsio.html) uses data hosted on the generic Data Commons [gen3.datacommons.io](gen3.datacommons.io). Upload this notebook as an [.ipynb file](notebook3_gen3datacommonsio.ipynb) to the workspace of the Generic Data Commons and start your analysis.  Note, that bringing in files into the workspace as explained in this notebook can be also achieved on selected Data Commons by clicking the "Export to Workspace" button on the Exploration Page; please also note, that once files are exported from the Exploration page, users do not need to authenticate anymore in the workspace.
 
 When finished, please, shut down the workspace server by clicking the "Terminate Workspace" button.
+
+{{% /markdownwrapper %}}

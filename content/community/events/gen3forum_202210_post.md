@@ -6,7 +6,7 @@ linktitle: /community/events/gen3forum_202221
 layout: single
 ---
 
-
+{{% agenda %}}
 
 <br>
 
@@ -215,3 +215,5 @@ layout: single
       <a href="https://youtu.be/jYCKC1R_evE?t=1983">&#x1F3A5;</a></td>
   </tr>
 </table>
+
+{{% /agenda %}}
