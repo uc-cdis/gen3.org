@@ -92,3 +92,5 @@ The forum will meet for three days, three hours each day, and will include prese
    <td> Discussion of Future Community Development <ul> <li> Community Manager </li> <li> Management of prioritized feature description documents </li> <li> Monthly calls </li> <li> Slack community channel </li> <li> Newsletter </li> </ul> </td>
   </tr>
 </table>
+
+{{% /agenda %}}

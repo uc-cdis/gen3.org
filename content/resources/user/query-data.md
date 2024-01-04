@@ -5,7 +5,9 @@ linktitle: /resources/user
 layout: withtoc
 menuname: userMenu
 ---
+
 {{% markdownwrapper %}}
+
 # Querying Metadata in the Gen3 Submission Portal using GraphiQL
 * * *
 
@@ -226,3 +228,5 @@ query ($filter: JSON) {
   }
 }
 ```
+
+{{% /markdownwrapper %}}

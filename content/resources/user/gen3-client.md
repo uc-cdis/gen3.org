@@ -5,6 +5,7 @@ linktitle: /resources/user
 layout: withtoc
 menuname: userMenu
 ---
+
 {{% markdownwrapper %}}
 
 # Download and Upload Files Using the Gen3-client
@@ -661,3 +662,5 @@ So, by adding the directory containing the gen3-client program to your PATH vari
 Most programs require some sort of user input to run properly. Some programs will prompt you for input after execution, while other programs are sent this input during execution as "flags" (AKA "arguments" or "options"). The gen3-client uses the latter method of sending user input as command arguments during program execution.
 
 For example, when configuring a profile with the client, the user must specify the `configure` option and also specify the profile name, API endpoint, and credentials file by adding the flags `--profile`, `--apiendpoint` and `--cred` to the end of the command (see [configuring a profile section](#2-configure-a-profile-with-credentials) above for specific examples).
+
+{{% /markdownwrapper %}}
