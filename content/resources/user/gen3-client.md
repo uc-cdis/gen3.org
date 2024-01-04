@@ -5,7 +5,7 @@ linktitle: /resources/user
 layout: withtoc
 menuname: userMenu
 ---
-{{% markdownwrapper %}}
+
 
 # Download and Upload Files Using the Gen3-client
 

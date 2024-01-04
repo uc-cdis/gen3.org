@@ -5,7 +5,7 @@ linktitle: /resources/user/submit-data
 layout: withtoc
 menuname: userMenu
 ---
-{{% markdownwrapper %}}
+
 # Linking Data from external Data Clouds to Gen3 Data Commons
 ***
 

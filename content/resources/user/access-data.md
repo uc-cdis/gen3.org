@@ -5,7 +5,7 @@ linktitle: /resources/user
 layout: withtoc
 menuname: userMenu
 ---
-{{% markdownwrapper %}}
+
 # Accessing and Exploring Metadata and Downloading Data Files
 
 * * *

@@ -5,7 +5,7 @@ linktitle: /resources/user
 layout: withtoc
 menuname: userMenu
 ---
-{{% markdownwrapper %}}
+{{% markdownwrapper /%}}
 # Submitting Data Files and Linking Metadata in a Gen3 Data Commons
 * * *
 

@@ -5,7 +5,7 @@ linktitle: /resources/user
 layout: withtoc
 menuname: userMenu
 ---
-{{% markdownwrapper %}}
+
 # Data Analysis in a Gen3 Data Commons
 * * *
 
