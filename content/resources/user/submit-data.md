@@ -23,10 +23,10 @@ The process of uploading a data project to a Gen3 data commons is flexible and s
 	2. [Data Ingestion, Indexing Release Management (DIIRM) Workflow](/resources/user/diirm-submission)
 		1. [Prepare Project with Gen3 sdk tools](/resources/user/diirm-submission#1-prepare-project-sdk)
 		2. [Upload files to Object Storage with Cloud Resource Command Line Interface](/resources/user/diirm-submission#2-upload-data-files-to-object-storage-CLI-tools)
-		3. [Create Bucket Mapping and Manifest files](/resources/user/Gen3-DIIRM-submission#3-Gen3-Indexd-sdk-creation-tools)
-		4. [Create Indexing Manifest file](/resources/user/Gen3-DIIRM-submission#4-Gen3-indexing-manifest-file)
-		5. [Submit file Indexing Manifest to Indexd](/resources/user/Gen3-DIIRM-submission#5-Gen3-Indexd-sdk-submission-tools)
-		6. [Map Files to a Data File Node](/resources/user/Gen3-DIIRM-submission#6-Gen3-sheepdog-sdk-submission-tools)
+		3. [Create Bucket Mapping and Manifest files](/resources/user/diirm-submission#3-Gen3-Indexd-sdk-creation-tools)
+		4. [Create Indexing Manifest file](/resources/user/diirm-submission#4-Gen3-indexing-manifest-file)
+		5. [Submit file Indexing Manifest to Indexd](/resources/user/diirm-submission#5-Gen3-Indexd-sdk-submission-tools)
+		6. [Map Files to a Data File Node](/resources/user/diirm-submission#6-Gen3-sheepdog-sdk-submission-tools)0
 2. [Submit Additional Project Metadata](#2-submit-additional-project-metadata)
 3. [Link Data File Records to their Metadata Records](#3-link-files-to-their-metadata)
 
@@ -37,7 +37,7 @@ Data submission webinars are available at the official [Gen3 YouTube channel](ht
 The following sections provide step-by-step instructions for this process:
 
 ## 1. Data Upload, Index and Ingest Methods
-* * *
+
 
 Contribution of data files can be performed with either the [Gen3 GUI](/resources/user/gui-submission) or [Gen3 DIIRM workflow](/resources/user/diirm-submission).  There are several reasons a data contributor may choose to utilize steps from either method and users might benefit from a cursory knowledge of both before submitting data.
 
