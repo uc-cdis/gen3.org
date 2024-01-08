@@ -112,3 +112,6 @@ You should receive the message "# files mapped successfully!" upon success.
 * * *
 
 To continue your data submission return to the main [Gen3 - Data Contribution](/resources/user/submit-data/#4-submit-additional-project-metadata) page.
+
+
+{{% /markdownwrapper %}}

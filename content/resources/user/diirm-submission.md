@@ -43,7 +43,7 @@ The recommended (and simplest) way for Gen3 to provide controlled access to data
 
 ### Allocating Data in Buckets Based on User Access
 
-Gen3 has the capability to grant access granularity at the project level designation only.  In this way data in a particular bucket should only associated with a particular user access.
+Gen3 has the capability to grant access granularity at the project level designation only.  In this way data in a particular bucket should only be associated with a particular user access.
 
 #### Bucket Allocation Example:
 A user’s authorization may look something like:
@@ -115,7 +115,7 @@ In the situation where Gen3 must support cloud-specific data access methods, Gen
 The authz column coordinates with the user permissions set in the Gen3 microservices [Fence](https://github.com/uc-cdis/fence) and [Arborist](https://github.com/uc-cdis/arborist).
 
 ### Bucket Manifest File
-The bucket manifest file should contain individual file level meta data for a single batch of ingestion files. This means there will be several bucket manifest files per data commons. It is recommended that they are represented in a tab separated variable format and in each, a row should minimally contain the following information:
+The bucket manifest file should contain individual file level metadata for a single batch of ingestion files. This means there will be several bucket manifest files per data commons. It is recommended that they are represented in a tab separated variable format and in each, a row should minimally contain the following information:
 
 - File Name
 - File Size
@@ -124,7 +124,7 @@ The bucket manifest file should contain individual file level meta data for a si
 
 If files are mirrored between cloud locations, bucket urls can be appended together with a whitespace delimiter.
 
-The below example of an Bucket manifest file, please note the mirrored file bucket locations in S3 and GCP:
+In the below example of an Bucket manifest file, please note the mirrored file bucket locations in S3 and GCP:
 
 #### Example Bucket Manifest File
 
@@ -197,9 +197,11 @@ gen3.tools.indexing.index_manifest.index_object_manifest(commons_url=commons_url
 ## 6. Map files to a Data Node with the Gen3 SDK
 * * *
 
-Once indexing is complete, Gen3 offers a [Submission sdk toolkit](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html) to map indexed data files to nodes designated to contain data in the [data dictionary](/resources/user/dictionary/#what-is-a-data-dictionary-and-data-model) via the [Sheepdog microservice](https://github.com/uc-cdis/sheepdog).  Unless single data files are being ingested the sdk submission toolkit generally requires a tab separated variable files, though specific nodes requirements for each data file type can be specified in the data dictionary. After mapping in Sheepdog is complete the files meta data will be mapped from the [program and project](/resources/user/diirm-submission#1-prepare-project-sdk) administrative nodes (previously created) to its respective data containing nodes. The mapping in sheepdog is the basis for other search and query services either natively in sheepdog or after other extraction, tranformation and load [(ETL)](/resources/operator/#8-etl-and-data-explorer-configurations) services have been performed.
+Once indexing is complete, Gen3 offers a [Submission sdk toolkit](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html) to map indexed data files to nodes designated to contain data in the [data dictionary](/resources/user/dictionary/#what-is-a-data-dictionary-and-data-model) via the [Sheepdog microservice](https://github.com/uc-cdis/sheepdog).  Unless single data files are being ingested the sdk submission toolkit generally requires a tab separated variable files, though specific nodes requirements for each data file type can be specified in the data dictionary. After mapping in Sheepdog is complete the files metadata will be mapped from the [program and project](/resources/user/diirm-submission#1-prepare-project-sdk) administrative nodes (previously created) to its respective data containing nodes. The mapping in sheepdog is the basis for other search and query services either natively in sheepdog or after other extraction, tranformation and load [(ETL)](/resources/operator/#8-etl-and-data-explorer-configurations) services have been performed.
 
 * * *
 
 
 To continue your data submission return to the main [Gen3 - Data Contribution](/resources/user/submit-data/#4-submit-additional-project-metadata) page.
+
+{{% /markdownwrapper %}}

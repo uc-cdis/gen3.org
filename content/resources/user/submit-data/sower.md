@@ -26,3 +26,5 @@ The authorization columns "authz" and "acl" will be populated to enable individu
 3. Once a complete bucket manifest (with or without requested GUIDs) is available. Use the steps in either the [GUI Submission](/resources/user/gui-submission) or [DIIRM documentation](/resources/user/diirm-submission) to index the bucket manifest into the system (this "indexing" process generates GUIDs if not yet existent).
 
 4. If applicable, submission files can be prepared for the Gen3 graph model as described on the [data submission page](https://gen3.org/resources/user/submit-data/#4-submit-additional-project-metadata) or briefly described here. You can choose between two options: a) create a `core_metadata_collection` entity, link it to the `data_file` node, and submit your data files directly to the `data_file` node. b) Create a structured chain of metadata according to the Gen3 graph model to obtain the link to the `data_file` node. Then, you can submit the files to the `data_file` node.
+
+{{% /markdownwrapper %}}

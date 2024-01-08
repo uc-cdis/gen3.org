@@ -37,6 +37,7 @@ Data submission webinars are available at the official [Gen3 YouTube channel](ht
 The following sections provide step-by-step instructions for this process:
 
 ## 1. Data Upload, Index and Ingest Methods
+* * *
 
 Contribution of data files can be performed with either the [Gen3 GUI](/resources/user/gui-submission) or [Gen3 DIIRM workflow](/resources/user/diirm-submission).  There are several reasons a data contributor may choose to utilize steps from either method and users might benefit from a cursory knowledge of both before submitting data.
 
@@ -217,3 +218,5 @@ For example, the following link would download a single TSV containing all the `
 https://gen3.datacommons.io/api/v0/submission/example/training/export/?node_label=core_metadata_collection&format=tsv
 
 The links in the downloaded TSV can be updated by filling in the submitter_ids of the corresponding parent records, saving, and re-submitting the file to the data portal website using 'Upload File' as done in [step 4](#more-about-specifying-required-links).
+
+{{% /markdownwrapper %}}
