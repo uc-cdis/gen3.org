@@ -11,14 +11,14 @@ menuname: userMenu
 
 The following guide details the steps a data contributor must take to submit project data to a Gen3 data commons with the Command Line Interface for Data File Submission (CLI-DFS) workflow.
 
-The CLI-DFS expedites ingestion and hosting of data in cloud buckets through a series of streamlined and automated steps that adhere to strict QA tests. In order to support the many advantages of using Gen3’s standard tooling, data needs to first be organized and copied to cloud buckets following the [guidelines](/resources/user/cli-submission#2) detailed below.
+The CLI-DFS expedites ingestion and hosting of data in cloud buckets through a series of streamlined and automated steps that adhere to strict QA tests. In order to support the many advantages of using Gen3’s standard tooling, data needs to first be organized and copied to cloud buckets following the [guidelines](#3-upload-files-to-object-storage-with-cloud-resource-command-line-interface) detailed below.
 
 As CLI-DFS is recommended for working with batches of data for ingestion, two dataset consent codes will be used as an example throughout.
 * * *
 
 ## 1. Prepare Project with the Gen3 sdk tools
 * * *
-Though not strictly required to be done as a first step, a Gen3 project must be present in the [Sheepdog microservice](resources/developer/microservice/) to associate data files to before file indexing can take place. To achieve this, the [Gen3 Submission sdk](https://uc-cdis.github.io/gen3sdk-python/_build/html/_modules/gen3/submission.html) has a comprehensive set of tools to enable users to script submission of programs and projects.  Alternatively, the [GUI submission platform](/resources/user/gui-submission#1-prepare-project-in-submission-portal) can be used to create a project.
+Though not strictly required to be done as a first step, a Gen3 project must be present in the [Sheepdog microservice](resources/developer/microservice/) to associate data files to before file indexing can take place. To achieve this, the [Gen3 Submission sdk](https://uc-cdis.github.io/gen3sdk-python/_build/html/_modules/gen3/submission.html) has a comprehensive set of tools to enable users to script submission of programs and projects.  Alternatively, the [GUI submission platform](/resources/user/submit-data#1) can be used to create a project.
 
 Sample Code for submission of a Program and Project to a data commons:
 ```
@@ -30,7 +30,49 @@ Gen3Submission.create_project('test_program', project_json)
 ```
 
 * * *
-## 2. Upload files to Object Storage with Cloud Resource Command Line Interface
+## 2. Selection and Granting Gen3 Secure Access to Cloud Resources
+* * *
+
+As Gen3 is considered "cloud agnostic", any or even multiple cloud resources can be configured to contain data for controlled end-user access.  If your data is already located in the cloud, please see the following [section](#3-upload-files-to-object-storage-with-cloud-resource-command-line-interface) for considerations in the structure and permissions settings.
+
+End-user access to cloud resources is enabled by signed-urls with authorization checks within Gen3 to ensure valid and secure access.  Policies within the respective cloud resources should be configured in the Gen3 Fence Microservice to allow the [Gen3 Auth Service Bot](https://github.com/uc-cdis/fence/blob/master/docs/google_architecture.md) access.
+
+##### AWS S3 example bucket policy for READ access:
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowListLocation",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::895962626746:user/fence_bot"
+                ]
+            },
+            "Action": [
+                "s3:GetBucketLocation",
+                "s3:ListBucket"
+            ],
+            "Resource": "arn:aws:s3:::<YOURBUCKETHERE>"
+        },
+        {
+            "Sid": "AllowGetObject",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::895962626746:user/fence_bot"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::<YOURBUCKETHERE>/*"
+        }
+    ]
+}
+```
+
+The location for the example AWS configuration posted above is available [here](https://github.com/uc-cdis/fence/blob/master/fence/config-default.yaml#L656).
+
+* * *
+## 3. Upload files to Object Storage with Cloud Resource Command Line Interface
 * * *
 
 Data can be submitted to a separate cloud resource as long as requirements for access and authorization are met.  In order to support the many advantages of using Gen3’s standard tooling for CLI-DFS, data needs to first be organized and copied to cloud buckets following the guidelines detailed below.
@@ -82,7 +124,7 @@ The files relevant to a Gen3 CLI-DFS Workflow submission:
 The creation and submission of these files is covered below.
 
 * * *
-## 3. Create Bucket Mapping and Manifest Files
+## 4. Create Bucket Mapping and Manifest Files
 * * *
 
 The below is the Gen3 recommended indexing file schema. While possible to utilize other configurations, they likely require significantly more administrative effort to maintain correct permissions in the cloud platform(s).
@@ -131,31 +173,38 @@ In the below example of an Bucket manifest file, please note the mirrored file b
 | otherexamplefile.txt | 123456 | different_md5 | s3://nih-nhlbi-topmed-released-phs001416-c2/otherexamplefile.txt gs://nih-nhlbi-topmed-released-phs001416-c2/otherexamplefile.txt |
 
 * * *
-## 4. Create Indexing Manifest File
+## 5. Create Indexing Manifest File
 * * *
 
 An Indexing Manifest File is submitted to the [Indexd microservice](https://github.com/uc-cdis/indexd) and is a combination of both the Bucket Mapping and Manifest file information.
+
+While the two preceding files are not strictly necessary for maintenance and operation of a Gen3 data commons, they are recommended for ease of maintenance. For instance, if multiple authorization designations are required within a single bucket location, administrators will need to set them individually directly in the cloud platform as Gen3 has no capability to interact with cloud resource permissions in that manner.
 
 ### Indexd Microservice Overview
 
 The [Indexd microservice](https://github.com/uc-cdis/indexd) is used by Gen3 to maintain an index of all files in a data commons and serves as the data source by several other microservices to build various features of Gen3 data commons. A central part of what enables Gen3's Indexd is the integration of a [Globally Unique Identifier (GUID)](https://dataguids.org/#) to each element added to the microservice.
 
 ### Globally Unique Identifier (GUID)
-GUIDs are primarily used to track and provide the current location of data and is designed to persist even as data is moved or copied. Information regarding the concept of GUIDs and look up of particular GUIDs can be found at [dataguids.org](https://dataguids.org/#).
+GUIDs are primarily used to track and provide the current location of data and is designed to persist even as data is moved or copied. Information regarding the concept of GUIDs, GUID generation and look up of particular GUIDs can be found at [dataguids.org](https://dataguids.org/#).
 
 ### Indexing Manifest Components and Structure
-By design GUIDs will be added to rows that lack an entry for that field when an indexing manifest is submitted to Indexd. GUIDs that are minted in this way are both available by querying indexd or by referencing the submission output file that is generated by default.
+By default GUIDs will be added to rows that lack an entry for that field when an indexing manifest is submitted to Indexd. GUIDs that are minted in this way are both available by querying Indexd or by referencing the submission output file that is generated.
 
-As this is the file that is submitted to the [Indexd microservice](https://github.com/uc-cdis/indexd), it must be submitted in a tab separated variable file (.tsv) and contain the following fields:
+As the Indexing Manifest is the file that is submitted to the [Indexd microservice](https://github.com/uc-cdis/indexd), it must be submitted in a tab separated variable file (.tsv) and contain the following fields:
 
-- Globally Unique Identifier (GUID) - Are either generated by indexd at time of submission or provided by the user prior to submission
+- Globally Unique Identifier (GUID) - Either generated by indexd microservice at the time of submission or provided by the user prior to submission
 - File Name
 - File Size
 - File hash via md5sum
 - Exact file url in the bucket location
 - authz or acl authorization designation
 
-Users may notice that with the exception of GUIDs, this file is a combination of the Bucket Mapping and Manifest files. While the two preceding files are not strictly necessary for maintenance and operation of a Gen3 data commons, they are the recommended for ease of maintenance. For instance, if multiple authorization designations are required within a single bucket location, administrators will need to set them in the cloud platform as Gen3 is not currently able to.
+Users may notice that with the exception of GUIDs, this file is a combination of the Bucket Mapping and Manifest files.  If either AWS or Google cloud resources are used, Gen3 offers tools to produce bucket manifest files available at the following links:
+
+- [AWS S3 Bucket Manifest Generation](https://github.com/uc-cdis/cloud-automation/blob/master/doc/bucket-manifest.md)
+- [Google Bucket Manifest Generation](https://github.com/uc-cdis/cloud-automation/blob/master/doc/gcp-bucket-manifest.md)
+
+    >Note: Bucket manifest generation scripts require using Gen3's full deployment code and, depending on the amount of data, calculating checksums for files can be costly and take time.
 
 The below is an example of a Indexing Manifest File:
 
@@ -169,7 +218,7 @@ The below is an example of a Indexing Manifest File:
 | dg.4503/01... ...0410nnd | otherexamplefile.txt | 2675 | 742... ...f1b | s3://nih-nhlbi-topmed-released-phs001416-c2/otherexamplefile.txt gs://nih-nhlbi-topmed-released-phs001416-c2/otherexamplefile.txt | [phs001416.c2] |
 
 * * *
-## 5. Submit file Indexing Manifest to Indexd
+## 6. Submit file Indexing Manifest to Indexd
 * * *
 
 Once created, Gen3 offers an [Indexing sdk toolkit](https://uc-cdis.github.io/gen3sdk-python/_build/html/tools/indexing.html) to build, validate and map all files into a Gen3 datacommons. The sdk functions reconcile and add data to the indexd microservice.
@@ -199,7 +248,7 @@ gen3.tools.indexing.index_manifest.index_object_manifest(commons_url=commons_url
 ## 6. Map files to a Data Node with the Gen3 SDK
 * * *
 
-Once indexing is complete, Gen3 offers a [Submission sdk toolkit](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html) to map indexed data files to nodes designated to contain data in the [data dictionary](/resources/user/dictionary/#what-is-a-data-dictionary-and-data-model) via the [Sheepdog microservice](https://github.com/uc-cdis/sheepdog).  Unless single data files are being ingested the sdk submission toolkit generally requires a tab separated variable files, though specific nodes requirements for each data file type can be specified in the data dictionary. After mapping in Sheepdog is complete the files metadata will be mapped from the [program and project](/resources/user/cli-submission#1-prepare-project-sdk) administrative nodes (previously created) to its respective data containing nodes. The mapping in sheepdog is the basis for other search and query services either natively in sheepdog or after other extraction, tranformation and load [(ETL)](/resources/operator/#8-etl-and-data-explorer-configurations) services have been performed.
+Once indexing is complete, Gen3 offers a [Submission sdk toolkit](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html) to map indexed data files to nodes designated to contain data in the [data dictionary](/resources/user/dictionary/#what-is-a-data-dictionary-and-data-model) via the [Sheepdog microservice](https://github.com/uc-cdis/sheepdog).  Unless single data files are being ingested, the sdk submission toolkit generally requires a tab separated variable file, and specific nodes requirements for each data file type can be specified in the data dictionary. After mapping in Sheepdog is complete the file metadata will be mapped from the [program and project](/resources/user/cli-submission#1-prepare-project-sdk) administrative nodes (previously created) to its respective data containing nodes. The mapping in sheepdog is the basis for other search and query services either natively in sheepdog or after other extraction, tranformation and load [(ETL)](/resources/operator/#8-etl-and-data-explorer-configurations) services have been performed.
 
 * * *
 
