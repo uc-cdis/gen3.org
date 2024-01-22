@@ -100,6 +100,8 @@ TOPMed-FHS (phs000974.c1 and .c2)
 | FHS (consent group 1) | s3://nih-nhlbi-topmed-released-phs000974-c1 | gs://nih-nhlbi-topmed-released-phs000974-c1 |
 | FHS (consent group 2) | s3://nih-nhlbi-topmed-released-phs000974-c2 | gs://nih-nhlbi-topmed-released-phs000974-c2 |
 
+<br />
+
 With a setup similar to this, Gen3 is able to support signed URLs and fully configured end-user access.
 
 ### Bucket Population
@@ -147,6 +149,7 @@ The below example has 4 different authorizations for 8 bucket locations
 | s3://nih-nhlbi-topmed-phs000974-c2 | phs000974.c2 |
 | gs://nih-nhlbi-topmed-phs000974-c2 | phs000974.c2 |
 
+<br />
 In the situation where Gen3 must support cloud-specific data access methods, Gen3 also requires the authz or acl column which contain the granular access control which would represent access to the entire bucket).
 
 The authz column coordinates with the user permissions set in the Gen3 microservices [Fence](https://github.com/uc-cdis/fence) and [Arborist](https://github.com/uc-cdis/arborist).
@@ -240,12 +243,12 @@ gen3.tools.indexing.index_manifest.index_object_manifest(commons_url=commons_url
                                                                        output_filename=index_manifest[:-4] + '_output.tsv')
 ```
 
-*please refer to the [authentication sdk](https://uc-cdis.github.io/gen3sdk-python/_build/html/auth.html) for set up of the authentication_object used above*
+*Please refer to the [authentication sdk](https://uc-cdis.github.io/gen3sdk-python/_build/html/auth.html) for set up of the authentication_object used above*
 
 *Note: Users in the Gen3-Community have published [repos](https://github.com/jacquayj/gen3-s3indexer-extramural) that index large pre-existing s3 buckets (disclaimer: CTDS is not responsible for the content and opinions on the third-party repos).*
 
 * * *
-## 6. Map files to a Data Node with the Gen3 SDK
+## 7. Map files to a Data Node with the Gen3 SDK
 * * *
 
 Once indexing is complete, Gen3 offers a [Submission sdk toolkit](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html) to map indexed data files to nodes designated to contain data in the [data dictionary](/resources/user/dictionary/#what-is-a-data-dictionary-and-data-model) via the [Sheepdog microservice](https://github.com/uc-cdis/sheepdog).  Unless single data files are being ingested, the sdk submission toolkit generally requires a tab separated variable file, and specific nodes requirements for each data file type can be specified in the data dictionary. After mapping in Sheepdog is complete the file metadata will be mapped from the [program and project](/resources/user/cli-submission#1-prepare-project-sdk) administrative nodes (previously created) to its respective data containing nodes. The mapping in sheepdog is the basis for other search and query services either natively in sheepdog or after other extraction, tranformation and load [(ETL)](/resources/operator/#8-etl-and-data-explorer-configurations) services have been performed.
