@@ -68,9 +68,9 @@ https://gen3.datacommons.io/example-training/search?node_type=core_metadata_coll
 ## 2. Upload Data Files to Object Storage
 * * *
 
-Data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., are uploaded to object storage with the [gen3-client command-line tool](/resources/user/gen3-client).
+If your data is already uploaded into cloud storage and you are interested in a more automatable process, Gen3 offers an alternative method of [command line based file submission](/resources/user/cli-submission). Users should consider this method of submission if they are both comfortable scripting and require something other than the default AWS bucket, or already have your data in a cloud bucket.  This method for submission offers several other benefits including the possibility of using multiple cloud resources and submitting multiple batches of data set files at once.
 
- >__Note:__ if your data files are already located in cloud storage, such as an AWS or GCS bucket, please see [this page](https://gen3.org/resources/user/submit-data/sower) on how to make these files available in a Gen3 data commons.
+Data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., are uploaded to object storage with the [gen3-client command-line tool](/resources/user/gen3-client).
 
 1. Download the latest [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases/latest) for your operating system.
 2. Configure a profile with credentials downloaded from your Profile:
