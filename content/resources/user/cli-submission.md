@@ -35,7 +35,7 @@ Gen3Submission.create_project('test_program', project_json)
 
 As Gen3 is considered "cloud agnostic", any or even multiple cloud resources can be configured to contain data for controlled end-user access.  If your data is already located in the cloud, please see the following [section](#3-upload-files-to-object-storage-with-cloud-resource-command-line-interface) for considerations in the structure and permissions settings.
 
-End-user access to cloud resources is enabled by signed-urls with authorization checks within Gen3 to ensure valid and secure access.  Policies within the respective cloud resources should be configured in the Gen3 Fence Microservice to allow the Gen3 Auth Service Bot access.  [See here for details on GCS](https://github.com/uc-cdis/fence/blob/master/docs/google_architecture.md).
+End-user access to cloud resources is enabled by signed-urls with authorization checks within Gen3 to ensure valid and secure access.  Policies within the respective cloud resources should be configured in the Gen3 Fence Microservice to allow the; [Gen3 Auth Service Bot - AWS](https://github.com/uc-cdis/fence/blob/master/fence/config-default.yaml#L656), [Gen3 Auth Service Bot - Azure](https://github.com/uc-cdis/fence/blob/master/docs/azure_architecture.md) or [Gen3 Auth Service Bot - Google](https://github.com/uc-cdis/fence/blob/master/docs/google_architecture.md) to have access for the end user.
 
 ##### AWS S3 example bucket policy for READ access:
 ```
@@ -75,11 +75,7 @@ The location for the example AWS configuration posted above is available [here](
 ## 3. Upload files to Object Storage with Cloud Resource Command Line Interface
 * * *
 
-Data can be submitted to a separate cloud resource as long as requirements for access and authorization are met.  In order to support the many advantages of using Gen3’s standard tooling for CLI-DFS, data needs to first be organized and copied to cloud buckets following the guidelines detailed below.
-
-### Data and Access Considerations
-
-The recommended (and simplest) way for Gen3 to provide controlled access to data is via Signed URLs. Signed URLs are the only fully cloud-agnostic method supported by Gen3 and additionally are supported by all major cloud resource providers. They also allow for short-lived, temporary access to the data for reduced risk.  Lastly, utilizing signed URLs places very few restrictions on the organization of data within could bucket(s).
+Data can be uploaded to a single or separate cloud resources as long as requirements for access and authorization are met.  In order to support the many advantages of using Gen3’s standard tooling for CLI-DFS, data needs to first be organized and copied to cloud buckets following the guidelines detailed below.
 
 ### Allocating Data in Buckets Based on User Access
 
@@ -104,7 +100,6 @@ TOPMed-FHS (phs000974.c1 and .c2)
 | FHS (consent group 1) | s3://nih-nhlbi-topmed-released-phs000974-c1 | gs://nih-nhlbi-topmed-released-phs000974-c1 |
 | FHS (consent group 2) | s3://nih-nhlbi-topmed-released-phs000974-c2 | gs://nih-nhlbi-topmed-released-phs000974-c2 |
 
-\
 With a setup similar to this, Gen3 is able to support signed URLs and fully configured end-user access.
 
 ### Bucket Population
@@ -112,6 +107,8 @@ With a setup similar to this, Gen3 is able to support signed URLs and fully conf
 Once a data allocation scheme is determined, data can be uploaded accordingly to cloud buckets.  It should be noted that while Amazon AWS and Google are the most supported cloud providers, Gen3 is cloud agnostic.  Any method and hierarchy structure can be used for upload as long as a the same parent directory is maintained with end user access.
 
 Regardless of the cloud platform, the CLI-DFS workflow requires file data gathered from its cloud location.  Information such as file name, location, size, and md5sum are usually available from cloud platforms.  Documentation for [AWS](https://aws.amazon.com/cli/), [Google](https://cloud.google.com/storage/docs/gsutil) and [Microsoft Azure](https://learn.microsoft.com/en-us/cli/azure/) should provide guidance to acquiring this information.
+
+  >Note: The recommended (detailed here) way for Gen3 to provide controlled access to data is via Signed URLs. Signed URLs are the only fully cloud-agnostic method supported by Gen3 and additionally are supported by all major cloud resource providers. They also allow for short-lived, temporary access to the data for reduced risk.  Lastly, utilizing signed URLs places very few restrictions on the organization of data within could bucket(s).
 
 * * *
 The files relevant to a Gen3 CLI-DFS Workflow submission:
@@ -123,6 +120,8 @@ The files relevant to a Gen3 CLI-DFS Workflow submission:
 - Indexing manifest: Created for each submission and submits both authorization and file level information into the [Indexd microservice](https://github.com/uc-cdis/indexd).
 
 The creation and submission of these files is covered below.
+
+  >Note: The recommended (and simplest) way for Gen3 to provide controlled access to data is via Signed URLs. Signed URLs are the only fully cloud-agnostic method supported by Gen3 and additionally are supported by all major cloud resource providers. They also allow for short-lived, temporary access to the data for reduced risk.  Lastly, utilizing signed URLs places very few restrictions on the organization of data within could bucket(s).
 
 * * *
 ## 4. Create Bucket Mapping and Manifest Files
@@ -148,7 +147,6 @@ The below example has 4 different authorizations for 8 bucket locations
 | s3://nih-nhlbi-topmed-phs000974-c2 | phs000974.c2 |
 | gs://nih-nhlbi-topmed-phs000974-c2 | phs000974.c2 |
 
-\
 In the situation where Gen3 must support cloud-specific data access methods, Gen3 also requires the authz or acl column which contain the granular access control which would represent access to the entire bucket).
 
 The authz column coordinates with the user permissions set in the Gen3 microservices [Fence](https://github.com/uc-cdis/fence) and [Arborist](https://github.com/uc-cdis/arborist).
@@ -242,12 +240,12 @@ gen3.tools.indexing.index_manifest.index_object_manifest(commons_url=commons_url
                                                                        output_filename=index_manifest[:-4] + '_output.tsv')
 ```
 
-*Please refer to the [authentication sdk](https://uc-cdis.github.io/gen3sdk-python/_build/html/auth.html) for set up of the authentication_object used above*
+*please refer to the [authentication sdk](https://uc-cdis.github.io/gen3sdk-python/_build/html/auth.html) for set up of the authentication_object used above*
 
 *Note: Users in the Gen3-Community have published [repos](https://github.com/jacquayj/gen3-s3indexer-extramural) that index large pre-existing s3 buckets (disclaimer: CTDS is not responsible for the content and opinions on the third-party repos).*
 
 * * *
-## 7. Map files to a Data Node with the Gen3 SDK
+## 6. Map files to a Data Node with the Gen3 SDK
 * * *
 
 Once indexing is complete, Gen3 offers a [Submission sdk toolkit](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html) to map indexed data files to nodes designated to contain data in the [data dictionary](/resources/user/dictionary/#what-is-a-data-dictionary-and-data-model) via the [Sheepdog microservice](https://github.com/uc-cdis/sheepdog).  Unless single data files are being ingested, the sdk submission toolkit generally requires a tab separated variable file, and specific nodes requirements for each data file type can be specified in the data dictionary. After mapping in Sheepdog is complete the file metadata will be mapped from the [program and project](/resources/user/cli-submission#1-prepare-project-sdk) administrative nodes (previously created) to its respective data containing nodes. The mapping in sheepdog is the basis for other search and query services either natively in sheepdog or after other extraction, tranformation and load [(ETL)](/resources/operator/#8-etl-and-data-explorer-configurations) services have been performed.
