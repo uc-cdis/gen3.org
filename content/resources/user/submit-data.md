@@ -68,7 +68,8 @@ https://gen3.datacommons.io/example-training/search?node_type=core_metadata_coll
 ## 2. Upload Data Files to Object Storage
 * * *
 
-If your data is already uploaded into cloud storage and you are interested in a more automatable process, Gen3 offers an alternative method of [command line based file submission](/resources/user/cli-submission). Users should consider this method of submission if they are both comfortable scripting and require something other than the default AWS bucket, or already have your data in a cloud bucket.  This method for submission offers several other benefits including the possibility of using multiple cloud resources and submitting multiple batches of data set files at once.
+Adding files to your new Gen3 project can be done using one of two methods. The gen3-client tool (shown in steps below) offers users an easy way to upload files to Amazon s3 buckets while simultaneously indexing the files and assigning them each a unique GUID or object_id. Alternatively, if your data files are already stored in the cloud and you are comfortable scripting or require something other than the default AWS bucket used by the gen3-client, we offer a [command line based file submission workflow](/resources/user/cli-submission). This method offers several other benefits including the possibility of using multiple cloud resources and submitting multiple batches of data set files at once.
+The following documentation will focus on uploading data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., to object storage using the gen3-client tool.
 
 Data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., are uploaded to object storage with the [gen3-client command-line tool](/resources/user/gen3-client).
 
