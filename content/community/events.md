@@ -9,13 +9,17 @@ g3Teaser:
   detail: About every other month, there is a virtual Gen3 Forum for the community of Gen3 developers, operators, sponsors and users of Gen3 data platforms. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 core development team.
 
 g3Upcoming:
-
+- Title: How to contribute to the Gen3 source code
+  Date: March 27, 3:30-5:00 pm CDT; March 28, 2024, 7:30-9:00 am AEDT
+  Description: We will share an updated process for submitting external contributions to the Gen3 source code.  Following this process will help the maintaining organization to efficiently review proposed contributions.  The second portion of the event will include a more open-ended discussion on a potential co-development process for larger contributions.
+  Image: /figs/GitHub_CTDS.png
+  Register: Add_zoom_link
 
 
 
 g3past:
 - Title: Gen3 Development Roadmap
-  Date: January 24, 3:30-5:00 pm CT; January 25, 2023, 8:30-10:00 am AEDT
+  Date: January 24, 3:30-5:00 pm CT; January 25, 2024, 8:30-10:00 am AEDT
   Description: We will introduce the 2024 Gen3 Development Roadmap, which will include known current priorities.  The first portion of the meeting will include a presentation by Robert Grossman, Director of CTDS.  The second portion will include an organized panel discussion by the Gen3 steering committee on the roadmap.  Please attend to provide your feedback and help prioritize roadmap items.
   Youtube: RWcB1hLPJfA
   Slides: Gen3 Forum Jan 24 2024 - Gen3 Roadmap.pdf
