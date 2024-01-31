@@ -5,7 +5,7 @@ linktitle: governance
 date: 2024-01-25
 g3Teaser:
   title: Gen3 Mission
-  detail: Gen3 aims to accelerate and democratize the process of scientific discovery by making it easy to manage, analyze, harmonize, and share large and complex datasets in the cloud.
+  detail: Gen3 aims to accelerate and democratize the process of scientific discovery by making it easy to manage, analyze, harmonize, and share large and complex datasets.
   title1: Gen3 Steering Committee
   detail1: As the Gen3 community continues to grow worldwide, we seek to maintain an open and vibrant space for intellectual exchange around data sharing and analysis. The Gen3 Steering Committee serves to uphold the Gen3 mission by ensuring Gen3 development activities and events are aligned with the needs of our growing community. As the work of Gen3 expands, the steering committee may create working groups to focus on particular themes or products.
 g3Starts:
