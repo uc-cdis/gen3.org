@@ -10,10 +10,10 @@ g3Teaser:
 
 g3Upcoming:
 - Title: How to contribute to the Gen3 source code
-  Date: March 27, 3:30-5:00 pm CDT; March 28, 2024, 7:30-9:00 am AEDT
-  Description: We will share an updated process for submitting external contributions to the Gen3 source code.  Following these guidelines will allow the maintaining organization to efficiently review proposed contributions.  The second portion of the event will include a more open-ended discussion on a potential co-development process for larger contributions that are more collaborative in nature.
+  Date: March 13, 3:30-5:00 pm CDT; March 14, 2024, 7:30-9:00 am AEDT
+  Description: We will share an updated process for submitting external contributions to the Gen3 source code.  By following these guidelines developers will be able to understand submission requirements and it will enable the maintaining organization to efficiently review proposed contributions.
   Image: /figs/GitHub_CTDS.png
-  Register: Add_zoom_link
+  Register: https://uchicago.zoom.us/meeting/register/tJ0rdOirpzwpGNarGNriuRECtG7apLgY5Q0r
 
 
 
