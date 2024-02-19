@@ -90,7 +90,7 @@ g3Commons:
     fig: /figs/commons/stage.png
     link: https://gen3.biodatacatalyst.nhlbi.nih.gov
   c4:
-    title: Biomedical Research GitHub
+    title: Biomedical Research
     fig: /figs/commons/brh.png
     link: https://brh.data-commons.org/
   c5:
@@ -121,10 +121,6 @@ g3Commons:
     title: NIH Heal Initiative
     fig: /figs/commons/heal.png
     link:  https://healdata.org
-  c12:
-    title: NIDDK IBD Genetics Consortium Data Commons
-    fig: /figs/commons/ibdgc.png
-    link: https://ibdgc.datacommons.io
   c13:
     title: ICGC PCAWG and DREAM Challenge data
     fig:  /figs/commons/icgc.png
