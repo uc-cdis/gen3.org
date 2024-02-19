@@ -81,91 +81,91 @@ g3Company: In good company...
 
 g3Commons:
 
-  c2:
+  c1:
     title: AnVIL
     fig: /figs/commons/anvil.png
     link: https://gen3.theanvil.io
-  c3:
+  c2:
     title: BioData CATALYST
     fig: /figs/commons/stage.png
     link: https://gen3.biodatacatalyst.nhlbi.nih.gov
-  c4:
+  c3:
     title: Biomedical Research
     fig: /figs/commons/brh.png
     link: https://brh.data-commons.org/
-  c5:
+  c4:
     title: BloodPAC Data Commons
     fig: /figs/commons/bloodpac.png
     link: https://data.bloodpac.org
-  c6:
+  c5:
     title: Canine Data Commons
     fig: /figs/commons/canine.png
     link: https://caninedc.org
-  c7:
+  c6:
     title: Chicagoland COVID-19 Commons
     fig: /figs/commons/covid19.png
     link: https://chicagoland.pandemicresponsecommons.org
-  c8:
+  c7:
     title: NCI-CRDC
     fig: /figs/commons/crdc.png
     link: https://nci-crdc.datacommons.io
-  c9:
+  c8:
     title: OCC Environmental Data Commons
     fig: /figs/commons/edc.png
     link: https://portal.occ-data.org
-  c10:
+  c9:
     title: GenoMEL Data Commons
     fig: /figs/commons/genomel.png
     link: https://genomel.bionimbus.org
-  c11:
+  c10:
     title: NIH Heal Initiative
     fig: /figs/commons/heal.png
     link:  https://healdata.org
-  c13:
+  c11:
     title: ICGC PCAWG and DREAM Challenge data
     fig:  /figs/commons/icgc.png
     link: https://icgc.bionimbus.org/
-  c14:
+  c12:
     title: Justice Community Opioid Innovation Network
     fig: /figs/commons/jcoin.png
     link: https://jcoin.datacommons.io
-  c15:
+  c13:
     title: Kids-First
     fig: /figs/commons/kf.png
     link: https://data.kidsfirstdrc.org
-  c16:
+  c14:
     title: The Medical Imaging and Data Resource Center Commons
     fig: /figs/commons/midrc.png
     link: https://data.midrc.org
-  c17:
+  c15:
     title: AccessClinicalTrails@NIAID
     fig: /figs/commons/nct.png
     link: https://accessclinicaldata.niaid.nih.gov
-  c18:
+  c16:
     title: Veterans Affairs Data Commons
     fig: /figs/commons/va.png
     link: https://va.data-commons.org/
-  c19:
+  c17:
     title: Veterans Precision Oncology Data Commons
     fig: /figs/commons/vpodc.png
     link: https://vpodc.org
-  c20:
+  c18:
     title: Australian Cardiovascular Disease Data Commons
     fig: /figs/commons/Aus_Cardio_Data_Commons.png
     link: https://data.acdc.ozheart.org/
-  c21:
+  c19:
     title: Genomics Aotearoa
     fig: /figs/commons/genomics_aotearoa.png
     link: https://data.agdr.org.nz/
-  c22:
+  c20:
     title: National Institute of Environmental Health Sciences
     fig: /figs/commons/NIEHS.png
     link: https://www.niehs.nih.gov/
-  c23:
+  c21:
     title: Pediatric Cancer Data Commons
     fig: /figs/commons/pcdc.png
     link: https://portal.pedscommons.org/
-  c24:
+  c22:
     title: ARDaC AlcHepNet Research Data Commons
     fig: /figs/commons/ARDaC.png
     link: https://dev.ardac.org/
@@ -352,6 +352,11 @@ g3Entrance:
     <div class="g3-slider">
       <div class="g3-slide-track">
         <div class="g3-slider-item">
+          <a target="_blank" href="{{< param "g3Commons.c1.link" >}}" title="{{< param "g3Commons.c1.title" >}}">
+            <img class="g3-row__50px" src="{{< param "g3Commons.c1.fig" >}}" />
+          </a>
+        </div>
+        <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c2.link" >}}" title="{{< param "g3Commons.c2.title" >}}">
             <img class="g3-row__50px" src="{{< param "g3Commons.c2.fig" >}}" />
           </a>
@@ -454,16 +459,6 @@ g3Entrance:
         <div class="g3-slider-item">
           <a target="_blank" href="{{< param "g3Commons.c22.link" >}}" title="{{< param "g3Commons.c22.title" >}}">
             <img class="g3-row__50px" src="{{< param "g3Commons.c22.fig" >}}" />
-          </a>
-        </div>
-        <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c23.link" >}}" title="{{< param "g3Commons.c23.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c23.fig" >}}" />
-          </a>
-        </div>
-        <div class="g3-slider-item">
-          <a target="_blank" href="{{< param "g3Commons.c24.link" >}}" title="{{< param "g3Commons.c24.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c24.fig" >}}" />
           </a>
         </div>
       </div>
