@@ -81,10 +81,10 @@ g3Starts:
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Starts.s1.name" >}}
         </h3>
-        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-left">
+        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-center">
           {{< param "g3Starts.s1.position" >}}
         </h4>
-        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-left">
+        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-center">
           {{< param "g3Starts.s1.organization" >}}
         </h4>
       </div>
@@ -93,10 +93,10 @@ g3Starts:
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Starts.s2.name" >}}
         </h3>
-        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-left">
+        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-center">
           {{< param "g3Starts.s2.position" >}}
         </h4>
-        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-left">
+        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-center">
           {{< param "g3Starts.s2.organization" >}}
         </h4>
       </div>
@@ -105,10 +105,10 @@ g3Starts:
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Starts.s3.name" >}}
         </h3>
-        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-left">
+        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-center">
           {{< param "g3Starts.s3.position" >}}
         </h4>
-        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-left">
+        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-center">
           {{< param "g3Starts.s3.organization" >}}
         </h4>
       </div>
@@ -125,10 +125,10 @@ g3Starts:
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Starts.s4.name" >}}
         </h3>
-        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-left">
+        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-center">
           {{< param "g3Starts.s4.position" >}}
         </h4>
-        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-left">
+        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-center">
           {{< param "g3Starts.s4.organization" >}}
         </h4>
       </div>
@@ -137,10 +137,10 @@ g3Starts:
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Starts.s5.name" >}}
         </h3>
-        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-left">
+        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-center">
           {{< param "g3Starts.s5.position" >}}
         </h4>
-        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-left">
+        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-center">
           {{< param "g3Starts.s5.organization" >}}
         </h4>
       </div>
@@ -149,10 +149,10 @@ g3Starts:
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Starts.s6.name" >}}
         </h3>
-        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-left">
+        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-center">
           {{< param "g3Starts.s6.position" >}}
         </h4>
-        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-left">
+        <h4 class="g3-space__margin-sm-bottom g3-text__desktop-center">
           {{< param "g3Starts.s6.organization" >}}
         </h4>
       </div>
