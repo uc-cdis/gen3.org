@@ -9,7 +9,7 @@ g3Teaser:
   title1: Gen3 Community Steering Committee
   detail1: As the Gen3 community continues to grow worldwide, we seek to maintain an open and vibrant space for intellectual exchange around data sharing and analysis. The Gen3 Community Steering Committee serves to uphold the Gen3 mission by ensuring Gen3 development activities and events are aligned with the needs of our growing community. As the work of Gen3 expands, the steering committee may create working groups to focus on particular themes or products.
 g3Starts:
-  title: Steering Committee
+  title: Community Steering Committee
   s1:
     name: Kyle Ellrott, Ph.D.
     fig: /figs/steering_committee/Ellrott_image.jpg
