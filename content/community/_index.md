@@ -42,7 +42,7 @@ g3DataFeature:
     title: Open Source
     subtitle: Visit CTDS on GitHub or submit an open Pull Request to the code base.
     button:
-      link: https://gen3.org/resources/developer/dev-introduction/#pull-requests-prs
+      link: https://uc-cdis.github.io/gen3-docs/docs/Contributor%20Guidelines
   f7:
     title: Gen3 Publications
     subtitle: Follow the discoveries being made by Gen3 researchers.
