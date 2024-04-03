@@ -40,7 +40,7 @@ g3DataFeature:
       link: https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/featured
   f6:
     title: Source Code
-    subtitle: View repositories for all Gen3 services on GitHub
+    subtitle: View repositories for all Gen3 services on GitHub.
     button:
       link: https://github.com/uc-cdis
   f7:
@@ -55,12 +55,12 @@ g3DataFeature:
       link: /community/events/
   f9:
     title: Release Notes
-    subtitle: Learn what improvements were found in the latest releases
+    subtitle: Learn what improvements were found in the latest releases.
     button:
       link: https://github.com/uc-cdis/cdis-manifest/tree/master/releases
   f10:
     title: Contribute to Gen3
-    subtitle: Learn how to contribute code improvements to Gen3
+    subtitle: Learn how to contribute code improvements to Gen3.
     button:
       link: https://uc-cdis.github.io/gen3-docs/docs/Contributor%20Guidelines
 g3Entrance:
