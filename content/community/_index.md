@@ -29,8 +29,8 @@ g3DataFeature:
     button:
       link: /powered-by-gen3
   f4:
-    title: Gen3 Forum
-    subtitle: Discuss use and development of the Gen3 software suite. Find different topics and answers for beginner through advanced stages.
+    title: Discussion Board
+    subtitle: Discuss use and development of the Gen3 software suite. Find different topics and answers.
     button:
       link: https://forums.gen3.org
   f5:
@@ -49,7 +49,7 @@ g3DataFeature:
     button:
       link: /gen3refs/
   f8:
-    title: Gen3 Community Events
+    title: Community Events
     subtitle: View information about and register for upcoming Gen3 developer community events.
     button:
       link: /community/events/
@@ -128,6 +128,18 @@ g3Entrance:
           <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
           <div class="g3-flex-content g3-flex-content_center">
             <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f1.button.link" >}}" ">
+              Sign up
+            </a>
+          </div>
+        </div>
+        <div class="g3-space__margin-sm-left-right g3-col__33 g3-box">
+          <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f4.title" >}}</h3>
+          <p>
+            {{< param "g3DataFeature.f4.subTitle" >}}
+          </p>
+          <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
+          <div class="g3-flex-content g3-flex-content_center">
+            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f4.button.link" >}}" ">
               Sign up
             </a>
           </div>
@@ -222,7 +234,7 @@ g3Entrance:
           <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
           <div class="g3-flex-content g3-flex-content_center">
             <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f3.button.link" >}}" ">
-              Contribute
+              Learn More
             </a>
           </div>
         </div>
