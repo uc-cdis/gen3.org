@@ -11,7 +11,7 @@ g3Teaser:
 g3Upcoming:
 - Title: Gen3.2 - How to build a Gen3 data portal using the new frontend framework
   Date: May 1, 3:30-5:00 pm CDT; May 2, 2024, 6:30-8:00am am AEST
-  Description: Gen3 has released a new frontend for the data portal. In this month's forum, we will walk you through the new features and capabilities and demonstrate how to configure the new frontend.  The first portion of the meeting will be led by CTDS Frontend and Visualization Manager, Craig Barnes.  Later we will hear from Kyle Ellrott at the Oregon Health and Science University where he will share his team's experience of using the updated frontend.
+  Description: Gen3 has released a new frontend for the data portal. In this month's forum, we will walk you through the new features and capabilities and demonstrate how to configure the new frontend.  The first portion of the meeting will be led by CTDS Frontend and Visualization Manager, Craig Barnes.  Later we will hear from a team of Gen3 operators at the Oregon Health & Science University where they will share their experience of using the updated frontend.
   Register: https://uchicago.zoom.us/meeting/register/tJYsceihqz8pGNBIDbvuM8Z6PvMmu4Z7Qsq3
   Image: /figs/FF_demo_image.png
 
