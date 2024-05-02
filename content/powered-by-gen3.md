@@ -87,7 +87,7 @@ g3Commons:
     title: ACED IDP
     fig: /figs/commons/ACED.png
     link: https://aced-idp.org/
-  c21:
+  c23:
     title: Australian Cardiovascular Disease Data Commons
     fig: /figs/commons/Aus_Cardio_Data_Commons.png
     link: https://www.biocommons.org.au/
@@ -95,7 +95,7 @@ g3Commons:
     title: Genomics Aotearoa
     fig: /figs/commons/genomics_aotearoa.png
     link: https://data.agdr.org.nz/
-  c23:
+  c25:
     title: National Institute of Environmental Health Sciences
     fig: /figs/commons/NIEHS.png
     link: https://www.niehs.nih.gov/
@@ -103,7 +103,7 @@ g3Commons:
     title: Pediatric Cancer Data Commons
     fig: /figs/commons/pcdc.png
     link: https://portal.pedscommons.org/
-  c25:
+  c21:
     title: ARDaC AlcHepNet Research Data Commons
     fig: /figs/commons/ARDaC.png
     link: https://dev.ardac.org/
