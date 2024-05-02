@@ -9,14 +9,14 @@ g3Teaser:
   detail: About every other month, there is a virtual Gen3 Forum for the community of Gen3 developers, operators, sponsors and users of Gen3 data platforms. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 core development team.
 
 g3Upcoming:
-- Title: Gen3.2 - How to build a Gen3 data portal using the new frontend framework
-  Date: May 1, 3:30-5:00 pm CDT; May 2, 2024, 6:30-8:00am am AEST
-  Description: Gen3 has released a new frontend for the data portal. In this month's forum, we will walk you through the new features and capabilities and demonstrate how to configure the new frontend.  The first portion of the meeting will be led by CTDS Frontend and Visualization Manager, Craig Barnes.  Later we will hear from a team of Gen3 operators at the Oregon Health & Science University where they will share their experience of using the updated frontend.
-  Register: https://uchicago.zoom.us/meeting/register/tJYsceihqz8pGNBIDbvuM8Z6PvMmu4Z7Qsq3
-  Image: /figs/FF_demo_image.png
 
 
 g3past:
+- Title: Gen3.2 - How to build a Gen3 data portal using the new frontend framework
+  Date: May 1, 3:30-5:00 pm CDT; May 2, 2024, 6:30-8:00am am AEST
+  Description: Gen3 has released a new frontend for the data portal. In this month's forum, we will walk you through the new features and capabilities and demonstrate how to configure the new frontend.  The first portion of the meeting will be led by CTDS Frontend and Visualization Manager, Craig Barnes.  Later we will hear from a team of Gen3 operators at the Oregon Health & Science University where they will share their experience of using the updated frontend.
+  Youtube: 6dcEUmhB1kk
+  Slides: Gen3 Forum May 2024 - Gen3.2.pdf
 - Title: How to contribute to the Gen3 source code
   Date: March 20, 3:30-5:00 pm CDT; March 21, 2024, 7:30-9:00 am AEDT
   Description: Gen3 is an open-source project and benefits from active community contributions.  In this month's forum we will share an updated process for submitting external contributions to the Gen3 source code.  By following these guidelines developers will be able to understand submission requirements and it will enable the maintaining organization to efficiently review proposed contributions.
