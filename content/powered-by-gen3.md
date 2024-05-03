@@ -84,22 +84,26 @@ g3Commons:
     fig: /figs/commons/vpodc.png
     link: https://vpodc.org
   c20:
+    title: ACED IDP
+    fig: /figs/commons/ACED.png
+    link: https://aced-idp.org/
+  c23:
     title: Australian Cardiovascular Disease Data Commons
     fig: /figs/commons/Aus_Cardio_Data_Commons.png
     link: https://www.biocommons.org.au/
-  c21:
+  c22:
     title: Genomics Aotearoa
     fig: /figs/commons/genomics_aotearoa.png
     link: https://data.agdr.org.nz/
-  c22:
+  c25:
     title: National Institute of Environmental Health Sciences
     fig: /figs/commons/NIEHS.png
     link: https://www.niehs.nih.gov/
-  c23:
+  c24:
     title: Pediatric Cancer Data Commons
     fig: /figs/commons/pcdc.png
     link: https://portal.pedscommons.org/
-  c24:
+  c21:
     title: ARDaC AlcHepNet Research Data Commons
     fig: /figs/commons/ARDaC.png
     link: https://dev.ardac.org/
@@ -244,6 +248,11 @@ g3Commons:
       <div class="g3-common-card">
          <a target="_blank" href="{{< param "g3Commons.c24.link" >}}" title="{{< param "g3Commons.c24.title" >}}">
          <img class="g3-row__50px" src="{{< param "g3Commons.c24.fig" >}}" />
+         </a>
+      </div>
+      <div class="g3-common-card">
+         <a target="_blank" href="{{< param "g3Commons.c25.link" >}}" title="{{< param "g3Commons.c25.title" >}}">
+         <img class="g3-row__50px" src="{{< param "g3Commons.c25.fig" >}}" />
          </a>
       </div>
    </div>
