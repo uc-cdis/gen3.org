@@ -11,7 +11,7 @@ g3Teaser:
 g3Upcoming:
 - Title: Data submission - Perspectives and solutions from different Gen3 systems
   Date: July 10, 3:30-5:00 pm CDT; July 11, 2024, 6:30-8:00am am AEST
-  Description: Gen3 data submission can be complex and will vary from project to project.  The specifics will depend on the data model, data type, use of graph-model and/or metadata service, centrally managed vs user driven, and other project-specific requirements.  At this event we will hear from a range of Gen3 operators on how their projects approach the topic of data submission and how they have managed this process. 
+  Description: Gen3 data submission can be complex and will vary from project to project.  The specifics will depend on the data model, data type, use of graph-model and/or metadata service, centrally managed vs user driven, and other project-specific requirements.  At this event we will hear from a range of Gen3 operators on how their projects approach the topic of data submission and how they have managed this process.  
   Image: /figs/canine_data_commons.png
   Register2: https://uchicago.zoom.us/meeting/register/tJEtf-2hrjstHd0Cm4AxnXzEpm3rOoykS1LJ
   Agenda3: /community/events/gen3forum_20240710
