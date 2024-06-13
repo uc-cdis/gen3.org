@@ -8,6 +8,8 @@ g3Teaser:
   detail: Gen3 aims to accelerate and democratize the process of scientific discovery by making it easy to manage, analyze, harmonize, and share large and complex datasets.
   title1: Gen3 Community Steering Committee
   detail1: As the Gen3 community continues to grow worldwide, we seek to maintain an open and vibrant space for intellectual exchange around data sharing and analysis. The Gen3 Community Steering Committee serves to uphold the Gen3 mission by ensuring Gen3 development activities and events are aligned with the needs of our growing community. As the work of Gen3 expands, the steering committee may create working groups to focus on particular themes or products.
+  title2: Gen3 Working Groups
+  detail2: Gen3 working groups are established to tackle complex improvements to Gen3 that require close interaction between contributors and CTDS, the maintaining organization for Gen3. These will be created from time to time to address community driven requests.
 g3Starts:
   title: Gen3 Community Steering Committee
   s1:
@@ -40,6 +42,9 @@ g3Starts:
     fig: /figs/steering_committee/claire_rye.jpg
     position: Project Manager for Data
     organization: New Zealand eScience Infrastructure
+
+Working_groups:
+  title: Gen3 Working groups
 
 ---
 
@@ -157,6 +162,37 @@ g3Starts:
         </h4>
       </div>
     </div>
+    </div>
+  </div>
+</section>
+
+<section class="g3-bg__solight">
+  <div class="g3-outer-wrapper g3-flex-content">
+    <div class="g3-space__padding-md-top g3-space__padding-md-bottom">
+      <div class="g3-space__wrapper-gap-left">
+        <h1 class="g3-space__margin-sm-bottom">
+          {{< param "g3Teaser.title2" >}}
+        </h1>
+        <p class="g3-space__margin-sm-bottom introduction">
+          {{< param "g3Teaser.detail2" >}}
+        </p>
+        <p class="g3-space__margin-sm-bottom introduction">
+          Using Keycloak as a tool to manage which policies apply to a user
+          <ul>
+           <li>Australian Biocommons - Uwe Winter, Stevan Manos</li>
+           <li>New Zealand eScience Infracture - Nathalie Giraudon, Claire Rye</li>
+           <li>CTDS - Alex VanTol, Peter Vassilatos</li>
+         </ul>
+        </p>
+        <p class="g3-space__margin-sm-bottom introduction">
+          Grafana as a Gen3 observability tool
+          <ul>
+           <li>Australian Biocommons - Uwe Winter, Guerdon Mukama</li>
+           <li>CTDS - Jawad Qureshi, Peter Vassilatos</li>
+           <li>OHSU - Kyle Ellrott</li>
+         </ul>
+        </p>
+      </div>
     </div>
   </div>
 </section>
