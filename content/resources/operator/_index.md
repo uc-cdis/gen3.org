@@ -33,7 +33,7 @@ Check out more resources:
 This option is suitable for all deployments. If you are ready to get started, you can follow our guide [here](https://docs.gen3.org/docs/Deployment/Helm%20Overview)
 
 
-### Cloud Automation
+### Cloud Automation (legacy)
 
 ![Cloud Automation](img/cloud-automation.svg)
 
