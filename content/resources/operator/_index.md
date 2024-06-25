@@ -26,7 +26,6 @@ Check out more resources:
 * [Contributions from the Gen3 Community](https://github.com/uc-cdis/compose-services/blob/master/docs/useful_links.md)
 
 ## 1. Gen3 on Helm
-![Gen3 on Helm](img/compose-services.svg)
 
 [Gen3 on Helm](https://github.com/uc-cdis/gen3-helm) is the new preferred way to deploy a Gen3 commons or mesh. Using Helm, a package manager for Kubernetes, Gen3 can be installed against any cluster, including a local one such as Minikube or Rancher Desktop.
 
@@ -34,8 +33,6 @@ This option is suitable for all deployments. If you are ready to get started, yo
 
 
 ### Cloud Automation (legacy)
-
-![Cloud Automation](img/cloud-automation.svg)
 
 [Gen3 Cloud Automation](https://github.com/uc-cdis/cloud-automation/blob/master/doc/csoc-free-commons-steps.md) was used in the past to deploy Gen3 data commons in production environments on Amazon Web Services, Google Cloud Platform, Microsoft Azure, and OpenStack environments. **It is preserved for legacy reasons.  In the future it may no longer be supported so we encourage all Gen3 operators to make the switch to Gen3 helm.**
 
