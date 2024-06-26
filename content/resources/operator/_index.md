@@ -12,43 +12,39 @@ menuname: operatorMenu
 Find below resources on how to stand up a Gen3 Data Commons.
 
 1. Use [Gen3 on Helm](#1-gen3-on-helm) to create a Gen3 Data Commons sandbox
-2. Use [Cloud Automation](#2-cloud-automation) to deploy a Gen3 Data Commons in production environments on cloud frameworks
-3. Read more about [creating a Data Dictionary](#3-creating-a-new-data-dictionary) and [updating it](http://localhost:1313/resources/operator/#4-dictionary-update-documentation)
-4. Explore available [Authentication Methods](#5-authentication-methods)
-5. Read about how to [create programs and projects](#6-programs-and-projects)
-6. Learn [how to upload and control file access via authZ](#7-how-to-upload-and-control-file-access-via-authz)
-7. Learn how Gen3 uses [ETL and the Data Portal for the Data Explorer](#8-etl-and-data-explorer-configurations)
-8. Explore examples on [how to configure a Gen3 Data Portal](#9-gen3-portal-configurations-examples)
+2. Read more about [creating a Data Dictionary and updating it](#2-creating-a-new-data-dictionary)
+3. Explore available [Authentication Methods](#3-authentication-methods)
+4. Read about how to [create programs and projects](#4-programs-and-projects)
+5. Learn [how to upload and control file access via authZ](#5-how-to-upload-and-control-file-access-via-authz)
+6. Learn how Gen3 uses [ETL and the Data Portal for the Data Explorer](#6-etl-and-data-explorer-configurations)
+7. Explore examples on [how to configure a Gen3 Data Portal](#7-gen3-portal-configurations-examples)
+
+
 
 Check out more resources:
 * [Technical aspects of maintaining a Gen3 Data Commons](https://github.com/uc-cdis/compose-services/blob/master/docs/using_the_commons.md)
 * [Contributions from the Gen3 Community](https://github.com/uc-cdis/compose-services/blob/master/docs/useful_links.md)
 
 ## 1. Gen3 on Helm
-![Gen3 on Helm](img/compose-services.svg)
 
-[Gen3 on Helm](https://github.com/uc-cdis/gen3-helm) is the new preferred way to run a Gen3 commons on a single laptop, desktop, or VM. Using Helm, a package manager for Kubernetes, Gen3 can be installed against any cluster, including a local one such as Minikube or Rancher Desktop.
+[Gen3 on Helm](https://github.com/uc-cdis/gen3-helm) is the new preferred way to deploy a Gen3 commons or mesh. Using Helm, a package manager for Kubernetes, Gen3 can be installed against any cluster, including a local one such as Minikube or Rancher Desktop. Helm is a tool that streamlines the installation and management of applications on Kubernetes platforms. Helm plays a crucial role in simplifying the deployment and management of Gen3 components within your environment.
 
-This option is suitable for those that wish to experiment with Gen3, develop against it on their machines, or other non-production uses. At this time, the Helm deployment is not considered production-ready.
-
-If you are ready to get started, you can follow our guide [here](https://github.com/uc-cdis/gen3-helm/blob/doc/gen3Setup/gen3ForDevs/gen3HelmForDevelopers.md)
+This option is suitable for all deployments. If you are ready to get started, you can follow our guide [here](https://docs.gen3.org/docs/quickstart)
 
 
-## 2. Cloud Automation
+### Cloud Automation (legacy)
 
-![Cloud Automation](img/cloud-automation.svg)
-
-[Gen3 Cloud Automation](https://github.com/uc-cdis/cloud-automation/blob/master/doc/csoc-free-commons-steps.md) is how we deploy Gen3 data commons in production environments on Amazon Web Services, Google Cloud Platform, Microsoft Azure, and OpenStack environments. Cloud Automation is fully featured supporting integrated logging, security, and compliance steps. With cloud Automation, we utilize Kubernetes to orchestrate our services into a scalable environment that can be run in a cost efficient manner for many tens to thousands of users.
+[Gen3 Cloud Automation](https://github.com/uc-cdis/cloud-automation/blob/master/doc/csoc-free-commons-steps.md) was used in the past to deploy Gen3 data commons in production environments on Amazon Web Services, Google Cloud Platform, Microsoft Azure, and OpenStack environments. Cloud Automation is fully featured supporting integrated logging, security, and compliance steps. With cloud Automation, we utilize Kubernetes to orchestrate our services into a scalable environment that can be run in a cost efficient manner for many tens to thousands of users.
 
 Cloud automation utilizes Terraform for repeatable infrastructure deployments onto the public clouds. Additionally, we have custom Gen3 specific tooling to help automate various steps in the Kubernetes deployment process such as rolling pod versions, and scaling up.
 
-We welcome all comments, feature requests, and pull requests using GitHub issues or the [Gen3 community](https://forums.gen3.org).
+**Cloud automation is preserved for legacy reasons.  In the future it may no longer be supported so we encourage all Gen3 operators to make the switch to Gen3 helm.**
 
 [Explore Gen3 Cloud Automation here.](https://github.com/uc-cdis/cloud-automation/blob/master/doc/csoc-free-commons-steps.md)
 
 
 
-## 3. Creating a New Data Dictionary
+## 2. Creating a New Data Dictionary
 
 ### Core Dictionary
 We have created a basic data dictionary [DCF data dictionary](https://github.com/uc-cdis/dcfdictionary) to get you started.  You can use the DCF Data Dictionary as a starting point for creating your own data dictionary in your own commons. It is a consensus of previously used data dictionaries and will make creating your own data dictionary more efficient. The basic structure of this and all dictionaries includes the following node categories:
@@ -156,11 +152,11 @@ The following diagram is an example of a loop as R3 is redundant as it brings no
 
 ![Loop example](img/loop.png)
 
-## 4. Dictionary Update Documentation
+### Dictionary Update Documentation
 
 When making updates to data dictionaries, it's important to document these changes for good record keeping purposes.  The documentation should be implemented in the release notes of the respective GitHub site.  All changes should be denoted from minor to major changes.  Common updates include enumerated value modifications, adding or removing properties or nodes, and updates to links that describe relationships and dependencies between nodes.  Every release is associated with a unique tag which differentiates dictionary versions.  The tags are incrementally changed based on how extensive an update (for example, for a minor update such as changing a property name version 3.3.2 would become 3.3.3).
 
-### Example Documentation
+#### Example Documentation
 
       Gen3 Product: Sample Data Hub
       Release Date: May 30, 2019
@@ -192,7 +188,7 @@ When generating the release notes there are [conventions](https://github-tools.g
   6) Wrap the body at 72 characters
   7) Use the body to explain what and why, not how
 
-## 5. Authentication Methods
+## 3. Authentication Methods
 
 The following methods of authentication are supported in Gen3. They are listed in order of preference from OCC perspective, and technological and governance considerations are outlined below.
 
@@ -290,7 +286,7 @@ _Cons_
 * Neither user’s organization does not take responsibility for activating/deactivating users based on affiliation.
 
 
-## 6. Programs and Projects
+## 4. Programs and Projects
 In a Gen3 Data Commons, programs and projects are two administrative nodes in the graph database that serve as the most upstream nodes. A program must be created first, followed by a project. Any subsequent data submission and data access, along with control of access to data, is done through the project scope.
 
 Before you create a program and a project or submit any data, you need to grant yourself permissions. First, you will need to grant yourself access to **create** a program and second, you need to grant yourself access to *see* the program. You can **create** the program before or after having access to *see* it.
@@ -308,7 +304,7 @@ To create a project, visit the URL where your Gen3 Commons is hosted and append 
 After that, you're ready to start submitting data for that project! Please note that Data Submission refers to metadata regarding the file(s) (Image, Sequencing files, etc.) that are to be uploaded. Please refer to the [Gen3 website](https://gen3.org/resources/user/submit-data/) for additional details.
 
 
-## 7. How to Upload and Control File Access via authZ
+## 5. How to Upload and Control File Access via authZ
 This section guides you through how to set up a granular access to data files by editing programs/projects. Note, that this does not apply to graph metadata.
 
 **a) Upload data files**
@@ -398,7 +394,7 @@ resources:
 	- my_program-TEST1_name4_downloader
 ```
 
-## 8. ETL and Data Explorer Configurations
+## 6. ETL and Data Explorer Configurations
 
 ETL stands for “extract, transform, load”. In Gen3, it refers to the process of moving data from the PostgreSQL database (graph model) to the ElasticSearch database (flat model), which is carried out by the Gen3 Service [Tube](https://github.com/uc-cdis/tube).
 
@@ -410,7 +406,7 @@ After configuring etlMapping.yaml, indices need to be created, cleaned, or/and r
 
 In the next step, the [gitops.json](https://github.com/uc-cdis/data-portal/blob/master/docs/portal_config.md) needs to be configured to display and populate the indices of interest in the Data Explorer. Remember that only the properties occurring in the etlMapping.yaml can be brought into the gitops.json. The gitops.json can be [tested locally](https://github.com/uc-cdis/data-portal#local-development-and-devhtml) and [validated against the Data Dictionary and etlMapping.yaml file](https://github.com/uc-cdis/gen3utils#portal-configuration-gitopsjson-validation). Finally, after new indices are introduced, Guppy needs to be rolled using the command `gen3 roll guppy`. A comprehensive list of commands is given [here](https://github.com/uc-cdis/cloud-automation/blob/master/doc/README.md).
 
-## 9. Gen3 Portal Configurations Examples
+## 7. Gen3 Portal Configurations Examples
 
 Below we show a few examples of how to customize the Gen3 Data Portal.
 
