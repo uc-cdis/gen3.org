@@ -34,11 +34,11 @@ This option is suitable for all deployments. If you are ready to get started, yo
 
 ### Cloud Automation (legacy)
 
-[Gen3 Cloud Automation](https://github.com/uc-cdis/cloud-automation/blob/master/doc/csoc-free-commons-steps.md) was used in the past to deploy Gen3 data commons in production environments on Amazon Web Services, Google Cloud Platform, Microsoft Azure, and OpenStack environments. **It is preserved for legacy reasons.  In the future it may no longer be supported so we encourage all Gen3 operators to make the switch to Gen3 helm.**
-
-Cloud Automation is fully featured supporting integrated logging, security, and compliance steps. With cloud Automation, we utilize Kubernetes to orchestrate our services into a scalable environment that can be run in a cost efficient manner for many tens to thousands of users.
+[Gen3 Cloud Automation](https://github.com/uc-cdis/cloud-automation/blob/master/doc/csoc-free-commons-steps.md) was used in the past to deploy Gen3 data commons in production environments on Amazon Web Services, Google Cloud Platform, Microsoft Azure, and OpenStack environments. Cloud Automation is fully featured supporting integrated logging, security, and compliance steps. With cloud Automation, we utilize Kubernetes to orchestrate our services into a scalable environment that can be run in a cost efficient manner for many tens to thousands of users.
 
 Cloud automation utilizes Terraform for repeatable infrastructure deployments onto the public clouds. Additionally, we have custom Gen3 specific tooling to help automate various steps in the Kubernetes deployment process such as rolling pod versions, and scaling up.
+
+**Cloud automation is preserved for legacy reasons.  In the future it may no longer be supported so we encourage all Gen3 operators to make the switch to Gen3 helm.**
 
 [Explore Gen3 Cloud Automation here.](https://github.com/uc-cdis/cloud-automation/blob/master/doc/csoc-free-commons-steps.md)
 
