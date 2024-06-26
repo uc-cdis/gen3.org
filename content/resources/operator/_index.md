@@ -27,9 +27,9 @@ Check out more resources:
 
 ## 1. Gen3 on Helm
 
-[Gen3 on Helm](https://github.com/uc-cdis/gen3-helm) is the new preferred way to deploy a Gen3 commons or mesh. Using Helm, a package manager for Kubernetes, Gen3 can be installed against any cluster, including a local one such as Minikube or Rancher Desktop.
+[Gen3 on Helm](https://github.com/uc-cdis/gen3-helm) is the new preferred way to deploy a Gen3 commons or mesh. Using Helm, a package manager for Kubernetes, Gen3 can be installed against any cluster, including a local one such as Minikube or Rancher Desktop. Helm is a tool that streamlines the installation and management of applications on Kubernetes platforms. Helm plays a crucial role in simplifying the deployment and management of Gen3 components within your environment.
 
-This option is suitable for all deployments. If you are ready to get started, you can follow our guide [here](https://docs.gen3.org/docs/Deployment/Helm%20Overview)
+This option is suitable for all deployments. If you are ready to get started, you can follow our guide [here](https://docs.gen3.org/docs/quickstart)
 
 
 ### Cloud Automation (legacy)
