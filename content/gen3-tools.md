@@ -24,14 +24,14 @@ g3Starts:
       link: https://github.com/uc-cdis/gen3utils
   s3:
     name: g3t
-    fig: /figs/ACED_logo.jpeg
+    fig: /figs/OHSU-logo.png
     detail: Gen3 Tracker (g3t) includes utilities to manage Gen3 schemas, projects and submissions.  Tools include those to create and manage metadata, manipulate file manifests, status checks, metadata validation, user access, and others.                                                       
     button:
       caption: GitHub
       link: https://github.com/ACED-IDP/gen3_util
   s4:
     name: g3t_etl
-    fig: /figs/ACED_logo.jpeg
+    fig: /figs/OHSU-logo.png
     detail: g3t_etl is a command-line tool and library designed to manage Gen3 metadata including transformations to and from FHIR formatted data. The tool provides various commands, each serving a specific purpose.                                   
     button:
       caption: GitHub
@@ -46,7 +46,7 @@ g3Starts:
       link: https://github.com/bioteam/dictionaryutils
   s6:
     name: gen3schemadev
-    fig: /figs/Australian-Biocommons-Logo-Horizontal-144dpi-Transparent.png
+    fig: /figs/Australian-Biocommons-Logo-Horizontal-RGB.png
     detail: A python tool that uses Google Sheets for simple, automated and efficient dictionary development.  The Gen3 schema mapping library enables an automated workflow to edit, test, validate and publish Gen3 Data Dictionaries, using a google sheet as input.  Created by the Australian BioCommons.
     button:
       caption: GitHub
@@ -93,30 +93,30 @@ g3Starts:
           {{< param "g3Starts.s1.button.caption" >}}
         </a>
       </div>
-        <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
-          <img class="g3-row__10vh g3-space__margin-sm-bottom" src="{{< param "g3Starts.s2.fig" >}}"/>
-          <h3 class="g3-space__margin-sm-bottom">
-            {{< param "g3Starts.s2.name" >}}
-          </h3>
-          <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
-            {{< param "g3Starts.s2.detail" >}} <br>       <br> <br>               
-          </p>
-          <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s2.button.link" >}}">
-            {{< param "g3Starts.s2.button.caption" >}}
-          </a>
-        </div>
-        <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
-          <img class="g3-row__10vh g3-space__margin-sm-bottom" src="{{< param "g3Starts.s3.fig" >}}"/>
-          <h3 class="g3-space__margin-sm-bottom">
-            {{< param "g3Starts.s3.name" >}}
-          </h3>
-          <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
-            {{< param "g3Starts.s3.detail" >}} <br>       <br> <br>               
-          </p>
-          <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s3.button.link" >}}">
-            {{< param "g3Starts.s3.button.caption" >}}
-          </a>
-        </div>
+      <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
+        <img class="g3-row__10vh g3-space__margin-sm-bottom" src="{{< param "g3Starts.s2.fig" >}}"/>
+        <h3 class="g3-space__margin-sm-bottom">
+          {{< param "g3Starts.s2.name" >}}
+        </h3>
+        <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
+          {{< param "g3Starts.s2.detail" >}} <br>       <br> <br>               
+        </p>
+        <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s2.button.link" >}}">
+          {{< param "g3Starts.s2.button.caption" >}}
+        </a>
+      </div>
+      <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
+        <img class="g3-row__10vh g3-space__margin-sm-bottom" src="{{< param "g3Starts.s3.fig" >}}"/>
+        <h3 class="g3-space__margin-sm-bottom">
+          {{< param "g3Starts.s3.name" >}}
+        </h3>
+        <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
+          {{< param "g3Starts.s3.detail" >}} <br>       <br> <br>               
+        </p>
+        <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s3.button.link" >}}">
+          {{< param "g3Starts.s3.button.caption" >}}
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -148,19 +148,19 @@ g3Starts:
         <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s5.button.link" >}}">
           {{< param "g3Starts.s5.button.caption" >}}
         </a>
-      </div>
-        <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
-          <img class="g3-row__10vh g3-space__margin-sm-bottom" src="{{< param "g3Starts.s6.fig" >}}"/>
-          <h3 class="g3-space__margin-sm-bottom">
-            {{< param "g3Starts.s6.name" >}}
-          </h3>
-          <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
-            {{< param "g3Starts.s6.detail" >}} <br>       <br> <br>               
-          </p>
-          <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s6.button.link" >}}">
-            {{< param "g3Starts.s6.button.caption" >}}
-          </a>
     </div>
+    <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
+      <img class="g3-row__10vh g3-space__margin-sm-bottom" src="{{< param "g3Starts.s6.fig" >}}"/>
+      <h3 class="g3-space__margin-sm-bottom">
+        {{< param "g3Starts.s6.name" >}}
+      </h3>
+      <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
+        {{< param "g3Starts.s6.detail" >}} <br>       <br> <br>               
+      </p>
+      <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s6.button.link" >}}">
+        {{< param "g3Starts.s6.button.caption" >}}
+      </a>
+      </div>
     </div>
   </div>
 </section>
@@ -173,8 +173,8 @@ g3Starts:
         <h3 class="g3-space__margin-sm-bottom">
           {{< param "g3Starts.s7.name" >}}
         </h3>
-        <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
-          {{< param "g3Starts.s7.detail" >}}
+        <p class="g3-col__33 g3-minimum-wrapper g3-space__margin-sm-bottom g3-text__desktop-left">
+          {{< param "g3Starts.s7.detail" >}} <br>  <br>
         </p>
         <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s7.button.link" >}}">
           {{< param "g3Starts.s7.button.caption" >}}

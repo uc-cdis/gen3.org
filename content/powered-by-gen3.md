@@ -111,7 +111,10 @@ g3Commons:
     title: Pediatric Cancer Data Commons
     fig: /figs/commons/pcdc.png
     link: https://portal.pedscommons.org/
-
+  c27:
+    title: Tox Data Commons
+    fig: /figs/commons/ToxDataCommons.png
+    link: https://toxdatacommons.com/
 ---
 
 
@@ -263,6 +266,11 @@ g3Commons:
       <div class="g3-common-card">
          <a target="_blank" href="{{< param "g3Commons.c26.link" >}}" title="{{< param "g3Commons.c26.title" >}}">
          <img class="g3-row__50px" src="{{< param "g3Commons.c26.fig" >}}" />
+         </a>
+      </div>
+      <div class="g3-common-card">
+         <a target="_blank" href="{{< param "g3Commons.c27.link" >}}" title="{{< param "g3Commons.c27.title" >}}">
+         <img class="g3-row__50px" src="{{< param "g3Commons.c27.fig" >}}" />
          </a>
       </div>
    </div>
