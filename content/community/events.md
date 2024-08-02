@@ -16,9 +16,9 @@ g3Upcoming:
 g3past:
 - Title: Data submission - Perspectives and solutions from different Gen3 systems
   Date: July 10, 3:30-5:00 pm CDT; July 11, 2024, 6:30-8:00am am AEST
-  Description: Gen3 data submission can be complex and will vary from project to project.  The specifics will depend on the data model, data type, use of graph-model and/or metadata service, centrally managed vs user driven, and other project-specific requirements.  At this event we will hear from a range of Gen3 operators on how their projects approach the topic of data submission and how they have managed this process. 
+  Description: Gen3 data submission can be complex and will vary from project to project.  The specifics will depend on the data model, data type, use of graph-model and/or metadata service, centrally managed vs user driven, and other project-specific requirements.  At this event we will hear from a range of Gen3 operators on how their projects approach the topic of data submission and how they have managed this process.
   Youtube: o_TmbU9thuY
-  Agenda2: /community/events/gen3forum_20240710
+  Slides: Gen3 Forum July 2024 - Data Submission.pdf
 - Title: Gen3.2 - How to build a Gen3 data portal using the new frontend framework
   Date: May 1, 3:30-5:00 pm CDT; May 2, 2024, 6:30-8:00am am AEST
   Description: Gen3 has released a new frontend for the data portal. In this month's forum, we will walk you through the new features and capabilities and demonstrate how to configure the new frontend.  The first portion of the meeting will be led by CTDS Frontend and Visualization Manager, Craig Barnes.  Later we will hear from a team of Gen3 operators at the Oregon Health & Science University where they will share their experience of using the updated frontend.
