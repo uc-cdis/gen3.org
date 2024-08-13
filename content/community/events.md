@@ -9,7 +9,11 @@ g3Teaser:
   detail: About every other month, there is a virtual Gen3 Forum for the community of Gen3 developers, operators, sponsors and users of Gen3 data platforms. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 core development team.
 
 g3Upcoming:
-
+- Title: GA4GH standards in Gen3
+  Date: September 18, 4:30-5:30 pm CDT; September 19, 2024, 7:30-8:30am am AEST
+  Description: GA4GH is an international standards setting body for Genomics and Health. Gen3 aims to follow GA4GH standards whenever possible in order to improve our interoperability with other systems and to simplify the use of a Gen3 Data Commons. We work closely with GA4GH via two driver projects.  First, the Data Commons Framework Services project, which underpins interoperability within the Cancer Research Data Commons and second, through the Biomedical Research Hub, which as a data fabric, enables access to multiple independent data commons containing biomedical data. In this session, CTDS staff highlight existing standards adopted by Gen3, ones we anticipate adopting in the future, and others that we are taking an active role in helping to codify along with other members of GA4GH.
+  Image: /figs/ga4gh.png
+  Register: https://uchicago.zoom.us/meeting/register/tJItduipqjoiE9VNpgcUP4Sr0CZ_EV7Uli1E
 
 
 
