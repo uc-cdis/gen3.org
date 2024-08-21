@@ -5,7 +5,7 @@ linktitle: powered-by-gen3
 date: 2021-01-12
 g3Teaser:
   title: Powered by Gen3
-  detail:  Please reach out to support@datacommons.io if you would like to see your Gen3 data commons appear on this list.
+  detail:  Please reach out to support@gen3.org if you would like to see your Gen3 data commons appear on this list.
 g3Commons:
   #  c1:
   #    title: ACCOuNT Data Commons
