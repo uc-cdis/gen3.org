@@ -9,9 +9,21 @@ g3Teaser:
   detail: About every other month, there is a virtual Gen3 Forum for the community of Gen3 developers, operators, sponsors and users of Gen3 data platforms. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 core development team.
 
 g3Upcoming:
+- Title: GA4GH standards in Gen3
+  Date: September 18, 4:30-5:30 pm CDT; September 19, 2024, 7:30-8:30am am AEST
+  Description: GA4GH is an international standards setting body for Genomics and Health. Gen3 aims to follow GA4GH standards whenever possible in order to improve our interoperability with other systems and to simplify the use of a Gen3 Data Commons. We work closely with GA4GH via two driver projects.  First, the Data Commons Framework Services project, which underpins interoperability within the Cancer Research Data Commons and second, through the Biomedical Research Hub, which as a data fabric, enables access to multiple independent data commons containing biomedical data. In this session, CTDS staff highlight existing standards adopted by Gen3, ones we anticipate adopting in the future, and others that we are taking an active role in helping to codify along with other members of GA4GH.
+  Image: /figs/ga4gh.png
+  Register: https://uchicago.zoom.us/meeting/register/tJItduipqjoiE9VNpgcUP4Sr0CZ_EV7Uli1E
+
+
 
 
 g3past:
+- Title: Data submission - Perspectives and solutions from different Gen3 systems
+  Date: July 10, 3:30-5:00 pm CDT; July 11, 2024, 6:30-8:00am am AEST
+  Description: Gen3 data submission can be complex and will vary from project to project.  The specifics will depend on the data model, data type, use of graph-model and/or metadata service, centrally managed vs user driven, and other project-specific requirements.  At this event we will hear from a range of Gen3 operators on how their projects approach the topic of data submission and how they have managed this process.
+  Youtube: o_TmbU9thuY
+  Slides: Gen3 Forum July 2024 - Data Submission.pdf
 - Title: Gen3.2 - How to build a Gen3 data portal using the new frontend framework
   Date: May 1, 3:30-5:00 pm CDT; May 2, 2024, 6:30-8:00am am AEST
   Description: Gen3 has released a new frontend for the data portal. In this month's forum, we will walk you through the new features and capabilities and demonstrate how to configure the new frontend.  The first portion of the meeting will be led by CTDS Frontend and Visualization Manager, Craig Barnes.  Later we will hear from a team of Gen3 operators at the Oregon Health & Science University where they will share their experience of using the updated frontend.
