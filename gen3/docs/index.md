@@ -1,17 +1,10 @@
-# Welcome to MkDocs
+# Gen3 Documentation
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This is your home for all technical documentation related to the design, deployment, use, or maintenance of a Gen3 data commons or mesh.
 
-## Commands
+Please visit Gen3.org if you would like a high-level overview of Gen3 as well as details about the Gen3 philosophy, community events, and governance.    
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+<br></br>
 
-## Project layout
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+![Gen3 Logo](/img/gen3_new_logo.png)
