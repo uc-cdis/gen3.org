@@ -7,10 +7,6 @@ g3Teaser:
   title: Gen3 Support Organizations
   detail: Private and non-profit organizations offer services to help groups to set up their own Gen3 data commons or mesh.  This includes support for design, deployment, and maintenance of a Gen3 system.  Inclusion of an organization on this list does not constitute an endorsement of their services.  The Gen3 source code remains completely open access and the Gen3 community is always welcome to ask questions or seek assistance on the Gen3 Community slack channel free of charge.
 
-g3Upcoming:
-- Title: SE4BIO
-  Description: We are a team of software engineers with a long track record in software development combined with biotech/bioinformatics domain knowledge. We have a passion for quality software and automation, and have extensively contributed to open source projects in the biotech domain. Support for Gen3 includes 1) Design & Architecture - We assist in reviewing and proposing the appropriate software architecture for deploying and integrating Gen3 within your environment, 2) Setup & Integration - We support the installation of Gen3 within your existing software infrastructure, including integration with your Identity Provider (IDP) for authentication and authorization, helping you connect Gen3 to your data and relevant systems, and 3) Software Customization & Feature Development - We provide customization and feature enhancements for Gen3, with the option to collaborate with you on contributing these improvements back to the Gen3 Open Source project.
-  Image: /figs/ga4gh.png
 
 
 
@@ -47,9 +43,9 @@ g3Upcoming:
 <div class="g3-col__65">
     <div class="g3-space__margin-sm-left g3-space__margin-sm-right">
                         <h1>BioTeam</h1>
-                <p>BioTeam builds integrated data ecosystems that provide the IT backbone of modern science. Our systems allow massive data workflows to move seamlessly back and forth on a converged infrastructure that interconnects distributed devices, resources on commercial clouds and computing capacity. The result: scientists can execute large-scale simulations and analytics throughout their ecosystem without downtime.
+                <p>BioTeam is a scientific IT consulting company at the intersection of science, data, and technology. Relentlessly focused on closing the gap between what scientists want to do with data—and what they can do. Our team brings extensive experience in Gen3 AWS-based cloud deployments and EKS cluster management. We excel in microservice customization and development, allowing seamless integration of Gen3 with existing systems and enablement of new capabilities. Our expertise also extends to fitting Gen3 with novel scientific use cases, large-scale parallel dataset indexing, storage infrastructure (EBS) customization and tuning, user-interface development, and tailoring Gen3 deployments to be compliant across a diverse spectrum of network architectures and DevOps environments.
                 <br></br>
-                Contact: info@BioTeam.net
+                Contact: info@BioTeam.net, +1-877-246-2992
 </p>
     </div>
 </section>
