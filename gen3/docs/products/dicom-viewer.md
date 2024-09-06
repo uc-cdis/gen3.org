@@ -17,7 +17,7 @@ We use the [Ohif viewer](https://ohif.org) for the frontend and the [Orthanc ser
   - We use Ohif viewer v3.
 - [Orthanc server fork](https://github.com/uc-cdis/OrthancDocker/tree/master-rebase)
   - The Orthanc server supports custom authorization filters. We forked the repository so we could add a [filter](https://github.com/uc-cdis/OrthancDocker/blob/gen3-0.1.2/orthanc-gen3/authz_filter.py) that communicates with the [Gen3 policy engine](https://github.com/uc-cdis/arborist) to check user authorization.
-  - Orthanc supports various storage options. We are currently using PostgreSQL and investigating using AWS S3. An internal write-up can be found [here](https://docs.google.com/document/d/1QDf_xqwy1esGp1AV2D-or8R1PbMAx_YqMsWhbL0B3PM).
+  - Orthanc supports various storage options. We are currently using PostgreSQL and investigating using AWS S3. An internal write-up can be found [here](https://docs.google.com/document/d/1QDf_xqwy1esGp1AV2D-or8R1PbMAx_YqMsWhbL0B3PM). Note that one of the two will likely not be maintained anymore in the future.
 
 ## Deployment
 
