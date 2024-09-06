@@ -13,7 +13,7 @@
 We use the [Ohif viewer](https://ohif.org) for the frontend and the [Orthanc server](https://www.orthanc-server.com) for the backend.
 
 - [Ohif viewer fork](https://github.com/uc-cdis/viewers)
-  - The viewer is accesssible in Gen3 at `<Gen3 portal hostname>/ohif-viewer`, so the `PUBLIC_URL` environment variable must be set to `/ohif-viewer` ([a3f7848](https://github.com/OHIF/Viewers/commit/a3f7848b2f00721a5f4ab994754d828fd00cdfb2)). It can only be set at build time, so the only option was to fork the repository and build the image ourselves ([5c5c48a](https://github.com/OHIF/Viewers/commit/5c5c48ac19e4294c38b8bb03691e1b4250c432ba)).
+  - The viewer is accessible in Gen3 at `<Gen3 portal hostname>/ohif-viewer`, so the `PUBLIC_URL` environment variable must be set to `/ohif-viewer` ([a3f7848](https://github.com/OHIF/Viewers/commit/a3f7848b2f00721a5f4ab994754d828fd00cdfb2)). It can only be set at build time, so the only option was to fork the repository and build the image ourselves ([5c5c48a](https://github.com/OHIF/Viewers/commit/5c5c48ac19e4294c38b8bb03691e1b4250c432ba)).
   - We use Ohif viewer v3.
 - [Orthanc server fork](https://github.com/uc-cdis/OrthancDocker/tree/master-rebase)
   - The Orthanc server supports custom authorization filters. We forked the repository so we could add a [filter](https://github.com/uc-cdis/OrthancDocker/blob/gen3-0.1.2/orthanc-gen3/authz_filter.py) that communicates with the [Gen3 policy engine](https://github.com/uc-cdis/arborist) to check user authorization.
@@ -109,7 +109,7 @@ See the [portal configuration docs](https://github.com/uc-cdis/data-portal/blob/
 
 ## Submission
 
-```
+```python
 # depending on whether you use `dicom-server` or `orthanc`:
 endpoint = "<Gen3 portal hostname>/dicom-server/instances"
 endpoint = "<Gen3 portal hostname>/orthanc/instances"
