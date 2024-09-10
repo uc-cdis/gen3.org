@@ -5,7 +5,7 @@ linktitle: support-orgs
 date: 2024-01-25
 g3Teaser:
   title: Gen3 Support Organizations
-  detail: Private and non-profit organizations offer services to help groups to set up their own Gen3 data commons or mesh.  This includes support for design, deployment, and maintenance of a Gen3 system.  Inclusion of an organization on this list does not constitute an endorsement of their services.  The Gen3 source code remains completely open access and the Gen3 community is always welcome to ask questions or seek assistance on the Gen3 Community slack channel free of charge.
+  detail: Some private and non-profit organizations offer services to help groups set up their own Gen3 data commons or mesh.  This includes support for design, deployment, modification, and maintenance of a Gen3 system.  We have included a list of all such organization of which we are aware plus a short description of their services. Inclusion of an organization on this list does not constitute an endorsement of their services.  The Gen3 source code remains completely open access and the Gen3 community is always welcome to ask questions or seek assistance on the Gen3 Community slack channel free of charge.
 
 
 
