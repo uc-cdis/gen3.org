@@ -133,6 +133,12 @@ if resp.status_code != 200:
 
 ## Developer notes
 
-- Orthanc: We used the `jodogne/orthanc` image when using PostgreSQL for storage, but when switching to AWS S3 storage, we were not able to get it working with this image, so we switched to the `osimis/osiris` image. This is why the deployment is different for `dicom-server` (PostgreSQL) and `orthanc` (S3).
-- For `dicom-server`, the authorization checks are in our [custom authorization filter](https://github.com/uc-cdis/OrthancDocker/blob/gen3-0.1.2/orthanc-gen3/authz_filter.py).
-- For `orthanc`, right now the authorization checks are [in revproxy](https://github.com/uc-cdis/cloud-automation/blob/f197889/kube/services/revproxy/gen3.nginx.conf/orthanc-service.conf). It should still be possible (and is preferable) to add the custom authorization filter above to this server: docs [here](https://book.orthanc-server.com/plugins/authorization.html).
+1. Orthanc: We used the `jodogne/orthanc` image when using PostgreSQL for storage, but when switching to AWS S3 storage, we were not able to get it working with this image, so we switched to the `osimis/osiris` image. This is why the deployment is different for `dicom-server` (PostgreSQL) and `orthanc` (S3).
+2. For `dicom-server`, the authorization checks are in our [custom authorization filter](https://github.com/uc-cdis/OrthancDocker/blob/gen3-0.1.2/orthanc-gen3/authz_filter.py).
+3. For `orthanc`, right now the authorization checks are [in revproxy](https://github.com/uc-cdis/cloud-automation/blob/f197889/kube/services/revproxy/gen3.nginx.conf/orthanc-service.conf). It should still be possible (and is preferable) to add the custom authorization filter above to this server: docs [here](https://book.orthanc-server.com/plugins/authorization.html).
+4. About authorization granularity
+    - The authorization is currently at the DICOM study ID level, because that's what the DICOM server receives when a user tries to open a file in the DICOM viewer. This means administrators can grant access at the study level (`resource: "/services/dicom-viewer/studies/<DICOM study ID>"`) or grant blanket access (either you have access to see all DICOM files in the DICOM viewer, or you don't have access to see any files) (`resource: "/services/dicom-viewer/studies"`).
+    - Some use cases may require the ability to grant access at a different granularity, such as at the program/project level to match other Gen3 services. Some options to enable this:
+      - List all the DICOM study IDs in the user.yaml in order to give individual users access to specific studies.
+      - Update the DICOM server [authorization filter](https://github.com/uc-cdis/OrthancDocker/blob/gen3-0.1.2/orthanc-gen3/authz_filter.py) to somehow know the mapping of DICOM study ID to Gen3 program and project. The mapping could be hardcoded, queried from the database through Peregrine or Guppy (preferred option), or directly queried from the database by accessing the Sheepdog database.
+        - Caveat: `dicom-server` uses this filter, but `orthanc` doesn't. Maybe it could be updated to use the filter (see #3 above).
