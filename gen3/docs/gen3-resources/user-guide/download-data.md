@@ -1,4 +1,4 @@
-# Download Data
+# Access and Download Data
 
 add section: Request access for Data (general info about controlled access data, how to request dbGaP access)
 How to download from the portal (exploration page or discovery page) - some of that info is scattered here: https://gen3.org/resources/user/access-data/
