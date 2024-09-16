@@ -7,8 +7,20 @@ In cases where data is controlled access, typically external users will receive 
 
 The following sections provide details on how to explore and access data from within the data commons website and from the command-line by sending requests to the Gen3 open APIs.
 
-## Access Data from the Data Commons Website
+## Access Data from the Data Portal
 The Gen3 software stack offers a data portal service that creates a website with graphical tools for performing the basic functionality of a data commons, like browsing data in projects, building patient cohorts across projects, downloading metadata or data files for cohorts, and building database queries.
+
+
+
+### Profile Page
+
+
+On the profile page users will find information regarding their access to projects, access to Gen3-specific tools (e.g. access to the Workspace), and the function to create API keys for credential downloads. API keys are necessary for the download of files using the [Gen3 Client][Gen3 Client].
+
+Users can view their study access and API keys can be viewed/created/downloaded on the Profile Page.
+
+![Screenshot of the Profile Page.][img profile]
+
 
 ### Exploration Page
 The primary tool for exploring data within a Gen3 data commons is the Exploration Page, which offers faceted search of data across projects, for example, [Gen3 Data Hub Exploration Page][Gen3 Data Hub Exploration]. This page can be accessed from the /explorer endpoint or the top navigation bar, by clicking on the “Exploration” icon.
@@ -113,6 +125,35 @@ The Gen3 Discovery Page allows the visualization of metadata from within the met
 ![Animation showing how to navigate around the Discovery page][Discovery Page]
 
 
+The [Discovery Page][BRH Discovery] provides users a venue to search and find studies and datasets displayed on the Biomedical Research Hub. Users can **browse through the publicly accessible study-level metadata** without requiring authorization.
+
+> Use text-based search, faceted search, and tags to rapidly and efficiently find relevant studies, discover new datasets across multiple resources, and easily export selected data files to the analysis workspace. Browse through datasets and study-level metadata and find studies using tags, advanced search, or the free text search field.
+
+![The Discovery Page of the Biomedical Research Hub.][img Discover grid]
+
+#### Search Features
+
+On the Discovery page, several features help you navigate and refine your search.
+
+![Screenshot of discovery page, highlighting different search features][img Discovery features]
+
+1. **Total number of studies:** shows the number of studies the BRH is currently displaying.
+2. **Total number of subjects:** shows the number of subjects the BRH is currently displaying.
+3. **Free Text Search:** Use keywords or tags in the free-text-based search bar to find studies. The free-text search bar can be used to search for study name, ID number, Data Commons, or any keyword that is mentioned in the metadata of the study.
+4. **Data Resources/Data Commons Tags:** view these by selecting "Study Characteristics". Click on a tag to filter by a Data Resource/Data Commons. Selecting multiple tags works in an "OR" logic (e.g., "find AnVIL OR BioData Catalyst studies").
+5. **Export Options:** Login first to leverage the export options. Select one or multiple studies and download a file manifest or export the data files to a secure cloud environment "Workspace" to start your custom data analysis in Python or R.
+6. **Data Availability:** Filter on available, pending, and not-yet-available datasets.
+7. **Studies:** This table feature presents all current studies on BRH. Click on any study to show useful information about the study (metadata).
+
+#### Find available Study-level Metadata
+Clicking on any study will display the available study-level and dataset metadata.
+
+![Screenshot of metadata seen by clicking on study in Discovery page.][img Discovery Study page metadata]
+
+#### Find accessible Datasets
+
+Users can select and filter studies from multiple resources and conduct analyses on the selected datasets in a workspace. Users can search but not interact with data they do not have access to. By selecting the data access button in the top right corner of the study page user access can be displayed. The Discovery Page will automatically update the list of studies that are accessible.
+
 
 ### Access Data using the API
 The beauty of a Gen3 data commons is that all the functionality of the data commons website is available by sending requests to the open APIs of the data commons. Detailed API specifications of the Gen3 services can be browsed in [the API documentation][API documentation].
@@ -122,6 +163,14 @@ The beauty of a Gen3 data commons is that all the functionality of the data comm
 
 <!-- Intro -->
 [Gen3 Data Hub]: https://gen3.datacommons.io/
+
+<!-- Profile -->
+[Download Data Files into a Workspace with the Python SDK]: /gen3-resources/user-guide/img/profile_page.png
+[img profile]: /gen3-resources/user-guide/img/profile_page.png
+[Download Data Files into a Workspace with the Python SDK]
+[Gen3 Client]: /gen3-resources/user-guide/access-data/#download-files-using-the-gen3-client
+
+
 
 <!-- Exploration section. -->
 [Gen3 Data Hub Exploration]: https://gen3.datacommons.io/explorer
@@ -154,6 +203,12 @@ The beauty of a Gen3 data commons is that all the functionality of the data comm
 
 <!-- Discovery Page -->
 [Discovery Page]: /gen3-resources/user-guide/img/discovery_page3.gif
+[BRH Discovery]: https://brh.data-commons.org/discovery
+[img Discover grid]: /gen3-resources/user-guide/img/grid_discovery_color_080322.png
+[img Discovery features]: ./img/discovery_features_080322.png
+[img Discovery Study page metadata]: /gen3-resources/user-guide/img/discovery_study_page_datafiles.png
+
+
 
 <!-- API Section -->
 [API documentation]: /gen3-resources/user-guide/using-api/

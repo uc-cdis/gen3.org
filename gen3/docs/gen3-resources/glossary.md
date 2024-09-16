@@ -59,7 +59,7 @@ Structured data that has been processed via Tube and stored in elasticsearch to 
 ## Gen3 Client
 The Gen3 Client is a command-line tool for downloading, uploading, and submitting data files to and from a Gen3 data commons.  Some of the same functionality can be found in the Gen3 SDK.
 ## Gen3 SDK
-The Gen3 Software Development Kit (SDK) for Python provides classes and functions for handling common tasks when interacting with a Gen3 commons. It also exposes a Command Line Interface (CLI). The API for a commons can be overwhelming, so this SDK/CLI aims to simplify communication with various microservices.
+The Gen3 Software Development Kit (SDK) for Python provides classes and functions for handling common tasks when interacting with a Gen3 commons. It also exposes a Command Line Interface (CLI). The API for a commons can be overwhelming, so this SDK/CLI aims to simplify communication with various microservices.  It can also download and upload files like the Gen3 Client.
 ## Gen3 Services
 ### Aggregate Metadata Service (AggMDS)
 The aggregate MDS is a service which caches metadata from commons metadata services and becomes a centralize API for browsing Metadata with clients such as the Ecosystem browser. The AggMDS holds the content viewable in a Data Portal Discovery page for a Data Mesh.
