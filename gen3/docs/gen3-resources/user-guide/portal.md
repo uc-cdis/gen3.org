@@ -156,7 +156,7 @@ Users can select and filter studies from multiple resources and conduct analyses
 
 
 ### Access Data using the API
-The beauty of a Gen3 data commons is that all the functionality of the data commons website is available by sending requests to the open APIs of the data commons. Detailed API specifications of the Gen3 services can be browsed in [the API documentation][API documentation].
+All the functionality of the data commons data portal is available by sending requests to the open APIs of the data commons. Detailed API specifications of the Gen3 services can be browsed in [the API documentation][API documentation].
 
 
 
@@ -167,7 +167,6 @@ The beauty of a Gen3 data commons is that all the functionality of the data comm
 <!-- Profile -->
 [Download Data Files into a Workspace with the Python SDK]: /gen3-resources/user-guide/img/profile_page.png
 [img profile]: /gen3-resources/user-guide/img/profile_page.png
-[Download Data Files into a Workspace with the Python SDK]
 [Gen3 Client]: /gen3-resources/user-guide/access-data/#download-files-using-the-gen3-client
 
 
