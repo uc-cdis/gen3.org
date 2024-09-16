@@ -63,7 +63,7 @@ g3Teaser:
 <div class="g3-col__65">
     <div class="g3-space__margin-sm-left g3-space__margin-sm-right">
                         <h1>Krumware</h1>
-                <p>We help companies build and deliver better software, whether they need to start fresh with a new product, transform, scale, or standardize. Our tactical software and platform engineering capabilities reduce implementation time and risk, and enable long-term value with continuous enablement and support.
+                <p>Krumware works with IT departments, on behalf of their researchers, to implement the cloud or on-premise environments needed to deploy, manage, and scale Gen3. They also support the development and management of custom applications, integrations, and data workloads, to provide users with specialized tools that support broader research needs.
                 <br></br>
                 Contact: sales@krum.io
 </p>
