@@ -241,13 +241,10 @@ When finished, please, shut down the workspace server by clicking the “Termina
 [gen3 client]: https://github.com/uc-cdis/cdis-data-client/releases/latest
 [linux gen3 client]: https://github.com/uc-cdis/cdis-data-client/releases/latest
 
-
-
 <!-- Working with Proxy and whitelists -->
 [DC support email]: support@gen3.org
 
 <!-- Uisng the Gen3 Python SDK -->
-
 [Gen3 Python SDK Github]: https://github.com/uc-cdis/gen3sdk-python
 [Gen3 Python SDK doc]: https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html
 [Jupyter demos]: /gen3-resources/user-guide/analyze-data/#jupyter-notebook-demos
