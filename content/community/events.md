@@ -9,16 +9,16 @@ g3Teaser:
   detail: About every other month, there is a virtual Gen3 Forum for the community of Gen3 developers, operators, sponsors and users of Gen3 data platforms. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 core development team.
 
 g3Upcoming:
-- Title: GA4GH standards in Gen3
-  Date: September 18, 4:30-5:30 pm CDT; September 19, 2024, 7:30-8:30am am AEST
-  Description: GA4GH is an international standards setting body for Genomics and Health. Gen3 aims to follow GA4GH standards whenever possible in order to improve our interoperability with other systems and to simplify the use of a Gen3 Data Commons. We work closely with GA4GH via two driver projects.  First, the Data Commons Framework Services project, which underpins interoperability within the Cancer Research Data Commons and second, through the Biomedical Research Hub, which as a data fabric, enables access to multiple independent data commons containing biomedical data. In this session, CTDS staff highlight existing standards adopted by Gen3, ones we anticipate adopting in the future, and others that we are taking an active role in helping to codify along with other members of GA4GH.
-  Image: /figs/ga4gh.png
-  Register: https://uchicago.zoom.us/meeting/register/tJItduipqjoiE9VNpgcUP4Sr0CZ_EV7Uli1E
 
 
 
 
 g3past:
+- Title: GA4GH standards in Gen3
+  Date: September 18, 4:30-5:30 pm CDT; September 19, 2024, 7:30-8:30am am AEST
+  Description: GA4GH is an international standards setting body for Genomics and Health. Gen3 aims to follow GA4GH standards whenever possible in order to improve our interoperability with other systems and to simplify the use of a Gen3 Data Commons. Join us at our next community forum where we will provide an overview of our GA4GH compliant services and share plans for the future. Speakers will include Robert Grossman and Michael Lukowski from the University of Chicago, Center for Translational Data Science and Kyle Ellrott from the Oregon Health and Science University.
+  Youtube: 98CpBDLYi_Q
+  Slides: Gen3 Forum September 2024 - GA4GH.pdf
 - Title: Data submission - Perspectives and solutions from different Gen3 systems
   Date: July 10, 3:30-5:00 pm CDT; July 11, 2024, 6:30-8:00am am AEST
   Description: Gen3 data submission can be complex and will vary from project to project.  The specifics will depend on the data model, data type, use of graph-model and/or metadata service, centrally managed vs user driven, and other project-specific requirements.  At this event we will hear from a range of Gen3 operators on how their projects approach the topic of data submission and how they have managed this process.
