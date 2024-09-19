@@ -68,10 +68,12 @@ In the graphical model of a data project, the number you see underneath the node
 
 ![GIF showing how to view the graphical model of a project, toggling to show or hide nodes that have no records][img Graphing a project]
 
+
+
+### Query Page
 The easiest way to query structured data in a Gen3 data commons is done by using the [graphQL query language][GraphQL] with the GraphiQL interface, which can be accessed by clicking “Query” in the top navigation bar or by navigating to the URL: [https://gen3.datacommons.io/query][Query page]. The URL https://gen3.datacommons.io can be replaced with the URL of other Gen3 data commons.
 
 This query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, pass variables, and generally make it easier for users to find information. The “Docs” button will display documentation of the queryable nodes and properties. From the GraphiQL interface of the data portal, you can switch between *Graph Model* or *Flat Model* – each using endpoints that query different databases (Postgres and ElasticSearch, respectively). Notably, the same queries can be sent to both the flat and graph model API endpoints from the command-line.
-
 
 #### Graph Model
 
