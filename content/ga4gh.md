@@ -57,31 +57,32 @@ g3Feature:
           <li>The NIH Cloud Platform Interoperability (NCPI) program seeks to create a federated genomic data ecosystem and is a collaborative project between NIH and external partners comprising three working groups.</li>
         </ul>
         </p>
-      </div>
+        <div class="g3-flex-content g3-space__margin-sm-top-bottom">
+          <div class="g3-space__margin-sm-left-right g3-col__50">
+            <p>
+               <img class="g3-img__bottom_pad" src="/figs/commons/brh.png" >
+            </p>
+          </div>
+          <div class="g3-space__margin-sm-left-right g3-col__70">
+            <p>
+               <img class="g3-img__bottom_pad" src="/figs/crdc_logo_color.svg" >
+            </p>
+          </div>
+          <div class="g3-space__margin-sm-left-right g3-col__50">
+            <p>
+               <img class="g3-img__bottom_pad" src="/figs/biodata-catalyst-logo.png" >
+            </p>
+          </div>
+          <div class="g3-space__wrapper-gap-right g3-space__margin-sm-left-right  g3-col__25">
+            <p>
+               <img class="g3-img__bottom_pad" src="/figs/ncpi-logo.png" >
+            </p>
+          </div>
+        </div>
+     </div>
     </div>
   </div>
   </div>
-  <div class="g3-flex-content g3-space__margin-sm-top-bottom g3-space__wrapper-gap-left">
-    <div class="g3-space__wrapper-gap-left g3-space__margin-sm-left-right g3-col__65">
-      <p>
-         <img class="g3-img__bottom_pad" src="/figs/commons/brh.png" >
-      </p>
-    </div>
-    <div class="g3-space__margin-sm-left-right g3-col__65">
-      <p>
-         <img class="g3-img__bottom_pad" src="/figs/crdc_logo_color.svg" >
-      </p>
-    </div>
-    <div class="g3-space__margin-sm-left-right g3-col__65">
-      <p>
-         <img class="g3-img__bottom_pad" src="/figs/biodata-catalyst-logo.png" >
-      </p>
-    </div>
-    <div class="g3-space__wrapper-gap-right g3-space__margin-sm-left-right  g3-col__25">
-      <p>
-         <img class="g3-img__bottom_pad" src="/figs/ncpi-logo.png" >
-      </p>
-    </div>
   </div>
 </section>
 
