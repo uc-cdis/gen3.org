@@ -51,31 +51,31 @@ g3Feature:
         <p class="g3-space__margin-sm-bottom introduction g3-space__margin-sm-right">
         Gen3 technology is used by four different driver projects:  
         <ul>
-          <li>Biomedical Research Hub, which as a data fabric, enables access to multiple independent data commons containing biomedical data</li>  
-          <li>Data Commons Framework Services, which underpins interoperability within the Cancer Research Data Commons</li>
-          <li>NHLBI BioData Catalyst (BDC) is a cloud-based ecosystem that offers researchers data, analytic tools, applications, and workflows in secure workspaces. It is a community where researchers can find, access, share, store, and analyze heart, lung, blood, and sleep data resources.</li>
+          <li>The Biomedical Research Hub, which as a data fabric, enables access to multiple independent data commons containing biomedical data.</li>  
+          <li>The Data Commons Framework Services, which underpins interoperability within the Cancer Research Data Commons.</li>
+          <li>The NHLBI BioData Catalyst (BDC) is a cloud-based ecosystem that offers researchers data, analytic tools, applications, and workflows in secure workspaces. It is a community where researchers can find, access, share, store, and analyze heart, lung, blood, and sleep data resources.</li>
           <li>The NIH Cloud Platform Interoperability (NCPI) program seeks to create a federated genomic data ecosystem and is a collaborative project between NIH and external partners comprising three working groups.</li>
         </ul>
         </p>
         <div class="g3-flex-content g3-space__margin-sm-top-bottom">
           <div class="g3-space__margin-sm-left-right g3-col__50">
             <p>
-               <img class="g3-img__bottom_pad" src="/figs/commons/brh.png" >
+                 <a href="https://brh.data-commons.org/"> <img class="g3-img__bottom_pad" src="/figs/commons/brh.png" ></a>
             </p>
           </div>
           <div class="g3-space__margin-sm-left-right g3-col__70">
             <p>
-               <img class="g3-img__bottom_pad" src="/figs/crdc_logo_color.svg" >
+                  <a href="https://datacommons.cancer.gov/">  <img class="g3-img__bottom_pad" src="/figs/crdc_logo_color.svg" ></a>
             </p>
           </div>
           <div class="g3-space__margin-sm-left-right g3-col__50">
             <p>
-               <img class="g3-img__bottom_pad" src="/figs/biodata-catalyst-logo.png" >
+                  <a href="https://gen3.biodatacatalyst.nhlbi.nih.gov/"><img class="g3-img__bottom_pad" src="/figs/biodata-catalyst-logo.png" ></a>
             </p>
           </div>
           <div class="g3-space__wrapper-gap-right g3-space__margin-sm-left-right  g3-col__25">
             <p>
-               <img class="g3-img__bottom_pad" src="/figs/ncpi-logo.png" >
+                  <a href="https://datascience.nih.gov/nih-cloud-platform-interoperability-effort"><img class="g3-img__bottom_pad" src="/figs/ncpi-logo.png" ></a>
             </p>
           </div>
         </div>
