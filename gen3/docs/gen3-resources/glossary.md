@@ -1,12 +1,3 @@
----
-identifier: gen3-glossary
-title: Glossary of Terms
-linktitle: /resources/gen3-features
-layout: withtoc
-menuname: featuresMenu
-date: 2023-06-280T15:20:00-6:00
----
-
 # Gen3 Glossary
 
 ## Commons Services Operations Center (CSOC)
@@ -29,7 +20,7 @@ Data is structured if it is organized into records and fields, with each record 
 Semi-structured data is organized as unique identifiers with flexible key/value pairs (including nesting). The key/value pairs may be consistent between records, but are not required to be. This is typically used for storing publicly available metadata about available datasets or additional public metadata about samples.  The MDS and AggMDS both include semi-structured data and power the Discovery Page.
 ### Unstructured Data
 Unstructured data represents files on a hard drive or cloud storage with no consistent schema. These data tend to represent either bulk clinical and phenotypic data in spreadsheet format or patient level data such as images or genomic sequencing files.
-## Data Portal Pages
+## [Data Portal Pages][Data Portal User Guide]
 ### Data Dictionary Page
 Interactive page that shows the data dictionary in both a graph and table format.  It is powered by the data dictionary YAML files and allows users to see the controlled vocabulary across all data model nodes.
 ### Discovery Page
@@ -57,10 +48,10 @@ Microservices are a software architecture that organizes software into small, in
 ## Flattened Data
 Structured data that has been processed via Tube and stored in elasticsearch to accelerate searchability.  
 ## Gen3 Client
-The Gen3 Client is a command-line tool for downloading, uploading, and submitting data files to and from a Gen3 data commons.  Some of the same functionality can be found in the Gen3 SDK.
+The Gen3 Client is a command-line tool for downloading, uploading, and submitting data files to and from a Gen3 data commons.  Some of the same functionality can be found in the Gen3 SDK. You can find installation and use instructions [here][Gen3 client docs].
 ## Gen3 SDK
-The Gen3 Software Development Kit (SDK) for Python provides classes and functions for handling common tasks when interacting with a Gen3 commons. It also exposes a Command Line Interface (CLI). The API for a commons can be overwhelming, so this SDK/CLI aims to simplify communication with various microservices.  It can also download and upload files like the Gen3 Client.
-## Gen3 Services
+The Gen3 Software Development Kit (SDK) for Python provides classes and functions for handling common tasks when interacting with a Gen3 commons. It also exposes a Command Line Interface (CLI). The API for a commons can be overwhelming, so this SDK/CLI aims to simplify communication with various microservices.  It can also download and upload files like the Gen3 Client.  You can find installation and use instructions [here][SDK docs].
+## [Gen3 Services][Microservices]
 ### Aggregated Metadata Service (AggMDS)
 The aggregated MDS is a service which caches metadata from commons metadata services and becomes a centralize API for browsing Metadata with clients such as the Ecosystem browser. The AggMDS holds the content viewable in a Data Portal Discovery page for a Data Mesh.
 ### Arborist
@@ -93,6 +84,18 @@ Microservice that controls the ETL process of structured data.
 ### Workspace Token Service
 The Gen3 workspace token service acts as an OIDC client which acts on behalf of users to request refresh tokens from Fence. This happens when a user logs into a workspace from the browser. WTS then stores the refresh token for that user, and manages access tokens and refresh tokens for workers that belong to specific users in the workspace.
 ## Portable Format for Biomedical data (PFB)
-PFB is a serialization file format designed to store bio-medical data and metadata. The format is built on top Avro to make it fast, extensible and interoperable between different systems.
+PFB is a serialization file format designed to store bio-medical data and metadata. The format is built on top Avro to make it fast, extensible and interoperable between different systems. You can find the GitHub repo [here][PFB GitHub] and the publication [here][PFB Pub].
 ## Workspace
 Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources, including Gen3 Data Commons. Gen3 Workspaces use the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services. Gen3 Workspaces support Jupyter notebooks, RStudio notebooks, and other custom applications that can access data through Gen3 open APIs
+
+
+
+
+
+
+[Data Portal User Guide]: /gen3-resources/user-guide/portal/
+[Microservices]: /gen3-resources/developer-guide/microservices/
+[Gen3 client docs]: /gen3-resources/user-guide/access-data/#installation-instructions
+[SDK docs]: /gen3-resources/user-guide/search/#exporting-structured-data-programmatically
+[PFB GitHub]: https://github.com/uc-cdis/pypfb
+[PFB Pub]: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010944
