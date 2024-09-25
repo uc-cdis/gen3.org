@@ -84,7 +84,6 @@ This table is helpful for debugging errors in front-end applications like [Windm
 | workspace-token-service      | /wts/                            | https://github.com/uc-cdis/workspace-token-service                                         |
 
 
-![Gen3's Microservices](/gen3-resources/developer-guide/img/architecture.png).
 
 [aggmds github]: https://github.com/uc-cdis/agg-metadata
 [arborist github]: https://github.com/uc-cdis/arborist

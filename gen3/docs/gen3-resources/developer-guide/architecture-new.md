@@ -72,3 +72,9 @@ The core module interfaces with Gen3 services and analysis tools, managing user 
 The frontend module delivers standard Gen3 pages (Exploration, Discovery, Query, Data Dictionary, Workspace, and Profile), new Gen3 components, theming, and configuration support. Components leverage hooks from the core module to access Gen3 services. The module supports authenticated and access-controlled pages and applications through a Secured Content Provider wrapper. It also handles the registration of analysis tools with the ATF.
 
 Analysis tools are developed using React, Gen3 core/frontend packages, and custom code. These tools are published as NPM modules and registered as plugins with the ATF during the server build, making them accessible via the data commons’ root URL.
+
+## Architectural Diagrams
+
+### Gen3 Graph Data Flow
+
+![Gen3 Graph Data Flow](/gen3-resources/developer-guide/img/Gen3 graph data flow.png)

@@ -30,7 +30,7 @@ Check out the [contact page][contact page] for more information on how to engage
 
 ## Gen3 Videos
 
-Dig deep into our videos and webinars on [YouTube][gen3 youtube] to see learn more about Gen3 and our community.
+Explore our videos and webinars on [YouTube][gen3 youtube] to learn more about Gen3 and our community.
 
 
 ## Gen3 Publications
