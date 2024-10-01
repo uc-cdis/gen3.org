@@ -30,7 +30,6 @@ g3Teaser:
 </section>
 
 <br></br>
-<br></br>
 
 
 <section class="g3-space__padding-sm-top g3-space__padding-sm-bottom g3-space__wrapper-gap-left"">
@@ -49,7 +48,6 @@ g3Teaser:
 </p>
     </div>
 </section>
-<br></br>
 <br></br>
 
 
@@ -72,7 +70,6 @@ g3Teaser:
 
 
 <br></br>
-<br></br>
 
 
 <section class="g3-space__padding-sm-top g3-space__padding-sm-bottom g3-space__wrapper-gap-left"">
@@ -92,7 +89,6 @@ g3Teaser:
     </div>
 </section>
 
-<br></br>
 <br></br>
 
 <section class="g3-space__padding-sm-top g3-space__padding-sm-bottom g3-space__wrapper-gap-left"">
