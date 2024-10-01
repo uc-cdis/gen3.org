@@ -5,7 +5,7 @@ linktitle: support-orgs
 date: 2024-01-25
 g3Teaser:
   title: Gen3 Support Organizations
-  detail: Some private and non-profit organizations offer services to help groups set up their own Gen3 data commons or mesh.  This includes support for design, deployment, modification, and maintenance of a Gen3 system.  We have included a list of all such organization of which we are aware plus a short description of their services. Inclusion of an organization on this list does not constitute an endorsement of their services.  The Gen3 source code remains completely open access and the Gen3 community is always welcome to ask questions or seek assistance on the Gen3 Community slack channel free of charge.
+  detail: Some commercial and not-for-profit organizations offer services to help groups set up their own Gen3 data commons or meshes.  This includes support for design, deployment, modification, and maintenance of a Gen3 system.  We have included a list of all such organization of which we are aware.  Please reach out if your organization would like to be added to the list. Inclusion of an organization on this list does not constitute an endorsement of their services.  The Gen3 source code remains completely open access and the Gen3 community is always welcome to ask questions or seek assistance on the Gen3 Community slack channel free of charge.
 
 
 
@@ -16,8 +16,8 @@ g3Teaser:
 
 <section class="g3-bg__mint">
   <div class="g3-outer-wrapper g3-flex-content">
-    <div class="g3-space__padding-lg-top g3-space__padding-md-bottom">
-      <div class="g3-space__wrapper-gap-left">
+    <div class="g3-space__padding-lg-top g3-space__padding-md-bottom ">
+      <div class="g3-space__wrapper-gap-left g3-space__wrapper-gap-right">
         <h1 class="g3-space__margin-sm-bottom">
           {{< param "g3Teaser.title" >}}
         </h1>
@@ -33,8 +33,8 @@ g3Teaser:
 <br></br>
 
 
-<section class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
-    <div class="g3-inner-wrapper g3-flex-content">
+<section class="g3-space__padding-sm-top g3-space__padding-sm-bottom g3-space__wrapper-gap-left"">
+    <div class="g3-outer-wrapper g3-flex-content">
         <div class="g3-col__25">
             <div class="g3-space__margin-sm-right">
                     <a href="https://bioteam.net/"><img style="width: 100%;" src="/figs/bioteam.png"/></a>
@@ -53,8 +53,8 @@ g3Teaser:
 <br></br>
 
 
-<section class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
-    <div class="g3-inner-wrapper g3-flex-content">
+<section class="g3-space__padding-sm-top g3-space__padding-sm-bottom g3-space__wrapper-gap-left"">
+    <div class="g3-outer-wrapper g3-flex-content">
         <div class="g3-col__25">
             <div class="g3-space__margin-sm-right">
                     <a href="https://www.krum.io/"><img style="width: 100%;" src="/figs/krumware.png"/></a>
@@ -75,8 +75,8 @@ g3Teaser:
 <br></br>
 
 
-<section class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
-    <div class="g3-inner-wrapper g3-flex-content">
+<section class="g3-space__padding-sm-top g3-space__padding-sm-bottom g3-space__wrapper-gap-left"">
+    <div class="g3-outer-wrapper g3-flex-content">
         <div class="g3-col__25">
             <div class="g3-space__margin-sm-right">
                     <a href="https://www.occ-data.org/"><img style="width: 100%;" src="/figs/OCC.png"/></a>
@@ -95,8 +95,8 @@ g3Teaser:
 <br></br>
 <br></br>
 
-<section class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
-    <div class="g3-inner-wrapper g3-flex-content">
+<section class="g3-space__padding-sm-top g3-space__padding-sm-bottom g3-space__wrapper-gap-left"">
+    <div class="g3-outer-wrapper g3-flex-content">
         <div class="g3-col__25">
             <div class="g3-space__margin-sm-right">
                     <a href="https://www.se4.bio/"><img style="width: 100%;" src="/figs/SE4BIO.png"/></a>
