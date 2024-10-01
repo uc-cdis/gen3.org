@@ -23,9 +23,9 @@ g3Feature:
 
 ---
 
-<section class="g3-bg__white">
+<section class="g3-bg__mint">
   <div class="g3-outer-wrapper g3-flex-content g3-flex-content__reverse">
-    <div class="g3-col__50 g3-flex-content_alien-self-flex-end g3-space__padding-md-bottom g3-space__margin-lg-top-bottom g3-space__wrapper-gap-right">
+    <div class="g3-col__50 g3-flex-content_alien-self-flex-end g3-space__padding-sm-bottom g3-space__margin-sm-top-bottom g3-space__wrapper-gap-right">
     <a href="https://www.ga4gh.org/"> <img class="g3-img__bottom_pad" src="{{< param "g3Teaser.fig" >}}" > </a>
     </div>
     <div class="g3-space__padding-lg-top g3-space__padding-lg-bottom g3-col__45">
@@ -34,10 +34,55 @@ g3Feature:
           {{< param "g3Teaser.title" >}}
         </h1>
         <p class="g3-space__margin-sm-bottom introduction g3-space__margin-sm-right">
-          GA4GH is an international standards setting body for Genomics and Health. Gen3 aims to follow GA4GH standards whenever possible in order to improve our interoperability with other systems and to simplify the use of a Gen3 Data Commons. Gen3 works closely with GA4GH via two driver projects:  first, the Data Commons Framework Services project, which underpins interoperability within the Cancer Research Data Commons and second, through the Biomedical Research Hub, which as a data fabric, enables access to multiple independent data commons containing biomedical data.  Some of the areas where we are most active are highlighted below.
+          GA4GH is an international standards setting body for Genomics and Health. Gen3 aims to follow GA4GH standards whenever possible in order to improve our interoperability with other systems and to simplify the use of a Gen3 Data Commons.
         </p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="g3-bg__white">
+  <div class="g3-outer-wrapper g3-flex-content">
+    <div class="g3-space__padding-lg-top">
+      <div class="g3-space__wrapper-gap-left">
+        <h1 class="g3-space__margin-sm-bottom">
+          Driver Projects
+        </h1>
+        <p class="g3-space__margin-sm-bottom introduction g3-space__margin-sm-right">
+        Gen3 technology is used by four different driver projects:  
+        <ul>
+          <li>The Biomedical Research Hub, which as a data fabric, enables access to multiple independent data commons containing biomedical data.</li>  
+          <li>The Data Commons Framework Services, which underpins interoperability within the Cancer Research Data Commons.</li>
+          <li>The NHLBI BioData Catalyst (BDC) is a cloud-based ecosystem that offers researchers data, analytic tools, applications, and workflows in secure workspaces. It is a community where researchers can find, access, share, store, and analyze heart, lung, blood, and sleep data resources.</li>
+          <li>The NIH Cloud Platform Interoperability (NCPI) program seeks to create a federated genomic data ecosystem and is a collaborative project between NIH and external partners comprising three working groups.</li>
+        </ul>
+        </p>
+        <div class="g3-flex-content g3-space__margin-sm-top-bottom">
+          <div class="g3-space__margin-sm-left-right g3-col__50">
+            <p>
+                 <a href="https://brh.data-commons.org/"> <img class="g3-img__bottom_pad" src="/figs/commons/brh.png" ></a>
+            </p>
+          </div>
+          <div class="g3-space__margin-sm-left-right g3-col__70">
+            <p>
+                  <a href="https://datacommons.cancer.gov/">  <img class="g3-img__bottom_pad" src="/figs/crdc_logo_color.svg" ></a>
+            </p>
+          </div>
+          <div class="g3-space__margin-sm-left-right g3-col__50">
+            <p>
+                  <a href="https://gen3.biodatacatalyst.nhlbi.nih.gov/"><img class="g3-img__bottom_pad" src="/figs/biodata-catalyst-logo.png" ></a>
+            </p>
+          </div>
+          <div class="g3-space__wrapper-gap-right g3-space__margin-sm-left-right  g3-col__25">
+            <p>
+                  <a href="https://datascience.nih.gov/nih-cloud-platform-interoperability-effort"><img class="g3-img__bottom_pad" src="/figs/ncpi-logo.png" ></a>
+            </p>
+          </div>
+        </div>
+     </div>
+    </div>
+  </div>
+  </div>
   </div>
 </section>
 

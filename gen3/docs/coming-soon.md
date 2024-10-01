@@ -2,4 +2,4 @@
 
 ## from a User Services person near you!
 
-![User Services Superhero](img/US-superhero.png)
+![User Services Superhero](../img/US-superhero.png)
