@@ -90,7 +90,7 @@ The following example query returns the subject and submitter ids in the subject
 	}
 
 ```
-More detailed information on how to query specific data can be found [here](/resources/user/query-the-data/).
+More detailed information on how to query specific data can be found [here](/resources/user/query-data/).
 
 
 ## Access Data using the API
