@@ -1,7 +1,5 @@
 # Gen3 Operator Guide - Configure and Deploy Gen3
 
-## Overview of Gen3 Operator Guide Contents
-
 This is the guide for users who want to stand up a new Gen3 instance. It includes the following content:
 
 * [An **overview of Gen3 deployment** and considerations][deploy overview]

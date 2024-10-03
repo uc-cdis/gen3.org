@@ -4,22 +4,14 @@ Welcome to the Gen3 User Guide.  This guide is for researchers and data scientis
 
 If you are looking to attain a deeper understanding of Gen3 services in order to update or modify them please read the [Gen3 Developer Guide][Gen3 Developer Guide].  If you are looking to deploy, maintain, configure, or submit data please take a look at the [Gen3 Operator Guide][Gen3 Operator Guide].
 
-## Main topics
 
-###Search for Data
-This section includes a walkthrough for how a user can locate data within the Data Portal and by using API or Gen3 SDK tool.
+* [Search for Data][Search for Data] - This section includes a walkthrough for how a user can locate data within the Data Portal and by using API or Gen3 SDK tool.
+* [Access Data Files][Access Data Files] - This section includes information on Authentication and Authorization as well as instructions for downloading data files (either externally or from within a Gen3 workspace).
+* [Analyze Data][Analyze Data] - This section covers working with Gen3 workspaces.
+* [Data Portal][Data Portal] - In this section, we discuss details of each page and how to navigate them in the Gen3 Data Portal.
+* [Use the API][Use the API] - In this section, we cover the Gen3 API and how to use it to query and download data and metadata.
 
-### Access Data Files
-This section includes information on Authentication and Authorization as well as instructions for downloading data files (either externally or from within a Gen3 workspace).
 
-### Analyze Data
-This section covers working with Gen3 workspaces.
-
-### Data Portal
-In this section, we discuss details of each page and how to navigate them in the Gen3 Data Portal.
-
-### Use the API
-In this section, we cover the Gen3 API and how to use it to query and download data and metadata.
 
 ## Resources
 
@@ -32,3 +24,8 @@ In this section, we cover the Gen3 API and how to use it to query and download d
 
 [data hub]: https://gen3.datacommons.io/
 [BRH]: https://brh.data-commons.org/
+[Search for Data]: /gen3-resources/user-guide/search/
+[Access Data Files]: /gen3-resources/user-guide/access-data/
+[Analyze Data]: /gen3-resources/user-guide/analyze-data/
+[Data Portal]: /gen3-resources/user-guide/portal/
+[Use the API]: /gen3-resources/user-guide/using-api/
