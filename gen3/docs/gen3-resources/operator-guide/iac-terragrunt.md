@@ -13,11 +13,11 @@ Using a terragrunt repo allows you to deploy and manage multiple Gen3 commons at
 
 ### Downloads
 
-You will need to follow the process outlined in the [**Getting Started**](../1.Getting started) page to download terraform. Once you have that downloaded you will need to clone our [**gen3-terraform repo**](https://github.com/uc-cdis/gen3-terraform). You will also need to install the [**aws cli**](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) to let terraform interact with AWS. Depending on the deployments you run, you may also need to install [**kubectl**](https://kubernetes.io/docs/tasks/tools/) and [**postgres**](https://www.postgresql.org/download/). Last you will need to install [**terragrunt**](https://terragrunt.gruntwork.io/docs/getting-started/install/).
+You will need to follow the process outlined in the [**Terraform Getting Started**][Terraform prereqs] page to download terraform. Once you have that downloaded you will need to clone our [**gen3-terraform repo**][Gen3 Terraform]. You will also need to install the [**AWS CLI**][AWS CLI] to let terraform interact with AWS. Depending on the deployments you run, you may also need to install [**kubectl**][kubectl] and [**postgres**][postgres]. Last you will need to install [**terragrunt**][terragrunt].
 
 ### Cloud Credentials
 
-You will need to configure your aws cli to have admin access to your account, that way terraform can deploy the necessary infrastructure within your account. There are a few ways to accomplish this, but the easiest way is to create a new IAM user, attach the "arn:aws:iam::aws:policy/AdministratorAccess" to the user and then create a access key/id. Once you have the key and secret you will need to create a file at ~/.aws/credentials and add the following.
+You will need to configure your AWS CLI to have admin access to your account, that way terraform can deploy the necessary infrastructure within your account. There are a few ways to accomplish this, but the easiest way is to create a new IAM user, attach the "arn:aws:iam::aws:policy/AdministratorAccess" to the user and then create a access key/id. Once you have the key and secret you will need to create a file at ~/.aws/credentials and add the following.
 
 ```bash
 [default]
@@ -39,7 +39,7 @@ If it returns the username of your user, then your credentials are properly conf
 
 ### Prepare the deployment
 
-To run terragrunt you'll need to start by creating a terragrunt repo, or utilizing one you already have. We recommend using the terraform 1.0 [**commons module**](https://github.com/uc-cdis/gen3-terraform/tree/master/tf_files/aws/commons) module within your terragrunt repo. This will provision all the necessary config for a production gen3 instance. If you just want to create a more basic development cluster you can use [**this module**](https://github.com/uc-cdis/gen3-terraform/tree/master/tf_files/aws/generic_commons) instead.
+To run terragrunt you'll need to start by creating a terragrunt repo, or utilizing one you already have. We recommend using the terraform 1.0 [**commons module**][terraform commons module] module within your terragrunt repo. This will provision all the necessary config for a production gen3 instance. If you just want to create a more basic development cluster you can use [**this module**][terraform generic commons] instead.
 
 If you decided to take the terragrunt approach then it's likely you have multiple instances of gen3 you plan on managing, otherwise we do not recommend using terragrunt as it will be overkill. With that in mind, the next step is to logically break down how you want your directory structure to look. We deploy commons within different AWS account, and can have multiple commons per account, depending on need, so our directory structure looks as follows
 
@@ -156,3 +156,14 @@ This will run an apply against all resources under the current directory
 ```bash
 terragrunt run-all apply
 ```
+
+
+<!-- Links -->
+[Terraform prereqs]: https://github.com/uc-cdis/gen3-terraform/tree/master?tab=readme-ov-file#prerequisites
+[Gen3 Terraform]: https://github.com/uc-cdis/gen3-terraform
+[AWS CLI]: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+[kubectl]: https://kubernetes.io/docs/tasks/tools/
+[postgres]: https://www.postgresql.org/download/
+[terragrunt]: https://terragrunt.gruntwork.io/docs/getting-started/install/
+[terraform commons module]: https://github.com/uc-cdis/gen3-terraform/tree/master/tf_files/aws/commons
+[terraform generic commons]: https://github.com/uc-cdis/gen3-terraform/tree/master/tf_files/aws/generic_commons

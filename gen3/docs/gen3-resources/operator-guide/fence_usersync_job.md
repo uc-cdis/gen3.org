@@ -13,7 +13,7 @@ User lists can be synced from three sources:
 
 
 # S3 Setup
-Please see [this documentation][user.yaml formatting] documentation that details user.yaml formatting.
+Please see [this documentation][user.yaml formatting] that details user.yaml formatting.
 
 You can pull this file from an S3 bucket that is set in the `.Values.usersync.userYamlS3Path` field. Then input the IAM credentials for a user that has read access to the specified S3 bucket in the `.Values.secrets.awsAccessKeyId` and `.Values.secrets.awsSecretAccessKey` fields.
 
