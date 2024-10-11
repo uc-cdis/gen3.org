@@ -1,7 +1,7 @@
 
 # Unstructured Data (Data Files)
 
-Unstructured data are simply data files that have do not necessarily conform to any particular schema or format.  Some data files may be consistently structured (e.g .bam or .png), but Gen3 treats these simply as files and does not check whether they conform to a particular format or not.  To make data available to end users you must first upload the files and associate with the appropriate node in the data dictionary.
+Unstructured data are simply data files that have do not necessarily conform to any particular schema or format.  Some data files may be consistently structured (e.g .bam or .png), but Gen3 treats these simply as files and does not check whether they conform to a particular internal format or not.  To make data available to end users you must first upload the files and associate them with the appropriate node in the data dictionary.
 
 
 ## Standard Submission Process
@@ -9,27 +9,25 @@ Unstructured data are simply data files that have do not necessarily conform to 
 ### 1. Prepare Project in Submission Portal
 
 
-In order to upload data files you must at minimum have a `program`, `project`, and at least one record in the `core_metadata_collection` node or other data containing node. To review how to submit the program and project nodes see [here](/gen3-resources/operator-guide/submit-structured-data/#the-order-of-node-submission-is-important).
+In order to upload data files you must at minimum have a `program`, `project`, and at least one record in the `core_metadata_collection` node or other data containing node. To review how to submit the program and project nodes see [here][Node Order].
 
 This documentation will utilize the core_metadata_collection node but other nodes can be used depending on your unique data model. If your project already has at least one record in a node of this type, you can skip to [step 2](#2-upload-data-files-to-object-storage).  
-
-If your project already has at least one `core_metadata_collection` record you can skip to step 2 below.
 
 Do the following to create your first `core_metadata_collection` record:
 
 1. Go to your data commons' submission portal website
 2. Click on 'Submit Data'
 3. Find your project in the list of Projects and click 'Submit Data'
-4. Click 'Use Form Submission' and choose `core_metadata_collection` from the dropdown list (or [edit and upload this TSV](/gen3-resources/operator-guide/img/gen3_core_metadata_collection_template.tsv) by clicking 'Upload File' then 'Submit')
+4. Click 'Use Form Submission' and choose `core_metadata_collection` from the dropdown list (or [edit and upload this TSV][TSV metadata collection] by clicking 'Upload File' then 'Submit')
 
-    ![node_dropdown.png](/gen3-resources/operator-guide/img/node_dropdown.png)
+    ![node_dropdown.png][node dropdown]
 
-    ![cmc_form.png](/gen3-resources/operator-guide/img/cmc_form.png)
+    ![cmc_form.png][cmc form]
 
 
 5. Fill in the required information (see note below)
 6. Click 'Upload submission json from form' and then 'Submit'
-7. Make note of the `submitter_id` of your `core_metadata_collection` record for step 3 below
+7. Make note of the `submitter_id` of your `core_metadata_collection` record for [step 3](#3-map-uploaded-files-to-a-data-file-node) below
 
 >__Note:__ Minimally, `submitter_id` and `projects.code` are required properties. The project `code` is the name of your project without the "program-" prefix. For example, if your project URL is https://gen3.datacommons.io/example-training, your project's `code` would be 'training', the `program` would be 'example', and your `project_id` would be the combination: 'example-training'.
 
@@ -44,15 +42,15 @@ If you received any other message, then check the 'Details' to help determine th
 
 To view the records in the `core_metadata_collection` node in your project, you can go to:
 https://gen3.datacommons.io/example-training/search?node_type=core_metadata_collection
-(replacing the `gen3.datacommons.io` with your commons base URL and `example-training` with an actual project name).
+(replacing the `gen3.datacommons.io` with your commons base URL and `example-training` with an actual project_id).
 
 ### 2. Upload Data Files to Object Storage
 
 
-Adding files to your new Gen3 project can be done using one of two methods. The gen3-client tool (shown in steps below) offers users an easy way to upload files to Amazon s3 buckets while simultaneously indexing the files and assigning them each a unique GUID or object_id. Alternatively, if you are comfortable scripting and require something other than the default AWS bucket used by the gen3-client or your data files are already uploaded to their storage location in the cloud, we offer an option for [indexing data already found in the cloud](#indexing-files-already-found-in-the-cloud). This method offers several other benefits including the possibility of using multiple cloud resources and submitting multiple batches of data set files at once.
-The following documentation will focus on using the [gen3-client](/resources/user/gen3-client) to upload data files, including spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., to Amazon s3 cloud storage.
+Adding files to your new Gen3 project can be done using one of two methods. The gen3-client tool (shown in steps below) offers users an easy way to upload files to Amazon S3 buckets while simultaneously indexing the files and assigning them each a unique GUID or object_id. Alternatively, if you are comfortable scripting and require something other than the default AWS bucket used by the gen3-client or your data files are already uploaded to their storage location in the cloud, we offer an option for [indexing data already found in the cloud](#indexing-files-already-found-in-the-cloud). This method offers several other benefits including the possibility of using multiple cloud resources and submitting multiple batches of data set files at once.
+The following documentation will focus on using the [gen3-client](#gen3-client-instructions-for-uploading-data) to upload data files, including spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., to Amazon S3 cloud storage.
 
-1. Download the latest [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases/latest) for your operating system.
+1. Download the latest [compiled binary][Gen3 client GitHub] for your operating system.
 2. Configure a profile with credentials downloaded from your Profile:
 
 	```
@@ -70,7 +68,7 @@ The following documentation will focus on using the [gen3-client](/resources/use
 
 	```
 
-For detailed instructions on configuring and using the gen3-client, visit the [Gen3 client documentation](/resources/user/gen3-client).
+For detailed instructions on configuring and using the gen3-client, visit the [Gen3 client documentation](#gen3-client-instructions-for-uploading-data).
 
 ### 3. Map Uploaded Files to a Data File Node
 
@@ -81,23 +79,23 @@ Once data files are successfully uploaded, the files must be mapped to the appro
 
 2. Click 'Submit Data'.
 
-    ![submit-data.png](/gen3-resources/operator-guide/img/submit-data.png)
+    ![submit-data.png][submit data]
 
 3. Click 'Map My Files' button.
 
-    ![map_my_files.png](/gen3-resources/operator-guide/img/map-my-files.png)
+    ![map_my_files.png][map my files]
 
 4. Select the files to map using the checkboxes and click 'Map Files' button.
 
-    ![select-files.png](/gen3-resources/operator-guide/img/select-files.png)
+    ![select-files.png][select files]
 
 5. Select the project and node that the files belong to.
 
-    ![map-to-node.png](/gen3-resources/operator-guide/img/map-to-node.png)
+    ![map-to-node.png][map to node]
 
 6. Fill in the values of any required properties and click 'Submit' button.
 
-    ![fill-required-properties.png](/gen3-resources/operator-guide/img/fill-required-properties.png)
+    ![fill-required-properties.png][fill required]
 
 
 > __Note:__ The required property 'Type' in step 6 is the node's name (the 'type' of node) and should be the same as the value selected from the node dropdown list in step 5.
@@ -114,9 +112,11 @@ You should receive the message "# files mapped successfully!" upon success.
 
 ## Indexing files already found in the cloud
 
-### 1. Prepare Project with the Gen3 sdk tools
+This method is appropriate if you are comfortable scripting and require something other than the default AWS bucket used by the gen3-client or your data files are already uploaded to their storage location in the cloud. This method offers several other benefits including the possibility of using multiple cloud resources and submitting multiple batches of data set files at once. The following documentation will focus on using the gen3-client to upload data files, including spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., to Amazon S3 cloud storage. If these criteria do not apply then you should use the [Standard upload process](#standard-submission-process) instead.
 
-Though not strictly required to be done as a first step, a Gen3 project must be present in the [Sheepdog microservice](resources/developer/microservice/) to associate data files to before file indexing can take place. To achieve this, the [Gen3 Submission sdk](https://uc-cdis.github.io/gen3sdk-python/_build/html/_modules/gen3/submission.html) has a comprehensive set of tools to enable users to script submission of programs and projects.  Alternatively, the [GUI submission platform](/resources/user/submit-data#1) can be used to create a project.
+### 1. Prepare Project with the Gen3 SDK tools
+
+Though not strictly required to be done as a first step, a Gen3 project must be present in the [Sheepdog microservice][sheepdog github] to associate data files to before file indexing can take place. To achieve this, the [Gen3 Submission SDK][gen3 submission sdk] has a comprehensive set of tools to enable users to script submission of programs and projects.  Alternatively, the [GUI submission platform](#1-prepare-project-in-submission-portal) can be used to create a project.
 
 Sample Code for submission of a Program and Project to a data commons:
 ```
@@ -133,7 +133,7 @@ Gen3Submission.create_project('test_program', project_json)
 
 As Gen3 is considered "cloud agnostic", any or even multiple cloud resources can be configured to contain data for controlled end-user access.  If your data is already located in the cloud, please see the following [section](#3-upload-files-to-object-storage-with-cloud-resource-command-line-interface) for considerations in the structure and permissions settings.
 
-End-user access to cloud resources is enabled by signed-urls with authorization checks within Gen3 to ensure valid and secure access.  Policies within the respective cloud resources should be configured in the Gen3 Fence Microservice to allow the; [Gen3 Auth Service Bot - AWS](https://github.com/uc-cdis/fence/blob/master/fence/config-default.yaml#L656), [Gen3 Auth Service Bot - Azure](https://github.com/uc-cdis/fence/blob/master/docs/azure_architecture.md) or [Gen3 Auth Service Bot - Google](https://github.com/uc-cdis/fence/blob/master/docs/google_architecture.md) to have access for the end user.
+End-user access to cloud resources is enabled by signed-urls with authorization checks within Gen3 to ensure valid and secure access.  Policies within the respective cloud resources should be configured in the Gen3 Fence Microservice to allow the; [Gen3 Auth Service Bot - AWS][auth service aws], [Gen3 Auth Service Bot - Azure][auth service azure], or [Gen3 Auth Service Bot - Google][auth service google] to have access for the end user.
 
 ##### AWS S3 example bucket policy for READ access:
 ```
@@ -167,7 +167,7 @@ End-user access to cloud resources is enabled by signed-urls with authorization 
 }
 ```
 
-The location for the example AWS configuration posted above is available [here](https://github.com/uc-cdis/fence/blob/master/fence/config-default.yaml#L656).
+The location for the example AWS configuration posted above is available [here][auth service aws].
 
 
 ### 3. Upload files to Object Storage with Cloud Resource Command Line Interface
@@ -198,7 +198,6 @@ TOPMed-FHS (phs000974.c1 and .c2)
 | FHS (consent group 1) | s3://nih-nhlbi-topmed-released-phs000974-c1 | gs://nih-nhlbi-topmed-released-phs000974-c1 |
 | FHS (consent group 2) | s3://nih-nhlbi-topmed-released-phs000974-c2 | gs://nih-nhlbi-topmed-released-phs000974-c2 |
 
-<br />
 
 With a setup similar to this, Gen3 is able to support signed URLs and fully configured end-user access.
 
@@ -206,7 +205,7 @@ With a setup similar to this, Gen3 is able to support signed URLs and fully conf
 
 Once a data allocation scheme is determined, data can be uploaded accordingly to cloud buckets.  It should be noted that while Amazon AWS and Google are the most supported cloud providers, Gen3 is cloud agnostic.  Any method and hierarchy structure can be used for upload as long as a the same parent directory is maintained with end user access.
 
-Regardless of the cloud platform, the CLI-DFS workflow requires file data gathered from its cloud location.  Information such as file name, location, size, and md5sum are usually available from cloud platforms.  Documentation for [AWS](https://aws.amazon.com/cli/), [Google](https://cloud.google.com/storage/docs/gsutil) and [Microsoft Azure](https://learn.microsoft.com/en-us/cli/azure/) should provide guidance to acquiring this information.
+Regardless of the cloud platform, the CLI-DFS workflow requires file data gathered from its cloud location.  Information such as file name, location, size, and md5sum are usually available from cloud platforms.  Documentation for [AWS][aws cli], [Google][gsutil] and [Microsoft Azure][azure cli] should provide guidance to acquiring this information.
 
   >Note: The recommended (detailed here) way for Gen3 to provide controlled access to data is via Signed URLs. Signed URLs are the only fully cloud-agnostic method supported by Gen3 and additionally are supported by all major cloud resource providers. They also allow for short-lived, temporary access to the data for reduced risk.  Lastly, utilizing signed URLs places very few restrictions on the organization of data within could bucket(s).
 
@@ -215,9 +214,9 @@ The files relevant to a Gen3 CLI-DFS Workflow submission:
 
 - Bucket mapping file: File that maps authorization designations to parent level bucket locations.
 
-- Bucket manifest file: Created for each submission and contains file level information (i.e. name, size, md5sum)
+- Bucket manifest file: Created for each submission and contains file level information (i.e. name, size, md5sum).
 
-- Indexing manifest: Created for each submission and submits both authorization and file level information into the [Indexd microservice](https://github.com/uc-cdis/indexd).
+- Indexing manifest: Created for each submission and submits both authorization and file level information into the [Indexd microservice][indexd github].
 
 The creation and submission of these files is covered below.
 
@@ -225,7 +224,6 @@ The creation and submission of these files is covered below.
 
 
 ### 4. Create Bucket Mapping and Manifest Files
-
 
 The below is the Gen3 recommended indexing file schema. While possible to utilize other configurations, they likely require significantly more administrative effort to maintain correct permissions in the cloud platform(s).
 
@@ -247,22 +245,21 @@ The below example has 4 different authorizations for 8 bucket locations
 | s3://nih-nhlbi-topmed-phs000974-c2 | phs000974.c2 |
 | gs://nih-nhlbi-topmed-phs000974-c2 | phs000974.c2 |
 
-<br />
 In the situation where Gen3 must support cloud-specific data access methods, Gen3 also requires the authz or acl column which contain the granular access control which would represent access to the entire bucket).
 
-The authz column coordinates with the user permissions set in the Gen3 microservices [Fence](https://github.com/uc-cdis/fence) and [Arborist](https://github.com/uc-cdis/arborist).
+The authz column coordinates with the user permissions set in the Gen3 microservices [Fence][fence github] and [Arborist][arborist github].
 
 #### Bucket Manifest File
 The bucket manifest file should contain individual file level metadata for a single batch of ingestion files. This means there will be several bucket manifest files per data commons. It is recommended that they are represented in a tab separated variable format and in each, a row should minimally contain the following information:
 
-- File Name
-- File Size
+- File name
+- File size
 - File hash via md5sum
 - Exact file url in the bucket location
 
 If files are mirrored between cloud locations, bucket urls can be appended together with a whitespace delimiter.
 
-In the below example of an Bucket manifest file, please note the mirrored file bucket locations in S3 and GCP:
+In the below example of a Bucket manifest file, please note the mirrored file bucket locations in S3 and GCP:
 
 ##### Example Bucket Manifest File
 
@@ -277,33 +274,33 @@ In the below example of an Bucket manifest file, please note the mirrored file b
 ### 5. Create Indexing Manifest File
 
 
-An Indexing Manifest File is submitted to the [Indexd microservice](https://github.com/uc-cdis/indexd) and is a combination of both the Bucket Mapping and Manifest file information.
+An Indexing Manifest File is submitted to the [Indexd microservice][indexd github] and is a combination of both the Bucket Mapping and Manifest file information.
 
 While the two preceding files are not strictly necessary for maintenance and operation of a Gen3 data commons, they are recommended for ease of maintenance. For instance, if multiple authorization designations are required within a single bucket location, administrators will need to set them individually directly in the cloud platform as Gen3 has no capability to interact with cloud resource permissions in that manner.
 
 #### Indexd Microservice Overview
 
-The [Indexd microservice](https://github.com/uc-cdis/indexd) is used by Gen3 to maintain an index of all files in a data commons and serves as the data source by several other microservices to build various features of Gen3 data commons. A central part of what enables Gen3's Indexd is the integration of a [Globally Unique Identifier (GUID)](https://dataguids.org/#) to each element added to the microservice.
+The [Indexd microservice][indexd github] is used by Gen3 to maintain an index of all files in a data commons and serves as the data source by several other microservices to build various features of Gen3 data commons. A central part of what enables Gen3's Indexd is the integration of a [Globally Unique Identifier (GUID)][data guids] to each element added to the microservice.
 
 #### Globally Unique Identifier (GUID)
-GUIDs are primarily used to track and provide the current location of data and is designed to persist even as data is moved or copied. Information regarding the concept of GUIDs, GUID generation and look up of particular GUIDs can be found at [dataguids.org](https://dataguids.org/#).
+GUIDs are primarily used to track and provide the current location of data and is designed to persist even as data is moved or copied. Information regarding the concept of GUIDs, GUID generation and look up of particular GUIDs can be found at [dataguids.org][data guids].
 
 #### Indexing Manifest Components and Structure
 By default GUIDs will be added to rows that lack an entry for that field when an indexing manifest is submitted to Indexd. GUIDs that are minted in this way are both available by querying Indexd or by referencing the submission output file that is generated.
 
-As the Indexing Manifest is the file that is submitted to the [Indexd microservice](https://github.com/uc-cdis/indexd), it must be submitted in a tab separated variable file (.tsv) and contain the following fields:
+As the Indexing Manifest is the file that is submitted to the [Indexd microservice][indexd github], it must be submitted in a tab separated variable file (.tsv) and contain the following fields:
 
 - Globally Unique Identifier (GUID) - Either generated by indexd microservice at the time of submission or provided by the user prior to submission
-- File Name
-- File Size
+- File name
+- File size
 - File hash via md5sum
 - Exact file url in the bucket location
 - authz or acl authorization designation
 
 Users may notice that with the exception of GUIDs, this file is a combination of the Bucket Mapping and Manifest files.  If either AWS or Google cloud resources are used, Gen3 offers tools to produce bucket manifest files available at the following links:
 
-- [AWS S3 Bucket Manifest Generation](https://github.com/uc-cdis/cloud-automation/blob/master/doc/bucket-manifest.md)
-- [Google Bucket Manifest Generation](https://github.com/uc-cdis/cloud-automation/blob/master/doc/gcp-bucket-manifest.md)
+- [AWS S3 Bucket Manifest Generation][aws bucket manifest]
+- [Google Bucket Manifest Generation][gcp bucket manifest]
 
     >Note: Bucket manifest generation scripts require using Gen3's full deployment code and, depending on the amount of data, calculating checksums for files can be costly and take time.
 
@@ -322,7 +319,7 @@ The below is an example of a Indexing Manifest File:
 ### 6. Submit file Indexing Manifest to Indexd
 
 
-Once created, Gen3 offers an [Indexing sdk toolkit](https://uc-cdis.github.io/gen3sdk-python/_build/html/tools/indexing.html) to build, validate and map all files into a Gen3 datacommons. The sdk functions reconcile and add data to the indexd microservice.
+Once created, Gen3 offers an [Indexing SDK toolkit][sdk indexing] to build, validate and map all files into a Gen3 datacommons. The SDK functions reconcile and add data to the indexd microservice.
 
 Sample code for validation and submission of a constructed indexing manifest file to indexd.
 ```
@@ -341,26 +338,23 @@ gen3.tools.indexing.index_manifest.index_object_manifest(commons_url=commons_url
                                                                        output_filename=index_manifest[:-4] + '_output.tsv')
 ```
 
-*Please refer to the [authentication sdk](https://uc-cdis.github.io/gen3sdk-python/_build/html/auth.html) for set up of the authentication_object used above*
+*Please refer to the [authentication sdk][sdk auth] for set up of the authentication_object used above*
 
-*Note: Users in the Gen3-Community have published [repos](https://github.com/jacquayj/gen3-s3indexer-extramural) that index large pre-existing s3 buckets (disclaimer: CTDS is not responsible for the content and opinions on the third-party repos).*
+*Note: Users in the Gen3-Community have published a [repo][gen3-s3indexer-extramural] that index large pre-existing s3 buckets (disclaimer: CTDS is not responsible for the content and opinions on the third-party repos).*
 
 
 ### 7. Map files to a Data Node with the Gen3 SDK
 
 
-Once indexing is complete, Gen3 offers a [Submission sdk toolkit](https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html) to map indexed data files to nodes designated to contain data in the [data dictionary](/resources/user/dictionary/#what-is-a-data-dictionary-and-data-model) via the [Sheepdog microservice](https://github.com/uc-cdis/sheepdog).  Unless single data files are being ingested, the sdk submission toolkit generally requires a tab separated variable file, and specific nodes requirements for each data file type can be specified in the data dictionary. After mapping in Sheepdog is complete the file metadata will be mapped from the [program and project](/resources/user/cli-submission#1-prepare-project-sdk) administrative nodes (previously created) to its respective data containing nodes. The mapping in sheepdog is the basis for other search and query services either natively in sheepdog or after other extraction, tranformation and load [(ETL)](/resources/operator/#8-etl-and-data-explorer-configurations) services have been performed.
+Once indexing is complete, Gen3 offers a [Submission SDK toolkit][gen3 submission sdk] to map indexed data files to nodes designated to contain data in the data dictionary via the [Sheepdog microservice][sheepdog github].  Unless single data files are being ingested, the SDK submission toolkit generally requires a tab separated variable file, and specific nodes requirements for each data file type can be specified in the data dictionary. After mapping in Sheepdog is complete the file metadata will be mapped from the [program and project][program and project] administrative nodes (previously created) to its respective data containing nodes. The mapping in sheepdog is the basis for other search and query services either natively in sheepdog or after other extraction, transformation and load [(ETL)](/gen3-resources/operator-guide/customize-search/) services have been performed.
 
-
-To continue your data submission return to the main [Gen3 - Data Contribution](/resources/user/submit-data/#4-submit-additional-project-metadata) page.
 
 
 
 * **
-
 ## Gen3 client instructions for uploading data
 
-The gen3-client provides an easy-to-use, command-line interface for uploading and downloading data files to and from a Gen3 data commons from the terminal or command prompt, respectively.  Only information related to uploading is included below.  For instruction related to download please review the [Downloading Files Using the Gen3-client section](/gen3-resources/user-guide/access-data/#download-files-using-the-gen3-client).
+The gen3-client provides an easy-to-use, command-line interface for uploading and downloading data files to and from a Gen3 data commons from the terminal or command prompt, respectively.  Only information related to uploading is included below.  For instruction related to download please review the [Downloading Files Using the Gen3-client section][client download].
 
 
 
@@ -368,20 +362,18 @@ The gen3-client provides an easy-to-use, command-line interface for uploading an
 
 ### 1. Installation Instructions
 
-Installation instructions are covered in the [Downloading Files Using the Gen3-client section](/gen3-resources/user-guide/access-data/#download-files-using-the-gen3-client).
+Installation instructions are covered in the [Downloading Files Using the Gen3-client section][client download].
 
 
 ### 2. Configure a Profile with Credentials
 
-Profile configuration instructions are covered in the [Downloading Files Using the Gen3-client section](/gen3-resources/user-guide/access-data/#download-files-using-the-gen3-client).
+Profile configuration instructions are covered in the [Downloading Files Using the Gen3-client section][client download].
 
 ### 3.  Upload Data Files using the Gen3 Client
 
-The gen3-client provides an easy-to-use, command-line interface for uploading and downloading data files to and from a Gen3 data commons from the terminal or command prompt, respectively.  These instructions will only cover the uploading capabilities.  Please refer to [Download Files Using the Gen3 Client section](/gen3-resources/user-guide/access-data/#download-files-using-the-gen3-client) for instructions on downloading.
+For the typical data contributor, the `gen3-client upload` command should be used to upload data files to a Gen3 Data Commons. The commands `upload-single` and `upload-multiple` are used only in special cases, for example, when a file or collection of files are uploaded to specific GUIDs *after* generating structured data records for the files. These two commands are described in further detail in sections 3 and 4 below.
 
-For the typical data contributor, the `gen3-client upload` command should be used to upload data files to a Gen3 Data Commons. The commands `upload-single` and `upload-multiple` are used only in special cases, for example, when a file or collection of files are uploaded to specific GUIDs *after* generating structured data records for the files. These two commands are described in further detail in sections 7 and 8 below.
-
-When data files are uploaded to a Gen3 data common's object storage, they are assigned a unique, 128-bit ID called a ['GUID'](https://dataguids.org/), which stands for "globally unique identifier". GUIDs are generated by the system software, not provided by users, and they are stored in the property `object_id` of a data_file's structured data.
+When data files are uploaded to a Gen3 data common's object storage, they are assigned a unique, 128-bit ID called a [GUID][data guids], which stands for "globally unique identifier". GUIDs are generated by the system software, not provided by users, and they are stored in the property `object_id` of a data_file's structured data.
 
 When using the `gen3-client upload` command, a random, unique GUID will be generated and assigned to each data file that has been submitted, and an entry in the indexd database will be created for that file, which associates the storage location of the file with the file's object_id ("did" in the indexd record, see below for more details).
 
@@ -655,7 +647,7 @@ Files that have been successfully uploaded now have a GUID associated with them,
 
 Before the files are mapped to a project's node in the data model, the files can be deleted both from indexd and from the cloud location by sending a delete request to the fence endpoint `/user/data/`. For example, to delete the file we checked in the index above, we'd send a delete API request to this URL: https://nci-crdc-demo.datacommons.io/user/data/5bcd2a59-8225-44a1-9562-f74c324d8dec
 
-For example, running [this script](https://github.com/uc-cdis/planx-bioinfo-tools/blob/master/submission_tool/delete_unmapped_files.py) will delete all the user's unmapped files from indexd and from the storage location using the fence endpoint:
+For example, running [this script][delete unmapped files] will delete all the user's unmapped files from indexd and from the storage location using the fence endpoint:
 ```
 ~> python delete_uploaded_files.py -a https://nci-crdc-demo.datacommons.io/ -u user@gen3.org -c ~/Downloads/demo-credentials.json
 Found the following guids for uploader user@gen3.org: ['3d275025-8b7b-4f84-9165-72a8a174d642', '5bcd2a59-8225-44a1-9562-f74c324d8dec', '6cf194f1-c68e-4976-8ca4-a0ce9701a9f3', '956890a9-b8a7-4abd-b8f7-dd0020aaf562', '9bd009b6-e518-4fe5-9056-2b5cba163ca3']
@@ -732,8 +724,47 @@ Successfully uploaded file "c12ff17c-2fc0-475a-9c21-50c19950b082" to GUID c22ff1
 
 ### 5. Quick Start for Experienced Users or Cheat Sheet
 
-Quick start instructions are covered in the [Downloading Files Using the Gen3-client section](/gen3-resources/user-guide/access-data/#download-files-using-the-gen3-client).
+Quick start instructions are covered in the [Downloading Files Using the Gen3-client section][client download].
 
 
 ### 6. Working from the Command line
-Working from the command line instructions are covered in the [Downloading Files Using the Gen3-client section](/gen3-resources/user-guide/access-data/#download-files-using-the-gen3-client).
+Working from the command line instructions are covered in the [Downloading Files Using the Gen3-client section][client download].
+
+
+<!-- Standard Submission -->
+
+[Node Order]: /gen3-resources/operator-guide/submit-structured-data/#the-order-of-node-submission-is-important
+[TSV metadata collection]: /gen3-resources/operator-guide/img/gen3_core_metadata_collection_template.tsv
+[node dropdown]: /gen3-resources/operator-guide/img/node_dropdown.png
+[cmc form]: /gen3-resources/operator-guide/img/cmc_form.png
+[Gen3 client GitHub]: https://github.com/uc-cdis/cdis-data-client/releases/latest
+[submit data]: /gen3-resources/operator-guide/img/submit-data.png
+[map my files]: /gen3-resources/operator-guide/img/map-my-files.png
+[select files]: /gen3-resources/operator-guide/img/select-files.png
+[map to node]: /gen3-resources/operator-guide/img/map-to-node.png
+[fill required]: /gen3-resources/operator-guide/img/fill-required-properties.png
+
+<!-- Indexing files already in teh cloud -->
+[sheepdog github]: https://github.com/uc-cdis/sheepdog
+[gen3 submission sdk]: https://uc-cdis.github.io/gen3sdk-python/_build/html/_modules/gen3/submission.html
+[auth service aws]: https://github.com/uc-cdis/fence/blob/master/fence/config-default.yaml#L656
+[auth service azure]: https://github.com/uc-cdis/fence/blob/master/docs/azure_architecture.md
+[auth service google]: https://github.com/uc-cdis/fence/blob/master/docs/google_architecture.md
+[aws cli]: https://aws.amazon.com/cli/
+[gsutil]: https://cloud.google.com/storage/docs/gsutil
+[azure cli]: https://learn.microsoft.com/en-us/cli/azure/
+[indexd github]: https://github.com/uc-cdis/indexd
+[fence github]: https://github.com/uc-cdis/fence
+[arborist github]: https://github.com/uc-cdis/arborist
+[data guids]: https://dataguids.org/
+[aws bucket manifest]: https://github.com/uc-cdis/cloud-automation/blob/master/doc/bucket-manifest.md
+[gcp bucket manifest]: https://github.com/uc-cdis/cloud-automation/blob/master/doc/gcp-bucket-manifest.md
+[sdk indexing]: https://uc-cdis.github.io/gen3sdk-python/_build/html/tools/indexing.html
+[sdk auth]: https://uc-cdis.github.io/gen3sdk-python/_build/html/auth.html
+[gen3-s3indexer-extramural]: https://github.com/jacquayj/gen3-s3indexer-extramural
+[program and project]: /gen3-resources/operator-guide/submit-structured-data/#order-of-node-submission
+
+
+<!-- Gen3 Client -- >
+[client download]: /gen3-resources/user-guide/access-data/#download-files-using-the-gen3-client
+[delete unmapped files]: https://github.com/uc-cdis/planx-bioinfo-tools/blob/master/submission_tool/delete_unmapped_files.py

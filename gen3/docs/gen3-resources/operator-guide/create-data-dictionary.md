@@ -1,11 +1,23 @@
 
-
 # Creating a New Data Dictionary
 
 Every Gen3 data commons employs a data model, which serves to describe, organize, and harmonize structured data. Data harmonization facilitates cross-project analyses and is thus one of the pillars of the data commons paradigm. The data model organizes experimental or clinical variables, “properties”, into linked categories, “nodes”, through the use of a data dictionary. The data dictionary lists and describes all nodes in the data model, as well as defines and describes the properties in each node. A Gen3 Data Dictionary is specified by a YAML file per node.  A dictionary needs to be defined to allow submission of structured metadata and use of the [Exploration Page][Exploration Page] in the Data Portal.
 
+A few example nodes are listed below:
+
+* Clinical variables like a "primary cancer diagnosis" or a subject's "gender" might go into the "diagnosis" or "demographic" nodes, respectively.
+* Sample-related variables like "how a tumor sample was collected" and "what analyte was extracted from it" might go into the "biospecimen" or "analyte" nodes, respectively.
+* Data files also have associated metadata variables like file size, format, and filename. These properties are grouped into nodes that describe various types of data files, like "mri_image", for an MRI image data file.
+
+Each node in the data dictionary is linked in a logical manner to other nodes, which facilitates generating a visual overview, or graphical model, of a project.
+
+The following image displays the data dictionary in Table View, the 'Medical History' node entry in the dictionary with the list of properties, and an example graphical model of a project:
+
+![data-model.png](/gen3-resources/operator-guide/img/data-model.png)
+
+
 ## Core Dictionary
-If you have followed our helm deployment instructions we have created a basic data dictionary [DCF data dictionary][DCF data dictionary] to get you started.  You can use the DCF Data Dictionary as a starting point for creating your own data dictionary in your own commons. It is a consensus of previously used data dictionaries and will make creating your own data dictionary more efficient. It is easy to replace the default dictionary at deployment as long as you have not 1) submitted any data to the default dictionary and 2) ETL mapping has not occurred with the default dictionary.
+If you have followed our helm deployment instructions we have created a basic [DCF data dictionary][DCF data dictionary] to get you started.  You can use the DCF Data Dictionary as a starting point for creating your own data dictionary in your own commons. It is a consensus of previously used data dictionaries and will make creating your own data dictionary more efficient. It is easy to replace the default dictionary at deployment as long as you have 1) not submitted any data to the default dictionary and 2) ETL mapping has not occurred with the default dictionary.
 
 
 A list of some example data dictionaries are included below, which you can review for potential ideas or examples for how to capture specific data types:
@@ -55,7 +67,7 @@ Once you have obtained the baseline dictionary, you can make updates to it in or
 > Note: The Gen3 dictionary is stored in JSON format following the [jsonschema](https://cswr.github.io/JsonSchema/spec/basic_types/). The backend (Sheepdog) stores properties in the database as jsonb.
 
 ### Referencing external data standards
-It is possible to include references to controlled vocabularies such as the National Cancer Institute Thesaurus (NCIt).  This will help with the comparison of studies and projects across data commons and provide researchers with proper references.  The NCIt is being used for many of the schemas as it's inclusive of several different domains (for example, clinical, drug, etc.).  It also has an abundance of non-domain related terms such as nominal (for example, gender, race) and ordinal (for example, left, right, first, last) along with other useful categories of terms.  The benefit of this effort is that it will facilitate cross data commons comparison.  For instance, if tuberculosis is a term associated with multiple studies, a search of that term will provide insight into each of the studies.  It will also help with the prevention of adding multiple terms for properties that mean the same thing.  The example below demonstrates a cross study comparison using YAML files (Gen3 uses YAML files to help organize data dictionaries.  The files are used by internal systems to help manage the data dictionaries.)  The two files both relate to blood pressure finding, but each has a different term name.  The external reference helps with harmonization efforts by helping identify terms that have the same meaning.
+It is possible to include references to controlled vocabularies such as the [National Cancer Institute Thesaurus (NCIt)][NCIthesaurus].  This will help with the comparison of studies and projects across data commons and provide researchers with proper references.  The NCIt is being used for many of the schemas as it's inclusive of several different domains (for example, clinical, drug, etc.).  It also has an abundance of non-domain related terms such as nominal (for example, gender and race) and ordinal (for example, left, right, first, and last) along with other useful categories of terms.  The benefit of this effort is that it will facilitate cross data commons comparison.  For instance, if tuberculosis is a term associated with multiple studies, a search of that term will provide insight into each of the studies.  It will also help with the prevention of adding multiple terms for properties that mean the same thing.  The example below demonstrates a cross-study comparison using YAML files (Gen3 uses YAML files to help organize data dictionaries).  The two files both relate to blood pressure finding, but each has a different term name.  The external reference helps with harmonization efforts by helping identify terms that have the same meaning.
 
 ```
 Dictionary 1:
@@ -90,11 +102,11 @@ Blood Pressure Reading:
 ## Best Practices
 
 ### Data Harmonization
-When adding a new project or study into a new or an already existing data dictionary, it's important to follow the process of harmonization of data.  The harmonization process centers around updates or additions to the data dictionary, along with the possible need to harmonize the data. This process helps with the prevention of redundant properties, nodes, and allowable values that may already exist in a data dictionary.  It also involves the possibility of a data migration if the data dictionary changes affect the preexisting data (For example, the height property unit of measure change from meters to centimeters).  Before submitting new data to a commons or submitting updates to a data dictionary, check the current dictionary for properties, nodes, or enumerated values that already exist.  If there is a similar property, node, or enumerated value that exists, it's best practice to use the existing node, property, or enumerated value.  For example, if a candidate property named “infection agent” and a property named “infectious agent” already exist, then use “infectious agent.”
+When adding a new project or study into a new or an already existing data dictionary, it's important to follow the process of harmonization of data.  The harmonization process centers around updates or additions to the data dictionary, along with the possible need to harmonize the data. This process helps with the prevention of redundant properties, nodes, and allowable values that may already exist in a data dictionary.  It also involves the possibility of a data migration if the data dictionary changes affect the preexisting data (for example, the height property unit of measure change from meters to centimeters).  Before submitting new data to a commons or submitting updates to a data dictionary, check the current dictionary for properties, nodes, or enumerated values that already exist.  If there is a similar property, node, or enumerated value that exists, it's best practice to use the existing node, property, or enumerated value.  For example, if a candidate property named “infection agent” and a property named “infectious agent” already exist, then use “infectious agent.”
 
 ### Specificity vs. Generality
 
-One of the goals when providing an external reference is to figure out the level of specificity when breaking down a property name that contains multiple concepts.  The question is whether the new references should be created with very specific designations (This is known as pre-coordination).   This option would likely create the need for the request of new terms in the external standard if the term is not in existence. The other question is, should the use of multiple terms that already exist in an external standard be used (This is known as post-coordination)?  The best practice adopted by Gen3 is to use specificity whenever corresponding terms are available in the external standard.  However, If specific terms are not available, lean towards generality by creating multiple terms that already exist in an external standard.  For instance, if grapefruit juice is a property of interest and it's not found in the external reference, but grapefruit and juice are found individually, then using the individual properties is the preferred method.
+One of the goals when providing an external reference is to figure out the level of specificity when breaking down a property name that contains multiple concepts.  The question is whether the new references should be created with very specific designations. This is known as **pre-coordination**.   This option would likely create the need for the request of new terms in the external standard if the term is not in existence. The other question is, should the use of multiple terms that already exist in an external standard be used? This is known as **post-coordination**?  The best practice adopted by Gen3 is to use specificity whenever corresponding terms are available in the external standard.  However, If specific terms are not available, lean towards generality by creating multiple terms that already exist in an external standard.  For instance, if grapefruit juice is a property of interest and it's not found in the external reference, but grapefruit and juice are found individually, then using the individual properties is the preferred method.
 
 ### Creating Valuable Data Descriptions
 
@@ -102,7 +114,7 @@ It's important to create clear and concise descriptions for each property in a d
 
 ### Representing Longitudinal Data
 
-Gen3 does not allow the reporting of actual dates. As a result, the concept of date intervals can be used in its place. Properties such as days_to_birth, days_to_death, days_to_last_follow_up, and days_to_treatment provide a means to keep track of timing between visits while protecting study participant identities. These properties begin with the same date, which is called the index date. The index date is day 0 and any event that occurs before that date is a negative number and any event that occurs after that date is a positive number. For example, if days_to_birth is -12784 and the index date is diagnosis. This means that the participant was born 12,784 days prior to the diagnosis given the negative number. It also infers that the patient was 35 at diagnosis.
+Gen3 does not recommend the reporting of actual dates as they are considered PHI. Instead, the concept of date intervals can be used in its place. Properties such as `days_to_birth`, `days_to_death`, `days_to_last_follow_up`, and `days_to_treatment` provide a means to keep track of timing between visits while protecting study participant identities. These properties begin with the same date, which is called the index date. The index date is day 0 and any event that occurs before that date is a negative number and any event that occurs after that date is a positive number. For example, if `days_to_birth` is -12784 and the index date is diagnosis, this means that the participant was born 12,784 days prior to the diagnosis given the negative number. It also infers that the patient was 35 at diagnosis.
 
 Gen3 provides the ability to store longitudinal data. A clinical node that is not included in the DCF is the Visit or Follow-Up node. The Visit node is a clinical node that is used to store longitudinal data that is collected over time and usually has a many to one relationship with its parent node, meaning that an observation/response was observed for a subject/unit repeatedly over time. Clinical properties that are common for this node include height, weight, and BMI (body mass index). If the need arises, the node can be added to a data dictionary.
 
@@ -155,7 +167,7 @@ When making updates to data dictionaries, it's important to document these chang
 
 Proper documentation of dictionary updates fosters accountability and creates a historical representation of all dictionary changes that will allow future operators of the dictionary to understand how the dictionary has evolved over time.
 
-When generating the release notes there are [conventions](https://github-tools.github.io/github-release-notes/concept.html) that have been established that help with transparency and readability of release notes.  The conventions include:
+When generating the release notes there are [conventions][release notes conventions] that have been established that help with transparency and readability of release notes.  The conventions include:
 
   1. Start the subject line with a verb (for example, Update to enumerated value)
   2. Use the imperative mood in the subject line (for example, Add, not Added or Adds header styles)
@@ -180,3 +192,5 @@ When generating the release notes there are [conventions](https://github-tools.g
 <!-- Modifying a data dictionary -->
 [gen3schemadev]: https://github.com/AustralianBioCommons/gen3schemadev
 [Gen3 Tools]: https://gen3.org/gen3-tools/
+[NCIthesaurus]: https://ncithesaurus.nci.nih.gov/ncitbrowser/
+[release notes conventions]: https://github-tools.github.io/github-release-notes/concept.html
