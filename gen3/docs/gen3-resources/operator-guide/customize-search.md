@@ -154,6 +154,9 @@ To enable your Discovery Page you must modify your [gitops.json file][gitops ena
 
 Configure your Discovery page by further modifying your [gitops.json file][gitops modify discovery].
 
+### Workspace token service
+
+Setting up a functioning mesh where you can access files from individual commons also requires the [workspace token service][wts github].  You can see a demo of what is needed to link a commons to a mesh in the [Data Mesh Webinar][data mesh forum].
 
 
 
@@ -196,3 +199,5 @@ Configure your Discovery page by further modifying your [gitops.json file][gitop
 [brh aggmds]: https://brh.data-commons.org/mds/aggregate/metadata?data=True&limit=2000&offset=0
 [gitops enable discovery]: https://github.com/uc-cdis/cdis-manifest/blob/551f0963e60f6000ae8b9987592495406a031c81/gen3.datacommons.io/portal/gitops.json#L173
 [gitops modify discovery]: https://github.com/uc-cdis/cdis-manifest/blob/551f0963e60f6000ae8b9987592495406a031c81/gen3.datacommons.io/portal/gitops.json#L175-L297
+[wts github]: https://github.com/uc-cdis/workspace-token-service
+[data mesh forum]: https://www.youtube.com/watch?v=K5ld3V5AslE&t=1s
