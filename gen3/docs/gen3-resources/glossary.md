@@ -3,16 +3,15 @@
 ## Commons Services Operations Center (CSOC)
 A Common Services Operations Center is an operations center operated by a commons services provider for setting up, configuring, operating, and monitoring data commons, data meshes, data hubs, and other data platforms for managing, analyzing, and sharing data.
 ## Crosswalk
-Linking patients from across data commons where some patient data exists in commons A and additional data exists in commons B.  This linkage is recorded in the metadata service.
+Linking patients from across data commons where some patient data exists in commons A and additional data exists in commons B.  This linkage is recorded in the metadata service. An example of how to set this up is found [here][crosswalk setup].
 ## Data Commons
 A data commons co-locates data with cloud computing infrastructure and com- monly used software services, tools, and applications for managing, integrating, analyzing and shar- ing data that are exposed through web portals and APIs to create an interoperable resource for a research community. A data commons provides services so that the data is findable, accessible, interoperable and reusable (FAIR)
 ## Data Dictionary
-Every Gen3 data commons employs a data model, which serves to describe, organize, and harmonize data sets submitted by different users. Data harmonization facilitates cross-project analyses and is thus one of the pillars of the data commons paradigm. The data model organizes experimental metadata variables, “properties”, into linked categories, “nodes”, through the use of a data dictionary. The data dictionary lists and describes all nodes in the data model, as well as defines and describes the properties in each node. A Gen3 Data Dictionary is specified by a YAML file per node.
+Every Gen3 data commons employs a data model, which serves to describe, organize, and harmonize data sets submitted by different users. Data harmonization facilitates cross-project analyses and is thus one of the pillars of the data commons paradigm. The data model organizes experimental metadata variables, “properties”, into linked categories, “nodes”, through the use of a data dictionary. The data dictionary lists and describes all nodes in the data model, as well as defines and describes the properties in each node. A Gen3 Data Dictionary is specified by a YAML file per node. Additional details on Gen3 data dictionaries can be found [here][data dictionary overview].
 ## Data Hub
-A data hub is a data platform in a data mesh that supports search and discovery of data in 1, 2 or more data platforms in a data mesh. Typically, the data itself remains in the data repository, data commons, or other data platform in the mesh, but the metadata for the data is typically replicated in the data hub. Data hubs often are connected to workspaces or analysis environments operated by the data hub so the data can be analyzed.
+A data hub is a data platform in a data mesh that supports search and discovery of data in one, two, or more data platforms in a data mesh. Typically, the data itself remains in the data repository, data commons, or other data platform in the mesh, but the metadata for the data is typically replicated in the data hub. Data hubs often are connected to workspaces or analysis environments operated by the data hub so the data can be analyzed.
 ## Data Mesh (aka Data Fabric or Data Ecosystem)
-In the context of this article, data meshes contain multiple data commons, data repositories, cloud computing infrastructure, cloud based resources, including databases and knowledgebases, and other applications that can interoperate using a common set of services (sometimes called mesh services or framework services) for authentication, authorization, accessing data, analyzing data and related functions.
-More generalLy, both data meshes and data fabrics are emerging architectures for managing data within an organization. Quoting from the glossary entry for data fabrics: The goal of both architectures is to improve data management, but they do so through different approaches and with distinct focuses. A data mesh emphasizes decentralization and domain-specific ownership of data by subject matter experts. A data fabric focuses on providing a unified, consistent and integrated approach to data throughout an organization. A data mesh is a bottom up approach and a data fabric is a top down approach to data management.
+Data meshes contain multiple data commons, data repositories, or data resources that can interoperate using a common set of services. Each data commons or repository may have distinct data types, data models, and data governance.  A mesh provides for discovery of data from connected repositories and allows users to bring this data together in one place for joint analysis. To see how to set up the necessary services for running a data mesh view instructions [here][AggMDS].
 ## Data Types
 ### Structured Data
 Data is structured if it is organized into records and fields, with each record consisting of one or more data elements (data fields). In biomedical data, data fields are often restricted to controlled vocabularies to make querying them easier. In Gen3 this would include clinical or experimental data submitted to the graph model, which is queriable via a GraphQL API.  It can be flattened (via ETL) and the result viewable on the Data Portal Exploration Page.
@@ -20,7 +19,8 @@ Data is structured if it is organized into records and fields, with each record 
 Semi-structured data is organized as unique identifiers with flexible key/value pairs (including nesting). The key/value pairs may be consistent between records, but are not required to be. This is typically used for storing publicly available metadata about available datasets or additional public metadata about samples.  The MDS and AggMDS both include semi-structured data and power the Discovery Page.
 ### Unstructured Data
 Unstructured data represents files on a hard drive or cloud storage with no consistent schema. These data tend to represent either bulk clinical and phenotypic data in spreadsheet format or patient level data such as images or genomic sequencing files.
-## [Data Portal Pages][Data Portal User Guide]
+## Data Portal Pages
+See an in-depth description of each page [here][Data Portal User Guide].
 ### Data Dictionary Page
 Interactive page that shows the data dictionary in both a graph and table format.  It is powered by the data dictionary YAML files and allows users to see the controlled vocabulary across all data model nodes.
 ### Discovery Page
@@ -34,7 +34,7 @@ A Digital Object Identifier is an identifier used to permanently and stably iden
 ## Edge Node
 Edge nodes may be created at clinics, labs, hospitals, or academic institutions to share data with data platforms.  The data platform nodes connect with a data hub (forming a data fabric/mesh) to provide a federated platform for data discovery.  Edge nodes share only a subset of the data they store with data platforms
 ## ETL
-Structured data submitted to commons are stored in PostgreSQL. Querying data from PostgreSQL with multiple join is painful and inefficient. So, we use ElasticSearch as a place to store materialized dataset. Extract-transform-load (ETL) is a process that creates the materialized data from PostgreSQL and store them in ElasticSearch.  This is accomplished via the Tube microservice.  
+Structured data submitted to commons are stored in PostgreSQL. Querying data from PostgreSQL with multiple join is painful and inefficient. So, we use ElasticSearch as a place to store materialized dataset. Extract-transform-load (ETL) is a process that creates the materialized data from PostgreSQL and store them in ElasticSearch.  This is accomplished via the Tube microservice. More details of running an ETL can be found [here](gen3-resources/operator-guide/customize-search/#etl).
 ## FAIR Data
 FAIR data are data which meet the principles of findability, accessibility, interoper- ability, and reusability [12]. There is now an extensive literature on FAIR data.
 ## Framework Services
@@ -51,7 +51,8 @@ Structured data that has been processed via Tube and stored in elasticsearch to 
 The Gen3 Client is a command-line tool for downloading, uploading, and submitting data files to and from a Gen3 data commons.  Some of the same functionality can be found in the Gen3 SDK. You can find installation and use instructions [here][Gen3 client docs].
 ## Gen3 SDK
 The Gen3 Software Development Kit (SDK) for Python provides classes and functions for handling common tasks when interacting with a Gen3 commons. It also exposes a Command Line Interface (CLI). The API for a commons can be overwhelming, so this SDK/CLI aims to simplify communication with various microservices.  It can also download and upload files like the Gen3 Client.  You can find installation and use instructions [here][SDK docs].
-## [Gen3 Services][Microservices]
+## Gen3 Microservices
+Brief descriptions of the most relevant microservices are included below.  For more detail and links to their respective repositories please visit the [Developer's Guide][Microservices].
 ### Aggregated Metadata Service (AggMDS)
 The aggregated MDS is a service which caches metadata from commons metadata services and becomes a centralize API for browsing Metadata with clients such as the Ecosystem browser. The AggMDS holds the content viewable in a Data Portal Discovery page for a Data Mesh.
 ### Arborist
@@ -92,7 +93,9 @@ Gen3 workspaces are secure data analysis environments in the cloud that can acce
 
 
 
-
+[crosswalk setup]: https://github.com/uc-cdis/gen3sdk-python/blob/master/docs/howto/crosswalk.md
+[data dictionary overview]: /gen3-resources/operator-guide/create-data-dictionary/
+[AggMDS]: /gen3-resources/operator-guide/customize-search/#discovery-page
 [Data Portal User Guide]: /gen3-resources/user-guide/portal/
 [Microservices]: /gen3-resources/developer-guide/microservices/
 [Gen3 client docs]: /gen3-resources/user-guide/access-data/#installation-instructions

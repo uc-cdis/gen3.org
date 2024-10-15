@@ -120,7 +120,7 @@ Structured data can be masked or hidden from unauthorized users within the Guppy
 2. Regular: allows all kind of aggregation (with limitation for unauthorized resources), but forbid access to raw data without authorization
 3. Libre: access to all data
 
-Read more details about configuration within the [Guppy documentation](https://github.com/uc-cdis/guppy?tab=readme-ov-file#tiered-access).
+Read more details about configuration within the [Guppy documentation][guppy docs].
 
 ## Semi-structured data
 Access to semi-structured data (i.e. MDS or AggMDS) is completely open-access and cannot be made to be controlled access at this time.
@@ -130,3 +130,4 @@ Access to semi-structured data (i.e. MDS or AggMDS) is completely open-access an
 [Fence]: https://github.com/uc-cdis/fence
 [Fence user.yaml]: https://github.com/uc-cdis/fence/blob/master/docs/additional_documentation/user.yaml_guide.md
 [dbGaP]: https://github.com/uc-cdis/fence/blob/master/docs/additional_documentation/dbgap_info.md
+[guppy docs]: https://github.com/uc-cdis/guppy?tab=readme-ov-file#tiered-access
