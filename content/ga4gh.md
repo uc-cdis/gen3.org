@@ -44,7 +44,7 @@ g3Feature:
 <section class="g3-bg__white">
   <div class="g3-outer-wrapper g3-flex-content">
     <div class="g3-space__padding-lg-top">
-      <div class="g3-space__wrapper-gap-left">
+      <div class="g3-space__wrapper-gap-left g3-space__margin-sm-right">
         <h1 class="g3-space__margin-sm-bottom">
           Driver Projects
         </h1>
@@ -87,61 +87,65 @@ g3Feature:
 </section>
 
 
-<section>
-  <div class="g3-inner-wrapper">
-    <h1> GA4GH Products Included in Gen3</h1>
-  </div>
-  <div class="g3-inner-wrapper g3-flex-content g3-space__padding-sm-top ">
-    <div class="g3-col__50">
-      <div class="g3-space__margin-sm-left">
-        <h3>{{< param "g3Feature.f1.title" >}}</h3>
-        <p class="g3-space__margin-sm-top">
-          The <a href="https://www.ga4gh.org/product/data-repository-service-drs/">Data Repository Service (DRS)</a> API provides a generic interface to data repositories so data consumers, including workflow systems, can access data in a single, standard way regardless of where it is stored and how it is managed. The DRS standard is incorporated into our fence and IndexD services.
-        </p>
+<section class="g3-bg__white">
+  <div class="g3-outer-wrapper g3-flex-content">
+    <div class="g3-space__padding-med-top">
+      <div class="g3-space__wrapper-gap-left g3-space__margin-sm-right">
+        <h1 class="g3-space__margin-sm-bottom"> GA4GH Products Included in Gen3</h1>
       </div>
-    </div>
-    <div class="g3-col__50">
-      <div class="g3-space__margin-sm-left">
-        <h3>{{< param "g3Feature.f2.title" >}}</h3>
-        <p class="g3-space__margin-sm-top">
-          The <a href="https://www.ga4gh.org/product/ga4gh-passports/">Passports</a> specification provides a data model for encoding information about the researcher, along with their acquired data access permissions, in a way that cannot be tampered with and enables data access between platforms. Once a platform has issued a visa to your passport you can use that passport to bring your data to yet another platform.  Our Fence service supports RAS, which is an NIH implementation of Passports
-        </p>
+      <div class="g3-inner-wrapper g3-flex-content g3-space__padding-sm-top g3-space__wrapper-gap-left g3-space__margin-sm-right">
+        <div class="g3-col__50">
+          <div class="g3-space__margin-sm-left">
+            <h3>{{< param "g3Feature.f1.title" >}}</h3>
+            <p class="g3-space__margin-sm-top">
+              The <a href="https://www.ga4gh.org/product/data-repository-service-drs/">Data Repository Service (DRS)</a> API provides a generic interface to data repositories so data consumers, including workflow systems, can access data in a single, standard way regardless of where it is stored and how it is managed. The DRS standard is incorporated into our fence and IndexD services.
+            </p>
+          </div>
+        </div>
+        <div class="g3-col__50">
+          <div class="g3-space__margin-sm-left ">
+            <h3>{{< param "g3Feature.f2.title" >}}</h3>
+            <p class="g3-space__margin-sm-top">
+              The <a href="https://www.ga4gh.org/product/ga4gh-passports/">Passports</a> specification provides a data model for encoding information about the researcher, along with their acquired data access permissions, in a way that cannot be tampered with and enables data access between platforms. Once a platform has issued a visa to your passport you can use that passport to bring your data to yet another platform.  Our Fence service supports RAS, which is an NIH implementation of Passports
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="g3-inner-wrapper g3-flex-content g3-space__padding-sm-top">
-    <div class="g3-col__50">
-      <div class="g3-space__margin-sm-left">
-        <h3>{{< param "g3Feature.f3.title" >}}</h3>
-        <p class="g3-space__margin-sm-top">
-          <a href="https://www.ga4gh.org/product/data-connect/">Data Connect</a> is a standard for discovery and search of biomedical data.  It shares metadata about an identifier. The Gen3 Metadata Service (MDS) is very close to this standard and will be fully compatible soon.
-        </p>
+      <div class="g3-inner-wrapper g3-flex-content g3-space__padding-sm-top g3-space__wrapper-gap-left g3-space__margin-sm-right">
+        <div class="g3-col__50">
+          <div class="g3-space__margin-sm-left">
+            <h3>{{< param "g3Feature.f3.title" >}}</h3>
+            <p class="g3-space__margin-sm-top">
+              <a href="https://www.ga4gh.org/product/data-connect/">Data Connect</a> is a standard for discovery and search of biomedical data.  It shares metadata about an identifier. The Gen3 Metadata Service (MDS) is very close to this standard and will be fully compatible soon.
+            </p>
+          </div>
+        </div>
+        <div class="g3-col__50">
+          <div class="g3-space__margin-sm-left">
+            <h3>{{< param "g3Feature.f4.title" >}}</h3>
+            <p class="g3-space__margin-sm-top">
+              The <a href="https://www.ga4gh.org/product/task-execution-service-tes/">Task Execution Service (TES)</a> API is a standardized schema and API for describing and executing batch execution tasks.  Gen3 is working to incorporate this standard into our own workflow execution service.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="g3-col__50">
-      <div class="g3-space__margin-sm-left">
-        <h3>{{< param "g3Feature.f4.title" >}}</h3>
-        <p class="g3-space__margin-sm-top">
-          The <a href="https://www.ga4gh.org/product/task-execution-service-tes/">Task Execution Service (TES)</a> API is a standardized schema and API for describing and executing batch execution tasks.  Gen3 is working to incorporate this standard into our own workflow execution service.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="g3-inner-wrapper g3-flex-content g3-space__padding-lg-bottom">
-    <div class="g3-col__50">
-      <div class="g3-space__margin-sm-left g3-space__margin-sm-right">
-        <h3>{{< param "g3Feature.f5.title" >}}</h3>
-        <p class="g3-space__margin-sm-top">
-          {{< param "g3Feature.f5.detail" >}}
-        </p>
-      </div>
-    </div>
-    <div class="g3-col__50">
-      <div class="g3-space__margin-sm-left g3-space__margin-sm-right">
-        <h3>{{< param "g3Feature.f6.title" >}}</h3>
-        <p class="g3-space__margin-sm-top">
-          {{< param "g3Feature.f6.detail" >}}
-        </p>
+      <div class="g3-inner-wrapper g3-flex-content g3-space__padding-lg-bottom">
+        <div class="g3-col__50">
+          <div class="g3-space__margin-sm-left g3-space__margin-sm-right">
+            <h3>{{< param "g3Feature.f5.title" >}}</h3>
+            <p class="g3-space__margin-sm-top">
+              {{< param "g3Feature.f5.detail" >}}
+            </p>
+          </div>
+        </div>
+        <div class="g3-col__50">
+          <div class="g3-space__margin-sm-left g3-space__margin-sm-right">
+            <h3>{{< param "g3Feature.f6.title" >}}</h3>
+            <p class="g3-space__margin-sm-top">
+              {{< param "g3Feature.f6.detail" >}}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
