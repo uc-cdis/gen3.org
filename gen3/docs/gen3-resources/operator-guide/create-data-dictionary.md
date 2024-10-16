@@ -17,7 +17,7 @@ The following image displays the data dictionary in Table View, the 'Medical His
 
 
 ## Core Dictionary
-If you have followed our helm deployment instructions we have created a basic [DCF data dictionary][DCF data dictionary] to get you started.  You can use the DCF Data Dictionary as a starting point for creating your own data dictionary in your own commons. It is a consensus of previously used data dictionaries and will make creating your own data dictionary more efficient. It is easy to replace the default dictionary at deployment as long as you have 1) not submitted any data to the default dictionary and 2) ETL mapping has not occurred with the default dictionary.
+If you have followed our helm deployment instructions we have created a basic [data dictionary][datadictionary github] to get you started.  You can use the default Data Dictionary as a starting point for creating your own data dictionary in your own commons. It is a consensus of previously used data dictionaries and will make creating your own data dictionary more efficient. It is easy to replace the default dictionary at deployment as long as you have 1) not submitted any data to the default dictionary and 2) ETL mapping has not occurred with the default dictionary.
 
 
 A list of some example data dictionaries are included below, which you can review for potential ideas or examples for how to capture specific data types:
@@ -26,7 +26,7 @@ A list of some example data dictionaries are included below, which you can revie
 
 | Data Commons  | Dictionary Viewer | Dictionary Repo |
 | :---------------- | :------: | ----: |
-| Data Commons Framework |   [DCF Dictionary][DCF dictionary viewer]  | [GitHub][DCF data dictionary] |
+| [Data Commons Framework Services][NCI DCFS] |   [DCFS Dictionary][DCF dictionary viewer]  | [GitHub][datadictionary github] |
 | [Medical Imaging and Data Resource Center (MIDRC)][MIDRC] |   [MIDRC Dictionary][MIDRC dictionary viewer]  | [GitHub][MIDRC data dictionary] |
 | [Justice Community Opiod Innovation Network (JCOIN)][JCOIN] |   [JCOIN Dictionary][JCOIN dictionary viewer]   | [GitHub][JCOIN data dictionary] |
 
@@ -55,7 +55,7 @@ The Index File node category stores the metadata that is associated with differe
 #### Notation
 The Notation node category is used to store data that does not fit into other categories (for example, it doesn't store index files, data files, or analysis data).  The ability to update/modify a dictionary is an important functionality that may arise based on project and clinical data needs.
 
-The following image depicts the graph view of the DCF data dictionary (The key in the top right corner of the image indicates the node categories):
+The following image depicts the graph view of the core data dictionary (The key in the top right corner of the image indicates the node categories):
 
 ![graph view](/gen3-resources/operator-guide/img/dcf_dictionary.png)
 
@@ -116,7 +116,7 @@ It's important to create clear and concise descriptions for each property in a d
 
 Gen3 does not recommend the reporting of actual dates as they are considered PHI. Instead, the concept of date intervals can be used in its place. Properties such as `days_to_birth`, `days_to_death`, `days_to_last_follow_up`, and `days_to_treatment` provide a means to keep track of timing between visits while protecting study participant identities. These properties begin with the same date, which is called the index date. The index date is day 0 and any event that occurs before that date is a negative number and any event that occurs after that date is a positive number. For example, if `days_to_birth` is -12784 and the index date is diagnosis, this means that the participant was born 12,784 days prior to the diagnosis given the negative number. It also infers that the patient was 35 at diagnosis.
 
-Gen3 provides the ability to store longitudinal data. A clinical node that is not included in the DCF is the Visit or Follow-Up node. The Visit node is a clinical node that is used to store longitudinal data that is collected over time and usually has a many to one relationship with its parent node, meaning that an observation/response was observed for a subject/unit repeatedly over time. Clinical properties that are common for this node include height, weight, and BMI (body mass index). If the need arises, the node can be added to a data dictionary.
+Gen3 provides the ability to store longitudinal data. A clinical node that is not included in the core dictionary is the Visit or Follow-Up node. The Visit node is a clinical node that is used to store longitudinal data that is collected over time and usually has a many to one relationship with its parent node, meaning that an observation/response was observed for a subject/unit repeatedly over time. Clinical properties that are common for this node include height, weight, and BMI (body mass index). If the need arises, the node can be added to a data dictionary.
 
 ### Selecting the Property Type
 
@@ -180,7 +180,8 @@ When generating the release notes there are [conventions][release notes conventi
 
 <!-- Creating a Data Dictionary -->
 [Exploration Page]: /gen3-resources/user-guide/portal/#exploration-page
-[DCF data dictionary]: https://github.com/uc-cdis/dcfdictionary
+[datadictionary github]: https://github.com/uc-cdis/datadictionary/
+[NCI DCFS]: https://nci-crdc.datacommons.io/login
 [DCF dictionary viewer]: https://nci-crdc.datacommons.io/dd
 [MIDRC]: https://www.midrc.org/
 [MIDRC dictionary viewer]: https://data.midrc.org/DD
