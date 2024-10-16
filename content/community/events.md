@@ -9,13 +9,17 @@ g3Teaser:
   detail: About every other month, there is a virtual Gen3 Forum for the community of Gen3 developers, operators, sponsors and users of Gen3 data platforms. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 core development team.
 
 g3Upcoming:
-
+- Title: Testing code with the new Gen3 testing framework
+  Date: November 6, 3:30-5:00 pm CDT; November 7, 2024, 8:30-10:00 am AEDT
+  Description: Gen3 values code contributions from our open-source community. However, the continuous integration testing available within our GitHub repositories has generally not been available to contributors external to CTDS.  This has made it difficult for contributors to assess their code changes and get them merged into the Gen3 codebase.  We will discuss in the forum the new Gen3 testing framework, which makes these tests available to anyone.  We will also discuss how contributors can create and contribute their own tests as part of their pull requests.  Speakers will include Peter Vassilatos, Director of Engineering, and Hara Juvvala, Principal Software Engineer in Test, both from the Center for Translational Data Science at the University of Chicago.
+  Image: /figs/gen3_new_logo.png
+  Register: https://uchicago.zoom.us/meeting/register/tJ0ofuyhrTgrE9CPuv6-oBNcLYp-JLDp67-D
 
 
 
 g3past:
 - Title: GA4GH standards in Gen3
-  Date: September 18, 4:30-5:30 pm CDT; September 19, 2024, 7:30-8:30am am AEST
+  Date: September 18, 4:30-5:30 pm CDT; September 19, 2024, 7:30-8:30am AEST
   Description: GA4GH is an international standards setting body for Genomics and Health. Gen3 aims to follow GA4GH standards whenever possible in order to improve our interoperability with other systems and to simplify the use of a Gen3 Data Commons. Join us at our next community forum where we will provide an overview of our GA4GH compliant services and share plans for the future. Speakers will include Robert Grossman and Michael Lukowski from the University of Chicago, Center for Translational Data Science and Kyle Ellrott from the Oregon Health and Science University.
   Youtube: 98CpBDLYi_Q
   Slides: Gen3 Forum September 2024 - GA4GH.pdf
