@@ -115,6 +115,10 @@ g3Commons:
     title: Tox Data Commons
     fig: /figs/commons/ToxDataCommons.png
     link: https://toxdatacommons.com/
+  c28:
+    title: University of Florida Cancer Data Commons
+    fig: /figs/commons/ufcdc.png
+    link: https://ufcdc-portal.org/
 ---
 
 
@@ -271,6 +275,11 @@ g3Commons:
       <div class="g3-common-card">
          <a target="_blank" href="{{< param "g3Commons.c27.link" >}}" title="{{< param "g3Commons.c27.title" >}}">
          <img class="g3-row__50px" src="{{< param "g3Commons.c27.fig" >}}" />
+         </a>
+      </div>
+      <div class="g3-common-card">
+         <a target="_blank" href="{{< param "g3Commons.c28.link" >}}" title="{{< param "g3Commons.c28.title" >}}">
+         <img class="g3-row__50px" src="{{< param "g3Commons.c28.fig" >}}" />
          </a>
       </div>
    </div>
