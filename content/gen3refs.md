@@ -22,10 +22,86 @@ The Gen3 data platform is used as the basis for many data repositories and enabl
       </div>
     </div>
   </div>
-
 </section>
+
+<!-- last updated on 10/17/24-->
 <section class="g3-outer-wrapper">
-<div class="g3-space__margin-sm-left">
+  <div class="g3-space__margin-sm-left">
+    <h2> 2024</h2>
+    <p class="g3-space__margin-sm-bottom">
+    Adams, Meredith CB, Robert W. Hurley, and Umit Topaloglu. "Connecting Chronic Pain and Opioid Use Disorder Clinical Trials Through Data Harmonization: Wake Forest IMPOWR Dissemination, Education, and Coordination Center (IDEA-CC)." Substance Use & Addiction Journal (2024): 297673422412362872 (2024): ooae025.
+      <a href="https://journals.sagepub.com/doi/abs/10.1177/29767342241236287">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Armstrong, Nicola, et al. "People RDC framework for advanced analytics for national healthcare research infrastructure." (2024).
+      <a href="https://opus.lib.uts.edu.au/handle/10453/181203">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Balagurunathan, Yesodhai, and Raja Rajeswari Sethuraman. "An Analysis of Ethics-Based Foundation and Regulatory Issues for Genomic Data Privacy." Journal of The Institution of Engineers (India): Series B (2024): 1-11.
+      <a href="https://link.springer.com/article/10.1007/s40031-024-01058-3">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Brady, Arthur, et al. "NCI Cancer Research Data Commons: core standards and services." Cancer Research 84.9 (2024): 1384-1387.
+      <a href="https://aacrjournals.org/cancerres/article/84/9/1384/745072">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Grossman, Robert L. "An Annotated Glossary for Data Commons, Data Meshes, and Other Data Platforms." arXiv preprint arXiv:2404.15475 (2024).
+      <a href="https://arxiv.org/abs/2404.15475">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Kim, Erika, et al. "NCI cancer research data commons: lessons learned and future state." Cancer Research 84.9 (2024): 1404-1409.      
+      <a href="https://aacrjournals.org/cancerres/article/84/9/1404/745076">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Kullo, Iftikhar J. "Promoting equity in polygenic risk assessment through global collaboration." Nature Genetics (2024): 1-8.
+      <a href="https://www.nature.com/articles/s41588-024-01843-2">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Kuzma, Amanda, et al. "NIAGADS: A Comprehensive National Data Repository for Alzheimer’s Disease and Related Dementia Genetics and Genomics Research." medRxiv (2024): 2024-10.25.
+      <a href="https://www.medrxiv.org/content/10.1101/2024.10.07.24315029.abstract">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Michener, Pryce S., et al. "Diffusion of medications for opioid use disorder treatment in jail settings: a convergent mixed methods study of jail staff perspectives." Addiction Science & Clinical Practice 19.1 (2024): 10.
+      <a href="https://link.springer.com/article/10.1186/s13722-024-00440-2">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Oh, Sehyun, et al. "AnVILWorkflow: A runnable workflow package for Cloud-implemented bioinformatics analysis pipelines." Research Square (2024).
+      <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11118690/">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Trunnell, Matthew, et al. "The Pandemic Response Commons." JAMIA open 7.2 (2024): ooae025.
+      <a href="https://academic.oup.com/jamiaopen/article/7/2/ooae025/7644228">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Vahdati, Sanaz, et al. "A Guideline for Open-Source Tools to Make Medical Imaging Data Ready for Artificial Intelligence Applications: A Society of Imaging Informatics in Medicine (SIIM) Survey." Journal of Imaging Informatics in Medicine (2024): 1-10.
+      <a href="https://link.springer.com/article/10.1007/s10278-024-01083-0">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Venkat, Aarti, et al. "A workflow execution system in a data fabric for integrative cancer analyses." Cancer Research 84.6_Supplement (2024): 6242-6242.
+      <a href="https://aacrjournals.org/cancerres/article/84/6_Supplement/6242/740522">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Walsh, Brian, et al. "An integrated data platform to support the international alliance for cancer early detection." Cancer Research 84.6_Supplement (2024): 3558-3558.
+      <a href="https://aacrjournals.org/cancerres/article/84/6_Supplement/3558/740702">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Wang, Zhining, et al. "NCI Cancer Research Data Commons: resources to share key cancer data." Cancer Research 84.9 (2024): 1388-1395.
+      <a href="https://aacrjournals.org/cancerres/article/84/9/1388/745077">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Wyatt, Kirk D., et al. "An open-source platform for pediatric cancer data exploration: a report from Data for the Common Good." JAMIA open 7.1 (2024): ooae004.
+      <a href="https://academic.oup.com/jamiaopen/article/7/1/ooae004/7595632">View Article</a>
+    </p>
+  </div>  
+</section>
+
+
+
+
+
+
+<section class="g3-outer-wrapper">
+<div class="g3-space__margin-sm-left g3-space__margin-md-top">
   <h2> 2023</h2>
   <p class="g3-space__margin-sm-bottom">
 Adams, Clare IM, et al. "Environmental DNA metabarcoding describes biodiversity across marine gradients." ICES Journal of Marine Science 80.4 (2023): 953-971. <a href="https://academic.oup.com/icesjms/article/80/4/953/7058017">View Article</a>
@@ -36,6 +112,9 @@ Adams, Clare IM, et al. "Environmental DNA metabarcoding describes biodiversity 
   </p>
   <p class="g3-space__margin-sm-bottom g3-space__margin-sm-top">
 Ahalt, Stan, et al. "Building a collaborative cloud platform to accelerate heart, lung, blood, and sleep research." Journal of the American Medical Informatics Association 30.7 (2023): 1293-1300. <a href="https://academic.oup.com/jamia/article/30/7/1293/7165700?login=false">View Article</a>
+  </p>
+  <p class="g3-space__margin-sm-bottom">
+Baughan, Natalie, et al. "Sequestration of imaging studies in MIDRC: stratified sampling to balance demographic characteristics of patients in a multi-institutional data commons." Journal of Medical Imaging 10.6 (2023): 064501-064501. <a href="https://www.spiedigitallibrary.org/journals/journal-of-medical-imaging/volume-10/issue-6/064501/Sequestration-of-imaging-studies-in-MIDRC--stratified-sampling-to/10.1117/1.JMI.10.6.064501.full">View Article</a>
   </p>
   <p class="g3-space__margin-sm-bottom">
 Baughan, Natalie, et al. "Sequestration methodology in practice through evaluation of joint demographic distributions of 54,185 patients in the Medical Imaging and Data Resource Center (MIDRC) data commons." Medical Imaging 2023: Imaging Informatics for Healthcare, Research, and Applications. Vol. 12469. SPIE, 2023. <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12469/1246909/Sequestration-methodology-in-practice-through-evaluation-of-joint-demographic-distributions/10.1117/12.2654247.short?webSyncID=9e6ec7a4-9dab-6a0c-bad0-59329ad883c9&sessionGUID=d902bc99-93ce-d268-bead-49a28531ab0d">View Article</a>
