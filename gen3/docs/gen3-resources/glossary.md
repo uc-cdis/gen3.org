@@ -87,7 +87,7 @@ The Gen3 workspace token service acts as an OIDC client which acts on behalf of 
 ## Portable Format for Biomedical data (PFB)
 PFB is a serialization file format designed to store bio-medical data and metadata. The format is built on top Avro to make it fast, extensible and interoperable between different systems. You can find the GitHub repo [here][PFB GitHub] and the publication [here][PFB Pub].
 ## Workspace
-Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources, including Gen3 Data Commons. Gen3 Workspaces use the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services. Gen3 Workspaces support Jupyter notebooks, RStudio notebooks, and other custom applications that can access data through Gen3 open APIs.  For instructions on the user of a workspace see [here][workspace use].  For instructions for setting up workspaces see [here][workspace set up]
+Gen3 workspaces are secure data analysis environments in the cloud that can access data from one or more data resources, including Gen3 Data Commons. Gen3 Workspaces use the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services. Gen3 Workspaces support Jupyter notebooks, RStudio notebooks, and other custom applications that can access data through Gen3 open APIs.  For instructions on the use of a workspace see [here][workspace use].  
 
 
 
@@ -102,5 +102,4 @@ Gen3 workspaces are secure data analysis environments in the cloud that can acce
 [SDK docs]: /gen3-resources/user-guide/search/#exporting-structured-data-programmatically
 [PFB GitHub]: https://github.com/uc-cdis/pypfb
 [PFB Pub]: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010944
-[here]: /gen3-resources/user-guide/analyze-data/
-[workspace set up]:
+[workspace use]: /gen3-resources/user-guide/analyze-data/
