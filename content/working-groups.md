@@ -7,11 +7,10 @@ g3Teaser:
   title: Gen3 Working Groups
   fig: /figs/grafana_screenshot.png
   detail: The Gen3 community periodically creates working groups to tackle strategic topics. These are typically temporary in nature and are catalyzed around a specific idea or feature that will come to a natural end. They are generally focused on topics of interest to the community, but that are not necessarily on the CTDS roadmap.  Such features can benefit from community input for both requirements and execution. Participation is open to the community. Let's all collaborate to bring improvements to Gen3!
-  detail3: Details for each working group can be found below and in the community GitHub repo (https://github.com/uc-cdis/gen3-community).
   title1: CSOC Working Group
-  detail1: The Gen3 CSOC Working group will focus on topics and Gen3 improvements to benefit those organizations managing multiple Gen3 systemsA commons services operations center (CSOC) is used by organizations that run more than one Gen3 system. CSOC stands for Commons Services Operations Center and allows a team of engineering and security staff to set up, configure, secure, operate, and monitor two or more data commons or data meshes.  Part of the working group focus will be on the development of dashboards and tools that will enable an administrator to configure, launch, and monitor a data commons or mesh. However, we will also discuss and work on other improvements and topics of interest to multi-Gen3 organizations.
+  detail1: The Gen3 CSOC Working group will focus on topics and Gen3 improvements to benefit those organizations managing multiple Gen3 systems. A commons services operations center (CSOC) is used by organizations that run more than one Gen3 system. A CSOC allows a team of engineering and security staff to set up, configure, secure, operate, and monitor two or more data commons or data meshes.  Part of the working group focus will be on the development of dashboards and tools that will enable an administrator to configure, launch, and monitor a data commons or mesh. We will also discuss and work on other improvements and topics of interest to multi-Gen3 organizations.
   detail4: Projects completed by the working group will be merged into the Gen3 source code and made available to the community.  As the Gen3 maintainer, CTDS will manage the working group, contribute code, and provide guidance to others on contributing to the Gen3 source code.  Other participants will help provide requirements and also contribute code to Gen3.
-  detail2: Contact support@gen3.org for an invite to the slack channel and zoom meeting. We meet most months on X, Y, and Z.
+  detail2: Contact support@gen3.org for an invite to the slack channel and zoom meeting. We meet most months.  Agenda and minutes can be found in the Gen3 Community GitHub Repo (https://github.com/uc-cdis/gen3-community).
   title2: Member Institutions
 ---
 
@@ -26,9 +25,8 @@ g3Teaser:
           {{< param "g3Teaser.detail" >}}
         </p>
         <p class="g3-space__margin-sm-bottom introduction">
-          {{< param "g3Teaser.detail3" >}}
+          Details for each working group can be found below and in the <a href="https://github.com/uc-cdis/gen3-community">Gen3 Community GitHub Repo.</a>
         </p>
-      </div>
     </div>
   </div>
 </section>
@@ -52,8 +50,9 @@ g3Teaser:
           <br>
           {{< param "g3Teaser.detail4" >}}
           <br>
-          <br>
-          {{< param "g3Teaser.detail2" >}}
+        </p>
+        <p class="g3-space__margin-sm-bottom introduction">
+          Contact support@gen3.org for an invite to the slack channel and monthly zoom meeting. Agenda and minutes can be found in the <a href="https://github.com/uc-cdis/gen3-community">Gen3 Community GitHub Repo</a>
         </p>
       </div>
     </div>
