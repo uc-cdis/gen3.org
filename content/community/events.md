@@ -17,6 +17,7 @@ g3Upcoming:
 
 
 
+
 g3past:
 - Title: GA4GH standards in Gen3
   Date: September 18, 4:30-5:30 pm CDT; September 19, 2024, 7:30-8:30am AEST
@@ -93,7 +94,6 @@ g3past:
 
 <section class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
     <div class="g3-inner-wrapper">
-        <h2>Recent Gen3 Events</h2>
     </div>
 </section>
 
