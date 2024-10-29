@@ -10,7 +10,6 @@ g3Teaser:
   title1: CSOC Working Group
   detail1: The Gen3 CSOC Working group will focus on topics and Gen3 improvements to benefit those organizations managing multiple Gen3 systems. A commons services operations center (CSOC) is used by organizations that run more than one Gen3 system. A CSOC allows a team of engineering and security staff to set up, configure, secure, operate, and monitor two or more data commons or data meshes.  Part of the working group focus will be on the development of dashboards and tools that will enable an administrator to configure, launch, and monitor a data commons or mesh. We will also discuss and work on other improvements and topics of interest to multi-Gen3 organizations.
   detail4: Projects completed by the working group will be merged into the Gen3 source code and made available to the community.  As the Gen3 maintainer, CTDS will manage the working group, contribute code, and provide guidance to others on contributing to the Gen3 source code.  Other participants will help provide requirements and also contribute code to Gen3.
-  detail2: Contact support@gen3.org for an invite to the slack channel and zoom meeting. We meet most months.  Agenda and minutes can be found in the Gen3 Community GitHub Repo (https://github.com/uc-cdis/gen3-community).
   title2: Member Institutions
 ---
 
@@ -52,7 +51,7 @@ g3Teaser:
           <br>
         </p>
         <p class="g3-space__margin-sm-bottom introduction">
-          Contact support@gen3.org for an invite to the slack channel and monthly zoom meeting. Agenda and minutes can be found in the <a href="https://github.com/uc-cdis/gen3-community">Gen3 Community GitHub Repo</a>
+          Contact support@gen3.org for an invite to the slack channel and monthly zoom meeting. Agenda and minutes can be found in the <a href="https://github.com/uc-cdis/gen3-community">Gen3 Community GitHub Repo</a>.
         </p>
       </div>
     </div>
