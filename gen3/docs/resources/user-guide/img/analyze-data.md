@@ -153,7 +153,7 @@ https_proxy=https://cloud-proxy.internal.io:3128 aws s3 ls s3://gen3-data/ --pro
 
 <h4> Whitelists </h4>
 
-Additionally, to aid Gen3 Commons security, the installation of tools from outside resources is managed through a whitelist. If you have problems installing a tool you need for your work, contact <support@datacommons.io> and with a list of any sites you might wish to install tools from. After passing a security review, these can be added to the whitelist to facilitate access.
+Additionally, to aid Gen3 Commons security, the installation of tools from outside resources is managed through a whitelist. If you have problems installing a tool you need for your work, contact <support@gen3.org> and with a list of any sites you might wish to install tools from. After passing a security review, these can be added to the whitelist to facilitate access.
 
 
 ## 4. Using the Gen3 Python SDK
