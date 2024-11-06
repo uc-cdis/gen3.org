@@ -29,7 +29,7 @@ Install Kind in the same folder as your docker binary. Here are installation opt
 Since I have an M1 Mac, I used:
 
 ```
-[ $(uname -m) = arm64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.24.0/kind-darwin-arm64
+[ $(uname -m) = arm64 ] curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.24.0/kind-darwin-arm64
 chmod +x ./kind
 mv ./kind /some-dir-in-your-PATH/kind
 ```
@@ -70,18 +70,18 @@ cat <<EOF | kind create cluster --config=-
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
-- role: control-plane
+  - role: control-plane
     kubeadmConfigPatches:
-        - |
-            kind: InitConfiguration
-            nodeRegistration:
-                kubeletExtraArgs:
-                    node-labels: "ingress-ready=true"
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            node-labels: "ingress-ready=true"
     extraPortMappings:
-    - containerPort: 80
+      - containerPort: 80
         hostPort: 80
         protocol: TCP
-    - containerPort: 443
+      - containerPort: 443
         hostPort: 443
         protocol: TCP
 EOF
