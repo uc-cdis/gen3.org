@@ -86,8 +86,10 @@ Analysis tools are developed using React, Gen3 core/frontend packages, and custo
 
 ## Architectural Diagrams
 
-### Gen3 Graph Data Flow
+### Architecture Overview
+![Gen3 Architecture Overview](/gen3-resources/developer-guide/img/Gen3_architecture_overview.png)
 
+### Gen3 Graph Data Flow
 ![Gen3 Graph Data Flow](/gen3-resources/developer-guide/img/Gen3 graph data flow.png)
 
 
