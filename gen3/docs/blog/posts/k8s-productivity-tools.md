@@ -6,6 +6,7 @@ date: 2023-10-13
 slug: k8s tools
 categories:
   - Operator
+  - CTDS
 tags:
   - Kubernetes
   - Minikube

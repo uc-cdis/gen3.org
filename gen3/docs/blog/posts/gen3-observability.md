@@ -1,8 +1,12 @@
 ---
-draft: false
-slug: Observability
+title: "Observability"
+slug: observability
 authors:
  - elise
+date: 2024-10-15
+categories:
+  - Operator
+  - CTDS
 tags:
   - Observability
   - Helm Chart
@@ -14,6 +18,7 @@ tags:
   - Real User Monitoring (RUM)
   - Metrics
   - Log Aggregation
+  - Kubernetes
   - Dashboards
   - Kubernetes Monitoring
   - Time-Series Database
@@ -21,10 +26,6 @@ tags:
   - Frontend Monitoring
   - Grafana Dashboards
   - Open Source Monitoring
-date: 2024-10-15
-categories:
-  - Operator
-
 ---
 
 # Deploying a Comprehensive Observability Stack with Helm
@@ -44,9 +45,7 @@ A log aggregation system designed to index and query logs with minimal resource 
 
 In this setup, Loki and Mimir are configured with internal ingress resources, enabling Alloy to send metrics and logs securely via VPC peering connections. Both Loki and Mimir write the ingested data to Amazon S3 for scalable and durable storage. This data can be queried and visualized through Grafana, which is hosted behind an internet-facing ingress. Access to Grafana can be restricted using CIDR ranges defined through the ALB ingress annotation: alb.ingress.kubernetes.io/inbound-cidrs: "cidrs". Additionally, the chart supports SAML authentication for Grafana, configured through the grafana.ini field, ensuring secure user access.
 
-<p align="center">
- <img src="Grafana.png" alt="Grafana Architecture" />
-</p>
+![Grafana architecutre](Grafana.png)
 
 
 ### Fips compliant images
