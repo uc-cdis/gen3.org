@@ -6,6 +6,7 @@ date: 2023-09-13
 slug: Gen3 on laptop
 categories:
   - Operator
+  - CTDS
 tags:
   - Kubernetes
   - Minikube
