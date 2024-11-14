@@ -4,7 +4,7 @@ This is the guide for users who want to stand up a new Gen3 instance. It include
 
 * [An **overview of Gen3 deployment** and considerations][deploy overview]
 * A [list of prerequisite software and resources][prerequisites] for production deployment of Gen3
-* A description of predeployment tasks, including [our approach to **Infrastructure as Code**][infrastructure as code], [preparing an SSL certificate], and [setting up a Secrets manager].
+* A description of predeployment tasks, including [our approach to **Infrastructure as Code**][infrastructure as code], [preparing an SSL certificate][ssl], and [setting up a Secrets manager][secrets].
 * A [description of the **different authentication methods**][authentication methods] that can be used in Gen3
 * [A **guide to Helm deployment and configuration**][helm guide]
 * Postdeployment tasks, including [**creating a Data Dictionary** and Data Model][data dictionary], [**submitting data**][submit data], [**customizing search for Query, Exploration, and Discovery pages** in Gen3][customize search], and [**customizing the front end**][customize frontend]
@@ -55,11 +55,13 @@ Compose-services was used to deploy Gen3 at a small scale, for experimental comm
 [helm guide]: /gen3-resources/operator-guide/helm/
 [deploy overview]: deploy-gen3.md
 [prerequisites]: prerequisites.md
-[infrastructure as code]: /gen3-resources/operator-guide/ioc-overview.md
+[infrastructure as code]: /gen3-resources/operator-guide/iac-overview/
 [ssl]: /gen3-resources/operator-guide/ssl-cert.md
 [secrets]: /gen3-resources/operator-guide/secrets-mgr.md
-[authentication methods]: /gen3-resources/operator-guide/gen3-authn-methods.md
-[data dictionary]: /gen3-resources/operator-guide/create-data-dictionary.md
-[submit data]: /gen3-resources/operator-guide/submit-data.md
-[customize search]: /gen3-resources/operator-guide/customize-search.md
-[customize frontend]: /gen3-resources/operator-guide/customize-frontend.md
+[authentication methods]: /gen3-resources/operator-guide/gen3-authn-methods/
+[data dictionary]: /gen3-resources/operator-guide/create-data-dictionary/
+[submit data]: /gen3-resources/operator-guide/submit-structured-data/
+[customize search]: /gen3-resources/operator-guide/customize-search/
+[customize frontend]: /gen3-resources/operator-guide/customize-frontend/
+[ssl]: /gen3-resources/operator-guide/ssl-cert/
+[secrets]: /gen3-resources/operator-guide/tutorial_secrets-mgr/

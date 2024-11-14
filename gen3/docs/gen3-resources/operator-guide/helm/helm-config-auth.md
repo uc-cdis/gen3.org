@@ -176,5 +176,5 @@ Once the client is created, share the client_id and client_secret with the appli
 
 See the following tutorials for additional information relevant to AuthN/AuthZ.
 
-* [Fence Usersync CronJob](../fence_usersync_job.md)
-* [AWS IAM Global User](../global_IAM_helm_user.md)
+* [Fence Usersync CronJob](/gen3-resources/operator-guide/tutorial_fence_usersync_job/)
+* [AWS IAM Global User](/gen3-resources/operator-guide/tutorial_global_IAM_helm_user/)
