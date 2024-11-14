@@ -11,10 +11,10 @@ g3Teaser:
   para2: This page organizes and presents the Gen3 software services in terms of the different types of data resources mentioned above.
 g3DataFeature:
   f0:
-    title: Gen3 Data Ecosystems
-    subtitle: Data ecosystems consist of an interconnected network of data resources that are integrated by utilizing a common set of software services called the Gen3 Framework Services. These services support the emergence of data ecosystems by empowering data resources to interoperate through providing common protocols for user authentication and authorization, data indexing, and metadata services.
+    title: Gen3 Data Meshes
+    subtitle: Data meshes consist of an interconnected network of data resources that are integrated by utilizing a common set of software services called the Gen3 Framework Services.  Meshes may also be referred to as fabrics or ecosystems. The framework services support the emergence of data meshes by empowering data resources to interoperate through providing common protocols for user authentication and authorization, data indexing, and metadata services.
     button:
-      link: /products/data-ecosystems
+      link: /products/data-mesh
   f1:
     title: Gen3 Framework Services
     subtitle: User authentication with data object and metadata indexing.
