@@ -3,6 +3,7 @@ identifier: products/data-mesh
 title: Gen3 - Products - Data Meshes
 linktitle: /products/data-mesh
 date: 2021-01-08
+aliases: /products/data-ecosystems
 g3Teaser:
   title: Gen3 Data Meshes
   detail: Data meshes consist of an interconnected network of data resources that are integrated by utilizing a common set of software services called the Gen3 Framework Services.  Meshes may also be referred to as fabrics or ecosystems. The framework services support the emergence of data meshes by empowering data resources to interoperate through providing common protocols for user authentication and authorization, data indexing, and metadata services.
