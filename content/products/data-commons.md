@@ -6,7 +6,7 @@ date: 2021-01-08
 g3Teaser:
   title: Gen3 Data Commons
   detail: Gen3 Data Commons are cyberinfrastructure that co-locates data analysis, exploration and visualization tools with data management services for import and export of structured information like clinical, phenotypic, or biospecimen data, and data objects, like genomics data files or medical images.
-  para1: Gen3 Data Commons are capable of interoperation with other resources in a data mesh by utilizing the Gen3 Framework Services for user authentication and authorization, data object indexing, and metadata services.
+  para1: Gen3 Data Commons are capable of interoperation with other resources in a data mesh by utilizing the Gen3 Mesh Services for user authentication and authorization, data object indexing, and metadata services.
 g3Feature:
   f1:
     title: Data Search

@@ -1,17 +1,17 @@
 ---
-identifier: products/data-mesh
-title: Gen3 - Products - Data Meshes
-linktitle: /products/data-mesh
+identifier: products/data-hubs
+title: Gen3 - Products - Data Hubs
+linktitle: /products/data-hubs
 date: 2021-01-08
 aliases: /products/data-ecosystems
 g3Teaser:
-  title: Gen3 Data Meshes
-  detail: Data meshes consist of an interconnected network of data resources that are integrated by utilizing a common set of software services called the Gen3 Framework Services.  Meshes may also be referred to as fabrics or ecosystems. The framework services support the emergence of data meshes by empowering data resources to interoperate through providing common protocols for user authentication and authorization, data indexing, and metadata services.
-  para1: In a healthy data mesh, one finds multiple data commons, data repositories, knowledgebases, and other sources of data alongside cloud-computing platforms for large-scale processing of data and data portals, cloud-based workspaces, Jupyter notebooks and other applications for exploring and analyzing data.
+  title: Gen3 Data Hubs
+  detail: A data mesh (aka data ecosystem) consists of two or more data commons, data repositories, knowledgebases, and applications over a common set of services (called mesh services). A data hub can search and discover data from across the mesh and move the data to a Gen3 Workspace for exploring and analyzing the data.
+  para1: In a healthy data ecosystem, one finds multiple data commons, data repositories, knowledgebases, and other sources of data alongside cloud-computing platforms for large-scale processing of data and data portals, cloud-based workspaces, Jupyter notebooks and other applications for exploring and analyzing data.
 g3Feature:
   f1:
-    title: Gen3 Framework Services
-    detail: The Gen3 Framework Services are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via a robust and flexible access control policy engine.
+    title: Gen3 Mesh Services
+    detail: The Gen3 Mesh Services are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via a robust and flexible access control policy engine.
     fig1: /figs/features/index.svg
     fig2: /figs/features/auth.svg
     fig3: /figs/features/mds.svg

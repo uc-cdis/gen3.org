@@ -1,6 +1,6 @@
 # Gen3 Products
 
-The Gen3 platform consists of a collection of open source software services for building and managing cloud-based data resources, namely, interoperable nodes in a data ecosystem, data commons, and analysis workspaces.
+The Gen3 platform consists of a collection of open source software services for building and managing cloud-based data resources, namely, interoperable nodes in a data mesh, data commons, and analysis workspaces.
 
 Each of the Gen3 services is designed to accomplish a specific function in a data ecosystem, and that is achieved by providing a publicly-accessible application programming interface (API) that users, applications, and other services can send requests to.
 
@@ -14,7 +14,7 @@ Data ecosystems consist of an interconnected network of data resources that are 
     button:
       link: /products/data-ecosystems
 
-## Gen3 Framework Services
+## Gen3 Mesh Services
 
 User authentication with data object and metadata indexing.
     button:

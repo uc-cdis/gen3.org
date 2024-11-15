@@ -6,20 +6,20 @@ date: 2021-01-08
 g3Teaser:
   fig: /figs/productkv.svg
   title: Gen3 Products
-  detail: The Gen3 platform consists of a collection of open source software services for building and managing cloud-based data resources, namely, interoperable nodes in a data mesh, data commons, and analysis workspaces.
+  detail: The Gen3 platform consists of a collection of open-source software services for building and managing cloud-based data resources, namely, interoperable nodes in a data mesh, data commons, and analysis workspaces.
   para1: Each of the Gen3 services is designed to accomplish a specific function in a data ecosystem, and that is achieved by providing a publicly-accessible application programming interface (API) that users, applications, and other services can send requests to.
   para2: This page organizes and presents the Gen3 software services in terms of the different types of data resources mentioned above.
 g3DataFeature:
   f0:
-    title: Gen3 Data Meshes
-    subtitle: Data meshes consist of an interconnected network of data resources that are integrated by utilizing a common set of software services called the Gen3 Framework Services.  Meshes may also be referred to as fabrics or ecosystems. The framework services support the emergence of data meshes by empowering data resources to interoperate through providing common protocols for user authentication and authorization, data indexing, and metadata services.
+    title: Gen3 Data Hubs
+    subtitle: A Data Hub can search and discover data from across a data mesh and move the data to a Gen3 Workspace for exploring and analyzing the data.
     button:
-      link: /products/data-mesh
+      link: /products/data-hubs
   f1:
-    title: Gen3 Framework Services
+    title: Gen3 Mesh Services
     subtitle: User authentication with data object and metadata indexing.
     button:
-      link: /products/framework-services
+      link: /products/mesh-services
     contents:
       c1:
         name: Object Indexing
