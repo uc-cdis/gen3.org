@@ -4,6 +4,18 @@ An important strength of Gen3 deployment with Helm is that the Gen3 Helm repo pr
 
 Therefore, **new Gen3 operators should consider first deploying the minimal, most generic Gen3 deployment with Helm.** It will allow them to establish that all of the necessary software is installed and functional, and lets them walk through basic Gen3 deployment on their computer in 30-60 minutes (assuming pre-installation of all necessary software). Once a Gen3 operator has the minimal Gen3 deployed locally, they can begin customizing in a systematic way that simplifies troubleshooting by limiting the changes made at each step.
 
+The simplest minimal deployment is deploying locally to your localhost, without any SSL certificate or host domain. Although you can deploy a Gen3 instance with all the default values in this way, full configuration and some Gen3 tools depend on the site having an SSL certificate.
+
+We provide instructions for minimal deployment with or without an SSL certificate and host domain in the example below. The bulk of the instructions are identical, regardless. In the few places where instructions are different, we provide distinct instructions for these using the following visual callouts:
+
+!!! local "Local deployment with no SSL certificate"
+
+    The information specific to local deployment with no SSL will be here. Note that, although you can deploy Gen3 with no SSL, some tools or features may require that the Gen3 site has an SSL for full functionality.
+
+!!! served "Local deployment to a host domain with SSL"
+
+    The information specific to deployment to a host domain with an SSL will be here.
+
 ## Prerequisites to locally deploy generic Gen3
 
 * Install Helm (https://helm.sh/docs/intro/install/) - there are options for installation using a package installer, or downloading directly, for various OS. Note that we will need the Helm CLI, which may not come with all packages.
@@ -139,7 +151,14 @@ It’s ready when the output indicates the condition is met.
 
 ## Obtain certificate and create K8s secret
 
-*If you already have an SSL certificate, you can skip to [Create a minimal values.yaml](#create-a-minimal-valuesyaml)*
+!!! local "Local deployment with no SSL certificate"
+
+    You can deploy locally with no SSL or host domain, although some features and tools may have limited functionality without an SSL. If this is how you will deploy, you do not need to create a certificate. You can skip to [Create a minimal values.yaml](#create-a-minimal-valuesyaml).
+
+!!! served "Local deployment to a host domain with SSL"
+
+    If you choose to deploy with an SSL certificate and you do not yet have one, follow the instructions in this section. If you already have an SSL certificate, you can skip to [Create a minimal values.yaml](#create-a-minimal-valuesyaml)
+
 
 You will need to have a host site that you own to proceed. Here, our host site is `sara.dev.planx-pla.net`.
 
@@ -227,6 +246,14 @@ NEXT STEPS:
 
 Once you have a certificate, you can use this to create a minimal Gen3 values.yaml for Helm deployment. This provides any values for the Gen3 umbrella chart that are different than the default configuration. You can create this file in your preferred IDE or text editor. Save it as “values.yaml”
 
+!!! local "Local deployment with no SSL certificate"
+
+    If you are deploying locally and you are deploying with all the default values configured in the Helm Gen3 repo, you do not need to have a Gen3 values.yaml at this stage. When you are ready to override any default values, you can create a Gen3 values.yaml at that point.
+
+!!! served "Local deployment to a host domain with SSL"
+
+    You will need a Gen3 values.yaml to provide your SSL certificate and point to your host site. Use the instructions in this sections to create one.
+
 A minimal values.yaml will have a `global` section with nested `hostname` and `tls` sections. (I have elided most of the key and certificate body, but left the structure visible so you can see how it was organized.) Note that there is one private key, but two certificates in my example. You may have more or fewer certificates; be sure you include all certificates from your output. (These should have all the certificates in the SSL certificate chain.)
 
 ```
@@ -261,7 +288,7 @@ The output from these `cat` commands will be the key and certificate values that
 
 ### Adding to the Gen3 values.yaml later
 
-Deploying initially with a minimal values.yaml will allow you to limit the number of places you need to troubleshoot if your Gen3 deployment has problems. It is much easier to troubleshoot problems if there are fewer variables that could be the problem. Proceed with your first deployment using only the minimal values.yaml.
+Deploying initially with a minimal values.yaml will allow you to limit the number of places you need to troubleshoot if your Gen3 deployment has problems. It is much easier to troubleshoot problems if there are fewer variables that could be the problem. Proceed with your first deployment using only the minimal values.yaml (or no Gen3 values.yaml at all, if deploying without SSL).
 
 However, once you know you have your instance up, you will want to expand the values.yaml to customize your instance. There is information at the end of this tutorial that will help you customize your values.yaml.
 
@@ -280,9 +307,10 @@ helm repo add gen3 https://helm.gen3.org
 Deploy Gen3 using your values.yaml with the command below.
 
 * Where `dev` is what we’re calling our release
-* `gen3/gen3` means the chart we’re deploying is `gen3` (after slash) from the helm repo called `gen3` (before slash).
-* If the values.yaml is named differently, update the name.
-* If the values.yaml is located somewhere other than the directory you are in for your terminal, change directories to where the values.yaml is before running the command, or else include the path to the values.yaml from the current directory.
+* `gen3/gen3` means the chart we’re deploying is `gen3` (after slash) from the helm repo called `gen3` (before slash)
+* If you have no Gen3 values.yaml, remove the `-f values.yaml` part
+* If the values.yaml is named differently, update the name
+* If the values.yaml is located somewhere other than the directory you are in for your terminal, change directories to where the values.yaml is before running the command, or else include the path to the values.yaml from the current directory
 
 ```
 helm upgrade --install dev gen3/gen3 -f values.yaml
@@ -347,6 +375,14 @@ Here, if you look again in k9s, you will see another portal pod coming up (the l
 
 ## Point your domain to localhost
 
+!!! local "Local deployment with no SSL certificate"
+
+    If you are deploying directly to localhost with no SSL, you can skip to [View Your New Deployment](#view-your-new-deployment).
+
+!!! served "Local deployment to a host domain with SSL"
+
+    Follow the instructions below to point your host site to the localhost.
+
 In your terminal, run the following command:
 
 ```
@@ -376,7 +412,7 @@ Save your file changes and return to your terminal.
 
 ## View your new deployment!
 
-Type your host name in your browser, and view your newly-deployed Gen3!
+Type your host site name (`localhost` if you deployed without an SSL) in your browser, and view your newly-deployed Gen3!
 
 ![Landing page for generic Gen3 deployment](../img/generic-Gen3-landing.png)
 
