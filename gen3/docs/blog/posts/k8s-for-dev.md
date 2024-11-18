@@ -5,6 +5,7 @@ authors:
 date: 2023-08-13
 categories:
   - Operator
+  - CTDS
 slug: k8s for development
 tags:
   - Kubernetes
