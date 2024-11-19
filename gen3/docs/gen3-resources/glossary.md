@@ -34,7 +34,7 @@ A Digital Object Identifier is an identifier used to permanently and stably iden
 ## Edge Node
 Edge nodes may be created at clinics, labs, hospitals, or academic institutions to share data with data platforms.  The data platform nodes connect with a data hub (forming a data fabric/mesh) to provide a federated platform for data discovery.  Edge nodes share only a subset of the data they store with data platforms
 ## ETL
-Structured data submitted to commons are stored in PostgreSQL. Querying data from PostgreSQL with multiple join is painful and inefficient. So, we use ElasticSearch as a place to store materialized dataset. Extract-transform-load (ETL) is a process that creates the materialized data from PostgreSQL and store them in ElasticSearch.  This is accomplished via the Tube microservice. More details of running an ETL can be found [here](gen3-resources/operator-guide/customize-search/#etl).
+Structured data submitted to commons are stored in PostgreSQL. Querying data from PostgreSQL with multiple join is painful and inefficient. So, we use ElasticSearch as a place to store materialized dataset. Extract-transform-load (ETL) is a process that creates the materialized data from PostgreSQL and store them in ElasticSearch.  This is accomplished via the Tube microservice. More details of running an ETL can be found [here](operator-guide/customize-search.md#etl).
 ## FAIR Data
 FAIR data are data which meet the principles of findability, accessibility, interoper- ability, and reusability [12]. There is now an extensive literature on FAIR data.
 ## Framework Services
@@ -94,12 +94,12 @@ Gen3 workspaces are secure data analysis environments in the cloud that can acce
 
 
 [crosswalk setup]: https://github.com/uc-cdis/gen3sdk-python/blob/master/docs/howto/crosswalk.md
-[data dictionary overview]: /gen3-resources/operator-guide/create-data-dictionary/
-[AggMDS]: /gen3-resources/operator-guide/customize-search/#discovery-page
-[Data Portal User Guide]: /gen3-resources/user-guide/portal/
-[Microservices]: /gen3-resources/developer-guide/microservices/
-[Gen3 client docs]: /gen3-resources/user-guide/access-data/#installation-instructions
-[SDK docs]: /gen3-resources/user-guide/search/#exporting-structured-data-programmatically
+[data dictionary overview]: operator-guide/create-data-dictionary.md
+[AggMDS]: operator-guide/customize-search.md#discovery-page
+[Data Portal User Guide]: user-guide/portal.md
+[Microservices]: developer-guide/microservices.md
+[Gen3 client docs]: user-guide/access-data.md#installation-instructions
+[SDK docs]: user-guide/search.md#exporting-structured-data-programmatically
 [PFB GitHub]: https://github.com/uc-cdis/pypfb
 [PFB Pub]: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010944
-[workspace use]: /gen3-resources/user-guide/analyze-data/
+[workspace use]: user-guide/analyze-data.md

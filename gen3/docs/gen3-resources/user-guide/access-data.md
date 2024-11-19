@@ -249,13 +249,13 @@ For example, when configuring a profile with the client, the user must specify t
 
 <!-- AuthN/Z -->
 
-[configure auth]: gen3-resources/operator-guide/deploy-gen3/
+[configure auth]: ../operator-guide/gen3-authn-methods.md
 [era_commons]: https://public.era.nih.gov/commonsplus/public/login.era
 [dbgap]: https://www.ncbi.nlm.nih.gov/gap/
 [dbgap auth]: https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?page=login
 
 <!--Gen3 client -->
 [Gen3 Client]: https://github.com/uc-cdis/cdis-data-client/releases/latest
-[PATH]: /gen3-resources/user-guide/access-data/#working-from-the-command-line
-[img create API key]: /gen3-resources/user-guide/img/Gen3_Keys.png
-[config profile]: /gen3-resources/user-guide/access-data/#configure-a-profile-with-credentials
+[PATH]: access-data.md#working-from-the-command-line
+[img create API key]: img/Gen3_Keys.png
+[config profile]: access-data.md#configure-a-profile-with-credentials

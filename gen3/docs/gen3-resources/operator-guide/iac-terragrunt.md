@@ -121,7 +121,7 @@ remote_state {
 }
 ```
 
-This should look somewhat similar to the setup within the [**running terraform as a module**](../2.Running Terraform as a Module/2.Deployment), but there are a few small changes. For one, we are setting the inputs section to merge in the variables from higher up in the hierarchy, and we have changed the syntax around setting a few other terraform blocks.
+This should look somewhat similar to the setup within the [**running terraform as a module**](iac-terraform.md#running-terraform-as-a-module), but there are a few small changes. For one, we are setting the inputs section to merge in the variables from higher up in the hierarchy, and we have changed the syntax around setting a few other terraform blocks.
 
 Once this is setup, you can do the same with any other commons deployments you have by setting up other directories with files that look like this. After all of your commons are defined in the repo, you can move on to running terragrunt.
 

@@ -131,15 +131,15 @@ https://gen3.datacommons.io/index/47c46ead-f6f5-4cc9-86b9-2354cafe8c64
 
 
 <!-- What Does the API Do? -->
-[Gen3 Submit Data]: /gen3-resources/operator-guide/submit-data
+[Gen3 Submit Data]: ../operator-guide/submit-structured-data.md
 [learn GraphQL]: http://graphql.org/learn
-[microservice docs]: /gen3-resources/developer-guide/gen3-architecture/
+[microservice docs]: ../developer-guide/microservices.md
 [Sheepdog]: https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/sheepdog/master/openapi/swagger.yml#/
 [Peregrine]: https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/peregrine/master/openapis/swagger.yaml
 [Gen3 SDK-Python]: https://github.com/uc-cdis/gen3sdk-python
 [Gen3 SDK-R]: https://github.com/uc-cdis/gen3sdk-R
 <!-- Credentials -->
-[img API key profile]: /gen3-resources/user-guide/img/API_key_profile_page.png
-[img API copy keys]: /gen3-resources/user-guide/img/API_copy_keys.png
+[img API key profile]: img/API_key_profile_page.png
+[img API copy keys]: img/API_copy_keys.png
 <!-- Querying and Downloading Metadata -->
 [Gen3 DC]: https://gen3.datacommons.io/

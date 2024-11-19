@@ -9,11 +9,11 @@ Because the structure of a commons' MDS and the Discovery Page configuration are
 Instructions for the creation and modification of an MDS record can be found here as part of the [Gen3 SDK][Gen3 SDK Discovery Page].
 
 ## Discovery Page
-![BRH Discovery Page](/gen3-resources/operator-guide/img/BRH_Discovery_Page.png)
+![BRH Discovery Page](img/BRH_Discovery_Page.png)
 
 <!-- Links -->
 
 [MDS]: https://github.com/uc-cdis/metadata-service
 [AggMDS]: https://github.com/uc-cdis/agg-metadata
-[Customize Gen3 Search Interface Section]: (/gen3-resources/operator-guide/customize-search/)
+[Customize Gen3 Search Interface Section]: customize-search.md
 [Gen3 SDK Discovery Page]: https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/cli/discovery.py

@@ -11,8 +11,8 @@ If you are a researcher or data scientist looking to access a Gen3 Data Commons 
 * The [Biomedical Research Hub][BRH] is an example data mesh that is also used to highlight mesh-specific features.
 
 <!-- Links -->
-[Gen3 User Guide]: /gen3-resources/user-guide/
-[Gen3 Operator Guide]: /gen3-resources/operator-guide/
+[Gen3 User Guide]: ../user-guide/index.md
+[Gen3 Operator Guide]: ../operator-guide/index.md
 
 [source code]: https://github.com/uc-cdis
 [data hub]: https://gen3.datacommons.io/

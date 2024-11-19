@@ -4,7 +4,7 @@ This is the guide for users who want to stand up a new Gen3 instance. It include
 
 * [An **overview of Gen3 deployment** and considerations][deploy overview]
 * A [list of prerequisite software and resources][prerequisites] for production deployment of Gen3
-* A description of predeployment tasks, including [our approach to **Infrastructure as Code**][infrastructure as code], [preparing an SSL certificate], and [setting up a Secrets manager].
+* A description of predeployment tasks, including [our approach to **Infrastructure as Code**][infrastructure as code], [preparing an SSL certificate][ssl], and [setting up a Secrets manager][secrets].
 * A [description of the **different authentication methods**][authentication methods] that can be used in Gen3
 * [A **guide to Helm deployment and configuration**][helm guide]
 * Postdeployment tasks, including [**creating a Data Dictionary** and Data Model][data dictionary], [**submitting data**][submit data], [**customizing search for Query, Exploration, and Discovery pages** in Gen3][customize search], and [**customizing the front end**][customize frontend]
@@ -48,18 +48,20 @@ Compose-services was used to deploy Gen3 at a small scale, for experimental comm
 [Although we do not recommend using this, you can explore Gen3 compose-services here][compose-services]
 
 <!-- Links -->
-[Gen3 User Guide]: /gen3-resources/user-guide/
-[Gen3 Developer Guide]: /gen3-resources/developer-guide/
+[Gen3 User Guide]: ../user-guide/index.md
+[Gen3 Developer Guide]: ../developer-guide/index.md
 [cloud-automation]: https://github.com/uc-cdis/cloud-automation/blob/master/doc/csoc-free-commons-steps.md
 [compose-services]: https://github.com/uc-cdis/compose-services/tree/master
-[helm guide]: /gen3-resources/operator-guide/helm/
+[helm guide]: helm/index.md
 [deploy overview]: deploy-gen3.md
 [prerequisites]: prerequisites.md
-[infrastructure as code]: /gen3-resources/operator-guide/ioc-overview.md
-[ssl]: /gen3-resources/operator-guide/ssl-cert.md
-[secrets]: /gen3-resources/operator-guide/secrets-mgr.md
-[authentication methods]: /gen3-resources/operator-guide/gen3-authn-methods.md
-[data dictionary]: /gen3-resources/operator-guide/create-data-dictionary.md
-[submit data]: /gen3-resources/operator-guide/submit-data.md
-[customize search]: /gen3-resources/operator-guide/customize-search.md
-[customize frontend]: /gen3-resources/operator-guide/customize-frontend.md
+[infrastructure as code]: iac-overview.md
+[ssl]: ssl-cert.md
+[secrets]: secrets-mgr.md
+[authentication methods]: gen3-authn-methods.md
+[data dictionary]: create-data-dictionary.md
+[submit data]: submit-structured-data.md
+[customize search]: customize-search.md
+[customize frontend]: customize-frontend.md
+[ssl]: ssl-cert.md
+[secrets]: tutorial_secrets-mgr.md

@@ -27,7 +27,7 @@ With terraform installed and configured, you are ready to deploy and manage clou
 
 <!-- Links -->
 
-[helm]:(https://helm.sh)
+[helm]: https://helm.sh
 [terraform]: https://www.terraform.io/
 [Gen3 terraform]: https://github.com/uc-cdis/gen3-terraform
 [terraform installation]: https://github.com/uc-cdis/gen3-terraform

@@ -346,7 +346,7 @@ gen3.tools.indexing.index_manifest.index_object_manifest(commons_url=commons_url
 ### 7. Map files to a Data Node with the Gen3 SDK
 
 
-Once indexing is complete, Gen3 offers a [Submission SDK toolkit][gen3 submission sdk] to map indexed data files to nodes designated to contain data in the data dictionary via the [Sheepdog microservice][sheepdog github].  Unless single data files are being ingested, the SDK submission toolkit generally requires a tab separated variable file, and specific nodes requirements for each data file type can be specified in the data dictionary. After mapping in Sheepdog is complete the file metadata will be mapped from the [program and project][program and project] administrative nodes (previously created) to its respective data containing nodes. The mapping in sheepdog is the basis for other search and query services either natively in sheepdog or after other extraction, transformation and load [(ETL)](/gen3-resources/operator-guide/customize-search/) services have been performed.
+Once indexing is complete, Gen3 offers a [Submission SDK toolkit][gen3 submission sdk] to map indexed data files to nodes designated to contain data in the data dictionary via the [Sheepdog microservice][sheepdog github].  Unless single data files are being ingested, the SDK submission toolkit generally requires a tab separated variable file, and specific nodes requirements for each data file type can be specified in the data dictionary. After mapping in Sheepdog is complete the file metadata will be mapped from the [program and project][program and project] administrative nodes (previously created) to its respective data containing nodes. The mapping in sheepdog is the basis for other search and query services either natively in sheepdog or after other extraction, transformation and load [(ETL)](customize-search.md) services have been performed.
 
 
 
@@ -733,16 +733,16 @@ Working from the command line instructions are covered in the [Downloading Files
 
 <!-- Standard Submission -->
 
-[Node Order]: /gen3-resources/operator-guide/submit-structured-data/#the-order-of-node-submission-is-important
-[TSV metadata collection]: /gen3-resources/operator-guide/img/gen3_core_metadata_collection_template.tsv
-[node dropdown]: /gen3-resources/operator-guide/img/node_dropdown.png
-[cmc form]: /gen3-resources/operator-guide/img/cmc_form.png
+[Node Order]: submit-structured-data.md#order-of-node-submission
+[TSV metadata collection]: img/gen3_core_metadata_collection_template.tsv
+[node dropdown]: img/node_dropdown.png
+[cmc form]: img/cmc_form.png
 [Gen3 client GitHub]: https://github.com/uc-cdis/cdis-data-client/releases/latest
-[submit data]: /gen3-resources/operator-guide/img/submit-data.png
-[map my files]: /gen3-resources/operator-guide/img/map-my-files.png
-[select files]: /gen3-resources/operator-guide/img/select-files.png
-[map to node]: /gen3-resources/operator-guide/img/map-to-node.png
-[fill required]: /gen3-resources/operator-guide/img/fill-required-properties.png
+[submit data]: img/submit-data.png
+[map my files]: img/map-my-files.png
+[select files]: img/select-files.png
+[map to node]: img/map-to-node.png
+[fill required]: img/fill-required-properties.png
 
 <!-- Indexing files already in teh cloud -->
 [sheepdog github]: https://github.com/uc-cdis/sheepdog
@@ -762,9 +762,9 @@ Working from the command line instructions are covered in the [Downloading Files
 [sdk indexing]: https://uc-cdis.github.io/gen3sdk-python/_build/html/tools/indexing.html
 [sdk auth]: https://uc-cdis.github.io/gen3sdk-python/_build/html/auth.html
 [gen3-s3indexer-extramural]: https://github.com/jacquayj/gen3-s3indexer-extramural
-[program and project]: /gen3-resources/operator-guide/submit-structured-data/#order-of-node-submission
+[program and project]: submit-structured-data.md#order-of-node-submission
 
 
 <!-- Gen3 Client -- >
-[client download]: /gen3-resources/user-guide/access-data/#download-files-using-the-gen3-client
+[client download]: ../user-guide/access-data.md#download-files-using-the-gen3-client
 [delete unmapped files]: https://github.com/uc-cdis/planx-bioinfo-tools/blob/master/submission_tool/delete_unmapped_files.py
