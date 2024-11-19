@@ -203,5 +203,5 @@ Any string you put in this section will override the name of the secret that is 
 [External Secrets Operator]:https://external-secrets.io/latest/
 [umbrella chart]:https://github.com/uc-cdis/gen3-helm/tree/master/helm/gen3
 [IAM roles to Kubernetes]: https://docs.aws.amazon.com/eks/latest/userguide/associate-service-account-role.html
-[Fence Usersync]: /gen3-resources/operator-guide/fence_usersync_job/
-[global_IAM_helm]: /gen3-resources/operator-guide/global_IAM_helm_user/
+[Fence Usersync]: tutorial_fence_usersync_job.md
+[global_IAM_helm]: tutorial_global_IAM_helm_user.md

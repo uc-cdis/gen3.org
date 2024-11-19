@@ -186,11 +186,11 @@ When viewing a project, clicking on a node name will allow the user to view the 
 <!--Links -->
 
 [Gen3 Data Hub DD]: https://gen3.datacommons.io/DD
-[Subject Template]: /gen3-resources/operator-guide/img/Gen3_Dictionary_Subject_template_2020.png
+[Subject Template]: img/Gen3_Dictionary_Subject_template_2020.png
 [Fence programs and projects]: https://github.com/uc-cdis/fence/blob/master/docs/additional_documentation/user.yaml_guide.md#programs-and-projects-crud-access
 [Gen3 SDK]: https://uc-cdis.github.io/gen3sdk-python/_build/html/_modules/gen3/submission.html
-[toolbar submission]: /gen3-resources/operator-guide/img/Gen3_Toolbar_data_submission.png
-[submit data]: /gen3-resources/operator-guide/img/Gen3_Data_Submission_submit_data.png
-[upload file]: /gen3-resources/operator-guide/img/Gen3_Data_Submission_Use_Form.png
-[Node Click]: /gen3-resources/operator-guide/img/Gen3_Model_Click_highlight.png
-[Node Informatin]: /gen3-resources/operator-guide/img/Gen3_Model_node_view.png
+[toolbar submission]: img/Gen3_Toolbar_data_submission.png
+[submit data]: img/Gen3_Data_Submission_submit_data.png
+[upload file]: img/Gen3_Data_Submission_Use_Form.png
+[Node Click]: img/Gen3_Model_Click_highlight.png
+[Node Informatin]: img/Gen3_Model_node_view.png

@@ -273,33 +273,33 @@ query ($filter: JSON) {
 <!-- Access Metadata section. -->
 <!-- NOTE: these hyperlinks link to headings in the document - it's a table of contents -->
 <!-- Exploration section. -->
-[img Gen3 Toolbar Exploration]: /gen3-resources/user-guide/img/Gen3_Toolbar_exploration.png
-[img Explorer GIF]: /gen3-resources/user-guide/img/explorer_gif_2020.gif
+[img Gen3 Toolbar Exploration]: img/Gen3_Toolbar_exploration.png
+[img Explorer GIF]: img/explorer_gif_2020.gif
 [Gen3 Data Hub]: https://gen3.datacommons.io/
-[API instructions]: /gen3-resources/user-guide/search/#access-data-using-the-api
-[Gen3 client]: /gen3-resources/user-guide/access-data/#download-files-using-the-gen3-client
-[Gen3 bulk download]: /gen3-resources/user-guide/access-data/#multiple-file-download-with-manifest
+[API instructions]: search.md#access-data-using-the-api
+[Gen3 client]: access-data.md#download-files-using-the-gen3-client
+[Gen3 bulk download]: access-data.md#multiple-file-download-with-manifest
 
 <!-- API section -->
-[Developer API specs]: https://gen3.org/resources/developer/microservice
-[API documentation]: /gen3-resources/user-guide/using-api/
+[Developer API specs]: ../developer-guide/microservices.md
+[API documentation]: using-api.md
 [SDK doc pg]: https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html
 [Gen3Submission Python SDK class]: https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html
 [send query to API]: https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/submission.py#L289
 [Retrieve graphQL schema]: https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/submission.py#L327
 [export_record]: https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/submission.py#L223
 [export_node]: https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/submission.py#L255
-[Using Gen3 SDK]: /gen3-resources/user-guide/analyze-data/#using-the-gen3-python-sdk
+[Using Gen3 SDK]: analyze-data.md#using-the-gen3-python-sdk
 [Gen3 SDK GitHub pg]: https://github.com/uc-cdis/gen3sdk-python
 
 
 <!-- Submission page -->
 [Gen3 Data Submission pg]: https://gen3.datacommons.io/submission
-[img Browse Nodes in Projects]: /gen3-resources/user-guide/img/projects-nodes-view.png
-[img Graphing a project]: /gen3-resources/user-guide/img/graph-a-project.gif
+[img Browse Nodes in Projects]: img/projects-nodes-view.png
+[img Graphing a project]: img/graph-a-project.gif
 [GraphQL]: https://graphql.org/
 [Query page]:  https://gen3.datacommons.io/query
-[gif Peregrine]: /gen3-resources/user-guide/img/simple_query_2020.gif
+[gif Peregrine]: img/simple_query_2020.gif
 [GraphQL pagination]: http://graphql.org/learn/pagination/
 [Guppy]: https://github.com/uc-cdis/guppy/blob/master/doc/queries.md
 [Guppy download endpoint]: https://github.com/uc-cdis/guppy/blob/master/doc/download.md

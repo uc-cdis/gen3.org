@@ -6,32 +6,32 @@ Please click [HERE](https://github.com/uc-cdis/gen3-helm/blob/master/helm/observ
 
 The Observability Helm chart provides an all-in-one solution for deploying Mimir, Loki, and Grafana to your Kubernetes cluster, enabling a complete observability stack for metrics, logs, and visualization.
 
-### Grafana: 
+### Grafana
 A leading open-source platform for data visualization and monitoring. Grafana allows you to create rich, interactive dashboards from a variety of data sources, making it easy to analyze metrics and logs from your systems.
 
-### Mimir: 
+### Mimir
 Grafana Mimir is a highly scalable time-series database optimized for storing and querying metrics. It enables powerful alerting and querying for real-time monitoring of your infrastructure and applications.
 
-### Loki: 
+### Loki
 Grafana Loki is a log aggregation system designed to efficiently collect, store, and query logs from your applications. It works seamlessly with Grafana, providing an integrated way to visualize logs alongside metrics.
 
 By deploying this Helm chart, you'll set up these three components together, allowing you to monitor your systems and applications comprehensively with metrics from Mimir, logs from Loki, and dashboards and alerts in Grafana.
 
-### Alloy:
+### Alloy
 Grafana Alloy is a powerful observability tool that collects and ships logs and metrics from your services to Grafana Loki and Mimir for storage and analysis.
 
-***Note: Grafana Alloy is deployed in a separate Helm Chart. You will need to follow the instructions outlined in [alloy.md](./alloy.md) after completing the following guide.
+***Note: Grafana Alloy is deployed in a separate Helm Chart. You will need to follow the instructions outlined in [alloy.md](tutorial_alloy.md) after completing the following guide.***
 
-### Faro Collector (Alloy):
+### Faro Collector (Alloy)
 Alloy Faro Collector is a specialized configuration of Alloy that enables it to gather Real User Monitoring (RUM) data from Portal through Grafana Faro. In this role, Alloy acts as an ingestion point for RUM data.
 
-***Note: The Faro Collector is deployed in a separate Helm Chart. You will need to follow the instructions outlined in [faro.md](./faro.md) after completing the following guide.
+***Note: The Faro Collector is deployed in a separate Helm Chart. You will need to follow the instructions outlined in [faro.md](tutorial_faro.md) after completing the following guide.***
 
 ## General Architecture
 
 In this setup, Loki and Mimir are configured with internal ingress resources, enabling Alloy to send metrics and logs securely via VPC peering connections. Both Loki and Mimir write the ingested data to Amazon S3 for scalable and durable storage. This data can be queried and visualized through Grafana, which is hosted behind an internet-facing ingress. Access to Grafana can be restricted using CIDR ranges defined through the ALB ingress annotation: alb.ingress.kubernetes.io/inbound-cidrs: "cidrs". Additionally, the chart supports SAML authentication for Grafana, configured through the grafana.ini field, ensuring secure user access.
 
-![Grafana Architecture](Grafana.png)
+![Grafana Architecture](img/Grafana.png)
 
 ### Fips compliant images
 
@@ -90,7 +90,7 @@ Grafana will require an internet-facing ingress in order to access the visualiza
 
 ```yaml
 grafana:
-  ingress: 
+  ingress:
     # -- (bool) Enable or disable ingress for Grafana.
     enabled: true
     # -- (map) Annotations for Grafana ingress.
@@ -107,7 +107,7 @@ grafana:
         # alb.ingress.kubernetes.io/target-type: 'ip'
         # alb.ingress.kubernetes.io/inbound-cidrs: <cidrs>
     # -- (list) Hostname(s) for Grafana ingress.
-    hosts: 
+    hosts:
       - grafana.example.com
     # -- (string) Ingress class name to be used (e.g., 'alb' for AWS Application Load Balancer).
     ingressClassName: "alb"
@@ -166,7 +166,7 @@ If you are utilizing Amazon S3 for storage, make sure to uncomment "bucket_name"
 ```yaml
 mimir:
     # -- (map) Structured configuration settings for mimir.
-    structuredConfig: 
+    structuredConfig:
     common:
         storage:
         # -- (string) Backend storage configuration. For example, s3 for AWS S3 storage.
@@ -269,14 +269,14 @@ If you are utilizing Amazon S3 for storage, make sure to uncomment "bucketnames"
 ```yaml
 loki:
     # -- (map) Structured configuration settings for Loki.
-    structuredConfig: 
+    structuredConfig:
         common:
             # -- (string) Path prefix where Loki stores data.
             path_prefix: /var/loki
             storage:
             # -- (null) Filesystem storage is disabled.
             filesystem: null
-            s3: 
+            s3:
                 # -- (string) AWS region for S3 storage.
                 region: us-east-1
                 # # -- (string) S3 bucket names for Loki storage.

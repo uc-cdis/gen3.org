@@ -126,7 +126,7 @@ https_proxy=https://cloud-proxy.internal.io:3128 aws s3 ls s3://gen3-data/ --pro
 
 ### Whitelists
 
-Additionally, to aid Gen3 Commons security, the installation of tools from outside resources is managed through a whitelist. If you have problems installing a tool you need for your work, contact [support@gen3.org][DC support email] and with a list of any sites from which you might wish to install tools. After passing a security review, these can be added to the whitelist to facilitate access.
+Additionally, to aid Gen3 Commons security, the installation of tools from outside resources is managed through a whitelist. If you have problems installing a tool you need for your work, contact [support@gen3.org](mailto:support@gen3.org) and with a list of any sites from which you might wish to install tools. After passing a security review, these can be added to the whitelist to facilitate access.
 
 ## Using the Gen3 Python SDK
 To make programmatic interaction with Gen3 data commons easier, the bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has developed the Gen3 Python SDK, which is a Python library containing functions for sending standard requests to the Gen3 APIs. The code is open-source and available on [GitHub][Gen3 Python SDK Github] along with [documentation for using it][Gen3 Python SDK doc].
@@ -228,35 +228,32 @@ When finished, please, shut down the workspace server by clicking the “Termina
 <!-- Launch Workspaces -->
 [workspace]: https://brh.data-commons.org/workspace
 [BRH docs]: https://uc-cdis.github.io/BRH-documentation
-[img VM options]: /gen3-resources/user-guide/img/workspace_flavors2020.png
-[img Jupyter upload]: /gen3-resources/user-guide/img/notebook_upload.png
-[img Jupyter new workspace]: /gen3-resources/user-guide/img/workspace_new_nb2020.png
-[img Jupyter save]: /gen3-resources/user-guide/img/notebook_download.png
-[gif Make Jupyter in R]: /gen3-resources/user-guide/img/R_jupyter_notebook_workspace.gif
-[gif Open Terminal in Jupyter]: /gen3-resources/user-guide/img/terminal_session.gif
-[gif Jupyter Running tab]: /gen3-resources/user-guide/img/running.gif
+[img VM options]: img/workspace_flavors2020.png
+[img Jupyter upload]: img/notebook_upload.png
+[img Jupyter new workspace]: img/workspace_new_nb2020.png
+[img Jupyter save]: img/notebook_download.png
+[gif Make Jupyter in R]: img/R_jupyter_notebook_workspace.gif
+[gif Open Terminal in Jupyter]: img/terminal_session.gif
+[gif Jupyter Running tab]: img/running.gif
 
 <!-- Getting Files into the Gen3 Workspace -->
-[img Export Data to Workspace]: /gen3-resources/user-guide/img/export_to_workspace.png
+[img Export Data to Workspace]: img/export_to_workspace.png
 [gen3 client]: https://github.com/uc-cdis/cdis-data-client/releases/latest
 [linux gen3 client]: https://github.com/uc-cdis/cdis-data-client/releases/latest
-
-<!-- Working with Proxy and whitelists -->
-[DC support email]: support@gen3.org
 
 <!-- Uisng the Gen3 Python SDK -->
 [Gen3 Python SDK Github]: https://github.com/uc-cdis/gen3sdk-python
 [Gen3 Python SDK doc]: https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html
-[Jupyter demos]: /gen3-resources/user-guide/analyze-data/#jupyter-notebook-demos
+[Jupyter demos]: analyze-data.md#jupyter-notebook-demos
 [Gen3 Python SDK install]: https://github.com/uc-cdis/gen3sdk-python/blob/master/README.md
 [Data Hub notebooks]: https://gen3.datacommons.io/resource-browser
 [BRH notebooks]: https://brh.data-commons.org/resource-browser
 [Exploration page]: https://gen3.datacommons.io/explorer
-[#1 Gen3_auth notebook]: /gen3-resources/user-guide/notebooks/Gen3_authentication.html
-[#1 .ipynb]: /gen3-resources/user-guide/notebooks/Gen3_authentication.ipynb
-[#2 notebook canine]: /gen3-resources/user-guide/notebooks/notebook2_canine.html
+[#1 Gen3_auth notebook]: notebooks/Gen3_authentication.html
+[#1 .ipynb]: notebooks/Gen3_authentication.ipynb
+[#2 notebook canine]: notebooks/notebook2_canine.html
 [Canine Data Commons]: https://caninedc.org/
-[#2 .ipynb]: /gen3-resources/user-guide/notebooks/notebook2_canine.ipynb
-[#3 notebook]: /gen3-resources/user-guide/notebooks/notebook3_gen3datacommonsio.html
+[#2 .ipynb]: notebooks/notebook2_canine.ipynb
+[#3 notebook]: notebooks/notebook3_gen3datacommonsio.html
 [Gen3 Data Hub]: https://gen3.datacommons.io/
-[#3 .ipynb]: /gen3-resources/user-guide/notebooks/notebook3_gen3datacommonsio.ipynb
+[#3 .ipynb]: notebooks/notebook3_gen3datacommonsio.ipynb

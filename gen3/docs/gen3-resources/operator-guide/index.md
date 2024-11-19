@@ -48,20 +48,20 @@ Compose-services was used to deploy Gen3 at a small scale, for experimental comm
 [Although we do not recommend using this, you can explore Gen3 compose-services here][compose-services]
 
 <!-- Links -->
-[Gen3 User Guide]: /gen3-resources/user-guide/
-[Gen3 Developer Guide]: /gen3-resources/developer-guide/
+[Gen3 User Guide]: ../user-guide/index.md
+[Gen3 Developer Guide]: ../developer-guide/index.md
 [cloud-automation]: https://github.com/uc-cdis/cloud-automation/blob/master/doc/csoc-free-commons-steps.md
 [compose-services]: https://github.com/uc-cdis/compose-services/tree/master
-[helm guide]: /gen3-resources/operator-guide/helm/
+[helm guide]: helm/index.md
 [deploy overview]: deploy-gen3.md
 [prerequisites]: prerequisites.md
-[infrastructure as code]: /gen3-resources/operator-guide/iac-overview/
-[ssl]: /gen3-resources/operator-guide/ssl-cert.md
-[secrets]: /gen3-resources/operator-guide/secrets-mgr.md
-[authentication methods]: /gen3-resources/operator-guide/gen3-authn-methods/
-[data dictionary]: /gen3-resources/operator-guide/create-data-dictionary/
-[submit data]: /gen3-resources/operator-guide/submit-structured-data/
-[customize search]: /gen3-resources/operator-guide/customize-search/
-[customize frontend]: /gen3-resources/operator-guide/customize-frontend/
-[ssl]: /gen3-resources/operator-guide/ssl-cert/
-[secrets]: /gen3-resources/operator-guide/tutorial_secrets-mgr/
+[infrastructure as code]: iac-overview.md
+[ssl]: ssl-cert.md
+[secrets]: secrets-mgr.md
+[authentication methods]: gen3-authn-methods.md
+[data dictionary]: create-data-dictionary.md
+[submit data]: submit-structured-data.md
+[customize search]: customize-search.md
+[customize frontend]: customize-frontend.md
+[ssl]: ssl-cert.md
+[secrets]: tutorial_secrets-mgr.md

@@ -1,6 +1,3 @@
----
-title: Production Deployment
----
 
 # Production Deployment of Gen3 in AWS
 
@@ -203,7 +200,7 @@ gitops-repo/
 
    To securely manage sensitive data, we have incorporated external secrets into our Helm charts. Users can utilize this feature to safely handle and store their sensitive information.
 
-   For more details on managing sensitive data using external secrets, please refer to our External Secrets Operator documentation [HERE](external-secrets.md).
+   For more details on managing sensitive data using external secrets, please refer to our External Secrets Operator documentation [HERE](tutorial_secrets-mgr.md).
 
     Add and commit your changes:
     ```
@@ -217,9 +214,9 @@ gitops-repo/
     ```
 
 <!-- ### Gen3 Future Gitops Plan:
-Deploy gen3 using the ArgoCD App of Apps structure. 
+Deploy gen3 using the ArgoCD App of Apps structure.
 
-The ArgoCD App of Apps structure utilizes a root app.yaml file to deploy a set of child applications, each responsible for a specific part of the overall gen3 ecosystem. 
+The ArgoCD App of Apps structure utilizes a root app.yaml file to deploy a set of child applications, each responsible for a specific part of the overall gen3 ecosystem.
 
 Please feel free to read more about this general structure [HERE](https://www.eksworkshop.com/docs/automation/gitops/argocd/app-of-apps/).
 
@@ -229,7 +226,7 @@ CoreDNS
 VPC CNI
 External Secrets Operator
 K9s
-Etc. 
+Etc.
 
 The eks-resources chart will have the following structure:
 ```
@@ -266,5 +263,3 @@ spec:
     automated:
       selfHeal: true
 ``` -->
-
-

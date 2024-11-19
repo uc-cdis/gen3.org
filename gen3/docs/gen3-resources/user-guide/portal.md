@@ -165,49 +165,49 @@ All the functionality of the data commons data portal is available by sending re
 [Gen3 Data Hub]: https://gen3.datacommons.io/
 
 <!-- Profile -->
-[Download Data Files into a Workspace with the Python SDK]: /gen3-resources/user-guide/img/profile_page.png
-[img profile]: /gen3-resources/user-guide/img/profile_page.png
-[Gen3 Client]: /gen3-resources/user-guide/access-data/#download-files-using-the-gen3-client
+[Download Data Files into a Workspace with the Python SDK]: img/profile_page.png
+[img profile]: img/profile_page.png
+[Gen3 Client]: access-data.md#download-files-using-the-gen3-client
 
 
 
 <!-- Exploration section. -->
 [Gen3 Data Hub Exploration]: https://gen3.datacommons.io/explorer
-[img Gen3 Toolbar Exploration]: /gen3-resources/user-guide/img/Gen3_Toolbar_exploration.png
-[Gen3 client]: /gen3-resources/user-guide/access-data/#download-files-using-the-gen3-client
-[Gen3 bulk download]: /gen3-resources/user-guide/access-data/#multiple-file-download-with-manifest
-[img Explorer GIF]: /gen3-resources/user-guide/img/explorer_gif_2020.gif
+[img Gen3 Toolbar Exploration]: img/Gen3_Toolbar_exploration.png
+[Gen3 client]: access-data.md#download-files-using-the-gen3-client
+[Gen3 bulk download]: access-data.md#multiple-file-download-with-manifest
+[img Explorer GIF]: img/explorer_gif_2020.gif
 
 
 <!-- Query Page -->
 
 [GraphQL language]: https://graphql.org/
 [Gen3 Query pg]: https://gen3.datacommons.io/query
-[img Gen3 Toolbar Query]: /gen3-resources/user-guide/img/Gen3_Toolbar_query.png
-[img GraphiQL Query pg]: /gen3-resources/user-guide/img/Gen3_GraphiQL_docs2020.png
-[img GraphiQL sample node]: /gen3-resources/user-guide/img/Gen3_GraphiQL_docs_sample.png
-[img GraphiQL root sample node]: /gen3-resources/user-guide/img/Gen3_GraphiQL_docs_sample_root.png
-[Query Data]: /gen3-resources/user-guide/search/#graph-model
+[img Gen3 Toolbar Query]: img/Gen3_Toolbar_query.png
+[img GraphiQL Query pg]: img/Gen3_GraphiQL_docs2020.png
+[img GraphiQL sample node]: img/Gen3_GraphiQL_docs_sample.png
+[img GraphiQL root sample node]: img/Gen3_GraphiQL_docs_sample_root.png
+[Query Data]: search.md#graph-model
 
 <!-- Dictionary Viewer -->
 
 [Gen3 DD]: https://gen3.datacommons.io/dd
-[img Graph data model]: /gen3-resources/user-guide/img/graph.png
-[img table data model]: /gen3-resources/user-guide/img/table.png
-[gif toggle]: /gen3-resources/user-guide/img/switch-to-table.gif
-[img properties]: /gen3-resources/user-guide/img/properties.png
-[gif properties]: /gen3-resources/user-guide/img/properties-view.gif
-[gif Dict Search]: /gen3-resources/user-guide/img/search.gif
+[img Graph data model]: img/graph.png
+[img table data model]: img/table.png
+[gif toggle]: img/switch-to-table.gif
+[img properties]: img/properties.png
+[gif properties]: img/properties-view.gif
+[gif Dict Search]: img/search.gif
 
 
 <!-- Discovery Page -->
-[Discovery Page]: /gen3-resources/user-guide/img/discovery_page3.gif
+[Discovery Page]: img/Discovery_page3.gif
 [BRH Discovery]: https://brh.data-commons.org/discovery
-[img Discover grid]: /gen3-resources/user-guide/img/grid_discovery_color_080322.png
-[img Discovery features]: ./img/discovery_features_080322.png
-[img Discovery Study page metadata]: /gen3-resources/user-guide/img/discovery_study_page_datafiles.png
+[img Discover grid]: img/grid_discovery_color_080322.png
+[img Discovery features]: img/discovery_features_080322.png
+[img Discovery Study page metadata]: img/discovery_study_page_datafiles.png
 
 
 
 <!-- API Section -->
-[API documentation]: /gen3-resources/user-guide/using-api/
+[API documentation]: using-api.md

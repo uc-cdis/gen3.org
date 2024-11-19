@@ -17,7 +17,7 @@
 4. **Prepare a `values.yaml` Configuration File**:
 
       - Create a `values.yaml` file to customize the Gen3 deployment. This file will contain various configuration settings for your Gen3 deployment.
-      - Refer to the [Configuration](./Configurations/) section for a full list of configurations for each Gen3 service. Customize the configuration according to your requirements.
+      - Refer to the `Configuration services with Helm` section (see navigation menu on the left) for a full list of configurations for each Gen3 service. Customize the configuration according to your requirements.
 
 5. **Prepare SSL Certificate**:
 

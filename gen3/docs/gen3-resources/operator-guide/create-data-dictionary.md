@@ -13,7 +13,7 @@ Each node in the data dictionary is linked in a logical manner to other nodes, w
 
 The following image displays the data dictionary in Table View, the 'Medical History' node entry in the dictionary with the list of properties, and an example graphical model of a project:
 
-![data-model.png](/gen3-resources/operator-guide/img/data-model.png)
+![data-model.png](img/data-model.png)
 
 
 ## Core Dictionary
@@ -57,7 +57,7 @@ The Notation node category is used to store data that does not fit into other ca
 
 The following image depicts the graph view of the core data dictionary (The key in the top right corner of the image indicates the node categories):
 
-![graph view](/gen3-resources/operator-guide/img/dcf_dictionary.png)
+![graph view](img/dcf_dictionary.png)
 
 
 
@@ -139,7 +139,7 @@ When creating a data model it's important to avoid loops or cycles between nodes
 
 The following diagram is an example of a loop as R3 is redundant as it brings no new associations that are not already presented by the combination of R1 and R2:
 
-![Loop example](/gen3-resources/operator-guide/img/loop.png)
+![Loop example](img/loop.png)
 
 ### Dictionary Update Documentation
 
@@ -179,7 +179,7 @@ When generating the release notes there are [conventions][release notes conventi
 
 
 <!-- Creating a Data Dictionary -->
-[Exploration Page]: /gen3-resources/user-guide/portal/#exploration-page
+[Exploration Page]: ../user-guide/portal.md/#exploration-page
 [datadictionary github]: https://github.com/uc-cdis/datadictionary/
 [NCI DCFS]: https://nci-crdc.datacommons.io/login
 [DCF dictionary viewer]: https://nci-crdc.datacommons.io/dd

@@ -406,4 +406,4 @@ spec:
 [kubectl]: https://kubernetes.io/docs/tasks/tools/
 [helm]: https://helm.sh/docs/helm/helm_install/
 [k9s]: https://k9scli.io/topics/install/
-[secrets manager]: /gen3-resources/operator-guide/secrets-mgr/
+[secrets manager]: tutorial_secrets-mgr.md

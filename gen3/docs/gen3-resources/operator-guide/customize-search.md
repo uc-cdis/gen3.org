@@ -50,7 +50,7 @@ The graph model depends on Sheepdog and Peregrine. The Flat Model depends on ETL
 
 For details on the ETL mapping please see the [ETL section](#etl).
 
-![Query Page][query page image](/gen3-resources/operator-guide/img/query_screenshot.png)
+![Query Page][query page image]
 
 
 
@@ -164,8 +164,8 @@ Setting up a functioning mesh where you can access files from individual commons
 
 
 <!-- Exploration Page -->
-[Exploration Page overview]: /gen3-resources/user-guide/search/#exploration-page
-[explorer screenshot]: /gen3-resources/operator-guide/img/explorer_screenshot.png
+[Exploration Page overview]: ../user-guide/search.md#exploration-page
+[explorer screenshot]: img/explorer_screenshot.png
 [tube github]: https://github.com/uc-cdis/tube
 [sheepdog github]: https://github.com/uc-cdis/sheepdog
 [peregrine github]: https://github.com/uc-cdis/peregrine
@@ -181,12 +181,12 @@ Setting up a functioning mesh where you can access files from individual commons
 [cloud automation readme]: https://github.com/uc-cdis/cloud-automation/blob/master/doc/README.md
 
 <!-- Query Page -->
-[user guide query page]: /gen3-resources/user-guide/search/#query-page
-[query page image]: /gen3-resources/operator-guide/img/query_screenshot.png
+[user guide query page]: ../user-guide/search.md#query-page
+[query page image]: img/query_screenshot.png
 
 <!-- Discovery Page -->
-[discovery page overview]: /gen3-resources/user-guide/portal/#discovery-page
-[discovery page screenshot]: /gen3-resources/operator-guide/img/discovery_screenshot.png
+[discovery page overview]: ../user-guide/portal.md#discovery-page
+[discovery page screenshot]: img/discovery_screenshot.png
 [mds github]: https://github.com/uc-cdis/metadata-service
 [aggmds github]: https://github.com/uc-cdis/agg-metadata
 [sdk for discovery page]: https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/cli/discovery.py

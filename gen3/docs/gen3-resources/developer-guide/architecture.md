@@ -11,7 +11,7 @@ Structured data are data that adhere to a specific and strict schema with a grap
 
 Semi-structured data is organized as unique identifiers with flexible key/value pairs (including nesting). The key/value pairs may be consistent between records, but are not required to be. This is typically used for storing publicly available metadata about available datasets or additional public metadata about samples.
 
-The overall architecture is designed to support FAIR data access[[1]](/gen3-resources/developer-guide/architecture-new/#references), which includes features such as permanent digital IDs, open APIs, rich clinical and experimental data, and services modeled from external standards such as from GA4GH.  Gen3 data meshes go one step further and support Secure and Authorized FAIR Environment (SAFE) environments[[2]](/gen3-resources/developer-guide/architecture-new/#references).
+The overall architecture is designed to support FAIR data access[[1]](architecture.md#references), which includes features such as permanent digital IDs, open APIs, rich clinical and experimental data, and services modeled from external standards such as from GA4GH.  Gen3 data meshes go one step further and support Secure and Authorized FAIR Environment (SAFE) environments[[2]](architecture.md#references).
 
 ## Products
 
@@ -87,10 +87,10 @@ Analysis tools are developed using React, Gen3 core/frontend packages, and custo
 ## Architectural Diagrams
 
 ### Architecture Overview
-![Gen3 Architecture Overview](/gen3-resources/developer-guide/img/Gen3_architecture_overview.png)
+![Gen3 Architecture Overview](img/Gen3_architecture_overview.png)
 
 ### Gen3 Graph Data Flow
-![Gen3 Graph Data Flow](/gen3-resources/developer-guide/img/Gen3 graph data flow.png)
+![Gen3 Graph Data Flow](img/Gen3 graph data flow.png)
 
 
 ## References

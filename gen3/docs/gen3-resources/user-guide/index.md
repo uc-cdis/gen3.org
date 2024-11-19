@@ -19,13 +19,13 @@ If you are looking to attain a deeper understanding of Gen3 services in order to
 * The [Biomedical Research Hub][BRH] is an example data mesh that is also used to highlight mesh-specific features.
 
 <!-- Links -->
-[Gen3 Developer Guide]: /gen3-resources/developer-guide/
-[Gen3 Operator Guide]: /gen3-resources/operator-guide/
+[Gen3 Developer Guide]: ../developer-guide/index.md
+[Gen3 Operator Guide]: ../operator-guide/index.md
 
 [data hub]: https://gen3.datacommons.io/
 [BRH]: https://brh.data-commons.org/
-[Search for Data]: /gen3-resources/user-guide/search/
-[Access Data Files]: /gen3-resources/user-guide/access-data/
-[Analyze Data]: /gen3-resources/user-guide/analyze-data/
-[Data Portal]: /gen3-resources/user-guide/portal/
-[Use the API]: /gen3-resources/user-guide/using-api/
+[Search for Data]: search.md
+[Access Data Files]: access-data.md
+[Analyze Data]: analyze-data.md
+[Data Portal]: portal.md
+[Use the API]: using-api.md
