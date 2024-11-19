@@ -45,13 +45,11 @@ See a sample of the publications made possible by Gen3 systems [here][gen3 publi
 
 
 
-
-
 [code of conduct]: https://forums.gen3.org/t/faq-guidelines/5
-[contact page]: /contact/
+[contact page]: ../contact.md
 [gen3 youtube]: https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/featured
 [gen3 github]: https://github.com/uc-cdis
 [gen3 publications]: https://gen3.org/gen3refs/
 [community page]: https://gen3.org/community/events/
 [release notes]: https://github.com/uc-cdis/cdis-manifest/tree/master/releases
-[contributor guidelines]: /gen3-resources/developer-guide/contribute/
+[contributor guidelines]: developer-guide/contribute.md

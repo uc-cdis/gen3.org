@@ -7,7 +7,7 @@
 
 ### I'm customizing the data schema, where I can find information about the data dictionary customization, variables' definition, and files formatting?
 
-Please refer documentation about [Creating New Dictionary](/gen3-resources/operator-guide/create-data-dictionary/) and [Data Types](/gen3-resources/operator-guide/submit-structured-data/).
+Please refer documentation about [Creating New Dictionary](operator-guide/create-data-dictionary.md) and [Data Types](operator-guide/submit-structured-data.md).
 
 
 ### I have a dictionary in my local schemas folder, how can I generate the `schema.json`?
