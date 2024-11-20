@@ -2,7 +2,6 @@
 
 This is the guide for users who want to stand up a new Gen3 instance. It includes the following content:
 
-* [An **overview of Gen3 deployment** and considerations][deploy overview].
 * A [list of prerequisite software and resources][prerequisites] for production deployment of Gen3.
 * A description of predeployment tasks, including [our approach to **Infrastructure as Code**][infrastructure as code], [preparing an SSL certificate][ssl], and a [description of the **different authentication methods**][authentication methods] that can be used in Gen3.
 * [A **guide to Helm deployment and configuration**][helm guide].
