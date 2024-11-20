@@ -2,19 +2,18 @@
 
 This is the guide for users who want to stand up a new Gen3 instance. It includes the following content:
 
-* [An **overview of Gen3 deployment** and considerations][deploy overview]
-* A [list of prerequisite software and resources][prerequisites] for production deployment of Gen3
-* A description of predeployment tasks, including [our approach to **Infrastructure as Code**][infrastructure as code], [preparing an SSL certificate][ssl], and [setting up a Secrets manager][secrets].
-* A [description of the **different authentication methods**][authentication methods] that can be used in Gen3
-* [A **guide to Helm deployment and configuration**][helm guide]
-* Postdeployment tasks, including [**creating a Data Dictionary** and Data Model][data dictionary], [**submitting data**][submit data], [**customizing search for Query, Exploration, and Discovery pages** in Gen3][customize search], and [**customizing the front end**][customize frontend]
+* [An **overview of Gen3 deployment** and considerations][deploy overview].
+* A [list of prerequisite software and resources][prerequisites] for production deployment of Gen3.
+* A description of predeployment tasks, including [our approach to **Infrastructure as Code**][infrastructure as code], [preparing an SSL certificate][ssl], and a [description of the **different authentication methods**][authentication methods] that can be used in Gen3.
+* [A **guide to Helm deployment and configuration**][helm guide].
+* Postdeployment tasks, including [**creating a Data Dictionary** and Data Model][data dictionary], [**submitting data**][submit data], [**customizing search for Query, Exploration, and Discovery pages** in Gen3][customize search], and [**customizing the front end**][customize frontend].
 
 
 ## Gen3 Deployment Options
 
 ### **Helm (preferred)**
 
-Helm is a Kubernetes package manager that allows you to easily define, install, and upgrade even complex applications. It is a tool that streamlines the installation and management of applications on Kubernetes platforms. **We recommend that Gen3 users deploy with Helm.**
+Helm is a Kubernetes package manager that allows you to easily define, install, and upgrade even complex applications. It is a tool that streamlines the installation and management of applications on Kubernetes platforms. **We recommend that Gen3 users deploy with Helm** and the majority of our documentation assumes that you will use this method.
 
 *[Jump to the Helm configuration and deployment guide][helm guide]*
 
