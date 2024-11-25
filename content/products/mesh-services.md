@@ -5,8 +5,8 @@ linktitle: /products/mesh-services
 date: 2021-01-08
 aliases: /products/framework-services
 g3Teaser:
-  title: Gen3 Mesh Services
-  detail: The Gen3 Mesh Services are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via a robust and flexible access control policy engine.
+  title: Gen3 Data Mesh Services
+  detail: The Gen3 Mesh Services (aka framework services) are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via a robust and flexible access control policy engine.
   para1: Data resources using the Gen3 Mesh Services get the minimal backend functionality necessary for managing data and controlling user access to it. Specifically, the services included in the Gen3 Mesh Services are those for data object indexing, storing and associating metadata with data objects, and user authentication and authorization.  Mesh services support both data commons and data meshes.
 g3Feature:
   f1:
@@ -32,6 +32,10 @@ g3Feature:
         </h1>
         <p class="g3-space__margin-sm-bottom introduction">
           {{< param "g3Teaser.detail" >}}
+        </p>
+        <br>
+        <p class="g3-space__margin-sm-bottom introduction">
+          {{< param "g3Teaser.para1" >}}
         </p>
       </div>
     </div>
