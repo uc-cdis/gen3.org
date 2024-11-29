@@ -6,7 +6,8 @@ ENV BASE_URL=
 
 RUN set -x && \
     apt-get update && \
-    apt-get install curl git wget ca-certificates
+    apt-get install asciidoctor -y && \
+    apt-get install curl -y git wget ca-certificates
 
 RUN set -x && \
     curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb -o hugo_extended.deb && \
