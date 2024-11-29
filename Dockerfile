@@ -18,7 +18,7 @@ WORKDIR /gen3.org
 RUN sed -i "s|{BASE_URL}|${BASE_URL}|g" config.yaml \
     && hugo
 
-FROM nginx
+FROM nginx:1.23.1
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=builder /gen3.org/public /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d
