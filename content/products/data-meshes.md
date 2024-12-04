@@ -1,16 +1,17 @@
 ---
-identifier: products/data-ecosystems
-title: Gen3 - Products - Data Ecosystems
-linktitle: /products/data-ecosystems
+identifier: products/data-meshes
+title: Gen3 - Products - Data Meshes
+linktitle: /products/data-meshes
 date: 2021-01-08
+aliases: /products/data-ecosystems
 g3Teaser:
-  title: Gen3 Data Ecosystems
-  detail: Data ecosystems consist of an interconnected network of data resources that are integrated by utilizing a common set of software services called the Gen3 Framework Services. These services support the emergence of data ecosystems by empowering data resources to interoperate through providing common protocols for user authentication and authorization, data indexing, and metadata services.
+  title: Gen3 Data Meshes
+  detail: A data mesh (aka data ecosystem) consists of two or more data commons, data repositories, knowledgebases, and applications over a common set of services (called mesh services). A optional data hub can search and discover data from across the mesh and move the data to a Gen3 Workspace for exploring and analyzing the data.
   para1: In a healthy data ecosystem, one finds multiple data commons, data repositories, knowledgebases, and other sources of data alongside cloud-computing platforms for large-scale processing of data and data portals, cloud-based workspaces, Jupyter notebooks and other applications for exploring and analyzing data.
 g3Feature:
   f1:
-    title: Gen3 Framework Services
-    detail: The Gen3 Framework Services are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via a robust and flexible access control policy engine.
+    title: Gen3 Mesh Services
+    detail: The Gen3 Mesh Services are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via a robust and flexible access control policy engine.
     fig1: /figs/features/index.svg
     fig2: /figs/features/auth.svg
     fig3: /figs/features/mds.svg
@@ -28,7 +29,7 @@ g3Feature:
     fig3: /figs/features/visualization.svg
 ---
 
-<section class="g3-bg__yellow">
+<section class="g3-bg__mint">
   <div class="g3-outer-wrapper g3-flex-content">
     <div class="g3-space__padding-lg-top g3-space__padding-lg-bottom g3-col__65">
       <div class="g3-space__wrapper-gap-left">
