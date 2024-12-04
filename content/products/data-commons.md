@@ -22,7 +22,7 @@ g3Feature:
     detail: Gen3 data commons include a data portal as a default application over a commons. The portal is an interactive website, accessible through standard web-browsers, that allows users to explore, submit, download, and analyze data. The data portal utilizes the open Gen3 APIs to offer a graphical user interface for the basic functionality of a Gen3 data commons.
 ---
 
-<section class="g3-bg__yellow">
+<section class="g3-bg__mint">
   <div class="g3-outer-wrapper g3-flex-content">
     <div class="g3-space__padding-lg-top g3-space__padding-lg-bottom g3-col__65">
       <div class="g3-space__wrapper-gap-left">

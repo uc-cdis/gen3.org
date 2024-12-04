@@ -29,7 +29,7 @@ g3Feature:
     fig3: /figs/features/visualization.svg
 ---
 
-<section class="g3-bg__yellow">
+<section class="g3-bg__mint">
   <div class="g3-outer-wrapper g3-flex-content">
     <div class="g3-space__padding-lg-top g3-space__padding-lg-bottom g3-col__65">
       <div class="g3-space__wrapper-gap-left">
