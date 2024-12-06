@@ -6,7 +6,7 @@ date: 2021-01-08
 aliases: /products/data-ecosystems
 g3Teaser:
   title: Gen3 Data Meshes
-  detail: A data mesh (aka data ecosystem) consists of two or more data commons, data repositories, knowledgebases, and applications over a common set of services (called mesh services). A optional data hub can search and discover data from across the mesh and move the data to a Gen3 Workspace for exploring and analyzing the data.
+  detail: A data mesh (aka data ecosystem) consists of two or more data commons, data repositories, knowledgebases, and applications over a common set of services (called mesh services). An optional data hub can search and discover data from across the mesh and move the data to a Gen3 Workspace for exploring and analyzing the data.
   para1: In a healthy data ecosystem, one finds multiple data commons, data repositories, knowledgebases, and other sources of data alongside cloud-computing platforms for large-scale processing of data and data portals, cloud-based workspaces, Jupyter notebooks and other applications for exploring and analyzing data.
 g3Feature:
   f1:

@@ -5,7 +5,7 @@ linktitle: /products/data-hubs
 date: 2021-01-08
 g3Teaser:
   title: Gen3 Data Hubs
-  detail: A data mesh (aka data ecosystem) consists of two or more data commons, data repositories, knowledgebases, and applications over a common set of services (called mesh services). A data hub is a web portal that can search and discover data from across the mesh and move the data to a Gen3 Workspace for exploring and analyzing the data.  
+  detail: A data hub is a web portal that can search and discover data from across a data mesh and move the data to a Gen3 Workspace for exploring and analyzing the data.  A data mesh (aka data ecosystem) consists of two or more data commons, data repositories, knowledgebases, and applications over a common set of services (called mesh services). 
   para1: Typically, the data itself remains in the data repository, data commons, or other data platform in the mesh, but the metadata for the data is replicated in the data hub. Data hubs often are connected to workspaces or analysis environments operated by the data hub so the data can be analyzed.
 g3Feature:
   f1:
