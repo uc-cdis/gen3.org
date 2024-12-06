@@ -23,7 +23,7 @@ g3Feature:
     detail: When users log into a Gen3 Workspace, they have the option to spin up a variety of analysis environments with different processing power and pre-loaded with different tools for various analysis tasks. Virtually any custom application that can be loaded into a docker image can be integrated into a Gen3 Workspace environment, including analysis workflows, processing pipelines, and visualization apps.
 ---
 
-<section class="g3-bg__yellow">
+<section class="g3-bg__mint">
   <div class="g3-outer-wrapper g3-flex-content">
     <div class="g3-space__padding-lg-top g3-space__padding-lg-bottom g3-col__65">
       <div class="g3-space__wrapper-gap-left">
