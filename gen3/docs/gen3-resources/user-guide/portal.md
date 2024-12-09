@@ -1,7 +1,7 @@
 # Accessing and Exploring Metadata from the Gen3 Data Portal
 The data in a Gen3 data commons can be browsed and downloaded using several different methods. The following general documentation will cover some standard methods of data access in a Gen3 data commons. Ultimately, however, the methods of data access offered in a Gen3 data commons is determined by agreements made between the data commons’ sponsors and data contributors.
 
-Various levels of data access can be configured in a Gen3 data commons using the Fence and Arborist services. If open access data is hosted, a data commons can be configured to allow anonymous access to data, which means users can explore data without logging in. This is the case for the [Gen3 Data Hub][Gen3 Data Hub].
+Various levels of data access can be configured in a Gen3 data commons using the Gen3 Framework Services. If open access data is hosted, a data commons can be configured to allow anonymous access to data, which means users can explore data without logging in. This is the case for the [Gen3 Data Hub][Gen3 Data Hub].
 
 In cases where data is controlled access, typically external users will receive instructions on how to access data and may be required to sign a DUA (Data Use Agreement) legal document.
 
@@ -9,8 +9,6 @@ The following sections provide details on how to explore and access data from wi
 
 ## Access Data from the Data Portal
 The Gen3 software stack offers a data portal service that creates a website with graphical tools for performing the basic functionality of a data commons, like browsing data in projects, building patient cohorts across projects, downloading metadata or data files for cohorts, and building database queries.
-
-
 
 ### Profile Page
 
@@ -34,6 +32,8 @@ Each of these main tabs will have filters on the left-hand side, which can be us
 > Note: The main tabs in the Exploration Page, the available filters, and the properties listed in the data table are entirely customizable and will be different for various Gen3 data commons.
 
 If the table is a list of files, there should be a button for downloading a JSON file that serves as a manifest to use with the [gen3-client][Gen3 client] for [downloading multiple files][Gen3 bulk download]. Otherwise, to download single a file listed in the table, simply click on the GUID (globally unique identifier, or object_id), which should open a page with a download button.
+
+[//]: # (Alex: We should note the support for PFB handoff to external systems)
 
 ![GIF showing how to use the Gen3 Explorer][img Explorer GIF]
 
@@ -65,6 +65,8 @@ The following example query returns the subject and submitter ids in the subject
 ```
 
 More detailed information on how to query specific data can be found [here][Query Data].
+
+[//]: # (Alex: There's perhaps duplication of information above with what's in the access-data.md)
 
 ### Data Dictionary Viewer
 
@@ -120,7 +122,7 @@ NOTE: For these user guides, https://gen3.datacommons.io is an example URL and c
 
 ### Discovery Page
 
-The Gen3 Discovery Page allows the visualization of metadata from within the metadata service (MDS).  This typically includes public metadata about a project to make it discoverable.  It can be used by both data commons and meshes although it can play a more central role in a data mesh.  Users should be able to search based on free text or filter based on tags.
+The Gen3 Discovery Page allows the visualization of metadata from within the metadata service (MDS).  This typically includes public metadata about a project to make it discoverable.  It can be used by both data commons and meshes, although it can play a more central role in a data mesh.  Users should be able to search based on free text or filter based on tags.
 
 ![Animation showing how to navigate around the Discovery page][Discovery Page]
 
@@ -130,6 +132,8 @@ The [Discovery Page][BRH Discovery] provides users a venue to search and find st
 > Use text-based search, faceted search, and tags to rapidly and efficiently find relevant studies, discover new datasets across multiple resources, and easily export selected data files to the analysis workspace. Browse through datasets and study-level metadata and find studies using tags, advanced search, or the free text search field.
 
 ![The Discovery Page of the Biomedical Research Hub.][img Discover grid]
+
+[//]: # (Alex: Perhaps note the use of Discovery Page as a way to store publication information, DOI metadata, FHIR metadata? We do this in BDC)
 
 #### Search Features
 

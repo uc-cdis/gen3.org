@@ -283,7 +283,7 @@ g3Commons:
          </a>
       </div>
    </div>
-</section>         
+</section>
 <section class="g3-bg__white">
    <h3 class="g3-text__center g3-space__padding-md-left g3-space__padding-md-top-bottom">
       {{< param "g3Teaser.detail" >}}

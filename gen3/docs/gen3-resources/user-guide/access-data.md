@@ -1,18 +1,16 @@
 # Access Data Files
 
-
-
 ## Authentication and Authorization
 
 ### Authentication
-Authentication refers to how a user identifies themself to the Gen3 system.  The method of user authentication varies from system to system.  This could include eRA Commons, Google, Microsoft Office 365, InCommons, eduGAIN, ORCID, or generally anything following an OIDC standard.  This is configured by your system operator and you can find more details in the [Gen3 Operator's Guide][configure auth].  
+Authentication refers to how a user identifies themselves to the Gen3 system.  The method of user authentication varies from system to system.  This could include eRA Commons, Google, Microsoft Office 365, InCommons, eduGAIN, ORCID, or generally anything following an OIDC standard.  This is configured by your system operator, and you can find more details in the [Gen3 Operator's Guide][configure auth].
 
 
 ### Authorization
-Authorization indicates to which data a particular user has access.  Governance practices vary from Gen3 system to system and this can take a variety of forms, but typically falls into two buckets: white list and dbGaP.   You can find more in-depth details on how this is configured within the [Gen3 Operator's Guide][configure auth].
+Authorization indicates to which data a particular user has access.  Governance practices vary from Gen3 system to system and this can take a variety of forms, but typically falls into two buckets: allow list and dbGaP.   You can find more in-depth details on how this is configured within the [Gen3 Operator's Guide][configure auth].
 
-#### White list
-A white list is simply a list of users (identified based on your method of authentication) that controls which users have access to which data.  It is in the form of a user.yaml file that is maintained by a the operator of your Gen3 system.  You should contact the operator of your system or follow whatever process they have in place to request access.  Gaining access may require you to sign a Data Use Agreement.  Data access is granted at the program or project level.
+#### Allow list
+An allow list is simply a list of users (identified based on your method of authentication) that controls which users have access to which data.  It is in the form of a user.yaml file that is maintained by the operator of your Gen3 system.  You should contact the operator of your system or follow whatever process they have in place to request access.  Gaining access may require you to sign a Data Use Agreement.  Data access is granted at the program or project level.
 
 #### dbGaP
 Another common authorization mechanism is dbGaP.  In order to obtain access to controlled-access data via dbGaP, PIs must first obtain an [NIH eRA Commons account][era_commons] and then obtain authorization to access the data through the [NIH database of Genotypes and Phenotypes (dbGaP)][dbgap].
@@ -20,6 +18,7 @@ Another common authorization mechanism is dbGaP.  In order to obtain access to c
 To obtain dbGaP access, navigate to the [dbGaP Authorized Access site][dbgap auth] and follow the instructions. This process includes working with your institutional research office, reviewing the consent agreement for the particular project, and writing a Research Use Statement and thus can take a significant amount of time.
 
 
+[//]: # (There are other options here: 1 is a bulk allow list from an SFTP server in the same format as dbGaP, but not dbGaP. 2 is doing dynamic authorization using the Requestor service with the approving system running their own software for approval. There was a recent doc I helped write for Prometheus that laid out these auth options. There's even a diagram. https://docs.google.com/document/d/1RqSeUIWiAxyij509JghCwWt58fLJ2zyVw5Vz5ys1OP4/edit?tab=t.0)
 
 
 ## Download Files Using the Gen3-client
@@ -27,9 +26,8 @@ The gen3-client provides an easy-to-use, command-line interface for uploading an
 
 This guide has the following sections:
 
-
 ### Installation Instructions
-A binary executable of the latest version of the gen3-client should be [downloaded from Github][Gen3 Client]. Choose the file that matches your operating system (Windows, Linux, or Mac OS).
+A binary executable of the latest version of the gen3-client should be [downloaded from Github][Gen3 Client]. Choose the file that matches your operating system (Windows, Linux, or macOS).
 
 No installation is necessary. Simply download the correct version for your operating system and unzip the archive. The program is then executed from the command-line by running the command `gen3-client <options>`. For more detailed instructions, see the section below for your operating system.
 
@@ -129,7 +127,7 @@ Before using the gen3-client to upload or download data, the gen3-client needs t
 ### Download a Single Data File Using a GUID
 
 
-Files with a valid storage location in the file index database (AKA *indexd*) can downloaded using the `gen3-client download-single` command by providing the file's object_id (AKA *GUID* or *did*).
+Files with a valid storage location in the file index database (AKA *indexd*) can be downloaded using the `gen3-client download-single` command by providing the file's object_id (AKA *GUID* or *did*).
 
 For example, the indexd record for object_id ["00149bcf-e057-4ecc-b22d-53648ae0b35f"](https://gen3.datacommons.io/index/00149bcf-e057-4ecc-b22d-53648ae0b35f) points to a [location in the GDC](https://api.gdc.cancer.gov/data/47b982b3-c7ce-4ca7-8c86-c71c15979620).
 

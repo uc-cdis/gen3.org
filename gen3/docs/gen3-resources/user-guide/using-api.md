@@ -8,7 +8,7 @@ The beauty of a Gen3 data commons is that all the functionality of the data comm
 
    **Note:** The Gen3 commons uses GraphQL as the language for querying metadata across Gen3 Data Commons. To learn the basics of writing queries in GraphQL, please visit: [http://graphql.org/learn][learn GraphQL].
 
-Gen3 features a variety of API endpoints such as `/submission`, `/index`, or `/graphql`, which differ in how they access the resource and contain each a subset of REST (Representational State Transfer) APIs for networked applications. REST APIs are restricted in their interactions via HTTP request methods such as GET, POST, PATCH, PUT, or DELETE. The GET request retrieves data in read-only mode, POST sends data and creates a new resource, PATCH updates/modifies a resource, PUT updates/replaces a resource, and DELETE deletes a resource. At Gen3, the GET endpoint
+Gen3 features a variety of API endpoints such as `/submission`, `/index`, or `/graphql`, which differ in how they access the resource and contain each a subset of REST (Representational State Transfer) APIs for networked applications. REST APIs are restricted in their interactions via HTTP request methods such as GET, POST, PATCH, PUT, or DELETE. The GET request retrieves data in read-only mode, POST typically sends data and creates a new resource, PATCH typically updates/modifies a resource, PUT typically updates/replaces a resource, and DELETE deletes a resource. At Gen3, the GET endpoint
 ```
 /api/v0/submission/<program>/<project>/_dictionary
 ```
@@ -36,8 +36,11 @@ While displayed, click “copy” to copy the API key to the clipboard or “dow
 
 ![Screenshot of the API Key window showing the option to copy the API key or download the .json file with credentials][img API copy keys]
 
+
+[//]: # (Alex: We should NOT promote the below code for security reasons. This would lead to a leaked token if the code was shared. I would highly recommend that we rework this section to tell people to set environment variables or use a file path in the code and NOT hard-code the key here.)
+
 In Python, the following command is sent, using the module “requests”, to receive the access token:
-```
+```python
 # Save the copied credentials.json from the website and paste the api_key and key_id into a variable "key":
 key =  {
     "api_key": "<actual-key>",
@@ -54,7 +57,7 @@ token = requests.post('https://gen3.datacommons.io/user/credentials/cdis/access_
 token
 ```
 When submitting a graphQL query to the Gen3 API, or requesting data download/upload, include the access token in the request header:
-```
+```python
 headers = {'Authorization': 'bearer '+ token['access_token']}
 
 # A GraphQL Endpoint Query Using the "key" JSON:
@@ -82,7 +85,7 @@ u = requests.put('https://gen3.datacommons.io/api/v0/submission/{}/{}'.format(pr
 u.text # should display the API response
 ```
 
-If an an error such as “You don’t have access… " occurs, then either you do not have access, or the API key is out of date and a new access token will need to be made. Further errors could occur if the uploaded file is not correctly formatted for the Gen3 data model.
+If an error such as "You don’t have access… " occurs, then either you do not have access, or the API key is out of date and a new access token will need to be made. Further errors could occur if the uploaded file is not correctly formatted for the Gen3 data model.
 
 ## Querying and Downloading Metadata using the API
 
