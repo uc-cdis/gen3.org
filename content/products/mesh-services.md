@@ -1,12 +1,13 @@
 ---
-identifier: products/framework-services
-title: Gen3 - Products - Framework Services
-linktitle: /products/framework-services
+identifier: products/mesh-services
+title: Gen3 - Products - Mesh Services
+linktitle: /products/mesh-services
 date: 2021-01-08
+aliases: /products/framework-services
 g3Teaser:
-  title: Gen3 Framework Services
-  detail: The Gen3 Framework Services are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via a robust and flexible access control policy engine.
-  para1: Data resources using the Gen3 Framework Services get the minimal backend functionality necessary for managing data and controlling user access to it. Specifically, the services included in the Gen3 Framework Services are those for data object indexing, storing and associating metadata with data objects, and user authentication and authorization.
+  title: Gen3 Data Mesh Services
+  detail: The Gen3 Mesh Services (aka framework services) are a minimal set of software services that provide open APIs for indexing data objects, associating metadata with the data objects, and controlling user access to data via a robust and flexible access control policy engine. Mesh services support both data commons and data meshes.
+  para1: Data resources using the Gen3 Mesh Services get the minimal backend functionality necessary for managing data and controlling user access to it. Specifically, the services included in the Gen3 Mesh Services are those for data object indexing, storing and associating metadata with data objects, and user authentication and authorization.  
 g3Feature:
   f1:
     title: Object Indexing
@@ -22,7 +23,7 @@ g3Feature:
     detail: The Gen3 metadata service provides support for arbitrary JSON blobs attached to globally unique identifiers (GUIDs). This provides a simple and flexible way to add additional, non-schema-enforced metadata into the system without the need for a fully-fledged, harmonized data model.
 ---
 
-<section class="g3-bg__yellow">
+<section class="g3-bg__mint">
   <div class="g3-outer-wrapper g3-flex-content">
     <div class="g3-space__padding-lg-top g3-space__padding-lg-bottom g3-col__65">
       <div class="g3-space__wrapper-gap-left">
@@ -31,6 +32,10 @@ g3Feature:
         </h1>
         <p class="g3-space__margin-sm-bottom introduction">
           {{< param "g3Teaser.detail" >}}
+        </p>
+        <br>
+        <p class="g3-space__margin-sm-bottom introduction">
+          {{< param "g3Teaser.para1" >}}
         </p>
       </div>
     </div>
