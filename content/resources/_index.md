@@ -38,7 +38,7 @@ g3Resources:
   r2:
     name: Gen3 Operator
     fig: /figs/roles/icon-research.svg
-    detail: You’re setting up or maintaining your own Gen3 data commons or ecosystem.
+    detail: You’re setting up or maintaining your own Gen3 data commons or mesh.
     button:
       caption: Documentation
       link: /resources/operator
