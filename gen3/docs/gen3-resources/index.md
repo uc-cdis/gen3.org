@@ -4,6 +4,7 @@ this is the "home page" for the New Resources page
 contains an outline for these 5 separate sections, and what they cover.
 also some sort of figure
 
+[//]: # (Alex: The formatting here could use some improvement, these should ideally be actual links)
 - Configure and Deploy Gen3:  gen3-resources/deploy-gen3.md
       # contains content from the operator guide and also Helm docs
 - Create Data Dictionary:  gen3-resources/create-data-dictionary.md

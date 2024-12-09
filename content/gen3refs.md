@@ -49,7 +49,7 @@ The Gen3 data platform is used as the basis for many data repositories and enabl
       <a href="https://arxiv.org/abs/2404.15475">View Article</a>
     </p>
     <p class="g3-space__margin-sm-bottom">
-    Kim, Erika, et al. "NCI cancer research data commons: lessons learned and future state." Cancer Research 84.9 (2024): 1404-1409.      
+    Kim, Erika, et al. "NCI cancer research data commons: lessons learned and future state." Cancer Research 84.9 (2024): 1404-1409.
       <a href="https://aacrjournals.org/cancerres/article/84/9/1404/745076">View Article</a>
     </p>
     <p class="g3-space__margin-sm-bottom">
@@ -92,7 +92,7 @@ The Gen3 data platform is used as the basis for many data repositories and enabl
     Wyatt, Kirk D., et al. "An open-source platform for pediatric cancer data exploration: a report from Data for the Common Good." JAMIA open 7.1 (2024): ooae004.
       <a href="https://academic.oup.com/jamiaopen/article/7/1/ooae004/7595632">View Article</a>
     </p>
-  </div>  
+  </div>
 </section>
 
 

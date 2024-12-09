@@ -20,13 +20,13 @@ Gen3 documentation is constantly evolving.  If you see an error or omission we w
 
 #### Tutorials
 
-Beyond the basic documentation, having an end to end tutorial on a particular topic can extraordinarily helpful.  Please feel free to suggest such a tutorial.  
+Beyond the basic documentation, having an end to end tutorial on a particular topic can extraordinarily helpful.  Please feel free to suggest such a tutorial.
 
 ### Participate in community events or on Slack
 
 Gen3 has a [community forum](https://gen3.org/community/events/) every other month where CTDS or other Gen3 users/operators present on topics of mutual interest to the community.  We are always looking for contributions so please recommend topics or volunteer to present if a call is made to the community.  Your experiences are valuable for the rest of the community to learn from!
 
-Your participation in the community slack channel is also very much appreciated.  If you know the answer to a question or have something to contribute please speak up!  
+Your participation in the community Slack channel is also very much appreciated.  If you know the answer to a question or have something to contribute please speak up!
 
 
 ### Create an Issue
@@ -49,8 +49,8 @@ You may submit updates to code or documentation by creating a pull request.
 1. Note that all code contributions are subject to our Apache 2.0 license attached to each of our repositories (https://www.apache.org/licenses/LICENSE-2.0).
 2. Background information
 
-    * Should you create an issue first? No, just use the description of the pull request to provide context and motivation, as you would for an issue.  
-    * If your code update is at all complicated you will likely be asked to fill out a Community Feature Document to help the  Gen3 team review your PR.  You can find the template [here](https://docs.google.com/document/d/1P2dfqnSH-e7OX1Hw62sDL8zcR7gZp4d152TlDBlomDc/edit?tab=t.0#heading=h.5e0lej9k5tiv).  Please make a copy, and provide with your PR either as an attachment or provide a shareable link to a completed version.  Sharing as a google doc may be helpful to allow for comments and discussion between you and the Gen3 team.
+    * Should you create an issue first? No, just use the description of the pull request to provide context and motivation, as you would for an issue.
+    * If your code update is at all complicated you will likely be asked to fill out a Community Feature Document to help the  Gen3 team review your PR.  You can find the template [here](https://docs.google.com/document/d/1P2dfqnSH-e7OX1Hw62sDL8zcR7gZp4d152TlDBlomDc/edit?tab=t.0#heading=h.5e0lej9k5tiv).  Please make a copy, and provide with your PR either as an attachment or provide a shareable link to a completed version.  Sharing as a Google doc may be helpful to allow for comments and discussion between you and the Gen3 team.
 
 3. Always check out the `main` or `master` branch and submit pull requests against it.
 
@@ -61,7 +61,7 @@ You may submit updates to code or documentation by creating a pull request.
 5. If there is a prior issue, reference the GitHub issue number in the description of the pull request.
 6. Ensure your PR description is populated and following the [required template](https://github.com/uc-cdis/.github/blob/master/.github/pull_request_template.md)
 
-    * Our Gen3 Release Notes are parsed from PR descriptions. Each bullet/line under the PR template headings get into our release notes as individual bullets, so the language should be succint and high-level
+    * Our Gen3 Release Notes are parsed from PR descriptions. Each bullet/line under the PR template headings get into our release notes as individual bullets, so the language should be succinct and high-level
     * Context, motivation, overview, and all other info about the change should go _above_ the required headings (which won’t get parsed and pulled into the Gen3 Release Notes)
 
 7. Once your PR is made, a CTDS staff member may reach out with additional questions and/or comment directly on your PR in GitHub.

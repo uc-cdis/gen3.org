@@ -2,11 +2,15 @@
 # Searching and Exploring Structured Data
 The data in a Gen3 data commons can be browsed and downloaded using several different methods. The following general documentation will cover some standard methods of data access in a Gen3 data commons. Ultimately, however, the methods of data access offered in a Gen3 data commons is determined by agreements made between the data commons’ sponsors and data contributors.
 
-Various levels of data access can be configured in a Gen3 data commons using the Fence and Arborist services. If open access data is hosted, a data commons can be configured to allow anonymous access to data, which means users can explore data without logging in. This is the case for the [Gen3 Data Hub][Gen3 Data Hub].
+Various levels of data access can be configured in a Gen3 data commons using the Gen3 Framework Services. If open access data is hosted, a data commons can be configured to allow anonymous access to data, which means users can explore data without logging in. This is the case for the [Gen3 Data Hub][Gen3 Data Hub].
 
 In cases where data is controlled access, typically external users will receive instructions on how to access data and may be required to sign a DUA (Data Use Agreement) legal document.
 
 The following sections provide details on how to explore and access data from within the data commons website and from the command-line by sending requests to the Gen3 open APIs.
+
+[//]: # (Alex: I would like to see this ordered like this Data Discovery -> Data Access Approval - if controlled data -> Data Exploration. I would like to promote using the Gen3 Discovery page as the initial place to find data as that's it's intended purpose.)
+
+[//]: # (Alex: I started thinking through user "questions" and relating them to particular groups of endpoints in our API and thinking through how users would expect to move between parts of the product. It's old and maybe needs some dust removed, but it was done while thinking through the idea of the Data Lake. The relevant section of the feature doc is here: https://docs.google.com/document/d/1UjQjvUuasmfe_5iaEfqjFzLTHsC-8EXXNYCSyP0-k_s/edit?tab=t.0#heading=h.xp6x9p5szrmw)
 
 ## Searching for Data from the Data Portal
 The Gen3 software stack offers a data portal service that creates a website with graphical tools for performing the basic functionality of a data commons, like browsing data in projects, building patient cohorts across projects, downloading metadata or data files for cohorts, and building database queries. The data portal relies on the same [API queries][API instructions] that you can explore directly if you prefer.
@@ -53,6 +57,8 @@ Entire structured data records can be exported as a JSON or TSV file using the [
 More SDK examples and how to get started with the SDK can be also found in the [analyze-data section][Using Gen3 SDK].
 
 
+[//]: # (Alex: The Gen3 Python SDK is also a command line interface / CLI. It's likely worth noting that. It covers a lot of data ingestion support in case you don't want to write Python.)
+
 
 ### Submission Page
 
@@ -73,7 +79,9 @@ In the graphical model of a data project, the number you see underneath the node
 ### Query Page
 The easiest way to query structured data in a Gen3 data commons is done by using the [graphQL query language][GraphQL] with the GraphiQL interface, which can be accessed by clicking “Query” in the top navigation bar or by navigating to the URL: [https://gen3.datacommons.io/query][Query page]. The URL https://gen3.datacommons.io can be replaced with the URL of other Gen3 data commons.
 
-This query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, pass variables, and generally make it easier for users to find information. The “Docs” button will display documentation of the queryable nodes and properties. From the GraphiQL interface of the data portal, you can switch between *Graph Model* or *Flat Model* – each using endpoints that query different databases (Postgres and ElasticSearch, respectively). Notably, the same queries can be sent to both the flat and graph model API endpoints from the command-line.
+This query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, pass variables, and generally make it easier for users to find information. The “Docs” button will display documentation of the queryable nodes and properties.
+
+From the GraphiQL interface of the data portal, you can switch between *Graph Model* or *Flat Model* – each using endpoints that query different databases (Postgres and ElasticSearch, respectively). Notably, the same queries can be sent to both the flat and graph model API endpoints from the command-line.
 
 #### Graph Model
 

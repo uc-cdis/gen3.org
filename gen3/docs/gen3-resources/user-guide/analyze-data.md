@@ -1,5 +1,9 @@
 # Data Analysis in a Gen3 Data Commons
-The Gen3 platform for creating data commons co-locates data management with analysis workspaces, apps and tools. Workspaces are highly customizable by the operators of a Gen3 data commons and offer a variety of VM images (virtual machines) pre-configured with tools for specific analysis tasks. Custom applications for executing bioinformatics workflows or exploratory analyses may be integrated in the navigation bar as well. The following documentation primarily covers exploratory data analysis in the standard Gen3 Workspace, which can be accessed by clicking the “Workspace” icon in the top navigation bar or navigating to the [/workspace][workspace] endpoint.
+The Gen3 platform for creating data commons co-locates data management with analysis workspaces, apps and tools.
+
+Workspaces are highly customizable by the operators of a Gen3 data commons and offer a variety of VM images (virtual machines) pre-configured with tools for specific analysis tasks. Custom applications for executing bioinformatics workflows or exploratory analyses may be integrated in the navigation bar as well.
+
+The following documentation primarily covers exploratory data analysis in the standard Gen3 Workspace, which can be accessed by clicking the “Workspace” icon in the top navigation bar or navigating to the [/workspace][workspace] endpoint.
 
 ## Launch Workspace
 
@@ -41,7 +45,15 @@ Bringing in files into the Gen3 Workspace can be achieved via the UI (directly f
 > Note: Not every PlanX Data Commons has the function in the UI enabled; users are advised to follow available commons-specific documentation.
 
 ### Exporting Files from the Exploration Tab to the Workspace
-The Exploration page allows to search through data and create cohorts, which can be exported to the Workspace. After a cohort has been selected, the data can be exported to a Workspace by clicking “Export to Workspace”. Do not navigate away from the browser after clicking the button. Allow up to 5 minutes to export your files. A popup window will appear confirming that exporting a “manifest” to the workspace has been successful. Find the data or data files in the folder “data” on your persistent drive “/pd”. Please note, that the workspace mounts up to 5 different manifests while the workspace is running, but shows only the latest exported manifest in a newly launched workspace.
+The Exploration page allows to search through data and create cohorts, which can be exported to the Workspace.
+
+- After a cohort has been selected, the data can be exported to a Workspace by clicking “Export to Workspace”.
+- Do not navigate away from the browser after clicking the button.
+- Allow up to 5 minutes to export your files.
+- A popup window will appear confirming that exporting a “manifest” to the workspace has been successful.
+- Find the data or data files in the folder “data” on your persistent drive “/pd”.
+
+> Please note: the workspace mounts up to 5 different manifests while the workspace is running, but shows only the latest exported manifest in a newly launched workspace.
 
 ![Screenshot of Exploration page showing how to export data to a Workspace with button][img Export Data to Workspace]
 
@@ -52,7 +64,7 @@ In order to download data files directly and programmatically from a Gen3 data c
 From the command line, download the latest [Linux version of the gen3-client][linux gen3 client] using the `wget` command. Next, unzip the archive and add it to your path:
 
 Example:
-```
+```bash
 wget https://github.com/uc-cdis/cdis-data-client/releases/download/2020.11/dataclient_linux.zip
 unzip dataclient_linux.zip
 PATH=$PATH:~/
@@ -109,24 +121,24 @@ GSM1558854_Sample40_3.CEL.gz  4.20 MiB / 4.20 MiB [====================....
 jovyan@jupyter-user:~$  mv *.gz files
 ```
 
-## Working with the proxy and whitelists
+## Working with the proxy and allow lists
 
 ### Working with the Proxy
 
 To prevent unauthorized traffic, the Gen3 VPC utilizes a proxy. If you are using one of the custom VMs setup, there is already a line in your .bashrc file to handle traffic requests.
 
-```
+```bash
 export http_proxy=http://cloud-proxy.internal.io:3128
 export https_proxy=$http_proxy
 ```
 Alternatively, if you have a different service or a tool that needs to call out, you can set the proxy with each command.
-```
+```bash
 https_proxy=https://cloud-proxy.internal.io:3128 aws s3 ls s3://gen3-data/ --profile <profilename>
 ```
 
-### Whitelists
+### Allow lists
 
-Additionally, to aid Gen3 Commons security, the installation of tools from outside resources is managed through a whitelist. If you have problems installing a tool you need for your work, contact [support@gen3.org](mailto:support@gen3.org) and with a list of any sites from which you might wish to install tools. After passing a security review, these can be added to the whitelist to facilitate access.
+Additionally, to aid Gen3 Commons security, the installation of tools from outside resources is managed through an allow list. If you have problems installing a tool you need for your work, contact [support@gen3.org](mailto:support@gen3.org) and with a list of any sites from which you might wish to install tools. After passing a security review, these can be added to the allow list to facilitate access.
 
 ## Using the Gen3 Python SDK
 To make programmatic interaction with Gen3 data commons easier, the bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has developed the Gen3 Python SDK, which is a Python library containing functions for sending standard requests to the Gen3 APIs. The code is open-source and available on [GitHub][Gen3 Python SDK Github] along with [documentation for using it][Gen3 Python SDK doc].

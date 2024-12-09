@@ -11,7 +11,7 @@ Unstructured data are simply data files that have do not necessarily conform to 
 
 In order to upload data files you must at minimum have a `program`, `project`, and at least one record in the `core_metadata_collection` node or other data containing node. To review how to submit the program and project nodes see [here][Node Order].
 
-This documentation will utilize the core_metadata_collection node but other nodes can be used depending on your unique data model. If your project already has at least one record in a node of this type, you can skip to [step 2](#2-upload-data-files-to-object-storage).  
+This documentation will utilize the core_metadata_collection node but other nodes can be used depending on your unique data model. If your project already has at least one record in a node of this type, you can skip to [step 2](#2-upload-data-files-to-object-storage).
 
 Do the following to create your first `core_metadata_collection` record:
 

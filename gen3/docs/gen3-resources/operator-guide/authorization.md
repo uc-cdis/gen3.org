@@ -2,13 +2,13 @@
 # Controlling authorization of data access
 
 ## Unstructured data
-Files can be either open access or controlled access within a Gen3 Data Commons.  Access to controlled files is managed either through dbGaP or via a white list.
+Files can be either open access or controlled access within a Gen3 Data Commons.  Access to controlled files is managed either through dbGaP or via an allow list.
 
 
 
 ### Authentication
 
-Authentication is a way of telling a Gen3 system who you are.  This requires you configure an Identity Provider (IdP), which is configured through the [Fence service][Fence]. At the moment, the supported IDPs include:   
+Authentication is a way of telling a Gen3 system who you are.  This requires you configure an Identity Provider (IdP), which is configured through the [Fence service][Fence]. At the moment, the supported IDPs include:
 
   *  Google
   *  Shibboleth
