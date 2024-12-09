@@ -6,7 +6,7 @@ date: 2022-06-22T22:16:21-05:00
 g3Teaser:
   fig: /figs/webinar.svg
   title: Gen3 Tutorials
-  detail: Tutorials of interest to the Gen3 community will be periodically created and posted here.  If you would like to contribute your own tutorial or have ideas for a tutorial please reach out!
+  detail: Tutorials of interest to the Gen3 community will be periodically created and posted here.  If you would like to contribute your own tutorial or have ideas for a future tutorial please reach out!
 
 
 g3past:
