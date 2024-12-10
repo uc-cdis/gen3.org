@@ -9,7 +9,9 @@ The underlying software and APIs are designed from the ground up to be interoper
 
 > NOTE: While cloud-agnostic, we (the Center for Translational Data Science, maintainers of Gen3) use AWS internally for most instances of Gen3 we manage, and therefore some documentation may include AWS specific instructions.
 
-Gen3 can handle various categories of data based on their structure. **Unstructured** data represents files on a hard drive or cloud storage with no consistent schema. These data tend to represent either bulk clinical and phenotypic data in spreadsheet format or patient level data such as images or genomic sequencing files.
+Gen3 can handle various categories of data based on their structure. 
+
+**Unstructured** data represents files on a hard drive or cloud storage with no consistent schema. These data tend to represent either bulk clinical and phenotypic data in spreadsheet format or patient level data such as images or genomic sequencing files.
 
 **Structured** data are data that adhere to a specific and strict schema with a graphical representation of nodes with properties and relationships to other nodes. This schema can be referred to as a data model or data dictionary and tends to represent clinical and phenotypic data, linking subjects and their clinical and phenotypic data to studies and their samples. This is typically used to represent a harmonized version of the data.
 
