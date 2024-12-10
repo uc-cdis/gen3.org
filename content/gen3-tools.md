@@ -18,21 +18,21 @@ g3Starts:
   s2:
     name: gen3utils
     fig: /figs/UChicago_CTDS_Vertical_Color RGB.svg
-    detail: Utilities for Gen3 management including validation tools. Created by the Center for Translational Data Science at the University of Chicago.                                                       
+    detail: Utilities for Gen3 management including validation tools. Created by the Center for Translational Data Science at the University of Chicago.
     button:
       caption: GitHub
       link: https://github.com/uc-cdis/gen3utils
   s3:
     name: g3t
     fig: /figs/OHSU-logo.png
-    detail: Gen3 Tracker (g3t) includes utilities to manage Gen3 schemas, projects and submissions.  Tools include those to create and manage metadata, manipulate file manifests, status checks, metadata validation, user access, and others.                                                       
+    detail: Gen3 Tracker (g3t) includes utilities to manage Gen3 schemas, projects and submissions.  Tools include those to create and manage metadata, manipulate file manifests, status checks, metadata validation, user access, and others.
     button:
       caption: GitHub
       link: https://github.com/ACED-IDP/gen3_util
   s4:
     name: g3t_etl
     fig: /figs/OHSU-logo.png
-    detail: g3t_etl is a command-line tool and library designed to manage Gen3 metadata including transformations to and from FHIR formatted data. The tool provides various commands, each serving a specific purpose.                                   
+    detail: g3t_etl is a command-line tool and library designed to manage Gen3 metadata including transformations to and from FHIR formatted data. The tool provides various commands, each serving a specific purpose.
     button:
       caption: GitHub
       link: https://github.com/ACED-IDP/g3t_etl
@@ -99,7 +99,7 @@ g3Starts:
           {{< param "g3Starts.s2.name" >}}
         </h3>
         <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
-          {{< param "g3Starts.s2.detail" >}} <br>       <br> <br>               
+          {{< param "g3Starts.s2.detail" >}} <br>       <br> <br>
         </p>
         <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s2.button.link" >}}">
           {{< param "g3Starts.s2.button.caption" >}}
@@ -111,7 +111,7 @@ g3Starts:
           {{< param "g3Starts.s3.name" >}}
         </h3>
         <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
-          {{< param "g3Starts.s3.detail" >}} <br>       <br> <br>               
+          {{< param "g3Starts.s3.detail" >}} <br>       <br> <br>
         </p>
         <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s3.button.link" >}}">
           {{< param "g3Starts.s3.button.caption" >}}
@@ -155,7 +155,7 @@ g3Starts:
         {{< param "g3Starts.s6.name" >}}
       </h3>
       <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
-        {{< param "g3Starts.s6.detail" >}} <br>       <br> <br>               
+        {{< param "g3Starts.s6.detail" >}} <br>       <br> <br>
       </p>
       <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s6.button.link" >}}">
         {{< param "g3Starts.s6.button.caption" >}}

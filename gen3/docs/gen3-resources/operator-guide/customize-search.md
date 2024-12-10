@@ -67,7 +67,7 @@ For more information on using the Discovery Page please see the User Guide [Disc
 ### Metadata Service
 To view data in the discovery page you must have a populated [metadata service][mds github] or alternatively an [Aggregated metadata service (aggMDS)][aggmds github], which caches the metadata from two or more metadata source to provide a unified view of the commons on the discovery page.
 
-Instructions for the creation and modification of an MDS record can be found here as part of the [Gen3 SDK][sdk for discovery page].  Every data commons is different as there is no standardization of MDS and therefore any example we provide may not apply to your particular system.  
+Instructions for the creation and modification of an MDS record can be found here as part of the [Gen3 SDK][sdk for discovery page].  Every data commons is different as there is no standardization of MDS and therefore any example we provide may not apply to your particular system.
 
 To view the MDS for the Gen3 Data Hub you can go [here][gen3 data hub mds]. You can see in the snippet below some summary metadata for the 1000 Genomes project with is part of the Gen3 Data Hub:
 
