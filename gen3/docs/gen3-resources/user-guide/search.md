@@ -27,7 +27,10 @@ Instead of using the Discovery and Exploration pages you could instead use the [
 
 ### Discovery Page
 
-In many data commons or meshes the first place to explore your data will be on a Discovery Page.  This typically includes public metadata about projects to make it discoverable. The Discovery Page can also be used to store publication information, DOI metadata, or FHIR metadata. Users should be able to search based on free text or filter based on tags and can determine whether they have sufficient authorization to access file for a given project.
+In many data commons or meshes the first place to explore your data will be on a Discovery Page.  This typically includes public metadata about projects to make it discoverable. The Discovery Page can also be used to store publication information, DOI metadata, and/or FHIR metadata.
+
+Users should be able to search based on free text or filter based on tags and can determine whether they have sufficient authorization to access file for a given project.
+
 
 ![Animation showing how to navigate around the Discovery page][Discovery Page]
 
