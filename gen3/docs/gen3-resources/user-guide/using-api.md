@@ -36,9 +36,6 @@ While displayed, click “copy” to copy the API key to the clipboard or “dow
 
 ![Screenshot of the API Key window showing the option to copy the API key or download the .json file with credentials][img API copy keys]
 
-
-[//]: # (Alex: We should NOT promote the below code for security reasons. This would lead to a leaked token if the code was shared. I would highly recommend that we rework this section to tell people to set environment variables or use a file path in the code and NOT hard-code the key here.)
-
 In Python, the following command is sent, using the module “requests”, to receive the access token:
 ```python
 # Save the credentials.json file from the website. Copy the file path to the credentials file with the key.
@@ -49,7 +46,7 @@ import json, requests
 api = "https://gen3.datacommons.io"
 key_file = "/put_path_to/credentials.json"
 
-# Read the key from the file and 
+# Read the key from the file and
 with open(key_file) as json_file:
     key = json.load(json_file)
 
