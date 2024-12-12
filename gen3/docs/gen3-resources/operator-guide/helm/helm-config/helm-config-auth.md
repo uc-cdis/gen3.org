@@ -2,65 +2,21 @@
 
 Authentication (AuthN) and authorization (AuthZ) work together as part of identity and access management (IAM). AuthN is controlled by Fence - it relates to confirming the identity of the user (often through signle sign-on). AuthZ is controlled by Arborist - it determines what an authenticated user can see and do.
 
-## Arborist (AuthN)
-
-### What Does it Do
-
-Arborist is the authorization service. It works with Fence to assign authorizations to a user based on their authentication information. Information around user authorizations are set within a useryaml, or telemetry file for dbgap authorized users, and put into the arborist db during usersync.
-
-### Default settings
-
-If you deploy Helm without customizing any configuration, you can see the [default Arborist values here](https://github.com/uc-cdis/gen3-helm/blob/master/helm/arborist/values.yaml).
-
-### How to configure it
-
-For the full set of configuration options, see the [Helm README.md for Arborist](https://github.com/uc-cdis/gen3-helm/tree/master/helm/arborist)
-
-Some common configuration options include:
-
-**Postgres configuration**
-
-```
-# -- (map) To configure postgresql subchart
-# Persistence is disabled by default
-postgresql:
-  primary:
-    persistence:
-      # -- (bool) Option to persist the dbs data.
-      enabled: true
-```
-
-You can see examples of this configuration in context in the following [example Gen3 values.yamls](https://github.com/uc-cdis/gen3-helm/tree/master/examples):
-
-* [aws_dev_values.yaml](https://github.com/uc-cdis/gen3-helm/blob/master/examples/aws_dev_values.yaml)
-* [gke_dev_values.yaml](https://github.com/uc-cdis/gen3-helm/blob/master/examples/gke_dev_values.yaml)
-* [gke_values.yaml](https://github.com/uc-cdis/gen3-helm/blob/master/examples/gke_values.yaml)
-
-**Image repo/ tag**
-
-```
-arborist:
-  enabled: true
-
-  # What image/ tag to pull
-  image:
-    tag:
-    repository:
-```
-
-Common Arborist database SQL queries can be [found here](https://github.com/uc-cdis/cdis-wiki/blob/master/dev/gen3-sql-queries.md#arborist-database). *Note: this link is only visible to CTDS employees*
-
 ## Fence (AuthZ)
 
 ### What Does it Do
 
-Fence is a core service for a Gen3 datacommons which handles authentication. It is necessary for a commons to run at all, and will handle authentication on the `/login` endpoint as well as creating presigned url's in the presigned-url-fence pods.
+Fence handles authentication, and is a core service for Gen3 data commons and any other type of Gen3 deployment. It is a required service for a commons to run at all, and will handle authentication on the `/login` endpoint as well as creating presigned url's in the presigned-url-fence pods.
 
-### Default settings
+For full functionality in a Gen3 instance, Fence depends on a [configured user.yaml](#how-to-configure-the-useryaml) unless you [enable mock authorization](#mock-authorization-for-development-only).
+
+### Default settings for Fence and user.yaml
 
 If you deploy Helm without customizing any configuration, you can see the [default Fence values here](https://github.com/uc-cdis/gen3-helm/blob/master/helm/fence/values.yaml).
 
-### How to configure it
+A [default user.yaml is provided in the Fence values.yaml](https://github.com/uc-cdis/gen3-helm/blob/master/helm/fence/values.yaml#L517-L726). However, it is configured with stand-in information to demonstrate where to add your real email and project name values, so it cannot work as a user.yaml without further configuration because some information is fake. For development work, you can configure Fence to use mock authorization to bypass the need for configuring the user.yaml for
+
+### How to configure Fence
 
 For the full set of configuration options, see the [Helm README.md for Fence](https://github.com/uc-cdis/gen3-helm/tree/master/helm/fence)
 
@@ -114,7 +70,7 @@ You can see examples of Fence configuration overriding defaults in context in th
 * [gke_dev_values.yaml](https://github.com/uc-cdis/gen3-helm/blob/master/examples/gke_dev_values.yaml)
 * [gke_values.yaml](https://github.com/uc-cdis/gen3-helm/blob/master/examples/gke_values.yaml)
 
-### User.yaml
+### How to configure the user.yaml
 
 A user.yaml will control access to your data commons. To see how to construct a user.yaml properly:
 
@@ -171,6 +127,54 @@ To deploy an instance that will allow you to log in with Google, see here:
 OIDC (OpenID Connect) clients allow applications to authenticate with Fence. This setup is often necessary for external users who want to integrate their applications with Gen3. For each application, you'll need to create a unique OIDC client, which will provide a client_id and client_secret for the application to use.
 
 Once the client is created, share the client_id and client_secret with the application owner so they can configure their application to authenticate with Fence. To create these clients you will need to exec into a fence container and [run the following commands](https://github.com/uc-cdis/fence/blob/master/docs/additional_documentation/setup.md#register-oauth-client).
+
+## Arborist (AuthN)
+
+### What Does Arborist Do
+
+Arborist is the authorization service. It works with Fence to assign authorizations to a user based on their authentication information. Information around user authorizations are set within a useryaml, or telemetry file for dbgap authorized users, and put into the arborist db during usersync.
+
+### Default settings for Arborist
+
+If you deploy Helm without customizing any configuration, you can see the [default Arborist values here](https://github.com/uc-cdis/gen3-helm/blob/master/helm/arborist/values.yaml).
+
+### How to configure Arborist
+
+For the full set of configuration options, see the [Helm README.md for Arborist](https://github.com/uc-cdis/gen3-helm/tree/master/helm/arborist)
+
+Some common configuration options include:
+
+**Postgres configuration**
+
+```
+# -- (map) To configure postgresql subchart
+# Persistence is disabled by default
+postgresql:
+  primary:
+    persistence:
+      # -- (bool) Option to persist the dbs data.
+      enabled: true
+```
+
+You can see examples of this configuration in context in the following [example Gen3 values.yamls](https://github.com/uc-cdis/gen3-helm/tree/master/examples):
+
+* [aws_dev_values.yaml](https://github.com/uc-cdis/gen3-helm/blob/master/examples/aws_dev_values.yaml)
+* [gke_dev_values.yaml](https://github.com/uc-cdis/gen3-helm/blob/master/examples/gke_dev_values.yaml)
+* [gke_values.yaml](https://github.com/uc-cdis/gen3-helm/blob/master/examples/gke_values.yaml)
+
+**Image repo/ tag**
+
+```
+arborist:
+  enabled: true
+
+  # What image/ tag to pull
+  image:
+    tag:
+    repository:
+```
+
+Common Arborist database SQL queries can be [found here](https://github.com/uc-cdis/cdis-wiki/blob/master/dev/gen3-sql-queries.md#arborist-database). *Note: this link is only visible to CTDS employees*
 
 ## Relevant AuthN/AuthZ Tutorials
 

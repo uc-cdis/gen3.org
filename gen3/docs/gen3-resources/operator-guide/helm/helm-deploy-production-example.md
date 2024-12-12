@@ -1,11 +1,9 @@
+# Tutorial for Production Deployment
 
-# Production Deployment of Gen3 in AWS
-
-## Introduction
 
 This guide walks you through deploying Gen3 in a production environment on AWS using Infrastructure as Code (IaC), Kubernetes, and GitOps best practices. This approach ensures a robust, scalable, and repeatable deployment process.
 
-### Key Benefits
+## Key Benefits
 
 - **Infrastructure as Code (IaC)**
     - **Efficiency:** Streamlines and automates infrastructure provisioning, eliminating error-prone manual steps.
@@ -21,7 +19,7 @@ This guide walks you through deploying Gen3 in a production environment on AWS u
     - **Security:** Securely store and manage sensitive credentials (e.g., database passwords, API keys) using AWS Secrets Manager.
     - **Seamless Integration:** Easily retrieve secrets from within your applications, adhering to security best practices.
 
-# Tutorial
+
 
 ## 1. Admin VM (Jump Box) Setup
 
@@ -62,13 +60,13 @@ The Admin VM, also known as a jump box or bastion host, serves as your secure en
 
 Install the following tools on your Admin VM:
 
-1. **AWS CLI:** Pre-installed on most Amazon Linux and Ubuntu instances. If not, follow [this guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) to install and configure it.
-2. **Terraform:** Install Terraform using [this guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).
-3. **kubectl:**  Install kubectl following the instructions [here](https://kubernetes.io/docs/tasks/tools/).
-4. **Helm:** Install Helm using [this guide](https://helm.sh/docs/helm/helm_install/).
-5. **k9s (Optional):** Install k9s [here](https://k9scli.io/topics/install/) for a terminal-based UI for your Kubernetes cluster.
+1. **AWS CLI:** Pre-installed on most Amazon Linux and Ubuntu instances. If not, follow [this guide][aws cli user guide] to install and configure it.
+2. **Terraform:** Install Terraform using [this guide][terraform user guide].
+3. **kubectl:**  Install kubectl following the instructions [here][kubectl].
+4. **Helm:** Install Helm using [this guide][helm].
+5. **k9s (Optional):** Install k9s [here][k9s]for a terminal-based UI for your Kubernetes cluster.
 
-##3. Infrastructure Deployment with Terraform
+## 3. Infrastructure Deployment with Terraform
 
 Use the provided Terraform module to create your infrastructure:
 
@@ -152,7 +150,7 @@ gitops-repo/
    touch common1/values/guppy.yaml
    etc...
    ```
-3. Create a templates folder to house the Argocd application file:
+6. Create a templates folder to house the Argocd application file:
     ```
     mkdir common1/templates
     touch common1/templates/app.yaml
@@ -194,13 +192,13 @@ gitops-repo/
         selfHeal: true
     ```
 
-4. Commit and Push to Repository
+7. Commit and Push to Repository
    PLEASE NOTE!:
    It is crucial to ensure that sensitive information, such as secret access keys, database passwords, and any other confidential data, is never uploaded to GitHub. This helps prevent unauthorized access and potential security breaches.
 
    To securely manage sensitive data, we have incorporated external secrets into our Helm charts. Users can utilize this feature to safely handle and store their sensitive information.
 
-   For more details on managing sensitive data using external secrets, please refer to our External Secrets Operator documentation [HERE](tutorial_secrets-mgr.md).
+   For more details on managing sensitive data using external secrets, please refer to our External Secrets Operator documentation [HERE][secrets manager].
 
     Add and commit your changes:
     ```
@@ -263,3 +261,14 @@ spec:
     automated:
       selfHeal: true
 ``` -->
+
+
+
+<!-- Reference Links -->
+[argo wrapper]: https://github.com/uc-cdis/argo-wrapper
+[aws cli user guide]: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+[terraform user guide]: https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+[kubectl]: https://kubernetes.io/docs/tasks/tools/
+[helm]: https://helm.sh/docs/helm/helm_install/
+[k9s]: https://k9scli.io/topics/install/
+[secrets manager]: tutorial_secrets-mgr.md
