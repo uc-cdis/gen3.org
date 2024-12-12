@@ -5,7 +5,7 @@ linktitle: about
 date: 2018-09-04T22:16:21-05:00
 g3Teaser:
   fig: figs/kv.svg
-  title: Gen3 is a data platform for building data commons and data ecosystems.
+  title: Gen3 is a data platform for building data commons and data meshes. 
   detail: The Gen3 platform consists of open-source software services that support the emergence of healthy data ecosystems by enabling the interoperation and creation of cloud-based data resources, including data commons and analysis workspaces. Gen3 aims to accelerate and democratize the process of scientific discovery by making it easy to manage, analyze, harmonize, and share large and complex datasets in the cloud.
   button1:
     caption: Experience Demo
