@@ -46,7 +46,7 @@ In Python, the following command is sent, using the module “requests”, to re
 
 import json, requests
 
-api = "https://yourdatacommons.org"
+api = "https://gen3.datacommons.io"
 key_file = "/put_path_to/credentials.json"
 
 # Read the key from the file and 
