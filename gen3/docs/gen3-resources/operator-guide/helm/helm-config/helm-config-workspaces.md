@@ -114,6 +114,23 @@ hatchery:
         gen3-volume-location: "/home/jovyan/.gen3"
 ```
 
+## Workspace Token Service (wts)
+
+### What Does it Do
+
+WTS acts as an OIDC client which acts on behalf of users to request refresh tokens from Fence. This happens when a user logs into a workspace from the browser. WTS then stores the refresh token for that user, and manages access tokens and refresh tokens for workers that belong to specific users in the workspace.
+
+### Default settings
+
+If you deploy Helm without customizing any configuration, you can see the [default WTS values here](https://github.com/uc-cdis/gen3-helm/tree/master/helm/wts/values.yaml).
+
+### How to configure it
+
+Check out the [quick-start guide for WTS with Helm](https://github.com/uc-cdis/workspace-token-service/blob/master/docs/img/quickstart_helm.md).
+
+For a full set of configuration see the [Helm README.md for WTS](https://github.com/uc-cdis/gen3-helm/tree/master/helm/wts/README.md) or read the [WTS values.yaml](https://github.com/uc-cdis/gen3-helm/tree/master/helm/wts/values.yaml) directly.
+
+
 ## Manifestservice
 
 ### What Does it Do
