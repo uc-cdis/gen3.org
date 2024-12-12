@@ -15,7 +15,15 @@ The following sections provide details on how to explore and access data from wi
 ## Searching for Data from the Data Portal
 Gen3 offers a data portal service that creates a website with graphical tools for performing the basic functionality of a data commons, like browsing data in projects, building patient cohorts across projects, downloading metadata or data files for cohorts, and building database queries.
 
-While this may vary from system to system, to find data in a data commons you can follow a general workflow of 1) Discover data in a mesh or commons using the Discovery Page, 2) Request Access to data using system specific solution, 3) Explore files in the Exploration Page, and 4) Export data to workspace or download locally depending on the requirements of your system.  Instead of using the Discovery and Exploration pages you could instead use the [API][API instructions] for locating data of interest.
+While this may vary from system to system, to find data in a data commons you can follow a general workflow of:
+
+1. Discover data in a mesh or commons using the Discovery Page
+2. Request Access to data using system specific solution
+3. Explore files in the Exploration Page
+4. Export data to workspace or download locally depending on the requirements of your system.
+
+Instead of using the Discovery and Exploration pages you could instead use the [API][API instructions] for locating data of interest.
+
 
 ### Discovery Page
 
