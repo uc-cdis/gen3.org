@@ -41,17 +41,20 @@ While displayed, click “copy” to copy the API key to the clipboard or “dow
 
 In Python, the following command is sent, using the module “requests”, to receive the access token:
 ```python
-# Save the copied credentials.json from the website and paste the api_key and key_id into a variable "key":
-key =  {
-    "api_key": "<actual-key>",
-    "key_id": "<a-key-uuid>"
-    }
+# Save the credentials.json file from the website. Copy the file path to the credentials file with the key.
+# Then, paste the file path as the value for the `key_file` variable
 
-# Import the "requests" Python module:
-import requests
+import json, requests
+
+api = "https://yourdatacommons.org"
+key_file = "/put_path_to/credentials.json"
+
+# Read the key from the file and 
+with open(key_file) as json_file:
+    key = json.load(json_file)
 
 # Pass the API key to the Gen3 API using "requests.post" to receive the access token:
-token = requests.post('https://gen3.datacommons.io/user/credentials/cdis/access_token', json=key).json()
+token = requests.post('{}/user/credentials/cdis/access_token'.format(api), json=key).json()
 
 # Now the access_token should be displayed when the following line is entered:
 token
