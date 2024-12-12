@@ -5,7 +5,6 @@ Gen3 features and functionality are enabled by independent and modular microserv
 While the average user does not need to know the details and names of each microservice, if you are interested in adding new features or modifying your Gen3 system in some way it may be helpful to have a deeper understanding of a specific microservice.  We have included brief descriptions below along with a link to their documentation in GitHub.
 
 ## [Aggregated Metadata Service (AggMDS)][aggmds github]
-[//]: # (Alex: This is not a separate service from the MDS so I feel this is a bit misleading. The same service that powers the Metadata API also powering the AggMDS API - and we have discussed a single API replacement to avoid the confusion here but that hasn't been prioritized.)
 The aggregated MDS is a service which caches metadata from commons metadata services and becomes a centralize API for browsing Metadata with clients such as the Ecosystem browser. The AggMDS holds the content viewable in a Data Portal Discovery page for a Data Mesh.
 
 ## [Arborist][arborist github]
@@ -49,6 +48,9 @@ The Metadata Service provides an API for retrieving JSON metadata of GUIDs. It i
 
 ## [Peregrine][peregrine github]
 Peregrine is the metadata seeking service which responds to GraphQL search queries and translates them to queries over our graph-like source of truth postgres database for structured data. The GraphQL service allows Commons operators and users to precisely query only the information they are most interested in from the metadata collections. The service translates the GraphQL search into the appropriate statements which are run against the PostgreSQL backend before being returned as friendly JSON.
+
+## [Requestor][requestor github]
+Requestor exposes an API to manage access requests.
 
 ## [Sheepdog][sheepdog github]
 The Sheepdog service is responsible for herding user submissions of metadata into the graph database. The submissions are quality controlled against the data dictionary to ensure all required fields are present and have appropriate data values. The Sheepdog service is also responsible for supporting bulk export of the metadata into TSV or JSON formats.
@@ -113,6 +115,7 @@ This table is helpful for debugging errors in front-end applications like [Windm
 [manifest service github]: https://github.com/uc-cdis/manifestservice
 [MDS github]: https://github.com/uc-cdis/metadata-service
 [peregrine github]: https://github.com/uc-cdis/peregrine
+[requestor github]: https://github.com/uc-cdis/requestor
 [sheepdog github]: https://github.com/uc-cdis/sheepdog
 [sower github]: https://github.com/uc-cdis/sower
 [tube github]: https://github.com/uc-cdis/tube

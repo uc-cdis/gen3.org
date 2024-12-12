@@ -52,40 +52,25 @@ The Gen3 Client is a command-line tool for downloading, uploading, and submittin
 ## Gen3 SDK
 The Gen3 Software Development Kit (SDK) for Python provides classes and functions for handling common tasks when interacting with a Gen3 commons. It also exposes a Command Line Interface (CLI). The API for a commons can be overwhelming, so this SDK/CLI aims to simplify communication with various microservices.  It can also download and upload files like the Gen3 Client.  You can find installation and use instructions [here][SDK docs].
 ## Gen3 Microservices
-Brief descriptions of the most relevant microservices are included below.  For more detail and links to their respective repositories please visit the [Developer's Guide][Microservices].
-### Aggregated Metadata Service (AggMDS)
+A simple list of most relevant microservices are included below.  For a description of each service and links to their respective repositories please visit the [Developer's Guide][Microservices].
 
-[//]: # (Alex: perhaps we should remove all these microservices or link directly to the Developer's guide? This is just duplicated that information and will be hard to keep in sync.)
-The aggregated MDS is a service which caches metadata from commons metadata services and becomes a centralize API for browsing Metadata with clients such as the Ecosystem browser. The AggMDS holds the content viewable in a Data Portal Discovery page for a Data Mesh.
-### Arborist
-Arborist is an attribute-based access control (ABAC) policy engine, designed for use with the Gen3 stack. Arborist tracks resources requiring access control, along with actions which users may perform to operate on these resources, and roles, which aggregate permissions to perform one or more actions
-### Data Portal
-A generic data portal that supports some basic interaction with Gen3 services like peregrine, sheepdog and fence
-### Indexd
-The Indexd service provides permanent digital IDs for data objects. These IDs can be used to retrieve the data, or query the metadata associated with the object. The Indexd service tracks the locations and hash of every asset (file) in the data commons object store.  It exports RESTful APIs for registering a new asset, and retrieving data for an existing asset.
-### Fence
-The Fence service controls access to the metadata, submission, indexing, and data itself. Fence is an authentication (AuthN) and authorization (AuthZ) service which utilizes OpenID Connect flow (an extension of OAuth2) to generate tokens for clients. It can also provide tokens directly
-to a user. Clients and users may then use those tokens (JWT) with other Gen3 Data Commons services to access protected endpoints that require specific permissions. Fence can be configured to support different Identity Providers (IDPs) for AuthN. At the moment, supported IDPs include Google, and Shibboleth supporting providers such as NIH iTrust.
-### Guppy
-Server that support GraphQL queries on data from elasticsearch.
-### Hatchery
-Hatchery creates Kubernetes Pods for workspace services. Workspace services must expose HTTP servers. Ambassador is used to proxy user traffic through to their container workspace once it is launched by Hatchery.
-### Helm
-Gen3 relies upon Helm to manage installation and management of Kubernetes applications. Helm is used to build "charts", which are packages of Kubernetes resources that are used to deploy apps to a cluster. Helm is the recommended way to deploy Gen3.
-### Metadata Service (MDS)
-The Metadata Service provides an API for retrieving JSON metadata of GUIDs. It is a flexible option for "semi-structured" data (key:value mappings).  The content of the MDS powers the Data Portal Discovery Page for a Data Commons. The Gen3 SDK can be used to upload and edit the metadata.
-### Pelican
-Provides Docker images with Sower jobs to export and import PFB in Gen3.
-### Peregrine
-Peregrine is the high speed metadata seeking service which responds to GraphQL search queries. The GraphQL service allows Commons operators and users to precisely query only the information they are most interested in from the metadata collections. The service translates the GraphQL search into the appropriate statements which are run against the PostgreSQL backend before being returned as friendly JSON.
-### Sheepdog
-The Sheepdog service is responsible for herding user submissions of metadata into the graph database. The submissions are quality controlled against the data dictionary to ensure all required fields are present and have appropriate data values. The Sheepdog service is also responsible for supporting bulk export of the metadata into TSV or JSON formats.
-### Sower
-Sower dispatches Kubernetes jobs.
-### Tube
-Microservice that controls the ETL process of structured data.
-### Workspace Token Service
-The Gen3 workspace token service acts as an OIDC client which acts on behalf of users to request refresh tokens from Fence. This happens when a user logs into a workspace from the browser. WTS then stores the refresh token for that user, and manages access tokens and refresh tokens for workers that belong to specific users in the workspace.
+* Aggregated Metadata Service (AggMDS)
+* Arborist
+* Data Portal
+* Indexd
+* Fence
+* Guppy
+* Hatchery
+* Helm
+* Metadata Service (MDS)
+* Pelican
+* Peregrine
+* Requestor
+* Sheepdog
+* Sower
+* Tube
+* Workspace Token Service
+
 ## Portable Format for Biomedical data (PFB)
 PFB is a serialization file format designed to store bio-medical data and metadata. The format is built on top Avro to make it fast, extensible and interoperable between different systems. You can find the GitHub repo [here][PFB GitHub] and the publication [here][PFB Pub].
 ## Workspace

@@ -33,11 +33,17 @@ Each of these main tabs will have filters on the left-hand side, which can be us
 
 If the table is a list of files, there should be a button for downloading a JSON file that serves as a manifest to use with the [gen3-client][Gen3 client] for [downloading multiple files][Gen3 bulk download]. Otherwise, to download single a file listed in the table, simply click on the GUID (globally unique identifier, or object_id), which should open a page with a download button.
 
-[//]: # (Alex: We should note the support for PFB handoff to external systems)
-
 ![GIF showing how to use the Gen3 Explorer][img Explorer GIF]
 
+
 >Note: Some data commons have security measures in place that limit what environments users can access data files. For example, users may be required to download and analyze data files in a protected environment, such as a virtual machines (VM) in a virtual private cloud (VPC) or in the built-in Gen3 Workspace, which is accessed by clicking on “Workspace” in the top navigation bar of the data commons website. For more information on the Workspace, see the [documentation on how to access and use the Gen3 Workspace][Gen3 Workspace].
+
+#### Export to external analysis workspaces
+
+The explorer page can also be configured to allow export of a PFB (Portable Format for Biomedical data) file to external systems such as Terra or Seven Bridges.  A PFB file contains structured clinical data, the data dictionary, and pointers to associated files.
+
+
+
 
 ### Query Page
 The structured data in a Gen3 data commons can be queried by using the [graphQL query language][GraphQL language] within the GraphiQL interface for building queries, which can be accessed by clicking the “Query” button in the top navigation bar or by navigating to the /query endpoint, for example, [the Gen3 Data Hub Query Page][Gen3 Query pg].
@@ -65,8 +71,6 @@ The following example query returns the subject and submitter ids in the subject
 ```
 
 More detailed information on how to query specific data can be found [here][Query Data].
-
-[//]: # (Alex: There's perhaps duplication of information above with what's in the access-data.md)
 
 ### Data Dictionary Viewer
 
@@ -122,7 +126,7 @@ NOTE: For these user guides, https://gen3.datacommons.io is an example URL and c
 
 ### Discovery Page
 
-The Gen3 Discovery Page allows the visualization of metadata from within the metadata service (MDS).  This typically includes public metadata about a project to make it discoverable.  It can be used by both data commons and meshes, although it can play a more central role in a data mesh.  Users should be able to search based on free text or filter based on tags.
+The Gen3 Discovery Page allows the visualization of metadata from within the metadata service (MDS).  This typically includes public metadata about projects to make it discoverable. The Discovery Page can also be used to store publication information, DOI metadata, or FHIR metadata.  It can be used by both data commons and meshes, although it can play a more central role in a data mesh.  Users should be able to search based on free text or filter based on tags.
 
 ![Animation showing how to navigate around the Discovery page][Discovery Page]
 
@@ -132,8 +136,6 @@ The [Discovery Page][BRH Discovery] provides users a venue to search and find st
 > Use text-based search, faceted search, and tags to rapidly and efficiently find relevant studies, discover new datasets across multiple resources, and easily export selected data files to the analysis workspace. Browse through datasets and study-level metadata and find studies using tags, advanced search, or the free text search field.
 
 ![The Discovery Page of the Biomedical Research Hub.][img Discover grid]
-
-[//]: # (Alex: Perhaps note the use of Discovery Page as a way to store publication information, DOI metadata, FHIR metadata? We do this in BDC)
 
 #### Search Features
 
@@ -181,6 +183,7 @@ All the functionality of the data commons data portal is available by sending re
 [Gen3 client]: access-data.md#download-files-using-the-gen3-client
 [Gen3 bulk download]: access-data.md#multiple-file-download-with-manifest
 [img Explorer GIF]: img/explorer_gif_2020.gif
+[Gen3 Workspace]: analyze-data.md#launch-workspace
 
 
 <!-- Query Page -->

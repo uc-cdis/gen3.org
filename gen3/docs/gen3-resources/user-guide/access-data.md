@@ -17,8 +17,11 @@ Another common authorization mechanism is dbGaP.  In order to obtain access to c
 
 To obtain dbGaP access, navigate to the [dbGaP Authorized Access site][dbgap auth] and follow the instructions. This process includes working with your institutional research office, reviewing the consent agreement for the particular project, and writing a Research Use Statement and thus can take a significant amount of time.
 
+#### Bulk allow list
+Another option is to use a bulk allow list from an SFTP server in the same format as dbGaP, but not actually controlled by dbGaP.
 
-[//]: # (There are other options here: 1 is a bulk allow list from an SFTP server in the same format as dbGaP, but not dbGaP. 2 is doing dynamic authorization using the Requestor service with the approving system running their own software for approval. There was a recent doc I helped write for Prometheus that laid out these auth options. There's even a diagram. https://docs.google.com/document/d/1RqSeUIWiAxyij509JghCwWt58fLJ2zyVw5Vz5ys1OP4/edit?tab=t.0)
+#### Requestor Service
+Operators can also take advantage of the Requestor Service for dynamic authorization. In this case Gen3 interacts with another system where authorization requests are reviewed, approved, denied, or revoked.
 
 
 ## Download Files Using the Gen3-client

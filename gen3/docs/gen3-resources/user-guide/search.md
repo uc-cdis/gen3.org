@@ -13,7 +13,22 @@ The following sections provide details on how to explore and access data from wi
 [//]: # (Alex: I started thinking through user "questions" and relating them to particular groups of endpoints in our API and thinking through how users would expect to move between parts of the product. It's old and maybe needs some dust removed, but it was done while thinking through the idea of the Data Lake. The relevant section of the feature doc is here: https://docs.google.com/document/d/1UjQjvUuasmfe_5iaEfqjFzLTHsC-8EXXNYCSyP0-k_s/edit?tab=t.0#heading=h.xp6x9p5szrmw)
 
 ## Searching for Data from the Data Portal
-The Gen3 software stack offers a data portal service that creates a website with graphical tools for performing the basic functionality of a data commons, like browsing data in projects, building patient cohorts across projects, downloading metadata or data files for cohorts, and building database queries. The data portal relies on the same [API queries][API instructions] that you can explore directly if you prefer.
+Gen3 offers a data portal service that creates a website with graphical tools for performing the basic functionality of a data commons, like browsing data in projects, building patient cohorts across projects, downloading metadata or data files for cohorts, and building database queries.
+
+While this may vary from system to system, to find data in a data commons you can follow a general workflow of 1) Discover data in a mesh or commons using the Discovery Page, 2) Request Access to data using system specific solution, 3) Explore files in the Exploration Page, and 4) Export data to workspace or download locally depending on the requirements of your system.  Instead of using the Discovery and Exploration pages you could instead use the [API][API instructions] for locating data of interest.
+
+### Discovery Page
+
+In many data commons or meshes the first place to explore your data will be on a Discovery Page.  This typically includes public metadata about projects to make it discoverable. The Discovery Page can also be used to store publication information, DOI metadata, or FHIR metadata. Users should be able to search based on free text or filter based on tags and can determine whether they have sufficient authorization to access file for a given project.
+
+![Animation showing how to navigate around the Discovery page][Discovery Page]
+
+
+The [Discovery Page][BRH Discovery] provides users a venue to search and find studies and datasets displayed on the Biomedical Research Hub. Users can **browse through the publicly accessible study-level metadata** without requiring authorization.
+
+> Use text-based search, faceted search, and tags to rapidly and efficiently find relevant studies, discover new datasets across multiple resources, and easily export selected data files to the analysis workspace. Browse through datasets and study-level metadata and find studies using tags, advanced search, or the free text search field.
+
+![The Discovery Page of the Biomedical Research Hub.][img Discover grid]
 
 ### Exploration Page
 The primary tool for exploring data within a Gen3 data commons is the Exploration Page, which offers faceted search of data across projects, for example, https://gen3.datacommons.io/explorer. This page can be accessed from the /explorer endpoint or the top navigation bar, by clicking on the “Exploration” icon.
@@ -44,7 +59,7 @@ Users can submit queries to the Gen3 APIs to access structured data across the p
 Users with “read” access to a project can export entire structured metadata records by sending requests to the API. Single records can be exported or all records in a specific node of a project can be retrieved. For more information, see the [documentation on using the API][API documentation].
 
 #### The Gen3 SDK
-To make sending requests to the Gen3 APIs easier, the bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic Python SDK (software development kit) to help users interact with the Gen3 APIs.
+To make sending requests to the Gen3 APIs easier, the bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has put together a basic Python SDK (software development kit) to help users interact with the Gen3 APIs. It also exposes a Command Line Interface (CLI), which covers a lot of data ingestion support and doesn't require the user to write python.
 
 The SDK is essentially a collection of Python wrapper functions for sending requests to the API. It is open source and can be found on [Github][Gen3 SDK GitHub pg]. Thorough documentation for the SDK can be found in the GitHub repository [documentation page][SDK doc pg].
 
@@ -57,27 +72,8 @@ Entire structured data records can be exported as a JSON or TSV file using the [
 More SDK examples and how to get started with the SDK can be also found in the [analyze-data section][Using Gen3 SDK].
 
 
-[//]: # (Alex: The Gen3 Python SDK is also a command line interface / CLI. It's likely worth noting that. It covers a lot of data ingestion support in case you don't want to write Python.)
-
-
-### Submission Page
-
-#### Browsing the List of Projects
-A graphical model of the structured data in individual data projects of a data commons can be browsed by navigating to the /submission endpoint of a data commons website or by clicking on the “Browse Data” or “Submit Data” buttons in the top navigation bar, for example, [https://gen3.datacommons.io/submission][Gen3 Data Submission pg]. This page lists all the data projects within a commons a user has authorization to view. Clicking the “Browse” or “Submit Data” button by a project ID will open a view of that individual project’s structured metadata graph, which can be further inspected by clicking on a node in the graph model and then viewing individual records by clicking “View” by the submitter_id or downloading all the records in that node by clicking the “Download All” button.
-
-> Note: Users who are authorized to submit data may see a “Submit Data” button instead of “Browse Data”, and will also be able to upload or create structured data in the project on this page.
-
-##### Example: Browse Data in Individual Projects
-![Image showing options for browsing nodes in individual projects using either the dropdown list or project graph model][img Browse Nodes in Projects]
-
-In the graphical model of a data project, the number you see underneath the node name, for example ‘subject’, reflects the number of records in that node of the project. The “Toggle View” button is used to show or hide nodes in the data model that the project has no records for.
-
-![GIF showing how to view the graphical model of a project, toggling to show or hide nodes that have no records][img Graphing a project]
-
-
-
 ### Query Page
-The easiest way to query structured data in a Gen3 data commons is done by using the [graphQL query language][GraphQL] with the GraphiQL interface, which can be accessed by clicking “Query” in the top navigation bar or by navigating to the URL: [https://gen3.datacommons.io/query][Query page]. The URL https://gen3.datacommons.io can be replaced with the URL of other Gen3 data commons.
+While you may call the API directly as described above, Gen3 also includes an interactive interface for creating [graphQL query language][GraphQL] calls on the Query Page. This can be accessed by clicking “Query” in the top navigation bar or by navigating to the URL: [https://gen3.datacommons.io/query][Query page]. The URL https://gen3.datacommons.io can be replaced with the URL of other Gen3 data commons.
 
 This query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, pass variables, and generally make it easier for users to find information. The “Docs” button will display documentation of the queryable nodes and properties.
 
@@ -277,9 +273,32 @@ query ($filter: JSON) {
 ```
 
 
+### Submission Page
+
+#### Browsing the List of Projects
+A graphical model of the structured data in individual data projects of a data commons can be browsed by navigating to the /submission endpoint of a data commons website or by clicking on the “Browse Data” or “Submit Data” buttons in the top navigation bar, for example, [https://gen3.datacommons.io/submission][Gen3 Data Submission pg]. This page lists all the data projects within a commons a user has authorization to view. Clicking the “Browse” or “Submit Data” button by a project ID will open a view of that individual project’s structured metadata graph, which can be further inspected by clicking on a node in the graph model and then viewing individual records by clicking “View” by the submitter_id or downloading all the records in that node by clicking the “Download All” button.
+
+> Note: Users who are authorized to submit data may see a “Submit Data” button instead of “Browse Data”, and will also be able to upload or create structured data in the project on this page.
+
+##### Example: Browse Data in Individual Projects
+![Image showing options for browsing nodes in individual projects using either the dropdown list or project graph model][img Browse Nodes in Projects]
+
+In the graphical model of a data project, the number you see underneath the node name, for example ‘subject’, reflects the number of records in that node of the project. The “Toggle View” button is used to show or hide nodes in the data model that the project has no records for.
+
+![GIF showing how to view the graphical model of a project, toggling to show or hide nodes that have no records][img Graphing a project]
+
+
+
+
+
 
 <!-- Access Metadata section. -->
-<!-- NOTE: these hyperlinks link to headings in the document - it's a table of contents -->
+
+
+<!-- Discovery section -->
+[Discovery Page]: img/Discovery_page3.gif
+[BRH Discovery]: https://brh.data-commons.org/discovery
+
 <!-- Exploration section. -->
 [img Gen3 Toolbar Exploration]: img/Gen3_Toolbar_exploration.png
 [img Explorer GIF]: img/explorer_gif_2020.gif
