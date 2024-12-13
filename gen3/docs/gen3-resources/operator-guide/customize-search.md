@@ -188,7 +188,7 @@ Setting up a functioning mesh where you can access files from individual commons
 [discovery page overview]: ../user-guide/portal.md#discovery-page
 [discovery page screenshot]: img/discovery_screenshot.png
 [mds github]: https://github.com/uc-cdis/metadata-service
-[aggmds github]: https://github.com/uc-cdis/agg-metadata
+[aggmds github]: https://github.com/uc-cdis/metadata-service/blob/master/docs/config_agg_mds.md
 [sdk for discovery page]: https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/cli/discovery.py
 [gen3 data hub mds]: https://gen3.datacommons.io/mds/metadata?data=True&_guid_type=discovery_metadata
 [mds api]: https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/metadata-service/master/docs/openapi.yaml
