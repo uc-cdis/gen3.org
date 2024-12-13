@@ -4,8 +4,6 @@ Gen3 features and functionality are enabled by independent and modular microserv
 
 While the average user does not need to know the details and names of each microservice, if you are interested in adding new features or modifying your Gen3 system in some way it may be helpful to have a deeper understanding of a specific microservice.  We have included brief descriptions below along with a link to their documentation in GitHub.
 
-## [Aggregated Metadata Service (AggMDS)][aggmds github]
-The aggregated MDS is a service which caches metadata from commons metadata services and becomes a centralize API for browsing Metadata with clients such as the Ecosystem browser. The AggMDS holds the content viewable in a Data Portal Discovery page for a Data Mesh.
 
 ## [Arborist][arborist github]
 Arborist acts as the Gen3 Policy Engine. It is an attribute-based access control (ABAC) policy engine, designed for use with the Gen3 stack. Arborist tracks resources requiring access control, along with actions which users may perform to operate on these resources, and roles, which aggregate permissions to perform one or more actions.
@@ -44,7 +42,7 @@ This service handles reading from and writing to a user's S3 folder containing t
 > **NOTE**: We are developing a comprehensive replacement of this service, which will include real cohort management and better integration of selected data across UI pages.
 
 ## [Metadata Service (MDS)][MDS github]
-The Metadata Service provides an API for retrieving JSON metadata of GUIDs. It is a flexible option for "semi-structured" data (key:value mappings).  The content of the MDS powers the Data Portal Discovery Page for a Data Commons. The Gen3 SDK can be used to upload and edit the metadata.
+The Metadata Service provides an API for retrieving JSON metadata of GUIDs. It is a flexible option for "semi-structured" data (key:value mappings).  The content of the MDS powers the Data Portal Discovery Page for a Data Commons. The Gen3 SDK can be used to upload and edit the metadata. This service includes a feature known as the aggregated metadata service (AggMDS), which caches metadata from the metadata services of multiple data commons. The AggMDS holds the content viewable in a Data Portal Discovery page for a Data Mesh.
 
 ## [Peregrine][peregrine github]
 Peregrine is the metadata seeking service which responds to GraphQL search queries and translates them to queries over our graph-like source of truth postgres database for structured data. The GraphQL service allows Commons operators and users to precisely query only the information they are most interested in from the metadata collections. The service translates the GraphQL search into the appropriate statements which are run against the PostgreSQL backend before being returned as friendly JSON.
@@ -104,7 +102,7 @@ This table is helpful for debugging errors in front-end applications like [Windm
 
 
 
-[aggmds github]: https://github.com/uc-cdis/agg-metadata
+
 [arborist github]: https://github.com/uc-cdis/arborist
 [data portal github]: https://github.com/uc-cdis/data-portal
 [fence github]: https://github.com/uc-cdis/fence

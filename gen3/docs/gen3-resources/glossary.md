@@ -54,8 +54,6 @@ The Gen3 Software Development Kit (SDK) for Python provides classes and function
 ## Gen3 Microservices
 A simple list of most relevant microservices are included below.  For a description of each service and links to their respective repositories please visit the [Developer's Guide][Microservices].
 
-* Aggregated Metadata Service (AggMDS)
-* Arborist
 * Data Portal
 * Indexd
 * Fence
