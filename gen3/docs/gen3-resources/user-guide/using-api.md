@@ -46,7 +46,7 @@ import json, requests
 api = "https://gen3.datacommons.io"
 key_file = "/put_path_to/credentials.json"
 
-# Read the key from the file and
+# Read the key from the file
 with open(key_file) as json_file:
     key = json.load(json_file)
 
