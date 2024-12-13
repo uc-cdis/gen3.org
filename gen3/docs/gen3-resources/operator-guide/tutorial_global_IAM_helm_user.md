@@ -22,11 +22,11 @@ Example policy containing all the proper permissions:
             "Effect": "Allow",
             "Action": "s3:GetObject",
             "Resource": [
-                "arn:aws:s3:::$BUCKET/$ENVIRONMENT/*",  
+                "arn:aws:s3:::$BUCKET/$ENVIRONMENT/*",
                 # Fence Usersync Job: Name of the userYamlS3Path containing the user.yaml file
-                "arn:aws:s3:::$BUCKET/$ENVIRONMENT/$VERSION/elasticsearch/*",  
+                "arn:aws:s3:::$BUCKET/$ENVIRONMENT/$VERSION/elasticsearch/*",
                 # ES Index Restore Job: Name of the dbRestoreBucket with the proper path to the ES dump files.
-                "arn:aws:s3:::$BUCKET/$ENVIRONMENT/$VERSION/pgdumps/*"  
+                "arn:aws:s3:::$BUCKET/$ENVIRONMENT/$VERSION/pgdumps/*"
                 # DB PG Dump Restore Job: Name of the dbRestoreBucket with the proper path to the SQL dump files.
             ]
         },
@@ -37,14 +37,14 @@ Example policy containing all the proper permissions:
                 "secretsmanager:GetSecretValue"
             ],
             "Resource": [
-                "*" 
+                "*"
                 # External Secrets: Leave as is to allow External Secrets access to your secrets in Secrets Manager.
             ]
         },
         {
             "Effect": "Allow",
             "Action": "es:*",
-            "Resource": "arn:aws:es:REGION:ACCOUNT_ID:domain/CLUSTER_NAME/*" 
+            "Resource": "arn:aws:es:REGION:ACCOUNT_ID:domain/CLUSTER_NAME/*"
             # AWS ES Proxy Service: Arn of your Elasticsearch Cluster in AWS.
         }
     ]
