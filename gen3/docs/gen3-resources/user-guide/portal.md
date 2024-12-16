@@ -1,7 +1,7 @@
 # Accessing and Exploring Metadata from the Gen3 Data Portal
 The data in a Gen3 data commons can be browsed and downloaded using several different methods. The following general documentation will cover some standard methods of data access in a Gen3 data commons. Ultimately, however, the methods of data access offered in a Gen3 data commons is determined by agreements made between the data commons’ sponsors and data contributors.
 
-Various levels of data access can be configured in a Gen3 data commons using the Fence and Arborist services. If open access data is hosted, a data commons can be configured to allow anonymous access to data, which means users can explore data without logging in. This is the case for the [Gen3 Data Hub][Gen3 Data Hub].
+Various levels of data access can be configured in a Gen3 data commons using the Gen3 Framework Services. If open access data is hosted, a data commons can be configured to allow anonymous access to data, which means users can explore data without logging in. This is the case for the [Gen3 Data Hub][Gen3 Data Hub].
 
 In cases where data is controlled access, typically external users will receive instructions on how to access data and may be required to sign a DUA (Data Use Agreement) legal document.
 
@@ -9,8 +9,6 @@ The following sections provide details on how to explore and access data from wi
 
 ## Access Data from the Data Portal
 The Gen3 software stack offers a data portal service that creates a website with graphical tools for performing the basic functionality of a data commons, like browsing data in projects, building patient cohorts across projects, downloading metadata or data files for cohorts, and building database queries.
-
-
 
 ### Profile Page
 
@@ -37,7 +35,15 @@ If the table is a list of files, there should be a button for downloading a JSON
 
 ![GIF showing how to use the Gen3 Explorer][img Explorer GIF]
 
+
 >Note: Some data commons have security measures in place that limit what environments users can access data files. For example, users may be required to download and analyze data files in a protected environment, such as a virtual machines (VM) in a virtual private cloud (VPC) or in the built-in Gen3 Workspace, which is accessed by clicking on “Workspace” in the top navigation bar of the data commons website. For more information on the Workspace, see the [documentation on how to access and use the Gen3 Workspace][Gen3 Workspace].
+
+#### Export to external analysis workspaces
+
+The explorer page can also be configured to allow export of a PFB (Portable Format for Biomedical data) file to external systems such as Terra or Seven Bridges.  A PFB file contains structured clinical data, the data dictionary, and pointers to associated files.
+
+
+
 
 ### Query Page
 The structured data in a Gen3 data commons can be queried by using the [graphQL query language][GraphQL language] within the GraphiQL interface for building queries, which can be accessed by clicking the “Query” button in the top navigation bar or by navigating to the /query endpoint, for example, [the Gen3 Data Hub Query Page][Gen3 Query pg].
@@ -120,7 +126,7 @@ NOTE: For these user guides, https://gen3.datacommons.io is an example URL and c
 
 ### Discovery Page
 
-The Gen3 Discovery Page allows the visualization of metadata from within the metadata service (MDS).  This typically includes public metadata about a project to make it discoverable.  It can be used by both data commons and meshes although it can play a more central role in a data mesh.  Users should be able to search based on free text or filter based on tags.
+The Gen3 Discovery Page allows the visualization of metadata from within the metadata service (MDS).  This typically includes public metadata about projects to make it discoverable. The Discovery Page can also be used to store publication information, DOI metadata, or FHIR metadata.  It can be used by both data commons and meshes, although it can play a more central role in a data mesh.  Users should be able to search based on free text or filter based on tags.
 
 ![Animation showing how to navigate around the Discovery page][Discovery Page]
 
@@ -177,6 +183,7 @@ All the functionality of the data commons data portal is available by sending re
 [Gen3 client]: access-data.md#download-files-using-the-gen3-client
 [Gen3 bulk download]: access-data.md#multiple-file-download-with-manifest
 [img Explorer GIF]: img/explorer_gif_2020.gif
+[Gen3 Workspace]: analyze-data.md#launch-workspace
 
 
 <!-- Query Page -->
