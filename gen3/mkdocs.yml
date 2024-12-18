@@ -20,7 +20,7 @@ nav:
     - Gen3 Operator Guide - Deploy Gen3:
       - gen3-resources/operator-guide/index.md
       # homepage for operator guide, describes contents and links to different sections
-      - Overview for Deploying Gen3: gen3-resources/operator-guide/deploy-gen3.md
+      #- Overview for Deploying Gen3: gen3-resources/operator-guide/deploy-gen3.md
       # reviews all major steps for deploying Gen3 for production
       - Prerequisites for Deploying Gen3: gen3-resources/operator-guide/prerequisites.md
       - Pre-Deployment:
@@ -31,18 +31,19 @@ nav:
           - Atlantis: gen3-resources/operator-guide/iac-atlantis.md
         - Prepare SSL Certificate: gen3-resources/operator-guide/ssl-cert.md
         - Authentication Methods: gen3-resources/operator-guide/gen3-authn-methods.md
-      - Setup Gen3 with Helm:
+      - Setup Gen3 (Configure and Deploy) with Helm:
         - gen3-resources/operator-guide/helm/index.md
+        - Deployment Overview: gen3-resources/operator-guide/helm/helm-deploy-overview.md
         - Example - Minimal Local Deployment: gen3-resources/operator-guide/helm/helm-deploy-example.md
+        - Example - Production Deployment: gen3-resources/operator-guide/helm/helm-deploy-production-example.md
+        - Databases in Gen3 Helm charts: gen3-resources/operator-guide/helm/helm-deploy-databases.md
         - Configure services with Helm:
-          - AuthN/AuthZ: gen3-resources/operator-guide/helm/helm-config-auth.md
-          - Data-related Services: gen3-resources/operator-guide/helm/helm-config-data-svcs.md
-          - Front End: gen3-resources/operator-guide/helm/helm-config-frontend.md
-          - Workspaces: gen3-resources/operator-guide/helm/helm-config-workspaces.md
-          - Revproxy: gen3-resources/operator-guide/helm/helm-config-revproxy.md
-        - Deployment with Helm:
-          - Deployment Overview: gen3-resources/operator-guide/helm/helm-deploy-overview.md
-          - Databases in Gen3 Helm charts: gen3-resources/operator-guide/helm/helm-deploy-databases.md
+          - gen3-resources/operator-guide/helm/helm-config/index.md
+          - AuthN/AuthZ: gen3-resources/operator-guide/helm/helm-config/helm-config-auth.md
+          - Data-related Services: gen3-resources/operator-guide/helm/helm-config/helm-config-data-svcs.md
+          - Front End: gen3-resources/operator-guide/helm/helm-config/helm-config-frontend.md
+          - Workspaces: gen3-resources/operator-guide/helm/helm-config/helm-config-workspaces.md
+          - Revproxy: gen3-resources/operator-guide/helm/helm-config/helm-config-revproxy.md
       - Post-Deployment:
         - Create Data Dictionary: gen3-resources/operator-guide/create-data-dictionary.md
         # contains info about creating (and maintaining?) a data dictionary
@@ -79,7 +80,11 @@ theme:
   name: material
   features:
     - navigation.footer
+    - navigation.indexes
+    - navigation.tracking
+    - navigation.path
   custom_dir: overrides
+
   palette:
     - primary: black
 
@@ -97,10 +102,8 @@ theme:
       toggle:
         icon: material/eye-outline
         name: Switch to light mode
-  features:
-    - navigation.indexes
-    - navigation.tracking
-    - navigation.path
+extra_css:
+  - stylesheets/extra.css
 use_directory_urls: true
 markdown_extensions:
   - admonition
@@ -122,8 +125,9 @@ plugins:
       blog_toc: true
   - mkdocs-video:
       is_video: True
-extra_css:
-  - stylesheets/extra.css
+  - encryptcontent:
+      password_inventory:
+        _global: 'gen3'
 extra:
   social:
     - icon: fontawesome/brands/linkedin

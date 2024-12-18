@@ -67,7 +67,7 @@ For more information on using the Discovery Page please see the User Guide [Disc
 ### Metadata Service
 To view data in the discovery page you must have a populated [metadata service][mds github] or alternatively an [Aggregated metadata service (aggMDS)][aggmds github], which caches the metadata from two or more metadata source to provide a unified view of the commons on the discovery page.
 
-Instructions for the creation and modification of an MDS record can be found here as part of the [Gen3 SDK][sdk for discovery page].  Every data commons is different as there is no standardization of MDS and therefore any example we provide may not apply to your particular system.  
+Instructions for the creation and modification of an MDS record can be found here as part of the [Gen3 SDK][sdk for discovery page].  Every data commons is different as there is no standardization of MDS and therefore any example we provide may not apply to your particular system.
 
 To view the MDS for the Gen3 Data Hub you can go [here][gen3 data hub mds]. You can see in the snippet below some summary metadata for the 1000 Genomes project with is part of the Gen3 Data Hub:
 
@@ -188,7 +188,7 @@ Setting up a functioning mesh where you can access files from individual commons
 [discovery page overview]: ../user-guide/portal.md#discovery-page
 [discovery page screenshot]: img/discovery_screenshot.png
 [mds github]: https://github.com/uc-cdis/metadata-service
-[aggmds github]: https://github.com/uc-cdis/agg-metadata
+[aggmds github]: https://github.com/uc-cdis/metadata-service/blob/master/docs/config_agg_mds.md
 [sdk for discovery page]: https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/cli/discovery.py
 [gen3 data hub mds]: https://gen3.datacommons.io/mds/metadata?data=True&_guid_type=discovery_metadata
 [mds api]: https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/metadata-service/master/docs/openapi.yaml

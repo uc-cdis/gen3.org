@@ -14,6 +14,6 @@ Instructions for the creation and modification of an MDS record can be found her
 <!-- Links -->
 
 [MDS]: https://github.com/uc-cdis/metadata-service
-[AggMDS]: https://github.com/uc-cdis/agg-metadata
+[AggMDS]: https://github.com/uc-cdis/metadata-service/blob/master/docs/config_agg_mds.md
 [Customize Gen3 Search Interface Section]: customize-search.md
 [Gen3 SDK Discovery Page]: https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/cli/discovery.py

@@ -35,7 +35,7 @@ The standard GraphQL endpoint for a Gen3 commons is available via POST at `/api/
 {"query":"query { project(first:0) {code, project_id, availability_type}}"}
 ```
 
-* First: 0 means return all, otherwise it defaults to the first 10. 
+* First: 0 means return all, otherwise it defaults to the first 10.
 * Project_id = <program>-<project> used to reference any projects
 * Code = project name in the project node
 * Availability_type = is this project open access to everyone or not

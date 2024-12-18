@@ -1,6 +1,6 @@
 # Gen3 Developer Guide - Extend Gen3
 
-Welcome to the Gen3 Developer Guide.  This guide is primarily for software engineers that are looking to attain a deeper understanding of Gen3 services in order to interact with or modify them.  
+Welcome to the Gen3 Developer Guide.  This guide is primarily for software engineers that are looking to attain a deeper understanding of Gen3 services in order to interact with or modify them.
 
 If you are a researcher or data scientist looking to access a Gen3 Data Commons or mesh to locate, access, or analyze data please read the [Gen3 User Guide][Gen3 User Guide].  If you are looking to deploy, maintain, configure, or submit data please take a look at the [Gen3 Operator Guide][Gen3 Operator Guide].
 

@@ -68,13 +68,13 @@ alloy-configmap-data: |
       }
     }
   }
-  
+
   loki.write "endpoint" {
     endpoint {
       url = "http://grafana-loki-gateway.monitoring:80/loki/api/v1/push"
     }
   }
-  
+
   faro.receiver "default" {
     server {
       listen_address = "0.0.0.0"
@@ -151,6 +151,6 @@ portal:
                 "grafanaFaroSampleRate": 1, // optional; numeric; the Grafana Faro option specifying the percentage of sessions to track: 1 for all, 0 for none. Default to 1 if omitted
             },
 ```
---- 
+---
 
 By following this guide, you'll have successfully set up Alloy to receive Grafana Faro logs and metrics while exposing the service over the internet using Kubernetes ingress. You’ll also be able to monitor Faro metrics through Fence and make necessary configurations in Gen3 Portal for seamless Faro integration.

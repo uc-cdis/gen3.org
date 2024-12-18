@@ -60,7 +60,7 @@ g3past:
   Slides:  Gen3 Forum September 6 2023 - Security and Compliance.pdf
 - Title: Data Modeling in Gen3 Data Commons
   Date: July 6, 2023, 3:30-5:00 pm CDT; July 7, 2023, 6:30-8:00 am AEST
-  Description: Gen3 supports a flexible graph-based data model, which can be customized for a wide variety of projects and use cases.  At this community event we will hear from several data commons operators on how they have created their dictionaries and about any tools or processes they use for updating and configuring them.  
+  Description: Gen3 supports a flexible graph-based data model, which can be customized for a wide variety of projects and use cases.  At this community event we will hear from several data commons operators on how they have created their dictionaries and about any tools or processes they use for updating and configuring them.
   Agenda2: /community/events/gen3forum_20230706
   Youtube: xjFUYa4C_hw
   Slides:  Gen3 Forum July 6 2023 - Data Models.pdf

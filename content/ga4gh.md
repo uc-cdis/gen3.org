@@ -49,9 +49,9 @@ g3Feature:
           Driver Projects
         </h1>
         <p class="g3-space__margin-sm-bottom introduction g3-space__margin-sm-right">
-        Gen3 technology is used by four different driver projects:  
+        Gen3 technology is used by four different driver projects:
         <ul>
-          <li>The Biomedical Research Hub, which as a data fabric, enables access to multiple independent data commons containing biomedical data.</li>  
+          <li>The Biomedical Research Hub, which as a data fabric, enables access to multiple independent data commons containing biomedical data.</li>
           <li>The Data Commons Framework Services, which underpins interoperability within the Cancer Research Data Commons.</li>
           <li>The NHLBI BioData Catalyst (BDC) is a cloud-based ecosystem that offers researchers data, analytic tools, applications, and workflows in secure workspaces. It is a community where researchers can find, access, share, store, and analyze heart, lung, blood, and sleep data resources.</li>
           <li>The NIH Cloud Platform Interoperability (NCPI) program seeks to create a federated genomic data ecosystem and is a collaborative project between NIH and external partners comprising three working groups.</li>
