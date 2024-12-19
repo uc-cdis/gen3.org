@@ -37,7 +37,10 @@ Terminal sessions can also be started in the Workspace and used to download othe
 
 You can manage active notebooks and terminal processes by clicking on the tab “Running”. Click “Shutdown” to close the terminal session or Jupyter Notebook. Be sure to save your notebooks before terminating them, and again, ensure any notebooks to be accessed later are saved in the “pd” directory.
 
+>Important: Always click the "Terminate Workspace" or "Shutdown" button when finished to release cloud resources
+
 ![GIF showing how manage Jupyter notebooks on the Running tab][gif Jupyter Running tab]
+
 
 ## Getting Files into the Gen3 Workspace
 Bringing in files into the Gen3 Workspace can be achieved via the UI (directly from the Exploration page) or programmatically. Find below a description of both methods.
@@ -59,7 +62,7 @@ The Exploration page allows to search through data and create cohorts, which can
 
 ### Getting Files into the Workspace programmatically
 
-In order to download data files directly and programmatically from a Gen3 data commons into your workspace, install and use the [gen3-client][gen3 client] in a terminal window from your Workspace. Launch a terminal window by clicking on the “New” dropdown menu, then click on “Terminal”.
+In order to download data files directly and programmatically from a Gen3 data commons into your workspace, install and use the [gen3-client][gen3 client] in a terminal window from your Workspace. Launch a terminal window by clicking on the “New” dropdown menu, then click on “Terminal”.  General instructions for use of the Gen3 client can be found [here][gen3_client_instructions].
 
 From the command line, download the latest [Linux version of the gen3-client][linux gen3 client] using the `wget` command. Next, unzip the archive and add it to your path:
 
@@ -72,6 +75,9 @@ PATH=$PATH:~/
 Now the gen3-client should be ready to use in the JupyterHub terminal.
 
 Other required files, like the `credentials.json` file which contains API keys needed to configure a profile or a download `manifest.json` file can be uploaded to the workspace by clicking on the “Upload” button or by dragging and dropping into the ‘Files’ tab. Text can also be pasted into a file by clicking “New”, then choosing “Text File”. Filenames can be changed by clicking the checkbox next to the file and then clicking the “Rename” button that appears.
+
+![GIF demonstrating how to upload files into workspace][gif upload credentials]
+
 
 Example:
 ```
@@ -121,11 +127,14 @@ GSM1558854_Sample40_3.CEL.gz  4.20 MiB / 4.20 MiB [====================....
 jovyan@jupyter-user:~$  mv *.gz files
 ```
 
+
+
+
 ## Working with the proxy and allow lists
 
 ### Working with the Proxy
 
-To prevent unauthorized traffic, the Gen3 VPC utilizes a proxy. If you are using one of the custom VMs setup, there is already a line in your .bashrc file to handle traffic requests.
+To prevent unauthorized traffic, the Gen3 VPC utilizes a proxy server. The proxy server acts as an intermediary between the internal network resources within the VPC and the external internet or other networks. If you are using one of the custom VMs setup, there is already a line in your .bashrc file to handle traffic requests.
 
 ```bash
 export http_proxy=http://cloud-proxy.internal.io:3128
@@ -138,7 +147,7 @@ https_proxy=https://cloud-proxy.internal.io:3128 aws s3 ls s3://gen3-data/ --pro
 
 ### Allow lists
 
-Additionally, to aid Gen3 Commons security, the installation of tools from outside resources is managed through an allow list. If you have problems installing a tool you need for your work, contact [support@gen3.org](mailto:support@gen3.org) and with a list of any sites from which you might wish to install tools. After passing a security review, these can be added to the allow list to facilitate access.
+Additionally, to aid Gen3 Commons security, the installation of tools from outside resources is managed through an allow list. If you have problems installing a tool you need for your work, contact [support@gen3.org](mailto:support@gen3.org) (or the appropriate Gen3 operator) with a list of any sites from which you might wish to install tools. After passing a security review, these can be added to the allow list to facilitate access.
 
 ## Using the Gen3 Python SDK
 To make programmatic interaction with Gen3 data commons easier, the bioinformatics team at the Center for Translational Data Science (CTDS) at University of Chicago has developed the Gen3 Python SDK, which is a Python library containing functions for sending standard requests to the Gen3 APIs. The code is open-source and available on [GitHub][Gen3 Python SDK Github] along with [documentation for using it][Gen3 Python SDK doc].
@@ -171,7 +180,7 @@ git pull origin master
 
 ### Examples
 
-1.) Most requests sent to a Gen3 data commons API will require an authorization token to be sent in the request’s header. The SDK class *Gen3Auth* is used for authentication purposes, and has functions for generating these access tokens. Users do need to authenticate when using the SDK from the terminal, but do not need to authenticate once being logged in and working in the workspace of a Data Commons.
+1) Most requests sent to a Gen3 data commons API will require an authorization token to be sent in the request’s header. The SDK class *Gen3Auth* is used for authentication purposes, and has functions for generating these access tokens. Users do need to authenticate when using the SDK from the terminal, but do not need to authenticate once being logged in and working in the workspace of a Data Commons.
 
 From the python shell run the following:
 
@@ -183,7 +192,7 @@ creds = "/user/directory/credentials.json"
 auth = Gen3Auth(endpoint, creds)
 ```
 
-2.) The structured data in a Gen3 data commons can be created, deleted, queried and exported using functions in the *Gen3Submission* class.
+2) The structured data in a Gen3 data commons can be created, deleted, queried and exported using functions in the *Gen3Submission* class.
 
 2.1) All available programs in the data commons will be shown with the function `get_programs`. The following commands:
 
@@ -197,10 +206,12 @@ will return: `{'links': ['/v0/submission/OpenNeuro', '/v0/submission/GEO', '/v0/
 
 2.2) All projects under a particular program (“OpenAccess”) will be shown with the function `get_projects`. The following commands:
 
-```from gen3.submission import Gen3Submission
+```
+from gen3.submission import Gen3Submission
 sub = Gen3Submission(endpoint, auth)
 sub.get_projects("OpenAccess")
 ```
+
 will return “CCLE” as the project under the program “OpenAccess”: `{'links': ['/v0/submission/OpenAccess/CCLE']}`
 
 2.3) All structured metadata stored under one node of a project can be exported as a tsv file with the function `export_node`. The following commands:
@@ -216,7 +227,7 @@ sub.export_node(program, project, node_type, fileformat, filename)
 ```
 will return: `Output written to file: OpenAccess_CCLE_aligned_reads_file.tsv`
 
-3.) The function `get_record` in the class *Gen3Index* is used to show all metadata associated with a given id by interacting with Gen3’s Indexd service. GUIDs can be found on the [Exploration page][Exploration page] under the `Files` tab. The following commands:
+3) The function `get_record` in the class *Gen3Index* is used to show all metadata associated with a given id by interacting with Gen3’s Indexd service. GUIDs can be found on the [Exploration page][Exploration page] under the `Files` tab. The following commands:
 
 ```
 from gen3.index import Gen3Index
@@ -224,6 +235,7 @@ ind = Gen3Index(endpoint, auth)
 record1 = ind.get_record("92183610-735e-4e43-afd6-7b15c91f6d10")
 print(record1)
 ```
+
 will return: `{'acl': ['*'], 'authz': ['/programs/OpenAccess/projects/CCLE'], 'baseid': 'e9bd6198-300c-40c8-97a1-82dfea8494e4', 'created_date': '2020-03-13T16:08:53.743421', 'did': '92183610-735e-4e43-afd6-7b15c91f6d10', 'file_name': None, 'form': 'object', 'hashes': {'md5': 'cbccc3cd451e09cf7f7a89a7387b716b'}, 'metadata': {}, 'rev': '13077495', 'size': 15411918474, 'updated_date': '2020-03-13T16:08:53.743427', 'uploader': None, 'urls': ['https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97'], 'urls_metadata': {'https://api.gdc.cancer.gov/data/30dc47eb-aa58-4ff7-bc96-42a57512ba97': {}}, 'version': None}`
 
 ## Jupyter Notebook Demos
@@ -252,8 +264,10 @@ When finished, please, shut down the workspace server by clicking the “Termina
 [img Export Data to Workspace]: img/export_to_workspace.png
 [gen3 client]: https://github.com/uc-cdis/cdis-data-client/releases/latest
 [linux gen3 client]: https://github.com/uc-cdis/cdis-data-client/releases/latest
+[gen3_client_instructions]: access-data.md#download-files-using-the-gen3-client
+[gif upload credentials]: img/workspace_pd.gif
 
-<!-- Uisng the Gen3 Python SDK -->
+<!-- Using the Gen3 Python SDK -->
 [Gen3 Python SDK Github]: https://github.com/uc-cdis/gen3sdk-python
 [Gen3 Python SDK doc]: https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html
 [Jupyter demos]: analyze-data.md#jupyter-notebook-demos
