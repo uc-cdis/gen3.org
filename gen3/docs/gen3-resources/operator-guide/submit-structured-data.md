@@ -1,3 +1,7 @@
+---
+tags:
+  - submission
+---
 
 
 # Structured Data (Clinical or experimental data)
@@ -16,7 +20,7 @@ There are a number of properties that deserve special mention:
 
 * `type`: Every node has a `type` property, which is simply the name of the node. By providing the node name in the "type" property, the submission portal knows which node to put the data in.
 
-* `id`: Every record in every node in a data commons has the unique property `id`, which is not submitted by the data contributor but rather generated on the backend. The value of the property `id` is a 128-bit UUID (a unique 32 character identifier).
+* `id`: Every record in every node in a data commons has the unique property `id`, which is not submitted by the data contributor but rather generated on the backend. The value of the property `id` is a 128-bit GUID (a unique 32 character identifier).
 
 * `project_id` and `code`: Every project record in a data commons is linked to a parent `program` node and has the properties `project_id` and a `code`. The property `project_id` is the dash-separated combination of `program` and the project's `code`. For example, if your project was named 'Experiment1', and this project was part of the 'Pilot' program, the project's `project_id` would be 'Pilot-Experiment1', and the project's `code` would be 'Experiment1'. Finally, just like every record in the data commons, the project has the unique property `id`, which is not to be confused with the project's `project_id`.
 
@@ -108,14 +112,11 @@ To submit a TSV in the data portal:
 
 3. Click on "Submit Data" beside the project of interest to submit metadata.
 
-    ![Submit Data][submit data]
-
 4. Click on "Upload File".
 
     ![Upload and Submit][upload file]
 
-5. Navigate to the TSV and click "open". The contents of the TSV should appear in the grey box
-below.
+5. Navigate to the TSV from your local directory and click "open". The contents of the TSV should appear in the grey box below.
 
 6. Click "Submit".
 
@@ -156,6 +157,15 @@ To confirm that a data file is properly registered, enter the GUID of a data fil
 
 > __Note:__ Gen3 users can also submit metadata using the Gen3 SDK, which is a Python library containing functions for sending standard requests to the Gen3 APIs. For example, the function `submit_file` from the **Gen3Submission** class will submit data in a spreadsheet file containing multiple records in rows to a Gen3 Commons. The code is open-source and available on [GitHub](https://github.com/uc-cdis/gen3sdk-python) along with [documentation for using it](https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html). Furthermore, [this section](https://gen3.org/resources/user/analyze-data/#4-using-the-gen3-sdk) describes steps on how to get started.
 
+### Review submitted structured data
+
+To review the content of submitted data, you can start from the [directions above](#begin-metadata-tsv-submissions) and instead of selecting "Upload" in Step 4, you can review the graph below.  You can select particular nodes to view individual records where you have the option to delete, view, or download.
+
+> Note: Users who are not authorized to submit data may see a “Browse Data” button instead of “Submit Data”.  These users will still have access to view the graph and individual nodes, but not to upload or delete.
+
+The number you see underneath the node name, for example ‘subject’, reflects the number of records in that node of the project. The “Toggle View” button is used to show or hide nodes in the data model that the project has no records for.
+
+
 
 
 ### TSV Formatting Checklist
@@ -174,13 +184,7 @@ Templates can be downloaded from the data dictionary page of your commons.  See 
 If the submission throws errors or claims the submission to be invalid, it will be the submitter's task to fix the submission. The best first step is to go through the outputs from the individual entities, as seen in the previous section. The error fields will give a rough description of what failed the validation check. The most common problems are simple issues such as spelling errors, mislabeled properties, or missing required fields.
 
 
-## Learning More About the Existing Submission
 
-When viewing a project, clicking on a node name will allow the user to view the records in that node. From here a user can download, view, or completely delete records associated with any project for which they have delete access.
-
-![Node Click][Node Click]
-
-![Node Information][Node Informatin]
 
 
 <!--Links -->
@@ -192,5 +196,3 @@ When viewing a project, clicking on a node name will allow the user to view the 
 [toolbar submission]: img/Gen3_Toolbar_data_submission.png
 [submit data]: img/Gen3_Data_Submission_submit_data.png
 [upload file]: img/Gen3_Data_Submission_Use_Form.png
-[Node Click]: img/Gen3_Model_Click_highlight.png
-[Node Informatin]: img/Gen3_Model_node_view.png

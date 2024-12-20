@@ -2,15 +2,9 @@
 # Searching and Exploring Structured Data
 The data in a Gen3 data commons can be browsed and downloaded using several different methods. The following general documentation will cover some standard methods of data access in a Gen3 data commons. Ultimately, however, the methods of data access offered in a Gen3 data commons is determined by agreements made between the data commons’ sponsors and data contributors.
 
-Various levels of data access can be configured in a Gen3 data commons using the Gen3 Framework Services. If open access data is hosted, a data commons can be configured to allow anonymous access to data, which means users can explore data without logging in. This is the case for the [Gen3 Data Hub][Gen3 Data Hub].
-
-In cases where data is controlled access, typically external users will receive instructions on how to access data and may be required to sign a DUA (Data Use Agreement) legal document.
+Various levels of data access can be configured in a Gen3 data commons using the Gen3 Framework Services. If open-access data is hosted, a data commons can be configured to allow anonymous access to metadata or structured data, which means users can explore data without logging in. This is the case for the [Gen3 Data Hub][Gen3 Data Hub]. However, even in the Gen3 Data Hub where there is no required Data Use Agreement (DUA), users must still login to generate a token in order to download the open-access files. In cases where data is controlled access or otherwise protected, users will typically receive instructions on how to access data and may be required to sign a DUA legal document or perhaps signify approval of some terms of use within the portal.
 
 The following sections provide details on how to explore and access data from within the data commons website and from the command-line by sending requests to the Gen3 open APIs.
-
-[//]: # (Alex: I would like to see this ordered like this Data Discovery -> Data Access Approval - if controlled data -> Data Exploration. I would like to promote using the Gen3 Discovery page as the initial place to find data as that's it's intended purpose.)
-
-[//]: # (Alex: I started thinking through user "questions" and relating them to particular groups of endpoints in our API and thinking through how users would expect to move between parts of the product. It's old and maybe needs some dust removed, but it was done while thinking through the idea of the Data Lake. The relevant section of the feature doc is here: https://docs.google.com/document/d/1UjQjvUuasmfe_5iaEfqjFzLTHsC-8EXXNYCSyP0-k_s/edit?tab=t.0#heading=h.xp6x9p5szrmw)
 
 ## Searching for Data from the Data Portal
 Gen3 offers a data portal service that creates a website with graphical tools for performing the basic functionality of a data commons, like browsing data in projects, building patient cohorts across projects, downloading metadata or data files for cohorts, and building database queries.
@@ -22,7 +16,7 @@ While this may vary from system to system, to find data in a data commons you ca
 3. Explore files in the Exploration Page
 4. Export data to workspace or download locally depending on the requirements of your system.
 
-Instead of using the Discovery and Exploration pages you could instead use the [API][API instructions] for locating data of interest.
+If you prefer programmatic access, instead of using the Discovery and Exploration pages you could instead use the [API][API instructions] for locating data of interest.
 
 
 ### Discovery Page
@@ -60,13 +54,11 @@ If the table is a list of files, there should be a button for downloading a JSON
 
 
 
-### Access Data using the API
+### Use the API
 All the functionality of the data portal is available by sending requests to the open APIs of the Gen3 system. Detailed API specifications of the Gen3 services can be browsed in [the developer documentation][Developer API specs].
 
-#### Querying Structured Data Programmatically
 Users can submit queries to the Gen3 APIs to access structured data across the projects in the data commons. Queries can be sent using, for example, the Python “requests” package or similar functions in other programming languages. Further details on how to send queries to the API are documented [here][API documentation].
 
-#### Exporting Structured Data Programmatically
 Users with “read” access to a project can export entire structured metadata records by sending requests to the API. Single records can be exported or all records in a specific node of a project can be retrieved. For more information, see the [documentation on using the API][API documentation].
 
 #### The Gen3 SDK
@@ -74,29 +66,29 @@ To make sending requests to the Gen3 APIs easier, the bioinformatics team at the
 
 The SDK is essentially a collection of Python wrapper functions for sending requests to the API. It is open source and can be found on [Github][Gen3 SDK GitHub pg]. Thorough documentation for the SDK can be found in the GitHub repository [documentation page][SDK doc pg].
 
-#### Sending Queries using the SDK
-The [Gen3Submission class][Gen3Submission Python SDK class] of the Python SDK has functions for [sending queries to the API][send query to API] and also for [retrieving the graphQL schema][Retrieve graphQL schema] of the data commons. Queries can be used to pinpoint specific data of interest by providing query arguments that act as filters on records in the database and providing lists of properties to retrieve for those records. If all the structured data in a record or node is desired, as opposed to only specific properties, then see the export functions below.
+##### Sending Queries using the SDK
+The [Gen3Submission class][Gen3Submission Python SDK class] of the Python SDK has functions for sending queries to the API and also for retrieving the graphQL schema of the data commons. Queries can be used to pinpoint specific data of interest by providing query arguments that act as filters on records in the database and providing lists of properties to retrieve for those records. If all the structured data in a record or node is desired, as opposed to only specific properties, then see the export functions below.
 
-#### Exporting Structured Data using the SDK
-Entire structured data records can be exported as a JSON or TSV file using the [Gen3Submission Python SDK class][Gen3Submission Python SDK class]. The [`export_record`][export_record] function will export a single structured metadata record in a specific node of a specific project, whereas the [`export_node`][export_node] function will export all the structured metadata records in a specified node of a specific project.
+##### Exporting Structured Data using the SDK
+Entire structured data records can be exported as a JSON or TSV file using the [Gen3Submission Python SDK class][Gen3Submission Python SDK class]. The `export_record` function will export a single structured metadata record in a specific node of a specific project, whereas the `export_node` function will export all the structured metadata records in a specified node of a specific project.
 
 More SDK examples and how to get started with the SDK can be also found in the [analyze-data section][Using Gen3 SDK].
 
 
-### Query Page
+#### Query Page
 While you may call the API directly as described above, Gen3 also includes an interactive interface for creating [graphQL query language][GraphQL] calls on the Query Page. This can be accessed by clicking “Query” in the top navigation bar or by navigating to the URL: [https://gen3.datacommons.io/query][Query page]. The URL https://gen3.datacommons.io can be replaced with the URL of other Gen3 data commons.
 
 This query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, pass variables, and generally make it easier for users to find information. The “Docs” button will display documentation of the queryable nodes and properties.
 
 From the GraphiQL interface of the data portal, you can switch between *Graph Model* or *Flat Model* – each using endpoints that query different databases (Postgres and ElasticSearch, respectively). Notably, the same queries can be sent to both the flat and graph model API endpoints from the command-line.
 
-#### Graph Model
+##### Graph Model
 
 In the Graph Model, our microservice *Peregrine* converts GraphiQL queries and hits the PostgreSQL database.
 
 ![Animation showing how you can use the Peregrine UI to build a GraphQL query that hits the PostgreSQL database and returns a response][gif Peregrine]
 
-##### List all nodes of a particular node category
+###### List all nodes of a particular node category
 
 ```
 {
@@ -107,7 +99,7 @@ In the Graph Model, our microservice *Peregrine* converts GraphiQL queries and h
 }
 ```
 
-##### Find specific files by querying a datanode
+###### Find specific files by querying a datanode
 
 Metadata for specific files can be obtained by including arguments in “datanode” queries. The following are some commonly used arguments (not an exhaustive list):
 
@@ -204,11 +196,11 @@ For example, if there are 2,550 records returned, and the GraphiQL query is timi
 (first:1000, offset:2000) 	# this will return records 2000-2,550
 ```
 
-#### Flat Model
+##### Flat Model
 
 In the Flat Model, our microservice *Guppy* converts GraphiQL queries and hits the Elasticsearch database. Here, queries support Aggregations for string (bin counts; number of records that each key has) and numeric (summary statistics such as minimum, maximum, sum, etc) fields. For more details see the full description in the [Guppy repository][Guppy].
 
-##### Querying
+###### Querying
 Guppy allows you to query the raw data with offset, the maximum number of rows, sorting, and filters. Queries by default return the first 10 entries. To return more entries, the query call can specify a larger number such as `(first: 100)`.
 
 Example:
@@ -231,7 +223,7 @@ Example:
 ```
 The maximum number of results returned is 10,000, which can be requested with the `(first: 10000)` argument. If you need to access more than that number, we suggest using the [Guppy download endpoint][Guppy download endpoint].
 
-##### Aggregations
+###### Aggregations
 
 Aggregation query is wrapped within the `_aggregation` keyword. In total, five aggregations are feasible at the moment:
 
@@ -254,7 +246,7 @@ query ($filter: JSON) {
 }
 ```
 
-##### Filtering
+###### Filtering
 
 Currently, Guppy uses `JSON`-based syntax for filters. Filters can be text/string/number-based, combined, or nested. For more examples, see the full description in the [Github repository][Guppy].
 
@@ -285,18 +277,7 @@ query ($filter: JSON) {
 
 
 ### Submission Page
-
-#### Browsing the List of Projects
-A graphical model of the structured data in individual data projects of a data commons can be browsed by navigating to the /submission endpoint of a data commons website or by clicking on the “Browse Data” or “Submit Data” buttons in the top navigation bar, for example, [https://gen3.datacommons.io/submission][Gen3 Data Submission pg]. This page lists all the data projects within a commons a user has authorization to view. Clicking the “Browse” or “Submit Data” button by a project ID will open a view of that individual project’s structured metadata graph, which can be further inspected by clicking on a node in the graph model and then viewing individual records by clicking “View” by the submitter_id or downloading all the records in that node by clicking the “Download All” button.
-
-> Note: Users who are authorized to submit data may see a “Submit Data” button instead of “Browse Data”, and will also be able to upload or create structured data in the project on this page.
-
-##### Example: Browse Data in Individual Projects
-![Image showing options for browsing nodes in individual projects using either the dropdown list or project graph model][img Browse Nodes in Projects]
-
-In the graphical model of a data project, the number you see underneath the node name, for example ‘subject’, reflects the number of records in that node of the project. The “Toggle View” button is used to show or hide nodes in the data model that the project has no records for.
-
-![GIF showing how to view the graphical model of a project, toggling to show or hide nodes that have no records][img Graphing a project]
+A graphical model of the structured data of a data commons can be browsed by navigating to the /submission endpoint of a data commons website or by clicking on the “Browse Data” or “Submit Data” buttons in the top navigation bar (if available). This section is often available even if a user does not have access to submit data.  You can see more details in the [Submit Structured Data section][submit_structured].
 
 
 
@@ -309,12 +290,13 @@ In the graphical model of a data project, the number you see underneath the node
 <!-- Discovery section -->
 [Discovery Page]: img/Discovery_page3.gif
 [BRH Discovery]: https://brh.data-commons.org/discovery
+[img Discover grid]: img/grid_discovery_color_080322.png
 
 <!-- Exploration section. -->
 [img Gen3 Toolbar Exploration]: img/Gen3_Toolbar_exploration.png
 [img Explorer GIF]: img/explorer_gif_2020.gif
 [Gen3 Data Hub]: https://gen3.datacommons.io/
-[API instructions]: search.md#access-data-using-the-api
+[API instructions]: search.md#use-the-api
 [Gen3 client]: access-data.md#download-files-using-the-gen3-client
 [Gen3 bulk download]: access-data.md#multiple-file-download-with-manifest
 
@@ -323,21 +305,8 @@ In the graphical model of a data project, the number you see underneath the node
 [API documentation]: using-api.md
 [SDK doc pg]: https://uc-cdis.github.io/gen3sdk-python/_build/html/index.html
 [Gen3Submission Python SDK class]: https://uc-cdis.github.io/gen3sdk-python/_build/html/submission.html
-[send query to API]: https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/submission.py#L289
-[Retrieve graphQL schema]: https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/submission.py#L327
-[export_record]: https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/submission.py#L223
-[export_node]: https://github.com/uc-cdis/gen3sdk-python/blob/master/gen3/submission.py#L255
 [Using Gen3 SDK]: analyze-data.md#using-the-gen3-python-sdk
 [Gen3 SDK GitHub pg]: https://github.com/uc-cdis/gen3sdk-python
 
-
 <!-- Submission page -->
-[Gen3 Data Submission pg]: https://gen3.datacommons.io/submission
-[img Browse Nodes in Projects]: img/projects-nodes-view.png
-[img Graphing a project]: img/graph-a-project.gif
-[GraphQL]: https://graphql.org/
-[Query page]:  https://gen3.datacommons.io/query
-[gif Peregrine]: img/simple_query_2020.gif
-[GraphQL pagination]: http://graphql.org/learn/pagination/
-[Guppy]: https://github.com/uc-cdis/guppy/blob/master/doc/queries.md
-[Guppy download endpoint]: https://github.com/uc-cdis/guppy/blob/master/doc/download.md
+[submit_structured]: ../operator-guide/submit-structured-data.md

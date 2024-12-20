@@ -25,7 +25,7 @@ Operators can also take advantage of the Requestor Service for dynamic authoriza
 
 
 ## Download Files Using the Gen3-client
-The gen3-client provides an easy-to-use, command-line interface for uploading and downloading data files to and from a Gen3 data commons from the terminal or command prompt, respectively.  In some systems "download" may be restricted to only within a Gen3 Workspace.
+The gen3-client provides an easy-to-use, command-line interface for uploading and downloading data files to and from a Gen3 data commons from the terminal or command prompt, respectively.  In some systems "download" may be restricted to only within a Gen3 Workspace.  Note that Gen3 also comes with an SDK tool that can perform many of the same functions as the client for downloading along with many other features not found in the client.  You can read more about the Python SDK tool [here][sdk_github].
 
 This guide has the following sections:
 
@@ -74,7 +74,7 @@ To check that your copy of the client is working and confirm the version, the to
 
 ### Configure a Profile with Credentials
 
-Before using the gen3-client to upload or download data, the gen3-client needs to be configured with API credentials downloaded from the user’s data commons Profile (via Windmill data portal):
+Before using the gen3-client to upload or download data, the gen3-client needs to be configured with API credentials downloaded from the user’s data commons Profile:
 
 1. To download the “credentials.json” from the data commons, the user should start from that common’s Windmill data portal, followed by clicking on “Profile” in the top navigation bar and then creating an API key. In the popup window which informs user an API key has been successfully created, click the “Download json” button to save a local copy of the API key.
 
@@ -248,6 +248,15 @@ Most programs require some sort of user input to run properly. Some programs wil
 For example, when configuring a profile with the client, the user must specify the `configure` option and also specify the profile name, API endpoint, and credentials file by adding the flags `--profile`, `--apiendpoint` and `--cred` to the end of the command (see [configuring a profile section][config profile] above for specific examples).
 
 
+### Expired Token
+
+Many commons have a limit to how long a token is good before it is expired.  Once expired you may receive an error such  
+
+``RequestNewAccessToken with error code 401``
+
+If this happens (and you are still authorized to access the data), you can download a new API token and re-create your profile using the previously used command.   
+
+
 <!-- AuthN/Z -->
 
 [configure auth]: ../operator-guide/gen3-authn-methods.md
@@ -257,6 +266,7 @@ For example, when configuring a profile with the client, the user must specify t
 
 <!--Gen3 client -->
 [Gen3 Client]: https://github.com/uc-cdis/cdis-data-client/releases/latest
+[sdk_github]: https://github.com/uc-cdis/gen3sdk-python
 [PATH]: access-data.md#working-from-the-command-line
 [img create API key]: img/Gen3_Keys.png
 [config profile]: access-data.md#configure-a-profile-with-credentials

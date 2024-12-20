@@ -45,7 +45,7 @@ This service handles reading from and writing to a user's S3 folder containing t
 The Metadata Service provides an API for retrieving JSON metadata of GUIDs. It is a flexible option for "semi-structured" data (key:value mappings).  The content of the MDS powers the Data Portal Discovery Page for a Data Commons. The Gen3 SDK can be used to upload and edit the metadata. This service includes a feature known as the aggregated metadata service (AggMDS), which caches metadata from the metadata services of multiple data commons. The AggMDS holds the content viewable in a Data Portal Discovery page for a Data Mesh.
 
 ## [Peregrine][peregrine github]
-Peregrine is the metadata seeking service which responds to GraphQL search queries and translates them to queries over our graph-like source of truth postgres database for structured data. The GraphQL service allows Commons operators and users to precisely query only the information they are most interested in from the metadata collections. The service translates the GraphQL search into the appropriate statements which are run against the PostgreSQL backend before being returned as friendly JSON.
+Peregrine is the metadata seeking service which responds to GraphQL search queries and translates them to queries over the graph-like postgres database for structured data. The service translates the GraphQL search into the appropriate statements which are run against the PostgreSQL backend before being returned as friendly JSON.
 
 ## [Requestor][requestor github]
 Requestor exposes an API to manage access requests.

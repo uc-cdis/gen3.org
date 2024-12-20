@@ -6,7 +6,10 @@ The application programming interface (API) can be a set of code, rules, functio
 
 The beauty of a Gen3 data commons is that all the functionality of the data commons website is available by sending requests to the open APIs of the data commons. Typical requests at Gen3 include querying, [uploading][Gen3 Submit Data] or downloading data, which leads to communication between Gen3 microservices such as the data portal Windmill or the metadata submission service Sheepdog via open APIs.
 
-   **Note:** The Gen3 commons uses GraphQL as the language for querying metadata across Gen3 Data Commons. To learn the basics of writing queries in GraphQL, please visit: [http://graphql.org/learn][learn GraphQL].
+>
+Note: The Gen3 commons uses GraphQL as the language for querying metadata across Gen3 Data Commons. To learn the basics of writing queries in GraphQL, please visit: [http://graphql.org/learn][learn GraphQL]. You can also try out creating and executing GraphQL queries in the [Data Portal Query Page][Query_page_instructions].
+
+
 
 Gen3 features a variety of API endpoints such as `/submission`, `/index`, or `/graphql`, which differ in how they access the resource and contain each a subset of REST (Representational State Transfer) APIs for networked applications. REST APIs are restricted in their interactions via HTTP request methods such as GET, POST, PATCH, PUT, or DELETE. The GET request retrieves data in read-only mode, POST typically sends data and creates a new resource, PATCH typically updates/modifies a resource, PUT typically updates/replaces a resource, and DELETE deletes a resource. At Gen3, the GET endpoint
 ```
@@ -66,7 +69,7 @@ ql = requests.post('https://gen3.datacommons.io/api/v0/submission/graphql/', jso
 print(ql.text) # display the response
 
 # Data Download via API Endpoint Request:
-durl = 'https://gen3.datacommons.io/api/v0/submission/<program name>/<project code>/export?format=tsv&ids=' + ids[0:-1] # define the download url with the UUIDs of the records to download in "ids" list
+durl = 'https://gen3.datacommons.io/api/v0/submission/<program name>/<project code>/export?format=tsv&ids=' + ids[0:-1] # define the download url with the GUIDs of the records to download in "ids" list
 dl = requests.get(durl, headers=headers)
 print(dl.text) # display response
 
@@ -91,41 +94,48 @@ If an error such as "You don’t have access… " occurs, then either you do not
 
 Users with read access to a project can download individual metadata records in the project or all records in a specified node of the project using the API.
 
-The API endpoint for downloading all the records in a single node of a project is:
-```
-{commons-url}/api/v0/submission/{program name}/{project code}/export/?node_label={node}&format={json/tsv}
- Where:
-{commons-url} is the gen3 data commons url (for example, 'gen3.datacommons.io'),
-{program name} is the program node's property 'name' (for example, 'GEO'),
-{project code} is the project node's property 'code' (for example, 'GSE63878'),
-{node} is the name (or 'node_id') of the node (e.g., 'subject'),
-{json/tsv} is the format in which data will be downloaded, either 'json' or 'tsv'.
-```
+**Example 1** The API endpoint for downloading all the records in a single node of a project is:
+
+`{commons-url}/api/v0/submission/{program name}/{project code}/export/?node_label={node}&format={json/tsv}`
+
+Where:
+`{commons-url}` is the gen3 data commons url,
+`{program name}` is the program node's property 'name',
+`{project code}` is the project node's property 'code',
+`{node}` is the name (or 'node_id') of the node,
+`{json/tsv}` is the format in which data will be downloaded, either 'json' or 'tsv'.
+
 For example, submitting the following API request will download all the records in the ‘sample’ node of the project ‘GEO-GSE63878’ in [the Gen3 Data Hub][Gen3 DC] as a tab-separated values file (TSV):
 ```
 https://gen3.datacommons.io/api/v0/submission/GEO/GSE63878/export/?node_label=sample&format=tsv
 ```
-The API endpoint for downloading a single record in a project is as follows:
-```
-{commons-url}/api/v0/submission/{program name}/{project code}/export?ids={ids}&format={json/tsv}
- Where:
-{commons-url} is the gen3 data commons url (for example, 'gen3.datacommons.io'),
-{program name} is the program node's property 'name' (for example, 'GEO'),
-{project code} is the project node's property 'code' (for example, 'GSE63878'),
-{ids} is a comma separated list of the UUIDs for the records to be downloaded (e.g., '180554c0-d0e1-41f2-b5b0-47655d7975ed,3e54268c-b4a6-4cf8-bedc-1e9e49f9d6e9'),
-{json/tsv} is the format in which data will be downloaded, either 'json' or 'tsv'.
-```
-For example, submitting the following API request will download the two records corresponding to the UUIDs (the ‘id’ property) ‘180554c0-d0e1-41f2-b5b0-47655d7975ed’ and ‘3e54268c-b4a6-4cf8-bedc-1e9e49f9d6e9’, which are records in the ‘subject’ node of the project ‘GEO-GSE63878’ in the [Gen3 Data Hub][Gen3 DC]. This downloads a ‘subjects.tsv’ file containing those two records.
+
+
+**Example 2** The API endpoint for downloading a single record in a project is as follows:
+
+`{commons-url}/api/v0/submission/{program name}/{project code}/export?ids={ids}&format={json/tsv}`
+
+Where:
+`commons-url`is the gen3 data commons url,
+`program name` is the program node's property 'name',
+`project code` is the project node's property 'code',
+`ids` is a comma separated list of the GUIDs for the records to be downloaded,
+`json/tsv` is the format in which data will be downloaded, either 'json' or 'tsv'.
+
+For example, submitting the following API request will download the two records corresponding to the GUIDs (the ‘id’ property) ‘180554c0-d0e1-41f2-b5b0-47655d7975ed’ and ‘3e54268c-b4a6-4cf8-bedc-1e9e49f9d6e9’. This downloads a ‘subjects.tsv’ file containing those two records.
+
 ```
 https://gen3.datacommons.io/api/v0/submission/GEO/GSE63878/export?ids=180554c0-d0e1-41f2-b5b0-47655d7975ed,3e54268c-b4a6-4cf8-bedc-1e9e49f9d6e9&format=tsv
 ```
-The API endpoint for querying the metadata associated with the given UUID is as follows:
-```
-{commons-url}/index/{GUID}
- Where:
-{commons-url} is the gen3 data commons url (for example, 'gen3.datacommons.io'),
-{GUID} is the globally unique identifier (for example, 'ce214f52-1a98-4a6f-bda1-2bb2731cfd61')
-```
+
+**Example 3** The API endpoint for querying the metadata associated with the given GUID is as follows:
+
+`{commons-url}/index/{GUID}`
+
+Where:
+`commons-url` is the gen3 data commons url,
+`GUID` is the globally unique identifier.
+
 
 The following request will show the metadata of the indexed record in .JSON format. Thus, a browser that includes a .JSON viewer (e.g. Firefox) or a manually installed plug-in can show the .JSON in pretty-print.
 ```
@@ -136,6 +146,7 @@ https://gen3.datacommons.io/index/47c46ead-f6f5-4cc9-86b9-2354cafe8c64
 <!-- What Does the API Do? -->
 [Gen3 Submit Data]: ../operator-guide/submit-structured-data.md
 [learn GraphQL]: http://graphql.org/learn
+[Query_page_instructions]: portal.md/#query-page
 [microservice docs]: ../developer-guide/microservices.md
 [Sheepdog]: https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/sheepdog/master/openapi/swagger.yml#/
 [Peregrine]: https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/peregrine/master/openapis/swagger.yaml
