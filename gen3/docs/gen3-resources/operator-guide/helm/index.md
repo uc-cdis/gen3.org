@@ -1,5 +1,7 @@
 # Helm to Configure and Deploy Gen3
 
+## [**-*Jump to quick-start videos*-**](#getting-started-with-helm-quick-start-videos)
+
 [**Helm**](https://helm.sh) plays a crucial role in simplifying the deployment and management of Gen3 components within your environment. It is a Kubernetes package manager that allows you to define, install, and upgrade even complex applications with ease.
 
 If you haven't already installed Helm for your Gen3 deployment:
@@ -64,3 +66,36 @@ By centralizing these common features in a dedicated chart, we reduce redundancy
 - **Isolation**: Each microservice operates independently within its own Helm chart, allowing for isolation and decoupling of services. This isolation enhances fault tolerance and simplifies updates and maintenance.
 
 - **Customization**: Microservices can have their specific configurations and dependencies defined within their Helm charts, making it easier to tailor each service to its unique requirements.
+
+## Getting started with Helm - Quick-Start Videos
+
+### Deploy with Kind and Helm
+
+!!! info "Quick-start to deploy Gen3 with Kind & Helm"
+
+    This video walks through basic set up a Gen3 data commons on your laptop using Kind and Gen3 Helm charts.
+
+<p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/CFxdmFt-nIw?si=bf-1-gOZtFr_W904" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+### Deploy with Minikube and Helm
+
+!!! info "Quick-start to deploy Gen3 with Minikube & Helm"
+
+    This video walks through basic set up a Gen3 data commons on your laptop using Minikube and Gen3 Helm charts.
+
+<p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/nDL1DrtJqBk?si=1S2fCzUYjw0CK_tU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+### Additional post-deployment configuration tips
+
+!!! info "Gen3 Helm Charts: SSL, Permissions, Test Data, Tabs, and more"
+
+    This video covers several aspects of configuration after deploying Gen3, including:
+
+    * How to generate SSL certificates for secure communication
+    * Updating permissions to ensure seamless access control
+    * Submitting test data to validate your configurations
+    * Enabling persistence for data continuity
+    * Configuring the Workspace Tab for launching notebooks
+    * Configuring the Exploration Tab for advanced data discovery
+
+<p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/MnBxqE9gm6I?si=1xTXAAxhZ3X0Z5n2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
