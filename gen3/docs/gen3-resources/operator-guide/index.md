@@ -53,7 +53,7 @@ Compose-services was used to deploy Gen3 at a small scale, for experimental comm
 [cloud-automation]: https://github.com/uc-cdis/cloud-automation/blob/master/doc/csoc-free-commons-steps.md
 [compose-services]: https://github.com/uc-cdis/compose-services/tree/master
 [helm guide]: helm/index.md
-[deploy overview]: deploy-gen3.md
+[deploy overview]: helm/helm-deploy-overview.md
 [prerequisites]: prerequisites.md
 [infrastructure as code]: iac-overview.md
 [ssl]: ssl-cert.md

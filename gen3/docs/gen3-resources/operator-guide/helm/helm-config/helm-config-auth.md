@@ -180,5 +180,5 @@ Common Arborist database SQL queries can be [found here](https://github.com/uc-c
 
 See the following tutorials for additional information relevant to AuthN/AuthZ.
 
-* [Fence Usersync CronJob](../tutorial_fence_usersync_job.md)
-* [AWS IAM Global User](../tutorial_global_IAM_helm_user.md)
+* [Fence Usersync CronJob](../../tutorial_fence_usersync_job.md)
+* [AWS IAM Global User](../../tutorial_global_IAM_helm_user.md)
