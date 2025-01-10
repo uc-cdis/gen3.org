@@ -71,7 +71,7 @@ For an example of a dbGap auth file (csv), please see [this example][dbgap auth]
 
 
 <!-- Links -->
-[fence values.yaml]: https://github.com/uc-cdis/gen3-helm/blob/c7b8959cdf5f7756b29c33ff330923e95981827c/helm/fence/values.yaml#L449-L1319
+[fence values.yaml]: https://github.com/uc-cdis/gen3-helm/blob/078c7ae094efa5c56f8fd732c75e5e939fbcfc24/helm/fence/values.yaml#L516
 [user.yaml formatting]: https://github.com/uc-cdis/fence/blob/master/docs/additional_documentation/user.yaml_guide.md
 [global_IAM_helm]: tutorial_global_IAM_helm_user.md
 [values.yaml]: https://github.com/uc-cdis/gen3-helm/blob/c7b8959cdf5f7756b29c33ff330923e95981827c/helm/fence/values.yaml#L1796

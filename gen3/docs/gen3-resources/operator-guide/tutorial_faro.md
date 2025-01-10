@@ -137,6 +137,11 @@ fence:
 
 If you need to change the Faro URL that metrics are sent to, you will need to update the "grafanaFaroUrl" field by modifying the "gitops.json" value in your values.yaml. You can refer to [this link](https://github.com/uc-cdis/data-portal/blob/master/docs/portal_config.md) for more information.
 
+
+
+
+
+
 ```yaml
 portal:
     # -- (map) GitOps configuration for portal
@@ -151,6 +156,7 @@ portal:
                 "grafanaFaroSampleRate": 1, // optional; numeric; the Grafana Faro option specifying the percentage of sessions to track: 1 for all, 0 for none. Default to 1 if omitted
             },
 ```
+
 ---
 
 By following this guide, you'll have successfully set up Alloy to receive Grafana Faro logs and metrics while exposing the service over the internet using Kubernetes ingress. You’ll also be able to monitor Faro metrics through Fence and make necessary configurations in Gen3 Portal for seamless Faro integration.
