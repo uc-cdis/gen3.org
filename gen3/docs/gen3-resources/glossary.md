@@ -42,7 +42,7 @@ Edge nodes may be created at clinics, labs, hospitals, or academic institutions 
 ## ETL
 Structured data submitted to commons are stored in PostgreSQL. Querying data from PostgreSQL with multiple join is painful and inefficient. So, we use ElasticSearch as a place to store materialized dataset. Extract-transform-load (ETL) is a process that creates the materialized data from PostgreSQL and store them in ElasticSearch.  This is accomplished via the Tube microservice. More details of running an ETL can be found [here](operator-guide/customize-search.md#etl).
 ## FAIR Data
-FAIR data are data which meet the principles of findability, accessibility, interoperability, and reusability [12]. There is now an extensive literature on FAIR data.
+FAIR data are data which are findable, accessible, interoperable, and reusable [12]. There is now an extensive literature on FAIR data.
 ## Framework Services
 Framework Services or Data Commons Framework (DCF) Services is the term used by Gen3 to refer to data mesh services in the narrow middle architecture, for data meshes, such as the NCI Cancer Research Data Commons. These are set of standards-based services with open APIs for authentication, authorization, creating and accessing FAIR data objects, and for working with bulk structured data in machine-readable, self-contained format.
 
