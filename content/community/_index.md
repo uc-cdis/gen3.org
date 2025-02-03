@@ -62,7 +62,7 @@ g3DataFeature:
     title: Contribute to Gen3
     subtitle: Learn how to contribute code improvements to Gen3.
     button:
-      link: https://docs.gen3.org/docs/Contributor%20Guidelines/
+      link: https://docs.gen3.org/gen3-resources/developer-guide/contribute/
 g3Entrance:
   e1:
     title: Frequently Asked Questions

@@ -8,7 +8,7 @@ menuname: developerMenu
 ---
 
 # Gen3 Technical Documentation
-This documentation is intended for developers who want to understand the design and architecture of Gen3. If you want to contribute code to the Gen3 source code please visit our [Gen3 Contributor Guidelines](https://docs.gen3.org/docs/Contributor%20Guidelines/).
+This documentation is intended for developers who want to understand the design and architecture of Gen3. If you want to contribute code to the Gen3 source code please visit our [Gen3 Contributor Guidelines](https://docs.gen3.org/gen3-resources/developer-guide/contribute/).
 
 The Gen3 platform is a set of services that enables users to use data and compute resources easily from various cloud providers. It also provides a user-friendly environment to organize and query data, and run computational analysis.
 
