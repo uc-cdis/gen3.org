@@ -17,7 +17,7 @@ g3Teaser:
           {{< param "g3Teaser.title" >}}
         </h1>
         <p class="g3-space__margin-sm-bottom introduction g3-space__margin-sm-right">
-The Gen3 data platform is used as the basis for many data repositories and enables research on large and diverse datasets.  The list below includes publications that discuss data commons or meshes that leverage Gen3, include analyses that were performed on or made possible by a Gen3 system, or reference datasets that are now stored on a Gen3 system.  If you see we are missing your paper please let us know by submitting  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfyN389fJx6T_pA-P67hrStrBXxH6BA2oc0ERlMjCvQoVmAtQ/viewform">this form</a>.
+The Gen3 data platform is used as the basis for many data repositories and enables research on large and varied datasets.  The list below includes publications that discuss data commons or meshes that leverage Gen3, include analyses that were performed on or made possible by a Gen3 system, or reference datasets that are now stored on a Gen3 system.  If you see we are missing your paper please let us know by submitting  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfyN389fJx6T_pA-P67hrStrBXxH6BA2oc0ERlMjCvQoVmAtQ/viewform">this form</a>.
         </p>
       </div>
     </div>
@@ -51,10 +51,6 @@ The Gen3 data platform is used as the basis for many data repositories and enabl
     <p class="g3-space__margin-sm-bottom">
     Kim, Erika, et al. "NCI cancer research data commons: lessons learned and future state." Cancer Research 84.9 (2024): 1404-1409.
       <a href="https://aacrjournals.org/cancerres/article/84/9/1404/745076">View Article</a>
-    </p>
-    <p class="g3-space__margin-sm-bottom">
-    Kullo, Iftikhar J. "Promoting equity in polygenic risk assessment through global collaboration." Nature Genetics (2024): 1-8.
-      <a href="https://www.nature.com/articles/s41588-024-01843-2">View Article</a>
     </p>
     <p class="g3-space__margin-sm-bottom">
     Kuzma, Amanda, et al. "NIAGADS: A Comprehensive National Data Repository for Alzheimer’s Disease and Related Dementia Genetics and Genomics Research." medRxiv (2024): 2024-10.25.
@@ -104,9 +100,6 @@ The Gen3 data platform is used as the basis for many data repositories and enabl
 <div class="g3-space__margin-sm-left g3-space__margin-md-top">
   <h2> 2023</h2>
   <p class="g3-space__margin-sm-bottom">
-Adams, Clare IM, et al. "Environmental DNA metabarcoding describes biodiversity across marine gradients." ICES Journal of Marine Science 80.4 (2023): 953-971. <a href="https://academic.oup.com/icesjms/article/80/4/953/7058017">View Article</a>
-  </p>
-  <p class="g3-space__margin-sm-bottom">
   Adams, Meredith CB, et al. "NIH HEAL Clinical Data Elements (CDE) implementation: NIH HEAL Initiative IMPOWR network IDEA-CC." Pain Medicine (2023): pnad018.
  <a href="https://academic.oup.com/painmedicine/article/24/7/743/7043983">View Article</a>
   </p>
@@ -135,13 +128,7 @@ Chen, Weijie, et al. "Machine learning with multimodal data for COVID-19." Heliy
 Dahlquist, Jacklyn M., Sarah C. Nelson, and Stephanie M. Fullerton. "Cloud-based biomedical data storage and analysis for genomic research: Landscape analysis of data governance in emerging NIH-supported platforms." Human Genetics and Genomics Advances 4.3 (2023). <a href="https://www.sciencedirect.com/science/article/pii/S2666247723000283">View Article</a>
   </p>
   <p class="g3-space__margin-sm-bottom">
-Drukker, Karen, et al. "Toward fairness in artificial intelligence for medical image analysis: identification and mitigation of potential biases in the roadmap from data collection to model deployment." Journal of Medical Imaging 10.6 (2023): 061104-061104. <a href="https://www.spiedigitallibrary.org/journals/journal-of-medical-imaging/volume-10/issue-06/061104/Toward-fairness-in-artificial-intelligence-for-medical-image-analysis/10.1117/1.JMI.10.6.061104.full">View Article</a>
-  </p>
-  <p class="g3-space__margin-sm-bottom">
 Duncan, Jamie. "Data protection beyond data rights: Governing data production through collective intermediaries." Internet Policy Review 12.3 (2023): 1-22. <a href="https://policyreview.info/articles/analysis/data-protection-beyond-data-rights">View Article</a>
-  </p>
-  <p class="g3-space__margin-sm-bottom">
-Foote, Andrew D., et al. "“Type D” killer whale genomes reveal long-term small population size and low genetic diversity." Journal of Heredity 114.2 (2023): 94-109. <a href="https://academic.oup.com/jhered/article/114/2/94/7086686">View Article</a>
   </p>
   <p class="g3-space__margin-sm-bottom">
 French, Rebecca K., et al. "Host phylogeny shapes viral transmission networks in an island ecosystem." Nature Ecology & Evolution (2023): 1-10. <a href="https://www.nature.com/articles/s41559-023-02192-9">View Article</a>
@@ -179,8 +166,6 @@ Nault, Rance, et al. "A Case for Accelerating Standards to Achieve the FAIR Prin
   <p class="g3-space__margin-sm-bottom">
 Pandey, Akanksha, Rishabha Malviya, and Sunita Dahiya. "Risk Assessment in the Field of Oncology using Big Data." Big Data in Oncology: Impact, Challenges, and Risk Assessment. River Publishers, 2023. 355-409. <a href="https://ieeexplore.ieee.org/abstract/document/10217108">View Article</a>
   </p>
-  <p class="g3-space__margin-sm-bottom">
-Pearman, William S., et al. "Differences in density: taxonomic but not functional diversity in seaweed microbiomes affected by an earthquake." bioRxiv (2023): 2023-02. <a href="https://www.biorxiv.org/content/10.1101/2023.02.08.527737v1.full">View Article</a>
   </p>
   <p class="g3-space__margin-sm-bottom">
 Papa, Yvan, et al. "Genome assembly and isoform analysis of a highly heterozygous New Zealand fisheries species, the tarakihi (Nemadactylus macropterus)." G3 13.2 (2023): jkac315. <a href="https://academic.oup.com/g3journal/article/13/2/jkac315/6883520">View Article</a>
@@ -272,9 +257,6 @@ Su, Jing, et al. "The Alcoholic Hepatitis Network Research Data Commons (ARDaC):
   </p>
   <p class="g3-space__margin-sm-bottom">
 Trunnell, Matthew, et al. "The Pandemic Response Commons." medRxiv (2022): 2022-06. <a href="https://www.medrxiv.org/content/10.1101/2022.06.20.22276542v1">View Article</a>
-  <p class="g3-space__margin-sm-bottom">
-Waller, Stephanie J., et al. "Cloacal virome of an ancient host lineage–The tuatara (Sphenodon punctatus)–Reveals abundant and diverse diet-related viruses." Virology 575 (2022): 43-53. <a href="https://www.sciencedirect.com/science/article/pii/S004268222200143X">View Article</a>
-  </p>
   </p>
 </div>
 
@@ -342,14 +324,8 @@ Elbers, Danne C., et al. "The Veterans Affairs Precision Oncology Data Repositor
 Jain, Anshu K., et al. "Provider engagement in radiation oncology data science: workshop report." JCO Clinical Cancer Informatics 4 (2020). <a href="https://ascopubs.org/doi/full/10.1200/CCI.20.00051">View Article</a>
   </p>
   <p class="g3-space__margin-sm-bottom">
-Khomtchouk, Bohdan B., et al. "HeartBioPortal2. 0: new developments and updates for genetic ancestry and cardiometabolic quantitative traits in diverse human populations." Database 2020 (2020): baaa115. <a href="https://academic.oup.com/database/article/doi/10.1093/database/baaa115/6056468">View Article</a>
-  </p>
-  <p class="g3-space__margin-sm-bottom">
 Major, Ajay, Suzanne M. Cox, and Samuel L. Volchenboum. "Using big data in pediatric oncology: Current applications and future directions." Seminars in Oncology. Vol. 47. No. 1. WB Saunders, 2020. <a href="https://www.sciencedirect.com/science/article/pii/S0093775420300063">View Article</a>
   </p>
-  <p class="g3-space__margin-sm-bottom">
-Tee, H. S., et al. "Tools for successful proliferation: diverse strategies of nutrient acquisition by a benthic cyanobacterium." The ISME Journal 14.8 (2020): 2164-2178. <a href="https://www.nature.com/articles/s41396-020-0676-5">View Article</a>
-</p>
 </div>
 
 

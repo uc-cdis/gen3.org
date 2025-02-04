@@ -58,7 +58,7 @@ This Helm chart comes equipped with built-in Gen3 alerts, defined in the 'alerti
 
 ### Built-in Gen3 Dashboards
 
-We'll soon be releasing Gen3 dashboards, providing users with Gen3-specific visualizations. Please check back here to see if they have been released.
+You can utilize Gen3-specific visualizations by visiting our [grafana-dashboards repo](https://github.com/uc-cdis/grafana-dashboards)
 
 ## Alloy and Faro: Enhancing Observability
 
@@ -78,6 +78,7 @@ Faro Collector Helm Chart: Adds RUM data collection to the stack by configuring 
 This new suite of Helm charts provides everything you need to monitor your Gen3 instance.
 
 To see detailed instructions on how to set up these charts, please refer to the following links:
-- [observability.md](https://github.com/uc-cdis/gen3-docs/blob/main/docs/tutorials/observability.md)
-- [alloy.md](https://github.com/uc-cdis/gen3-docs/blob/main/docs/tutorials/alloy.md)
-- [faro.md](https://github.com/uc-cdis/gen3-docs/blob/main/docs/tutorials/faro.md)
+
+- [Observability](../../gen3-resources/operator-guide/tutorial_observability.md)
+- [Alloy](../../gen3-resources/operator-guide/tutorial_alloy.md)
+- [Faro](../../gen3-resources/operator-guide/tutorial_faro.md)

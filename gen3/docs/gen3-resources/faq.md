@@ -88,7 +88,7 @@ The Exploration page needs to be set up with Elastic Search using Guppy. Please 
 
 ### I installed Compose Services, how do I create a program and a project?
 
-Please refer to corresponding [Gen3 Documentation](https://gen3.org/resources/operator/#6-programs-and-projects) to create your first program and project.
+Please refer to corresponding [Gen3 Documentation](operator-guide/submit-structured-data.md#order-of-node-submission) to create your first program and project.
 
 
 ### I created a program, but I see a `NotFound` error when I try to create a project within my program.

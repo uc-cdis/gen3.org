@@ -56,7 +56,7 @@ Arborist depends on Fence, so a problem with Fence will cause problems for Arbor
 
 ### Configure Indexd
 
-Indexd will index files in the commons to be used by Fence to download data. Indexd will assign a GUID (Globally Unique IDentifier) to each file so it can be managed in the data commons. Many data-relevant services depend on Indexd, so it should be functioning before you proceed. The default configuration may be functional for a local deployment for development. You can find information about [configuring Indexd here](./helm-config-data-svcs/#indexd).
+Indexd will index files in the commons to be used by Fence to download data. Indexd will assign a GUID (Globally Unique IDentifier) to each file so it can be managed in the data commons. Many data-relevant services depend on Indexd, so it should be functioning before you proceed. The default configuration may be functional for a local deployment for development. You can find information about [configuring Indexd here](./helm-config-data-svcs.md#indexd).
 
 ### Data Dictionary and Data
 
@@ -75,7 +75,7 @@ On the Graph Model tab of the Query page, data that has been ingested with Sheep
 
 #### Sheepdog (data submission)
 
-Sheepdog handles data submission. When data files are submitted to a Gen3 Data Commons using Sheepdog, it uses the data dictionary as a schema, and the files are automatically indexed into Indexd. You can find information about [configuring Sheepdog here](./helm-config-data-svcs/#sheepdog).
+Sheepdog handles data submission. When data files are submitted to a Gen3 Data Commons using Sheepdog, it uses the data dictionary as a schema, and the files are automatically indexed into Indexd. You can find information about [configuring Sheepdog here](./helm-config-data-svcs.md#sheepdog).
 
 Sheepdog depends on:
 
@@ -87,7 +87,7 @@ Sheepdog depends on:
 
 #### Peregrine (query Postgres)
 
-Peregrine directly queries data in Postgres. You can find information about [configuring Peregrine here](./helm-config-data-svcs/#peregrine).
+Peregrine directly queries data in Postgres. You can find information about [configuring Peregrine here](./helm-config-data-svcs.md#peregrine).
 
 Peregrine depends on:
 
@@ -123,7 +123,7 @@ The etlMapping.yaml depends on the data dictionary.
 
 #### Tube (ETL, ElasticSearch)
 
-The Gen3 Tube ETL is designed to translate data from a graph data model, stored in a PostgreSQL database, to indexed documents in ElasticSearch (ES), which supports efficient ways to query data from the front-end. The purpose of the Gen3 Tube ETL is to create indexed documents to reduce the response time of requests to query data. It is configured through an etlMapping.yaml configuration file, which describes which tables and fields to ETL to ElasticSearch. You can find information about [configuring Tube/ETL here](./helm-config-data-svcs/#etl-tube).
+The Gen3 Tube ETL is designed to translate data from a graph data model, stored in a PostgreSQL database, to indexed documents in ElasticSearch (ES), which supports efficient ways to query data from the front-end. The purpose of the Gen3 Tube ETL is to create indexed documents to reduce the response time of requests to query data. It is configured through an etlMapping.yaml configuration file, which describes which tables and fields to ETL to ElasticSearch. You can find information about [configuring Tube/ETL here](./helm-config-data-svcs.md#etl-tube).
 
 Tube depends on:
 
@@ -133,12 +133,12 @@ Tube depends on:
 
 #### Guppy
 
-Guppy is used to render the Explorer page and to permit function of the Flat Model tab of the Query page. Guppy makes available the ElasticSearch indices created by Tube to quickly traverse the flat data model and find data in ES. So, after running the ETL, copy the indices into the `indices` block, as seen [here in the guppy values.yaml](https://github.com/uc-cdis/gen3-helm/blob/master/helm/guppy/values.yaml#L186). You can find information about [configuring Guppy here](./helm-config-data-svcs/#guppy).
+Guppy is used to render the Explorer page and to permit function of the Flat Model tab of the Query page. Guppy makes available the ElasticSearch indices created by Tube to quickly traverse the flat data model and find data in ES. So, after running the ETL, copy the indices into the `indices` block, as seen [here in the guppy values.yaml](https://github.com/uc-cdis/gen3-helm/blob/master/helm/guppy/values.yaml#L186). You can find information about [configuring Guppy here](./helm-config-data-svcs.md#guppy).
 
 Guppy depends on:
 
 * Tube/ETL - Guppy relies on indices being created by Tube to run. If there are no indices created, Guppy will fail to start up.
-* aws-es-proxy (if deploying Gen3 on AWS) ([see configuration info here](./helm-config-data-svcs/#aws-es-proxy))
+* aws-es-proxy (if deploying Gen3 on AWS) ([see configuration info here](./helm-config-data-svcs.md#aws-es-proxy))
 
 #### Portal configuration
 
@@ -164,14 +164,14 @@ To configure the Discovery page, you need to add a `discoveryConfig` to the gito
 
 #### Configure Metadata Service
 
-The Metadata Service (also called MDS) provides an API for retrieving JSON metadata of GUIDs. It is a flexible option for "semi-structured" data (key:value mappings). You can find information about [configuring Metadata Service here](./helm-config-data-svcs/#metadata).
+The Metadata Service (also called MDS) provides an API for retrieving JSON metadata of GUIDs. It is a flexible option for "semi-structured" data (key:value mappings). You can find information about [configuring Metadata Service here](./helm-config-data-svcs.md#metadata).
 
 [Discovery page for Gen3 Data Hub](https://gen3.datacommons.io/discovery)
 [Example MDS powering Gen3 Data Hub Discovery page](https://gen3.datacommons.io/mds/metadata?data=True)
 
 ## Workspaces
 
-Gen3 workspaces use the Ambassador, Hatchery, and Manifestservice services to create and run the workspace in a Gen3 data commons. You can find information about [configuring all of these Workspace services here](./helm-config-workspaces).
+Gen3 workspaces use the Ambassador, Hatchery, and Manifestservice services to create and run the workspace in a Gen3 data commons. You can find information about [configuring all of these Workspace services here](./helm-config-workspaces.md).
 
 Workspace services depend on:
 
