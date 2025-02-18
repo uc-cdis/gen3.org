@@ -85,7 +85,9 @@ g3Teaser:
                 <p>Open Commons Consortium (OCC) is a division of the Center for Computational Science Research Inc. (CCSR), a Chicago-based 501(c)(3) not-for-profit that supports analytic, scientific, biomedical, and environmental research and applications. OCC manages and operates cloud computing, data commons and data meshes to advance scientific, medical, and healthcare research. Some of the Data Commons run by OCC include the BLOODPAC Data Commons, the Veterans Precision Oncology Data Commons, and the VA Data Commons.
                 <br></br>
                 Contact: info@occ-data.org
-</p>
+                </p>
+                <p> <a href="https://aws.amazon.com/marketplace/seller-profile?id=seller-dfxknhzspv53w">AWS Marketplace Link</a>
+                </p>
     </div>
 </section>
 
