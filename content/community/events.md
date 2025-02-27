@@ -9,14 +9,15 @@ g3Teaser:
   detail: About every other month, there is a virtual Gen3 Forum for the community of Gen3 developers, operators, sponsors and users of Gen3 data platforms. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 core development team.
 
 g3Upcoming:
-- Title: Gen3 Development Roadmap for 2025
-  Date: February 26, 2025 3:30-5:00 pm CT (February 27, 2025, 8:30-10:00 am AEDT)
-  Description: We will introduce the 2025 Gen3 Development Roadmap, which will include known current priorities.  The first portion of the meeting will include a presentation by Robert Grossman, Director of CTDS.  The second portion will include an organized panel discussion by the Gen3 steering committee on the roadmap.  Please attend to provide your feedback and help prioritize roadmap items.
-  Image: /figs/gen3_new_logo.png
-  Register: https://uchicago.zoom.us/meeting/register/tJ0qf-itqj0qG9TPawLDkSz_BzyxcazGSNxp
+
 
 
 g3past:
+- Title: Gen3 Development Roadmap for 2025
+  Date: February 26, 2025 3:30-5:00 pm CT (February 27, 2025, 8:30-10:00 am AEDT)
+  Description: We will introduce the 2025 Gen3 Development Roadmap, which will include known current priorities.  The first portion of the meeting will include a presentation by Robert Grossman, Director of CTDS.  The second portion will include an organized panel discussion by the Gen3 steering committee on the roadmap.  Please attend to provide your feedback and help prioritize roadmap items.
+  Youtube: dh7FWSqx-1w
+  Slides: Gen3 Forum Feb 26 2025 - Gen3 Roadmap.pdf
 - Title: Testing code with the new Gen3 testing framework
   Date: November 6, 3:30-5:00 pm CDT; November 7, 2024, 8:30-10:00 am AEDT
   Description: Gen3 values code contributions from our open-source community. However, the continuous integration testing available within our GitHub repositories has generally not been available to contributors external to CTDS.  This has made it difficult for contributors to assess their code changes and get them merged into the Gen3 codebase.  We will discuss in the forum the new Gen3 testing framework, which makes these tests available to anyone.  We will also discuss how contributors can create and contribute their own tests as part of their pull requests.  Speakers will include Peter Vassilatos, Director of Engineering, and Hara Juvvala, Principal Software Engineer in Test, both from the Center for Translational Data Science at the University of Chicago.
