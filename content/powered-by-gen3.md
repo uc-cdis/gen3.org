@@ -11,10 +11,10 @@ g3Commons:
   #    title: ACCOuNT Data Commons
   #    fig: /figs/commons/acct.png
   #    link: https://acct.bionimbus.org
-  c2:
-    title: AnVIL
-    fig: /figs/commons/anvil.png
-    link: https://gen3.theanvil.io
+  #c2:
+  #  title: AnVIL
+  #  fig: /figs/commons/anvil.png
+  #  link: https://gen3.theanvil.io
   c3:
     title: BioData CATALYST
     fig: /figs/commons/stage.png
@@ -43,18 +43,18 @@ g3Commons:
     title: OCC Environmental Data Commons
     fig: /figs/commons/edc.png
     link: https://portal.occ-data.org
-  c10:
-    title: GenoMEL Data Commons
-    fig: /figs/commons/genomel.png
-    link: https://genomel.bionimbus.org
+  #c10:
+  #  title: GenoMEL Data Commons
+  #  fig: /figs/commons/genomel.png
+  #  link: https://genomel.bionimbus.org
   c11:
     title: NIH Heal Initiative
     fig: /figs/commons/heal.png
     link:  https://healdata.org
-  c12:
-    title: NIDDK IBD Genetics Consortium Data Commons
-    fig: /figs/commons/ibdgc.png
-    link: https://ibdgc.datacommons.io
+  #c12:
+  #  title: NIDDK IBD Genetics Consortium Data Commons
+  #  fig: /figs/commons/ibdgc.png
+  #  link: https://ibdgc.datacommons.io
   c13:
     title: ICGC PCAWG and DREAM Challenge data
     fig:  /figs/commons/icgc.png
