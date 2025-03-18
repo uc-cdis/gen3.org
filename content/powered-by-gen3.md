@@ -71,10 +71,10 @@ g3Commons:
     title: The Medical Imaging and Data Resource Center Commons
     fig: /figs/commons/midrc.png
     link: https://data.midrc.org
-  c17:
-    title: AccessClinicalTrails@NIAID
-    fig: /figs/commons/nct.png
-    link: https://accessclinicaldata.niaid.nih.gov
+#  c17:
+#    title: AccessClinicalTrails@NIAID
+#    fig: /figs/commons/nct.png
+#    link: https://accessclinicaldata.niaid.nih.gov
   c18:
     title: Prometheus Data Platform
     fig: /figs/commons/prometheus.png
