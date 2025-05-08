@@ -9,16 +9,17 @@ g3Teaser:
   detail: About every other month, there is a virtual Gen3 Forum for the community of Gen3 developers, operators, sponsors and users of Gen3 data platforms. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 core development team.
 
 g3Upcoming:
-- Title: Data Analysis in Gen3 Systems
-  Date: May 7, 2025 3:30-5:00 pm CT (May 8, 2025, 6:30-8:00 am AEST)
-  Description: This meeting will showcase a variety of Gen3 systems to highlight both the types of data these systems include and also details of how users for each system analyze their data.  Analysis solutions may include Gen3 workspaces, local download, or export to third-party analysis systems.  Review the Full Agenda for the detailed list of speakers and topics.
-  Agenda3: gen3forum_20250507
-  Image: /figs/gen3_new_logo.png
-  Register2: https://uchicago.zoom.us/meeting/register/0qeR3_vqTYuWu_FgxfvDwg
+
 
 
 
 g3past:
+- Title: Data Analysis in Gen3 Systems
+  Date: May 7, 2025 3:30-5:00 pm CT (May 8, 2025, 6:30-8:00 am AEST)
+  Description: This meeting will showcase a variety of Gen3 systems to highlight both the types of data these systems include and also details of how users for each system analyze their data.  Analysis solutions may include Gen3 workspaces, local download, or export to third-party analysis systems.  Review the Full Agenda for the detailed list of speakers and topics.
+  Youtube: zRAv8U5fMYk
+  Slides: Gen3 Forum May 2025 - Data Analysis.pdf
+  Agenda2: gen3forum_20250507
 - Title: Gen3 Development Roadmap for 2025
   Date: February 26, 2025 3:30-5:00 pm CT (February 27, 2025, 8:30-10:00 am AEDT)
   Description: We will introduce the 2025 Gen3 Development Roadmap, which will include known current priorities.  The first portion of the meeting will include a presentation by Robert Grossman, Director of CTDS.  The second portion will include an organized panel discussion by the Gen3 steering committee on the roadmap.  Please attend to provide your feedback and help prioritize roadmap items.
