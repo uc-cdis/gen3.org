@@ -31,7 +31,7 @@ g3Teaser:
 </section>
 
 
-<section class="g3-bg__white">
+<section id="csoc" class="g3-bg__white">
   <div class="g3-outer-wrapper g3-flex-content g3-flex-content__reverse">
     <div class="g3-col__50 g3-flex-content_align-self-flex-end g3-space__margin-sm-top-bottom g3-space__wrapper-gap-right" style="padding-top: 175px;">
       <a>
@@ -40,8 +40,11 @@ g3Teaser:
     </div>
     <div class="g3-space__padding-lg-top g3-space__wrapper-gap-right g3-col__45" style="padding-bottom: 0px" >
       <div class="g3-space__wrapper-gap-left">
-        <h1 class="g3-space__margin-sm-bottom">
-          {{< param "g3Teaser.title1" >}}
+        <!-- Update the heading with padding below -->
+        <h1 style="font-size: 2em; padding-bottom: 20px; margin: 0;">
+          <a href="#csoc" style="font-size: 1em; font-weight: bold; text-decoration: none; color: inherit;">
+            {{< param "g3Teaser.title1" >}}
+          </a>
         </h1>
         <p class="g3-space__margin-sm-bottom introduction">
           {{< param "g3Teaser.detail1" >}}
