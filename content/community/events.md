@@ -9,7 +9,12 @@ g3Teaser:
   detail: About every other month, there is a virtual Gen3 Forum for the community of Gen3 developers, operators, sponsors and users of Gen3 data platforms. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 core development team.
 
 g3Upcoming:
-
+- Title: Gen3 Deployment Options
+  Date: July 2, 2025 4:00-5:15 pm CT (July 3, 2025, 7:00-8:15 am AEST)
+  Description: Gen3 is cloud agnostic and can be deployed on a variety of infrastructures.  Many of our talks and much of our documentation focuses on AWS, but in this session we will highlight other solutions including on-prem, local on a laptop, and other cloud providers such as GCP and Azure.  Please come with your questions for our panel of speakers.
+  Image: /figs/gen3_new_logo.png
+  Agenda3: gen3forum_20250702
+  Register2: https://uchicago.zoom.us/meeting/register/4YkIGBWXRH6JJNPLvlhtWA
 
 
 
