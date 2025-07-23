@@ -72,7 +72,7 @@ Other secure and compliant Gen3 member systems (including cloud-based systems) c
 
 
 * Email:
-	* General Inquiries: <cdis@uchicago.edu>.
-	* Technical Support: <support@datacommons.io>.
+	* General Inquiries: <ctds@uchicago.edu>.
+	* Technical Support: <support@gen3.org>.
 
 * * *

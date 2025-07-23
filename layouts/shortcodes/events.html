@@ -1,6 +1,6 @@
 {{ with .Get 0 }}
     {{ range $.Page.Param . }}
-    <section class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
+    <section id="{{ replace .Title " " "-" | lower }}" class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
         <div class="g3-inner-wrapper g3-flex-content">
             <div class="g3-col__50">
                 <div class="g3-space__margin-sm-right">
@@ -12,34 +12,46 @@
                         src="https://www.youtube.com/embed/{{ .Youtube }}" allowfullscreen frameborder="0">
                         </iframe>
                     {{ end }}
-
                 </div>
             </div>
             <div class="g3-col__50">
                 <div class="g3-space__margin-sm-left g3-space__margin-sm-right">
                     <p>{{ .Date }}</p>
-                    <h1>{{ .Title }}</h1>
-                    <p>{{ .Description  }}</p>
+                    <!-- Make the title a clickable link to its own section -->
+                    <h1 style="font-size: 2em; padding: 0; margin: 0;">
+                        <a href="#{{ replace .Title " " "-" | lower }}" style="font-size: 1em;font-weight:bold; text-decoration: none; color: inherit;">
+                            {{ .Title }}
+                        </a>
+                    </h1>
+                    <p>{{ .Description | safeHTML }}</p>
+                    {{ if .Description2 }}
+                        <br>
+                        <p>{{ .Description2 }}</p>
+                    {{ end }}
                     <ul>
-                    {{ if .Link }}
+                        {{ if .Link }}
                             <li>30 Mins Presentation</li>
                             <li>30 Mins Q&A (Please post your questions in the zoom chat and we will answer in this time frame)</li>
-                    {{ end }}
-                    {{ if .Slides }}
+                        {{ end }}
+                        {{ if .Slides }}
                             <li>Slides: <a href="{{ .Slides }}">PDF</a></li>
-                    {{ end }}
-                    {{ if .Youtube }}
-                        <li>Video: <a href="https://www.youtube.com/watch?v={{ .Youtube }}">YouTube</a></li>
-                    {{ end }}
-                    {{ if .Playlist }}
-                        <li>Video: <a href="{{ .Playlist }}">YouTube</a></li>
-                    {{ end }}
-                    {{ if .Agenda }}
-                        <li>Video: <a href="{{ .Agenda }}">Agenda with links to specific sessions</a></li>
-                    {{ end }}
-                    {{ if .Agenda2 }}
-                        <li> <a href="{{ .Agenda2 }}">See full agenda here</a></li>
-                    {{ end }}
+                        {{ end }}
+                        {{ if .Youtube }}
+                            <li>Video: <a href="https://www.youtube.com/watch?v={{ .Youtube }}">YouTube</a></li>
+                        {{ end }}
+                        {{ if .Playlist }}
+                            <li>Video: <a href="{{ .Playlist }}">YouTube</a></li>
+                        {{ end }}
+                        {{ if .Agenda }}
+                            <li>Video: <a href="{{ .Agenda }}">Agenda with links to specific sessions</a></li>
+                        {{ end }}
+                        {{ if .Agenda2 }}
+                            <li><a href="{{ .Agenda2 }}">See full agenda here</a></li>
+                        {{ end }}
+                        {{ if .Agenda3 }}
+                            <a class="g3-button--secondary g3-button" href="{{ .Register2 }}">Register</a>
+                            <a class="g3-button--secondary g3-button" href="{{ .Agenda3 }}">Full Agenda</a>
+                        {{ end }}
                     </ul>
                     {{ if .Register}}
                         <a class="g3-button--secondary g3-button" href="{{ .Register }}">Register</a>
@@ -47,7 +59,6 @@
                 </div>
             </div>
         </div>
-
     </section>
     {{ end }}
 {{ end }}

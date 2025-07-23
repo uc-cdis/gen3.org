@@ -5,6 +5,7 @@ linktitle: /resources/user
 layout: withtoc
 menuname: userMenu
 ---
+
 {{% markdownwrapper %}}
 
 # Download and Upload Files Using the Gen3-client
@@ -425,8 +426,8 @@ Before the files are mapped to a project's node in the data model, the files can
 
 For example, running [this script](https://github.com/uc-cdis/planx-bioinfo-tools/blob/master/submission_tool/delete_unmapped_files.py) will delete all the user's unmapped files from indexd and from the storage location using the fence endpoint:
 ```
-~> python delete_uploaded_files.py -a https://nci-crdc-demo.datacommons.io/ -u user@datacommons.org -c ~/Downloads/demo-credentials.json
-Found the following guids for uploader user@datacommons.io: ['3d275025-8b7b-4f84-9165-72a8a174d642', '5bcd2a59-8225-44a1-9562-f74c324d8dec', '6cf194f1-c68e-4976-8ca4-a0ce9701a9f3', '956890a9-b8a7-4abd-b8f7-dd0020aaf562', '9bd009b6-e518-4fe5-9056-2b5cba163ca3']
+~> python delete_uploaded_files.py -a https://nci-crdc-demo.datacommons.io/ -u user@gen3.org -c ~/Downloads/demo-credentials.json
+Found the following guids for uploader user@gen3.org: ['3d275025-8b7b-4f84-9165-72a8a174d642', '5bcd2a59-8225-44a1-9562-f74c324d8dec', '6cf194f1-c68e-4976-8ca4-a0ce9701a9f3', '956890a9-b8a7-4abd-b8f7-dd0020aaf562', '9bd009b6-e518-4fe5-9056-2b5cba163ca3']
 Successfully deleted GUID 3d275025-8b7b-4f84-9165-72a8a174d642
 Successfully deleted GUID 5bcd2a59-8225-44a1-9562-f74c324d8dec
 Successfully deleted GUID 6cf194f1-c68e-4976-8ca4-a0ce9701a9f3
@@ -661,3 +662,5 @@ So, by adding the directory containing the gen3-client program to your PATH vari
 Most programs require some sort of user input to run properly. Some programs will prompt you for input after execution, while other programs are sent this input during execution as "flags" (AKA "arguments" or "options"). The gen3-client uses the latter method of sending user input as command arguments during program execution.
 
 For example, when configuring a profile with the client, the user must specify the `configure` option and also specify the profile name, API endpoint, and credentials file by adding the flags `--profile`, `--apiendpoint` and `--cred` to the end of the command (see [configuring a profile section](#2-configure-a-profile-with-credentials) above for specific examples).
+
+{{% /markdownwrapper %}}

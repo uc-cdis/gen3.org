@@ -9,45 +9,57 @@ g3Teaser:
   detail: About every other month, there is a virtual Gen3 Forum for the community of Gen3 developers, operators, sponsors and users of Gen3 data platforms. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 core development team.
 
 g3Upcoming:
+- Title: Gen3 Deployment Options
+  Date: July 2, 2025 4:00-5:15 pm CT (July 3, 2025, 7:00-8:15 am AEST)
+  Description: Gen3 is cloud agnostic and can be deployed on a variety of infrastructures.  Many of our talks and much of our documentation focuses on AWS, but in this session we will highlight other solutions including on-prem, local on a laptop, and other cloud providers such as GCP and Azure.  Please come with your questions for our panel of speakers.
+  Image: /figs/gen3_new_logo.png
+  Agenda3: gen3forum_20250702
+  Register2: https://uchicago.zoom.us/meeting/register/4YkIGBWXRH6JJNPLvlhtWA
 
 
 
-g3Past:
-
-- Title: Data Modeling in Gen3 Data Commons
-  Date: July 6, 2023, 3:30-5:00 pm CDT; July 7, 2023, 6:30-8:00 am AEST
-  Description: Gen3 supports a flexible graph-based data model, which can be customized for a wide variety of projects and use cases.  At this community event we will hear from several data commons operators on how they have created their dictionaries and about any tools or processes they use for updating and configuring them.  
-  Agenda2: /community/events/gen3forum_20230706
-  Youtube: xjFUYa4C_hw
-  Slides:  Gen3 Forum July 6 2023 - Data Models.pdf
-
-
-- Title: How to Build a Data Mesh Using Gen3
-  Date: May 1, 2023, 3:30-5:00 pm CST; May 2, 2023, 6:30-8:00 am AEST
-  Description:  "Data meshes or ecosystems consist of an interconnected network of data resources (e.g. data commons, repositories, or knowledgebases) that are integrated by utilizing a common set of software services. Each component data resource may have many of its own systems and separate governance, but they are all connected via framework or mesh services such as authentication and authorization, data indexing, and metadata services. In this Gen3 community event we'll describe the Gen3 Mesh Services, and you will hear from a few projects and applications that are utilizing the Gen3 mesh functionality. As always we will leave plenty of time for questions and discussion."
-  Youtube: K5ld3V5AslE
-  Slides: Gen3 Forum May 1 2023 - Data Meshes.pdf
-
-- Title: Gen3 Forum Office Hours - Helm Charts
-  Date: April 5, 2023, 4:00-5:00 pm CST; April 6, 2023, 7:00-8:00 am AEST
-  Description:  "Join us for an informal session where a platform engineer from the Center for Translational Data Science (CTDS) will be on hand to answer your questions about using Helm Charts for setting up a Gen3 Data Commons."
-  Youtube: y8ZFiQYzkg8
-  Slides:
-
-
-- Title: How to Set Up a Gen3 Data Commons Using Helm Charts
-  Date: March 1, 2023, 3:30-5:00 pm CST; March 2, 2023, 8:30-10:00 am AEST
-  Description:  "We will take you through the current best practices for setting up and configuring your own Gen3 Data Commons in multiple clouds by using Helm Charts. Helm is a tool that streamlines installing and managing Kubernetes applications, which is a system for automating deployment, scaling, and management of containerized applications. The use of Helm will greatly simplify standing up, configuring, and maintaining your own Gen3 Data Commons. This is the first of a series of community events through 2023."
-  Youtube: 0WCKOJtj3RM
-  Slides: Gen3 Forum March 1 2023 - Helm Charts.pdf
-
-- Title: Gen3 Community Forum 2022
-  Date: Oct 10-12, 2022 US; Oct 11-13, 2022 AU
-  Description:  "The Gen3 Community Forum consists of those developing and operating Gen3 data commons and data meshes, those considering developing Gen3 data commons and meshes, and other stakeholders involved with the Gen3 community. The four aims of the Forum are: to share knowledge about Gen3, its architecture, and the Gen3 roadmaps and priorities; to strengthen the connection between the Gen3 core team and those developing, operating and using Gen3 platforms; to design a set of ongoing community engagement activities; and to discuss and agree on key shared development priorities between the Gen3 core team and the Gen3 community. The virtual community forum is co-hosted by the University of Chicago and the Australian BioCommons."
-  Playlist: https://www.youtube.com/playlist?list=PLZtKC_lqcLhKfSthym1ZKcDKf1n0wLzuH
-  Image: /figs/community_forum_2022.png
-  Agenda: /community/events/gen3forum_202210_post
-
+g3past:
+- Title: Data Analysis in Gen3 Systems
+  Date: May 7, 2025 3:30-5:00 pm CT (May 8, 2025, 6:30-8:00 am AEST)
+  Description: This meeting will showcase a variety of Gen3 systems to highlight both the types of data these systems include and also details of how users for each system analyze their data.  Analysis solutions may include Gen3 workspaces, local download, or export to third-party analysis systems.  Review the Full Agenda for the detailed list of speakers and topics.
+  Youtube: zRAv8U5fMYk
+  Slides: Gen3 Forum May 2025 - Data Analysis.pdf
+  Agenda2: gen3forum_20250507
+- Title: Gen3 Development Roadmap for 2025
+  Date: February 26, 2025 3:30-5:00 pm CT (February 27, 2025, 8:30-10:00 am AEDT)
+  Description: We will introduce the 2025 Gen3 Development Roadmap, which will include known current priorities.  The first portion of the meeting will include a presentation by Robert Grossman, Director of CTDS.  The second portion will include an organized panel discussion by the Gen3 steering committee on the roadmap.  Please attend to provide your feedback and help prioritize roadmap items.
+  Youtube: dh7FWSqx-1w
+  Slides: Gen3 Forum Feb 26 2025 - Gen3 Roadmap.pdf
+- Title: Testing code with the new Gen3 testing framework
+  Date: November 6, 3:30-5:00 pm CDT; November 7, 2024, 8:30-10:00 am AEDT
+  Description: Gen3 values code contributions from our open-source community. However, the continuous integration testing available within our GitHub repositories has generally not been available to contributors external to CTDS.  This has made it difficult for contributors to assess their code changes and get them merged into the Gen3 codebase.  We will discuss in the forum the new Gen3 testing framework, which makes these tests available to anyone.  We will also discuss how contributors can create and contribute their own tests as part of their pull requests.  Speakers will include Peter Vassilatos, Director of Engineering, and Hara Juvvala, Principal Software Engineer in Test, both from the Center for Translational Data Science at the University of Chicago.
+  Youtube: Ea3tkR_D8VM
+  Slides: Gen3 Forum November 2024 - Testing framework.pdf
+- Title: GA4GH standards in Gen3
+  Date: September 18, 4:30-5:30 pm CDT; September 19, 2024, 7:30-8:30am AEST
+  Description: GA4GH is an international standards setting body for Genomics and Health. Gen3 aims to follow GA4GH standards whenever possible in order to improve our interoperability with other systems and to simplify the use of a Gen3 Data Commons. Join us at our next community forum where we will provide an overview of our GA4GH compliant services and share plans for the future. Speakers will include Robert Grossman and Michael Lukowski from the University of Chicago, Center for Translational Data Science and Kyle Ellrott from the Oregon Health and Science University.
+  Youtube: 98CpBDLYi_Q
+  Slides: Gen3 Forum September 2024 - GA4GH.pdf
+- Title: Data submission - Perspectives and solutions from different Gen3 systems
+  Date: July 10, 3:30-5:00 pm CDT; July 11, 2024, 6:30-8:00am am AEST
+  Description: Gen3 data submission can be complex and will vary from project to project.  The specifics will depend on the data model, data type, use of graph-model and/or metadata service, centrally managed vs user driven, and other project-specific requirements.  At this event we will hear from a range of Gen3 operators on how their projects approach the topic of data submission and how they have managed this process.
+  Youtube: o_TmbU9thuY
+  Slides: Gen3 Forum July 2024 - Data Submission.pdf
+- Title: Gen3.2 - How to build a Gen3 data portal using the new frontend framework
+  Date: May 1, 3:30-5:00 pm CDT; May 2, 2024, 6:30-8:00am am AEST
+  Description: Gen3 has released a new frontend for the data portal. In this month's forum, we will walk you through the new features and capabilities and demonstrate how to configure the new frontend.  The first portion of the meeting will be led by CTDS Frontend and Visualization Manager, Craig Barnes.  Later we will hear from a team of Gen3 operators at the Oregon Health & Science University where they will share their experience of using the updated frontend.
+  Youtube: 6dcEUmhB1kk
+  Slides: Gen3 Forum May 2024 - Gen3.2.pdf
+- Title: How to contribute to the Gen3 source code
+  Date: March 20, 3:30-5:00 pm CDT; March 21, 2024, 7:30-9:00 am AEDT
+  Description: Gen3 is an open-source project and benefits from active community contributions.  In this month's forum we will share an updated process for submitting external contributions to the Gen3 source code.  By following these guidelines developers will be able to understand submission requirements and it will enable the maintaining organization to efficiently review proposed contributions.
+  Youtube: St04iaglLck
+  Slides: Gen3 Forum March 2024 - Gen3 Open Source.pdf
+- Title: Gen3 Development Roadmap
+  Date: January 24, 3:30-5:00 pm CT; January 25, 2024, 8:30-10:00 am AEDT
+  Description: We will introduce the 2024 Gen3 Development Roadmap, which will include known current priorities.  The first portion of the meeting will include a presentation by Robert Grossman, Director of CTDS.  The second portion will include an organized panel discussion by the Gen3 steering committee on the roadmap.  Please attend to provide your feedback and help prioritize roadmap items.
+  Youtube: RWcB1hLPJfA
+  Slides: Gen3 Forum Jan 24 2024 - Gen3 Roadmap.pdf
 
 ---
 
@@ -70,18 +82,25 @@ g3Past:
   </div>
 </section>
 
+<!--
 <section class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
     <div class="g3-inner-wrapper">
         <h2>Upcoming Events</h2>
     </div>
 </section>
+-->
 
 {{< events "g3Upcoming" >}}
 
 <section class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
     <div class="g3-inner-wrapper">
-        <h2>Previous Events</h2>
     </div>
 </section>
 
 {{< events "g3past" >}}
+
+
+<section class="g3-space__padding-sm-top g3-space__padding-sm-bottom">
+    <div class="g3-inner-wrapper">
+        <a href="/community/events_archived"><h2>See Gen3 Events Archive</h2></a>
+</section>

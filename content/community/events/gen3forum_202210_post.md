@@ -215,3 +215,5 @@ layout: single
       <a href="https://youtu.be/jYCKC1R_evE?t=1983">&#x1F3A5;</a></td>
   </tr>
 </table>
+
+{{% /agenda %}}

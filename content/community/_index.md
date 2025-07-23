@@ -27,10 +27,10 @@ g3DataFeature:
     title: Gen3 Projects
     subtitle: Gen3 is ever changing. Check out our current projects.
     button:
-      link: https://stats.gen3.org
+      link: /powered-by-gen3
   f4:
-    title: Gen3 Forum
-    subtitle: Discuss use and development of the Gen3 software suite. Find different topics and answers for beginner through advanced stages.
+    title: Discussion Board
+    subtitle: Discuss use and development of the Gen3 software suite. Find different topics and answers.
     button:
       link: https://forums.gen3.org
   f5:
@@ -39,27 +39,37 @@ g3DataFeature:
     button:
       link: https://www.youtube.com/channel/UCMCwQy4EDd1BaskzZgIOsNQ/featured
   f6:
-    title: Open Source
-    subtitle: Visit CTDS on GitHub or submit an open Pull Request to the code base.
+    title: Source Code
+    subtitle: View repositories for all Gen3 services on GitHub.
     button:
-      link: https://gen3.org/resources/developer/dev-introduction/#pull-requests-prs
+      link: https://github.com/uc-cdis
   f7:
     title: Gen3 Publications
     subtitle: Follow the discoveries being made by Gen3 researchers.
     button:
-      link: https://ctds.uchicago.edu/publications
+      link: /gen3refs/
   f8:
-    title: Gen3 Community Events
+    title: Community Events
     subtitle: View information about and register for upcoming Gen3 developer community events.
     button:
-      link: https://gen3.org/community/events/
+      link: /community/events/
+  f9:
+    title: Release Notes
+    subtitle: Learn what improvements were found in the latest releases.
+    button:
+      link: https://github.com/uc-cdis/cdis-manifest/tree/master/releases
+  f10:
+    title: Contribute to Gen3
+    subtitle: Learn how to contribute code improvements to Gen3.
+    button:
+      link: https://docs.gen3.org/gen3-resources/developer-guide/contribute/
 g3Entrance:
   e1:
     title: Frequently Asked Questions
     detail: Review the most common questions and answers
     button:
       caption: FAQ
-      link: https://gen3.org/resources/faq/
+      link: /resources/faq/
   e2:
     title: Get Started Easily
     detail: View tutorials on using Gen3, including setup and configuration.
@@ -106,7 +116,10 @@ g3Entrance:
             Read further
         </a>
       </div>
-      <div class="g3-flex-content g3-space__margin-md-top-bottom">
+      <div class="g3-flex-content g3-space__margin-md-top">
+              <h2>Gen3 Community</h2>
+      </div>
+      <div class="g3-flex-content g3-space__margin-sm-top-bottom">
         <div class="g3-space__margin-sm-left-right g3-col__33 g3-box">
           <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f1.title" >}}</h3>
           <p>
@@ -115,6 +128,18 @@ g3Entrance:
           <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
           <div class="g3-flex-content g3-flex-content_center">
             <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f1.button.link" >}}" ">
+              Sign up
+            </a>
+          </div>
+        </div>
+        <div class="g3-space__margin-sm-left-right g3-col__33 g3-box">
+          <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f4.title" >}}</h3>
+          <p>
+            {{< param "g3DataFeature.f4.subTitle" >}}
+          </p>
+          <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
+          <div class="g3-flex-content g3-flex-content_center">
+            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f4.button.link" >}}" ">
               Sign up
             </a>
           </div>
@@ -132,39 +157,63 @@ g3Entrance:
           </div>
         </div>
         <div class="g3-space__margin-sm-left-right g3-col__33 g3-box">
-          <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f3.title" >}}</h3>
+          <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f8.title" >}}</h3>
           <p>
-            {{< param "g3DataFeature.f3.subTitle" >}}
+            {{< param "g3DataFeature.f8.subTitle" >}}
           </p>
           <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
           <div class="g3-flex-content g3-flex-content_center">
-            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f3.button.link" >}}" ">
+            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f8.button.link" >}}" ">
               Learn More
             </a>
           </div>
         </div>
       </div>
-      <div class="g3-flex-content g3-flex-content__col">
-      <div class="g3-flex-content g3-flex-content__col">
-      <div class="g3-flex-content g3-flex-content__col g3-space__margin-sm-left-right g3-box">
-        <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f4.title" >}}</h3>
-        <p>
-          {{< param "g3DataFeature.f4.subTitle" >}}
-        </p>
-        <a class="g3-button g3-button--tertiary g3-flex-content_alien-self-flex-end" href="{{< param "g3DataFeature.f4.button.link" >}}" ">
-            Explore
-        </a>
+      <div class="g3-flex-content g3-space__margin-md-top">
+              <h2>Gen3 on GitHub</h2>
       </div>
-      <div class="g3-flex-content g3-flex-content__col g3-space__margin-sm-left-right g3-box">
-        <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f8.title" >}}</h3>
-        <p>
-          {{< param "g3DataFeature.f8.subTitle" >}}
-        </p>
-        <a class="g3-button g3-button--tertiary g3-flex-content_alien-self-flex-end" href="{{< param "g3DataFeature.f8.button.link" >}}" ">
-            Explore Events
-        </a>
+      <div class="g3-flex-content g3-space__margin-sm-top-bottom">
+        <div class="g3-space__margin-sm-left-right g3-col__33 g3-box">
+          <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f6.title" >}}</h3>
+          <p>
+            {{< param "g3DataFeature.f6.subTitle" >}}
+          </p>
+          <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
+          <div class="g3-flex-content g3-flex-content_center">
+            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f6.button.link" >}}" ">
+              Learn More
+            </a>
+          </div>
+        </div>
+        <div class="g3-space__margin-sm-left-right g3-col__33 g3-box">
+          <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f9.title" >}}</h3>
+          <p>
+            {{< param "g3DataFeature.f9.subTitle" >}}
+          </p>
+          <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
+          <div class="g3-flex-content g3-flex-content_center">
+            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f9.button.link" >}}" ">
+              Learn More
+            </a>
+          </div>
+        </div>
+        <div class="g3-space__margin-sm-left-right g3-col__33 g3-box">
+          <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f10.title" >}}</h3>
+          <p>
+            {{< param "g3DataFeature.f10.subTitle" >}}
+          </p>
+          <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
+          <div class="g3-flex-content g3-flex-content_center">
+            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f10.button.link" >}}" ">
+              Learn More
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="g3-flex-content g3-space__margin-md-top-bottom">
+      <div class="g3-flex-content g3-space__margin-md-top">
+              <h2>Learn More about Gen3</h2>
+      </div>
+      <div class="g3-flex-content g3-space__margin-sm-top-bottom">
         <div class="g3-space__margin-sm-left-right g3-col__33 g3-box">
           <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f5.title" >}}</h3>
           <p>
@@ -178,14 +227,14 @@ g3Entrance:
           </div>
         </div>
         <div class="g3-space__margin-sm-left-right g3-col__33 g3-box">
-          <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f6.title" >}}</h3>
+          <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f3.title" >}}</h3>
           <p>
-            {{< param "g3DataFeature.f6.subTitle" >}}
+            {{< param "g3DataFeature.f3.subTitle" >}}
           </p>
           <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
           <div class="g3-flex-content g3-flex-content_center">
-            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f6.button.link" >}}" ">
-              Contribute
+            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f3.button.link" >}}" ">
+              Learn More
             </a>
           </div>
         </div>

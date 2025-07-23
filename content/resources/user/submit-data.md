@@ -6,6 +6,7 @@ layout: withtoc
 menuname: userMenu
 ---
 {{% markdownwrapper %}}
+
 # Submitting Data Files and Linking Metadata in a Gen3 Data Commons
 * * *
 
@@ -67,9 +68,8 @@ https://gen3.datacommons.io/example-training/search?node_type=core_metadata_coll
 ## 2. Upload Data Files to Object Storage
 * * *
 
-Data files such as spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., are uploaded to object storage with the [gen3-client command-line tool](/resources/user/gen3-client).
-
- >__Note:__ if your data files are already located in cloud storage, such as an AWS or GCS bucket, please see [this page](https://gen3.org/resources/user/submit-data/sower) on how to make these files available in a Gen3 data commons.
+Adding files to your new Gen3 project can be done using one of two methods. The gen3-client tool (shown in steps below) offers users an easy way to upload files to Amazon s3 buckets while simultaneously indexing the files and assigning them each a unique GUID or object_id. Alternatively, if you are comfortable scripting and require something other than the default AWS bucket used by the gen3-client or your data files are already uploaded to their storage location in the cloud, we offer a [command line based file submission workflow](/resources/user/cli-submission). This method offers several other benefits including the possibility of using multiple cloud resources and submitting multiple batches of data set files at once.
+The following documentation will focus on using the [gen3-client](/resources/user/gen3-client) to upload data files, including spreadsheets, sequencing data (BAM, FASTQ), assay results, images, PDFs, etc., to Amazon s3 cloud storage.
 
 1. Download the latest [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases/latest) for your operating system.
 2. Configure a profile with credentials downloaded from your Profile:
@@ -293,3 +293,5 @@ For example, the following link would download a single TSV containing all the `
 https://gen3.datacommons.io/api/v0/submission/example/training/export/?node_label=core_metadata_collection&format=tsv
 
 The links in the downloaded TSV can be updated by filling in the submitter_ids of the corresponding parent records, saving, and re-submitting the file to the data portal website using 'Upload File' as done in [step 4](#more-about-specifying-required-links).
+
+{{% /markdownwrapper %}}

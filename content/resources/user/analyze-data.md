@@ -5,7 +5,9 @@ linktitle: /resources/user
 layout: withtoc
 menuname: userMenu
 ---
+
 {{% markdownwrapper %}}
+
 # Data Analysis in a Gen3 Data Commons
 * * *
 
@@ -13,7 +15,7 @@ The Gen3 platform for creating data commons co-locates data management with anal
 
 * [1. Launch Workspace](#1-launch-workspace)
 * [2. Getting Files into the Gen3 Workspace](#2-getting-files-into-the-gen3-workspace)
-* [3. Working with the proxy and whitelists](#3-working-with-the-proxy-and-whitelists)
+* [3. Working with the proxy and allow lists](#3-working-with-the-proxy-and-allow-lists)
 * [4. Using the Gen3 Python SDK](#4-using-the-gen3-python-sdk)
 * [5. Jupyter Notebook Demos](#5-jupyter-notebook-demos)
 
@@ -131,7 +133,7 @@ GSM1558854_Sample40_3.CEL.gz  4.20 MiB / 4.20 MiB [====================....
 jovyan@jupyter-user:~$  mv *.gz files
 ```
 
-## 3. Working with the proxy and whitelists
+## 3. Working with the proxy and allow lists
 * * *
 
 <h4> Working with the Proxy </h4>
@@ -149,9 +151,9 @@ Alternatively, if you have a different service or a tool that needs to call out,
 https_proxy=https://cloud-proxy.internal.io:3128 aws s3 ls s3://gen3-data/ --profile <profilename>
 ```
 
-<h4> Whitelists </h4>
+<h4> Allow lists </h4>
 
-Additionally, to aid Gen3 Commons security, the installation of tools from outside resources is managed through a whitelist. If you have problems installing a tool you need for your work, contact <support@datacommons.io> and with a list of any sites you might wish to install tools from. After passing a security review, these can be added to the whitelist to facilitate access.
+Additionally, to aid Gen3 Commons security, the installation of tools from outside resources is managed through a whitelist. If you have problems installing a tool you need for your work, contact <support@gen3.org> and with a list of any sites you might wish to install tools from. After passing a security review, these can be added to the whitelist to facilitate access.
 
 
 ## 4. Using the Gen3 Python SDK
@@ -264,3 +266,5 @@ Below are three tutorial Jupyter Notebooks that demonstrate various SDK function
 3. Download data files and metadata using the gen3-client and the Gen3 SDK, respectively, and bring them into the workspace. Run gene expression analysis and statistical analysis on the data files and metadata, respectively, and plot the outcome in different scenarios. This Jupyter [Data Analysis Notebook](notebook3_gen3datacommonsio.html) uses data hosted on the generic Data Commons [gen3.datacommons.io](gen3.datacommons.io). Upload this notebook as an [.ipynb file](notebook3_gen3datacommonsio.ipynb) to the workspace of the Generic Data Commons and start your analysis.  Note, that bringing in files into the workspace as explained in this notebook can be also achieved on selected Data Commons by clicking the "Export to Workspace" button on the Exploration Page; please also note, that once files are exported from the Exploration page, users do not need to authenticate anymore in the workspace.
 
 When finished, please, shut down the workspace server by clicking the "Terminate Workspace" button.
+
+{{% /markdownwrapper %}}
