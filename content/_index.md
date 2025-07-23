@@ -5,7 +5,7 @@ linktitle: about
 date: 2018-09-04T22:16:21-05:00
 g3Teaser:
   fig: figs/kv.svg
-  title: Gen3 is a data platform for building data commons and data meshes. 
+  title: Gen3 is a data platform for building data commons and data meshes.
   detail: The Gen3 platform consists of open-source software services that support the emergence of healthy data ecosystems by enabling the interoperation and creation of cloud-based data resources, including data commons and analysis workspaces. Gen3 aims to accelerate and democratize the process of scientific discovery by making it easy to manage, analyze, harmonize, and share large and complex datasets in the cloud.
   button1:
     caption: Experience Demo
@@ -17,7 +17,7 @@ g3Teaser:
 g3Feature:
   f1:
     title: Host, Manage, and Share your Data
-    detail: Gen3 empowers you to host, manage, and share data with researchers, developers, and health organizations. The Gen3 platform supports ingestion of virtual any data format, including both large objects and clinical and phenotype metadata. With Gen3, you can receive and quality control data by a customizable data model and generate globally unique IDs for data objects.
+    detail: Gen3 empowers you to host, manage, and share data with researchers, developers, and health organizations. The Gen3 platform supports ingestion of virtually any data format, including both large objects and clinical and phenotype metadata. With Gen3, you can receive and quality control data by a customizable data model and generate globally unique IDs for data objects.
   f2:
     title: Explore, Export, and Analyze Data in Workspaces
     detail: Explore data on our Data Commons using built-in faceted search tools, send custom queries, create and export subject-level data cohorts, or collaboratively analyze the selected data in a secure cloud environment.
