@@ -10,7 +10,7 @@ RUN set -x && \
     apt-get install curl -y git wget ca-certificates
 
 RUN set -x && \
-    curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_amd64.deb -o hugo_extended.deb && \
+    curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb -o hugo_extended.deb && \
     apt install ./hugo_extended.deb && \
     hugo version
 
