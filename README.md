@@ -6,7 +6,7 @@ The Gen3.org website for describing the Gen3 platform.
 
 ```bash
 # Install hugo
-brew install hugo
+brew install hugo asciidoctor
 # Build site and start Hugo server locally
 hugo server -D -b localhost
 ```

@@ -4,7 +4,7 @@ title: Gen3 Features
 linktitle: /resources/gen3-features
 layout: withtoc
 menuname: featuresMenu
-date: 2023-06-280T15:20:00-6:00
+date: 2023-06-28T15:20:00-06:00
 ---
 
 # A list of Gen3 features
