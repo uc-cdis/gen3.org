@@ -10,7 +10,7 @@ g3Teaser:
 
 g3Upcoming:
 - Title: Understanding ETL and ETL mapping to power the Gen3 Exploration Page
-  Date: September 3, 2025 4:00-5:30 pm CT (Septemer 4, 2025, 6:30-8:00 am AEST)
+  Date: September 3, 2025 4:00-5:30 pm CT (September 4, 2025, 6:30-8:00 am AEST)
   Description: The Gen3 Exploration page is where users build cohorts and identify files of interest to their research goals. ETL mapping allows you to customize how your data can be searched on this page. Different mapping strategies will produce different search options on the Exploration page. Dan Biber, of the Gen3 User Services team, will explain how to think about ETL mapping in order to create the elasticsearch indices necessary for Guppy to be able to provide your desired search capabilities in the frontend. He will demonstrate the microservice Tube, which runs ETL, and provide several examples using different use cases for how one may want the the data to be represented and searchable in the Exploration Page.
   Image: /figs/gen3_new_logo.png
   Register: https://uchicago.zoom.us/meeting/register/aWz-bkR8RQWHKwjA8VrN1A
