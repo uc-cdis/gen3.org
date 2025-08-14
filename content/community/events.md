@@ -9,16 +9,20 @@ g3Teaser:
   detail: About every other month, there is a virtual Gen3 Forum for the community of Gen3 developers, operators, sponsors and users of Gen3 data platforms. These events aim to share information about how to set up new Gen3 instances, build a community that can help each other, and create clear paths for support from the Gen3 core development team.
 
 g3Upcoming:
-- Title: Gen3 Deployment Options
-  Date: July 2, 2025 4:00-5:15 pm CT (July 3, 2025, 7:00-8:15 am AEST)
-  Description: Gen3 is cloud agnostic and can be deployed on a variety of infrastructures.  Many of our talks and much of our documentation focuses on AWS, but in this session we will highlight other solutions including on-prem, local on a laptop, and other cloud providers such as GCP and Azure.  Please come with your questions for our panel of speakers.
+- Title: Understanding ETL and ETL mapping to power the Gen3 Exploration Page
+  Date: September 3, 2025 4:00-5:30 pm CT (September 4, 2025, 6:30-8:00 am AEST)
+  Description: The Gen3 Exploration page is where users build cohorts and identify files of interest to their research goals. ETL mapping allows you to customize how your data can be searched on this page. Different mapping strategies will produce different search options on the Exploration page. Dan Biber, of the Gen3 User Services team, will explain how to think about ETL mapping in order to create the elasticsearch indices necessary for Guppy to be able to provide your desired search capabilities in the frontend. He will demonstrate the microservice Tube, which runs ETL, and provide several examples using different use cases for how one may want the the data to be represented and searchable in the Exploration Page.
   Image: /figs/gen3_new_logo.png
-  Agenda3: gen3forum_20250702
-  Register2: https://uchicago.zoom.us/meeting/register/4YkIGBWXRH6JJNPLvlhtWA
+  Register: https://uchicago.zoom.us/meeting/register/aWz-bkR8RQWHKwjA8VrN1A
 
 
 
 g3past:
+- Title: Gen3 Deployment Options
+  Date: July 2, 2025 4:00-5:15 pm CT (July 3, 2025, 7:00-8:15 am AEST)
+  Description: Gen3 is cloud agnostic and can be deployed on a variety of infrastructures.  Many of our talks and much of our documentation focuses on AWS, but in this session we will highlight other solutions including on-prem, local on a laptop, and other cloud providers such as GCP and Azure.  Please come with your questions for our panel of speakers.
+  Image: /figs/July_2025_forum.png
+  Slides: Gen3 Forum July 2025 - Deployment Options.pdf
 - Title: Data Analysis in Gen3 Systems
   Date: May 7, 2025 3:30-5:00 pm CT (May 8, 2025, 6:30-8:00 am AEST)
   Description: This meeting will showcase a variety of Gen3 systems to highlight both the types of data these systems include and also details of how users for each system analyze their data.  Analysis solutions may include Gen3 workspaces, local download, or export to third-party analysis systems.  Review the Full Agenda for the detailed list of speakers and topics.
