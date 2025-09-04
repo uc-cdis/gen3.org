@@ -1,0 +1,40 @@
+mappings:
+  - name: file_manifest
+    doc_type: subject
+    type: aggregator
+    root: subject
+    props:
+      - name: submitter_id
+    nested_props:
+      - name: demographic
+        path: demographic
+        props:
+        - name: race
+        - name: age
+      - name: sample
+        path: sample
+        props:
+        - name: collection_id
+        - name: sample_type
+    joining_props:
+      - index: file
+        join_on: _subject_id
+        props:
+          - name: object_id
+            src: object_id
+            fn: set
+  - name: file_collector
+    doc_type: file
+    type: collector
+    root: None
+    category: data_file
+    props:
+      - name: submitter_id
+      - name: object_id
+      - name: md5sum
+      - name: file_size
+    injecting_props:
+      subject:
+        props:
+          - name: _subject_id
+            src: id

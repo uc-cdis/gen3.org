@@ -1,0 +1,17 @@
+mappings:
+- name: my-data-commons_subject
+  doc_type: subject
+  type: aggregator
+  root: subject
+  props:
+    - name: submitter_id
+  nested_props:
+    - name: subject_samples
+      path: sample
+      props:
+        - name: collection_date
+        - name: sample_type
+      aggregated_props:        # used to get aggregate statistics of
+        - name: sample_count
+          path: samples        # path to node from root
+          fn: count
