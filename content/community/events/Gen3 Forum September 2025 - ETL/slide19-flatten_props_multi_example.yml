@@ -1,0 +1,14 @@
+mappings:
+- name: flatten_props_multi # ElasticSearch index name
+  doc_type: subject
+  type: aggregator
+  root: subject
+  props:
+    - name: submitter_id
+  flatten_props:
+    - name: subject_events
+      path: events
+      props:
+        - name: date
+        - name: type
+      sorted_by: date, desc

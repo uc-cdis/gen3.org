@@ -1,0 +1,27 @@
+mappings:
+- name: data-file_study
+  doc_type: data_file
+  type: collector
+  category: data_file
+  props:
+    - name: submitter_id
+  injecting_props:
+    study:
+      - props:
+        - fn: set
+          name: study_id
+          src: study_id
+
+- name: sample_for_join
+  doc_type: subject
+  type: aggregator
+  root: events
+  props:
+    - name: event_id
+  joining_props:
+  - index: data-file_study
+    join_on: study_id
+    props:
+      - fn: set
+        name: study_id
+        src: study_id
