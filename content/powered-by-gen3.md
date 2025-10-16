@@ -108,6 +108,10 @@ g3Commons:
     fig: /figs/commons/NIEHS.png
     link: https://www.niehs.nih.gov/
   c26:
+    title: Princess Maxima Center Pediatric Oncology
+    fig: /figs/commons/princess.png
+    link: https://nl4c-dataportal.prinsesmaximacentrum.nl/
+  c26:
     title: Pediatric Cancer Data Commons
     fig: /figs/commons/pcdc.png
     link: https://portal.pedscommons.org/
