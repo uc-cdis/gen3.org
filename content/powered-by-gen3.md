@@ -111,15 +111,15 @@ g3Commons:
     title: Princess Maxima Center Pediatric Oncology
     fig: /figs/commons/princess.png
     link: https://nl4c-dataportal.prinsesmaximacentrum.nl/
-  c26:
+  c27:
     title: Pediatric Cancer Data Commons
     fig: /figs/commons/pcdc.png
     link: https://portal.pedscommons.org/
-  c27:
+  c28:
     title: Tox Data Commons
     fig: /figs/commons/ToxDataCommons.png
     link: https://toxdatacommons.com/
-  c28:
+  c29:
     title: University of Florida Cancer Data Commons
     fig: /figs/commons/ufcdc.png
     link: https://ufcdc-portal.org/
