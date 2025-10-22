@@ -11,10 +11,12 @@ g3Teaser:
 
 
 
-
 g3Upcoming:
-
-
+- Title: Integrating AI tools into Gen3
+  Date: November 5, 2025 3:30-5:30 pm CST (September 4, 2025, 8:30-10:00 am AEDT)
+  Description: Director of CTDS, Robert Grossman, will share with the community the roadmap for AI in Gen3.  Planned features include model inference, training, and fine tuning using data in a commons, vector store for embeddings, chat-like query interface, and federated AI in Gen3 meshes.
+  Image: /figs/gen3_new_logo.png
+  Register: https://uchicago.zoom.us/meeting/register/IBy8EckiRjO3Ogo6nuFH9A
 
 
 g3past:
