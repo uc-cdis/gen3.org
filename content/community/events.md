@@ -12,14 +12,18 @@ g3Teaser:
 
 
 g3Upcoming:
-- Title: Integrating AI tools into Gen3
-  Date: November 5, 2025 3:30-5:30 pm CST (November 6, 2025, 8:30-10:00 am AEDT)
-  Description: Director of CTDS, Robert Grossman, will share with the community the roadmap for AI in Gen3.  Planned features include model inference, training, and fine tuning using data in a commons, vector store for embeddings, chat-like query interface, and federated AI in Gen3 meshes.
+- Title:  Gen3 Development Roadmap for 2026
+  Date: January 21, 2026 3:30-5:30 pm CST (January 21, 2026, 8:30-10:00 am AEDT)
+  Description: We will introduce the 2026 Gen3 Development Roadmap, which will include current priorities for the next year.  The first portion of the meeting will include a presentation by Robert Grossman, Director of CTDS.  The second portion will include an organized panel discussion by the Gen3 steering committee on the roadmap.  Please attend to provide your feedback and help prioritize roadmap items.
   Image: /figs/gen3_new_logo.png
-  Register: https://uchicago.zoom.us/meeting/register/IBy8EckiRjO3Ogo6nuFH9A
+  Register: https://uchicago.zoom.us/meeting/register/NkYWRBI2RHCwViKKe27EvQ
 
 
 g3past:
+- Title: Integrating AI tools into Gen3
+  Date: November 5, 2025 3:30-5:30 pm CST (November 6, 2025, 8:30-10:00 am AEDT)
+  Description: Director of CTDS, Robert Grossman, will share with the community the roadmap for AI in Gen3.  Planned features include model inference, training, and fine tuning using data in a commons, vector store for embeddings, chat-like query interface, and federated AI in Gen3 meshes.
+  Youtube: Ia_Im-3kgrI
 - Title: Understanding ETL and ETL mapping to power the Gen3 Exploration Page
   Date: September 3, 2025 4:00-5:30 pm CT (September 4, 2025, 6:30-8:00 am AEST)
   Description: The Gen3 Exploration page is where users build cohorts and identify files of interest to their research goals. ETL mapping allows you to customize how your data can be searched on this page. Different mapping strategies will produce different search options on the Exploration page. Dan Biber, of the Gen3 User Services team, will explain how to think about ETL mapping in order to create the elasticsearch indices necessary for Guppy to be able to provide your desired search capabilities in the frontend. He will demonstrate the microservice Tube, which runs ETL, and provide several examples using different use cases for how one may want the the data to be represented and searchable in the Exploration Page.
