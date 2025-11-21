@@ -63,19 +63,7 @@ g3DataFeature:
     subtitle: Learn how to contribute code improvements to Gen3.
     button:
       link: https://docs.gen3.org/gen3-resources/developer-guide/contribute/
-g3Entrance:
-  e1:
-    title: Frequently Asked Questions
-    detail: Review the most common questions and answers
-    button:
-      caption: FAQ
-      link: /resources/faq/
-  e2:
-    title: Get Started Easily
-    detail: View tutorials on using Gen3, including setup and configuration.
-    button:
-      caption: Easy Start
-      link: /get-started
+
 ---
 
 <section class="g3-bg__mint">
@@ -249,33 +237,6 @@ g3Entrance:
               Read
             </a>
           </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="g3-inner-wrapper g3-flex-content g3-space__margin-md-bottom">
-    <div class="g3-bg__solight g3-space__padding-md g3-col__50 g3-text__center g3-space__margin-sm-left-right">
-      <h2 class="g3-space__margin-sm-bottom">
-        {{< param "g3Entrance.e1.title" >}}
-      </h2>
-      <p class="g3-space__margin-sm-bottom">
-        {{< param "g3Entrance.e1.detail" >}}
-      </p>
-      <a class="g3-button--secondary g3-button" href="{{< param "g3Entrance.e1.button.link" >}}">
-        {{< param "g3Entrance.e1.button.caption" >}}
-      </a>
-    </div>
-    <div class="g3-bg__solight g3-space__padding-md g3-col__50 g3-text__center g3-space__margin-sm-left-right">
-      <h2 class="g3-space__margin-sm-bottom">
-        {{< param "g3Entrance.e2.title" >}}
-      </h2>
-      <p class="g3-space__margin-sm-bottom">
-        {{< param "g3Entrance.e2.detail" >}}
-      </p>
-      <a class="g3-button--secondary g3-button" href="{{< param "g3Entrance.e2.button.link" >}}">
-        {{< param "g3Entrance.e2.button.caption" >}}
-      </a>
     </div>
   </div>
 </section>

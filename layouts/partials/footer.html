@@ -7,18 +7,28 @@
       </a>
     </div>
     <div class="g3-footer__link-group">
-      {{ range .Site.Menus.footermenu1.ByWeight }}
-      <div class="g3-footer__item">
-        <a href="{{ .URL }}" class="g3-footer__link">{{ .Name }}</a>
-      </div>
-      {{ end }}
-    </div>
-    <div class="g3-footer__link-group">
-      {{ range .Site.Menus.footermenu2.ByWeight }}
-      <div class="g3-footer__item">
-        <a href="{{ .URL }}" class="g3-footer__link">{{ .Name }}</a>
-      </div>
-      {{ end }}
-    </div>
+  {{ range .Site.Menus.footermenu1.ByWeight }}
+  <div class="g3-footer__item">
+    {{ $url := .URL }}
+    {{ if or (strings.HasPrefix $url "http://") (strings.HasPrefix $url "https://") }}
+      <a href="{{ $url }}" class="g3-footer__link" target="_blank" rel="noopener">{{ .Name }}</a>
+    {{ else }}
+      <a href="{{ $url }}" class="g3-footer__link">{{ .Name }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+<div class="g3-footer__link-group">
+  {{ range .Site.Menus.footermenu2.ByWeight }}
+  <div class="g3-footer__item">
+    {{ $url := .URL }}
+    {{ if or (strings.HasPrefix $url "http://") (strings.HasPrefix $url "https://") }}
+      <a href="{{ $url }}" class="g3-footer__link" target="_blank" rel="noopener">{{ .Name }}</a>
+    {{ else }}
+      <a href="{{ $url }}" class="g3-footer__link">{{ .Name }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
   </div>
 </footer>
