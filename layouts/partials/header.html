@@ -19,19 +19,30 @@
         {{ $menuHasCurrentPage := ($currentNode.HasMenuCurrent "mainmenu" .)}}
         {{ $isItemActive := or $isCurrentPage $menuHasCurrentPage }}
           <div class="g3-header__nav-item {{if $isItemActive }}g3-header__nav-item--active{{end}}">
-              <a href="{{ .URL }}" class="g3-header__nav-link">{{ .Name }}</a>
+              {{ if or (strings.HasPrefix .URL "http://") (strings.HasPrefix .URL "https://") }}
+                <a href="{{ .URL }}" class="g3-header__nav-link" target="_blank" rel="noopener">{{ .Name }}</a>
+              {{ else }}
+                <a href="{{ .URL }}" class="g3-header__nav-link">{{ .Name }}</a>
+              {{ end }}
               {{ if .HasChildren }}
                 <span class="g3-header__nav-link-arrow"></span>
                 <div class="g3-header__dropdown">
                     <span class="g3-header__dropdown-arrow"></span>
                     {{ range .Children }}
                         <div class="g3-header__nav-subitem {{if $currentNode.HasMenuCurrent "mainmenu" . }}g3-header__nav-subitem--active{{ end }}">
-                            <a class="g3-header__nav-subitem-link" href="{{ .URL }}">
-                              {{ .Name }}
-                              {{ if hasPrefix .URL "http" }}
+                            {{ if or (strings.HasPrefix .URL "http://") (strings.HasPrefix .URL "https://") }}
+                              <a class="g3-header__nav-subitem-link" href="{{ .URL }}" target="_blank" rel="noopener">
+                                {{ .Name }}
                                 <img class="g3-header__link-icon" src="{{ $iconLinkURL }}" />
-                              {{ end }}
-                            </a>
+                              </a>
+                            {{ else }}
+                              <a class="g3-header__nav-subitem-link" href="{{ .URL }}">
+                                {{ .Name }}
+                                {{ if hasPrefix .URL "http" }}
+                                  <img class="g3-header__link-icon" src="{{ $iconLinkURL }}" />
+                                {{ end }}
+                              </a>
+                            {{ end }}
                         </div>
                     {{ end }}
                 </div>
@@ -70,19 +81,30 @@
       <!--{{ $toggled := or $isPage $hasPage }}-->
       {{ $toggled := true }}
       <li class="g3-mb-menu__item{{if $isPage }} g3-mb-menu__item--active{{end}}">
-          <a href="{{ .URL }}" class="g3-mb-menu__link{{if $isPage }} g3-mb-menu__link--active{{end}}">{{ .Name }}</a>
+          {{ if or (strings.HasPrefix .URL "http://") (strings.HasPrefix .URL "https://") }}
+            <a href="{{ .URL }}" class="g3-mb-menu__link{{if $isPage }} g3-mb-menu__link--active{{end}}" target="_blank" rel="noopener">{{ .Name }}</a>
+          {{ else }}
+            <a href="{{ .URL }}" class="g3-mb-menu__link{{if $isPage }} g3-mb-menu__link--active{{end}}">{{ .Name }}</a>
+          {{ end }}
           {{ if .HasChildren }}
             <img class="g3-mb-menu__toggle-arrow{{if $toggled}}{{else}} g3-mb-menu__toggle-arrow--toggled{{end}}" src="{{$iconToggleURL}}"></img>
             <ul class="g3-mb-menu__sub-content{{if $toggled}}{{else}} g3-mb-menu__sub-content--toggled{{end}}">
                 {{ range .Children }}
                   {{ $isSubPage := eq .Identifier $currentNode.LinkTitle }}
                   <li class="g3-mb-menu__subitem{{if $isSubPage }} g3-mb-menu__subitem--active{{ end }}">
-                      <a class="g3-mb-menu__subitem-link{{if $isSubPage }} g3-mb-menu__subitem-link--active{{ end }}" href="{{ .URL }}">
-                        {{ .Name }}
-                        {{ if hasPrefix .URL "http" }}
+                      {{ if or (strings.HasPrefix .URL "http://") (strings.HasPrefix .URL "https://") }}
+                        <a class="g3-mb-menu__subitem-link{{if $isSubPage }} g3-mb-menu__subitem-link--active{{ end }}" href="{{ .URL }}" target="_blank" rel="noopener">
+                          {{ .Name }}
                           <img class="g3-header__link-icon" src="{{ $iconLinkURL }}" />
-                        {{ end }}
-                      </a>
+                        </a>
+                      {{ else }}
+                        <a class="g3-mb-menu__subitem-link{{if $isSubPage }} g3-mb-menu__subitem-link--active{{ end }}" href="{{ .URL }}">
+                          {{ .Name }}
+                          {{ if hasPrefix .URL "http" }}
+                            <img class="g3-header__link-icon" src="{{ $iconLinkURL }}" />
+                          {{ end }}
+                        </a>
+                      {{ end }}
                   </li>
                 {{ end }}
             </ul>
