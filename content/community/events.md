@@ -12,14 +12,19 @@ g3Teaser:
 
 
 g3Upcoming:
+- Title:  Managing Gen3 Deployments
+  Date: March 4, 2026 3:30-5:30 pm CST (March 5, 2026, 8:30-10:00 am AEDT)
+  Description: Deployment and monitoring of a Gen3 system takes significant cloud expertise.  Over the past year, the Gen3 Commons Services Operations Center (CSOC) working group has been meeting to share knowledge and build new capabilities in order to simplify and improve Gen3 deployment and monitoring.  At our March community forum meeting we will share some of the work that has come out of this group's efforts.
+  Image: /figs/gen3_new_logo.png
+  Registration: https://uchicago.zoom.us/meeting/register/W9_l7_uQQFeCV7u-86Wx9Q
+  Agenda2: gen3forum_20260304
+
+g3past:
 - Title:  Gen3 Development Roadmap for 2026
   Date: January 21, 2026 3:30-5:30 pm CST (January 21, 2026, 8:30-10:00 am AEDT)
   Description: We will introduce the 2026 Gen3 Development Roadmap, which will include current priorities for the next year.  The first portion of the meeting will include a presentation by Robert Grossman, Director of CTDS.  The second portion will include an organized panel discussion by the Gen3 steering committee on the roadmap.  Please attend to provide your feedback and help prioritize roadmap items.
-  Image: /figs/gen3_new_logo.png
-  Register: https://uchicago.zoom.us/meeting/register/NkYWRBI2RHCwViKKe27EvQ
-
-
-g3past:
+  Youtube: ugVMYIgYSQs
+  Slides: Gen3 Forum Jan 2026 - Gen3 Roadmap.pdf
 - Title: Integrating AI tools into Gen3
   Date: November 5, 2025 3:30-5:30 pm CST (November 6, 2025, 8:30-10:00 am AEDT)
   Description: Director of CTDS, Robert Grossman, will share with the community the roadmap for AI in Gen3.  Planned features include model inference, training, and fine tuning using data in a commons, vector store for embeddings, chat-like query interface, and federated AI in Gen3 meshes.
@@ -45,36 +50,7 @@ g3past:
   Description: We will introduce the 2025 Gen3 Development Roadmap, which will include known current priorities.  The first portion of the meeting will include a presentation by Robert Grossman, Director of CTDS.  The second portion will include an organized panel discussion by the Gen3 steering committee on the roadmap.  Please attend to provide your feedback and help prioritize roadmap items.
   Youtube: dh7FWSqx-1w
   Slides: Gen3 Forum Feb 26 2025 - Gen3 Roadmap.pdf
-- Title: Testing code with the new Gen3 testing framework
-  Date: November 6, 3:30-5:00 pm CDT; November 7, 2024, 8:30-10:00 am AEDT
-  Description: Gen3 values code contributions from our open-source community. However, the continuous integration testing available within our GitHub repositories has generally not been available to contributors external to CTDS.  This has made it difficult for contributors to assess their code changes and get them merged into the Gen3 codebase.  We will discuss in the forum the new Gen3 testing framework, which makes these tests available to anyone.  We will also discuss how contributors can create and contribute their own tests as part of their pull requests.  Speakers will include Peter Vassilatos, Director of Engineering, and Hara Juvvala, Principal Software Engineer in Test, both from the Center for Translational Data Science at the University of Chicago.
-  Youtube: Ea3tkR_D8VM
-  Slides: Gen3 Forum November 2024 - Testing framework.pdf
-- Title: GA4GH standards in Gen3
-  Date: September 18, 4:30-5:30 pm CDT; September 19, 2024, 7:30-8:30am AEST
-  Description: GA4GH is an international standards setting body for Genomics and Health. Gen3 aims to follow GA4GH standards whenever possible in order to improve our interoperability with other systems and to simplify the use of a Gen3 Data Commons. Join us at our next community forum where we will provide an overview of our GA4GH compliant services and share plans for the future. Speakers will include Robert Grossman and Michael Lukowski from the University of Chicago, Center for Translational Data Science and Kyle Ellrott from the Oregon Health and Science University.
-  Youtube: 98CpBDLYi_Q
-  Slides: Gen3 Forum September 2024 - GA4GH.pdf
-- Title: Data submission - Perspectives and solutions from different Gen3 systems
-  Date: July 10, 3:30-5:00 pm CDT; July 11, 2024, 6:30-8:00am am AEST
-  Description: Gen3 data submission can be complex and will vary from project to project.  The specifics will depend on the data model, data type, use of graph-model and/or metadata service, centrally managed vs user driven, and other project-specific requirements.  At this event we will hear from a range of Gen3 operators on how their projects approach the topic of data submission and how they have managed this process.
-  Youtube: o_TmbU9thuY
-  Slides: Gen3 Forum July 2024 - Data Submission.pdf
-- Title: Gen3.2 - How to build a Gen3 data portal using the new frontend framework
-  Date: May 1, 3:30-5:00 pm CDT; May 2, 2024, 6:30-8:00am am AEST
-  Description: Gen3 has released a new frontend for the data portal. In this month's forum, we will walk you through the new features and capabilities and demonstrate how to configure the new frontend.  The first portion of the meeting will be led by CTDS Frontend and Visualization Manager, Craig Barnes.  Later we will hear from a team of Gen3 operators at the Oregon Health & Science University where they will share their experience of using the updated frontend.
-  Youtube: 6dcEUmhB1kk
-  Slides: Gen3 Forum May 2024 - Gen3.2.pdf
-- Title: How to contribute to the Gen3 source code
-  Date: March 20, 3:30-5:00 pm CDT; March 21, 2024, 7:30-9:00 am AEDT
-  Description: Gen3 is an open-source project and benefits from active community contributions.  In this month's forum we will share an updated process for submitting external contributions to the Gen3 source code.  By following these guidelines developers will be able to understand submission requirements and it will enable the maintaining organization to efficiently review proposed contributions.
-  Youtube: St04iaglLck
-  Slides: Gen3 Forum March 2024 - Gen3 Open Source.pdf
-- Title: Gen3 Development Roadmap
-  Date: January 24, 3:30-5:00 pm CT; January 25, 2024, 8:30-10:00 am AEDT
-  Description: We will introduce the 2024 Gen3 Development Roadmap, which will include known current priorities.  The first portion of the meeting will include a presentation by Robert Grossman, Director of CTDS.  The second portion will include an organized panel discussion by the Gen3 steering committee on the roadmap.  Please attend to provide your feedback and help prioritize roadmap items.
-  Youtube: RWcB1hLPJfA
-  Slides: Gen3 Forum Jan 24 2024 - Gen3 Roadmap.pdf
+
 
 ---
 
