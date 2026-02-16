@@ -16,7 +16,7 @@ g3Upcoming:
   Date: March 4, 2026 3:30-5:30 pm CST (March 5, 2026, 8:30-10:00 am AEDT)
   Description: Deployment and monitoring of a Gen3 system takes significant cloud expertise.  Over the past year, the Gen3 Commons Services Operations Center (CSOC) working group has been meeting to share knowledge and build new capabilities in order to simplify and improve Gen3 deployment and monitoring.  At our March community forum meeting we will share some of the work that has come out of this group's efforts.
   Image: /figs/gen3_new_logo.png
-  Registration: https://uchicago.zoom.us/meeting/register/W9_l7_uQQFeCV7u-86Wx9Q
+  Register: https://uchicago.zoom.us/meeting/register/W9_l7_uQQFeCV7u-86Wx9Q
   Agenda2: gen3forum_20260304
 
 g3past:
