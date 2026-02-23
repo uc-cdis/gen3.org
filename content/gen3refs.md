@@ -24,9 +24,100 @@ The Gen3 data platform is used as the basis for many data repositories and enabl
   </div>
 </section>
 
-<!-- last updated on 10/17/24-->
+
+
+
 <section class="g3-outer-wrapper">
   <div class="g3-space__margin-sm-left">
+    <h2> 2025</h2>
+    <p class="g3-space__margin-sm-bottom">
+    Adams, Meredith CB, et al. "Automated multi-instance REDCap data synchronization for NIH clinical trial networks." JAMIA open 8.3 (2025): ooaf036.
+      <a href="https://academic.oup.com/jamiaopen/article/8/3/ooaf036/8145565">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Adams, Meredith CB, Robert W. Hurley, and Umit Topaloglu. "Connecting chronic pain and opioid use disorder clinical trials through data harmonization: wake forest IMPOWR dissemination, education, and coordination center (IDEA-CC)." Substance use & addiction journal 46.1 (2025): 141-145.
+      <a href="https://academic.oup.com/jamiaopen/article/8/3/ooaf036/8145565">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Adams, Meredith CB, et al. "Enhancing Gen3 for clinical trial time series analytics and data discovery: a data commons framework for NIH clinical trials." Frontiers in Digital Health 7 (2025): 1570009.
+      <a href="https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1570009/full">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Armato III, Samuel G., et al. "MIDRC mRALE Mastermind Grand Challenge: AI to predict COVID severity on chest radiographs." Journal of Medical Imaging 12.2 (2025): 024505-024505.
+      <a href="https://www.spiedigitallibrary.org/journals/journal-of-medical-imaging/volume-12/issue-2/024505/MIDRC-mRALE-Mastermind-Grand-Challenge--AI-to-predict-COVID/10.1117/1.JMI.12.2.024505.full">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Barnes, Craig, et al. "Managing, Analyzing and Sharing Research Data with Gen3 Data Commons." arXiv preprint arXiv:2508.04944 (2025).
+      <a href="https://arxiv.org/abs/2508.04944">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Chahal, C. Anwar A., et al. "Data interoperability and harmonization in cardiovascular genomic and precision medicine." Circulation: Genomic and Precision Medicine 18.3 (2025): e004624.
+      <a href="https://www.ahajournals.org/doi/full/10.1161/CIRCGEN.124.004624">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Chen, Weijie, et al. "Multimodal data curation via interoperability: use cases with the Medical Imaging and Data Resource Center." Scientific Data 12.1 (2025): 1340.
+      <a href="https://www.nature.com/articles/s41597-025-05678-2">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Dupont, William D., et al. "Coding variants of the genitourinary development gene WNT9B carry high risk for prostate cancer." JCO precision oncology 9 (2025): e2400569.
+      <a href="https://ascopubs.org/doi/full/10.1200/PO-24-00569">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Giles, Corey, and Peter J. Meikle. "Building the Australian Cardiovascular disease Data Commons." Nature Reviews Cardiology 22.11 (2025): 837-837.
+      <a href="https://www.nature.com/articles/s41569-025-01208-0">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Hung, Ling-Hong, et al. "Harmonizing and integrating the NCI Genomic Data Commons through accessible, interactive, and cloud-enabled workflows." PLoS One 20.3 (2025): e0318676.
+      <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0318676">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Larrick, Brienna M., et al. "The HEAL Data Platform." arXiv preprint arXiv:2512.17506 (2025).
+      <a href="https://arxiv.org/abs/2512.17506">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Ma, Fen, et al. "Androgen deprivation–mediated activation of AKT is enhanced in prostate cancer with TMPRSS2: ERG fusion." The Journal of Clinical Investigation 135.23 (2025).
+      <a href="https://www.jci.org/articles/view/192368">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Rye, Claire E., et al. "Rakeiora Genomics Platform: a pathfinder for genomic medicine research in Aotearoa New Zealand." Journal of the Royal Society of New Zealand 55.6 (2025): 2481-2505.
+      <a href="https://www.tandfonline.com/doi/full/10.1080/03036758.2025.2469626">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Sanati, Nasim, et al. "FHIR as a Unifying Format for Genomic Research Data Tracking, Aggregation, and Integration." bioRxiv (2025): 2025-12.
+      <a href="https://www.biorxiv.org/content/10.64898/2025.12.22.695544v1.abstract">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Taddese, Asefa Adimasu, Assefa Chekole Addis, and Bjorn T. Tam. "Data stewardship and curation practices in AI-based genomics and automated microscopy image analysis for high-throughput screening studies: promoting robust and ethical AI applications." Human Genomics 19.1 (2025): 16.
+      <a href="https://link.springer.com/article/10.1186/s40246-025-00716-x">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Te Aika, Ben, et al. "Aotearoa genomic data repository: An āhuru mōwai for taonga species sequencing data." Molecular ecology resources 25.2 (2025): e13866.
+      <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.13866">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Tomek, Robert M., et al. "Comparative analysis of data representativeness across medical image datasets using multi-dimensional similarity measures." Medical Imaging 2025: Image Perception, Observer Performance, and Technology Assessment. Vol. 13409. SPIE, 2025.
+      <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/13409/134090U/Comparative-analysis-of-data-representativeness-across-medical-image-datasets-using/10.1117/12.3047343.full">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Wang, Jasmine J., et al. "ELOC-mutated renal cell carcinoma is a rare indolent tumor with distinctive genomic characteristics." Modern Pathology 38.8 (2025): 100777.
+      <a href="https://www.sciencedirect.com/science/article/pii/S0893395225000730">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Whitney, Heather M., et al. "Demonstration of Interoperability Between MIDRC and N3C: A COVID-19 Severity Prediction Use Case." Journal of Imaging Informatics in Medicine (2025): 1-10.
+      <a href="https://link.springer.com/article/10.1007/s10278-025-01605-4">View Article</a>
+    </p>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- last updated on 2/20/26-->
+<section class="g3-outer-wrapper">
+<div class="g3-space__margin-sm-left g3-space__margin-md-top">
     <h2> 2024</h2>
     <p class="g3-space__margin-sm-bottom">
     Adams, Meredith CB, Robert W. Hurley, and Umit Topaloglu. "Connecting Chronic Pain and Opioid Use Disorder Clinical Trials Through Data Harmonization: Wake Forest IMPOWR Dissemination, Education, and Coordination Center (IDEA-CC)." Substance Use & Addiction Journal (2024): 297673422412362872 (2024): ooae025.
@@ -49,8 +140,16 @@ The Gen3 data platform is used as the basis for many data repositories and enabl
       <a href="https://arxiv.org/abs/2404.15475">View Article</a>
     </p>
     <p class="g3-space__margin-sm-bottom">
+    Grossman, Robert L., et al. "Ten pillars for data meshes." arXiv preprint arXiv:2411.05248 (2024).
+      <a href="https://arxiv.org/abs/2411.05248">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
     Kim, Erika, et al. "NCI cancer research data commons: lessons learned and future state." Cancer Research 84.9 (2024): 1404-1409.
       <a href="https://aacrjournals.org/cancerres/article/84/9/1404/745076">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+  Kullo, Iftikhar J. "Promoting equity in polygenic risk assessment through global collaboration." Nature Genetics 56.9 (2024): 1780-1787.
+      <a href="https://www.nature.com/articles/s41588-024-01843-2">View Article</a>
     </p>
     <p class="g3-space__margin-sm-bottom">
     Kuzma, Amanda, et al. "NIAGADS: A Comprehensive National Data Repository for Alzheimer’s Disease and Related Dementia Genetics and Genomics Research." medRxiv (2024): 2024-10.25.
@@ -59,6 +158,10 @@ The Gen3 data platform is used as the basis for many data repositories and enabl
     <p class="g3-space__margin-sm-bottom">
     Michener, Pryce S., et al. "Diffusion of medications for opioid use disorder treatment in jail settings: a convergent mixed methods study of jail staff perspectives." Addiction Science & Clinical Practice 19.1 (2024): 10.
       <a href="https://link.springer.com/article/10.1186/s13722-024-00440-2">View Article</a>
+    </p>
+    <p class="g3-space__margin-sm-bottom">
+    Nanxin, J. I. N., et al. "Ardac common data model facilitates data dissemination and enables data commons for modern clinical studies." Studies in health technology and informatics 310 (2024): 3.
+      <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11061936/">View Article</a>
     </p>
     <p class="g3-space__margin-sm-bottom">
     Oh, Sehyun, et al. "AnVILWorkflow: A runnable workflow package for Cloud-implemented bioinformatics analysis pipelines." Research Square (2024).
