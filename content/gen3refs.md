@@ -26,7 +26,7 @@ The Gen3 data platform is used as the basis for many data repositories and enabl
 
 
 
-
+<!-- last updated on 2/20/26-->
 <section class="g3-outer-wrapper">
   <div class="g3-space__margin-sm-left">
     <h2> 2025</h2>
@@ -36,7 +36,7 @@ The Gen3 data platform is used as the basis for many data repositories and enabl
     </p>
     <p class="g3-space__margin-sm-bottom">
     Adams, Meredith CB, Robert W. Hurley, and Umit Topaloglu. "Connecting chronic pain and opioid use disorder clinical trials through data harmonization: wake forest IMPOWR dissemination, education, and coordination center (IDEA-CC)." Substance use & addiction journal 46.1 (2025): 141-145.
-      <a href="https://academic.oup.com/jamiaopen/article/8/3/ooaf036/8145565">View Article</a>
+      <a href="https://journals.sagepub.com/doi/full/10.1177/29767342241236287">View Article</a>
     </p>
     <p class="g3-space__margin-sm-bottom">
     Adams, Meredith CB, et al. "Enhancing Gen3 for clinical trial time series analytics and data discovery: a data commons framework for NIH clinical trials." Frontiers in Digital Health 7 (2025): 1570009.
@@ -119,10 +119,6 @@ The Gen3 data platform is used as the basis for many data repositories and enabl
 <section class="g3-outer-wrapper">
 <div class="g3-space__margin-sm-left g3-space__margin-md-top">
     <h2> 2024</h2>
-    <p class="g3-space__margin-sm-bottom">
-    Adams, Meredith CB, Robert W. Hurley, and Umit Topaloglu. "Connecting Chronic Pain and Opioid Use Disorder Clinical Trials Through Data Harmonization: Wake Forest IMPOWR Dissemination, Education, and Coordination Center (IDEA-CC)." Substance Use & Addiction Journal (2024): 297673422412362872 (2024): ooae025.
-      <a href="https://journals.sagepub.com/doi/abs/10.1177/29767342241236287">View Article</a>
-    </p>
     <p class="g3-space__margin-sm-bottom">
     Armstrong, Nicola, et al. "People RDC framework for advanced analytics for national healthcare research infrastructure." (2024).
       <a href="https://opus.lib.uts.edu.au/handle/10453/181203">View Article</a>
