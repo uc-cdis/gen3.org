@@ -12,14 +12,15 @@ g3Teaser:
 
 
 g3Upcoming:
+
+
+g3past:
 - Title:  Managing Gen3 Deployments
   Date: March 4, 2026 3:30-5:30 pm CST (March 5, 2026, 8:30-10:00 am AEDT)
   Description: Deployment and monitoring of a Gen3 system takes significant cloud expertise.  Over the past year, the Gen3 Commons Services Operations Center (CSOC) working group has been meeting to share knowledge and build new capabilities in order to simplify and improve Gen3 deployment and monitoring.  At our March community forum meeting we will share some of the work that has come out of this group's efforts.
-  Image: /figs/gen3_new_logo.png
-  Register: https://uchicago.zoom.us/meeting/register/W9_l7_uQQFeCV7u-86Wx9Q
+  Youtube: 5dxjqAYFDSs
+  Slides: Gen3 Forum March 2026 - Deployment.pdf
   Agenda2: gen3forum_20260304
-
-g3past:
 - Title:  Gen3 Development Roadmap for 2026
   Date: January 21, 2026 3:30-5:30 pm CST (January 21, 2026, 8:30-10:00 am AEDT)
   Description: We will introduce the 2026 Gen3 Development Roadmap, which will include current priorities for the next year.  The first portion of the meeting will include a presentation by Robert Grossman, Director of CTDS.  The second portion will include an organized panel discussion by the Gen3 steering committee on the roadmap.  Please attend to provide your feedback and help prioritize roadmap items.
