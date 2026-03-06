@@ -76,37 +76,37 @@ g3Commons:
 #    fig: /figs/commons/nct.png
 #    link: https://accessclinicaldata.niaid.nih.gov
   c18:
-    title: Prometheus Data Platform
-    fig: /figs/commons/prometheus.png
-    link: https://prometheus.data-commons.org/
+    title: Murtha Cancer Center Data Platform
+    fig: /figs/commons/murtha_cancer_center_logo.png
+    link: https://mc2dp.data-commons.org/
   c19:
-    title: Veterans Affairs Data Commons
-    fig: /figs/commons/va.png
-    link: https://va.data-commons.org/
-  c20:
     title: Veterans Precision Oncology Data Commons
     fig: /figs/commons/vpodc.png
     link: https://vpodc.org
-  c21:
+  c20:
     title: ACED IDP
     fig: /figs/commons/ACED.png
     link: https://aced-idp.org/
-  c22:
+  c21:
     title: ARDaC AlcHepNet Research Data Commons
     fig: /figs/commons/ARDaC.png
     link: https://portal.ardac.org/
-  c23:
+  c22:
     title: Australian Cardiovascular Disease Data Commons
-    fig: /figs/commons/Aus_Cardio_Data_Commons.png
-    link: https://www.biocommons.org.au/
+    fig: /figs/commons/abc.png
+    link: https://www.biocommons.org.au/acdc
+  c23:
+    title: CHORDS Data Resources
+    fig: /figs/commons/CHORDS.png
+    link: https://chordshealth.org/discovery
   c24:
+    title: GEARBOx
+    fig: /figs/commons/gearbox.png
+    link: https://gearbox.pedscommons.org/
+  c25:
     title: Genomics Aotearoa
     fig: /figs/commons/genomics_aotearoa.png
     link: https://data.agdr.org.nz/
-  c25:
-    title: National Institute of Environmental Health Sciences
-    fig: /figs/commons/NIEHS.png
-    link: https://www.niehs.nih.gov/
   c26:
     title: Princess Maxima Center Pediatric Oncology
     fig: /figs/commons/princess.png
@@ -284,6 +284,11 @@ g3Commons:
       <div class="g3-common-card">
          <a target="_blank" href="{{< param "g3Commons.c28.link" >}}" title="{{< param "g3Commons.c28.title" >}}">
          <img class="g3-row__50px" src="{{< param "g3Commons.c28.fig" >}}" />
+         </a>
+      </div>
+      <div class="g3-common-card">
+         <a target="_blank" href="{{< param "g3Commons.c29.link" >}}" title="{{< param "g3Commons.c29.title" >}}">
+         <img class="g3-row__50px" src="{{< param "g3Commons.c29.fig" >}}" />
          </a>
       </div>
    </div>
