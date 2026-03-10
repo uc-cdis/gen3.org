@@ -31,9 +31,9 @@ g3Starts:
     position: Associate Director of Cyberinfrastructure
     organization: Australian BioCommons
   s5:
-    name: Plamen Martinov
-    fig: /figs/steering_committee/Plamen_Martinov.jpg
-    position: Chief Technology and Security Officer
+    name: Danne Elbers, Ph.D.
+    fig: /figs/steering_committee/danne_elbers.jpeg
+    position: Director of Operations and Data Science
     organization: Open Commons Consortium
   s6:
     name: Claire Rye, Ph.D.
