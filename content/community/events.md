@@ -12,13 +12,11 @@ g3Teaser:
 
 
 g3Upcoming:
-
-g3past:
 - Title:  Welcome to Gen3
   Date: May 6, 2026 3:30-5:30 pm CDT (May 7, 2026, 6:30-8:00 am AEST)
-  Description: Deployment and monitoring of a Gen3 system takes significant cloud expertise.  Over the past year, the Gen3 Commons Services Operations Center (CSOC) working group has been meeting to share knowledge and build new capabilities in order to simplify and improve Gen3 deployment and monitoring.  At our March community forum meeting we will share some of the work that has come out of this group's efforts.
+  Description: Join us for an introduction to Gen3.  We will review the capabilities of Gen3 and discuss requirements for operating and maintaining a Gen3 system.  This will be a good introduction for anyone considering Gen3 for their data sharing, exploration, and analysis needs.
   Image: /figs/gen3_new_logo.png
-  Registration: https://uchicago.zoom.us/meeting/register/F-ygydPFRQmgYi-6qU97Lw
+  Register: https://uchicago.zoom.us/meeting/register/F-ygydPFRQmgYi-6qU97Lw
 
 
 g3past:
