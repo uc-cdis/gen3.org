@@ -1,6 +1,6 @@
 ---
 identifier: content-deprecated
-title: "Notice: Content Deprecated"
+title: "Notice: Content Updated and Moved"
 linktitle: content-deprecated
 date: 2026-03-25
 aliases:
