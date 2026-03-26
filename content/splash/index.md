@@ -16,7 +16,7 @@ aliases:
   - /resources/user/access-data
   - /resources/developer/build-app
 g3Teaser:
-  title: Notice - Content Deprecated
+  title: Notice - Content Updated and Moved
 
 
 ---
