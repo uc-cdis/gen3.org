@@ -1,6 +1,6 @@
 ---
 identifier: content-removed
-title: "Notice: Content Deprecated"
+title: "Notice: Content Updated and Moved"
 linktitle: content-removed
 date: 2026-03-25
 g3Teaser:
