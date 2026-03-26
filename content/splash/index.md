@@ -29,7 +29,7 @@ g3Teaser:
           {{< param "g3Teaser.title" >}}
         </h1>
         <p class="g3-space__margin-sm-bottom introduction">
-          The page you are looking for is no longer available. All Gen3 technical documentation has moved to our new site at <a href="https://docs.gen3.org" target="_blank">docs.gen3.org</a>. Please review the new documentation there.
+          We have new Gen3 documentation! All Gen3 technical documentation has moved to our new site at <a href="https://docs.gen3.org" target="_blank">docs.gen3.org</a>. The content you are looking for is likely there. Please review the new documentation, and reach out to us at support@gen3.org if you have any trouble.
         </p>
       </div>
     </div>
