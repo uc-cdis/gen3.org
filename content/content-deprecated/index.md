@@ -5,7 +5,7 @@ linktitle: content-removed
 date: 2026-03-25
 g3Teaser:
   title: Notice - Content Deprecated
-  detail: The content you are looking for is no longer available. All Gen3 technical documentation has moved to our new site at docs.gen3.org.  Please review the new documentation there.
+  detail: We have new Gen3 documentation! All Gen3 technical documentation has moved to our new site at docs.gen3.org. The content you are looking for is likely there. Please review the new documentation, and reach out to us at support@gen3.org if you have any trouble.
 
 
 ---
