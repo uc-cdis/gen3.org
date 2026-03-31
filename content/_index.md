@@ -13,7 +13,7 @@ g3Teaser:
     target: _blank
   button2:
     caption: Get Started
-    link: /get-started
+    link: https://docs.gen3.org/
 g3Feature:
   f1:
     title: Host, Manage, and Share your Data
@@ -53,7 +53,7 @@ g3Roles:
     button:
       caption: Gen3 User Guide
       target: _self
-      link: /resources/user
+      link: https://docs.gen3.org/gen3-resources/user-guide/
   r3:
     name: Developers
     fig: /figs/roles/icon-devs.svg
@@ -61,7 +61,7 @@ g3Roles:
     button:
       caption: Gen3 Developer
       target: _self
-      link: /resources/developer
+      link: https://docs.gen3.org/gen3-resources/developer-guide/
 
 g3RLG:
   quote: Our vision is a world in which researchers have ready access to the data needed and the tools required to make data-driven discoveries that increase our scientific knowledge and improve the quality of life.
@@ -181,7 +181,7 @@ g3Entrance:
     detail: Dive into the Gen3 documentation and engage with the Gen3 community.
     button:
       caption: Gen3 Resources
-      link: /resources
+      link: https://docs.gen3.org/
   e2:
     title: Find us on GitHub
     detail: Explore the Gen3 Framework Services software stack on GitHub.
