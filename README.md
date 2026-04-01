@@ -1,6 +1,6 @@
 # Gen3.org
 
-The Gen3.org website for describing the Gen3 platform.
+The Gen3.org website for describing the Gen3 platform. 
 
 ## Local Development
 
