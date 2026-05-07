@@ -9,7 +9,7 @@ date: 2024-05-22T10:00:00-05:00
 <div class="g3-inner-wrapper">
 <h1 class="g3-space__margin-sm-bottom">Prizes for Gen3 Community Participation</h1>
 <p class="introduction">
-We are now offering prizes to reward your participation supporting the Gen3 community! Our panel of fabulous prizes include: a Gen3-branded Carhartt knit beanie (with an elegant yet understated Gen3 logo on a leather patch) or oversized 15 oz white ceramic mug proclaiming your Gen3 community membership. These prizes are meant to incentivize our community and reward those individuals who provide valuable community contributions.
+We are now offering prizes to reward your participation supporting the Gen3 community! Our panel of fabulous prizes includes: a Gen3-branded Carhartt knit beanie (with an elegant yet understated Gen3 logo on a leather patch); or, an oversized 15 oz white ceramic mug proclaiming your Gen3 community membership. These prizes are meant to incentivize our community and reward those individuals who provide valuable community contributions.
 </p>
 </div>
 </section>
@@ -58,7 +58,7 @@ We are now offering prizes to reward your participation supporting the Gen3 comm
 <div style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; height: 160px; overflow: hidden;">
 <img src="/figs/gen3_mug.jpg" alt="Gen3 Branded Mug" style="max-height: 100%; max-width: 100%; object-fit: contain;">
 </div>
-<p style="margin-top: 10px; font-weight: bold; font-size: 0.9rem;">Gen3-Branded Mug</p>
+<p style="margin-top: 10px; font-weight: bold; font-size: 0.9rem;">Gen3-Branded 15 oz Mug</p>
 </div>
 </div>
 
