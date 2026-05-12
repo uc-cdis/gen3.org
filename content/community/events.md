@@ -12,14 +12,14 @@ g3Teaser:
 
 
 g3Upcoming:
-- Title:  Introduction to Gen3
-  Date: May 6, 2026 3:30-5:30 pm CDT (May 7, 2026, 6:30-8:00 am AEST)
-  Description: Are you or your research organization looking for a way to securely share and explore data with your consortium or beyond?  If so, join us for an introduction to the Gen3 Data Platform.  We will review the capabilities of Gen3 and discuss requirements for operating and maintaining a Gen3 system, which can be used to support secure sharing, visualization, and analysis of research data both in the cloud or on-prem system.  The meeting will include a discussion of Gen3 Products including Data Commons, Data Meshes, Data Hubs, Framework Services, and Workspaces.  It will be a good introduction for anyone considering Gen3 for their data sharing, exploration, and analysis needs.
-  Image: /figs/gen3_new_logo.png
-  Register: https://uchicago.zoom.us/meeting/register/F-ygydPFRQmgYi-6qU97Lw
 
 
 g3past:
+- Title:  Introduction to Gen3
+  Date: May 6, 2026 3:30-5:30 pm CDT (May 7, 2026, 6:30-8:00 am AEST)
+  Description: Are you or your research organization looking for a way to securely share and explore data with your consortium or beyond?  If so, join us for an introduction to the Gen3 Data Platform.  We will review the capabilities of Gen3 and discuss requirements for operating and maintaining a Gen3 system, which can be used to support secure sharing, visualization, and analysis of research data both in the cloud or on-prem system.  The meeting will include a discussion of Gen3 Products including Data Commons, Data Meshes, Data Hubs, Framework Services, and Workspaces.  It will be a good introduction for anyone considering Gen3 for their data sharing, exploration, and analysis needs.
+  Youtube: -zLnNTFIyYE
+  Slidesppt: Gen3 Forum May 2026 - Intro to Gen3.pptx
 - Title:  Managing Gen3 Deployments
   Date: March 4, 2026 3:30-5:30 pm CST (March 5, 2026, 8:30-10:00 am AEDT)
   Description: Deployment and monitoring of a Gen3 system takes significant cloud expertise.  Over the past year, the Gen3 Commons Services Operations Center (CSOC) working group has been meeting to share knowledge and build new capabilities in order to simplify and improve Gen3 deployment and monitoring.  At our March community forum meeting we will share some of the work that has come out of this group's efforts.
