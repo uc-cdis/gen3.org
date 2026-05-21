@@ -12,6 +12,11 @@ g3Teaser:
 
 
 g3Upcoming:
+- Title:  Security and Compliance
+  Date: July 15, 2026 3:30-5:30 pm CDT (July 16, 2026, 6:30-8:00 am AEST)
+  Description:  Navigating security and compliance requirements can be challenging.  While Gen3 itself is developed with a strong security-first mindset, it is up to individual operators to fulfil whatever organizational and sponsor requirements that may exist. In this community forum, we will bring together speakers with experience in navigating compliance frameworks including ISO27001, FedRAMP, and GDPR.  Please come with questions.
+  Register: https://uchicago.zoom.us/meeting/register/KL5HwAYOQHOCPq2BeMHm0g
+  Image: /figs/gen3_new_logo.png
 
 
 g3past:
