@@ -116,18 +116,6 @@ g3DataFeature:
           </div>
         </div>
         <div class="g3-space__margin-sm-left-right g3-col__33 g3-box">
-          <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f4.title" >}}</h3>
-          <p>
-            {{< param "g3DataFeature.f4.subTitle" >}}
-          </p>
-          <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
-          <div class="g3-flex-content g3-flex-content_center">
-            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f4.button.link" >}}" ">
-              Sign up
-            </a>
-          </div>
-        </div>
-        <div class="g3-space__margin-sm-left-right g3-col__33 g3-box">
           <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f2.title" >}}</h3>
           <p>
             {{< param "g3DataFeature.f2.subTitle" >}}
