@@ -28,11 +28,6 @@ g3DataFeature:
     subtitle: Gen3 is ever changing. Check out our current projects.
     button:
       link: /powered-by-gen3
-  f4:
-    title: Discussion Board
-    subtitle: Discuss use and development of the Gen3 software suite. Find different topics and answers.
-    button:
-      link: https://forums.gen3.org
   f5:
     title: Gen3 Videos
     subtitle: Dig deep into our videos and webinars to see Gen3 configurations and operations.
