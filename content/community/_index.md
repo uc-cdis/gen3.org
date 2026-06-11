@@ -28,11 +28,6 @@ g3DataFeature:
     subtitle: Gen3 is ever changing. Check out our current projects.
     button:
       link: /powered-by-gen3
-  f4:
-    title: Discussion Board
-    subtitle: Discuss use and development of the Gen3 software suite. Find different topics and answers.
-    button:
-      link: https://forums.gen3.org
   f5:
     title: Gen3 Videos
     subtitle: Dig deep into our videos and webinars to see Gen3 configurations and operations.
@@ -116,18 +111,6 @@ g3DataFeature:
           <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
           <div class="g3-flex-content g3-flex-content_center">
             <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f1.button.link" >}}" ">
-              Sign up
-            </a>
-          </div>
-        </div>
-        <div class="g3-space__margin-sm-left-right g3-col__33 g3-box">
-          <h3 class="g3-space__margin-sm-top-bottom">{{< param "g3DataFeature.f4.title" >}}</h3>
-          <p>
-            {{< param "g3DataFeature.f4.subTitle" >}}
-          </p>
-          <div class="g3-space__margin-sm-top-bottom g3-divider"></div>
-          <div class="g3-flex-content g3-flex-content_center">
-            <a class="g3-button g3-button--tertiary" href="{{< param "g3DataFeature.f4.button.link" >}}" ">
               Sign up
             </a>
           </div>
