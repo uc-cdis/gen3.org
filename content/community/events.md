@@ -14,7 +14,7 @@ g3Teaser:
 g3Upcoming:
 - Title:  Observability
   Date: September 2, 2026 3:30-5:30 pm CDT (September 3, 2026, 6:30-8:00 am AEST)
-  Description: "Tracking system status and user activity are a critical part of managing a data commons or mesh. We will hear from different Gen3 operators how they approach this important task and what tools they have found to be effective. The agenda includes the following:<br><ul><li>INSERT TITLE HERE - Jawad Quereshi, University of Chicago</li><li>Gen3 Observability in Aotearoa Genomic Data Repository - Carvin Chen, University of Auckland</li><li>Operating Gen3 on AWS: Monitoring and Observability - Guerdon Mukama, Australian BioCommons </li></ul>"
+  Description: "Tracking system status and user activity are a critical part of managing a data commons or mesh. We will hear from different Gen3 operators how they approach this important task and what tools they have found to be effective. The agenda includes the following:<br><ul><li>Current solutions and future plans for observability tools of Gen3 systems - CTDS Engineering Team, University of Chicago</li><li>Gen3 Observability in Aotearoa Genomic Data Repository - Carvin Chen, University of Auckland</li><li>Operating Gen3 on AWS: Monitoring and Observability - Guerdon Mukama, Australian BioCommons </li></ul>"
   Register: https://uchicago.zoom.us/meeting/register/2ANlqXdlS8-LFOBn7sg_dA
   Image: /figs/gen3_new_logo.png
 
