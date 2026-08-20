@@ -190,7 +190,7 @@ g3Starts:
       <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
         {{< param "g3Starts.s7.detail" >}}
       </p>
-      <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s4.button.link" >}}">
+      <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s7.button.link" >}}">
         {{< param "g3Starts.s7.button.caption" >}}
       </a>
     </div>
@@ -202,7 +202,7 @@ g3Starts:
         <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
           {{< param "g3Starts.s8.detail" >}}
         </p>
-        <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s5.button.link" >}}">
+        <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s8.button.link" >}}">
           {{< param "g3Starts.s8.button.caption" >}}
         </a>
     </div>
@@ -214,7 +214,7 @@ g3Starts:
       <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
         {{< param "g3Starts.s9.detail" >}} <br>       <br> <br>
       </p>
-      <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s6.button.link" >}}">
+      <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s9.button.link" >}}">
         {{< param "g3Starts.s9.button.caption" >}}
       </a>
       </div>
