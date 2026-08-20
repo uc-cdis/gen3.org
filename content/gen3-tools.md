@@ -8,6 +8,7 @@ g3Teaser:
   detail: Gen3 community members have created tools that facilitate interactions with a Gen3 Data Commons. These tools may be of use to both Gen3 users or operators.  Any questions about their use should be directed to the maintainers of the particular tool.
 g3Starts:
   title: Get Started
+
   s1:
     name: Gen3 SDK for Python
     fig: /figs/UChicago_CTDS_Vertical_Color RGB.svg
@@ -44,20 +45,27 @@ g3Starts:
       caption: GitHub
       link: https://github.com/AustralianBioCommons/gen3-dict-modeling
   s6:
+    name: gen3-metadata-templates
+    fig: /figs/Australian-Biocommons-Logo-Horizontal-RGB.png
+    detail: Turn a Gen3 schema into friendly Excel submission templates, then validate the filled-in workbooks — with every error pinned to the exact sheet, row, and column, in plain English.
+    button:
+      caption: GitHub
+      link: https://github.com/AustralianBioCommons/gen3-metadata-templates
+  s7:
     name: dictionaryutils and dictionary-visualizer
     fig: /figs/BioTeam-Logo_2021.svg
     detail: Stand-alone tools developed to test and visualize Gen3 dictionaries.  They allow for quicker testing of dictionary updates and do not require a full Gen3 deployment.  Created by BioTeam.
     button:
       caption: GitHub
       link: https://github.com/bioteam/dictionaryutils
-  s7:
+  s8:
     name: gen3schemadev
     fig: /figs/Australian-Biocommons-Logo-Horizontal-RGB.png
     detail: A python tool that uses Google Sheets for simple, automated and efficient dictionary development.  The Gen3 schema mapping library enables an automated workflow to edit, test, validate and publish Gen3 Data Dictionaries, using a google sheet as input.  Created by the Australian BioCommons.
     button:
       caption: GitHub
       link: https://github.com/AustralianBioCommons/gen3schemadev
-  s8:
+  s9:
     name: UMCCR Data Dictionary
     fig: /figs/melbourne.svg
     detail: Gen3 dictionary tools (Docker images) for conversion, visualization, testing and validation to allow for iterative development of Gen3 data dictionary schema locally. Created by the Genomics Platform Group at University of Melbourne Centre for Cancer Research (UMCCR).
@@ -173,6 +181,51 @@ g3Starts:
 
 <section>
   <div class="g3-inner-wrapper g3-space__padding-md-top g3-mb-space__padding-lg-top g3-mb-space__padding-lg-bottom">
+    <div class="g3-table g3-space__margin-lg-bottom g3-mb-space__margin-lg-bottom">
+    <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
+      <img class="g3-row__10vh g3-space__margin-sm-bottom" src="{{< param "g3Starts.s7.fig" >}}"/>
+      <h3 class="g3-space__margin-sm-bottom">
+        {{< param "g3Starts.s7.name" >}}
+      </h3>
+      <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
+        {{< param "g3Starts.s7.detail" >}}
+      </p>
+      <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s4.button.link" >}}">
+        {{< param "g3Starts.s7.button.caption" >}}
+      </a>
+    </div>
+    <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
+        <img class="g3-row__10vh g3-space__margin-sm-bottom" src="{{< param "g3Starts.s8.fig" >}}"/>
+        <h3 class="g3-space__margin-sm-bottom">
+          {{< param "g3Starts.s8.name" >}}
+        </h3>
+        <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
+          {{< param "g3Starts.s8.detail" >}}
+        </p>
+        <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s5.button.link" >}}">
+          {{< param "g3Starts.s8.button.caption" >}}
+        </a>
+    </div>
+    <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
+      <img class="g3-row__10vh g3-space__margin-sm-bottom" src="{{< param "g3Starts.s9.fig" >}}"/>
+      <h3 class="g3-space__margin-sm-bottom">
+        {{< param "g3Starts.s9.name" >}}
+      </h3>
+      <p class="g3-space__margin-sm-bottom g3-text__desktop-left">
+        {{< param "g3Starts.s9.detail" >}} <br>       <br> <br>
+      </p>
+      <a class="g3-button g3-button--primary g3-align__bottom" href="{{< param "g3Starts.s6.button.link" >}}">
+        {{< param "g3Starts.s9.button.caption" >}}
+      </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Commented out this section, which might be useful if I need to have a two item row again at some opint
+<section>
+  <div class="g3-inner-wrapper g3-space__padding-md-top g3-mb-space__padding-lg-top g3-mb-space__padding-lg-bottom">
   <div class="g3-table g3-space__margin-lg-bottom g3-mb-space__margin-lg-bottom">
   <div class="g3-col__33 g3-text__center g3-space__padding-sm-left-right">
     <img class="g3-row__10vh g3-space__margin-sm-bottom" src="{{< param "g3Starts.s7.fig" >}}"/>
@@ -201,3 +254,4 @@ g3Starts:
     </div>
   </div>
 </section>
+-->
