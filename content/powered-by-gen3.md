@@ -39,10 +39,10 @@ g3Commons:
     title: NCI-CRDC
     fig: /figs/commons/crdc.png
     link: https://nci-crdc.datacommons.io
-  c9:
-    title: OCC Environmental Data Commons
-    fig: /figs/commons/edc.png
-    link: https://portal.occ-data.org
+  #c9:
+  #title: OCC Environmental Data Commons
+  #fig: /figs/commons/edc.png
+  #link: https://portal.occ-data.org
   #c10:
   #  title: GenoMEL Data Commons
   #  fig: /figs/commons/genomel.png
@@ -59,14 +59,14 @@ g3Commons:
     title: ICGC PCAWG and DREAM Challenge data
     fig:  /figs/commons/icgc.png
     link: https://icgc.bionimbus.org/
-  c14:
-    title: Justice Community Opioid Innovation Network
-    fig: /figs/commons/jcoin.png
-    link: https://jcoin.datacommons.io
-  c15:
-    title: Kids-First
-    fig: /figs/commons/kf.png
-    link: https://data.kidsfirstdrc.org
+  #c14:
+  #  title: Justice Community Opioid Innovation Network
+  #  fig: /figs/commons/jcoin.png
+  #  link: https://jcoin.datacommons.io
+  #c15:
+  #  title: Kids-First
+  #  fig: /figs/commons/kf.png
+  #  link: https://data.kidsfirstdrc.org
   c16:
     title: The Medical Imaging and Data Resource Center Commons
     fig: /figs/commons/midrc.png
@@ -83,10 +83,10 @@ g3Commons:
     title: Veterans Precision Oncology Data Commons
     fig: /figs/commons/vpodc.png
     link: https://vpodc.org
-  c20:
-    title: ACED IDP
-    fig: /figs/commons/ACED.png
-    link: https://aced-idp.org/
+  #c20:
+  #  title: ACED IDP
+  #  fig: /figs/commons/ACED.png
+  #  link: https://aced-idp.org/
   c21:
     title: ARDaC AlcHepNet Research Data Commons
     fig: /figs/commons/ARDaC.png
@@ -119,10 +119,19 @@ g3Commons:
     title: Tox Data Commons
     fig: /figs/commons/ToxDataCommons.png
     link: https://toxdatacommons.com/
-  c29:
-    title: University of Florida Cancer Data Commons
-    fig: /figs/commons/ufcdc.png
-    link: https://ufcdc-portal.org/
+  #c29:
+  #  title: University of Florida Cancer Data Commons
+  #  fig: /figs/commons/ufcdc.png
+  #  link: https://ufcdc-portal.org/
+  c30:
+    title: M3 AI Commons
+    fig: /figs/commons/m3.png
+    link: https://m3aicommons.org/
+  c31:
+    title: Indiana Precision Oncology Data Commons
+    fig: /figs/commons/ipo.png
+    link: https://ipo.sulab.io/
+   
 ---
 
 
@@ -136,17 +145,6 @@ g3Commons:
 <section>
    <div class="g3-space__margin-md-top-bottom g3-inner-wrapper">
       <div class="g3-flex-content g3-flex-content_wrap g3-space__margin-md-top-bottom">
-         <!--      <div class="g3-common-card">
-            <a target="_blank" href="{{< param "g3Commons.c1.link" >}}" title="{{< param "g3Commons.c1.title" >}}">
-              <img class="g3-row__8vh" src="{{< param "g3Commons.c1.fig" >}}" />
-            </a>
-            </div>
-            -->
-         <div class="g3-common-card">
-            <a target="_blank" href="{{< param "g3Commons.c2.link" >}}" title="{{< param "g3Commons.c2.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c2.fig" >}}" />
-            </a>
-         </div>
           <div class="g3-common-card">
             <a target="_blank" href="{{< param "g3Commons.c3.link" >}}" title="{{< param "g3Commons.c3.title" >}}">
             <img class="g3-row__50px" src="{{< param "g3Commons.c3.fig" >}}" />
@@ -178,16 +176,6 @@ g3Commons:
             </a>
          </div>
          <div class="g3-common-card">
-            <a target="_blank" href="{{< param "g3Commons.c9.link" >}}" title="{{< param "g3Commons.c9.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c9.fig" >}}" />
-            </a>
-         </div>
-         <div class="g3-common-card">
-            <a target="_blank" href="{{< param "g3Commons.c10.link" >}}" title="{{< param "g3Commons.c10.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c10.fig" >}}" />
-            </a>
-         </div>
-         <div class="g3-common-card">
             <a target="_blank" href="{{< param "g3Commons.c11.link" >}}" title="{{< param "g3Commons.c11.title" >}}">
             <img class="g3-row__50px" src="{{< param "g3Commons.c11.fig" >}}" />
             </a>
@@ -203,23 +191,8 @@ g3Commons:
             </a>
          </div>
          <div class="g3-common-card">
-            <a target="_blank" href="{{< param "g3Commons.c14.link" >}}" title="{{< param "g3Commons.c14.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c14.fig" >}}" />
-            </a>
-         </div>
-         <div class="g3-common-card">
-            <a target="_blank" href="{{< param "g3Commons.c15.link" >}}" title="{{< param "g3Commons.c15.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c15.fig" >}}" />
-            </a>
-         </div>
-         <div class="g3-common-card">
             <a target="_blank" href="{{< param "g3Commons.c16.link" >}}" title="{{< param "g3Commons.c16.title" >}}">
             <img class="g3-row__50px" src="{{< param "g3Commons.c16.fig" >}}" />
-            </a>
-         </div>
-         <div class="g3-common-card">
-            <a target="_blank" href="{{< param "g3Commons.c17.link" >}}" title="{{< param "g3Commons.c17.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c17.fig" >}}" />
             </a>
          </div>
          <div class="g3-common-card">
@@ -232,9 +205,9 @@ g3Commons:
             <img class="g3-row__50px" src="{{< param "g3Commons.c19.fig" >}}" />
             </a>
          </div>
-         <div class="g3-common-card">
-            <a target="_blank" href="{{< param "g3Commons.c20.link" >}}" title="{{< param "g3Commons.c20.title" >}}">
-            <img class="g3-row__50px" src="{{< param "g3Commons.c20.fig" >}}" />
+            <div class="g3-common-card">
+            <a target="_blank" href="{{< param "g3Commons.c30.link" >}}" title="{{< param "g3Commons.c30.title" >}}">
+            <img class="g3-row__50px" src="{{< param "g3Commons.c30.fig" >}}" />
             </a>
          </div>
       </div>
@@ -286,9 +259,9 @@ g3Commons:
          <img class="g3-row__50px" src="{{< param "g3Commons.c28.fig" >}}" />
          </a>
       </div>
-      <div class="g3-common-card">
-         <a target="_blank" href="{{< param "g3Commons.c29.link" >}}" title="{{< param "g3Commons.c29.title" >}}">
-         <img class="g3-row__50px" src="{{< param "g3Commons.c29.fig" >}}" />
+         <div class="g3-common-card">
+         <a target="_blank" href="{{< param "g3Commons.c31.link" >}}" title="{{< param "g3Commons.c31.title" >}}">
+         <img class="g3-row__50px" src="{{< param "g3Commons.c31.fig" >}}" />
          </a>
       </div>
    </div>
