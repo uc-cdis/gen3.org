@@ -14,7 +14,7 @@ g3Teaser:
 g3Upcoming:
 - Title: Frontend Framework Workshop
   Date: November 4, 2026 3:30-5:30 pm CST (November 5, 2026, 8:30-10:00 am AEST)
-  Description: "The Gen3 Frontend Framework offers powerful new capabilities and flexibility for the frontend of a data commons or mesh. This workshop will help both new and existing Gen3 users — either to set up the frontend for a new Gen3 platform or make the transition to the frontend framework from the Data Portal service. Craig Barnes, CTDS Associate Director of Front End and Visualization, will lead you through a working session where you set up and configure your own Gen3 system in real time.  The agenda will include:<br><ul><li>Recap of the Gen3 Frontend Framework</li><li>Demonstate basic customization of an example data commons </li><li>Transitioning from the data portal to the frontend framework</li></ul>"
+  Description: "The Gen3 Frontend Framework offers powerful new capabilities and flexibility for the frontend of a data commons or mesh. This workshop is designed to help both new and existing Gen3 users — either to set up the frontend for a new Gen3 platform or make the transition to Frontend Framework from the Data Portal service. Craig Barnes, CTDS Associate Director of Front End and Visualization, will lead you through a working session where you set up and configure Frontend Framework on an example Gen3 system in real time, and provide guidance for configuring Frontend Framework for your own system. The agenda will include:<br><ul><li>Review of the Gen3 Frontend Framework features</li><li>Demonstate basic customization of an example data commons </li><li>Guidance to transition from the data portal to the frontend framework</li></ul>"
   Image: /figs/gen3_new_logo.png
   Register: https://uchicago.zoom.us/meeting/register/Xdqs66xRSqKUkBMnO9ZzDg
 
@@ -23,7 +23,7 @@ g3past:
 - Title:  Observability
   Date: September 2, 2026 3:30-5:30 pm CDT (September 3, 2026, 6:30-8:00 am AEST)
   Description: "Tracking system status and user activity are a critical part of managing a data commons or mesh. We will hear from different Gen3 operators how they approach this important task and what tools they have found to be effective. The agenda includes the following:<br><ul><li>Current solutions and future plans for observability tools of Gen3 systems - CTDS Engineering Team, University of Chicago</li><li>Gen3 Observability in Aotearoa Genomic Data Repository - Carvin Chen, University of Auckland</li><li>Understanding observability concepts in kubernetes/cloud-native - Colin Griffin, Krumware</li><li>Operating Gen3 on AWS: Monitoring and Observability - Guerdon Mukama, Australian BioCommons </li></ul>"
-  Youtube: TBD
+  Youtube: w69sPN92iHM
   Slides: Gen3 Forum September 2026 - Observability.pdf
 
 - Title:  Security and Compliance
