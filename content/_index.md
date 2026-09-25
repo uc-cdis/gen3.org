@@ -93,10 +93,6 @@ g3Commons:
     title: Biomedical Research
     fig: /figs/commons/brh.png
     link: https://brh.data-commons.org/
-  c4:
-    title: BloodPAC Data Commons
-    fig: /figs/commons/bloodpac.png
-    link: https://data.bloodpac.org
   c5:
     title: Canine Data Commons
     fig: /figs/commons/canine.png
