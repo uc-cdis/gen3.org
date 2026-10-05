@@ -71,10 +71,10 @@ g3Commons:
     title: The Medical Imaging and Data Resource Center Commons
     fig: /figs/commons/midrc.png
     link: https://data.midrc.org
-#  c17:
-#    title: AccessClinicalTrails@NIAID
-#    fig: /figs/commons/nct.png
-#    link: https://accessclinicaldata.niaid.nih.gov
+   c17:
+     title: MMRF Virtual Lab
+     fig: /figs/commons/mmrf.png
+     link: https://virtuallab.themmrf.org/
   c18:
     title: Murtha Cancer Center Data Platform
     fig: /figs/commons/murtha_cancer_center_logo.png
