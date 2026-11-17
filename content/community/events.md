@@ -11,15 +11,24 @@ g3Teaser:
 
 
 
+
+
 g3Upcoming:
-- Title: Frontend Framework Workshop
-  Date: November 4, 2026 3:30-5:30 pm CST (November 5, 2026, 8:30-10:00 am AEST)
-  Description: "The Gen3 Frontend Framework offers powerful new capabilities and flexibility for the frontend of a data commons or mesh. This workshop is designed to help both new and existing Gen3 users — either to set up the frontend for a new Gen3 platform or make the transition to Frontend Framework from the Data Portal service. Craig Barnes, CTDS Associate Director of Front End and Visualization, will lead you through a working session where you set up and configure Frontend Framework on an example Gen3 system in real time, and provide guidance for configuring Frontend Framework for your own system. The agenda will include:<br><ul><li>Review of the Gen3 Frontend Framework features</li><li>Demonstate basic customization of an example data commons </li><li>Guidance to transition from the data portal to the frontend framework</li></ul>"
+- Title: Gen3 Development Roadmap for 2027
+  Date: January 20, 2027 3:30-5:30 pm CST (January 21, 2027, 8:30-10:00 am AEDT)
+  Description: We will introduce the 2027 Gen3 Development Roadmap, which will include current priorities for the next year.  The first portion of the meeting will include a presentation by Robert Grossman, Director of CTDS.  The second portion will include an organized panel discussion by the Gen3 steering committee on the roadmap.  Please attend to provide your feedback and help prioritize roadmap items for the coming year.
   Image: /figs/gen3_new_logo.png
-  Register: https://uchicago.zoom.us/meeting/register/Xdqs66xRSqKUkBMnO9ZzDg
+  Register: https://uchicago.zoom.us/meeting/register/Kt9M6vmuSOSOHsd_Cndd4g
 
 
 g3past:
+- Title: Frontend Framework Workshop
+  Date: November 4, 2026 3:30-5:30 pm CST (November 5, 2026, 8:30-10:00 am AEST)
+  Description: "The Gen3 Frontend Framework offers powerful new capabilities and flexibility for the frontend of a data commons or mesh. This workshop is designed to help both new and existing Gen3 users — either to set up the frontend for a new Gen3 platform or make the transition to Frontend Framework from the Data Portal service. Craig Barnes, CTDS Associate Director of Front End and Visualization, will lead you through a working session where you set up and configure Frontend Framework on an example Gen3 system in real time, and provide guidance for configuring Frontend Framework for your own system. The agenda will include:<br><ul><li>Review of the Gen3 Frontend Framework features</li><li>Demonstate basic customization of an example data commons </li><li>Guidance to transition from the data portal to the frontend framework</li></ul>"
+  Youtube: tJ2ERHbzw5U
+  Slides: Gen3 Forum November 2026 - Frontend Framework Workshop.pdf
+  File: FEF - local development.pdf
+
 - Title:  Observability
   Date: September 2, 2026 3:30-5:30 pm CDT (September 3, 2026, 6:30-8:00 am AEST)
   Description: "Tracking system status and user activity are a critical part of managing a data commons or mesh. We will hear from different Gen3 operators how they approach this important task and what tools they have found to be effective. The agenda includes the following:<br><ul><li>Current solutions and future plans for observability tools of Gen3 systems - CTDS Engineering Team, University of Chicago</li><li>Gen3 Observability in Aotearoa Genomic Data Repository - Carvin Chen, University of Auckland</li><li>Understanding observability concepts in kubernetes/cloud-native - Colin Griffin, Krumware</li><li>Operating Gen3 on AWS: Monitoring and Observability - Guerdon Mukama, Australian BioCommons </li></ul>"
